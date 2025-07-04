@@ -13,8 +13,10 @@ if (apiKey && apiKey !== "your-api-key-here") {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
+
   // If Builder.io is not configured, return null page
-  if (!apiKey || apiKey === "your-api-key-here") {
+  if (!currentApiKey || currentApiKey === "your-api-key-here") {
     return {
       props: {
         page: null,
