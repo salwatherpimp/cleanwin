@@ -91,8 +91,9 @@ export default function CatchAllPage({
     return <h1>Loading...</h1>;
   }
 
-  // Show configuration message only if Builder.io is explicitly not configured
-  if (isBuilderConfigured === false) {
+  // Only show setup message if API key is completely missing or default value
+  const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
+  if (!currentApiKey || currentApiKey === "your-api-key-here") {
     return (
       <>
         <Head>
