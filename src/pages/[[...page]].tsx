@@ -84,12 +84,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 interface CatchAllPageProps {
-  page: {
-    data?: {
-      title?: string;
-      url?: string;
-    };
-  } | null;
+  page: unknown;
   isBuilderConfigured?: boolean;
 }
 
@@ -170,9 +165,9 @@ export default function CatchAllPage({
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{page?.data?.title || "Seite"}</title>
+        <title>{(page as any)?.data?.title || "Seite"}</title>
       </Head>
-      <BuilderComponent model="page" content={page} />
+      <BuilderComponent model="page" content={page || undefined} />
     </>
   );
 }
