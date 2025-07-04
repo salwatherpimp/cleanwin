@@ -1,23 +1,10 @@
 // src/pages/[[...page]].tsx
 
-import { builder, useIsPreviewing } from "@builder.io/react";
+import { builder, BuilderComponent, useIsPreviewing } from "@builder.io/react";
 import { GetStaticProps, GetStaticPaths } from "next";
 import DefaultErrorPage from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import dynamic from "next/dynamic";
-
-const BuilderComponent = dynamic(
-  () => import("@builder.io/react").then((mod) => mod.BuilderComponent),
-  {
-    ssr: false,
-    loading: () => (
-      <div style={{ padding: "2rem", textAlign: "center" }}>
-        <h1>Loading...</h1>
-      </div>
-    ),
-  },
-);
 
 // Initialize Builder.io only if API key is available
 const apiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
@@ -207,7 +194,9 @@ export default function CatchAllPage({ page }: CatchAllPageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{page?.data?.title || "Seite"}</title>
       </Head>
-      <BuilderComponent model="page" content={page || undefined} />
+      <div suppressHydrationWarning>
+        <BuilderComponent model="page" content={page || undefined} />
+      </div>
     </>
   );
 }
