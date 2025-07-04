@@ -48,10 +48,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   } catch (error) {
     console.error("Error fetching Builder.io page:", error);
+    // Still return isBuilderConfigured: true because API key is valid
     return {
       props: {
         page: null,
-        isBuilderConfigured: false,
+        isBuilderConfigured: true,
       },
       revalidate: 5,
     };
@@ -90,7 +91,7 @@ export default function CatchAllPage({
     return <h1>Loading...</h1>;
   }
 
-  // Show configuration message if Builder.io is not set up
+  // Show configuration message only if Builder.io is explicitly not configured
   if (isBuilderConfigured === false) {
     return (
       <>
