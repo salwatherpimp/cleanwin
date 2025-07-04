@@ -77,7 +77,6 @@ interface BuilderPage {
 
 interface CatchAllPageProps {
   page: BuilderPage | null;
-  isBuilderConfigured?: boolean;
 }
 
 export default function CatchAllPage({ page }: CatchAllPageProps) {
