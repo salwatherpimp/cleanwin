@@ -187,29 +187,31 @@ export default function CatchAllPage({ page }: CatchAllPageProps) {
             />
             <title>Welcome</title>
           </Head>
-          <div
-            style={{
-              padding: "2rem",
-              textAlign: "center",
-              fontFamily: "system-ui, sans-serif",
-            }}
-          >
-            <h1>Welcome to Your App</h1>
-            <p>
-              Your Builder.io integration is set up! Create content in
-              Builder.io to see it here.
-            </p>
-            <p>
-              <a
-                href="https://builder.io/content"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#0066cc", textDecoration: "underline" }}
-              >
-                Go to Builder.io to create your first page →
-              </a>
-            </p>
-          </div>
+          <Layout>
+            <div
+              style={{
+                padding: "2rem",
+                textAlign: "center",
+                fontFamily: "system-ui, sans-serif",
+              }}
+            >
+              <h1>Welcome to Your App</h1>
+              <p>
+                Your Builder.io integration is set up! Create content in
+                Builder.io to see it here.
+              </p>
+              <p>
+                <a
+                  href="https://builder.io/content"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#0066cc", textDecoration: "underline" }}
+                >
+                  Go to Builder.io to create your first page →
+                </a>
+              </p>
+            </div>
+          </Layout>
         </>
       );
     }
