@@ -57,30 +57,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // If Builder.io is not configured, return minimal paths
-  if (!apiKey || apiKey === "your-api-key-here") {
-    return {
-      paths: ["/"],
-      fallback: true,
-    };
-  }
-
-  try {
-    const pages = await builder.getAll("page", {
-      options: { noTargeting: true },
-    });
-
-    return {
-      paths: pages.map((page) => page.data?.url || "/"),
-      fallback: true,
-    };
-  } catch (error) {
-    console.error("Error fetching Builder.io pages:", error);
-    return {
-      paths: ["/"],
-      fallback: true,
-    };
-  }
+  // Always return minimal paths and use fallback for dynamic generation
+  // This ensures the build doesn't fail if Builder.io is not configured
+  return {
+    paths: [],
+    fallback: "blocking",
+  };
 };
 
 interface BuilderPage {
