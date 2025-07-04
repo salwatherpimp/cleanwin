@@ -1,4 +1,4 @@
-// pages/[...page].tsx
+// src/pages/[[...page]].tsx
 
 import { builder, BuilderComponent, useIsPreviewing } from '@builder.io/react'
 import { GetStaticProps, GetStaticPaths } from 'next'
@@ -6,11 +6,13 @@ import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-// ✅ API-Key aus .env.local (empfohlen von Builder.io)
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!)
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const pagePath = '/' + (params?.page?.join('/') || '')
+  const pageParam = params?.page
+  const pagePath =
+    '/' + (Array.isArray(pageParam) ? pageParam.join('/') : pageParam || '')
+
   const page = await builder
     .get('page', {
       userAttributes: {
@@ -23,7 +25,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       page: page || null,
     },
-    revalidate: 5, // ISR: Seite alle 5 Sek. neu generieren, wenn aufgerufen
+    revalidate: 5,
   }
 }
 
@@ -34,10 +36,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: pages.map((page) => page.data?.url || '/'),
-    fallback: true, // Dynamisch generieren, wenn zur Build-Zeit nicht bekannt
+    fallback: true,
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function CatchAllPage({ page }: { page: any }) {
   const router = useRouter()
   const isPreviewing = useIsPreviewing()
