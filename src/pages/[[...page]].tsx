@@ -232,11 +232,13 @@ export default function CatchAllPage({ page }: CatchAllPageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{page?.data?.title || "Seite"}</title>
       </Head>
-      <HydrationErrorBoundary>
-        <div suppressHydrationWarning>
-          <BuilderComponent model="page" content={page || undefined} />
-        </div>
-      </HydrationErrorBoundary>
+      <Layout>
+        <HydrationErrorBoundary>
+          <div suppressHydrationWarning>
+            <BuilderComponent model="page" content={page || undefined} />
+          </div>
+        </HydrationErrorBoundary>
+      </Layout>
     </>
   );
 }
