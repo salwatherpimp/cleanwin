@@ -128,45 +128,49 @@ export default function CatchAllPage({ page }: CatchAllPageProps) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>Builder.io Setup Required</title>
         </Head>
-        <div
-          style={{
-            padding: "2rem",
-            textAlign: "center",
-            fontFamily: "system-ui, sans-serif",
-          }}
-        >
-          <h1>Builder.io Setup Required</h1>
-          <p>To use this app, you need to configure your Builder.io API key.</p>
-          <ol
+        <Layout>
+          <div
             style={{
-              textAlign: "left",
-              maxWidth: "600px",
-              margin: "2rem auto",
+              padding: "2rem",
+              textAlign: "center",
+              fontFamily: "system-ui, sans-serif",
             }}
           >
-            <li>
-              Go to{" "}
-              <a
-                href="https://builder.io/account/organization"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://builder.io/account/organization
-              </a>
-            </li>
-            <li>Copy your API key</li>
-            <li>
-              Replace &lsquo;your-api-key-here&rsquo; in the .env.local file
-              with your actual API key
-            </li>
-            <li>Restart the development server</li>
-          </ol>
-          <p>
-            <em>
-              Your API key should start with something like: a1b2c3d4e5f6...
-            </em>
-          </p>
-        </div>
+            <h1>Builder.io Setup Required</h1>
+            <p>
+              To use this app, you need to configure your Builder.io API key.
+            </p>
+            <ol
+              style={{
+                textAlign: "left",
+                maxWidth: "600px",
+                margin: "2rem auto",
+              }}
+            >
+              <li>
+                Go to{" "}
+                <a
+                  href="https://builder.io/account/organization"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://builder.io/account/organization
+                </a>
+              </li>
+              <li>Copy your API key</li>
+              <li>
+                Replace &lsquo;your-api-key-here&rsquo; in the .env.local file
+                with your actual API key
+              </li>
+              <li>Restart the development server</li>
+            </ol>
+            <p>
+              <em>
+                Your API key should start with something like: a1b2c3d4e5f6...
+              </em>
+            </p>
+          </div>
+        </Layout>
       </>
     );
   }
