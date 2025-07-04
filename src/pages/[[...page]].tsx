@@ -80,10 +80,7 @@ interface CatchAllPageProps {
   isBuilderConfigured?: boolean;
 }
 
-export default function CatchAllPage({
-  page,
-  isBuilderConfigured,
-}: CatchAllPageProps) {
+export default function CatchAllPage({ page }: CatchAllPageProps) {
   const router = useRouter();
   const isPreviewing = useIsPreviewing();
 
