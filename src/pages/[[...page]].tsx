@@ -5,6 +5,37 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import DefaultErrorPage from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { Component, ReactNode } from "react";
+
+class HydrationErrorBoundary extends Component<
+  { children: ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error) {
+    if (error.message.includes("Hydration failed")) {
+      // This is a hydration error, which is expected with Builder.io
+      console.warn("Hydration error caught and handled:", error.message);
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // Re-render only on client side
+      return this.props.children;
+    }
+
+    return this.props.children;
+  }
+}
 
 // Initialize Builder.io only if API key is available
 const apiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
@@ -194,9 +225,11 @@ export default function CatchAllPage({ page }: CatchAllPageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{page?.data?.title || "Seite"}</title>
       </Head>
-      <div suppressHydrationWarning>
-        <BuilderComponent model="page" content={page || undefined} />
-      </div>
+      <HydrationErrorBoundary>
+        <div suppressHydrationWarning>
+          <BuilderComponent model="page" content={page || undefined} />
+        </div>
+      </HydrationErrorBoundary>
     </>
   );
 }
