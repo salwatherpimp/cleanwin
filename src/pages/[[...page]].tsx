@@ -83,14 +83,20 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+interface CatchAllPageProps {
+  page: {
+    data?: {
+      title?: string;
+      url?: string;
+    };
+  } | null;
+  isBuilderConfigured?: boolean;
+}
+
 export default function CatchAllPage({
   page,
   isBuilderConfigured,
-}: {
-  page: any;
-  isBuilderConfigured?: boolean;
-}) {
+}: CatchAllPageProps) {
   const router = useRouter();
   const isPreviewing = useIsPreviewing();
 
@@ -134,8 +140,8 @@ export default function CatchAllPage({
             </li>
             <li>Copy your API key</li>
             <li>
-              Replace 'your-api-key-here' in the .env.local file with your
-              actual API key
+              Replace &lsquo;your-api-key-here&rsquo; in the .env.local file
+              with your actual API key
             </li>
             <li>Restart the development server</li>
           </ol>
