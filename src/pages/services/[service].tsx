@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
+import Layout from "../../components/Layout";
 
 // Example: Generate 20 cleaning service pages dynamically
 const services = [
@@ -115,7 +116,7 @@ interface ServicePageProps {
 
 export default function ServicePage({ service }: ServicePageProps) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>{service.name} - CleanWin Winterthur</title>
         <meta name="description" content={service.description} />
@@ -125,7 +126,7 @@ export default function ServicePage({ service }: ServicePageProps) {
       <div
         style={{
           fontFamily: '"Work Sans", sans-serif',
-          paddingTop: "100px",
+          paddingTop: "20px",
           minHeight: "100vh",
           backgroundColor: "#fff",
         }}
@@ -262,7 +263,7 @@ export default function ServicePage({ service }: ServicePageProps) {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
 

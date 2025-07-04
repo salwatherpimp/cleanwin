@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Layout from "../../components/Layout";
 
 const services = [
   {
@@ -126,7 +127,7 @@ const services = [
 
 export default function ServicesIndex() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Alle Reinigungsleistungen - CleanWin Winterthur</title>
         <meta
@@ -139,7 +140,7 @@ export default function ServicesIndex() {
       <div
         style={{
           fontFamily: '"Work Sans", sans-serif',
-          paddingTop: "100px",
+          paddingTop: "20px",
           minHeight: "100vh",
           backgroundColor: "#fff",
         }}
@@ -337,6 +338,6 @@ export default function ServicesIndex() {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
