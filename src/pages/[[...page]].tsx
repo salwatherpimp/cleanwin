@@ -143,6 +143,44 @@ export default function CatchAllPage({
   }
 
   if (!page && !isPreviewing) {
+    // If we have an API key but no content, show a welcome page instead of 404
+    if (currentApiKey && currentApiKey !== "your-api-key-here") {
+      return (
+        <>
+          <Head>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+            <title>Welcome</title>
+          </Head>
+          <div
+            style={{
+              padding: "2rem",
+              textAlign: "center",
+              fontFamily: "system-ui, sans-serif",
+            }}
+          >
+            <h1>Welcome to Your App</h1>
+            <p>
+              Your Builder.io integration is set up! Create content in
+              Builder.io to see it here.
+            </p>
+            <p>
+              <a
+                href="https://builder.io/content"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#0066cc", textDecoration: "underline" }}
+              >
+                Go to Builder.io to create your first page →
+              </a>
+            </p>
+          </div>
+        </>
+      );
+    }
+
     return (
       <>
         <Head>
