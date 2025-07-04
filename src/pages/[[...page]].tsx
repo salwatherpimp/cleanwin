@@ -5,6 +5,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import DefaultErrorPage from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 // Initialize Builder.io only if API key is available
 const apiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
@@ -82,6 +83,11 @@ interface CatchAllPageProps {
 export default function CatchAllPage({ page }: CatchAllPageProps) {
   const router = useRouter();
   const isPreviewing = useIsPreviewing();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   if (router.isFallback) {
     return <h1>Loading...</h1>;
@@ -194,9 +200,13 @@ export default function CatchAllPage({ page }: CatchAllPageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{page?.data?.title || "Seite"}</title>
       </Head>
-      <div suppressHydrationWarning>
+      {isClient ? (
         <BuilderComponent model="page" content={page || undefined} />
-      </div>
+      ) : (
+        <div style={{ padding: "2rem", textAlign: "center" }}>
+          <h1>Loading...</h1>
+        </div>
+      )}
     </>
   );
 }
