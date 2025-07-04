@@ -93,11 +93,6 @@ export default function CatchAllPage({
 
   // Only show setup message if API key is completely missing or default value
   const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
-  console.log(
-    "Current API key:",
-    currentApiKey ? `${currentApiKey.substring(0, 8)}...` : "undefined/null",
-  );
-
   if (!currentApiKey || currentApiKey === "your-api-key-here") {
     return (
       <>
