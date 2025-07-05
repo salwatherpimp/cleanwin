@@ -2,31 +2,27 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const services = [
-  { slug: "buero-reinigung", name: "Büro-Reinigung", icon: "🏢" },
-  { slug: "wohnungsreinigung", name: "Wohnungsreinigung", icon: "🏠" },
-  { slug: "fensterreinigung", name: "Fensterreinigung", icon: "🪟" },
-  { slug: "teppichreinigung", name: "Teppichreinigung", icon: "🧽" },
-  { slug: "polsterreinigung", name: "Polsterreinigung", icon: "🛋️" },
-  { slug: "baureinigung", name: "Baureinigung", icon: "🏗️" },
-  { slug: "praxisreinigung", name: "Praxisreinigung", icon: "🏥" },
-  { slug: "hotelreinigung", name: "Hotelreinigung", icon: "🏨" },
-  { slug: "ladenreinigung", name: "Ladenreinigung", icon: "🏪" },
-  { slug: "industriereinigung", name: "Industriereinigung", icon: "🏭" },
-  { slug: "treppenhausreinigung", name: "Treppenhausreinigung", icon: "🪜" },
-  {
-    slug: "wintergarten-reinigung",
-    name: "Wintergarten-Reinigung",
-    icon: "🌿",
-  },
-  { slug: "garage-reinigung", name: "Garage-Reinigung", icon: "🚗" },
-  { slug: "keller-reinigung", name: "Keller-Reinigung", icon: "🏠" },
-  { slug: "dachboden-reinigung", name: "Dachboden-Reinigung", icon: "🏠" },
-  { slug: "balkon-reinigung", name: "Balkon-Reinigung", icon: "🌺" },
-  { slug: "garten-reinigung", name: "Garten-Reinigung", icon: "🌱" },
-  { slug: "pool-reinigung", name: "Pool-Reinigung", icon: "🏊" },
-  { slug: "solar-reinigung", name: "Solar-Reinigung", icon: "☀️" },
-  { slug: "graffiti-entfernung", name: "Graffiti-Entfernung", icon: "🎨" },
+const locations = [
+  { slug: "winterthur", name: "Winterthur", icon: "📍" },
+  { slug: "zurich", name: "Zürich", icon: "📍" },
+  { slug: "basel", name: "Basel", icon: "📍" },
+  { slug: "bern", name: "Bern", icon: "📍" },
+  { slug: "lausanne", name: "Lausanne", icon: "📍" },
+  { slug: "geneva", name: "Genf", icon: "📍" },
+  { slug: "lucerne", name: "Luzern", icon: "📍" },
+  { slug: "st-gallen", name: "St. Gallen", icon: "📍" },
+  { slug: "lugano", name: "Lugano", icon: "📍" },
+  { slug: "thun", name: "Thun", icon: "📍" },
+  { slug: "aarau", name: "Aarau", icon: "📍" },
+  { slug: "olten", name: "Olten", icon: "📍" },
+  { slug: "uster", name: "Uster", icon: "📍" },
+  { slug: "rapperswil", name: "Rapperswil-Jona", icon: "📍" },
+  { slug: "zug", name: "Zug", icon: "📍" },
+  { slug: "schaffhausen", name: "Schaffhausen", icon: "📍" },
+  { slug: "chur", name: "Chur", icon: "📍" },
+  { slug: "baden", name: "Baden", icon: "📍" },
+  { slug: "dietikon", name: "Dietikon", icon: "📍" },
+  { slug: "wetzikon", name: "Wetzikon", icon: "📍" },
 ];
 
 export default function Navigation() {
@@ -137,7 +133,7 @@ export default function Navigation() {
                 fontSize: "16px",
               }}
             >
-              Leistungen
+              Standorte
               <svg
                 width="16"
                 height="16"
@@ -176,22 +172,6 @@ export default function Navigation() {
                 }}
               >
                 <div style={{ padding: "16px" }}>
-                  <Link
-                    href="/services"
-                    style={{
-                      display: "block",
-                      padding: "12px 16px",
-                      textDecoration: "none",
-                      color: "#E7027E",
-                      fontWeight: "600",
-                      fontSize: "16px",
-                      borderBottom: "1px solid #E5E7EB",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    📋 Alle Leistungen anzeigen
-                  </Link>
-
                   <div
                     style={{
                       display: "grid",
@@ -199,10 +179,10 @@ export default function Navigation() {
                       gap: "8px",
                     }}
                   >
-                    {services.map((service) => (
+                    {locations.map((location) => (
                       <Link
-                        key={service.slug}
-                        href={`/services/${service.slug}`}
+                        key={location.slug}
+                        href={`/services/${location.slug}`}
                         style={{
                           display: "flex",
                           alignItems: "center",
@@ -223,9 +203,11 @@ export default function Navigation() {
                         }}
                       >
                         <span style={{ marginRight: "8px", fontSize: "16px" }}>
-                          {service.icon}
+                          {location.icon}
                         </span>
-                        <span style={{ fontSize: "13px" }}>{service.name}</span>
+                        <span style={{ fontSize: "13px" }}>
+                          {location.name}
+                        </span>
                       </Link>
                     ))}
                   </div>
@@ -336,18 +318,42 @@ export default function Navigation() {
           <div
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}
           >
-            <Link
-              href="/services"
-              style={{
-                color: "#E7027E",
-                fontWeight: "600",
-                textDecoration: "none",
-                padding: "8px 0",
-                borderBottom: "1px solid #E5E7EB",
-              }}
-            >
-              📋 Alle Leistungen
-            </Link>
+            <div style={{ marginBottom: "8px" }}>
+              <span
+                style={{
+                  color: "#E7027E",
+                  fontWeight: "600",
+                  fontSize: "14px",
+                  display: "block",
+                  marginBottom: "8px",
+                }}
+              >
+                📍 Unsere Standorte:
+              </span>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: "4px",
+                  paddingLeft: "8px",
+                }}
+              >
+                {locations.slice(0, 8).map((location) => (
+                  <Link
+                    key={location.slug}
+                    href={`/services/${location.slug}`}
+                    style={{
+                      color: "#374151",
+                      fontSize: "13px",
+                      textDecoration: "none",
+                      padding: "4px 0",
+                    }}
+                  >
+                    {location.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
 
             <Link
               href="/ueber-uns"
