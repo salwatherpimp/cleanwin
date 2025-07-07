@@ -625,7 +625,19 @@ export const getStaticProps: GetStaticProps = async () => {
     builder.init(currentApiKey);
 
     try {
-      // Try direct API call first to debug
+      // Try to list all available models first
+      console.log("🔗 Listing all available models...");
+      try {
+        const modelsResponse = await fetch(
+          `https://cdn.builder.io/api/v2/models?apiKey=${currentApiKey}`,
+        );
+        const modelsData = await modelsResponse.json();
+        console.log("📋 Available models:", modelsData);
+      } catch (modelsError: any) {
+        console.log("❌ Models list failed:", modelsError.message);
+      }
+
+      // Try direct API call for the specific model
       console.log("🔗 Direct API test...");
       try {
         const response = await fetch(
