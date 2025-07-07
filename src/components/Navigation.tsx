@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 const locations = [
   { slug: "winterthur", name: "Winterthur", icon: "📍" },
@@ -30,7 +29,6 @@ export default function Navigation() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -47,11 +45,11 @@ export default function Navigation() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
+  // Close mobile menu when clicking navigation links
+  const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
     setIsDropdownOpen(false);
-  }, [router.asPath]);
+  };
 
   return (
     <header
