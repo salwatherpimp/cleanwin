@@ -589,7 +589,8 @@ export default function LocationPage({
             text-align: left;
           }
         }
-      `}</style>
+        `}</style>
+      </div>
     </>
   );
 }
