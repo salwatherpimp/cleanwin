@@ -2,11 +2,7 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import Layout from "../components/Layout";
 
-// Initialize Builder.io
-const apiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
-if (apiKey && apiKey !== "your-api-key-here") {
-  builder.init(apiKey);
-}
+// Builder.io initialization removed for build fix
 
 interface Testimonial {
   name: string;
@@ -630,24 +626,9 @@ export default function ReferencesPage({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  let builderContent = null;
-
-  // Try to fetch Builder.io content if API key is configured
-  const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
-  if (currentApiKey && currentApiKey !== "your-api-key-here") {
-    try {
-      // Fetch the references-content symbol from Builder.io
-      builderContent = await builder.get("references-content").toPromise();
-    } catch (error) {
-      console.warn("Could not fetch Builder.io references content:", error);
-      // Continue with fallback content
-    }
-  }
-
   return {
     props: {
-      builderContent: builderContent?.data || null,
+      builderContent: null,
     },
-    revalidate: 60, // Revalidate every minute
   };
 };
