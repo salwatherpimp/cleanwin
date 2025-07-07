@@ -222,7 +222,7 @@ export default function LocationPage({
               <div className="hero-image">
                 {builderContent?.heroImage ? (
                   <Image
-                    src={builderContent.heroImage}
+                    src={builderContent.heroImage as string}
                     alt={`Reinigungsservice ${location.name}`}
                     width={400}
                     height={300}
