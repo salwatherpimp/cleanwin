@@ -628,8 +628,8 @@ export const getStaticProps: GetStaticProps = async () => {
       // Try to get content from Builder.io Page
       console.log("🔗 Looking for Page content...");
       try {
-        // Try different page URLs
-        const pageUrls = ["/referenzen-test", "/referenzen", "/references"];
+        // Try the specific page URL from Builder.io
+        const pageUrls = ["referenzen-test", "/referenzen-test", "referenzen"];
 
         for (const pageUrl of pageUrls) {
           console.log(`🔍 Trying page URL: ${pageUrl}`);
