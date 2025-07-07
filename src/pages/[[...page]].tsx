@@ -62,8 +62,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const pagePath =
     "/" + (Array.isArray(pageParam) ? pageParam.join("/") : pageParam || "");
 
-  // Exclude specific routes that have dedicated pages (currently none)
-  const excludedPaths: string[] = [];
+  // Exclude specific routes that have dedicated pages
+  const excludedPaths = ["/referenzen"];
   if (excludedPaths.includes(pagePath)) {
     return {
       notFound: true,
