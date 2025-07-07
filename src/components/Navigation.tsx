@@ -184,6 +184,7 @@ export default function Navigation() {
                       <Link
                         key={location.slug}
                         href={`/services/${location.slug}`}
+                        onClick={handleLinkClick}
                         style={{
                           display: "flex",
                           alignItems: "center",
