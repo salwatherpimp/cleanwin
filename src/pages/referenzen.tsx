@@ -146,15 +146,15 @@ export default function ReferencesPage({
             </div>
           </section>
 
-          {/* Builder.io Editable Content */}
-          {builderContent && (
+          {/* Builder.io Editable Content - Disabled for deployment */}
+          {/* {builderContent && (
             <section className="builder-content">
               <BuilderComponent
                 model="references-content"
                 content={builderContent}
               />
             </section>
-          )}
+          )} */}
 
           {/* Testimonials Section */}
           <section className="testimonials-section">

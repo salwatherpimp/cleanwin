@@ -238,15 +238,15 @@ export default function LocationPage({
             </div>
           </section>
 
-          {/* Builder.io Editable Content */}
-          {builderContent && (
+          {/* Builder.io Editable Content - Disabled for deployment */}
+          {/* {builderContent && (
             <section className="builder-content">
               <BuilderComponent
                 model="service-location-content"
                 content={builderContent}
               />
             </section>
-          )}
+          )} */}
 
           {/* Services Section - Fallback */}
           <section className="services-section">
