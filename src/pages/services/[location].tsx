@@ -169,10 +169,7 @@ export default function LocationPage({
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>
-          Reinigungsservice {location.name} - CleanWin | Professionelle
-          Reinigung
-        </title>
+        <title>{`Reinigungsservice ${location.name} - CleanWin | Professionelle Reinigung`}</title>
         <meta
           name="description"
           content={`Professioneller Reinigungsservice in ${location.name}, ${location.canton}. ✓ Büroreinigung ✓ Haushaltsreinigung ✓ Fensterreinigung. Jetzt kostenlose Offerte anfordern!`}
