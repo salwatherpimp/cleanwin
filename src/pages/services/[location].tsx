@@ -15,7 +15,7 @@ const locations = [
   {
     slug: "winterthur",
     name: "Winterthur",
-    canton: "Z��rich",
+    canton: "Zürich",
     description: "Professionelle Reinigungsdienstleistungen in Winterthur",
   },
   {
@@ -141,14 +141,7 @@ interface LocationPageProps {
     canton: string;
     description: string;
   };
-  builderContent: {
-    heroTitle?: string;
-    heroSubtitle?: string;
-    heroImage?: string;
-    services?: string[];
-    whyChooseUs?: string[];
-    ctaText?: string;
-  } | null;
+  builderContent: Record<string, string | string[]> | null;
 }
 
 export default function LocationPage({
