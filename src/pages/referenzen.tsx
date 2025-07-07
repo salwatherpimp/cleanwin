@@ -618,27 +618,80 @@ export const getStaticProps: GetStaticProps = async () => {
   const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
   if (currentApiKey && currentApiKey !== "your-api-key-here") {
     try {
-      // Fetch from Builder.io Data Model named "references-content"
-      const content = await builder
-        .get("references-content", {
-          // Get the first/latest entry
-          limit: 1,
-        })
-        .toPromise();
+      // Try multiple approaches to get Builder.io content
 
-      if (content) {
-        builderContent = content.data;
+      // 1. Try to get from Data Model named "references-content"
+      try {
+        const dataModel = await builder
+          .get("references-content", {
+            limit: 1,
+          })
+          .toPromise();
+
+        if (dataModel?.data) {
+          console.log("Found Data Model content:", dataModel.data);
+          builderContent = dataModel.data;
+        }
+      } catch (dataError) {
+        console.log("Data Model fetch failed:", dataError.message);
+      }
+
+      // 2. If no Data Model, try Symbol
+      if (!builderContent) {
+        try {
+          const symbol = await builder
+            .get("symbol", {
+              query: {
+                name: "references-content",
+              },
+            })
+            .toPromise();
+
+          if (symbol?.data) {
+            console.log("Found Symbol content:", symbol.data);
+            builderContent = symbol.data;
+          }
+        } catch (symbolError) {
+          console.log("Symbol fetch failed:", symbolError.message);
+        }
+      }
+
+      // 3. If no Symbol, try Page
+      if (!builderContent) {
+        try {
+          const page = await builder
+            .get("page", {
+              userAttributes: {
+                urlPath: "/referenzen-content",
+              },
+            })
+            .toPromise();
+
+          if (page?.data) {
+            console.log("Found Page content:", page.data);
+            builderContent = page.data;
+          }
+        } catch (pageError) {
+          console.log("Page fetch failed:", pageError.message);
+        }
+      }
+
+      if (builderContent) {
+        console.log("Using Builder.io content");
+      } else {
+        console.log("No Builder.io content found, using fallback");
       }
     } catch (error) {
-      console.warn("Could not fetch Builder.io content:", error);
-      // Will use fallback content
+      console.warn("Builder.io fetch error:", error);
     }
+  } else {
+    console.log("No Builder.io API key configured");
   }
 
   return {
     props: {
       builderContent,
     },
-    revalidate: 60, // Revalidate every minute
+    revalidate: 30, // Revalidate every 30 seconds for faster testing
   };
 };
