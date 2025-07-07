@@ -115,10 +115,12 @@ export default function ReferencesPage({
             <div className="container">
               <div className="hero-content">
                 <h1 className="hero-title">
-                  {builderContent?.heroTitle || fallbackContent.heroTitle}
+                  {(builderContent?.heroTitle as string) ||
+                    fallbackContent.heroTitle}
                 </h1>
                 <p className="hero-subtitle">
-                  {builderContent?.heroSubtitle || fallbackContent.heroSubtitle}
+                  {(builderContent?.heroSubtitle as string) ||
+                    fallbackContent.heroSubtitle}
                 </p>
                 <div className="stats-row">
                   <div className="stat-item">
