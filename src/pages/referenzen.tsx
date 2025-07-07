@@ -9,8 +9,28 @@ if (apiKey && apiKey !== "your-api-key-here") {
   builder.init(apiKey);
 }
 
+interface Testimonial {
+  name: string;
+  company: string;
+  text: string;
+  rating: number;
+}
+
+interface CaseStudy {
+  title: string;
+  description: string;
+  results: string;
+}
+
 interface ReferencesPageProps {
-  builderContent: any;
+  builderContent: {
+    heroTitle?: string;
+    heroSubtitle?: string;
+    testimonials?: Testimonial[];
+    caseStudies?: CaseStudy[];
+    ctaTitle?: string;
+    ctaSubtitle?: string;
+  } | null;
 }
 
 export default function ReferencesPage({
@@ -152,7 +172,7 @@ export default function ReferencesPage({
                           </span>
                         ))}
                       </div>
-                      <blockquote>"{testimonial.text}"</blockquote>
+                      <blockquote>&ldquo;{testimonial.text}&rdquo;</blockquote>
                       <div className="testimonial-author">
                         <div className="author-name">{testimonial.name}</div>
                         <div className="author-company">

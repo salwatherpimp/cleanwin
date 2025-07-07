@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { builder, BuilderComponent } from "@builder.io/react";
 import Layout from "../../components/Layout";
 
@@ -14,7 +15,7 @@ const locations = [
   {
     slug: "winterthur",
     name: "Winterthur",
-    canton: "Zürich",
+    canton: "Z��rich",
     description: "Professionelle Reinigungsdienstleistungen in Winterthur",
   },
   {
@@ -140,7 +141,14 @@ interface LocationPageProps {
     canton: string;
     description: string;
   };
-  builderContent: any;
+  builderContent: {
+    heroTitle?: string;
+    heroSubtitle?: string;
+    heroImage?: string;
+    services?: string[];
+    whyChooseUs?: string[];
+    ctaText?: string;
+  } | null;
 }
 
 export default function LocationPage({
@@ -220,9 +228,11 @@ export default function LocationPage({
               </div>
               <div className="hero-image">
                 {builderContent?.heroImage ? (
-                  <img
+                  <Image
                     src={builderContent.heroImage}
                     alt={`Reinigungsservice ${location.name}`}
+                    width={400}
+                    height={300}
                     className="hero-img"
                   />
                 ) : (
