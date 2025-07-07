@@ -625,32 +625,35 @@ export const getStaticProps: GetStaticProps = async () => {
     builder.init(currentApiKey);
 
     try {
-      // Try to get content from Builder.io Page
-      console.log("🔗 Looking for Page content...");
+      // Try to get content from Builder.io Data Model
+      console.log("🔗 Looking for Data Model content...");
       try {
-        // Try the specific page URL from Builder.io
-        const pageUrls = ["referenzen-test", "/referenzen-test", "referenzen"];
+        // Direct API call to the specific model
+        console.log("📡 Direct API call to references-content model...");
+        const response = await fetch(
+          `https://cdn.builder.io/api/v3/content/references-content?apiKey=${currentApiKey}&limit=1`,
+        );
+        const responseText = await response.text();
+        console.log("📡 Raw API response:", responseText);
 
-        for (const pageUrl of pageUrls) {
-          console.log(`🔍 Trying page URL: ${pageUrl}`);
-          try {
-            const pageResponse = await fetch(
-              `https://cdn.builder.io/api/v3/content/page?apiKey=${currentApiKey}&url=${pageUrl}&limit=1`,
+        if (response.ok) {
+          const apiData = JSON.parse(responseText);
+          console.log("📡 Parsed API response:", apiData);
+
+          if (apiData.results && apiData.results.length > 0) {
+            console.log(
+              "✅ Found data model content:",
+              apiData.results[0].data,
             );
-            const pageData = await pageResponse.json();
-            console.log(`📡 Page API response for ${pageUrl}:`, pageData);
-
-            if (pageData.results && pageData.results.length > 0) {
-              console.log(`✅ Found page content at: ${pageUrl}`);
-              builderContent = pageData.results[0].data;
-              break;
-            }
-          } catch (pageError: any) {
-            console.log(`❌ Page ${pageUrl} error:`, pageError.message);
+            builderContent = apiData.results[0].data;
+          } else {
+            console.log("❌ No entries found in model");
           }
+        } else {
+          console.log("❌ API response not OK:", response.status, responseText);
         }
       } catch (error: any) {
-        console.log("❌ Page API failed:", error.message);
+        console.log("❌ Data Model API failed:", error.message);
       }
 
       // If direct API didn't work, try Builder SDK
