@@ -1,14 +1,9 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { builder, BuilderComponent } from "@builder.io/react";
 import Layout from "../../components/Layout";
 
-// Initialize Builder.io
-const apiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
-if (apiKey && apiKey !== "your-api-key-here") {
-  builder.init(apiKey);
-}
+// Builder.io removed for build compatibility
 
 // Swiss locations for cleaning services
 const locations = [
