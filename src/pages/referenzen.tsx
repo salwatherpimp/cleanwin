@@ -625,30 +625,54 @@ export const getStaticProps: GetStaticProps = async () => {
     builder.init(currentApiKey);
 
     try {
-      // Try different model names that might exist
-      const modelNames = [
-        "references-content",
-        "referencesContent",
-        "referenzen",
-      ];
+      // Try direct API call first to debug
+      console.log("🔗 Direct API test...");
+      try {
+        const response = await fetch(
+          `https://cdn.builder.io/api/v3/content/references-content?apiKey=${currentApiKey}&limit=1`,
+        );
+        const apiData = await response.json();
+        console.log("📡 Direct API response:", apiData);
 
-      for (const modelName of modelNames) {
-        console.log(`🔍 Trying model: ${modelName}`);
-        try {
-          const result = await builder.get(modelName, { limit: 1 }).toPromise();
+        if (apiData.results && apiData.results.length > 0) {
+          console.log("✅ Found data via direct API call");
+          builderContent = apiData.results[0].data;
+        }
+      } catch (apiError: any) {
+        console.log("❌ Direct API failed:", apiError.message);
+      }
 
-          if (result?.data) {
-            console.log(
-              `✅ Found content in model: ${modelName}`,
-              Object.keys(result.data),
-            );
-            builderContent = result.data;
-            break;
-          } else {
-            console.log(`❌ No data in model: ${modelName}`);
+      // If direct API didn't work, try Builder SDK
+      if (!builderContent) {
+        const modelNames = [
+          "references-content",
+          "referencesContent",
+          "referenzen",
+        ];
+
+        for (const modelName of modelNames) {
+          console.log(`🔍 Trying model: ${modelName}`);
+          try {
+            const result = await builder
+              .get(modelName, {
+                limit: 1,
+                includeUnpublished: true, // Include drafts for testing
+              })
+              .toPromise();
+
+            if (result?.data) {
+              console.log(
+                `✅ Found content in model: ${modelName}`,
+                Object.keys(result.data),
+              );
+              builderContent = result.data;
+              break;
+            } else {
+              console.log(`❌ No data in model: ${modelName}`);
+            }
+          } catch (modelError: any) {
+            console.log(`❌ Model ${modelName} error:`, modelError.message);
           }
-        } catch (modelError: any) {
-          console.log(`❌ Model ${modelName} error:`, modelError.message);
         }
       }
 
