@@ -625,33 +625,32 @@ export const getStaticProps: GetStaticProps = async () => {
     builder.init(currentApiKey);
 
     try {
-      // Try to list all available models first
-      console.log("🔗 Listing all available models...");
+      // Try to get content from Builder.io Page
+      console.log("🔗 Looking for Page content...");
       try {
-        const modelsResponse = await fetch(
-          `https://cdn.builder.io/api/v2/models?apiKey=${currentApiKey}`,
-        );
-        const modelsData = await modelsResponse.json();
-        console.log("📋 Available models:", modelsData);
-      } catch (modelsError: any) {
-        console.log("❌ Models list failed:", modelsError.message);
-      }
+        // Try different page URLs
+        const pageUrls = ["/referenzen-test", "/referenzen", "/references"];
 
-      // Try direct API call for the specific model
-      console.log("🔗 Direct API test...");
-      try {
-        const response = await fetch(
-          `https://cdn.builder.io/api/v3/content/references-content?apiKey=${currentApiKey}&limit=1`,
-        );
-        const apiData = await response.json();
-        console.log("📡 Direct API response:", apiData);
+        for (const pageUrl of pageUrls) {
+          console.log(`🔍 Trying page URL: ${pageUrl}`);
+          try {
+            const pageResponse = await fetch(
+              `https://cdn.builder.io/api/v3/content/page?apiKey=${currentApiKey}&url=${pageUrl}&limit=1`,
+            );
+            const pageData = await pageResponse.json();
+            console.log(`📡 Page API response for ${pageUrl}:`, pageData);
 
-        if (apiData.results && apiData.results.length > 0) {
-          console.log("✅ Found data via direct API call");
-          builderContent = apiData.results[0].data;
+            if (pageData.results && pageData.results.length > 0) {
+              console.log(`✅ Found page content at: ${pageUrl}`);
+              builderContent = pageData.results[0].data;
+              break;
+            }
+          } catch (pageError: any) {
+            console.log(`❌ Page ${pageUrl} error:`, pageError.message);
+          }
         }
-      } catch (apiError: any) {
-        console.log("❌ Direct API failed:", apiError.message);
+      } catch (error: any) {
+        console.log("❌ Page API failed:", error.message);
       }
 
       // If direct API didn't work, try Builder SDK
