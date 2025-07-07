@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import { builder, BuilderComponent } from "@builder.io/react";
 import Layout from "../components/Layout";
 
 // Initialize Builder.io
