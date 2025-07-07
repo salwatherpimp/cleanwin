@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 const locations = [
@@ -95,9 +96,11 @@ export default function Navigation() {
               width: "100%",
             }}
           >
-            <img
+            <Image
               src="https://cleanwin.ch/wp-content/uploads/2025/03/cropped-FINAL-FILE-CLEAN-WIN-NEW-VERSION.png"
               alt="CleanWin Logo"
+              width={200}
+              height={56}
               style={{
                 height: "100%",
                 width: "auto",

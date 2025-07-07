@@ -23,7 +23,7 @@ interface CaseStudy {
 }
 
 interface ReferencesPageProps {
-  builderContent: any;
+  builderContent: unknown;
 }
 
 export default function ReferencesPage({
