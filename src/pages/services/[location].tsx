@@ -253,14 +253,15 @@ export default function LocationPage({
             <div className="container">
               <h2>Unsere Leistungen in {location.name}</h2>
               <div className="services-grid">
-                {(builderContent?.services || fallbackContent.services).map(
-                  (service: string, index: number) => (
-                    <div key={index} className="service-card">
-                      <div className="service-icon">✨</div>
-                      <h3>{service}</h3>
-                    </div>
-                  ),
-                )}
+                {(
+                  (builderContent?.services as string[]) ||
+                  fallbackContent.services
+                ).map((service: string, index: number) => (
+                  <div key={index} className="service-card">
+                    <div className="service-icon">✨</div>
+                    <h3>{service}</h3>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
