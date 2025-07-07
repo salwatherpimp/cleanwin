@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Layout from "../../components/Layout";
 
 export default function ServicesIndexPage() {
   return (
@@ -13,7 +12,7 @@ export default function ServicesIndexPage() {
         />
       </Head>
 
-      <Layout>
+      <div>
         <div className="services-index-page">
           <section className="hero-section">
             <div className="container">
@@ -68,7 +67,7 @@ export default function ServicesIndexPage() {
             }
           }
         `}</style>
-      </Layout>
+      </div>
     </>
   );
 }
