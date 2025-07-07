@@ -272,7 +272,8 @@ export default function LocationPage({
               <h2>Warum CleanWin in {location.name}?</h2>
               <div className="benefits-grid">
                 {(
-                  builderContent?.whyChooseUs || fallbackContent.whyChooseUs
+                  (builderContent?.whyChooseUs as string[]) ||
+                  fallbackContent.whyChooseUs
                 ).map((benefit: string, index: number) => (
                   <div key={index} className="benefit-item">
                     <div className="benefit-icon">✓</div>
