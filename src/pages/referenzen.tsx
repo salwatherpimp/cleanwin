@@ -23,14 +23,7 @@ interface CaseStudy {
 }
 
 interface ReferencesPageProps {
-  builderContent: {
-    heroTitle?: string;
-    heroSubtitle?: string;
-    testimonials?: Testimonial[];
-    caseStudies?: CaseStudy[];
-    ctaTitle?: string;
-    ctaSubtitle?: string;
-  } | null;
+  builderContent: any;
 }
 
 export default function ReferencesPage({
@@ -162,7 +155,7 @@ export default function ReferencesPage({
               <div className="testimonials-grid">
                 {(
                   builderContent?.testimonials || fallbackContent.testimonials
-                ).map((testimonial: any, index: number) => (
+                ).map((testimonial: Testimonial, index: number) => (
                   <div key={index} className="testimonial-card">
                     <div className="testimonial-content">
                       <div className="stars">
@@ -193,7 +186,7 @@ export default function ReferencesPage({
               <div className="case-studies-grid">
                 {(
                   builderContent?.caseStudies || fallbackContent.caseStudies
-                ).map((caseStudy: any, index: number) => (
+                ).map((caseStudy: CaseStudy, index: number) => (
                   <div key={index} className="case-study-card">
                     <div className="case-study-header">
                       <h3>{caseStudy.title}</h3>
