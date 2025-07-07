@@ -616,82 +616,75 @@ export const getStaticProps: GetStaticProps = async () => {
   let builderContent = null;
 
   const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
+  console.log(
+    "🔧 API Key check:",
+    currentApiKey ? `${currentApiKey.substring(0, 8)}...` : "missing",
+  );
+
   if (currentApiKey && currentApiKey !== "your-api-key-here") {
+    builder.init(currentApiKey);
+
     try {
-      // Try multiple approaches to get Builder.io content
+      // Try different model names that might exist
+      const modelNames = [
+        "references-content",
+        "referencesContent",
+        "referenzen",
+      ];
 
-      // 1. Try to get from Data Model named "references-content"
-      try {
-        const dataModel = await builder
-          .get("references-content", {
-            limit: 1,
-          })
-          .toPromise();
+      for (const modelName of modelNames) {
+        console.log(`🔍 Trying model: ${modelName}`);
+        try {
+          const result = await builder.get(modelName, { limit: 1 }).toPromise();
 
-        if (dataModel?.data) {
-          console.log("Found Data Model content:", dataModel.data);
-          builderContent = dataModel.data;
+          if (result?.data) {
+            console.log(
+              `✅ Found content in model: ${modelName}`,
+              Object.keys(result.data),
+            );
+            builderContent = result.data;
+            break;
+          } else {
+            console.log(`❌ No data in model: ${modelName}`);
+          }
+        } catch (modelError: any) {
+          console.log(`❌ Model ${modelName} error:`, modelError.message);
         }
-      } catch (dataError) {
-        console.log("Data Model fetch failed:", dataError.message);
       }
 
-      // 2. If no Data Model, try Symbol
+      // Try Symbol if no data model worked
       if (!builderContent) {
+        console.log("🔍 Trying Symbol approach...");
         try {
           const symbol = await builder
             .get("symbol", {
-              query: {
-                name: "references-content",
-              },
+              query: { name: "references-content" },
             })
             .toPromise();
 
           if (symbol?.data) {
-            console.log("Found Symbol content:", symbol.data);
+            console.log("✅ Found Symbol content:", Object.keys(symbol.data));
             builderContent = symbol.data;
           }
-        } catch (symbolError) {
-          console.log("Symbol fetch failed:", symbolError.message);
+        } catch (symbolError: any) {
+          console.log("❌ Symbol error:", symbolError.message);
         }
       }
-
-      // 3. If no Symbol, try Page
-      if (!builderContent) {
-        try {
-          const page = await builder
-            .get("page", {
-              userAttributes: {
-                urlPath: "/referenzen-content",
-              },
-            })
-            .toPromise();
-
-          if (page?.data) {
-            console.log("Found Page content:", page.data);
-            builderContent = page.data;
-          }
-        } catch (pageError) {
-          console.log("Page fetch failed:", pageError.message);
-        }
-      }
-
-      if (builderContent) {
-        console.log("Using Builder.io content");
-      } else {
-        console.log("No Builder.io content found, using fallback");
-      }
-    } catch (error) {
-      console.warn("Builder.io fetch error:", error);
+    } catch (error: any) {
+      console.error("❌ Builder.io connection error:", error.message);
     }
-  } else {
-    console.log("No Builder.io API key configured");
   }
+
+  const timestamp = new Date().toISOString();
+  console.log(
+    `📊 [${timestamp}] Final result:`,
+    builderContent ? "Using Builder.io content" : "Using fallback content",
+  );
 
   return {
     props: {
       builderContent,
     },
-    revalidate: 30, // Revalidate every 30 seconds for faster testing
+    revalidate: 10, // Fast revalidation for debugging
   };
 };
