@@ -107,61 +107,59 @@ export default function ReferencesPage({
         <link rel="canonical" href="https://cleanwin.ch/referenzen" />
       </Head>
 
-      <Layout>
+      <div>
+        <h1>
+          {(builderContent?.heroTitle as string) || fallbackContent.heroTitle}
+        </h1>
+        <p>
+          {(builderContent?.heroSubtitle as string) ||
+            fallbackContent.heroSubtitle}
+        </p>
+
         <div>
-          <h1>
-            {(builderContent?.heroTitle as string) || fallbackContent.heroTitle}
-          </h1>
-          <p>
-            {(builderContent?.heroSubtitle as string) ||
-              fallbackContent.heroSubtitle}
-          </p>
-
-          <div>
-            <h2>Was unsere Kunden sagen</h2>
-            {testimonials.map((testimonial: Testimonial, index: number) => (
-              <div key={index}>
-                <div>
-                  {[...Array(testimonial.rating || 5)].map((_, i) => (
-                    <span key={i}>⭐</span>
-                  ))}
-                </div>
-                <blockquote>&ldquo;{testimonial.text}&rdquo;</blockquote>
-                <div>
-                  <div>{testimonial.name}</div>
-                  <div>{testimonial.company}</div>
-                </div>
+          <h2>Was unsere Kunden sagen</h2>
+          {testimonials.map((testimonial: Testimonial, index: number) => (
+            <div key={index}>
+              <div>
+                {[...Array(testimonial.rating || 5)].map((_, i) => (
+                  <span key={i}>⭐</span>
+                ))}
               </div>
-            ))}
-          </div>
-
-          <div>
-            <h2>Erfolgreiche Projekte</h2>
-            {caseStudies.map((caseStudy: CaseStudy, index: number) => (
-              <div key={index}>
-                <h3>{caseStudy.title}</h3>
-                <p>{caseStudy.description}</p>
-                <div>
-                  <strong>Ergebnisse:</strong>
-                  <p>{caseStudy.results}</p>
-                </div>
+              <blockquote>&ldquo;{testimonial.text}&rdquo;</blockquote>
+              <div>
+                <div>{testimonial.name}</div>
+                <div>{testimonial.company}</div>
               </div>
-            ))}
-          </div>
-
-          <div>
-            <h2>
-              {(builderContent?.ctaTitle as string) || fallbackContent.ctaTitle}
-            </h2>
-            <p>
-              {(builderContent?.ctaSubtitle as string) ||
-                fallbackContent.ctaSubtitle}
-            </p>
-            <a href="tel:+41522020100">📞 Jetzt anrufen</a>
-            <a href="mailto:info@cleanwin.ch">✉️ E-Mail senden</a>
-          </div>
+            </div>
+          ))}
         </div>
-      </Layout>
+
+        <div>
+          <h2>Erfolgreiche Projekte</h2>
+          {caseStudies.map((caseStudy: CaseStudy, index: number) => (
+            <div key={index}>
+              <h3>{caseStudy.title}</h3>
+              <p>{caseStudy.description}</p>
+              <div>
+                <strong>Ergebnisse:</strong>
+                <p>{caseStudy.results}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div>
+          <h2>
+            {(builderContent?.ctaTitle as string) || fallbackContent.ctaTitle}
+          </h2>
+          <p>
+            {(builderContent?.ctaSubtitle as string) ||
+              fallbackContent.ctaSubtitle}
+          </p>
+          <a href="tel:+41522020100">📞 Jetzt anrufen</a>
+          <a href="mailto:info@cleanwin.ch">✉️ E-Mail senden</a>
+        </div>
+      </div>
     </>
   );
 }
