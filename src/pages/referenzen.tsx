@@ -30,7 +30,7 @@ export default function ReferencesPage({
       },
       {
         name: "Sarah Zimmermann",
-        company: "Praxis Dr. Zimmermann, Z��rich",
+        company: "Praxis Dr. Zimmermann, Zürich",
         text: "Die hygienische Reinigung unserer Praxisräume ist bei CleanWin in besten Händen. Termine werden zuverlässig eingehalten und die Qualität stimmt.",
         rating: 5,
       },
