@@ -617,32 +617,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   }
 
-  let builderContent = null;
-
-  // Try to fetch Builder.io content if API key is configured
-  const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
-  if (currentApiKey && currentApiKey !== "your-api-key-here") {
-    try {
-      // Fetch the service-location-content symbol from Builder.io
-      builderContent = await builder
-        .get("service-location-content", {
-          userAttributes: {
-            location: location.name,
-            locationSlug: location.slug,
-          },
-        })
-        .toPromise();
-    } catch (error) {
-      console.warn("Could not fetch Builder.io content:", error);
-      // Continue with fallback content
-    }
-  }
-
   return {
     props: {
       location,
-      builderContent: builderContent?.data || null,
+      builderContent: null,
     },
-    revalidate: 60, // Revalidate every minute
   };
 };
