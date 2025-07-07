@@ -628,17 +628,32 @@ export const getStaticProps: GetStaticProps = async () => {
   if (currentApiKey && currentApiKey !== "your-api-key-here") {
     try {
       // Fetch the references-content symbol from Builder.io
-      builderContent = await builder.get("references-content").toPromise();
+      const content = await builder
+        .get("symbol", {
+          query: {
+            name: "references-content",
+          },
+        })
+        .toPromise();
+
+      if (content?.data) {
+        builderContent = content.data;
+      } else {
+        // Fallback: try to get by model name
+        const dataContent = await builder.get("references-content").toPromise();
+        builderContent = dataContent?.data || null;
+      }
     } catch (error) {
       console.warn("Could not fetch Builder.io references content:", error);
+      console.log("Available content models:", error);
       // Continue with fallback content
     }
   }
 
   return {
     props: {
-      builderContent: builderContent?.data || null,
+      builderContent: builderContent || null,
     },
-    revalidate: 60, // Revalidate every minute
+    revalidate: 30, // Revalidate every 30 seconds for faster updates
   };
 };
