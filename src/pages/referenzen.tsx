@@ -1,6 +1,13 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
+import { builder } from "@builder.io/react";
 import Layout from "../components/Layout";
+
+// Initialize Builder.io
+const apiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
+if (apiKey && apiKey !== "your-api-key-here") {
+  builder.init(apiKey);
+}
 
 interface Testimonial {
   name: string;
@@ -51,7 +58,7 @@ export default function ReferencesPage({
       {
         title: "Großraumbüro Winterthur - 500m²",
         description:
-          "Komplette Büroreinigung inkl. Teppichreinigung und Fensterreinigung für ein Technologieunternehmen.",
+          "Komplette Büroreinigung inkl. Teppichreinigung und Fensterreinigung f��r ein Technologieunternehmen.",
         results:
           "50% Zeitersparnis für interne Mitarbeiter, 100% Kundenzufriedenheit",
       },
@@ -614,9 +621,24 @@ export default function ReferencesPage({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  let builderContent = null;
+
+  // Try to fetch Builder.io content if API key is configured
+  const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
+  if (currentApiKey && currentApiKey !== "your-api-key-here") {
+    try {
+      // Fetch the references-content symbol from Builder.io
+      builderContent = await builder.get("references-content").toPromise();
+    } catch (error) {
+      console.warn("Could not fetch Builder.io references content:", error);
+      // Continue with fallback content
+    }
+  }
+
   return {
     props: {
-      builderContent: null,
+      builderContent: builderContent?.data || null,
     },
+    revalidate: 60, // Revalidate every minute
   };
 };
