@@ -62,6 +62,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const pagePath =
     "/" + (Array.isArray(pageParam) ? pageParam.join("/") : pageParam || "");
 
+  // Exclude specific routes that have dedicated pages
+  const excludedPaths = ["/referenzen"];
+  if (excludedPaths.includes(pagePath)) {
+    return {
+      notFound: true,
+    };
+  }
+
   try {
     const page = await builder
       .get("page", {
