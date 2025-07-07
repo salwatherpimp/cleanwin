@@ -23,7 +23,7 @@ interface CaseStudy {
 }
 
 interface ReferencesPageProps {
-  builderContent: unknown;
+  builderContent: Record<string, string | Testimonial[] | CaseStudy[]> | null;
 }
 
 export default function ReferencesPage({
@@ -80,6 +80,12 @@ export default function ReferencesPage({
     ctaSubtitle:
       "Kontaktieren Sie uns für eine kostenlose Beratung und Offerte.",
   };
+
+  const testimonials =
+    (builderContent?.testimonials as Testimonial[]) ||
+    fallbackContent.testimonials;
+  const caseStudies =
+    (builderContent?.caseStudies as CaseStudy[]) || fallbackContent.caseStudies;
 
   return (
     <>
@@ -155,9 +161,7 @@ export default function ReferencesPage({
             <div className="container">
               <h2>Was unsere Kunden sagen</h2>
               <div className="testimonials-grid">
-                {(
-                  builderContent?.testimonials || fallbackContent.testimonials
-                ).map((testimonial: Testimonial, index: number) => (
+                {testimonials.map((testimonial: Testimonial, index: number) => (
                   <div key={index} className="testimonial-card">
                     <div className="testimonial-content">
                       <div className="stars">
@@ -186,9 +190,7 @@ export default function ReferencesPage({
             <div className="container">
               <h2>Erfolgreiche Projekte</h2>
               <div className="case-studies-grid">
-                {(
-                  builderContent?.caseStudies || fallbackContent.caseStudies
-                ).map((caseStudy: CaseStudy, index: number) => (
+                {caseStudies.map((caseStudy: CaseStudy, index: number) => (
                   <div key={index} className="case-study-card">
                     <div className="case-study-header">
                       <h3>{caseStudy.title}</h3>
@@ -243,9 +245,13 @@ export default function ReferencesPage({
           <section className="cta-section">
             <div className="container">
               <div className="cta-content">
-                <h2>{builderContent?.ctaTitle || fallbackContent.ctaTitle}</h2>
+                <h2>
+                  {(builderContent?.ctaTitle as string) ||
+                    fallbackContent.ctaTitle}
+                </h2>
                 <p>
-                  {builderContent?.ctaSubtitle || fallbackContent.ctaSubtitle}
+                  {(builderContent?.ctaSubtitle as string) ||
+                    fallbackContent.ctaSubtitle}
                 </p>
                 <div className="cta-buttons">
                   <a href="tel:+41522020100" className="cta-button primary">
