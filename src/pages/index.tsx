@@ -1483,11 +1483,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 />
                               ))}
                             </div>
-                            <blockquote
+                            <div
                               style={{
                                 color: "#1f2937",
                                 marginBottom: "16px",
-                                fontStyle: "italic",
                                 fontSize: "14px",
                                 lineHeight: 1.625,
                                 fontFamily: "Inter, sans-serif",
@@ -1500,8 +1499,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                               }}
                               className="review-text-clamp"
                             >
-                              "{review.text}"
-                            </blockquote>
+                              {review.text}
+                            </div>
                             <div
                               style={{
                                 fontSize: "0.875rem",
