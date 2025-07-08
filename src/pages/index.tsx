@@ -1432,7 +1432,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
               <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
                 <h2
                   style={{
-                    fontSize: "2.25rem",
+                    fontSize: "32px",
                     fontWeight: 700,
                     color: "#111827",
                     marginBottom: "1.5rem",
@@ -2132,7 +2132,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 }}
               >
                 <span>© 2025 CleanWin. Alle Rechte vorbehalten.</span>
-                <span>Gemacht mit ♥��� in Winterthur</span>
+                <span>Gemacht mit ♥️ in Winterthur</span>
               </div>
               <a
                 href="/datenschutz"
