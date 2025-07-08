@@ -101,7 +101,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
     },
     {
       icon: Clock,
-      title: "Zuverl��ssig & termingerecht",
+      title: "Zuverlässig & termingerecht",
       description: "Pünktliche und verlässliche Ausführung aller Arbeiten",
     },
     {
@@ -113,21 +113,28 @@ export default function HomePage({ buildTime }: HomePageProps) {
 
   const reviews = [
     {
-      name: "Thomas Müller",
-      company: "Müller AG",
-      text: "CleanWin reinigt unsere Büroräume seit 3 Jahren zuverlässig und gründlich. Das Team ist professionell und flexibel - absolut empfehlenswert!",
+      name: "Ursula Wirtz",
+      text: "Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde CleanWin immer wieder gern für mein Haus engagieren.",
       rating: 5,
     },
     {
-      name: "Sarah Zimmermann",
-      company: "Praxis Dr. Zimmermann",
-      text: "Die hygienische Reinigung unserer Praxisräume ist bei CleanWin in besten Händen. Termine werden zuverlässig eingehalten.",
+      name: "Johanna Kelts",
+      text: "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen Berufsleute zusammenfassen. Sie haben eine Wohnung in meinem über 200 Jahre alten MFH neu gereinigt. Die Aufgabe war nicht unbedingt einfach. Der Auftrag wurde jedoch zu meiner vollsten Zufriedenheit erledigt. Ich kann diese Firma wirklich sehr empfehlen!",
       rating: 5,
     },
     {
-      name: "Martin Weber",
-      company: "Privathaushalt",
-      text: "Nach unserem Umzug hat CleanWin eine perfekte Endreinigung gemacht. Alles blitzsauber - wir buchen sie gerne wieder.",
+      name: "Frau Achternbusch",
+      text: "Für unser neues Restaurant, haben wir ein passendes Reinigungskonzept gesucht. Durch die Kompetente Beratung von CleanWin konnten wir unsere Vorstellungen zu einem fairen Preis umsetzen.",
+      rating: 5,
+    },
+    {
+      name: "Domi Fuchs",
+      text: "CleanWin hat unsere neue wohnung gereinigt in nur einem tag. Alles zu unserer besten zufriedenheit. Unkompliziert, speditiv und top qualität. Bin ich mir so nicht gewohnt ;) sehr zu empfehlen!!!",
+      rating: 5,
+    },
+    {
+      name: "Beat Von Niederhäusern",
+      text: "Perfekt. Tadellose Arbeit. Effizient, schnell, sauber, freundlich, rücksichtsvoll. Wir sind restlos zufrieden mit der Ausführung. Sehr gerne wieder.",
       rating: 5,
     },
   ];
