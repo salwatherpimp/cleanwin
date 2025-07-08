@@ -513,11 +513,13 @@ export default function HomePage({ buildTime }: HomePageProps) {
           <section
             style={{
               position: "relative",
-              height: "100vh",
+              minHeight: "540px",
+              overflow: "hidden",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
+            className="hero-section"
           >
             <div
               style={{
@@ -550,9 +552,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 zIndex: 10,
                 textAlign: "center",
                 color: "white",
-                maxWidth: "64rem",
+                maxWidth: "72rem",
                 margin: "0 auto",
-                padding: "0 1rem",
+                padding: "7rem 1rem 5rem",
               }}
             >
               <h1
