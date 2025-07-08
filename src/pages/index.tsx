@@ -625,7 +625,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
           <section
             style={{
               position: "relative",
-              minHeight: "540px",
+              minHeight: "100vh",
               overflow: "hidden",
               display: "flex",
               alignItems: "center",
@@ -645,7 +645,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-                aspectRatio: "2.4/1",
               }}
             />
             <div
@@ -667,15 +666,15 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 color: "white",
                 maxWidth: "72rem",
                 margin: "0 auto",
-                padding: "40px 16px",
+                padding: "2rem 1rem",
               }}
             >
               <h1
                 style={{
-                  fontSize: "60px",
+                  fontSize: "clamp(2rem, 5vw, 4rem)",
                   fontWeight: 800,
                   marginBottom: "1rem",
-                  lineHeight: "60px",
+                  lineHeight: "1.2",
                   textShadow: "0 4px 6px rgba(0,0,0,0.1)",
                 }}
                 className="hero-title"
