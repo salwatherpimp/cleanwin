@@ -32,9 +32,6 @@ const nextConfig = {
   generateEtags: true,
   // Performance Optimierungen
   swcMinify: true,
-  experimental: {
-    optimizeCss: true,
-  },
 };
 
 module.exports = nextConfig;
