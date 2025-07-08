@@ -277,6 +277,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           color: "#374151",
                           textDecoration: "none",
                           transition: "all 0.2s ease",
+                          fontWeight: 500,
                         }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.color = "#e7027e";
@@ -287,16 +288,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           e.currentTarget.style.backgroundColor = "transparent";
                         }}
                       >
-                        <div style={{ fontWeight: 500 }}>{service.name}</div>
-                        <div
-                          style={{
-                            fontSize: "0.875rem",
-                            color: "#6b7280",
-                            marginTop: "0.25rem",
-                          }}
-                        >
-                          {service.description}
-                        </div>
+                        {service.name}
                       </a>
                     ))}
                   </div>
