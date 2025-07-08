@@ -424,6 +424,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 style={{
                   padding: "0.5rem 0",
                   fontWeight: 500,
+                  fontSize: "16px",
                   color: isScrolled ? "#374151" : "white",
                   textDecoration: "none",
                   transition: "color 0.2s ease",
