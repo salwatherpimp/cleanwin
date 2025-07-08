@@ -620,13 +620,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
         </header>
 
         {/* Main Content */}
-        <main>
+        <main style={{ paddingTop: "80px" }}>
           {/* Hero Section */}
           <section
             style={{
               position: "relative",
               height: "450px",
-              marginTop: "80px",
               overflow: "visible",
               display: "flex",
               alignItems: "center",
