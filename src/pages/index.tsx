@@ -628,7 +628,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
         <section
           style={{
             position: "relative",
-            height: "600px",
+            height: "700px",
             marginTop: "0",
             overflow: "hidden",
             display: "flex",
