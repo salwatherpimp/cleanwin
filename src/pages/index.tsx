@@ -60,10 +60,18 @@ export default function HomePage({ buildTime }: HomePageProps) {
       setCurrentReviewIndex((prev) => (prev + 1) % reviews.length);
     }, 6000);
 
+    // Auto-rotation for why carousel (desktop only)
+    const whyInterval = setInterval(() => {
+      if (!isMobile) {
+        setCurrentWhyIndex((prev) => (prev + 1) % whyFeatures.length);
+      }
+    }, 4000);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
       clearInterval(reviewInterval);
+      clearInterval(whyInterval);
     };
   }, []);
 
