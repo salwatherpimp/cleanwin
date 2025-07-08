@@ -748,7 +748,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-start",
-                  gap: "4px",
+                  gap: "2px",
                 }}
               >
                 <div style={{ display: "flex" }}>
