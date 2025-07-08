@@ -1607,39 +1607,69 @@ export default function HomePage({ buildTime }: HomePageProps) {
                               e.currentTarget.style.transform = "translateY(0)";
                             }}
                           >
-                            {/* Quotation Mark */}
-                            <div
-                              style={{
-                                position: "absolute",
-                                top: "8px",
-                                left: "8px",
-                                fontSize: "1.5rem",
-                                color: "#e7027e",
-                                fontWeight: "bold",
-                                lineHeight: 1,
-                              }}
-                            >
-                              "
-                            </div>
-
-                            {/* Stars */}
+                            {/* Profile Photo & Stars Header */}
                             <div
                               style={{
                                 display: "flex",
-                                marginBottom: "8px",
-                                marginTop: "4px",
+                                alignItems: "center",
+                                gap: "12px",
+                                marginBottom: "12px",
                               }}
                             >
-                              {[...Array(review.rating)].map((_, i) => (
-                                <Star
-                                  key={i}
-                                  size={14}
+                              {/* Reviewer Profile Photo */}
+                              <div
+                                style={{
+                                  width: "48px",
+                                  height: "48px",
+                                  borderRadius: "50%",
+                                  backgroundColor: "#e7027e",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  color: "white",
+                                  fontWeight: 600,
+                                  fontSize: "18px",
+                                  flexShrink: 0,
+                                  boxShadow: "0 2px 8px rgba(231, 2, 126, 0.3)",
+                                }}
+                              >
+                                {review.name.charAt(0)}
+                              </div>
+
+                              {/* Stars */}
+                              <div
+                                style={{
+                                  display: "flex",
+                                  flexDirection: "column",
+                                }}
+                              >
+                                <div
                                   style={{
-                                    color: "#fbbf24",
-                                    fill: "#fbbf24",
+                                    display: "flex",
+                                    marginBottom: "4px",
                                   }}
-                                />
-                              ))}
+                                >
+                                  {[...Array(review.rating)].map((_, i) => (
+                                    <Star
+                                      key={i}
+                                      size={16}
+                                      style={{
+                                        color: "#fbbf24",
+                                        fill: "#fbbf24",
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                                <div
+                                  style={{
+                                    fontSize: "12px",
+                                    color: "#6b7280",
+                                    fontWeight: 500,
+                                  }}
+                                >
+                                  Google Bewertung
+                                </div>
+                              </div>
                             </div>
 
                             {/* Review Text */}
