@@ -40,8 +40,26 @@ export default function HomePage({ buildTime }: HomePageProps) {
     window.addEventListener("scroll", handleScroll);
     checkBusinessHours();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Auto-rotation for reviews carousel
+    const reviewInterval = setInterval(() => {
+      setCurrentReviewIndex((prev) => (prev + 1) % reviews.length);
+    }, 6000);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearInterval(reviewInterval);
+    };
   }, []);
+
+  const nextReview = () => {
+    setCurrentReviewIndex((prev) => (prev + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setCurrentReviewIndex(
+      (prev) => (prev - 1 + reviews.length) % reviews.length,
+    );
+  };
 
   const services = [
     {
