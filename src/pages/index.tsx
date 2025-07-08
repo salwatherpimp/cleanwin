@@ -22,6 +22,8 @@ interface HomePageProps {
 
 export default function HomePage({ buildTime }: HomePageProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  console.log("isScrolled state:", isScrolled); // Debug log
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBusinessHours, setIsBusinessHours] = useState(false);
