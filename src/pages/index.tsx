@@ -2274,6 +2274,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
           .hero-section > div:first-child {
             background-position: 40% center !important;
           }
+          h2 {
+            font-size: 22px !important;
+          }
           .company-logos {
             grid-template-columns: repeat(2, 1fr) !important;
           }
