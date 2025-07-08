@@ -561,26 +561,29 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 style={{
                   fontSize: "3rem",
                   fontWeight: 800,
-                  marginBottom: "1.5rem",
+                  marginBottom: "1rem",
                   lineHeight: 1.2,
-                  textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
+                  textShadow: "0 4px 6px rgba(0,0,0,0.1)",
                 }}
+                className="hero-title"
               >
-                Professionelle Reinigung in Winterthur für Sauberkeit &
+                Ihr Reinigungsservice in Winterthur für Präzision, Sauberkeit &
                 Begeisterung
               </h1>
               <p
                 style={{
-                  fontSize: "1.25rem",
-                  fontWeight: 300,
-                  opacity: 0.95,
-                  marginBottom: "2rem",
+                  fontSize: "1.125rem",
+                  fontWeight: 400,
+                  color: "rgba(255,255,255,0.95)",
+                  marginBottom: "1.5rem",
                   lineHeight: 1.6,
-                  textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
+                  maxWidth: "48rem",
+                  margin: "0 auto 1.5rem",
                 }}
+                className="hero-subtitle"
               >
-                Mit mehr als 10 Jahren Erfahrung reinigt CleanWin Fenster,
-                Büros, Fassaden und mehr.
+                Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere
+                Räume, Fassaden und mehr.
               </p>
 
               {/* Google Rating Badge */}
