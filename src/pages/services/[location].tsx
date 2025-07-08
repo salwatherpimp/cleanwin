@@ -363,24 +363,24 @@ export default function LocationPage({
           }
 
           .cta-button.primary {
-            background: #e7027e;
+            background: #10a0a4;
             color: white;
-            border-color: #e7027e;
+            border-color: #10a0a4;
           }
 
           .cta-button.primary:hover {
-            background: #c8026b;
-            border-color: #c8026b;
+            background: #0d7a7e;
+            border-color: #0d7a7e;
           }
 
           .cta-button.secondary {
             background: transparent;
-            color: #e7027e;
-            border-color: #e7027e;
+            color: #10a0a4;
+            border-color: #10a0a4;
           }
 
           .cta-button.secondary:hover {
-            background: #e7027e;
+            background: #10a0a4;
             color: white;
           }
 
@@ -412,7 +412,7 @@ export default function LocationPage({
             align-items: center;
             justify-content: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 2px dashed #e7027e;
+            border: 2px dashed #10a0a4;
           }
 
           .hero-placeholder span {
@@ -491,7 +491,7 @@ export default function LocationPage({
           }
 
           .benefit-icon {
-            color: #e7027e;
+            color: #10a0a4;
             font-weight: bold;
             font-size: 1.2rem;
             margin-top: 0.2rem;
@@ -504,7 +504,7 @@ export default function LocationPage({
           }
 
           .contact-cta-section {
-            background: linear-gradient(135deg, #e7027e 0%, #c8026b 100%);
+            background: linear-gradient(135deg, #10a0a4 0%, #0d7a7e 100%);
             color: white;
             padding: 4rem 0;
             text-align: center;
