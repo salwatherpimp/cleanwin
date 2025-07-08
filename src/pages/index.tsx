@@ -1611,9 +1611,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
                             <div
                               style={{
                                 position: "absolute",
-                                top: "16px",
-                                left: "16px",
-                                fontSize: "2rem",
+                                top: "8px",
+                                left: "8px",
+                                fontSize: "1.5rem",
                                 color: "#e7027e",
                                 fontWeight: "bold",
                                 lineHeight: 1,
@@ -1622,71 +1622,63 @@ export default function HomePage({ buildTime }: HomePageProps) {
                               "
                             </div>
 
-                            {/* Content Area */}
+                            {/* Stars */}
                             <div
                               style={{
-                                flex: "1",
                                 display: "flex",
-                                flexDirection: "column",
+                                marginBottom: "8px",
+                                marginTop: "4px",
                               }}
                             >
-                              {/* Stars */}
-                              <div
-                                style={{
-                                  display: "flex",
-                                  marginBottom: "1rem",
-                                  marginTop: "8px",
-                                }}
-                              >
-                                {[...Array(review.rating)].map((_, i) => (
-                                  <Star
-                                    key={i}
-                                    size={16}
-                                    style={{
-                                      color: "#fbbf24",
-                                      fill: "#fbbf24",
-                                    }}
-                                  />
-                                ))}
-                              </div>
-
-                              {/* Review Text */}
-                              <div
-                                style={{
-                                  color: "#1f2937",
-                                  fontSize: "14px",
-                                  lineHeight: 1.625,
-                                  fontFamily: "Inter, sans-serif",
-                                  fontWeight: 400,
-                                  marginBottom: "16px",
-                                  flex: "1",
-                                  overflow: "hidden",
-                                  display: "-webkit-box",
-                                  WebkitBoxOrient: "vertical",
-                                  WebkitLineClamp: 3,
-                                  wordWrap: "break-word",
-                                  hyphens: "auto",
-                                }}
-                              >
-                                {review.text}
-                              </div>
+                              {[...Array(review.rating)].map((_, i) => (
+                                <Star
+                                  key={i}
+                                  size={14}
+                                  style={{
+                                    color: "#fbbf24",
+                                    fill: "#fbbf24",
+                                  }}
+                                />
+                              ))}
                             </div>
 
-                            {/* Author Name - Absolutely positioned at bottom */}
+                            {/* Review Text */}
                             <div
                               style={{
-                                position: "absolute",
-                                bottom: "16px",
-                                left: "32px",
-                                right: "32px",
+                                color: "#1f2937",
+                                fontSize: "12px",
+                                lineHeight: 1.4,
                                 fontFamily: "Inter, sans-serif",
-                                fontWeight: 600,
+                                fontWeight: 400,
+                                marginBottom: "8px",
+                                overflow: "hidden",
+                                display: "-webkit-box",
+                                WebkitBoxOrient: "vertical",
+                                WebkitLineClamp: 3,
+                                wordWrap: "break-word",
+                                hyphens: "auto",
+                                height: "100px",
+                              }}
+                            >
+                              {review.text}
+                            </div>
+
+                            {/* Author Name - ALWAYS VISIBLE */}
+                            <div
+                              style={{
+                                fontFamily: "Inter, sans-serif",
+                                fontWeight: 700,
                                 fontSize: "14px",
                                 color: "#111827",
-                                padding: "12px 0",
-                                borderTop: "1px solid rgba(231, 2, 126, 0.2)",
-                                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                                paddingTop: "8px",
+                                borderTop: "2px solid #e7027e",
+                                backgroundColor: "#fff",
                                 textAlign: "left",
+                                position: "absolute",
+                                bottom: "8px",
+                                left: "16px",
+                                right: "16px",
+                                zIndex: 100,
                               }}
                             >
                               {review.name}
