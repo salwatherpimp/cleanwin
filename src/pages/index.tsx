@@ -158,7 +158,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
       icon: Heart,
       title: "Inhabergeführt & persönlich",
       description:
-        "Als inhabergeführter Betrieb stehen wir für direkten Kontakt und individuelle Betreuung. Sie sprechen direkt mit den Entscheidungsträgern und erhalten persönliche Beratung für ihr Projekt.",
+        "Als inhabergef��hrter Betrieb stehen wir für direkten Kontakt und individuelle Betreuung. Sie sprechen direkt mit den Entscheidungsträgern und erhalten persönliche Beratung für ihr Projekt.",
     },
     {
       icon: Clock,
@@ -182,7 +182,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
     },
     {
       name: "Johanna Kelts",
-      text: "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen Berufsleute zusammenfassen. Sie haben eine Wohnung in meinem über 200 Jahre alten MFH neu gestrichen. Die Aufgabe, Wände und Einbauschränke mit vielen Ecken und Kanten, Holztäfer, sowie Gips- und Mauerwerk kostengünstig und doch perfekt zu streichen, war nicht unbedingt einfach. Der Auftrag wurde jedoch zu meiner vollsten Zufriedenheit erledigt. Ich kann diese Firma wirklich sehr empfehlen!",
+      text: "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen Berufsleute zusammenfassen. Sie haben eine Wohnung in meinem über 200 Jahre alten MFH neu gestrichen. Die Aufgabe, W��nde und Einbauschränke mit vielen Ecken und Kanten, Holztäfer, sowie Gips- und Mauerwerk kostengünstig und doch perfekt zu streichen, war nicht unbedingt einfach. Der Auftrag wurde jedoch zu meiner vollsten Zufriedenheit erledigt. Ich kann diese Firma wirklich sehr empfehlen!",
       rating: 5,
     },
     {
@@ -2232,7 +2232,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             height: 600px !important;
           }
           .hero-title {
-            font-size: 2.5rem !important;
+            font-size: 1.875rem !important;
             line-height: 1.2 !important;
           }
           .hero-section > div:first-child {
