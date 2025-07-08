@@ -1,4 +1,4 @@
-// src/pages/[[...page]].tsx
+// src/pages/[[...slug]].tsx
 
 import { builder, BuilderComponent, useIsPreviewing } from "@builder.io/react";
 import { GetStaticProps, GetStaticPaths } from "next";
@@ -23,17 +23,14 @@ class HydrationErrorBoundary extends Component<
 
   componentDidCatch(error: Error) {
     if (error.message.includes("Hydration failed")) {
-      // This is a hydration error, which is expected with Builder.io
       console.warn("Hydration error caught and handled:", error.message);
     }
   }
 
   render() {
     if (this.state.hasError) {
-      // Re-render only on client side
       return this.props.children;
     }
-
     return this.props.children;
   }
 }
@@ -58,17 +55,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   }
 
-  const pageParam = params?.page;
-  const pagePath =
-    "/" + (Array.isArray(pageParam) ? pageParam.join("/") : pageParam || "");
+  const slugParam = params?.slug;
 
-  // Exclude homepage and specific routes that have dedicated pages
-  const excludedPaths = ["/"];
-  if (excludedPaths.includes(pagePath)) {
+  // If no slug params, this means it's trying to handle "/"
+  // Return 404 to let index.tsx handle it
+  if (!slugParam || slugParam.length === 0) {
     return {
       notFound: true,
     };
   }
+
+  const pagePath =
+    "/" + (Array.isArray(slugParam) ? slugParam.join("/") : slugParam);
 
   try {
     const page = await builder
@@ -88,7 +86,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   } catch (error) {
     console.error("Error fetching Builder.io page:", error);
-    // Still return isBuilderConfigured: true because API key is valid
     return {
       props: {
         page: null,
@@ -100,8 +97,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Always return minimal paths and use fallback for dynamic generation
-  // This ensures the build doesn't fail if Builder.io is not configured
   return {
     paths: [],
     fallback: "blocking",
@@ -117,9 +112,13 @@ interface BuilderPage {
 
 interface CatchAllPageProps {
   page: BuilderPage | null;
+  isBuilderConfigured: boolean;
 }
 
-export default function CatchAllPage({ page }: CatchAllPageProps) {
+export default function CatchAllPage({
+  page,
+  isBuilderConfigured,
+}: CatchAllPageProps) {
   const router = useRouter();
   const isPreviewing = useIsPreviewing();
 
@@ -127,9 +126,7 @@ export default function CatchAllPage({ page }: CatchAllPageProps) {
     return <h1>Loading...</h1>;
   }
 
-  // Only show setup message if API key is completely missing or default value
-  const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
-  if (!currentApiKey || currentApiKey === "your-api-key-here") {
+  if (!isBuilderConfigured) {
     return (
       <>
         <Head>
@@ -148,35 +145,6 @@ export default function CatchAllPage({ page }: CatchAllPageProps) {
             <p>
               To use this app, you need to configure your Builder.io API key.
             </p>
-            <ol
-              style={{
-                textAlign: "left",
-                maxWidth: "600px",
-                margin: "2rem auto",
-              }}
-            >
-              <li>
-                Go to{" "}
-                <a
-                  href="https://builder.io/account/organization"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  https://builder.io/account/organization
-                </a>
-              </li>
-              <li>Copy your API key</li>
-              <li>
-                Replace &lsquo;your-api-key-here&rsquo; in the .env.local file
-                with your actual API key
-              </li>
-              <li>Restart the development server</li>
-            </ol>
-            <p>
-              <em>
-                Your API key should start with something like: a1b2c3d4e5f6...
-              </em>
-            </p>
           </div>
         </Layout>
       </>
@@ -184,46 +152,6 @@ export default function CatchAllPage({ page }: CatchAllPageProps) {
   }
 
   if (!page && !isPreviewing) {
-    // If we have an API key but no content, show a welcome page instead of 404
-    if (currentApiKey && currentApiKey !== "your-api-key-here") {
-      return (
-        <>
-          <Head>
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1"
-            />
-            <title>Welcome</title>
-          </Head>
-          <Layout>
-            <div
-              style={{
-                padding: "2rem",
-                textAlign: "center",
-                fontFamily: "system-ui, sans-serif",
-              }}
-            >
-              <h1>Welcome to Your App</h1>
-              <p>
-                Your Builder.io integration is set up! Create content in
-                Builder.io to see it here.
-              </p>
-              <p>
-                <a
-                  href="https://builder.io/content"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#0066cc", textDecoration: "underline" }}
-                >
-                  Go to Builder.io to create your first page →
-                </a>
-              </p>
-            </div>
-          </Layout>
-        </>
-      );
-    }
-
     return (
       <>
         <Head>
