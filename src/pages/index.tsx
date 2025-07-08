@@ -1499,56 +1499,69 @@ export default function HomePage({ buildTime }: HomePageProps) {
                               "
                             </div>
 
+                            {/* Content Area */}
                             <div
                               style={{
+                                flex: "1",
                                 display: "flex",
-                                marginBottom: "1rem",
-                                marginTop: "8px",
+                                flexDirection: "column",
                               }}
                             >
-                              {[...Array(review.rating)].map((_, i) => (
-                                <Star
-                                  key={i}
-                                  size={16}
-                                  style={{ color: "#fbbf24", fill: "#fbbf24" }}
-                                />
-                              ))}
-                            </div>
-                            <div
-                              style={{
-                                color: "#1f2937",
-                                marginBottom: "16px",
-                                fontSize: "14px",
-                                lineHeight: 1.625,
-                                fontFamily: "Inter, sans-serif",
-                                fontWeight: 400,
-                                overflow: "hidden",
-                                display: "-webkit-box",
-                                WebkitBoxOrient: "vertical",
-                                WebkitLineClamp: 3,
-                                wordWrap: "break-word",
-                                hyphens: "auto",
-                              }}
-                              className="review-text-clamp"
-                            >
-                              {review.text}
-                            </div>
-                            <div
-                              className="review-author"
-                              style={{
-                                fontFamily: "Inter, sans-serif",
-                                fontWeight: 600,
-                                fontSize: "14px",
-                                color: "#111827",
-                                paddingTop: "12px",
-                                borderTop: "1px solid rgba(231, 2, 126, 0.1)",
-                                display: "block",
-                                visibility: "visible",
-                                position: "relative",
-                                zIndex: 10,
-                              }}
-                            >
-                              {review.name}
+                              {/* Stars */}
+                              <div
+                                style={{
+                                  display: "flex",
+                                  marginBottom: "1rem",
+                                  marginTop: "8px",
+                                }}
+                              >
+                                {[...Array(review.rating)].map((_, i) => (
+                                  <Star
+                                    key={i}
+                                    size={16}
+                                    style={{
+                                      color: "#fbbf24",
+                                      fill: "#fbbf24",
+                                    }}
+                                  />
+                                ))}
+                              </div>
+
+                              {/* Review Text */}
+                              <div
+                                style={{
+                                  color: "#1f2937",
+                                  fontSize: "14px",
+                                  lineHeight: 1.625,
+                                  fontFamily: "Inter, sans-serif",
+                                  fontWeight: 400,
+                                  marginBottom: "16px",
+                                  flex: "1",
+                                  overflow: "hidden",
+                                  display: "-webkit-box",
+                                  WebkitBoxOrient: "vertical",
+                                  WebkitLineClamp: 3,
+                                  wordWrap: "break-word",
+                                  hyphens: "auto",
+                                }}
+                              >
+                                {review.text}
+                              </div>
+
+                              {/* Author Name - Always at bottom */}
+                              <div
+                                style={{
+                                  fontFamily: "Inter, sans-serif",
+                                  fontWeight: 600,
+                                  fontSize: "14px",
+                                  color: "#111827",
+                                  paddingTop: "12px",
+                                  borderTop: "1px solid rgba(231, 2, 126, 0.1)",
+                                  marginTop: "auto",
+                                }}
+                              >
+                                {review.name}
+                              </div>
                             </div>
                           </div>
                         </div>
