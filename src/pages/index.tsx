@@ -2196,15 +2196,13 @@ export default function HomePage({ buildTime }: HomePageProps) {
         }
         @media (max-width: 767px) {
           .hero-section {
-            min-height: 300px !important;
+            height: 380px !important;
           }
           .hero-title {
             font-size: 1.8rem !important;
             line-height: 1.2 !important;
           }
-        }
-        @media (max-width: 767px) {
-          .hero-section div:first-child {
+          .hero-section > div:first-child {
             background-position: 20% center !important;
           }
           .company-logos {
