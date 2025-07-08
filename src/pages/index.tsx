@@ -678,7 +678,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
           >
             <h1
               style={{
-                fontSize: "42px",
+                fontSize: "32px",
                 fontWeight: 800,
                 margin: "0 0 1rem 0",
                 lineHeight: "1.2",
@@ -1529,8 +1529,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   }}
                   className="reviews-subtitle"
                 >
-                  Überzeugen Sie sich von der Qualität unserer Arbeit und senden
-                  sie uns noch heute eine unverbindliche Kontaktanfrage.
+                  Überzeugen Sie sich von der Qualit��t unserer Arbeit und
+                  senden sie uns noch heute eine unverbindliche Kontaktanfrage.
                 </p>
 
                 {/* Google Rating Header Badge */}
