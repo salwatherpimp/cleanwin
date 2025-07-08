@@ -650,7 +650,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
               backgroundImage:
                 "url(https://res.cloudinary.com/dwlk9of7h/image/upload/v1752005906/homepage-herosection_fsxqwc.avif)",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "center right",
               backgroundRepeat: "no-repeat",
             }}
           />
