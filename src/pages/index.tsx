@@ -1225,57 +1225,136 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 </div>
               )}
 
-              {/* Mobile: Static grid layout for now */}
+              {/* Mobile: Continuous scroll animation */}
               {isMobile && (
                 <div
                   style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(2, 1fr)",
-                    gap: "1rem",
+                    overflow: "hidden",
+                    width: "100%",
+                    position: "relative",
+                    height: "80px",
+                    display: "flex",
                     alignItems: "center",
-                    justifyItems: "center",
                   }}
                 >
-                  <img
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
-                    alt="Stadt Winterthur"
+                  <div
                     style={{
-                      height: "50px",
-                      width: "auto",
-                      objectFit: "contain",
-                      filter: "grayscale(20%)",
+                      display: "flex",
+                      animation: "logoScroll 16s linear infinite",
+                      alignItems: "center",
+                      whiteSpace: "nowrap",
                     }}
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
-                    alt="Bank Zimmerberg"
-                    style={{
-                      height: "50px",
-                      width: "auto",
-                      objectFit: "contain",
-                      filter: "grayscale(20%)",
-                    }}
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
-                    alt="Derby Pizza"
-                    style={{
-                      height: "50px",
-                      width: "auto",
-                      objectFit: "contain",
-                      filter: "grayscale(20%)",
-                    }}
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
-                    alt="Stadt Zürich Sportamt"
-                    style={{
-                      height: "50px",
-                      width: "auto",
-                      objectFit: "contain",
-                      filter: "grayscale(20%)",
-                    }}
-                  />
+                    className="mobile-logo-scroll"
+                  >
+                    {/* First set of logos */}
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "60px",
+                        paddingRight: "60px",
+                      }}
+                    >
+                      <img
+                        src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
+                        alt="Stadt Winterthur"
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          objectFit: "contain",
+                          filter: "grayscale(20%)",
+                          flexShrink: 0,
+                        }}
+                      />
+                      <img
+                        src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
+                        alt="Bank Zimmerberg"
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          objectFit: "contain",
+                          filter: "grayscale(20%)",
+                          flexShrink: 0,
+                        }}
+                      />
+                      <img
+                        src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
+                        alt="Derby Pizza"
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          objectFit: "contain",
+                          filter: "grayscale(20%)",
+                          flexShrink: 0,
+                        }}
+                      />
+                      <img
+                        src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
+                        alt="Stadt Zürich Sportamt"
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          objectFit: "contain",
+                          filter: "grayscale(20%)",
+                          flexShrink: 0,
+                        }}
+                      />
+                    </div>
+                    {/* Second set of logos for seamless loop */}
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "60px",
+                        paddingRight: "60px",
+                      }}
+                    >
+                      <img
+                        src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
+                        alt="Stadt Winterthur"
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          objectFit: "contain",
+                          filter: "grayscale(20%)",
+                          flexShrink: 0,
+                        }}
+                      />
+                      <img
+                        src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
+                        alt="Bank Zimmerberg"
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          objectFit: "contain",
+                          filter: "grayscale(20%)",
+                          flexShrink: 0,
+                        }}
+                      />
+                      <img
+                        src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
+                        alt="Derby Pizza"
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          objectFit: "contain",
+                          filter: "grayscale(20%)",
+                          flexShrink: 0,
+                        }}
+                      />
+                      <img
+                        src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
+                        alt="Stadt Zürich Sportamt"
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          objectFit: "contain",
+                          filter: "grayscale(20%)",
+                          flexShrink: 0,
+                        }}
+                      />
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
