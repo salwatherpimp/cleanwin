@@ -10,6 +10,8 @@ import {
   Clock,
   MapPin,
   Instagram,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 interface HomePageProps {
