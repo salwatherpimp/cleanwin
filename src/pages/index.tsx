@@ -1688,10 +1688,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 wordWrap: "break-word",
                                 hyphens: "auto",
                                 textOverflow: "ellipsis",
-                                height: "105px",
+                                height: "90px",
+                                fontStyle: "italic",
                               }}
                             >
-                              {review.text}
+                              "{review.text}"
                             </div>
 
                             {/* Author Name - ALWAYS VISIBLE */}
