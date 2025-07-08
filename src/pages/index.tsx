@@ -2268,7 +2268,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             height: 520px !important;
           }
           .hero-title {
-            font-size: 1.875rem !important;
+            font-size: 25px !important;
             line-height: 1.2 !important;
           }
           .hero-section > div:first-child {
