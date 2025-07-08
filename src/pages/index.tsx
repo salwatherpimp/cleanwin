@@ -1583,14 +1583,13 @@ export default function HomePage({ buildTime }: HomePageProps) {
                               backdropFilter: "blur(4px)",
                               border: "2px solid rgba(255, 255, 255, 0.2)",
                               borderRadius: "8px",
-                              padding: "32px 32px 60px 32px",
+                              padding: "16px",
                               boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
                               transition: "all 0.3s ease",
-                              height: "100%",
+                              height: "200px",
                               display: "flex",
                               flexDirection: "column",
                               position: "relative",
-                              minHeight: "280px",
                             }}
                             onMouseEnter={(e) => {
                               e.currentTarget.style.boxShadow =
