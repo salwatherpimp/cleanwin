@@ -2237,7 +2237,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             font-size: 1.25rem !important;
           }
           .section-title {
-            font-size: 3rem !important;
+            font-size: 28px !important;
           }
           .reviews-subtitle {
             font-size: 1.25rem !important;
