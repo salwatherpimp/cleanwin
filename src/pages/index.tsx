@@ -341,7 +341,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     alignItems: "center",
                     gap: "0.25rem",
                     padding: "0.5rem 0",
-                    fontWeight: 500,
+                    font: "500 16px Arial",
                     color: isScrolled ? "#374151" : "white",
                     background: "none",
                     border: "none",
