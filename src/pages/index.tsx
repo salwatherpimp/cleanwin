@@ -2191,7 +2191,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             grid-template-columns: 1fr 1fr !important;
           }
           .hero-section {
-            height: 600px !important;
+            height: 480px !important;
           }
           .hero-title {
             font-size: 40px !important;
