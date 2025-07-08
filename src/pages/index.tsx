@@ -75,7 +75,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
 
   // Calculate transform based on screen size
   const getCarouselTransform = () => {
-    if (typeof window !== "undefined" && window.innerWidth < 768) {
+    if (isMobile) {
       // Mobile: 1 card visible
       return `translateX(-${currentReviewIndex * 100}%)`;
     } else {
