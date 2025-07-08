@@ -1711,6 +1711,14 @@ export default function HomePage({ buildTime }: HomePageProps) {
           .company-logos {
             grid-template-columns: repeat(4, 1fr) !important;
           }
+          .review-card-container {
+            min-width: 33.333% !important;
+          }
+          .reviews-carousel {
+            transform: translateX(
+              -${currentReviewIndex * (100 / 3)}%
+            ) !important;
+          }
         }
         @media (max-width: 767px) {
           .hero-section {
@@ -1727,6 +1735,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
           }
           .reviews-grid {
             grid-template-columns: 1fr !important;
+          }
+          .review-card-container {
+            min-width: 100% !important;
+          }
+          .reviews-carousel {
+            transform: translateX(-${currentReviewIndex * 100}%) !important;
           }
         }
       `}</style>
