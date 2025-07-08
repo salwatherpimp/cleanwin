@@ -957,19 +957,19 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         </h3>
                         <div
                           style={{
-                            width: "48px",
-                            height: "48px",
+                            width: "40px",
+                            height: "40px",
                             backgroundColor: "rgba(231, 2, 126, 0.1)",
                             borderRadius: "50%",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            marginLeft: "16px",
+                            marginLeft: "12px",
                             flexShrink: 0,
                           }}
                         >
                           <feature.icon
-                            size={24}
+                            size={20}
                             style={{ color: "#e7027e" }}
                           />
                         </div>
