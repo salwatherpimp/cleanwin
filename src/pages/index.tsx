@@ -101,7 +101,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
     },
     {
       icon: Clock,
-      title: "Zuverlässig & termingerecht",
+      title: "Zuverl��ssig & termingerecht",
       description: "Pünktliche und verlässliche Ausführung aller Arbeiten",
     },
     {
@@ -953,32 +953,24 @@ export default function HomePage({ buildTime }: HomePageProps) {
 
           {/* Services Grid */}
           <section
-            id="services"
-            style={{ backgroundColor: "white", padding: "4rem 0" }}
+            id="leistungen"
+            style={{ backgroundColor: "#f9fafb", padding: "3rem 0" }}
           >
             <div
               style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1rem" }}
             >
-              <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
                 <h2
                   style={{
                     fontSize: "2.25rem",
                     fontWeight: 700,
                     color: "#111827",
-                    marginBottom: "1rem",
+                    marginBottom: "1.5rem",
                   }}
+                  className="section-title"
                 >
                   Unsere Leistungen
                 </h2>
-                <p
-                  style={{
-                    color: "#6b7280",
-                    maxWidth: "32rem",
-                    margin: "0 auto",
-                  }}
-                >
-                  Professionelle Reinigungsdienstleistungen für jeden Bedarf
-                </p>
               </div>
 
               <div
@@ -987,6 +979,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   gridTemplateColumns: "repeat(auto-fit, minmax(20rem, 1fr))",
                   gap: "2rem",
                 }}
+                className="services-grid"
               >
                 {services.map((service, index) => (
                   <a
@@ -994,16 +987,15 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     href={service.href}
                     style={{
                       backgroundColor: "white",
-                      borderRadius: "0.75rem",
+                      borderRadius: "0.5rem",
                       overflow: "hidden",
                       boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
-                      border: "1px solid #f3f4f6",
                       textDecoration: "none",
                       transition: "all 0.3s ease",
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.boxShadow =
-                        "0 20px 25px -5px rgba(0, 0, 0, 0.1)";
+                        "0 25px 50px -12px rgba(0, 0, 0, 0.25)";
                       e.currentTarget.style.transform = "scale(1.05)";
                       e.currentTarget.style.borderColor = "#e7027e";
                     }}
@@ -1011,10 +1003,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       e.currentTarget.style.boxShadow =
                         "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
                       e.currentTarget.style.transform = "scale(1)";
-                      e.currentTarget.style.borderColor = "#f3f4f6";
+                      e.currentTarget.style.borderColor = "transparent";
                     }}
                   >
-                    <div style={{ position: "relative" }}>
+                    <div style={{ position: "relative", overflow: "hidden" }}>
                       <img
                         src={service.image}
                         alt={service.name}
@@ -1022,6 +1014,13 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           width: "100%",
                           height: "12rem",
                           objectFit: "cover",
+                          transition: "transform 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = "scale(1.1)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = "scale(1)";
                         }}
                       />
                       <div
@@ -1032,35 +1031,30 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           right: 0,
                           bottom: 0,
                           background:
-                            "linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent)",
+                            "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%)",
                         }}
                       />
-                      <div
+                    </div>
+                    <div style={{ padding: "1.5rem" }}>
+                      <h3
                         style={{
-                          position: "absolute",
-                          bottom: "1rem",
-                          left: "1rem",
-                          color: "white",
+                          fontSize: "1.25rem",
+                          fontWeight: 600,
+                          color: "#111827",
+                          marginBottom: "0.5rem",
                         }}
                       >
-                        <h3
-                          style={{
-                            fontSize: "1.25rem",
-                            fontWeight: 700,
-                            marginBottom: "0.25rem",
-                          }}
-                        >
-                          {service.name}
-                        </h3>
-                        <p
-                          style={{
-                            fontSize: "0.875rem",
-                            opacity: 0.9,
-                          }}
-                        >
-                          {service.description}
-                        </p>
-                      </div>
+                        {service.name}
+                      </h3>
+                      <p
+                        style={{
+                          fontSize: "0.875rem",
+                          color: "#4b5563",
+                          lineHeight: 1.5,
+                        }}
+                      >
+                        {service.description}
+                      </p>
                     </div>
                   </a>
                 ))}
