@@ -2232,7 +2232,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             height: 600px !important;
           }
           .hero-title {
-            font-size: 1.75rem !important;
+            font-size: 2.5rem !important;
             line-height: 1.2 !important;
           }
           .hero-section > div:first-child {
