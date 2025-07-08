@@ -1674,6 +1674,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
 
                             {/* Review Text */}
                             <div
+                              className="review-text-clamp"
                               style={{
                                 color: "#1f2937",
                                 fontSize: "14px",
@@ -1686,9 +1687,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 WebkitBoxOrient: "vertical",
                                 WebkitLineClamp: 3,
                                 wordWrap: "break-word",
+                                wordBreak: "break-word",
                                 hyphens: "auto",
                                 textOverflow: "ellipsis",
-                                height: "90px",
+                                maxHeight: "63px",
                                 fontStyle: "italic",
                               }}
                             >
