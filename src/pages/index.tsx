@@ -151,6 +151,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
           name="description"
           content="✓ Professionelle Reinigungsservices in Winterthur ✓ Fensterreinigung ✓ Büroreinigung ✓ Umzugsreinigung ✓ Über 10 Jahre Erfahrung ✓ Kostenlose Offerte"
         />
+
+        {/* Core Web Vitals Optimierungen */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -160,6 +162,64 @@ export default function HomePage({ buildTime }: HomePageProps) {
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
+        />
+
+        {/* Preload kritische Ressourcen */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill,q_auto,f_auto/v1748344821/comprised_m7hork.avif"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.avif"
+        />
+
+        {/* SEO & Google Crawling */}
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="canonical" href="https://cleanwin.ch/" />
+
+        {/* Structured Data für Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "CleanWin GmbH",
+              description:
+                "Professionelle Reinigungsservices in Winterthur - Fensterreinigung, Büroreinigung, Fassadenreinigung und mehr",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Rychenbergstrasse 223",
+                addressLocality: "Winterthur",
+                postalCode: "8404",
+                addressCountry: "CH",
+              },
+              telephone: "+41522020100",
+              email: "info@cleanwin.ch",
+              url: "https://cleanwin.ch",
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5",
+                reviewCount: "50",
+              },
+              serviceArea: {
+                "@type": "GeoCircle",
+                geoMidpoint: {
+                  "@type": "GeoCoordinates",
+                  latitude: 47.4979,
+                  longitude: 8.7226,
+                },
+                geoRadius: "50000",
+              },
+            }),
+          }}
         />
       </Head>
 
