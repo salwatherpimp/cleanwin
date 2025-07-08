@@ -140,7 +140,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
       image:
         "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif",
       description:
-        "Erfahren Sie mehr ��ber unsere Zusatzleistungen und Spezialdienste.",
+        "Erfahren Sie mehr über unsere Zusatzleistungen und Spezialdienste.",
     },
   ];
 
@@ -1547,29 +1547,26 @@ export default function HomePage({ buildTime }: HomePageProps) {
                               >
                                 {review.text}
                               </div>
+                            </div>
 
-                              {/* Author Name - Always at bottom */}
-                              <div
-                                style={{
-                                  fontFamily: "Inter, sans-serif",
-                                  fontWeight: 600,
-                                  fontSize: "16px",
-                                  color: "#111827",
-                                  paddingTop: "16px",
-                                  marginTop: "16px",
-                                  borderTop: "2px solid rgba(231, 2, 126, 0.2)",
-                                  backgroundColor: "rgba(255, 255, 255, 0.8)",
-                                  padding: "12px",
-                                  borderRadius: "6px",
-                                  textAlign: "left",
-                                  display: "block !important",
-                                  visibility: "visible !important",
-                                  position: "relative",
-                                  zIndex: 999,
-                                }}
-                              >
-                                <strong>{review.name}</strong>
-                              </div>
+                            {/* Author Name - Absolutely positioned at bottom */}
+                            <div
+                              style={{
+                                position: "absolute",
+                                bottom: "16px",
+                                left: "32px",
+                                right: "32px",
+                                fontFamily: "Inter, sans-serif",
+                                fontWeight: 600,
+                                fontSize: "14px",
+                                color: "#111827",
+                                padding: "12px 0",
+                                borderTop: "1px solid rgba(231, 2, 126, 0.2)",
+                                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                                textAlign: "left",
+                              }}
+                            >
+                              {review.name}
                             </div>
                           </div>
                         </div>
