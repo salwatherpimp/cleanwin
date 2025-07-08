@@ -1150,7 +1150,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             <div
               style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1rem" }}
             >
-              <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+              <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
                 <h2
                   style={{
                     fontSize: "3rem",
@@ -1165,6 +1165,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 <p
                   style={{
                     fontSize: "1.125rem",
+                    fontWeight: 400,
                     color: "#111827",
                     maxWidth: "48rem",
                     margin: "0 auto 2rem",
@@ -1184,14 +1185,14 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     backgroundColor: "rgba(255, 255, 255, 0.9)",
                     backdropFilter: "blur(4px)",
                     border: "2px solid rgba(255, 255, 255, 0.2)",
-                    borderRadius: "0.75rem",
-                    padding: "1rem",
+                    borderRadius: "12px",
+                    padding: "16px",
                     marginBottom: "2rem",
                     gap: "0.75rem",
                   }}
                 >
                   <svg
-                    style={{ width: "2rem", height: "2rem" }}
+                    style={{ width: "1.5rem", height: "1.5rem" }}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -1218,7 +1219,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        size={20}
+                        size={16}
                         style={{ color: "#fbbf24", fill: "#fbbf24" }}
                       />
                     ))}
@@ -1229,68 +1230,173 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 </div>
               </div>
 
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(20rem, 1fr))",
-                  gap: "1.5rem",
-                }}
-                className="reviews-grid"
-              >
-                {reviews.slice(0, 3).map((review, index) => (
+              {/* Reviews Carousel */}
+              <div style={{ position: "relative" }}>
+                <div
+                  style={{
+                    overflow: "hidden",
+                    borderRadius: "8px",
+                  }}
+                >
                   <div
-                    key={index}
+                    style={{
+                      display: "flex",
+                      transform: `translateX(-${currentReviewIndex * (100 / 3)}%)`,
+                      transition: "transform 0.5s ease-in-out",
+                    }}
+                    className="reviews-carousel"
+                  >
+                    {/* Triple the content for infinite scroll effect */}
+                    {[...reviews, ...reviews, ...reviews].map(
+                      (review, index) => (
+                        <div
+                          key={index}
+                          style={{
+                            minWidth: "33.333%",
+                            padding: "0 0.75rem",
+                          }}
+                          className="review-card-container"
+                        >
+                          <div
+                            style={{
+                              backgroundColor: "rgba(255, 255, 255, 0.9)",
+                              backdropFilter: "blur(4px)",
+                              border: "2px solid rgba(255, 255, 255, 0.2)",
+                              borderRadius: "8px",
+                              padding: "32px",
+                              boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                              transition: "all 0.3s ease",
+                              height: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.boxShadow =
+                                "0 25px 50px -12px rgba(0, 0, 0, 0.25)";
+                              e.currentTarget.style.borderColor =
+                                "rgba(255, 255, 255, 0.4)";
+                              e.currentTarget.style.transform =
+                                "translateY(-4px)";
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.boxShadow =
+                                "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
+                              e.currentTarget.style.borderColor =
+                                "rgba(255, 255, 255, 0.2)";
+                              e.currentTarget.style.transform = "translateY(0)";
+                            }}
+                          >
+                            <div
+                              style={{ display: "flex", marginBottom: "1rem" }}
+                            >
+                              {[...Array(review.rating)].map((_, i) => (
+                                <Star
+                                  key={i}
+                                  size={16}
+                                  style={{ color: "#fbbf24", fill: "#fbbf24" }}
+                                />
+                              ))}
+                            </div>
+                            <blockquote
+                              style={{
+                                color: "#374151",
+                                marginBottom: "1rem",
+                                fontStyle: "italic",
+                                fontSize: "0.875rem",
+                                lineHeight: 1.6,
+                                flex: 1,
+                              }}
+                            >
+                              "{review.text}"
+                            </blockquote>
+                            <div style={{ fontSize: "0.875rem" }}>
+                              <div
+                                style={{ fontWeight: 600, color: "#111827" }}
+                              >
+                                {review.name}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ),
+                    )}
+                  </div>
+                </div>
+
+                {/* Navigation Buttons */}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: "1rem",
+                    marginTop: "2rem",
+                  }}
+                >
+                  <button
+                    onClick={prevReview}
                     style={{
                       backgroundColor: "rgba(255, 255, 255, 0.9)",
                       backdropFilter: "blur(4px)",
                       border: "2px solid rgba(255, 255, 255, 0.2)",
-                      borderRadius: "0.5rem",
-                      padding: "2rem",
-                      boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                      borderRadius: "50%",
+                      width: "48px",
+                      height: "48px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
                       transition: "all 0.3s ease",
+                      boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
                     }}
                     onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = "white";
+                      e.currentTarget.style.transform = "scale(1.1)";
                       e.currentTarget.style.boxShadow =
-                        "0 25px 50px -12px rgba(0, 0, 0, 0.25)";
-                      e.currentTarget.style.borderColor =
-                        "rgba(255, 255, 255, 0.4)";
-                      e.currentTarget.style.transform = "translateY(-4px)";
+                        "0 10px 25px -5px rgba(0, 0, 0, 0.1)";
                     }}
                     onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor =
+                        "rgba(255, 255, 255, 0.9)";
+                      e.currentTarget.style.transform = "scale(1)";
                       e.currentTarget.style.boxShadow =
                         "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
-                      e.currentTarget.style.borderColor =
-                        "rgba(255, 255, 255, 0.2)";
-                      e.currentTarget.style.transform = "translateY(0)";
                     }}
                   >
-                    <div style={{ display: "flex", marginBottom: "1rem" }}>
-                      {[...Array(review.rating)].map((_, i) => (
-                        <Star
-                          key={i}
-                          size={16}
-                          style={{ color: "#fbbf24", fill: "#fbbf24" }}
-                        />
-                      ))}
-                    </div>
-                    <blockquote
-                      style={{
-                        color: "#374151",
-                        marginBottom: "1rem",
-                        fontStyle: "italic",
-                        fontSize: "0.875rem",
-                        lineHeight: 1.6,
-                      }}
-                    >
-                      "{review.text}"
-                    </blockquote>
-                    <div style={{ fontSize: "0.875rem" }}>
-                      <div style={{ fontWeight: 600, color: "#111827" }}>
-                        {review.name}
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                    <ChevronLeft size={20} style={{ color: "#111827" }} />
+                  </button>
+                  <button
+                    onClick={nextReview}
+                    style={{
+                      backgroundColor: "rgba(255, 255, 255, 0.9)",
+                      backdropFilter: "blur(4px)",
+                      border: "2px solid rgba(255, 255, 255, 0.2)",
+                      borderRadius: "50%",
+                      width: "48px",
+                      height: "48px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                      transition: "all 0.3s ease",
+                      boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = "white";
+                      e.currentTarget.style.transform = "scale(1.1)";
+                      e.currentTarget.style.boxShadow =
+                        "0 10px 25px -5px rgba(0, 0, 0, 0.1)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor =
+                        "rgba(255, 255, 255, 0.9)";
+                      e.currentTarget.style.transform = "scale(1)";
+                      e.currentTarget.style.boxShadow =
+                        "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
+                    }}
+                  >
+                    <ChevronRight size={20} style={{ color: "#111827" }} />
+                  </button>
+                </div>
               </div>
             </div>
           </section>
