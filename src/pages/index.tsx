@@ -212,7 +212,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
         </title>
         <meta
           name="description"
-          content="✓ Professionelle Reinigungsservices in Winterthur ✓ Fensterreinigung ✓ Büroreinigung ✓ Umzugsreinigung ✓ Über 10 Jahre Erfahrung ✓ Kostenlose Offerte"
+          content="✓ Professionelle Reinigungsservices in Winterthur ✓ Fensterreinigung ✓ Büroreinigung ✓ Umzugsreinigung �� Über 10 Jahre Erfahrung ✓ Kostenlose Offerte"
         />
 
         {/* Core Web Vitals Optimierungen */}
@@ -1913,7 +1913,16 @@ export default function HomePage({ buildTime }: HomePageProps) {
         </main>
 
         {/* Footer */}
-        <footer style={{ backgroundColor: "#111827", color: "white" }}>
+        <footer
+          style={{
+            backgroundColor: "#111827",
+            color: "white",
+            width: "100vw",
+            position: "relative",
+            left: "50%",
+            marginLeft: "-50vw",
+          }}
+        >
           <div
             style={{
               maxWidth: "72rem",
