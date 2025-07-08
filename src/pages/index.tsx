@@ -1552,14 +1552,22 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 style={{
                                   fontFamily: "Inter, sans-serif",
                                   fontWeight: 600,
-                                  fontSize: "14px",
+                                  fontSize: "16px",
                                   color: "#111827",
-                                  paddingTop: "12px",
-                                  borderTop: "1px solid rgba(231, 2, 126, 0.1)",
-                                  marginTop: "auto",
+                                  paddingTop: "16px",
+                                  marginTop: "16px",
+                                  borderTop: "2px solid rgba(231, 2, 126, 0.2)",
+                                  backgroundColor: "rgba(255, 255, 255, 0.8)",
+                                  padding: "12px",
+                                  borderRadius: "6px",
+                                  textAlign: "left",
+                                  display: "block !important",
+                                  visibility: "visible !important",
+                                  position: "relative",
+                                  zIndex: 999,
                                 }}
                               >
-                                {review.name}
+                                <strong>{review.name}</strong>
                               </div>
                             </div>
                           </div>
