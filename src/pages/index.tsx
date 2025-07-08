@@ -787,7 +787,16 @@ export default function HomePage({ buildTime }: HomePageProps) {
         {/* Main Content */}
         <main>
           {/* About Services Section */}
-          <section style={{ backgroundColor: "#f9fafb", padding: "4rem 0" }}>
+          <section
+            style={{
+              backgroundColor: "#f9fafb",
+              padding: "4rem 0",
+              width: "100vw",
+              position: "relative",
+              left: "50%",
+              marginLeft: "-50vw",
+            }}
+          >
             <div
               style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1rem" }}
             >
