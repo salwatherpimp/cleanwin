@@ -12,6 +12,8 @@ import {
   Instagram,
   ChevronLeft,
   ChevronRight,
+  Plus,
+  X,
 } from "lucide-react";
 
 interface HomePageProps {
