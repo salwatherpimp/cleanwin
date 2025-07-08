@@ -1264,7 +1264,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   <div
                     style={{
                       display: "flex",
-                      transform: `translateX(-${currentReviewIndex * (100 / 3)}%)`,
+                      transform: getCarouselTransform(),
                       transition: "transform 0.5s ease-in-out",
                     }}
                     className="reviews-carousel"
