@@ -744,27 +744,43 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 />
               </svg>
               <div style={{ display: "flex", marginRight: "0.5rem" }}>
-                {[...Array(5)].map((_, i) => (
+                {[...Array(4)].map((_, i) => (
                   <Star
                     key={i}
                     size={16}
-                    style={{
-                      color: i < 4 ? "#fbbf24" : "#e5e7eb",
-                      fill: i < 4 ? "#fbbf24" : "#e5e7eb",
-                    }}
+                    style={{ color: "#fbbf24", fill: "#fbbf24" }}
                   />
                 ))}
+                {/* Half star */}
+                <div style={{ position: "relative", display: "inline-block" }}>
+                  <Star
+                    size={16}
+                    style={{ color: "#e5e7eb", fill: "#e5e7eb" }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "50%",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Star
+                      size={16}
+                      style={{ color: "#fbbf24", fill: "#fbbf24" }}
+                    />
+                  </div>
+                </div>
               </div>
               <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  fontSize: "14px",
-                }}
+                style={{ display: "flex", alignItems: "center", gap: "4px" }}
               >
-                <span style={{ fontWeight: 600 }}>4.7</span>
-                <span style={{ fontWeight: 400, opacity: 0.9 }}>
-                  110+ Bewertungen
+                <span style={{ fontWeight: 600, fontSize: "16px" }}>4.7</span>
+                <span
+                  style={{ fontWeight: 400, fontSize: "12px", opacity: 0.8 }}
+                >
+                  (110+)
                 </span>
               </div>
             </div>
