@@ -3,14 +3,15 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        primary: "#e7027e",
-        "primary-dark": "#bc0263",
-        "primary-light": "#ff4fa5",
+        primary: {
+          DEFAULT: "#e7027e",
+          dark: "#bc0263",
+          light: "#ff4fa5",
+        },
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
