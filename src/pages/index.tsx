@@ -680,7 +680,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
               style={{
                 fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
                 fontWeight: 800,
-                marginBottom: "1rem",
+                margin: "0 0 1rem 0",
                 lineHeight: "1.2",
                 textShadow: "0 4px 6px rgba(0,0,0,0.1)",
               }}
