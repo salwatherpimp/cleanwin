@@ -160,9 +160,17 @@ export default function HomePage({ buildTime }: HomePageProps) {
           crossOrigin="anonymous"
         />
         <link
+          rel="preload"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
+          as="style"
+          onLoad="this.onload=null;this.rel='stylesheet'"
         />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
 
         {/* Preload kritische Ressourcen */}
         <link
@@ -1534,7 +1542,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 }}
               >
                 <span>© 2025 CleanWin. Alle Rechte vorbehalten.</span>
-                <span>Gemacht mit ♥️ in Winterthur</span>
+                <span>Gemacht mit ���️ in Winterthur</span>
               </div>
               <a
                 href="/datenschutz"
