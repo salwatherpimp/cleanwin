@@ -454,7 +454,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.color = isScrolled
-                    ? "#e7027e"
+                    ? "#10a0a4"
                     : "#e5e7eb")
                 }
                 onMouseLeave={(e) =>
