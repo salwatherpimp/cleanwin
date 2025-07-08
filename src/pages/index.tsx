@@ -1275,7 +1275,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         <div
                           key={index}
                           style={{
-                            minWidth: "33.333%",
+                            minWidth: isMobile ? "100%" : "33.333%",
                             padding: "0 0.75rem",
                           }}
                           className="review-card-container"
