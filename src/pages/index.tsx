@@ -473,7 +473,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   display: "flex",
                   alignItems: "center",
                   gap: "0.5rem",
-                  backgroundColor: "#e7027e",
+                  backgroundColor: "#10a0a4",
                   color: "white",
                   padding: "0.75rem 1rem",
                   borderRadius: "9999px",
@@ -482,10 +482,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   transition: "background-color 0.2s ease",
                 }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#bc0263")
+                  (e.currentTarget.style.backgroundColor = "#0d7a7e")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#e7027e")
+                  (e.currentTarget.style.backgroundColor = "#10a0a4")
                 }
               >
                 <Hand size={16} />
