@@ -622,20 +622,25 @@ export default function HomePage({ buildTime }: HomePageProps) {
           )}
         </header>
 
+        {/* Hero Section */}
+        <section
+          style={{
+            position: "relative",
+            height: "450px",
+            marginTop: "80px",
+            overflow: "visible",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100vw",
+            left: "50%",
+            marginLeft: "-50vw",
+          }}
+          className="hero-section"
+        >
+
         {/* Main Content */}
-        <main style={{ paddingTop: "80px" }}>
-          {/* Hero Section */}
-          <section
-            style={{
-              position: "relative",
-              height: "450px",
-              overflow: "visible",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-            className="hero-section"
-          >
+        <main>
             <div
               style={{
                 position: "absolute",
