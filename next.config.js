@@ -32,6 +32,8 @@ const nextConfig = {
   generateEtags: true,
   // Performance Optimierungen
   swcMinify: true,
+  // Dev server configuration
+  allowedDevOrigins: ["*"],
 };
 
 module.exports = nextConfig;
