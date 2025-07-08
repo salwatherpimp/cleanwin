@@ -18,7 +18,22 @@ const nextConfig = {
         port: "",
         pathname: "/api/**",
       },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "",
+        pathname: "/dwlk9of7h/**",
+      },
     ],
+  },
+  // Core Web Vitals Optimierungen
+  poweredByHeader: false,
+  compress: true,
+  generateEtags: true,
+  // Performance Optimierungen
+  swcMinify: true,
+  experimental: {
+    optimizeCss: true,
   },
 };
 
