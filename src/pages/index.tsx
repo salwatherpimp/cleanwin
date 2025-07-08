@@ -140,7 +140,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
       image:
         "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif",
       description:
-        "Erfahren Sie mehr über unsere Zusatzleistungen und Spezialdienste.",
+        "Erfahren Sie mehr ��ber unsere Zusatzleistungen und Spezialdienste.",
     },
   ];
 
@@ -1459,13 +1459,14 @@ export default function HomePage({ buildTime }: HomePageProps) {
                               backdropFilter: "blur(4px)",
                               border: "2px solid rgba(255, 255, 255, 0.2)",
                               borderRadius: "8px",
-                              padding: "32px",
+                              padding: "32px 32px 60px 32px",
                               boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
                               transition: "all 0.3s ease",
                               height: "100%",
                               display: "flex",
                               flexDirection: "column",
                               position: "relative",
+                              minHeight: "280px",
                             }}
                             onMouseEnter={(e) => {
                               e.currentTarget.style.boxShadow =
