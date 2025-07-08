@@ -49,6 +49,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
     // Initial setup
     if (typeof window !== "undefined") {
       handleResize();
+      handleScroll(); // Initial scroll position check
     }
 
     window.addEventListener("scroll", handleScroll);
