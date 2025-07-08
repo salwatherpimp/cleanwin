@@ -1435,6 +1435,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                               height: "100%",
                               display: "flex",
                               flexDirection: "column",
+                              position: "relative",
                             }}
                             onMouseEnter={(e) => {
                               e.currentTarget.style.boxShadow =
@@ -1452,8 +1453,27 @@ export default function HomePage({ buildTime }: HomePageProps) {
                               e.currentTarget.style.transform = "translateY(0)";
                             }}
                           >
+                            {/* Quotation Mark */}
                             <div
-                              style={{ display: "flex", marginBottom: "1rem" }}
+                              style={{
+                                position: "absolute",
+                                top: "16px",
+                                left: "16px",
+                                fontSize: "2rem",
+                                color: "#e7027e",
+                                fontWeight: "bold",
+                                lineHeight: 1,
+                              }}
+                            >
+                              "
+                            </div>
+
+                            <div
+                              style={{
+                                display: "flex",
+                                marginBottom: "1rem",
+                                marginTop: "8px",
+                              }}
                             >
                               {[...Array(review.rating)].map((_, i) => (
                                 <Star
