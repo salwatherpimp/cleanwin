@@ -1381,7 +1381,14 @@ export default function HomePage({ buildTime }: HomePageProps) {
           {/* Services Grid */}
           <section
             id="leistungen"
-            style={{ backgroundColor: "#f9fafb", padding: "3rem 0" }}
+            style={{
+              backgroundColor: "#f9fafb",
+              padding: "3rem 0",
+              width: "100vw",
+              position: "relative",
+              left: "50%",
+              marginLeft: "-50vw",
+            }}
           >
             <div
               style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1rem" }}
