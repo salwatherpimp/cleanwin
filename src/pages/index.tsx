@@ -720,8 +720,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
             >
               <svg
                 style={{
-                  width: "1.5rem",
-                  height: "1.5rem",
+                  width: "2rem",
+                  height: "2rem",
                   marginRight: "0.5rem",
                 }}
                 viewBox="0 0 24 24"
