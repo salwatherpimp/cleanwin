@@ -117,22 +117,22 @@ export default function HomePage({ buildTime }: HomePageProps) {
   const reviews = [
     {
       name: "Ursula Wirtz",
-      text: "Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde CleanWin immer wieder gern für mein Haus engagieren.",
+      text: "Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde farbexpress immer wieder gern für mein Haus engagieren.",
       rating: 5,
     },
     {
       name: "Johanna Kelts",
-      text: "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen Berufsleute zusammenfassen. Sie haben eine Wohnung in meinem über 200 Jahre alten MFH neu gereinigt. Die Aufgabe war nicht unbedingt einfach. Der Auftrag wurde jedoch zu meiner vollsten Zufriedenheit erledigt. Ich kann diese Firma wirklich sehr empfehlen!",
+      text: "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen Berufsleute zusammenfassen. Sie haben eine Wohnung in meinem über 200 Jahre alten MFH neu gestrichen. Die Aufgabe, Wände und Einbauschränke mit vielen Ecken und Kanten, Holztäfer, sowie Gips- und Mauerwerk kostengünstig und doch perfekt zu streichen, war nicht unbedingt einfach. Der Auftrag wurde jedoch zu meiner vollsten Zufriedenheit erledigt. Ich kann diese Firma wirklich sehr empfehlen!",
       rating: 5,
     },
     {
-      name: "Frau Achternbusch",
-      text: "Für unser neues Restaurant, haben wir ein passendes Reinigungskonzept gesucht. Durch die Kompetente Beratung von CleanWin konnten wir unsere Vorstellungen zu einem fairen Preis umsetzen.",
+      name: "Frau achternbusch",
+      text: "Für unser neues Restaurant, haben wir ein passendes Farbkonzept gesucht. Durch die Kompetente Beratung von Herr Niedehauser konnten wir unsere Vorstellungen zu einem fairen Preis umsetzen.",
       rating: 5,
     },
     {
       name: "Domi Fuchs",
-      text: "CleanWin hat unsere neue wohnung gereinigt in nur einem tag. Alles zu unserer besten zufriedenheit. Unkompliziert, speditiv und top qualität. Bin ich mir so nicht gewohnt ;) sehr zu empfehlen!!!",
+      text: "Farbxpress hat unsere neue wohnung gestrichen in nur einem tag. Alles zu unserer besten zufriedenheit. Unkompliziert, speditiv und top qualität. Bin ich mir so nicht gewohnt ;) sehr zu empfehlen!!!",
       rating: 5,
     },
     {
