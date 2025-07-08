@@ -1545,7 +1545,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
               <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
                 <h2
                   style={{
-                    fontSize: "3rem",
+                    fontSize: "35px",
                     fontWeight: 700,
                     color: "#111827",
                     marginBottom: "1.5rem",
