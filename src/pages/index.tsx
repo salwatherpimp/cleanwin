@@ -1865,9 +1865,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
           .reviews-subtitle {
             font-size: 1.25rem !important;
           }
-          .why-grid {
-            grid-template-columns: repeat(4, 1fr) !important;
-          }
           .why-title {
             font-size: 1.875rem !important;
           }
