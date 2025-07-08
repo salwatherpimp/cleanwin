@@ -748,11 +748,25 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   <Star
                     key={i}
                     size={16}
-                    style={{ color: "#fbbf24", fill: "#fbbf24" }}
+                    style={{
+                      color: i < 4 ? "#fbbf24" : "#e5e7eb",
+                      fill: i < 4 ? "#fbbf24" : "#e5e7eb",
+                    }}
                   />
                 ))}
               </div>
-              <span style={{ fontWeight: 500 }}>5.0 Google</span>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  fontSize: "14px",
+                }}
+              >
+                <span style={{ fontWeight: 600 }}>4.7</span>
+                <span style={{ fontWeight: 400, opacity: 0.9 }}>
+                  110+ Bewertungen
+                </span>
+              </div>
             </div>
 
             <div>
