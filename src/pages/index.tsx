@@ -2229,7 +2229,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
         }
         @media (max-width: 767px) {
           .hero-section {
-            height: 380px !important;
+            height: 600px !important;
           }
           .hero-title {
             font-size: 1.8rem !important;
