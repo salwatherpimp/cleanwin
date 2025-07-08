@@ -24,6 +24,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBusinessHours, setIsBusinessHours] = useState(false);
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
