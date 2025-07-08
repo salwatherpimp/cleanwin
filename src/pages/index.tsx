@@ -625,7 +625,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
           <section
             style={{
               position: "relative",
-              minHeight: "100vh",
+              minHeight: "500px",
               overflow: "hidden",
               display: "flex",
               alignItems: "center",
@@ -643,7 +643,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 backgroundImage:
                   "url(https://res.cloudinary.com/dwlk9of7h/image/upload/v1752005906/homepage-herosection_fsxqwc.avif)",
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "center left",
                 backgroundRepeat: "no-repeat",
               }}
             />
