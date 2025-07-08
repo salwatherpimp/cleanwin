@@ -672,10 +672,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
             >
               <h1
                 style={{
-                  fontSize: "3rem",
+                  fontSize: "50px",
                   fontWeight: 800,
                   marginBottom: "1rem",
-                  lineHeight: 1.2,
+                  lineHeight: "60px",
                   textShadow: "0 4px 6px rgba(0,0,0,0.1)",
                 }}
                 className="hero-title"
