@@ -912,50 +912,29 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 </h2>
               </div>
 
-              {/* Desktop: Carousel */}
+              {/* Desktop: Grid Layout */}
               {!isMobile && (
-                <div style={{ overflow: "hidden", marginLeft: "-16px" }}>
-                  <div style={{ display: "flex" }}>
-                    {whyFeatures.map((feature, index) => (
-                      <div
-                        key={index}
-                        style={{
-                          paddingLeft: "16px",
-                          flex: "0 0 25%",
-                          minWidth: 0,
-                        }}
-                      >
-                        <div
-                          style={{
-                            backgroundColor: "rgba(255, 255, 255, 0.9)",
-                            backdropFilter: "blur(4px)",
-                            border: "1px solid rgba(255, 255, 255, 0.2)",
-                            borderRadius: "12px",
-                            padding: "24px",
-                            height: "100%",
-                            transition: "all 300ms ease",
-                            opacity: index === currentWhyIndex ? 1 : 0.7,
-                            transform:
-                              index === currentWhyIndex
-                                ? "scale(1.05)"
-                                : "scale(1)",
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.boxShadow =
-                              "0 10px 25px -5px rgba(0, 0, 0, 0.1)";
-                            e.currentTarget.style.opacity = "1";
-                            e.currentTarget.style.transform = "scale(1.05)";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.boxShadow = "none";
-                            e.currentTarget.style.opacity =
-                              index === currentWhyIndex ? "1" : "0.7";
-                            e.currentTarget.style.transform =
-                              index === currentWhyIndex
-                                ? "scale(1.05)"
-                                : "scale(1)";
-                          }}
-                        >
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(4, 1fr)",
+                    gap: "16px",
+                    width: "100%",
+                  }}
+                >
+                  {whyFeatures.map((feature, index) => (
+                    <div
+                      key={index}
+                      style={{
+                        backgroundColor: "rgba(255, 255, 255, 0.9)",
+                        backdropFilter: "blur(4px)",
+                        border: "1px solid rgba(255, 255, 255, 0.2)",
+                        borderRadius: "12px",
+                        padding: "24px",
+                        height: "100%",
+                        boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                      }}
+                    >
                           {/* Header Row (Title + Icon) */}
                           <div
                             style={{
