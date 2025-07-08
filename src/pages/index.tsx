@@ -672,7 +672,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             >
               <h1
                 style={{
-                  fontSize: "50px",
+                  fontSize: "60px",
                   fontWeight: 800,
                   marginBottom: "1rem",
                   lineHeight: "60px",
