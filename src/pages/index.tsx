@@ -1844,6 +1844,36 @@ export default function HomePage({ buildTime }: HomePageProps) {
       </div>
 
       <style jsx>{`
+        .review-text-clamp {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 6;
+          font-family: Inter, sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.625;
+          color: #1f2937;
+          margin-bottom: 16px;
+        }
+
+        /* Fallback for browsers that don't support line-clamp */
+        @supports not (-webkit-line-clamp: 6) {
+          .review-text-clamp {
+            max-height: calc(1.625 * 14px * 6);
+            overflow: hidden;
+            position: relative;
+          }
+          .review-text-clamp::after {
+            content: "...";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding-left: 20px;
+          }
+        }
+
         @media (min-width: 768px) {
           .desktop-nav {
             display: flex !important;
