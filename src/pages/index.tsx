@@ -743,44 +743,50 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
                 />
               </svg>
-              <div style={{ display: "flex", marginRight: "0.5rem" }}>
-                {[...Array(4)].map((_, i) => (
-                  <Star
-                    key={i}
-                    size={16}
-                    style={{ color: "#fbbf24", fill: "#fbbf24" }}
-                  />
-                ))}
-                {/* Half star */}
-                <div style={{ position: "relative", display: "inline-block" }}>
-                  <Star
-                    size={16}
-                    style={{ color: "#e5e7eb", fill: "#e5e7eb" }}
-                  />
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "50%",
-                      overflow: "hidden",
-                    }}
-                  >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "4px",
+                }}
+              >
+                <div style={{ display: "flex" }}>
+                  {[...Array(4)].map((_, i) => (
                     <Star
+                      key={i}
                       size={16}
                       style={{ color: "#fbbf24", fill: "#fbbf24" }}
                     />
+                  ))}
+                  {/* Half star */}
+                  <div
+                    style={{ position: "relative", display: "inline-block" }}
+                  >
+                    <Star
+                      size={16}
+                      style={{ color: "#e5e7eb", fill: "#e5e7eb" }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "50%",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Star
+                        size={16}
+                        style={{ color: "#fbbf24", fill: "#fbbf24" }}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "4px" }}
-              >
-                <span style={{ fontWeight: 600, fontSize: "16px" }}>4.7</span>
                 <span
-                  style={{ fontWeight: 400, fontSize: "12px", opacity: 0.8 }}
+                  style={{ fontWeight: 500, fontSize: "14px", opacity: 0.9 }}
                 >
-                  (110+)
+                  Aus +110 Bewertungen
                 </span>
               </div>
             </div>
