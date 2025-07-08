@@ -38,7 +38,17 @@ export default function HomePage({ buildTime }: HomePageProps) {
       setIsBusinessHours(day >= 1 && day <= 5 && hour >= 8 && hour < 17);
     };
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial setup
+    if (typeof window !== "undefined") {
+      handleResize();
+    }
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
     checkBusinessHours();
 
     // Auto-rotation for reviews carousel
@@ -48,6 +58,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
       clearInterval(reviewInterval);
     };
   }, []);
