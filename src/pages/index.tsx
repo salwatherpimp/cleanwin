@@ -424,6 +424,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   color: isScrolled ? "#374151" : "white",
                   textDecoration: "none",
                   transition: "color 0.2s ease",
+                  textShadow: isScrolled ? "none" : "0 1px 3px rgba(0,0,0,0.3)",
                 }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.color = isScrolled
@@ -447,6 +448,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   color: isScrolled ? "#374151" : "white",
                   textDecoration: "none",
                   transition: "color 0.2s ease",
+                  textShadow: isScrolled ? "none" : "0 1px 3px rgba(0,0,0,0.3)",
                 }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.color = isScrolled
