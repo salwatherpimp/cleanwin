@@ -137,23 +137,27 @@ export default function HomePage({ buildTime }: HomePageProps) {
   const whyFeatures = [
     {
       icon: Award,
-      title: "Über 10 Jahre Erfahrung",
-      description: "Langjährige Expertise in der professionellen Reinigung",
+      title: "Über 18 Jahre Erfahrung",
+      description:
+        "Ein fundiertes Handwerk mit jahrzehntelanger Erfahrung bietet Ihnen professionelle Arbeiten in höchster Qualität. Unsere Expertise erfolgt durch bewährte Techniken und moderne Verfahren für langanhaltende Ergebnisse.",
     },
     {
       icon: Heart,
       title: "Inhabergeführt & persönlich",
-      description: "Persönlicher Service und direkter Kontakt zum Inhaber",
+      description:
+        "Als inhabergeführter Betrieb stehen wir für direkten Kontakt und individuelle Betreuung. Sie sprechen direkt mit den Entscheidungsträgern und erhalten persönliche Beratung für ihr Projekt.",
     },
     {
       icon: Clock,
       title: "Zuverlässig & termingerecht",
-      description: "Pünktliche und verlässliche Ausführung aller Arbeiten",
+      description:
+        "Termintreue und Zuverlässigkeit sind die Grundpfeiler unserer Arbeit. Was wir versprechen, halten wir auch – für eine reibungslose Abwicklung Ihres Projekts ohne Verzögerungen.",
     },
     {
       icon: MapPin,
       title: "Regional verwurzelt",
-      description: "Lokaler Betrieb mit kurzen Wegen in der Region Winterthur",
+      description:
+        "Seit Jahren im Grossraum Winterthur tätig, kennen wir die lokalen Gegebenheiten und Anforderungen. Kurze Anfahrtswege und schnelle Verfügbarkeit ist stets garantiert.",
     },
   ];
 
