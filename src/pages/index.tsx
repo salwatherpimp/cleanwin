@@ -23,6 +23,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBusinessHours, setIsBusinessHours] = useState(false);
+  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
