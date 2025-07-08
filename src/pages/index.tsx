@@ -2047,6 +2047,19 @@ export default function HomePage({ buildTime }: HomePageProps) {
       </div>
 
       <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .mobile-logos-scroll {
+          animation: scroll 16s linear infinite;
+        }
+
         .review-text-clamp {
           overflow: hidden;
           display: -webkit-box;
