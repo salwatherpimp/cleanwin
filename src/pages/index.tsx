@@ -403,7 +403,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           fontWeight: 500,
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.color = "#e7027e";
+                          e.currentTarget.style.color = "#10a0a4";
                           e.currentTarget.style.backgroundColor = "#f9fafb";
                         }}
                         onMouseLeave={(e) => {
