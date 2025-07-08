@@ -1907,7 +1907,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
           overflow: hidden;
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 4;
+          -webkit-line-clamp: 3;
           font-family: Inter, sans-serif;
           font-weight: 400;
           font-size: 14px;
@@ -1919,9 +1919,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
         }
 
         /* Fallback for browsers that don't support line-clamp */
-        @supports not (-webkit-line-clamp: 4) {
+        @supports not (-webkit-line-clamp: 3) {
           .review-text-clamp {
-            max-height: calc(1.625 * 14px * 4);
+            max-height: calc(1.625 * 14px * 3);
             overflow: hidden;
             position: relative;
           }
@@ -1936,12 +1936,14 @@ export default function HomePage({ buildTime }: HomePageProps) {
         }
 
         .review-author {
-          font-family: Inter, sans-serif;
-          font-weight: 600;
-          font-size: 14px;
-          color: #111827;
-          margin-top: auto;
-          padding-top: 8px;
+          font-family: Inter, sans-serif !important;
+          font-weight: 600 !important;
+          font-size: 14px !important;
+          color: #111827 !important;
+          margin-top: auto !important;
+          padding-top: 8px !important;
+          display: block !important;
+          visibility: visible !important;
         }
 
         @media (min-width: 768px) {
