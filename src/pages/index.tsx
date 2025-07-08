@@ -1482,9 +1482,18 @@ export default function HomePage({ buildTime }: HomePageProps) {
                             >
                               "{review.text}"
                             </blockquote>
-                            <div style={{ fontSize: "0.875rem" }}>
+                            <div
+                              style={{
+                                fontSize: "0.875rem",
+                                marginTop: "auto",
+                              }}
+                            >
                               <div
-                                style={{ fontWeight: 600, color: "#111827" }}
+                                style={{
+                                  fontWeight: 600,
+                                  color: "#111827",
+                                  fontFamily: "Inter, sans-serif",
+                                }}
                               >
                                 {review.name}
                               </div>
