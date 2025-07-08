@@ -2195,11 +2195,16 @@ export default function HomePage({ buildTime }: HomePageProps) {
         }
         @media (max-width: 767px) {
           .hero-section {
-            min-height: 400px !important;
+            min-height: 300px !important;
           }
           .hero-title {
-            font-size: 2rem !important;
+            font-size: 1.8rem !important;
             line-height: 1.2 !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .hero-section div:first-child {
+            background-position: 20% center !important;
           }
           .company-logos {
             grid-template-columns: repeat(2, 1fr) !important;
