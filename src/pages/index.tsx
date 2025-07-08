@@ -930,8 +930,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         backdropFilter: "blur(4px)",
                         border: "1px solid rgba(255, 255, 255, 0.2)",
                         borderRadius: "12px",
-                        padding: "24px",
-                        height: "100%",
+                        padding: "16px",
                         boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
                       }}
                     >
