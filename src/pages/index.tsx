@@ -940,7 +940,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "space-between",
-                          marginBottom: "16px",
+                          marginBottom: "8px",
                         }}
                       >
                         <h3
