@@ -574,7 +574,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           textDecoration: "none",
                         }}
                         onMouseEnter={(e) =>
-                          (e.currentTarget.style.color = "#e7027e")
+                          (e.currentTarget.style.color = "#10a0a4")
                         }
                         onMouseLeave={(e) =>
                           (e.currentTarget.style.color = "#6b7280")
@@ -589,7 +589,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   href="/ueber-uns"
                   style={{ color: "#111827", textDecoration: "none" }}
                   onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "#e7027e")
+                    (e.currentTarget.style.color = "#10a0a4")
                   }
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.color = "#111827")
@@ -601,7 +601,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   href="/referenzen"
                   style={{ color: "#111827", textDecoration: "none" }}
                   onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "#e7027e")
+                    (e.currentTarget.style.color = "#10a0a4")
                   }
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.color = "#111827")
@@ -612,7 +612,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 <a
                   href="/kontakt"
                   style={{
-                    color: "#e7027e",
+                    color: "#10a0a4",
                     fontWeight: 500,
                     textDecoration: "none",
                   }}
@@ -875,7 +875,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     href="#services"
                     style={{
                       display: "inline-block",
-                      backgroundColor: "#e7027e",
+                      backgroundColor: "#10a0a4",
                       color: "white",
                       padding: "0.75rem 2rem",
                       borderRadius: "0.5rem",
@@ -884,10 +884,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       transition: "background-color 0.3s ease",
                     }}
                     onMouseEnter={(e) =>
-                      (e.currentTarget.style.backgroundColor = "#bc0263")
+                      (e.currentTarget.style.backgroundColor = "#0d7a7e")
                     }
                     onMouseLeave={(e) =>
-                      (e.currentTarget.style.backgroundColor = "#e7027e")
+                      (e.currentTarget.style.backgroundColor = "#10a0a4")
                     }
                   >
                     Leistungen Entdecken
@@ -1024,7 +1024,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         >
                           <feature.icon
                             size={20}
-                            style={{ color: "#e7027e" }}
+                            style={{ color: "#10a0a4" }}
                           />
                         </div>
                       </div>
@@ -1108,7 +1108,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           >
                             <feature.icon
                               size={20}
-                              style={{ color: "#e7027e" }}
+                              style={{ color: "#10a0a4" }}
                             />
                           </div>
                           <h3
@@ -1467,7 +1467,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       e.currentTarget.style.boxShadow =
                         "0 25px 50px -12px rgba(0, 0, 0, 0.25)";
                       e.currentTarget.style.transform = "scale(1.05)";
-                      e.currentTarget.style.borderColor = "#e7027e";
+                      e.currentTarget.style.borderColor = "#10a0a4";
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.boxShadow =
@@ -1694,7 +1694,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                   width: "48px",
                                   height: "48px",
                                   borderRadius: "50%",
-                                  backgroundColor: "#e7027e",
+                                  backgroundColor: "#10a0a4",
                                   display: "flex",
                                   alignItems: "center",
                                   justifyContent: "center",
@@ -1776,7 +1776,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 fontSize: "14px",
                                 color: "#111827",
                                 paddingTop: "8px",
-                                borderTop: "1px solid #e7027e",
+                                borderTop: "1px solid #10a0a4",
                                 backgroundColor: "#fff",
                                 textAlign: "left",
                                 position: "absolute",
@@ -1924,7 +1924,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   href="/kontakt"
                   style={{
                     display: "inline-block",
-                    backgroundColor: "#e7027e",
+                    backgroundColor: "#10a0a4",
                     color: "white",
                     padding: "1rem 2rem",
                     borderRadius: "0.5rem",
@@ -1933,11 +1933,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     transition: "all 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "#bc0263";
+                    e.currentTarget.style.backgroundColor = "#0d7a7e";
                     e.currentTarget.style.transform = "scale(1.05)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "#e7027e";
+                    e.currentTarget.style.backgroundColor = "#10a0a4";
                     e.currentTarget.style.transform = "scale(1)";
                   }}
                 >
@@ -2013,7 +2013,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       transition: "color 0.2s ease",
                     }}
                     onMouseEnter={(e) =>
-                      (e.currentTarget.style.color = "#e7027e")
+                      (e.currentTarget.style.color = "#10a0a4")
                     }
                     onMouseLeave={(e) =>
                       (e.currentTarget.style.color = "#9ca3af")
@@ -2057,7 +2057,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         transition: "color 0.2s ease",
                       }}
                       onMouseEnter={(e) =>
-                        (e.currentTarget.style.color = "#e7027e")
+                        (e.currentTarget.style.color = "#10a0a4")
                       }
                       onMouseLeave={(e) =>
                         (e.currentTarget.style.color = "#9ca3af")
@@ -2141,7 +2141,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   textDecoration: "none",
                   transition: "color 0.2s ease",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#e7027e")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#10a0a4")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#9ca3af")}
               >
                 Datenschutzerklärung
