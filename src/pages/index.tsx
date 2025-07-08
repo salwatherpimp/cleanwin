@@ -2036,7 +2036,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-75%);
           }
         }
 
