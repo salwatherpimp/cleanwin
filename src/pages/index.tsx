@@ -114,7 +114,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
   const reviews = [
     {
       name: "Ursula Wirtz",
-      text: "Ein engagiertes team,flexibel, zuverl��ssig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde CleanWin immer wieder gern für mein Haus engagieren.",
+      text: "Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde CleanWin immer wieder gern für mein Haus engagieren.",
       rating: 5,
     },
     {
@@ -1507,11 +1507,49 @@ export default function HomePage({ buildTime }: HomePageProps) {
           .about-grid {
             grid-template-columns: 1fr 1fr !important;
           }
-          h1 {
+          .hero-section {
+            min-height: 500px !important;
+          }
+          .hero-title {
             font-size: 5rem !important;
           }
-          .cta h2 {
-            font-size: 6rem !important;
+          .hero-subtitle {
+            font-size: 1.25rem !important;
+          }
+          .section-title {
+            font-size: 3rem !important;
+          }
+          .reviews-subtitle {
+            font-size: 1.25rem !important;
+          }
+          .why-grid {
+            grid-template-columns: repeat(4, 1fr) !important;
+          }
+          .services-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+          }
+          .reviews-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+          }
+          .company-logos {
+            grid-template-columns: repeat(4, 1fr) !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .hero-section {
+            min-height: 540px !important;
+          }
+          .company-logos {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+          .why-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .services-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .reviews-grid {
+            grid-template-columns: 1fr !important;
           }
         }
       `}</style>
