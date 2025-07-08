@@ -1911,7 +1911,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
               <div style={{ maxWidth: "48rem" }}>
                 <h2
                   style={{
-                    fontSize: "3rem",
+                    fontSize: "28px",
                     fontWeight: 700,
                     color: "white",
                     marginBottom: "2rem",
