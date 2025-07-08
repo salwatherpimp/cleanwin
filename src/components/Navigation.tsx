@@ -197,7 +197,7 @@ export default function Navigation() {
                         }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.backgroundColor = "#F3F4F6";
-                          e.currentTarget.style.color = "#E7027E";
+                          e.currentTarget.style.color = "#10a0a4";
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.backgroundColor = "transparent";
@@ -323,7 +323,7 @@ export default function Navigation() {
             <div style={{ marginBottom: "8px" }}>
               <span
                 style={{
-                  color: "#E7027E",
+                  color: "#10a0a4",
                   fontWeight: "600",
                   fontSize: "14px",
                   display: "block",
