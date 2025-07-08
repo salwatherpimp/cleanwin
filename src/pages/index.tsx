@@ -2160,7 +2160,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
             min-height: 500px !important;
           }
           .hero-title {
-            font-size: 5rem !important;
+            font-size: 4rem !important;
+            line-height: 1.1 !important;
           }
           .hero-subtitle {
             font-size: 1.25rem !important;
