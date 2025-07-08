@@ -673,7 +673,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
               color: "white",
               maxWidth: "72rem",
               margin: "0 auto",
-              padding: "8rem 1rem 2rem",
+              padding: "10rem 1rem 3rem",
             }}
           >
             <h1
