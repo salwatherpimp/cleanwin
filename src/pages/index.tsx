@@ -1549,27 +1549,27 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 overflow: "hidden",
                                 display: "-webkit-box",
                                 WebkitBoxOrient: "vertical",
-                                WebkitLineClamp: 6,
+                                WebkitLineClamp: 4,
+                                wordWrap: "break-word",
+                                hyphens: "auto",
                               }}
                               className="review-text-clamp"
                             >
                               {review.text}
                             </div>
                             <div
+                              className="review-author"
                               style={{
-                                fontSize: "0.875rem",
+                                fontFamily: "Inter, sans-serif",
+                                fontWeight: 600,
+                                fontSize: "14px",
+                                color: "#111827",
                                 marginTop: "auto",
+                                paddingTop: "8px",
+                                borderTop: "1px solid rgba(231, 2, 126, 0.1)",
                               }}
                             >
-                              <div
-                                style={{
-                                  fontWeight: 600,
-                                  color: "#111827",
-                                  fontFamily: "Inter, sans-serif",
-                                }}
-                              >
-                                {review.name}
-                              </div>
+                              {review.name}
                             </div>
                           </div>
                         </div>
