@@ -45,43 +45,46 @@ export default function HomePage({ buildTime }: HomePageProps) {
       name: "Fensterreinigung",
       href: "/leistungen/fensterreinigung",
       image:
-        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,q_auto,f_auto/v1748344821/window-cleaning_m7hork.avif",
-      description: "Professionelle Fensterreinigung für kristallklare Sicht",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-malen_gdvdci.avif",
+      description:
+        "Kristallklare Fenster mit professioneller Reinigungstechnik.",
+    },
+    {
+      name: "Büroreinigung",
+      href: "/leistungen/bueroreinigung",
+      image:
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1750015382/altbauwohnung-meilen_lrttoc.avif",
+      description:
+        "Hygienische und gründliche Büroreinigung für Ihr Unternehmen.",
     },
     {
       name: "Fassadenreinigung",
       href: "/leistungen/fassadenreinigung",
       image:
-        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,q_auto,f_auto/v1748344821/facade-cleaning_m7hork.avif",
-      description: "Schonende Fassadenreinigung für alle Oberflächen",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif",
+      description: "Schonende Fassadenreinigung für alle Oberflächentypen.",
     },
     {
       name: "Umzugsreinigung",
       href: "/leistungen/umzugsreinigung",
       image:
-        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,q_auto,f_auto/v1748344821/moving-cleaning_m7hork.avif",
-      description: "Gründliche Endreinigung für Ihren Umzug",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-tapezieren_jvtgyo.avif",
+      description: "Professionelle Endreinigung für Ihren stressfreien Umzug.",
     },
     {
       name: "Baureinigung",
       href: "/leistungen/baureinigung",
       image:
-        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,q_auto,f_auto/v1748344821/construction-cleaning_m7hork.avif",
-      description: "Professionelle Baureinigung nach Renovierung",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-spritzen_ij8jsj.avif",
+      description: "Gründliche Baureinigung nach Renovierung und Neubau.",
     },
     {
-      name: "Unterhaltsreinigung",
-      href: "/leistungen/unterhaltsreinigung",
+      name: "Weitere Dienstleistungen",
+      href: "/leistungen/weitere-dienstleistungen",
       image:
-        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,q_auto,f_auto/v1748344821/maintenance-cleaning_m7hork.avif",
-      description: "Regelmäßige Reinigung für Büros und Betriebe",
-    },
-    {
-      name: "Solarpanel reinigen",
-      href: "/leistungen/solarpanel-reinigen",
-      image:
-        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,q_auto,f_auto/v1748344821/solar-cleaning_m7hork.avif",
-      description: "Effiziente Reinigung für maximale Solarleistung",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif",
+      description:
+        "Erfahren Sie mehr über unsere Zusatzleistungen und Spezialdienste.",
     },
   ];
 
