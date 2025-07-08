@@ -1465,13 +1465,20 @@ export default function HomePage({ buildTime }: HomePageProps) {
                             </div>
                             <blockquote
                               style={{
-                                color: "#374151",
-                                marginBottom: "1rem",
+                                color: "#1f2937",
+                                marginBottom: "16px",
                                 fontStyle: "italic",
-                                fontSize: "0.875rem",
-                                lineHeight: 1.6,
+                                fontSize: "14px",
+                                lineHeight: 1.625,
+                                fontFamily: "Inter, sans-serif",
+                                fontWeight: 400,
                                 flex: 1,
+                                overflow: "hidden",
+                                display: "-webkit-box",
+                                WebkitBoxOrient: "vertical",
+                                WebkitLineClamp: 6,
                               }}
+                              className="review-text-clamp"
                             >
                               "{review.text}"
                             </blockquote>
