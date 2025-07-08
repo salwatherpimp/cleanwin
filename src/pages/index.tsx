@@ -189,7 +189,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
     },
     {
       name: "Domi Fuchs",
-      text: "Farbxpress hat unsere neue wohnung gestrichen in nur einem tag. Alles zu unserer besten zufriedenheit. Unkompliziert, speditiv und top qualität. Bin ich mir so nicht gewohnt ;) sehr zu empfehlen!!!",
+      text: "Farbxpress hat unsere neue wohnung gestrichen in nur einem tag. Alles zu unserer besten zufriedenheit. Unkompliziert, speditiv und top qualit��t. Bin ich mir so nicht gewohnt ;) sehr zu empfehlen!!!",
       rating: 5,
     },
     {
@@ -992,7 +992,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         </div>
                       </div>
                     ))}
-                  </div>
                 </div>
               )}
 
