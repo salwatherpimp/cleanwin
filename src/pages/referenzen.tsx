@@ -1,7 +1,7 @@
-// src/pages/[[...slug]].tsx
+// src/pages/referenzen.tsx - Builder.io Page
 
 import { builder, BuilderComponent, useIsPreviewing } from "@builder.io/react";
-import { GetStaticProps, GetStaticPaths } from "next";
+import { GetStaticProps } from "next";
 import DefaultErrorPage from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -35,72 +35,42 @@ class HydrationErrorBoundary extends Component<
   }
 }
 
-// Initialize Builder.io only if API key is available
+// Initialize Builder.io
 const apiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
 if (apiKey && apiKey !== "your-api-key-here") {
   builder.init(apiKey);
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async () => {
   const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
 
-  // If Builder.io is not configured, return null page
   if (!currentApiKey || currentApiKey === "your-api-key-here") {
     return {
-      props: {
-        page: null,
-        isBuilderConfigured: false,
-      },
+      props: { page: null },
       revalidate: 5,
     };
   }
-
-  const slugParam = params?.slug;
-
-  // If no slug params, this means it's trying to handle "/"
-  // Return 404 to let index.tsx handle it
-  if (!slugParam || slugParam.length === 0) {
-    return {
-      notFound: true,
-    };
-  }
-
-  const pagePath =
-    "/" + (Array.isArray(slugParam) ? slugParam.join("/") : slugParam);
 
   try {
     const page = await builder
       .get("page", {
         userAttributes: {
-          urlPath: pagePath,
+          urlPath: "/referenzen",
         },
       })
       .toPromise();
 
     return {
-      props: {
-        page: page || null,
-        isBuilderConfigured: true,
-      },
-      revalidate: 5,
+      props: { page: page || null },
+      revalidate: 30,
     };
   } catch (error) {
     console.error("Error fetching Builder.io page:", error);
     return {
-      props: {
-        page: null,
-        isBuilderConfigured: true,
-      },
-      revalidate: 5,
+      props: { page: null },
+      revalidate: 30,
     };
   }
-};
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: "blocking",
-  };
 };
 
 interface BuilderPage {
@@ -110,15 +80,11 @@ interface BuilderPage {
   };
 }
 
-interface CatchAllPageProps {
+interface ReferenzenPageProps {
   page: BuilderPage | null;
-  isBuilderConfigured: boolean;
 }
 
-export default function CatchAllPage({
-  page,
-  isBuilderConfigured,
-}: CatchAllPageProps) {
+export default function ReferenzenPage({ page }: ReferenzenPageProps) {
   const router = useRouter();
   const isPreviewing = useIsPreviewing();
 
@@ -126,7 +92,8 @@ export default function CatchAllPage({
     return <h1>Loading...</h1>;
   }
 
-  if (!isBuilderConfigured) {
+  const currentApiKey = process.env.NEXT_PUBLIC_BUILDER_API_KEY;
+  if (!currentApiKey || currentApiKey === "your-api-key-here") {
     return (
       <>
         <Head>
@@ -134,17 +101,9 @@ export default function CatchAllPage({
           <title>Builder.io Setup Required</title>
         </Head>
         <Layout>
-          <div
-            style={{
-              padding: "2rem",
-              textAlign: "center",
-              fontFamily: "system-ui, sans-serif",
-            }}
-          >
+          <div style={{ padding: "2rem", textAlign: "center" }}>
             <h1>Builder.io Setup Required</h1>
-            <p>
-              To use this app, you need to configure your Builder.io API key.
-            </p>
+            <p>Please configure your Builder.io API key.</p>
           </div>
         </Layout>
       </>
@@ -155,9 +114,26 @@ export default function CatchAllPage({
     return (
       <>
         <Head>
-          <meta name="robots" content="noindex" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>Referenzen - CleanWin</title>
+          <meta
+            name="description"
+            content="Kundenstimmen und Referenzen von CleanWin"
+          />
         </Head>
-        <DefaultErrorPage statusCode={404} />
+        <Layout>
+          <div style={{ padding: "2rem", textAlign: "center" }}>
+            <h1>Referenzen</h1>
+            <p>Diese Seite kann in Builder.io erstellt werden.</p>
+            <a
+              href="https://builder.io/content"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Builder.io Content erstellen →
+            </a>
+          </div>
+        </Layout>
       </>
     );
   }
@@ -166,7 +142,11 @@ export default function CatchAllPage({
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{page?.data?.title || "Seite"}</title>
+        <title>{page?.data?.title || "Referenzen - CleanWin"}</title>
+        <meta
+          name="description"
+          content="Kundenstimmen und Referenzen von CleanWin - Professionelle Reinigung in Winterthur"
+        />
       </Head>
       <Layout>
         <HydrationErrorBoundary>
