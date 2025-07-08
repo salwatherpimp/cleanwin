@@ -2082,12 +2082,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
       </div>
 
       <style jsx>{`
-        @keyframes scroll {
+        @keyframes logoScroll {
           0% {
-            transform: translateX(100%);
+            transform: translateX(0);
           }
           100% {
-            transform: translateX(-100%);
+            transform: translateX(-50%);
           }
         }
 
