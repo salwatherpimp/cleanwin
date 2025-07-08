@@ -935,63 +935,62 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
                       }}
                     >
-                          {/* Header Row (Title + Icon) */}
-                          <div
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "space-between",
-                              marginBottom: "16px",
-                            }}
-                          >
-                            <h3
-                              style={{
-                                fontFamily: "Inter, sans-serif",
-                                fontSize: "18px",
-                                fontWeight: 600,
-                                color: "#111827",
-                                margin: 0,
-                                flexGrow: 1,
-                              }}
-                            >
-                              {feature.title}
-                            </h3>
-                            <div
-                              style={{
-                                width: "48px",
-                                height: "48px",
-                                backgroundColor: "rgba(231, 2, 126, 0.1)",
-                                borderRadius: "50%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                marginLeft: "16px",
-                                flexShrink: 0,
-                              }}
-                            >
-                              <feature.icon
-                                size={24}
-                                style={{ color: "#e7027e" }}
-                              />
-                            </div>
-                          </div>
-
-                          {/* Description */}
-                          <p
-                            style={{
-                              fontFamily: "Inter, sans-serif",
-                              fontSize: "14px",
-                              fontWeight: 400,
-                              color: "#4b5563",
-                              lineHeight: 1.625,
-                              margin: 0,
-                            }}
-                          >
-                            {feature.description}
-                          </p>
+                      {/* Header Row (Title + Icon) */}
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          marginBottom: "16px",
+                        }}
+                      >
+                        <h3
+                          style={{
+                            fontFamily: "Inter, sans-serif",
+                            fontSize: "18px",
+                            fontWeight: 600,
+                            color: "#111827",
+                            margin: 0,
+                            flexGrow: 1,
+                          }}
+                        >
+                          {feature.title}
+                        </h3>
+                        <div
+                          style={{
+                            width: "48px",
+                            height: "48px",
+                            backgroundColor: "rgba(231, 2, 126, 0.1)",
+                            borderRadius: "50%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            marginLeft: "16px",
+                            flexShrink: 0,
+                          }}
+                        >
+                          <feature.icon
+                            size={24}
+                            style={{ color: "#e7027e" }}
+                          />
                         </div>
                       </div>
-                    ))}
+
+                      {/* Description */}
+                      <p
+                        style={{
+                          fontFamily: "Inter, sans-serif",
+                          fontSize: "14px",
+                          fontWeight: 400,
+                          color: "#4b5563",
+                          lineHeight: 1.625,
+                          margin: 0,
+                        }}
+                      >
+                        {feature.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               )}
 
