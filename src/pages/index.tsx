@@ -2091,17 +2091,20 @@ export default function HomePage({ buildTime }: HomePageProps) {
           font-family: Inter, sans-serif;
           font-weight: 400;
           font-size: 14px;
-          line-height: 1.625;
+          line-height: 1.5;
           color: #1f2937;
-          margin-bottom: 16px;
+          margin-bottom: 8px;
           word-wrap: break-word;
+          word-break: break-word;
           hyphens: auto;
+          text-overflow: ellipsis;
+          max-height: 63px; /* 14px * 1.5 * 3 lines = 63px */
         }
 
         /* Fallback for browsers that don't support line-clamp */
         @supports not (-webkit-line-clamp: 3) {
           .review-text-clamp {
-            max-height: calc(1.625 * 14px * 3);
+            max-height: 63px;
             overflow: hidden;
             position: relative;
           }
@@ -2110,8 +2113,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
             position: absolute;
             bottom: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             padding-left: 20px;
+            width: 30px;
+            text-align: right;
           }
         }
 
