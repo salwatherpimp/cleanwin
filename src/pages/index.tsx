@@ -879,27 +879,34 @@ export default function HomePage({ buildTime }: HomePageProps) {
           <section
             style={{
               background: "linear-gradient(to bottom right, #eddde5, #f7f2f5)",
-              padding: isMobile ? "3rem 0" : "4rem 0",
+              padding: isMobile ? "48px 0" : "64px 0",
+              position: "relative",
+              overflow: "hidden",
             }}
             className="why-section"
           >
             <div
-              style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1rem" }}
+              style={{
+                maxWidth: "1152px",
+                margin: "0 auto",
+                padding: "0 16px",
+              }}
             >
+              {/* Header */}
               <div
                 style={{
                   textAlign: "center",
-                  marginBottom: isMobile ? "2rem" : "3rem",
+                  marginBottom: isMobile ? "32px" : "48px",
                 }}
               >
                 <h2
                   style={{
-                    fontSize: isMobile ? "1.5rem" : "1.875rem",
+                    fontFamily: "Inter, sans-serif",
+                    fontSize: isMobile ? "24px" : "30px",
                     fontWeight: 700,
                     color: "#111827",
-                    marginBottom: isMobile ? "2rem" : "3rem",
+                    marginBottom: "16px",
                   }}
-                  className="why-title"
                 >
                   Warum CleanWin wählen?
                 </h2>
@@ -907,81 +914,106 @@ export default function HomePage({ buildTime }: HomePageProps) {
 
               {/* Desktop: Carousel */}
               {!isMobile && (
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(4, 1fr)",
-                    gap: "1.5rem",
-                  }}
-                >
-                  {whyFeatures.map((feature, index) => (
-                    <div
-                      key={index}
-                      style={{
-                        backgroundColor: "rgba(255, 255, 255, 0.9)",
-                        backdropFilter: "blur(4px)",
-                        border: "1px solid rgba(255, 255, 255, 0.2)",
-                        borderRadius: "12px",
-                        padding: "24px",
-                        textAlign: "center",
-                        transition: "all 0.3s ease",
-                        opacity: index === currentWhyIndex ? 1 : 0.7,
-                        transform:
-                          index === currentWhyIndex
-                            ? "scale(1.05)"
-                            : "scale(1)",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.boxShadow =
-                          "0 10px 25px -5px rgba(0, 0, 0, 0.1)";
-                        e.currentTarget.style.opacity = "1";
-                        e.currentTarget.style.transform = "scale(1.05)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.boxShadow = "none";
-                        e.currentTarget.style.opacity =
-                          index === currentWhyIndex ? "1" : "0.7";
-                        e.currentTarget.style.transform =
-                          index === currentWhyIndex
-                            ? "scale(1.05)"
-                            : "scale(1)";
-                      }}
-                    >
+                <div style={{ overflow: "hidden", marginLeft: "-16px" }}>
+                  <div style={{ display: "flex" }}>
+                    {whyFeatures.map((feature, index) => (
                       <div
+                        key={index}
                         style={{
-                          backgroundColor: "rgba(231, 2, 126, 0.1)",
-                          width: "48px",
-                          height: "48px",
-                          borderRadius: "50%",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          margin: "0 auto 1rem",
+                          paddingLeft: "16px",
+                          flex: "0 0 25%",
+                          minWidth: 0,
                         }}
                       >
-                        <feature.icon size={24} style={{ color: "#e7027e" }} />
+                        <div
+                          style={{
+                            backgroundColor: "rgba(255, 255, 255, 0.9)",
+                            backdropFilter: "blur(4px)",
+                            border: "1px solid rgba(255, 255, 255, 0.2)",
+                            borderRadius: "12px",
+                            padding: "24px",
+                            height: "100%",
+                            transition: "all 300ms ease",
+                            opacity: index === currentWhyIndex ? 1 : 0.7,
+                            transform:
+                              index === currentWhyIndex
+                                ? "scale(1.05)"
+                                : "scale(1)",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.boxShadow =
+                              "0 10px 25px -5px rgba(0, 0, 0, 0.1)";
+                            e.currentTarget.style.opacity = "1";
+                            e.currentTarget.style.transform = "scale(1.05)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.boxShadow = "none";
+                            e.currentTarget.style.opacity =
+                              index === currentWhyIndex ? "1" : "0.7";
+                            e.currentTarget.style.transform =
+                              index === currentWhyIndex
+                                ? "scale(1.05)"
+                                : "scale(1)";
+                          }}
+                        >
+                          {/* Header Row (Title + Icon) */}
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "space-between",
+                              marginBottom: "16px",
+                            }}
+                          >
+                            <h3
+                              style={{
+                                fontFamily: "Inter, sans-serif",
+                                fontSize: "18px",
+                                fontWeight: 600,
+                                color: "#111827",
+                                margin: 0,
+                                flexGrow: 1,
+                              }}
+                            >
+                              {feature.title}
+                            </h3>
+                            <div
+                              style={{
+                                width: "48px",
+                                height: "48px",
+                                backgroundColor: "rgba(231, 2, 126, 0.1)",
+                                borderRadius: "50%",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                marginLeft: "16px",
+                                flexShrink: 0,
+                              }}
+                            >
+                              <feature.icon
+                                size={24}
+                                style={{ color: "#e7027e" }}
+                              />
+                            </div>
+                          </div>
+
+                          {/* Description */}
+                          <p
+                            style={{
+                              fontFamily: "Inter, sans-serif",
+                              fontSize: "14px",
+                              fontWeight: 400,
+                              color: "#4b5563",
+                              lineHeight: 1.625,
+                              margin: 0,
+                            }}
+                          >
+                            {feature.description}
+                          </p>
+                        </div>
                       </div>
-                      <h3
-                        style={{
-                          fontSize: "1.125rem",
-                          fontWeight: 600,
-                          color: "#111827",
-                          marginBottom: "0.75rem",
-                        }}
-                      >
-                        {feature.title}
-                      </h3>
-                      <p
-                        style={{
-                          color: "#6b7280",
-                          fontSize: "0.875rem",
-                          lineHeight: 1.5,
-                        }}
-                      >
-                        {feature.description}
-                      </p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               )}
 
@@ -991,7 +1023,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   style={{
                     display: "flex",
                     flexDirection: "column",
-                    gap: "1rem",
+                    gap: "12px",
                   }}
                 >
                   {whyFeatures.map((feature, index) => (
@@ -1003,10 +1035,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         border: "1px solid rgba(255, 255, 255, 0.2)",
                         borderRadius: "12px",
                         overflow: "hidden",
-                        transition: "all 0.3s ease",
                       }}
                     >
-                      {/* Accordion Header */}
+                      {/* Accordion Trigger */}
                       <button
                         onClick={() =>
                           setExpandedAccordion(
@@ -1015,42 +1046,45 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         }
                         style={{
                           width: "100%",
-                          padding: "24px",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "space-between",
+                          padding: "16px",
+                          textAlign: "left",
                           background: "none",
                           border: "none",
-                          textAlign: "left",
                           cursor: "pointer",
                         }}
                       >
+                        {/* Left Section (Icon + Title) */}
                         <div
                           style={{
                             display: "flex",
                             alignItems: "center",
-                            gap: "1rem",
+                            gap: "12px",
                           }}
                         >
                           <div
                             style={{
+                              width: "40px",
+                              height: "40px",
                               backgroundColor: "rgba(231, 2, 126, 0.1)",
-                              width: "48px",
-                              height: "48px",
                               borderRadius: "50%",
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
+                              flexShrink: 0,
                             }}
                           >
                             <feature.icon
-                              size={24}
+                              size={20}
                               style={{ color: "#e7027e" }}
                             />
                           </div>
                           <h3
                             style={{
-                              fontSize: "1.125rem",
+                              fontFamily: "Inter, sans-serif",
+                              fontSize: "16px",
                               fontWeight: 600,
                               color: "#111827",
                               margin: 0,
@@ -1059,34 +1093,54 @@ export default function HomePage({ buildTime }: HomePageProps) {
                             {feature.title}
                           </h3>
                         </div>
-                        {expandedAccordion === index ? (
-                          <X size={20} style={{ color: "#6b7280" }} />
-                        ) : (
-                          <Plus size={20} style={{ color: "#6b7280" }} />
-                        )}
+
+                        {/* Right Section (Plus/X Icon) */}
+                        <div style={{ flexShrink: 0 }}>
+                          {expandedAccordion === index ? (
+                            <X
+                              size={20}
+                              style={{
+                                color: "#4b5563",
+                                transition: "transform 200ms ease",
+                              }}
+                            />
+                          ) : (
+                            <Plus
+                              size={20}
+                              style={{
+                                color: "#4b5563",
+                                transition: "transform 200ms ease",
+                              }}
+                            />
+                          )}
+                        </div>
                       </button>
 
                       {/* Accordion Content */}
-                      {expandedAccordion === index && (
-                        <div
-                          style={{
-                            padding: "0 24px 24px",
-                            borderTop: "1px solid rgba(255, 255, 255, 0.2)",
-                            marginTop: "-1px",
-                          }}
-                        >
+                      <div
+                        style={{
+                          overflow: "hidden",
+                          transition: "all 300ms ease-in-out",
+                          maxHeight:
+                            expandedAccordion === index ? "384px" : "0",
+                          opacity: expandedAccordion === index ? 1 : 0,
+                        }}
+                      >
+                        <div style={{ padding: "0 16px 16px" }}>
                           <p
                             style={{
-                              color: "#6b7280",
-                              fontSize: "0.875rem",
-                              lineHeight: 1.6,
-                              margin: "1rem 0 0",
+                              fontFamily: "Inter, sans-serif",
+                              fontSize: "14px",
+                              fontWeight: 400,
+                              color: "#4b5563",
+                              lineHeight: 1.625,
+                              margin: 0,
                             }}
                           >
                             {feature.description}
                           </p>
                         </div>
-                      )}
+                      </div>
                     </div>
                   ))}
                 </div>
