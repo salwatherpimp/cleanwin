@@ -1893,9 +1893,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
           .company-logos {
             grid-template-columns: repeat(2, 1fr) !important;
           }
-          .why-grid {
-            grid-template-columns: 1fr !important;
-          }
+
           .services-grid {
             grid-template-columns: 1fr !important;
           }
