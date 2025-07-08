@@ -1522,11 +1522,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 lineHeight: 1.625,
                                 fontFamily: "Inter, sans-serif",
                                 fontWeight: 400,
-                                flex: 1,
                                 overflow: "hidden",
                                 display: "-webkit-box",
                                 WebkitBoxOrient: "vertical",
-                                WebkitLineClamp: 4,
+                                WebkitLineClamp: 3,
                                 wordWrap: "break-word",
                                 hyphens: "auto",
                               }}
@@ -1541,9 +1540,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 fontWeight: 600,
                                 fontSize: "14px",
                                 color: "#111827",
-                                marginTop: "auto",
-                                paddingTop: "8px",
+                                paddingTop: "12px",
                                 borderTop: "1px solid rgba(231, 2, 126, 0.1)",
+                                display: "block",
+                                visibility: "visible",
+                                position: "relative",
+                                zIndex: 10,
                               }}
                             >
                               {review.name}
