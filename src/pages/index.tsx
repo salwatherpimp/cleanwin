@@ -630,7 +630,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             position: "relative",
             height: "480px",
             marginTop: "0",
-            overflow: "hidden",
+            overflow: "visible",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
