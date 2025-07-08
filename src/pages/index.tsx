@@ -1674,7 +1674,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
 
                             {/* Review Text */}
                             <div
-                              className="review-text-clamp"
                               style={{
                                 color: "#1f2937",
                                 fontSize: "14px",
@@ -1683,18 +1682,18 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 fontWeight: 400,
                                 marginBottom: "8px",
                                 overflow: "hidden",
-                                display: "-webkit-box",
-                                WebkitBoxOrient: "vertical",
-                                WebkitLineClamp: 3,
+                                height: "63px",
                                 wordWrap: "break-word",
                                 wordBreak: "break-word",
-                                hyphens: "auto",
-                                textOverflow: "ellipsis",
-                                maxHeight: "63px",
                                 fontStyle: "italic",
+                                position: "relative",
                               }}
                             >
-                              "{review.text}"
+                              "
+                              {review.text.length > 120
+                                ? review.text.substring(0, 120) + "..."
+                                : review.text}
+                              "
                             </div>
 
                             {/* Author Name - ALWAYS VISIBLE */}
