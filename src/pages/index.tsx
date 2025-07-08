@@ -1646,8 +1646,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                             <div
                               style={{
                                 color: "#1f2937",
-                                fontSize: "12px",
-                                lineHeight: 1.4,
+                                fontSize: "14px",
+                                lineHeight: 1.5,
                                 fontFamily: "Inter, sans-serif",
                                 fontWeight: 400,
                                 marginBottom: "8px",
@@ -1657,7 +1657,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 WebkitLineClamp: 3,
                                 wordWrap: "break-word",
                                 hyphens: "auto",
-                                height: "100px",
+                                textOverflow: "ellipsis",
+                                height: "105px",
                               }}
                             >
                               {review.text}
@@ -1671,7 +1672,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                 fontSize: "14px",
                                 color: "#111827",
                                 paddingTop: "8px",
-                                borderTop: "2px solid #e7027e",
+                                borderTop: "1px solid #e7027e",
                                 backgroundColor: "#fff",
                                 textAlign: "left",
                                 position: "absolute",
