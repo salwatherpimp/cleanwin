@@ -759,8 +759,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
           <section
             style={{
               background: "linear-gradient(to bottom right, #eddde5, #f7f2f5)",
-              padding: "4rem 0",
+              padding: "3rem 0",
             }}
+            className="why-section"
           >
             <div
               style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1rem" }}
@@ -771,29 +772,21 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     fontSize: "2.25rem",
                     fontWeight: 700,
                     color: "#111827",
-                    marginBottom: "1rem",
+                    marginBottom: "2rem",
                   }}
+                  className="section-title"
                 >
                   Warum CleanWin wählen?
                 </h2>
-                <p
-                  style={{
-                    color: "#6b7280",
-                    maxWidth: "32rem",
-                    margin: "0 auto",
-                  }}
-                >
-                  Vertrauen Sie auf unsere langjährige Erfahrung und
-                  professionelle Arbeitsweise
-                </p>
               </div>
 
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(15rem, 1fr))",
-                  gap: "2rem",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(16rem, 1fr))",
+                  gap: "1.5rem",
                 }}
+                className="why-grid"
               >
                 {whyFeatures.map((feature, index) => (
                   <div
@@ -805,7 +798,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       borderRadius: "0.75rem",
                       padding: "1.5rem",
                       textAlign: "center",
-                      transition: "box-shadow 0.3s ease",
+                      transition: "all 0.3s ease",
                     }}
                     onMouseEnter={(e) =>
                       (e.currentTarget.style.boxShadow =
@@ -818,8 +811,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     <div
                       style={{
                         backgroundColor: "rgba(231, 2, 126, 0.1)",
-                        width: "4rem",
-                        height: "4rem",
+                        width: "3rem",
+                        height: "3rem",
                         borderRadius: "50%",
                         display: "flex",
                         alignItems: "center",
@@ -827,7 +820,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         margin: "0 auto 1rem",
                       }}
                     >
-                      <feature.icon size={32} style={{ color: "#e7027e" }} />
+                      <feature.icon size={24} style={{ color: "#e7027e" }} />
                     </div>
                     <h3
                       style={{
@@ -843,6 +836,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       style={{
                         color: "#6b7280",
                         fontSize: "0.875rem",
+                        lineHeight: 1.5,
                       }}
                     >
                       {feature.description}
