@@ -678,7 +678,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
           >
             <h1
               style={{
-                fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
+                fontSize: "clamp(1.25rem, 3.5vw, 2rem)",
                 fontWeight: 800,
                 margin: "0 0 1rem 0",
                 lineHeight: "1.2",
