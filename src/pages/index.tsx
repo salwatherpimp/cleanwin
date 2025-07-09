@@ -1562,6 +1562,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
             style={{
               background: "linear-gradient(to bottom right, #eddde5, #f7f2f5)",
               padding: "3rem 0",
+              width: "100vw",
+              left: "50%",
+              marginLeft: "-50vw",
+              position: "relative",
             }}
           >
             <div
