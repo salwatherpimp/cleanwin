@@ -510,6 +510,35 @@ export default function HomePage({ buildTime }: HomePageProps) {
               </a>
             </nav>
 
+            {/* Mobile CTA Button - only visible on mobile */}
+            {isMobile && (
+              <a
+                href="/kontakt"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  backgroundColor: "#10a0a4",
+                  color: "white",
+                  padding: "0.5rem 1rem",
+                  borderRadius: "0.5rem",
+                  textDecoration: "none",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#0d7a7e")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#10a0a4")
+                }
+              >
+                <Hand size={14} />
+                Kontakt
+              </a>
+            )}
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
