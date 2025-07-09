@@ -577,6 +577,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       fontWeight: 500,
                       color: "#111827",
                       marginBottom: "0.5rem",
+                      fontSize: "16px",
+                      fontFamily: "Inter, sans-serif",
                     }}
                   >
                     Leistungen
