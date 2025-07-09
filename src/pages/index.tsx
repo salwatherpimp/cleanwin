@@ -510,47 +510,18 @@ export default function HomePage({ buildTime }: HomePageProps) {
               </a>
             </nav>
 
-            {/* Mobile Controls */}
-            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }} className="mobile-controls">
-              {/* Mobile CTA Button */}
-              <a
-                href="/kontakt"
-                style={{
-                  display: isMobile ? "flex" : "none",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  backgroundColor: "#10a0a4",
-                  color: "white",
-                  padding: "0.5rem 1rem",
-                  borderRadius: "0.5rem",
-                  textDecoration: "none",
-                  fontSize: "14px",
-                  fontWeight: "500",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#0d7a7e")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#10a0a4")
-                }
-              >
-                <Hand size={14} />
-                Kontakt
-              </a>
-
-              {/* Mobile Menu Button */}
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                style={{
-                  display: "block",
-                  padding: "0.5rem",
-                  background: "none",
-                  border: "none",
-                  cursor: "pointer",
-                }}
-                className="mobile-menu-btn"
-              >
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              style={{
+                display: "block",
+                padding: "0.5rem",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+              }}
+              className="mobile-menu-btn"
+            >
               <svg
                 style={{
                   width: "1.5rem",
@@ -585,7 +556,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 left: "1rem",
                 backgroundColor: "white",
                 borderRadius: "12px",
-                boxShadow: "0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                boxShadow:
+                  "0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
                 border: "1px solid #e5e7eb",
                 zIndex: 50,
               }}
@@ -2239,7 +2211,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   <div>24/7 Notfallreinigung</div>
                   <div>Kostenlose Besichtigung</div>
                   <div>Individuelle Angebote</div>
-                  <div>Regelmäßige Termine</div>
+                  <div>Regelm��ßige Termine</div>
                 </div>
               </div>
             </div>
