@@ -903,7 +903,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 </div>
 
                 <div style={{ position: "relative" }}>
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
                     alt="CleanWin Team"
                     style={{
@@ -1229,7 +1229,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       e.currentTarget.style.transform = "scale(1)";
                     }}
                   />
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
                     alt="Bank Zimmerberg"
                     style={{
@@ -1248,7 +1248,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       e.currentTarget.style.transform = "scale(1)";
                     }}
                   />
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
                     alt="Derby Pizza"
                     style={{
@@ -1267,7 +1267,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       e.currentTarget.style.transform = "scale(1)";
                     }}
                   />
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
                     alt="Stadt Zürich Sportamt"
                     style={{
@@ -1319,7 +1319,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         paddingRight: "60px",
                       }}
                     >
-                      <img
+                      <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
                         alt="Stadt Winterthur"
                         style={{
@@ -1330,7 +1330,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           flexShrink: 0,
                         }}
                       />
-                      <img
+                      <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
                         alt="Bank Zimmerberg"
                         style={{
@@ -1341,7 +1341,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           flexShrink: 0,
                         }}
                       />
-                      <img
+                      <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
                         alt="Derby Pizza"
                         style={{
@@ -1352,7 +1352,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           flexShrink: 0,
                         }}
                       />
-                      <img
+                      <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
                         alt="Stadt Zürich Sportamt"
                         style={{
@@ -1373,7 +1373,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         paddingRight: "60px",
                       }}
                     >
-                      <img
+                      <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
                         alt="Stadt Winterthur"
                         style={{
@@ -1384,7 +1384,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           flexShrink: 0,
                         }}
                       />
-                      <img
+                      <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
                         alt="Bank Zimmerberg"
                         style={{
@@ -1395,7 +1395,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           flexShrink: 0,
                         }}
                       />
-                      <img
+                      <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
                         alt="Derby Pizza"
                         style={{
@@ -1406,7 +1406,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           flexShrink: 0,
                         }}
                       />
-                      <img
+                      <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
                         alt="Stadt Zürich Sportamt"
                         style={{
@@ -1487,7 +1487,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     }}
                   >
                     <div style={{ position: "relative", overflow: "hidden" }}>
-                      <img
+                      <Image
                         src={service.image}
                         alt={service.name}
                         style={{
