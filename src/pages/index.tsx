@@ -1119,12 +1119,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   }}
                 >
                   {[
-                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/1_omqaqp.png",
-                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/2_jgcfjz.png",
-                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/4_mne8oq.png",
-                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/5_xmwppy.png",
-                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/3_jqqq29.png",
-                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/7_wetsnc.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/1_omqaqp.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/2_jgcfjz.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/4_mne8oq.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/5_xmwppy.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/3_jqqq29.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/7_wetsnc.png",
                   ].map((logoUrl, index) => (
                     <div
                       key={index}
