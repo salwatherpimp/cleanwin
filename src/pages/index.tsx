@@ -2304,8 +2304,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
             font-size: 25px !important;
             line-height: 1.2 !important;
           }
-          .hero-section > div:first-child {
-            background-position: 40% center !important;
+          .hero-section img {
+            object-position: 50% 20% !important;
           }
           h2 {
             font-size: 22px !important;
