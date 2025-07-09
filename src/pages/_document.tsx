@@ -15,7 +15,10 @@ export default function Document() {
           rel="preload"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
           as="style"
-          onLoad="this.onload=null;this.rel='stylesheet'"
+          onLoad={(e) => {
+            (e.target as HTMLLinkElement).onload = null;
+            (e.target as HTMLLinkElement).rel = "stylesheet";
+          }}
         />
         <noscript>
           <link
