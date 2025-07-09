@@ -574,8 +574,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 <div>
                   <h3
                     style={{
-                      fontWeight: 500,
-                      color: "#111827",
+                      fontWeight: 400,
+                      color: "#374151",
                       marginBottom: "0.5rem",
                       fontSize: "16px",
                       fontFamily: "Inter, sans-serif",
