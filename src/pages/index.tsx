@@ -952,7 +952,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     Fensterreinigung, Büroreinigung, Fassadenreinigung und
                     Spezialreinigungen. Unser erfahrenes Team arbeitet mit
                     modernsten Techniken und umweltfreundlichen Produkten, um
-                    höchste Qualität und Kundenzufriedenheit zu gewährleisten.
+                    höchste Qualit��t und Kundenzufriedenheit zu gewährleisten.
                   </p>
                   <a
                     href="#services"
@@ -961,7 +961,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       backgroundColor: "#10a0a4",
                       color: "white",
                       padding: "0.75rem 2rem",
-                      borderRadius: "0.5rem",
+                      borderRadius: "9999px",
                       fontWeight: 600,
                       textDecoration: "none",
                       transition: "background-color 0.3s ease",
