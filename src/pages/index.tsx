@@ -1078,6 +1078,127 @@ export default function HomePage({ buildTime }: HomePageProps) {
             </div>
           </section>
 
+          {/* Company Logos Section */}
+          <section
+            style={{
+              backgroundColor: "#f9fafb",
+              padding: isMobile ? "32px 0" : "48px 0",
+              borderTop: "1px solid #e5e7eb",
+              borderBottom: "1px solid #e5e7eb",
+            }}
+          >
+            <div
+              style={{
+                maxWidth: "1152px",
+                margin: "0 auto",
+                padding: "0 16px",
+                textAlign: "center",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  fontSize: isMobile ? "14px" : "16px",
+                  fontWeight: 400,
+                  color: "#6b7280",
+                  marginBottom: isMobile ? "24px" : "32px",
+                  textAlign: "center",
+                }}
+              >
+                Über 500 Firmen & Haushalte die mit CleanWin reinigen
+              </p>
+
+              {/* Desktop: 6 logos in a row */}
+              {!isMobile && (
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(6, 1fr)",
+                    gap: "32px",
+                    alignItems: "center",
+                    justifyItems: "center",
+                  }}
+                >
+                  {[1, 2, 3, 4, 5, 6].map((index) => (
+                    <div
+                      key={index}
+                      style={{
+                        width: "120px",
+                        height: "60px",
+                        backgroundColor: "#e5e7eb",
+                        borderRadius: "8px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        opacity: 0.7,
+                        transition: "opacity 0.3s ease",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.opacity = "1")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.opacity = "0.7")
+                      }
+                    >
+                      <span
+                        style={{
+                          fontFamily: "Inter, sans-serif",
+                          fontSize: "12px",
+                          fontWeight: 600,
+                          color: "#6b7280",
+                          textAlign: "center",
+                        }}
+                      >
+                        Company {index}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Mobile: 3x2 grid */}
+              {isMobile && (
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(3, 1fr)",
+                    gap: "16px",
+                    alignItems: "center",
+                    justifyItems: "center",
+                  }}
+                >
+                  {[1, 2, 3, 4, 5, 6].map((index) => (
+                    <div
+                      key={index}
+                      style={{
+                        width: "80px",
+                        height: "40px",
+                        backgroundColor: "#e5e7eb",
+                        borderRadius: "6px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        opacity: 0.7,
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontFamily: "Inter, sans-serif",
+                          fontSize: "10px",
+                          fontWeight: 600,
+                          color: "#6b7280",
+                          textAlign: "center",
+                        }}
+                      >
+                        Co {index}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+
           {/* Why CleanWin Section */}
           <section
             style={{
