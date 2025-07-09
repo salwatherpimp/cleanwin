@@ -790,7 +790,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 <span
                   style={{ fontWeight: 400, fontSize: "11px", opacity: 0.8 }}
                 >
-                  Aus +110 Bewertungen
+                  4.7 aus +110 Bewertungen
                 </span>
               </div>
             </div>
