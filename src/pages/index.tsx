@@ -1862,8 +1862,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundImage:
-                  "url(https://res.cloudinary.com/dwlk9of7h/image/upload/v1752099054/dobiinter_Close-up_of_a_rooftop_solar_panel_being_cleaned_wit_97f39d77-a81d-432b-ad05-4fc38a9dafcc_1_uqh2ui.avif)",
+                backgroundImage: `url(https://res.cloudinary.com/dwlk9of7h/image/upload/w_${isMobile ? "800" : "1200"},h_${isMobile ? "400" : "600"},c_fill,f_auto,q_auto/v1752099054/dobiinter_Close-up_of_a_rooftop_solar_panel_being_cleaned_wit_97f39d77-a81d-432b-ad05-4fc38a9dafcc_1_uqh2ui.avif)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
