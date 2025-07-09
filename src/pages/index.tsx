@@ -1039,11 +1039,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     }}
                   >
                     <Image
-                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752005906/homepage-herosection_fsxqwc.avif"
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1752005906/homepage-herosection_fsxqwc.avif"
                       alt="Professional Cleaning"
                       fill
-                      unoptimized={true}
                       loading="lazy"
+                      sizes="(max-width: 768px) 50vw, 25vw"
                       style={{
                         objectFit: "cover",
                         objectPosition: "center",
