@@ -1864,9 +1864,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 right: 0,
                 bottom: 0,
                 backgroundImage:
-                  "url(https://res.cloudinary.com/dwlk9of7h/image/upload/f_webp,q_90,w_1920,h_600,c_fill/v1748418221/farbxpress-footerImage_l29cqf.avif)",
+                  "url(https://res.cloudinary.com/dwlk9of7h/image/upload/v1752099054/dobiinter_Close-up_of_a_rooftop_solar_panel_being_cleaned_wit_97f39d77-a81d-432b-ad05-4fc38a9dafcc_1_uqh2ui.avif)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
               }}
             />
             <div
@@ -1899,7 +1900,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
                   }}
                 >
-                  CleanWin – persönlich, zuverlässig, hochwertig
+                  Cleanwin – persönlich, zuverlässig, hochwertig
                 </h2>
                 <a
                   href="/kontakt"
