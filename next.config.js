@@ -31,7 +31,6 @@ const nextConfig = {
   compress: true,
   generateEtags: true,
   // Performance Optimierungen
-  swcMinify: true,
   // Dev server configuration
   allowedDevOrigins: ["*"],
 };
