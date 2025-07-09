@@ -4,18 +4,19 @@ export default function Document() {
   return (
     <Html lang="de">
       <Head>
-        {/* Fonts preconnect for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* Preload critical font */}
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          as="style"
+          onLoad="this.onload=null;this.rel='stylesheet'"
         />
-        {/* Google Fonts stylesheet */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
       </Head>
       <body>
         <Main />
