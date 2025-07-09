@@ -2296,7 +2296,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
         }
         @media (max-width: 767px) {
           .hero-section {
-            height: 480px !important;
+            height: 100vh !important;
+            margin-top: -80px !important;
+            padding-top: 80px !important;
           }
           .hero-title {
             font-size: 25px !important;
