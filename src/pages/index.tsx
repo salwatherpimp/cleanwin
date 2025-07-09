@@ -1443,28 +1443,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             </div>
           </section>
 
-          {/* Company Logos Section */}
-          <section
-            style={{
-              backgroundColor: "#f9fafb",
-              borderTop: "1px solid #e5e7eb",
-              padding: isMobile ? "2rem 0" : "2.5rem 0",
-            }}
-          >
-            <div
-              style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1rem" }}
-            >
-              {/* Desktop: Horizontal row */}
-              {!isMobile && (
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(4, 1fr)",
-                    gap: "2rem",
-                    alignItems: "center",
-                    justifyItems: "center",
-                  }}
-                >
+
                   <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
                     alt="Bank Zimmerberg"
