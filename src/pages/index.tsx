@@ -151,27 +151,27 @@ export default function HomePage({ buildTime }: HomePageProps) {
   const whyFeatures = [
     {
       icon: Award,
-      title: "Über 18 Jahre Erfahrung",
+      title: "Regional & persönlich",
       description:
-        "Ein fundiertes Handwerk mit jahrzehntelanger Erfahrung bietet Ihnen professionelle Arbeiten in höchster Qualität. Unsere Expertise erfolgt durch bewährte Techniken und moderne Verfahren für langanhaltende Ergebnisse.",
+        "Wir sind in Winterthur zuhause. Persönlich, nah und immer für Sie erreichbar.",
     },
     {
       icon: Heart,
-      title: "Inhabergeführt & persönlich",
+      title: "Sicher & versichert",
       description:
-        "Als inhabergeführter Betrieb stehen wir für direkten Kontakt und individuelle Betreuung. Sie sprechen direkt mit den Entscheidungsträgern und erhalten persönliche Beratung für ihr Projekt.",
+        "Volle Versicherung und geschultes Team - damit Sie sorgenfrei entspannen können.",
     },
     {
       icon: Clock,
-      title: "Zuverl��ssig & termingerecht",
+      title: "Nachhaltig & schonend",
       description:
-        "Termintreue und Zuverlässigkeit sind die Grundpfeiler unserer Arbeit. Was wir versprechen, halten wir auch – für eine reibungslose Abwicklung Ihres Projekts ohne Verzögerungen.",
+        "Umweltfreundliche Reinigungs-methode durch Umkehrosmose-Technik. Gut für Sie und die Natur.",
     },
     {
       icon: MapPin,
-      title: "Regional verwurzelt",
+      title: "Flexibel & zuverlässig",
       description:
-        "Seit Jahren im Grossraum Winterthur tätig, kennen wir die lokalen Gegebenheiten und Anforderungen. Kurze Anfahrtswege und schnelle Verfügbarkeit ist stets garantiert.",
+        "Von früh bis spät - wir richten uns stet nach Ihrem Alltag. Immer pünktlich.",
     },
   ];
 
