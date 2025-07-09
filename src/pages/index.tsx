@@ -634,12 +634,18 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 </a>
                 <a
                   href="/referenzen"
-                  style={{ color: "#111827", textDecoration: "none" }}
+                  style={{
+                    color: "#374151",
+                    textDecoration: "none",
+                    fontSize: "16px",
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 400,
+                  }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.color = "#10a0a4")
                   }
                   onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "#111827")
+                    (e.currentTarget.style.color = "#374151")
                   }
                 >
                   Referenzen
