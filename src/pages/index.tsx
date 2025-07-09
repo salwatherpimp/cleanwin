@@ -493,7 +493,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 }
               >
                 <Hand size={16} />
-                Kontakt
+                Kontaktiere uns
               </a>
             </nav>
 
