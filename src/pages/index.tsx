@@ -796,7 +796,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   </div>
                 </div>
                 <span
-                  style={{ fontWeight: 400, fontSize: "11px", opacity: 0.8 }}
+                  style={{
+                    fontWeight: 400,
+                    fontSize: isMobile ? "10px" : "11px",
+                    opacity: 0.8,
+                    lineHeight: 1.2,
+                  }}
                 >
                   4.7 aus +110 Bewertungen
                 </span>
