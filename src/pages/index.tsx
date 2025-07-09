@@ -178,7 +178,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
   const reviews = [
     {
       name: "Ursula Wirtz",
-      text: "Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde farbexpress immer wieder gern für mein Haus engagieren.",
+      text: "Ein engagiertes team,flexibel, zuverl��ssig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde farbexpress immer wieder gern für mein Haus engagieren.",
       rating: 5,
     },
     {
@@ -1164,12 +1164,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   }}
                 >
                   {[
-                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+1",
-                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+2",
-                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+3",
-                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+4",
-                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+5",
-                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+6",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/1_omqaqp.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/2_jgcfjz.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/4_mne8oq.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/5_xmwppy.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/3_jqqq29.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/7_wetsnc.png",
                   ].map((logoUrl, index) => (
                     <div
                       key={index}
