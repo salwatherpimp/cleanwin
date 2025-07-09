@@ -1257,9 +1257,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       e.currentTarget.style.transform = "scale(1)";
                     }}
                   />
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
                     alt="Derby Pizza"
+                    width={160}
+                    height={80}
                     style={{
                       height: "80px",
                       width: "auto",
