@@ -653,10 +653,18 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 <a
                   href="/kontakt"
                   style={{
-                    color: "#10a0a4",
-                    fontWeight: 500,
+                    color: "#374151",
+                    fontWeight: 400,
                     textDecoration: "none",
+                    fontSize: "16px",
+                    fontFamily: "Inter, sans-serif",
                   }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "#10a0a4")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color = "#374151")
+                  }
                 >
                   Kontakt
                 </a>
