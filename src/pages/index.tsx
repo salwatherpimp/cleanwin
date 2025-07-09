@@ -2386,6 +2386,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
           }
           .about-grid {
             grid-template-columns: 1fr 1fr !important;
+            align-items: center !important;
           }
           .hero-section {
             height: 550px !important;
