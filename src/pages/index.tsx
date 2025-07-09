@@ -336,7 +336,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 width={200}
                 height={56}
                 priority
-                style={{ height: "3.5rem", width: "auto" }}
+                style={{
+                  height: isMobile ? "2.5rem" : "3.5rem",
+                  width: "auto",
+                  marginLeft: isMobile ? "-1rem" : "0",
+                }}
               />
             </a>
 
