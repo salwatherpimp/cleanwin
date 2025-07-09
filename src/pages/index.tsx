@@ -907,9 +907,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 </div>
 
                 <div style={{ position: "relative" }}>
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
                     alt="CleanWin Team"
+                    width={600}
+                    height={320}
+                    priority
                     style={{
                       width: "100%",
                       height: "20rem",
