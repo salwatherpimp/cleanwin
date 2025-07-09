@@ -297,10 +297,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
             left: 0,
             right: 0,
             zIndex: 50,
-            backgroundColor: isScrolled ? "white" : "transparent",
+            backgroundColor: isScrolled ? "white" : "rgba(255, 255, 255, 0.1)",
+            backdropFilter: isScrolled ? "none" : "blur(8px)",
             boxShadow: isScrolled
               ? "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
-              : "none",
+              : "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
             transition: "all 300ms cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         >
