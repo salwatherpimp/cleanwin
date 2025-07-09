@@ -2372,7 +2372,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             line-height: 1.2 !important;
           }
           .hero-section img {
-            object-position: 50% 40% !important;
+            object-position: 50% 60% !important;
           }
           h2 {
             font-size: 22px !important;
