@@ -1227,7 +1227,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     marginBottom: "16px",
                   }}
                 >
-                  Warum CleanWin wählen?
+                  Warum Cleanwin wählen?
                 </h2>
               </div>
 
