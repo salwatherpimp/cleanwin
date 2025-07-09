@@ -640,7 +640,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
         <section
           style={{
             position: "relative",
-            height: "100vh",
+            height: "70vh",
+            minHeight: "600px",
+            maxHeight: "800px",
             marginTop: "-80px",
             paddingTop: "80px",
             overflow: "hidden",
