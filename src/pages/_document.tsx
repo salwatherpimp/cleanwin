@@ -34,6 +34,19 @@ export default function Document() {
             object-fit: cover;
             object-position: 60% 30%;
           }
+          .hero-section > div:last-child {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 0 2rem;
+          }
           @media (max-width: 767px) {
             .hero-section {
               height: 480px;
