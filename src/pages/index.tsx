@@ -950,6 +950,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
               padding: isMobile ? "48px 0" : "64px 0",
               position: "relative",
               overflow: "hidden",
+              width: "100vw",
+              left: "50%",
+              marginLeft: "-50vw",
             }}
             className="why-section"
           >
