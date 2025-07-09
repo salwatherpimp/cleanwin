@@ -184,7 +184,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
     },
     {
       name: "Johanna Kelts",
-      text: "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen Berufsleute zusammenfassen. Sie haben eine Wohnung in meinem über 200 Jahre alten MFH neu gestrichen. Die Aufgabe, Wände und Einbauschränke mit vielen Ecken und Kanten, Holztäfer, sowie Gips- und Mauerwerk kostengünstig und doch perfekt zu streichen, war nicht unbedingt einfach. Der Auftrag wurde jedoch zu meiner vollsten Zufriedenheit erledigt. Ich kann diese Firma wirklich sehr empfehlen!",
+      text: "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen Berufsleute zusammenfassen. Sie haben eine Wohnung in meinem über 200 Jahre alten MFH neu gestrichen. Die Aufgabe, Wände und Einbauschränke mit vielen Ecken und Kanten, Holztäfer, sowie Gips- und Mauerwerk kosteng��nstig und doch perfekt zu streichen, war nicht unbedingt einfach. Der Auftrag wurde jedoch zu meiner vollsten Zufriedenheit erledigt. Ich kann diese Firma wirklich sehr empfehlen!",
       rating: 5,
     },
     {
@@ -911,8 +911,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   <img
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
                     alt="CleanWin Team"
-
-
                     style={{
                       width: "100%",
                       height: "20rem",
@@ -1218,8 +1216,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   <img
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
                     alt="Stadt Winterthur"
-
-
                     style={{
                       height: "80px",
                       width: "auto",
@@ -2312,7 +2308,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
           }
         }
       `}</style>
-      </div>
     </>
   );
 }
