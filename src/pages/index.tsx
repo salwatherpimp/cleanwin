@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { useState, useEffect, GetStaticProps } from "react";
+import { GetStaticProps } from "next";
+import { useState, useEffect } from "react";
 import {
   ChevronDown,
   Phone,
