@@ -510,18 +510,47 @@ export default function HomePage({ buildTime }: HomePageProps) {
               </a>
             </nav>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              style={{
-                display: "block",
-                padding: "0.5rem",
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-              }}
-              className="mobile-menu-btn"
-            >
+            {/* Mobile Controls Container */}
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }} className="mobile-controls">
+              {/* Mobile CTA Button */}
+              <a
+                href="/kontakt"
+                style={{
+                  display: isMobile ? "flex" : "none",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  backgroundColor: "#10a0a4",
+                  color: "white",
+                  padding: "0.5rem 1rem",
+                  borderRadius: "0.5rem",
+                  textDecoration: "none",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#0d7a7e")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#10a0a4")
+                }
+              >
+                <Hand size={14} />
+                Kontakt
+              </a>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                style={{
+                  display: "block",
+                  padding: "0.5rem",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+                className="mobile-menu-btn"
+              >
               <svg
                 style={{
                   width: "1.5rem",
