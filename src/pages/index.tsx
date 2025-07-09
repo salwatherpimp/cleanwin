@@ -1120,12 +1120,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   }}
                 >
                   {[
-                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+1",
-                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+2",
-                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+3",
-                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+4",
-                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+5",
-                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+6",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/1_omqaqp.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/2_jgcfjz.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/4_mne8oq.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/5_xmwppy.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/3_jqqq29.png",
+                    "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752097683/7_wetsnc.png",
                   ].map((logoUrl, index) => (
                     <div
                       key={index}
