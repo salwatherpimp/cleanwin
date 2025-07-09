@@ -652,18 +652,15 @@ export default function HomePage({ buildTime }: HomePageProps) {
           }}
           className="hero-section"
         >
-          <div
+          <Image
+            src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752005906/homepage-herosection_fsxqwc.avif"
+            alt="CleanWin Hero Background"
+            fill
+            priority
+            quality={90}
             style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage:
-                "url(https://res.cloudinary.com/dwlk9of7h/image/upload/v1752005906/homepage-herosection_fsxqwc.avif)",
-              backgroundSize: "cover",
-              backgroundPosition: "75% center",
-              backgroundRepeat: "no-repeat",
+              objectFit: "cover",
+              objectPosition: "75% center",
             }}
           />
           <div
