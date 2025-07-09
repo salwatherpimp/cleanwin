@@ -596,9 +596,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         key={service.name}
                         href={service.href}
                         style={{
-                          fontSize: "0.875rem",
-                          color: "#6b7280",
+                          fontSize: "16px",
+                          color: "#374151",
                           textDecoration: "none",
+                          fontFamily: "Inter, sans-serif",
+                          fontWeight: 400,
                         }}
                         onMouseEnter={(e) =>
                           (e.currentTarget.style.color = "#10a0a4")
