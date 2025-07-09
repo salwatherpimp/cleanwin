@@ -520,8 +520,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   gap: "0.5rem",
                   backgroundColor: "#10a0a4",
                   color: "white",
-                  padding: "0.5rem 1rem",
-                  borderRadius: "0.5rem",
+                  padding: "0.75rem 1rem",
+                  borderRadius: "9999px",
                   textDecoration: "none",
                   fontSize: "14px",
                   fontWeight: "500",
@@ -534,8 +534,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   (e.currentTarget.style.backgroundColor = "#10a0a4")
                 }
               >
-                <Hand size={14} />
-                Kontakt
+                <Hand size={16} />
+                Kontaktiere uns
               </a>
             )}
 
