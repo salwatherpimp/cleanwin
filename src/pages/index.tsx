@@ -324,10 +324,13 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 (e.currentTarget.style.transform = "scale(1)")
               }
             >
-              <img
+              <Image
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.avif"
                 alt="CleanWin Logo"
-                style={{ height: "3.5rem" }}
+                width={200}
+                height={56}
+                priority
+                style={{ height: "3.5rem", width: "auto" }}
               />
             </a>
 
