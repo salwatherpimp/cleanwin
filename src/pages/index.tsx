@@ -330,12 +330,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 (e.currentTarget.style.transform = "scale(1)")
               }
             >
-              <img
+              <Image
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.avif"
                 alt="CleanWin Logo"
-                
-                
-                
+                width={200}
+                height={56}
+                priority
                 style={{ height: "3.5rem", width: "auto" }}
               />
             </a>
@@ -911,8 +911,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   <img
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
                     alt="CleanWin Team"
-                    
-                    
+
+
                     style={{
                       width: "100%",
                       height: "20rem",
@@ -1218,8 +1218,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   <img
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
                     alt="Stadt Winterthur"
-                    
-                    
+
+
                     style={{
                       height: "80px",
                       width: "auto",
