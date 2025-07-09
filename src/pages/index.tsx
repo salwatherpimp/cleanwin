@@ -2175,7 +2175,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#10a0a4")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#9ca3af")}
               >
-                Datenschutzerklärung
+                Datenschutzerkl��rung
               </a>
             </div>
           </div>
@@ -2300,7 +2300,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
         }
         @media (max-width: 767px) {
           .hero-section {
-            height: 100vh !important;
+            height: 80vh !important;
+            min-height: 500px !important;
+            max-height: 700px !important;
             margin-top: -80px !important;
             padding-top: 80px !important;
           }
