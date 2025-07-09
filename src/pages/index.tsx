@@ -575,12 +575,19 @@ export default function HomePage({ buildTime }: HomePageProps) {
             </button>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu Card */}
           {isMobileMenuOpen && (
             <div
               style={{
+                position: "absolute",
+                top: "100%",
+                right: "1rem",
+                left: "1rem",
                 backgroundColor: "white",
-                borderTop: "1px solid #e5e7eb",
+                borderRadius: "12px",
+                boxShadow: "0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                border: "1px solid #e5e7eb",
+                zIndex: 50,
               }}
               className="mobile-menu"
             >
