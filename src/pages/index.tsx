@@ -922,9 +922,15 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   }}
                 >
                   {/* Feature 1 */}
-                  <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+                  <div
+                    style={{
+                      borderRadius: "16px",
+                      overflow: "hidden",
+                      position: "relative",
+                    }}
+                  >
                     <Image
-                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+                      src="https://picsum.photos/400/300?random=1"
                       alt="Cleaning Service"
                       fill
                       unoptimized={true}
@@ -937,9 +943,15 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   </div>
 
                   {/* Feature 2 */}
-                  <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+                  <div
+                    style={{
+                      borderRadius: "16px",
+                      overflow: "hidden",
+                      position: "relative",
+                    }}
+                  >
                     <Image
-                      src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=300&fit=crop&crop=center"
+                      src="https://picsum.photos/400/300?random=2"
                       alt="Office Cleaning"
                       fill
                       unoptimized={true}
@@ -952,9 +964,15 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   </div>
 
                   {/* Feature 3 */}
-                  <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+                  <div
+                    style={{
+                      borderRadius: "16px",
+                      overflow: "hidden",
+                      position: "relative",
+                    }}
+                  >
                     <Image
-                      src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop&crop=center"
+                      src="https://picsum.photos/400/300?random=3"
                       alt="Professional Cleaning"
                       fill
                       unoptimized={true}
@@ -967,9 +985,15 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   </div>
 
                   {/* Feature 4 */}
-                  <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+                  <div
+                    style={{
+                      borderRadius: "16px",
+                      overflow: "hidden",
+                      position: "relative",
+                    }}
+                  >
                     <Image
-                      src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=300&fit=crop&crop=center"
+                      src="https://picsum.photos/400/300?random=4"
                       alt="Home Cleaning"
                       fill
                       unoptimized={true}
