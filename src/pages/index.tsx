@@ -720,12 +720,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
           className="hero-section"
         >
           <Image
-            src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+            src={`https://res.cloudinary.com/dwlk9of7h/image/upload/w_${isMobile ? "800" : "1200"},h_${isMobile ? "480" : "600"},c_fill,f_auto,q_auto/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif`}
             alt="CleanWin Hero Background"
             fill
             priority
-            sizes="1000px"
-            unoptimized={true}
+            sizes="100vw"
             fetchPriority="high"
             style={{
               objectFit: "cover",
@@ -1598,7 +1597,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   }}
                   className="reviews-subtitle"
                 >
-                  Überzeugen Sie sich von der Qualit��t unserer Arbeit und
+                  ��berzeugen Sie sich von der Qualit��t unserer Arbeit und
                   senden sie uns noch heute eine unverbindliche Kontaktanfrage.
                 </p>
               </div>
