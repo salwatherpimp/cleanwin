@@ -1215,9 +1215,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     justifyItems: "center",
                   }}
                 >
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
                     alt="Stadt Winterthur"
+                    width={160}
+                    height={80}
                     style={{
                       height: "80px",
                       width: "auto",
