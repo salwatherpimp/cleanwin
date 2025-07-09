@@ -1119,19 +1119,27 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     justifyItems: "center",
                   }}
                 >
-                  {[1, 2, 3, 4, 5, 6].map((index) => (
+                  {[
+                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+1",
+                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+2",
+                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+3",
+                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+4",
+                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+5",
+                    "https://via.placeholder.com/120x60/ffffff/666666?text=Company+6",
+                  ].map((logoUrl, index) => (
                     <div
                       key={index}
                       style={{
                         width: "120px",
                         height: "60px",
-                        backgroundColor: "#e5e7eb",
-                        borderRadius: "8px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
+                        backgroundImage: `url(${logoUrl})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "contain",
                         opacity: 0.7,
                         transition: "opacity 0.3s ease",
+                        borderRadius: "8px",
+                        border: "1px solid #e5e7eb",
                       }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.opacity = "1")
@@ -1139,19 +1147,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       onMouseLeave={(e) =>
                         (e.currentTarget.style.opacity = "0.7")
                       }
-                    >
-                      <span
-                        style={{
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: "12px",
-                          fontWeight: 600,
-                          color: "#6b7280",
-                          textAlign: "center",
-                        }}
-                      >
-                        Company {index}
-                      </span>
-                    </div>
+                    />
                   ))}
                 </div>
               )}
@@ -1167,32 +1163,28 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     justifyItems: "center",
                   }}
                 >
-                  {[1, 2, 3, 4, 5, 6].map((index) => (
+                  {[
+                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+1",
+                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+2",
+                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+3",
+                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+4",
+                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+5",
+                    "https://via.placeholder.com/80x40/ffffff/666666?text=Co+6",
+                  ].map((logoUrl, index) => (
                     <div
                       key={index}
                       style={{
                         width: "80px",
                         height: "40px",
-                        backgroundColor: "#e5e7eb",
-                        borderRadius: "6px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
+                        backgroundImage: `url(${logoUrl})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "contain",
                         opacity: 0.7,
+                        borderRadius: "6px",
+                        border: "1px solid #e5e7eb",
                       }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: "10px",
-                          fontWeight: 600,
-                          color: "#6b7280",
-                          textAlign: "center",
-                        }}
-                      >
-                        Co {index}
-                      </span>
-                    </div>
+                    />
                   ))}
                 </div>
               )}
