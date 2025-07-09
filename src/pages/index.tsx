@@ -911,7 +911,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   </a>
                 </div>
 
-                {/* Feature Grid 2x2 */}
+                {/* Feature Grid 2x2 - Pure Images */}
                 <div
                   style={{
                     display: "grid",
@@ -921,17 +921,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     height: "20rem",
                   }}
                 >
-                  {/* Feature 1: Fensterreinigung */}
-                  <div
-                    style={{
-                      position: "relative",
-                      borderRadius: "16px",
-                      overflow: "hidden",
-                    }}
-                  >
+                  {/* Feature 1 */}
+                  <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                     <Image
-                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,c_scale,f_auto,q_80/v1748417853/fenster-cleaning_sample.avif"
-                      alt="Fensterreinigung"
+                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center"
+                      alt="Cleaning Service"
                       fill
                       unoptimized={true}
                       loading="lazy"
@@ -940,42 +934,13 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         objectPosition: "center",
                       }}
                     />
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: "12px",
-                        left: "12px",
-                        right: "12px",
-                        backgroundColor: "rgba(255, 255, 255, 0.95)",
-                        backdropFilter: "blur(8px)",
-                        borderRadius: "8px",
-                        padding: "8px 12px",
-                        textAlign: "center",
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontWeight: 600,
-                          fontSize: "14px",
-                          color: "#111827",
-                        }}
-                      >
-                        Fensterreinigung
-                      </div>
-                    </div>
                   </div>
 
-                  {/* Feature 2: Büroreinigung */}
-                  <div
-                    style={{
-                      position: "relative",
-                      borderRadius: "16px",
-                      overflow: "hidden",
-                    }}
-                  >
+                  {/* Feature 2 */}
+                  <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                     <Image
-                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,c_scale,f_auto,q_80/v1748417853/office-cleaning_sample.avif"
-                      alt="Büroreinigung"
+                      src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=300&fit=crop&crop=center"
+                      alt="Office Cleaning"
                       fill
                       unoptimized={true}
                       loading="lazy"
@@ -984,42 +949,13 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         objectPosition: "center",
                       }}
                     />
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: "12px",
-                        left: "12px",
-                        right: "12px",
-                        backgroundColor: "rgba(255, 255, 255, 0.95)",
-                        backdropFilter: "blur(8px)",
-                        borderRadius: "8px",
-                        padding: "8px 12px",
-                        textAlign: "center",
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontWeight: 600,
-                          fontSize: "14px",
-                          color: "#111827",
-                        }}
-                      >
-                        Büroreinigung
-                      </div>
-                    </div>
                   </div>
 
-                  {/* Feature 3: Fassadenreinigung */}
-                  <div
-                    style={{
-                      position: "relative",
-                      borderRadius: "16px",
-                      overflow: "hidden",
-                    }}
-                  >
+                  {/* Feature 3 */}
+                  <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                     <Image
-                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,c_scale,f_auto,q_80/v1748417853/facade-cleaning_sample.avif"
-                      alt="Fassadenreinigung"
+                      src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop&crop=center"
+                      alt="Professional Cleaning"
                       fill
                       unoptimized={true}
                       loading="lazy"
@@ -1028,42 +964,13 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         objectPosition: "center",
                       }}
                     />
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: "12px",
-                        left: "12px",
-                        right: "12px",
-                        backgroundColor: "rgba(255, 255, 255, 0.95)",
-                        backdropFilter: "blur(8px)",
-                        borderRadius: "8px",
-                        padding: "8px 12px",
-                        textAlign: "center",
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontWeight: 600,
-                          fontSize: "14px",
-                          color: "#111827",
-                        }}
-                      >
-                        Fassadenreinigung
-                      </div>
-                    </div>
                   </div>
 
-                  {/* Feature 4: Haushaltsreinigung */}
-                  <div
-                    style={{
-                      position: "relative",
-                      borderRadius: "16px",
-                      overflow: "hidden",
-                    }}
-                  >
+                  {/* Feature 4 */}
+                  <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                     <Image
-                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,c_scale,f_auto,q_80/v1748417853/home-cleaning_sample.avif"
-                      alt="Haushaltsreinigung"
+                      src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=300&fit=crop&crop=center"
+                      alt="Home Cleaning"
                       fill
                       unoptimized={true}
                       loading="lazy"
@@ -1072,29 +979,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         objectPosition: "center",
                       }}
                     />
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: "12px",
-                        left: "12px",
-                        right: "12px",
-                        backgroundColor: "rgba(255, 255, 255, 0.95)",
-                        backdropFilter: "blur(8px)",
-                        borderRadius: "8px",
-                        padding: "8px 12px",
-                        textAlign: "center",
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontWeight: 600,
-                          fontSize: "14px",
-                          color: "#111827",
-                        }}
-                      >
-                        Haushaltsreinigung
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
