@@ -225,6 +225,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
         <link
           rel="preload"
           as="image"
+          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_800,c_scale,f_auto,q_75/v1748417853/ross-samir-farbxpress_gsnje4.avif"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
           href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1100,c_scale,f_auto,q_70/v1752005906/homepage-herosection_fsxqwc.avif"
           fetchPriority="high"
         />
