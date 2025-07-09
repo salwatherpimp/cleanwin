@@ -657,7 +657,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
             alt="CleanWin Hero Background"
             fill
             priority
-            quality={90}
+            quality={75}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
             fetchPriority="high"
             style={{
               objectFit: "cover",
