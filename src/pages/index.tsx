@@ -995,11 +995,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     }}
                   >
                     <Image
-                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095182/Firmenwagen_vor_Geba%CC%88ude_zz0m0s.avif"
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1752095182/Firmenwagen_vor_Geba%CC%88ude_zz0m0s.avif"
                       alt="Cleaning Service"
                       fill
-                      unoptimized={true}
                       loading="lazy"
+                      sizes="(max-width: 768px) 50vw, 25vw"
                       style={{
                         objectFit: "cover",
                         objectPosition: "center",
