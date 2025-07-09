@@ -2371,7 +2371,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
             font-size: 25px !important;
             line-height: 1.2 !important;
           }
-          .hero-section img {
+          .hero-section > img,
+          .hero-section img[alt="CleanWin Hero Background"] {
             object-position: 50% 60% !important;
           }
           h2 {
