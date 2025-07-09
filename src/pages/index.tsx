@@ -640,9 +640,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
         <section
           style={{
             position: "relative",
-            height: "70vh",
-            minHeight: "600px",
-            maxHeight: "800px",
+            height: "550px",
             marginTop: "-80px",
             paddingTop: "80px",
             overflow: "hidden",
@@ -2175,7 +2173,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#10a0a4")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#9ca3af")}
               >
-                Datenschutzerkl��rung
+                Datenschutzerklärung
               </a>
             </div>
           </div>
