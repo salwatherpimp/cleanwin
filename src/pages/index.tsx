@@ -996,7 +996,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     }}
                   >
                     <Image
-                      src="https://picsum.photos/400/300?random=1"
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095182/Firmenwagen_vor_Geba%CC%88ude_zz0m0s.avif"
                       alt="Cleaning Service"
                       fill
                       unoptimized={true}
@@ -1018,7 +1018,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     }}
                   >
                     <Image
-                      src="https://picsum.photos/400/300?random=2"
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095182/Glasreinigung_aussen_Flaach_ec1fre.avif"
                       alt="Office Cleaning"
                       fill
                       unoptimized={true}
@@ -1040,7 +1040,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     }}
                   >
                     <Image
-                      src="https://picsum.photos/400/300?random=3"
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752005906/homepage-herosection_fsxqwc.avif"
                       alt="Professional Cleaning"
                       fill
                       unoptimized={true}
@@ -1062,7 +1062,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     }}
                   >
                     <Image
-                      src="https://picsum.photos/400/300?random=4"
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095182/Fassadenreinigung_Sichtbeton_vm1lsq.avif"
                       alt="Home Cleaning"
                       fill
                       unoptimized={true}
