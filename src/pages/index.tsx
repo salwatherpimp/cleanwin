@@ -664,7 +664,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             fetchPriority="high"
             style={{
               objectFit: "cover",
-              objectPosition: "60% 30%",
+              objectPosition: "60% 45%",
             }}
           />
           <div
