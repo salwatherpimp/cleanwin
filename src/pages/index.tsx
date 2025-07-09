@@ -732,9 +732,9 @@ export default function HomePage({ buildTime }: HomePageProps) {
             >
               <svg
                 style={{
-                  width: "2rem",
-                  height: "2rem",
-                  marginRight: "0.5rem",
+                  width: isMobile ? "1.5rem" : "2rem",
+                  height: isMobile ? "1.5rem" : "2rem",
+                  marginRight: isMobile ? "0.4rem" : "0.5rem",
                 }}
                 viewBox="0 0 24 24"
               >
