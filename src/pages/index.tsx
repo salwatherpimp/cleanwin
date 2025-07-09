@@ -726,8 +726,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 backdropFilter: "blur(4px)",
                 border: "1px solid rgba(255, 255, 255, 0.3)",
                 borderRadius: "0.5rem",
-                padding: "0.5rem 1rem",
-                marginBottom: "2rem",
+                padding: isMobile ? "0.4rem 0.8rem" : "0.5rem 1rem",
+                marginBottom: isMobile ? "1.5rem" : "2rem",
               }}
             >
               <svg
