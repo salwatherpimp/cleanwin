@@ -653,12 +653,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
           className="hero-section"
         >
           <Image
-            src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752005906/homepage-herosection_fsxqwc.avif"
+            src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1200,c_scale,f_auto,q_75/v1752005906/homepage-herosection_fsxqwc.avif"
             alt="CleanWin Hero Background"
             fill
             priority
-            quality={75}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
+            sizes="(max-width: 768px) 768px, (max-width: 1200px) 1200px, 1200px"
             fetchPriority="high"
             style={{
               objectFit: "cover",
@@ -2153,7 +2152,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   flexWrap: "wrap",
                 }}
               >
-                <span>© 2025 CleanWin. Alle Rechte vorbehalten.</span>
+                <span>�� 2025 CleanWin. Alle Rechte vorbehalten.</span>
                 <span>Gemacht mit ♥️ in Winterthur</span>
               </div>
               <a
