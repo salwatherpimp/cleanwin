@@ -2312,7 +2312,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
           }
         }
       `}</style>
-    </div>
+      </div>
+    </>
   );
 }
 
