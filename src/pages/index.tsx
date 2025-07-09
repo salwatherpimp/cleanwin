@@ -1014,6 +1014,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       borderRadius: "16px",
                       overflow: "hidden",
                       position: "relative",
+                      aspectRatio: "1",
                     }}
                   >
                     <Image
