@@ -720,7 +720,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
           className="hero-section"
         >
           <Image
-            src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1000,c_scale,f_auto,q_75/v1752005906/homepage-herosection_fsxqwc.avif"
+            src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
             alt="CleanWin Hero Background"
             fill
             priority
