@@ -658,6 +658,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             fill
             priority
             quality={90}
+            fetchPriority="high"
             style={{
               objectFit: "cover",
               objectPosition: "75% center",
