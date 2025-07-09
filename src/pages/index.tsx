@@ -31,7 +31,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [currentWhyIndex, setCurrentWhyIndex] = useState(0);
-  const [expandedAccordion, setExpandedAccordion] = useState(0);
+  const [expandedAccordion, setExpandedAccordion] = useState(-1);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -163,7 +163,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
     },
     {
       icon: Clock,
-      title: "Zuverlässig & termingerecht",
+      title: "Zuverl��ssig & termingerecht",
       description:
         "Termintreue und Zuverlässigkeit sind die Grundpfeiler unserer Arbeit. Was wir versprechen, halten wir auch – für eine reibungslose Abwicklung Ihres Projekts ohne Verzögerungen.",
     },
