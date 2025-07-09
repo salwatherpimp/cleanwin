@@ -1466,27 +1466,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   }}
                 >
                   <Image
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
-                    alt="Stadt Winterthur"
-                    width={160}
-                    height={80}
-                    style={{
-                      height: "80px",
-                      width: "auto",
-                      objectFit: "contain",
-                      filter: "grayscale(20%)",
-                      transition: "all 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.filter = "grayscale(0%)";
-                      e.currentTarget.style.transform = "scale(1.05)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.filter = "grayscale(20%)";
-                      e.currentTarget.style.transform = "scale(1)";
-                    }}
-                  />
-                  <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
                     alt="Bank Zimmerberg"
                     width={160}
