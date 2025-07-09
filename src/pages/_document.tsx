@@ -11,21 +11,16 @@ export default function Document() {
         `}</style>
 
         {/* Preload only essential font weights */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-          as="style"
-          onLoad={(e) => {
-            (e.target as HTMLLinkElement).onload = null;
-            (e.target as HTMLLinkElement).rel = "stylesheet";
-          }}
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
         />
-        <noscript>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-            rel="stylesheet"
-          />
-        </noscript>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />
