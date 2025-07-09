@@ -153,7 +153,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
       icon: Award,
       title: "Über 18 Jahre Erfahrung",
       description:
-        "Ein fundiertes Handwerk mit jahrzehntelanger Erfahrung bietet Ihnen professionelle Arbeiten in höchster Qualität. Unsere Expertise erfolgt durch bew��hrte Techniken und moderne Verfahren für langanhaltende Ergebnisse.",
+        "Ein fundiertes Handwerk mit jahrzehntelanger Erfahrung bietet Ihnen professionelle Arbeiten in höchster Qualität. Unsere Expertise erfolgt durch bewährte Techniken und moderne Verfahren für langanhaltende Ergebnisse.",
     },
     {
       icon: Heart,
@@ -1058,7 +1058,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       borderRadius: "16px",
                       overflow: "hidden",
                       position: "relative",
-                      aspectRatio: "1",
+                      height: "120px",
                     }}
                   >
                     <Image
