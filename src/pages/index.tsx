@@ -219,16 +219,21 @@ export default function HomePage({ buildTime }: HomePageProps) {
 
         {/* Core Web Vitals Optimierungen */}
 
+        {/* DNS prefetch for external domains */}
+        <link rel="dns-prefetch" href="//res.cloudinary.com" />
+
         {/* Preload kritische Ressourcen */}
         <link
           rel="preload"
           as="image"
           href="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752005906/homepage-herosection_fsxqwc.avif"
+          fetchPriority="high"
         />
         <link
           rel="preload"
           as="image"
           href="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.avif"
+          fetchPriority="high"
         />
 
         {/* SEO & Google Crawling */}
@@ -1210,8 +1215,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 >
                   <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
-                    width={160}
-                    height={80}
                     alt="Stadt Winterthur"
                     width={160}
                     height={80}
@@ -1233,8 +1236,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   />
                   <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
-                    width={160}
-                    height={80}
                     alt="Bank Zimmerberg"
                     style={{
                       height: "80px",
@@ -1254,8 +1255,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   />
                   <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
-                    width={160}
-                    height={80}
                     alt="Derby Pizza"
                     style={{
                       height: "80px",
@@ -1275,8 +1274,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   />
                   <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
-                    width={160}
-                    height={80}
                     alt="Stadt Zürich Sportamt"
                     style={{
                       height: "80px",
@@ -1329,8 +1326,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     >
                       <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
-                    width={160}
-                    height={80}
                         alt="Stadt Winterthur"
                         style={{
                           height: "50px",
@@ -1342,8 +1337,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       />
                       <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
-                    width={160}
-                    height={80}
                         alt="Bank Zimmerberg"
                         style={{
                           height: "50px",
@@ -1355,8 +1348,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       />
                       <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
-                    width={160}
-                    height={80}
                         alt="Derby Pizza"
                         style={{
                           height: "50px",
@@ -1368,8 +1359,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       />
                       <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
-                    width={160}
-                    height={80}
                         alt="Stadt Zürich Sportamt"
                         style={{
                           height: "50px",
@@ -1391,8 +1380,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     >
                       <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
-                    width={160}
-                    height={80}
                         alt="Stadt Winterthur"
                         style={{
                           height: "50px",
@@ -1404,8 +1391,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       />
                       <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
-                    width={160}
-                    height={80}
                         alt="Bank Zimmerberg"
                         style={{
                           height: "50px",
@@ -1417,8 +1402,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       />
                       <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
-                    width={160}
-                    height={80}
                         alt="Derby Pizza"
                         style={{
                           height: "50px",
@@ -1430,8 +1413,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       />
                       <Image
                         src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
-                    width={160}
-                    height={80}
                         alt="Stadt Zürich Sportamt"
                         style={{
                           height: "50px",
