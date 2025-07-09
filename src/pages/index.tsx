@@ -984,7 +984,6 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     gridTemplateColumns: "1fr 1fr",
                     gap: "16px",
                     width: "100%",
-                    height: "20rem",
                   }}
                 >
                   {/* Feature 1 */}
