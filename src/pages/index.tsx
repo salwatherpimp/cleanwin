@@ -767,7 +767,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   {[...Array(4)].map((_, i) => (
                     <Star
                       key={i}
-                      size={16}
+                      size={isMobile ? 14 : 16}
                       style={{ color: "#fbbf24", fill: "#fbbf24" }}
                     />
                   ))}
@@ -776,7 +776,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     style={{ position: "relative", display: "inline-block" }}
                   >
                     <Star
-                      size={16}
+                      size={isMobile ? 14 : 16}
                       style={{ color: "#e5e7eb", fill: "#e5e7eb" }}
                     />
                     <div
@@ -789,7 +789,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       }}
                     >
                       <Star
-                        size={16}
+                        size={isMobile ? 14 : 16}
                         style={{ color: "#fbbf24", fill: "#fbbf24" }}
                       />
                     </div>
