@@ -225,7 +225,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
         <link
           rel="preload"
           as="image"
-          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1000,c_scale,f_auto,q_60/v1752005906/homepage-herosection_fsxqwc.avif"
+          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1100,c_scale,f_auto,q_70/v1752005906/homepage-herosection_fsxqwc.avif"
           fetchPriority="high"
         />
         <link
