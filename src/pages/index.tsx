@@ -1024,7 +1024,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
               <div
                 style={{
                   position: "relative",
-                  height: "60px",
+                  height: "45px",
                   overflow: "hidden",
                 }}
               >
