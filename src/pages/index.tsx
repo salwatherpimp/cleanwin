@@ -1071,7 +1071,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           borderRadius: "8px",
                           boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
                           border: "1px solid rgba(16, 160, 164, 0.1)",
-                          minWidth: "250px",
+                          minWidth: "200px",
                           flexShrink: 0,
                         }}
                       >
