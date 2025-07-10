@@ -898,6 +898,106 @@ export default function HomePage({ buildTime }: HomePageProps) {
           </div>
         </section>
 
+        {/* Auto-Rotating Feature Carousel */}
+        <section
+          style={{
+            backgroundColor: "#ffffff",
+            padding: isMobile ? "2rem 0" : "3rem 0",
+            borderTop: "1px solid #e5e7eb",
+            borderBottom: "1px solid #e5e7eb",
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              maxWidth: "1152px",
+              margin: "0 auto",
+              padding: "0 1rem",
+              position: "relative",
+              height: isMobile ? "80px" : "100px",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "100%",
+                position: "relative",
+              }}
+            >
+              {/* Feature Items */}
+              {[
+                {
+                  icon: "💰",
+                  text: "Reinigung ab CHF 199.-",
+                  bgColor: "#dcfce7",
+                  iconColor: "#16a34a",
+                },
+                {
+                  icon: "🎯",
+                  text: "Kostenlose Fachberatung",
+                  bgColor: "#dbeafe",
+                  iconColor: "#2563eb",
+                },
+                {
+                  icon: "✅",
+                  text: "100% keine Schwarzarbeit",
+                  bgColor: "#fef3c7",
+                  iconColor: "#d97706",
+                },
+              ].map((feature, index) => (
+                <div
+                  key={index}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: isMobile ? "12px" : "16px",
+                    padding: isMobile ? "12px 20px" : "16px 32px",
+                    backgroundColor: feature.bgColor,
+                    borderRadius: "12px",
+                    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
+                    position: "absolute",
+                    left: "50%",
+                    top: "50%",
+                    transform: "translate(-50%, -50%)",
+                    opacity: 0,
+                    animation: `featureCarousel 9s infinite ${index * 3}s`,
+                    whiteSpace: "nowrap",
+                    minWidth: "fit-content",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: isMobile ? "24px" : "32px",
+                      lineHeight: 1,
+                      filter: `hue-rotate(${
+                        feature.icon === "💰"
+                          ? "0deg"
+                          : feature.icon === "🎯"
+                            ? "200deg"
+                            : "40deg"
+                      })`,
+                    }}
+                  >
+                    {feature.icon}
+                  </div>
+                  <span
+                    style={{
+                      fontFamily: "Inter, sans-serif",
+                      fontSize: isMobile ? "16px" : "18px",
+                      fontWeight: 600,
+                      color: "#1f2937",
+                    }}
+                  >
+                    {feature.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Main Content */}
         <main>
           {/* About Services Section */}
