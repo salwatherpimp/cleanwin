@@ -1411,7 +1411,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
           <section
             style={{
               background: "linear-gradient(to bottom right, #eddde5, #f7f2f5)",
-              padding: isMobile ? "2rem 0" : "2.5rem 0",
+              padding: isMobile ? "1rem 0" : "1.5rem 0",
               position: "relative",
               overflow: "hidden",
               width: "100vw",
