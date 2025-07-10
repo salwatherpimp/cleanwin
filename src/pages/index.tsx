@@ -2138,6 +2138,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     padding: "1rem 2rem",
                     borderRadius: "9999px",
                     fontWeight: 600,
+                    fontSize: "14px",
                     textDecoration: "none",
                     transition: "all 0.3s ease",
                   }}
