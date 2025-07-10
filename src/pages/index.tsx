@@ -181,7 +181,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
   const reviews = [
     {
       name: "Ursula Wirtz",
-      text: "Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde farbexpress immer wieder gern für mein Haus engagieren.",
+      text: "Ein engagiertes team,flexibel, zuverl��ssig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde farbexpress immer wieder gern für mein Haus engagieren.",
       rating: 5,
     },
     {
@@ -1677,7 +1677,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
               <div
                 style={{
                   textAlign: "center",
-                  marginBottom: isMobile ? "0.5rem" : "0.75rem",
+                  marginBottom: "0",
                 }}
               >
                 <h2
