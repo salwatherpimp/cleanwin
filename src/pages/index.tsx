@@ -1534,6 +1534,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     display: "flex",
                     flexDirection: "column",
                     gap: "12px",
+                    marginTop: "1.5rem",
                   }}
                 >
                   {whyFeatures.map((feature, index) => (
@@ -2309,7 +2310,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   <div>24/7 Notfallreinigung</div>
                   <div>Kostenlose Besichtigung</div>
                   <div>Individuelle Angebote</div>
-                  <div>Regelm��ßige Termine</div>
+                  <div>Regelm���ßige Termine</div>
                 </div>
               </div>
             </div>
