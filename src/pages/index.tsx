@@ -2498,20 +2498,12 @@ export default function HomePage({ buildTime }: HomePageProps) {
           }
         }
 
-        @keyframes featureCarousel {
-          0%,
-          20% {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-          }
-          25%,
-          95% {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0.8);
+        @keyframes horizontalCarousel {
+          0% {
+            transform: translateY(-50%) translateX(0);
           }
           100% {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
+            transform: translateY(-50%) translateX(-33.333%);
           }
         }
       `}</style>
