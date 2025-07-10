@@ -1682,7 +1682,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
               >
                 <h2
                   style={{
-                    fontSize: isMobile ? "22px" : "26px",
+                    fontSize: "28px",
                     fontWeight: 700,
                     color: "#111827",
                     marginBottom: "1.5rem",
