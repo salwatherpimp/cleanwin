@@ -1104,7 +1104,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         <span
                           style={{
                             fontFamily: "Inter, sans-serif",
-                            fontSize: "14px",
+                            fontSize: "12px",
                             fontWeight: 600,
                             color: "#111827",
                           }}
