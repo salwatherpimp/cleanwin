@@ -16,6 +16,9 @@ import {
   ChevronRight,
   Plus,
   X,
+  DollarSign,
+  MessageCircle,
+  Shield,
 } from "lucide-react";
 
 interface HomePageProps {
