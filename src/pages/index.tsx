@@ -1168,7 +1168,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     Fensterreinigung, Büroreinigung, Fassadenreinigung und
                     Spezialreinigungen. Unser erfahrenes Team arbeitet mit
                     modernsten Techniken und umweltfreundlichen Produkten, um
-                    höchste Qualit��t und Kundenzufriedenheit zu gewährleisten.
+                    h��chste Qualit��t und Kundenzufriedenheit zu gewährleisten.
                   </p>
                   <a
                     href="#services"
