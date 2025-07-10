@@ -1063,13 +1063,13 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         style={{
                           display: "flex",
                           alignItems: "center",
-                          gap: "0.75rem",
-                          padding: "0.75rem 1rem",
+                          gap: "0.5rem",
+                          padding: "0.5rem 0.75rem",
                           backgroundColor: "white",
                           borderRadius: "8px",
                           boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
                           border: "1px solid rgba(16, 160, 164, 0.1)",
-                          minWidth: "280px",
+                          minWidth: "250px",
                           flexShrink: 0,
                         }}
                       >
