@@ -1685,7 +1685,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     fontSize: isMobile ? "22px" : "26px",
                     fontWeight: 700,
                     color: "#111827",
-                    marginBottom: isMobile ? "0.25rem" : "0.5rem",
+                    marginBottom: "1.5rem",
                   }}
                   className="section-title"
                 >
