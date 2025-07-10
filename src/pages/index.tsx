@@ -1431,7 +1431,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
               <div
                 style={{
                   textAlign: "center",
-                  marginBottom: isMobile ? "1.5rem" : "2rem",
+                  marginBottom: isMobile ? "0.75rem" : "1rem",
                 }}
               >
                 <h2
