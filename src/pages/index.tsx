@@ -118,7 +118,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
       image:
         "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1750015382/altbauwohnung-meilen_lrttoc.avif",
       description:
-        "Hygienische und gründliche Büroreinigung für Ihr Unternehmen.",
+        "Hygienische und gründliche Büroreinigung f��r Ihr Unternehmen.",
     },
     {
       name: "Fassadenreinigung",
@@ -493,7 +493,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   padding: "0.75rem 1rem",
                   borderRadius: "9999px",
                   fontWeight: 500,
-                  fontSize: "12px",
+                  fontSize: "14px",
                   textDecoration: "none",
                   transition: "background-color 0.2s ease",
                 }}
@@ -522,7 +522,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   padding: "0.75rem 1rem",
                   borderRadius: "9999px",
                   textDecoration: "none",
-                  fontSize: "12px",
+                  fontSize: "14px",
                   fontWeight: "500",
                   transition: "all 0.3s ease",
                 }}
