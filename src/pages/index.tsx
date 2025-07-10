@@ -2376,6 +2376,23 @@ export default function HomePage({ buildTime }: HomePageProps) {
             transform: translateX(-${currentReviewIndex * 100}%) !important;
           }
         }
+
+        @keyframes featureCarousel {
+          0%,
+          20% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+          25%,
+          95% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+          }
+          100% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
       `}</style>
     </>
   );
