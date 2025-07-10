@@ -898,11 +898,11 @@ export default function HomePage({ buildTime }: HomePageProps) {
           </div>
         </section>
 
-        {/* Auto-Rotating Feature Carousel */}
+        {/* USP Features Section */}
         <section
           style={{
-            backgroundColor: "#ffffff",
-            padding: isMobile ? "2rem 0" : "3rem 0",
+            backgroundColor: "#f9fafb",
+            padding: isMobile ? "1.5rem 0" : "2rem 0",
             borderTop: "1px solid #e5e7eb",
             borderBottom: "1px solid #e5e7eb",
             overflow: "hidden",
@@ -913,88 +913,206 @@ export default function HomePage({ buildTime }: HomePageProps) {
               maxWidth: "1152px",
               margin: "0 auto",
               padding: "0 1rem",
-              position: "relative",
-              height: isMobile ? "80px" : "100px",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
-                position: "relative",
-              }}
-            >
-              {/* Feature Items */}
-              {[
-                {
-                  icon: "💰",
-                  text: "Reinigung ab CHF 199.-",
-                  bgColor: "#dcfce7",
-                  iconColor: "#16a34a",
-                },
-                {
-                  icon: "🎯",
-                  text: "Kostenlose Fachberatung",
-                  bgColor: "#dbeafe",
-                  iconColor: "#2563eb",
-                },
-                {
-                  icon: "✅",
-                  text: "100% keine Schwarzarbeit",
-                  bgColor: "#fef3c7",
-                  iconColor: "#d97706",
-                },
-              ].map((feature, index) => (
+            {/* Desktop: Fixed horizontal layout */}
+            {!isMobile && (
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, 1fr)",
+                  gap: "2rem",
+                  alignItems: "center",
+                }}
+              >
+                {[
+                  {
+                    icon: "DollarSign",
+                    text: "Reinigung ab CHF 199.-",
+                    subtitle: "Transparente Preise",
+                  },
+                  {
+                    icon: "MessageCircle",
+                    text: "Kostenlose Fachberatung",
+                    subtitle: "Unverbindlich & persönlich",
+                  },
+                  {
+                    icon: "Shield",
+                    text: "100% keine Schwarzarbeit",
+                    subtitle: "Seriös & versichert",
+                  },
+                ].map((feature, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "1rem",
+                      padding: "1.5rem",
+                      backgroundColor: "white",
+                      borderRadius: "12px",
+                      boxShadow: "0 2px 8px rgba(0, 0, 0, 0.05)",
+                      border: "1px solid rgba(16, 160, 164, 0.1)",
+                      transition: "all 0.3s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-2px)";
+                      e.currentTarget.style.boxShadow =
+                        "0 8px 25px rgba(16, 160, 164, 0.15)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow =
+                        "0 2px 8px rgba(0, 0, 0, 0.05)";
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "48px",
+                        height: "48px",
+                        backgroundColor: "rgba(16, 160, 164, 0.1)",
+                        borderRadius: "50%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {feature.icon === "DollarSign" && (
+                        <DollarSign size={24} style={{ color: "#10a0a4" }} />
+                      )}
+                      {feature.icon === "MessageCircle" && (
+                        <MessageCircle size={24} style={{ color: "#10a0a4" }} />
+                      )}
+                      {feature.icon === "Shield" && (
+                        <Shield size={24} style={{ color: "#10a0a4" }} />
+                      )}
+                    </div>
+                    <div>
+                      <div
+                        style={{
+                          fontFamily: "Inter, sans-serif",
+                          fontSize: "16px",
+                          fontWeight: 600,
+                          color: "#111827",
+                          marginBottom: "4px",
+                        }}
+                      >
+                        {feature.text}
+                      </div>
+                      <div
+                        style={{
+                          fontFamily: "Inter, sans-serif",
+                          fontSize: "14px",
+                          fontWeight: 400,
+                          color: "#6b7280",
+                        }}
+                      >
+                        {feature.subtitle}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Mobile: Horizontal rotating carousel */}
+            {isMobile && (
+              <div
+                style={{
+                  position: "relative",
+                  height: "100px",
+                  overflow: "hidden",
+                }}
+              >
                 <div
-                  key={index}
                   style={{
                     display: "flex",
-                    alignItems: "center",
-                    gap: isMobile ? "12px" : "16px",
-                    padding: isMobile ? "12px 20px" : "16px 32px",
-                    backgroundColor: feature.bgColor,
-                    borderRadius: "12px",
-                    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
                     position: "absolute",
-                    left: "50%",
                     top: "50%",
-                    transform: "translate(-50%, -50%)",
-                    opacity: 0,
-                    animation: `featureCarousel 9s infinite ${index * 3}s`,
+                    left: "0",
+                    transform: "translateY(-50%)",
+                    animation: "horizontalCarousel 9s infinite linear",
+                    gap: "1rem",
                     whiteSpace: "nowrap",
-                    minWidth: "fit-content",
                   }}
                 >
-                  <div
-                    style={{
-                      fontSize: isMobile ? "24px" : "32px",
-                      lineHeight: 1,
-                      filter: `hue-rotate(${
-                        feature.icon === "💰"
-                          ? "0deg"
-                          : feature.icon === "🎯"
-                            ? "200deg"
-                            : "40deg"
-                      })`,
-                    }}
-                  >
-                    {feature.icon}
-                  </div>
-                  <span
-                    style={{
-                      fontFamily: "Inter, sans-serif",
-                      fontSize: isMobile ? "16px" : "18px",
-                      fontWeight: 600,
-                      color: "#1f2937",
-                    }}
-                  >
-                    {feature.text}
-                  </span>
+                  {/* Render features 3 times for seamless loop */}
+                  {Array(3)
+                    .fill([
+                      {
+                        icon: "DollarSign",
+                        text: "Reinigung ab CHF 199.-",
+                      },
+                      {
+                        icon: "MessageCircle",
+                        text: "Kostenlose Fachberatung",
+                      },
+                      {
+                        icon: "Shield",
+                        text: "100% keine Schwarzarbeit",
+                      },
+                    ])
+                    .flat()
+                    .map((feature, index) => (
+                      <div
+                        key={index}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "0.75rem",
+                          padding: "1rem 1.5rem",
+                          backgroundColor: "white",
+                          borderRadius: "8px",
+                          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
+                          border: "1px solid rgba(16, 160, 164, 0.1)",
+                          minWidth: "280px",
+                          flexShrink: 0,
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "36px",
+                            height: "36px",
+                            backgroundColor: "rgba(16, 160, 164, 0.1)",
+                            borderRadius: "50%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexShrink: 0,
+                          }}
+                        >
+                          {feature.icon === "DollarSign" && (
+                            <DollarSign
+                              size={18}
+                              style={{ color: "#10a0a4" }}
+                            />
+                          )}
+                          {feature.icon === "MessageCircle" && (
+                            <MessageCircle
+                              size={18}
+                              style={{ color: "#10a0a4" }}
+                            />
+                          )}
+                          {feature.icon === "Shield" && (
+                            <Shield size={18} style={{ color: "#10a0a4" }} />
+                          )}
+                        </div>
+                        <span
+                          style={{
+                            fontFamily: "Inter, sans-serif",
+                            fontSize: "14px",
+                            fontWeight: 600,
+                            color: "#111827",
+                          }}
+                        >
+                          {feature.text}
+                        </span>
+                      </div>
+                    ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            )}
           </div>
         </section>
 
