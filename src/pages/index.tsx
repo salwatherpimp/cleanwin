@@ -1796,13 +1796,18 @@ export default function HomePage({ buildTime }: HomePageProps) {
             <div
               style={{ maxWidth: "72rem", margin: "0 auto", padding: "0 1rem" }}
             >
-              <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginBottom: isMobile ? "1rem" : "1.25rem",
+                }}
+              >
                 <h2
                   style={{
-                    fontSize: "28px",
+                    fontSize: isMobile ? "24px" : "28px",
                     fontWeight: 700,
                     color: "#111827",
-                    marginBottom: "1.5rem",
+                    marginBottom: isMobile ? "0.75rem" : "1rem",
                   }}
                   className="section-title"
                 >
