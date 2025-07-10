@@ -883,6 +883,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   padding: "1rem 2rem",
                   borderRadius: "9999px",
                   fontWeight: 600,
+                  fontSize: "12px",
                   textDecoration: "none",
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                   transition: "all 0.3s ease",
