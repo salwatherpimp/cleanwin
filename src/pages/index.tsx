@@ -1819,7 +1819,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     fontWeight: 400,
                     color: "#111827",
                     maxWidth: "48rem",
-                    margin: "0 auto 2rem",
+                    margin: "0 auto 0",
                     lineHeight: 1.6,
                   }}
                   className="reviews-subtitle"
