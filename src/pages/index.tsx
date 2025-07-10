@@ -971,8 +971,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                   >
                     <div
                       style={{
-                        width: "48px",
-                        height: "48px",
+                        width: "36px",
+                        height: "36px",
                         backgroundColor: "rgba(16, 160, 164, 0.1)",
                         borderRadius: "50%",
                         display: "flex",
@@ -982,23 +982,23 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       }}
                     >
                       {feature.icon === "DollarSign" && (
-                        <DollarSign size={24} style={{ color: "#10a0a4" }} />
+                        <DollarSign size={18} style={{ color: "#10a0a4" }} />
                       )}
                       {feature.icon === "MessageCircle" && (
-                        <MessageCircle size={24} style={{ color: "#10a0a4" }} />
+                        <MessageCircle size={18} style={{ color: "#10a0a4" }} />
                       )}
                       {feature.icon === "Shield" && (
-                        <Shield size={24} style={{ color: "#10a0a4" }} />
+                        <Shield size={18} style={{ color: "#10a0a4" }} />
                       )}
                     </div>
                     <div>
                       <div
                         style={{
                           fontFamily: "Inter, sans-serif",
-                          fontSize: "16px",
+                          fontSize: "14px",
                           fontWeight: 600,
                           color: "#111827",
-                          marginBottom: "4px",
+                          marginBottom: "2px",
                         }}
                       >
                         {feature.text}
@@ -1006,7 +1006,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       <div
                         style={{
                           fontFamily: "Inter, sans-serif",
-                          fontSize: "14px",
+                          fontSize: "12px",
                           fontWeight: 400,
                           color: "#6b7280",
                         }}
