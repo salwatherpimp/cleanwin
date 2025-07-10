@@ -1440,7 +1440,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     fontSize: isMobile ? "24px" : "30px",
                     fontWeight: 700,
                     color: "#111827",
-                    marginBottom: "16px",
+                    marginBottom: "1.5rem",
                   }}
                 >
                   Warum Cleanwin wählen?
