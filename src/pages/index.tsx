@@ -1064,7 +1064,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                           display: "flex",
                           alignItems: "center",
                           gap: "0.75rem",
-                          padding: "1rem 1.5rem",
+                          padding: "0.75rem 1rem",
                           backgroundColor: "white",
                           borderRadius: "8px",
                           boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
