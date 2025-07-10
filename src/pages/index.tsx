@@ -1910,7 +1910,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                                   justifyContent: "center",
                                   color: "white",
                                   fontWeight: 600,
-                                  fontSize: "18px",
+                                  fontSize: "14px",
                                   flexShrink: 0,
                                   boxShadow: "0 2px 8px rgba(231, 2, 126, 0.3)",
                                 }}
