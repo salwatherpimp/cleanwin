@@ -222,12 +222,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
         <link rel="dns-prefetch" href="//res.cloudinary.com" />
 
         {/* Preload kritische Ressourcen */}
-        <link
-          rel="preload"
-          as="image"
-          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1000,c_scale,f_auto,q_75/v1752005906/homepage-herosection_fsxqwc.avif"
-          fetchPriority="high"
-        />
+
         <link
           rel="preload"
           as="image"
