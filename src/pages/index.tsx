@@ -1804,10 +1804,10 @@ export default function HomePage({ buildTime }: HomePageProps) {
               >
                 <h2
                   style={{
-                    fontSize: isMobile ? "22px" : "26px",
+                    fontSize: "28px",
                     fontWeight: 700,
                     color: "#111827",
-                    marginBottom: "0.75rem",
+                    marginBottom: "1.5rem",
                   }}
                   className="section-title"
                 >
@@ -1819,7 +1819,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     fontWeight: 400,
                     color: "#111827",
                     maxWidth: "48rem",
-                    margin: "0 auto 0.75rem",
+                    margin: "0 auto 0",
                     lineHeight: 1.6,
                   }}
                   className="reviews-subtitle"
