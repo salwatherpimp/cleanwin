@@ -905,7 +905,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
         <section
           style={{
             backgroundColor: "#f9fafb",
-            padding: isMobile ? "1rem 0" : "1.25rem 0",
+            padding: isMobile ? "0.75rem 0" : "1rem 0",
             borderTop: "1px solid #e5e7eb",
             borderBottom: "1px solid #e5e7eb",
             overflow: "hidden",
