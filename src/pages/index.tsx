@@ -1437,7 +1437,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                 <h2
                   style={{
                     fontFamily: "Inter, sans-serif",
-                    fontSize: isMobile ? "24px" : "30px",
+                    fontSize: "28px",
                     fontWeight: 700,
                     color: "#111827",
                     marginBottom: "1.5rem",
