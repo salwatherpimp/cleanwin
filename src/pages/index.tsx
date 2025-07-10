@@ -1035,7 +1035,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     top: "50%",
                     left: "0",
                     transform: "translateY(-50%)",
-                    animation: "horizontalCarousel 9s infinite linear",
+                    animation: "horizontalCarousel 15s infinite linear",
                     gap: "1rem",
                     whiteSpace: "nowrap",
                   }}
