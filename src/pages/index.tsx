@@ -1677,15 +1677,15 @@ export default function HomePage({ buildTime }: HomePageProps) {
               <div
                 style={{
                   textAlign: "center",
-                  marginBottom: isMobile ? "1rem" : "1.25rem",
+                  marginBottom: isMobile ? "0.5rem" : "0.75rem",
                 }}
               >
                 <h2
                   style={{
-                    fontSize: isMobile ? "24px" : "28px",
+                    fontSize: isMobile ? "22px" : "26px",
                     fontWeight: 700,
                     color: "#111827",
-                    marginBottom: isMobile ? "0.75rem" : "1rem",
+                    marginBottom: isMobile ? "0.25rem" : "0.5rem",
                   }}
                   className="section-title"
                 >
