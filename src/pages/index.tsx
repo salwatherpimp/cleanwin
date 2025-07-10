@@ -1453,6 +1453,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     gridTemplateColumns: "repeat(4, 1fr)",
                     gap: "16px",
                     width: "100%",
+                    marginTop: "1.5rem",
                   }}
                 >
                   {whyFeatures.map((feature, index) => (
