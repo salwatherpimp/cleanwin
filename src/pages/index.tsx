@@ -1664,7 +1664,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             id="leistungen"
             style={{
               backgroundColor: "#f9fafb",
-              padding: "3rem 0",
+              padding: isMobile ? "1.5rem 0" : "2rem 0",
               width: "100vw",
               position: "relative",
               left: "50%",
