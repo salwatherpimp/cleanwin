@@ -724,7 +724,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             priority
             unoptimized={true}
             sizes="100vw"
-            fetchPriority="high"
+            fetchpriority="high"
             style={{
               objectFit: "cover",
               objectPosition: isMobile ? "55% 50%" : "60% 50%",
