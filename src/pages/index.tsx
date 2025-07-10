@@ -1075,8 +1075,8 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       >
                         <div
                           style={{
-                            width: "36px",
-                            height: "36px",
+                            width: "28px",
+                            height: "28px",
                             backgroundColor: "rgba(16, 160, 164, 0.1)",
                             borderRadius: "50%",
                             display: "flex",
@@ -1087,18 +1087,18 @@ export default function HomePage({ buildTime }: HomePageProps) {
                         >
                           {feature.icon === "DollarSign" && (
                             <DollarSign
-                              size={18}
+                              size={14}
                               style={{ color: "#10a0a4" }}
                             />
                           )}
                           {feature.icon === "MessageCircle" && (
                             <MessageCircle
-                              size={18}
+                              size={14}
                               style={{ color: "#10a0a4" }}
                             />
                           )}
                           {feature.icon === "Shield" && (
-                            <Shield size={18} style={{ color: "#10a0a4" }} />
+                            <Shield size={14} style={{ color: "#10a0a4" }} />
                           )}
                         </div>
                         <span
