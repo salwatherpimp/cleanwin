@@ -724,6 +724,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             alt="CleanWin Hero Background"
             fill
             priority
+            unoptimized={true}
             sizes="100vw"
             fetchPriority="high"
             style={{
