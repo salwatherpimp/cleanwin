@@ -463,7 +463,7 @@ export default function CleanWinPage() {
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
             }}
           >
-            Ihr Reinigungsservice in Winterthur für Präzision, Sauberkeit &
+            Ihr Reinigungsservice in Winterthur f��r Präzision, Sauberkeit &
             Begeisterung
           </h1>
 
@@ -1265,8 +1265,8 @@ export default function CleanWinPage() {
                     }}
                     viewBox="0 0 24 24"
                   >
-                    <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
-                    <circle cx="12" cy="8" r="6" />
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
                   </svg>
                 </div>
               </div>
@@ -2045,8 +2045,8 @@ export default function CleanWinPage() {
                     }}
                     viewBox="0 0 24 24"
                   >
-                    <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
-                    <circle cx="12" cy="8" r="6" />
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
                   </svg>
                 </div>
               </div>
