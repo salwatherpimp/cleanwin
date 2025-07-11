@@ -22,8 +22,7 @@ export default function CleanWinPage() {
         .logo-container-mobile { width: 80px !important; height: 40px !important; }
       }
     </style>
-  `;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    `;
 
   useEffect(() => {
     const handleScroll = () => {
