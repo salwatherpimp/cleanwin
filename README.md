@@ -27,7 +27,16 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Routes
+
+- `/` - Setup page (if Builder.io API key is not configured)
+- `/builder/*` - Builder.io managed pages (requires valid API key)
+
+## File Structure
+
+- `src/pages/index.tsx` - Homepage with setup instructions
+- `src/pages/builder/[[...page]].tsx` - Builder.io catch-all route for dynamic pages
+- `.env.local` - Environment variables (contains Builder.io API key)
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
