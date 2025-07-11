@@ -138,11 +138,13 @@ export default function CleanWinPage() {
             <a
               href="https://cleanwin.vercel.app/referenzen"
               style={{
-                color: "white",
+                color: isScrolled ? "#374151" : "white",
                 fontWeight: "500",
                 padding: "8px 0",
                 textDecoration: "none",
-                textShadow: "rgba(0, 0, 0, 0.3) 0px 1px 3px",
+                textShadow: isScrolled
+                  ? "none"
+                  : "rgba(0, 0, 0, 0.3) 0px 1px 3px",
                 transition: "color 0.2s",
               }}
             >
