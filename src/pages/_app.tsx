@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
+import { useEffect } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,6 +11,25 @@ const inter = Inter({
 });
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    if (process.env.NODE_ENV === "development") {
+      // Listen for hydration errors
+      const originalError = console.error;
+      console.error = (...args) => {
+        if (
+          typeof args[0] === "string" &&
+          (args[0].includes("Hydration failed") ||
+            args[0].includes("Text content does not match") ||
+            args[0].includes("Warning: Text content did not match"))
+        ) {
+          console.warn("🔥 HYDRATION ERROR DETECTED:", ...args);
+          console.trace("Hydration error stack trace");
+        }
+        originalError.apply(console, args);
+      };
+    }
+  }, []);
+
   return (
     <div
       className={inter.variable}
