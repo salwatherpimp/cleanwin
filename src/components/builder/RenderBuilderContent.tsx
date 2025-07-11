@@ -2,6 +2,8 @@
 
 import { BuilderComponent, useIsPreviewing } from "@builder.io/react";
 import { BuilderContent } from "@builder.io/sdk";
+import { StructuredData } from "../seo/StructuredData";
+import { usePathname } from "next/navigation";
 
 interface RenderBuilderContentProps {
   content: BuilderContent | null;
