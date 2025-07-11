@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import { builder } from "@builder.io/react";
 
 // Initialize Builder.io
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
+
+// Optimize fonts
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: {
