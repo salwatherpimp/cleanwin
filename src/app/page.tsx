@@ -80,7 +80,7 @@ export default function CleanWinPage() {
               transition: "transform 0.3s",
             }}
           >
-            <img
+            <Image
               src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fv1752003683%2Fcleanwin-logo_ysvfv0.avif&w=640&q=75"
               alt="CleanWin Logo"
               width={200}
