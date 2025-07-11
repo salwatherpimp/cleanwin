@@ -111,7 +111,7 @@ export default function CleanWinPage() {
               gap: "48px",
               alignItems: "center",
               
-                gridTemplateColumns: "1fr 1fr",
+                
               },
             }}
           >
@@ -909,7 +909,7 @@ export default function CleanWinPage() {
               gap: "48px",
               alignItems: "center",
               
-                gridTemplateColumns: "1fr 1fr",
+                
               },
             }}
           >
@@ -1001,7 +1001,7 @@ export default function CleanWinPage() {
                 <div
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
+                    
                     gap: "16px",
                   }}
                 >
