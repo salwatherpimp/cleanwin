@@ -1158,13 +1158,14 @@ export default function HomePage({ buildTime }: HomePageProps) {
                       marginBottom: "1.5rem",
                     }}
                   >
-                    CleanWin ist Ihr vertrauensvoller Partner für professionelle
-                    Reinigungsdienstleistungen in der Region Winterthur. Seit
-                    über 10 Jahren bieten wir umfassende Lösungen für
-                    Fensterreinigung, Büroreinigung, Fassadenreinigung und
-                    Spezialreinigungen. Unser erfahrenes Team arbeitet mit
-                    modernsten Techniken und umweltfreundlichen Produkten, um
-                    höchste Qualität und Kundenzufriedenheit zu gewährleisten.
+                    CleanWin ist Ihr vertrauensvoller Partner fuer
+                    professionelle Reinigungsdienstleistungen in der Region
+                    Winterthur. Seit ueber 10 Jahren bieten wir umfassende
+                    Loesungen fuer Fensterreinigung, Bueroreinigung,
+                    Fassadenreinigung und Spezialreinigungen. Unser erfahrenes
+                    Team arbeitet mit modernsten Techniken und
+                    umweltfreundlichen Produkten, um hoechste Qualitaet und
+                    Kundenzufriedenheit zu gewaehrleisten.
                   </p>
                   <a
                     href="#services"
