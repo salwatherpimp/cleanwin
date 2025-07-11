@@ -967,18 +967,11 @@ export default function CleanWinPage() {
                   position: "relative",
                 }}
               >
-                <img
+                <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752005906%2Fhomepage-herosection_fsxqwc.avif&w=750&q=75"
                   alt="Professional Cleaning"
-                  loading="lazy"
+                  fill
                   style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    width: "100%",
-                    height: "100%",
                     objectFit: "cover",
                   }}
                 />
@@ -991,18 +984,11 @@ export default function CleanWinPage() {
                   position: "relative",
                 }}
               >
-                <img
+                <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FFassadenreinigung_Sichtbeton_vm1lsq.avif&w=750&q=75"
                   alt="Home Cleaning"
-                  loading="lazy"
+                  fill
                   style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    width: "100%",
-                    height: "100%",
                     objectFit: "cover",
                   }}
                 />
