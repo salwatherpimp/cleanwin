@@ -14,7 +14,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
-  const urlPath = "/" + (resolvedParams.path?.join("/") || "");
+  const urlPath = "/" + resolvedParams.path.join("/");
 
   const content = await builder
     .get("page", {
@@ -57,7 +57,7 @@ export async function generateStaticParams() {
 // Main page component
 export default async function BuilderPage({ params }: PageProps) {
   const resolvedParams = await params;
-  const urlPath = "/" + (resolvedParams.path?.join("/") || "");
+  const urlPath = "/" + resolvedParams.path.join("/");
 
   const content = await builder
     .get("page", {
