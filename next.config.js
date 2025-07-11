@@ -33,7 +33,9 @@ const nextConfig = {
   generateEtags: true,
   // Performance Optimierungen
   // Dev server configuration
-  allowedDevOrigins: ["*"],
+  experimental: {
+    allowedDevOrigins: ["*"],
+  },
 };
 
 module.exports = nextConfig;
