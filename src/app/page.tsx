@@ -2157,13 +2157,13 @@ export default function CleanWinPage() {
                         wordWrap: "break-word",
                       }}
                     >
-                      <span>"</span>
+                      <span>&quot;</span>
                       <span>
                         Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich
                         bin sehr zufrieden mit der sorgfältigen Ausführung und
                         werde far...
                       </span>
-                      <span>"</span>
+                      <span>&quot;</span>
                     </div>
                     <div
                       style={{
@@ -2299,13 +2299,13 @@ export default function CleanWinPage() {
                         wordWrap: "break-word",
                       }}
                     >
-                      <span>"</span>
+                      <span>&quot;</span>
                       <span>
                         Effizient, sehr professionell, sauber und zu einem
                         zahlbaren Preis: So darf ich die Arbeit dieser beiden
                         sympathischen B...
                       </span>
-                      <span>"</span>
+                      <span>&quot;</span>
                     </div>
                     <div
                       style={{
@@ -2440,13 +2440,13 @@ export default function CleanWinPage() {
                         wordWrap: "break-word",
                       }}
                     >
-                      <span>"</span>
+                      <span>&quot;</span>
                       <span>
                         Für unser neues Restaurant, haben wir ein passendes
                         Farbkonzept gesucht. Durch die Kompetente Beratung von
                         Herr Niedehau...
                       </span>
-                      <span>"</span>
+                      <span>&quot;</span>
                     </div>
                     <div
                       style={{
