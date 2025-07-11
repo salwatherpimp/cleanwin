@@ -1168,13 +1168,13 @@ export default function CleanWinPage() {
         </div>
       </section>
 
-      {/* Why Choose CleanWin Section */}
+      {/* Services Section */}
       <section
+        id="services"
         style={{
           backgroundColor: "#f9fafb",
-          padding: "24px 0",
+          padding: "20px 0",
           position: "relative",
-          overflow: "hidden",
         }}
       >
         <div
