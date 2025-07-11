@@ -37,28 +37,6 @@ const nextConfig = {
   generateEtags: true,
   // Performance Optimierungen
   // Dev server configuration
-  webpack: (config, { dev, isServer }) => {
-    if (dev && !isServer) {
-      // Disable hot module replacement to prevent refresh loops
-      config.entry = async () => {
-        const entries = await config.entry();
-        if (
-          entries["main.js"] &&
-          !entries["main.js"].includes(
-            "./client/dev-error-overlay/hot-dev-client",
-          )
-        ) {
-          entries["main.js"] = entries["main.js"].filter(
-            (entry) =>
-              !entry.includes("webpack/hot/dev-server") &&
-              !entry.includes("webpack-hot-middleware"),
-          );
-        }
-        return entries;
-      };
-    }
-    return config;
-  },
 };
 
 module.exports = nextConfig;
