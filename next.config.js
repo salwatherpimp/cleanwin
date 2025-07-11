@@ -4,11 +4,7 @@ const nextConfig = {
     // Disable ESLint during build to prevent TypeScript errors from blocking deployment
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    instrumentationHook: true,
-  },
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     remotePatterns: [
       {
