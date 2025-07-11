@@ -701,7 +701,7 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "2px",
+                    marginBottom: "4px",
                   }}
                 >
                   Reinigung ab CHF 199.-
@@ -765,7 +765,7 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "2px",
+                    marginBottom: "4px",
                   }}
                 >
                   Kostenlose Fachberatung
@@ -829,7 +829,7 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "2px",
+                    marginBottom: "4px",
                   }}
                 >
                   100% keine Schwarzarbeit
@@ -1647,7 +1647,7 @@ export default function CleanWinPage() {
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
                 padding: "16px",
-                height: "180px",
+                height: "150px",
                 display: "flex",
                 flexDirection: "column",
                 overflow: "hidden",
@@ -1658,7 +1658,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "2px",
+                  marginBottom: "4px",
                 }}
               >
                 <h3
@@ -1707,8 +1707,12 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "2px",
+                  marginTop: "8px",
                   flex: "1",
+                  display: "-webkit-box",
+                  WebkitLineClamp: "3",
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
                 }}
               >
                 Wir sind in Winterthur zuhause. Persönlich, nah und immer für
@@ -1725,7 +1729,7 @@ export default function CleanWinPage() {
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
                 padding: "16px",
-                height: "180px",
+                height: "150px",
                 display: "flex",
                 flexDirection: "column",
                 overflow: "hidden",
@@ -1736,7 +1740,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "2px",
+                  marginBottom: "4px",
                 }}
               >
                 <h3
@@ -1785,8 +1789,12 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "2px",
+                  marginTop: "8px",
                   flex: "1",
+                  display: "-webkit-box",
+                  WebkitLineClamp: "3",
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
                 }}
               >
                 Volle Versicherung und geschultes Team - damit Sie sorgenfrei
@@ -1803,7 +1811,7 @@ export default function CleanWinPage() {
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
                 padding: "16px",
-                height: "180px",
+                height: "150px",
                 display: "flex",
                 flexDirection: "column",
                 overflow: "hidden",
@@ -1814,7 +1822,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "2px",
+                  marginBottom: "4px",
                 }}
               >
                 <h3
@@ -1864,8 +1872,12 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "2px",
+                  marginTop: "8px",
                   flex: "1",
+                  display: "-webkit-box",
+                  WebkitLineClamp: "3",
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
                 }}
               >
                 Umweltfreundliche Reinigungs-methode durch Umkehrosmose-Technik.
@@ -1882,7 +1894,7 @@ export default function CleanWinPage() {
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
                 padding: "16px",
-                height: "180px",
+                height: "150px",
                 display: "flex",
                 flexDirection: "column",
                 overflow: "hidden",
@@ -1893,7 +1905,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "2px",
+                  marginBottom: "4px",
                 }}
               >
                 <h3
@@ -1945,8 +1957,12 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "2px",
+                  marginTop: "8px",
                   flex: "1",
+                  display: "-webkit-box",
+                  WebkitLineClamp: "3",
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
                 }}
               >
                 Von früh bis spät - wir richten uns stet nach Ihrem Alltag.
