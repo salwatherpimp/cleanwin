@@ -29,6 +29,20 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   generateEtags: true,
+  webpack: (config, { dev }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: /node_modules/,
+      };
+      // Remove HMR entry
+      if (config.entry["main.js"]) {
+        config.entry["main.js"] = config.entry["main.js"].filter(
+          (entry) => !entry.includes("webpack/hot/dev-server"),
+        );
+      }
+    }
+    return config;
+  },
 };
 
 module.exports = nextConfig;
