@@ -141,6 +141,7 @@ export default function CleanWinPage() {
               style={{
                 color: isScrolled ? "#374151" : "white",
                 fontWeight: "500",
+                fontSize: "16px",
                 padding: "8px 0",
                 textDecoration: "none",
                 textShadow: isScrolled
