@@ -1604,6 +1604,478 @@ export default function CleanWinPage() {
         </div>
       </section>
 
+      {/* Customer Testimonials Section */}
+      <section
+        style={{
+          background:
+            "linear-gradient(to right bottom, rgb(237, 221, 229), rgb(247, 242, 245))",
+          padding: "64px 0",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1280px",
+            margin: "0 auto",
+            padding: "0 16px",
+            position: "relative",
+            zIndex: 10,
+          }}
+        >
+          <div style={{ textAlign: "center", marginBottom: "64px" }}>
+            <h2
+              style={{
+                fontSize: "30px",
+                fontWeight: "700",
+                lineHeight: "36px",
+                marginBottom: "24px",
+                color: "#111827",
+                textAlign: "center",
+              }}
+            >
+              Das sagen unsere Kunden
+            </h2>
+            <p
+              style={{
+                color: "#111827",
+                marginBottom: "40px",
+                marginLeft: "auto",
+                marginRight: "auto",
+                maxWidth: "768px",
+                textAlign: "center",
+              }}
+            >
+              Überzeugen Sie sich von der Qualität unserer Arbeit und senden sie
+              uns noch heute eine unverbindliche Kontaktanfrage.
+            </p>
+
+            {/* Google Reviews Badge */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "48px",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  backdropFilter: "blur(4px)",
+                  backgroundColor: "rgba(255, 255, 255, 0.9)",
+                  border: "2px solid rgba(255, 255, 255, 0.2)",
+                  borderRadius: "12px",
+                  boxShadow:
+                    "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+                  padding: "8px 16px",
+                  transition: "box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                }}
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                  alt="Google"
+                  style={{
+                    height: "20px",
+                    maxWidth: "100%",
+                    verticalAlign: "middle",
+                  }}
+                />
+                <span
+                  style={{
+                    color: "#111827",
+                    fontSize: "14px",
+                    fontWeight: "700",
+                    lineHeight: "20px",
+                    marginLeft: "8px",
+                  }}
+                >
+                  Google Bewertungen
+                </span>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginLeft: "8px",
+                  }}
+                >
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      style={{
+                        width: "24px",
+                        height: "24px",
+                        color: "#facc15",
+                        fill: "#facc15",
+                        marginLeft: i > 0 ? "4px" : "0px",
+                      }}
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                    </svg>
+                  ))}
+                </div>
+                <span
+                  style={{
+                    color: "#4b5563",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    lineHeight: "20px",
+                    marginLeft: "8px",
+                  }}
+                >
+                  (5/5)
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Testimonials Carousel */}
+          <div style={{ position: "relative" }}>
+            <div style={{ overflow: "hidden" }}>
+              <div
+                style={{
+                  display: "flex",
+                  marginLeft: "-16px",
+                }}
+              >
+                {/* Testimonial 1 */}
+                <div
+                  style={{
+                    flexBasis: "33.3333%",
+                    flexShrink: 0,
+                    paddingLeft: "16px",
+                  }}
+                >
+                  <div
+                    style={{
+                      backdropFilter: "blur(4px)",
+                      backgroundColor: "rgba(255, 255, 255, 0.9)",
+                      border: "2px solid rgba(255, 255, 255, 0.2)",
+                      borderRadius: "8px",
+                      boxShadow: "rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+                      cursor: "pointer",
+                      height: "100%",
+                      transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                    }}
+                  >
+                    <div style={{ padding: "32px" }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "flex-start",
+                        }}
+                      >
+                        <svg
+                          style={{
+                            width: "24px",
+                            height: "24px",
+                            color: "#d60475",
+                            flexShrink: 0,
+                            marginTop: "4px",
+                            stroke: "#d60475",
+                            strokeWidth: "2px",
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            fill: "none",
+                          }}
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                          <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                        </svg>
+                        <div
+                          style={{
+                            flexGrow: 1,
+                            marginLeft: "4px",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              marginBottom: "16px",
+                            }}
+                          >
+                            {[...Array(5)].map((_, i) => (
+                              <svg
+                                key={i}
+                                style={{
+                                  width: "24px",
+                                  height: "24px",
+                                  color: "#facc15",
+                                  fill: "#facc15",
+                                  marginLeft: i > 0 ? "4px" : "0px",
+                                }}
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                              </svg>
+                            ))}
+                          </div>
+                          <p
+                            style={{
+                              color: "#374151",
+                              lineHeight: "26px",
+                              marginBottom: "24px",
+                              overflow: "hidden",
+                            }}
+                          >
+                            Ein engagiertes team,flexibel, zuverlässig,
+                            kreativ.Ich bin sehr zufrieden mit der sorgfältigen
+                            Ausführung und werde farbexpress immer wieder gern
+                            für mein Haus engagieren.
+                          </p>
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                            }}
+                          >
+                            <span
+                              style={{
+                                color: "#111827",
+                                fontWeight: "600",
+                              }}
+                            >
+                              Ursula Wirtz
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Testimonial 2 */}
+                <div
+                  style={{
+                    flexBasis: "33.3333%",
+                    flexShrink: 0,
+                    paddingLeft: "16px",
+                  }}
+                >
+                  <div
+                    style={{
+                      backdropFilter: "blur(4px)",
+                      backgroundColor: "rgba(255, 255, 255, 0.9)",
+                      border: "2px solid rgba(255, 255, 255, 0.2)",
+                      borderRadius: "8px",
+                      boxShadow: "rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+                      cursor: "pointer",
+                      height: "100%",
+                      transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                    }}
+                  >
+                    <div style={{ padding: "32px" }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "flex-start",
+                        }}
+                      >
+                        <svg
+                          style={{
+                            width: "24px",
+                            height: "24px",
+                            color: "#d60475",
+                            flexShrink: 0,
+                            marginTop: "4px",
+                            stroke: "#d60475",
+                            strokeWidth: "2px",
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            fill: "none",
+                          }}
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                          <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                        </svg>
+                        <div
+                          style={{
+                            flexGrow: 1,
+                            marginLeft: "4px",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              marginBottom: "16px",
+                            }}
+                          >
+                            {[...Array(5)].map((_, i) => (
+                              <svg
+                                key={i}
+                                style={{
+                                  width: "24px",
+                                  height: "24px",
+                                  color: "#facc15",
+                                  fill: "#facc15",
+                                  marginLeft: i > 0 ? "4px" : "0px",
+                                }}
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                              </svg>
+                            ))}
+                          </div>
+                          <p
+                            style={{
+                              color: "#374151",
+                              lineHeight: "26px",
+                              marginBottom: "24px",
+                              overflow: "hidden",
+                            }}
+                          >
+                            Effizient, sehr professionell, sauber und zu einem
+                            zahlbaren Preis: So darf ich die Arbeit dieser
+                            beiden sympathischen Berufsleute zusammenfassen. Sie
+                            haben eine Wohnung in meinem über 200 Jahre alten
+                            MFH neu gestrichen. Die Aufgabe, Wände und
+                            Einbauschränke mit vielen Ecken und Kanten,
+                            Holztäfer, sowie Gips- und Mauerwerk kostengünstig
+                            und doch perfekt zu streichen, war nicht unbedingt
+                            einfach. Der Auftrag wurde jedoch zu meiner vollsten
+                            Zufriedenheit erledigt. Ich kann diese Firma
+                            wirklich sehr empfehlen!
+                          </p>
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                            }}
+                          >
+                            <span
+                              style={{
+                                color: "#111827",
+                                fontWeight: "600",
+                              }}
+                            >
+                              Johanna Kelts
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Testimonial 3 */}
+                <div
+                  style={{
+                    flexBasis: "33.3333%",
+                    flexShrink: 0,
+                    paddingLeft: "16px",
+                  }}
+                >
+                  <div
+                    style={{
+                      backdropFilter: "blur(4px)",
+                      backgroundColor: "rgba(255, 255, 255, 0.9)",
+                      border: "2px solid rgba(255, 255, 255, 0.2)",
+                      borderRadius: "8px",
+                      boxShadow: "rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+                      cursor: "pointer",
+                      height: "100%",
+                      transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                    }}
+                  >
+                    <div style={{ padding: "32px" }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "flex-start",
+                        }}
+                      >
+                        <svg
+                          style={{
+                            width: "24px",
+                            height: "24px",
+                            color: "#d60475",
+                            flexShrink: 0,
+                            marginTop: "4px",
+                            stroke: "#d60475",
+                            strokeWidth: "2px",
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            fill: "none",
+                          }}
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                          <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                        </svg>
+                        <div
+                          style={{
+                            flexGrow: 1,
+                            marginLeft: "4px",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              marginBottom: "16px",
+                            }}
+                          >
+                            {[...Array(5)].map((_, i) => (
+                              <svg
+                                key={i}
+                                style={{
+                                  width: "24px",
+                                  height: "24px",
+                                  color: "#facc15",
+                                  fill: "#facc15",
+                                  marginLeft: i > 0 ? "4px" : "0px",
+                                }}
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                              </svg>
+                            ))}
+                          </div>
+                          <p
+                            style={{
+                              color: "#374151",
+                              lineHeight: "26px",
+                              marginBottom: "24px",
+                              overflow: "hidden",
+                            }}
+                          >
+                            Für unser neues Restaurant, haben wir ein passendes
+                            Farbkonzept gesucht. Durch die Kompetente Beratung
+                            von Herr Niedehauser konnten wir unsere
+                            Vorstellungen zu einem fairen Preis umsetzen.
+                          </p>
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                            }}
+                          >
+                            <span
+                              style={{
+                                color: "#111827",
+                                fontWeight: "600",
+                              }}
+                            >
+                              Frau achternbusch
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section
         id="contact"
