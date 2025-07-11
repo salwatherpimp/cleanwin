@@ -471,18 +471,15 @@ export default function CleanWinPage() {
           </h1>
 
           <p
+            className="hero-subtitle-mobile"
             style={{
-              fontSize: "16px",
-              lineHeight: "24px",
+              fontSize: "20px",
+              lineHeight: "32px",
               marginBottom: "24px",
               marginLeft: "auto",
               marginRight: "auto",
               maxWidth: "768px",
               color: "rgba(255, 255, 255, 0.95)",
-              "@media (min-width: 768px)": {
-                fontSize: "20px",
-                lineHeight: "32px",
-              },
             }}
           >
             Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere Räume,
