@@ -1,14 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    // Disable ESLint during build to prevent TypeScript errors from blocking deployment
     ignoreDuringBuilds: true,
   },
-  reactStrictMode: true,
-  allowedDevOrigins: [
-    "1a18bb3088f545299cf298ddd519a85b-5aa69977c98f44c486379bf7a.fly.dev",
-    "1a18bb3088f545299cf298ddd519a85b-5aa69977c98f44c486379bf7a.projects.builder.codes",
-  ],
+  reactStrictMode: false,
   images: {
     remotePatterns: [
       {
@@ -31,12 +26,9 @@ const nextConfig = {
       },
     ],
   },
-  // Core Web Vitals Optimierungen
   poweredByHeader: false,
   compress: true,
   generateEtags: true,
-  // Performance Optimierungen
-  // Dev server configuration
 };
 
 module.exports = nextConfig;
