@@ -1275,10 +1275,10 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "20px",
-                  marginTop: "16px",
+                  lineHeight: "18px",
+                  marginTop: "8px",
+                  flex: "1",
                   overflow: "hidden",
-                  textOverflow: "ellipsis",
                 }}
               >
                 Wir sind in Winterthur zuhause. Persönlich, nah und immer für
@@ -1352,10 +1352,10 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "20px",
-                  marginTop: "16px",
+                  lineHeight: "18px",
+                  marginTop: "8px",
+                  flex: "1",
                   overflow: "hidden",
-                  textOverflow: "ellipsis",
                 }}
               >
                 Volle Versicherung und geschultes Team - damit Sie sorgenfrei
@@ -1430,10 +1430,10 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "20px",
-                  marginTop: "16px",
+                  lineHeight: "18px",
+                  marginTop: "8px",
+                  flex: "1",
                   overflow: "hidden",
-                  textOverflow: "ellipsis",
                 }}
               >
                 Umweltfreundliche Reinigungs-methode durch Umkehrosmose-Technik.
@@ -1508,10 +1508,10 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "20px",
-                  marginTop: "16px",
+                  lineHeight: "18px",
+                  marginTop: "8px",
+                  flex: "1",
                   overflow: "hidden",
-                  textOverflow: "ellipsis",
                 }}
               >
                 Von früh bis spät - wir richten uns stet nach Ihrem Alltag.
