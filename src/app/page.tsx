@@ -765,9 +765,7 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "12px",
-                    height: "44px",
-                    minHeight: "44px",
+                    marginBottom: "4px",
                   }}
                 >
                   Kostenlose Fachberatung
