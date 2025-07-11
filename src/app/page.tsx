@@ -76,12 +76,17 @@ export default function CleanWinPage() {
             />
           </a>
 
+          {/* Desktop Navigation */}
           <nav
             style={{
               display: "flex",
               alignItems: "center",
               gap: "32px",
+              "@media (max-width: 768px)": {
+                display: "none",
+              },
             }}
+            className="hidden md:flex"
           >
             {/* Services Dropdown */}
             <div style={{ position: "relative" }}>
@@ -191,6 +196,51 @@ export default function CleanWinPage() {
               <span>Kontaktiere uns</span>
             </a>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "40px",
+              height: "40px",
+              padding: "8px",
+              backgroundColor: "transparent",
+              border: "none",
+              color: isScrolled ? "#374151" : "white",
+              cursor: "pointer",
+              transition: "color 0.2s",
+            }}
+            className="md:hidden"
+          >
+            <svg
+              style={{
+                width: "24px",
+                height: "24px",
+                stroke: "currentColor",
+                strokeWidth: "2px",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                fill: "none",
+              }}
+              viewBox="0 0 24 24"
+            >
+              {isMobileMenuOpen ? (
+                <>
+                  <path d="m18 6-12 12" />
+                  <path d="m6 6 12 12" />
+                </>
+              ) : (
+                <>
+                  <path d="M4 6h16" />
+                  <path d="M4 12h16" />
+                  <path d="M4 18h16" />
+                </>
+              )}
+            </svg>
+          </button>
 
           {/* Mobile Menu Button (hidden on desktop) */}
           <button
