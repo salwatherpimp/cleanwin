@@ -1256,8 +1256,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#10a0a4",
-                      stroke: "#10a0a4",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
@@ -1333,8 +1333,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#10a0a4",
-                      stroke: "#10a0a4",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
@@ -1409,8 +1409,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#10a0a4",
-                      stroke: "#10a0a4",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
@@ -1486,8 +1486,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#10a0a4",
-                      stroke: "#10a0a4",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
