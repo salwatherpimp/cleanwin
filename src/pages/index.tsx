@@ -230,7 +230,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
           rel="preload"
           as="image"
           href="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.avif"
-          fetchPriority="high"
+          fetchpriority="high"
         />
 
         {/* SEO & Google Crawling */}
@@ -725,7 +725,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
             priority
             unoptimized={true}
             sizes="100vw"
-            fetchPriority="high"
+            fetchpriority="high"
             style={{
               objectFit: "cover",
               objectPosition: isMobile ? "55% 50%" : "60% 50%",
