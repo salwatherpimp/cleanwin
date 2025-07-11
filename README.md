@@ -1,8 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project with [Builder.io](https://builder.io) integration.
+
+## Builder.io Setup
+
+**Important:** Before running the development server, you need to configure your Builder.io API key.
+
+1. Go to [builder.io/account/organization](https://builder.io/account/organization)
+2. Copy your API key
+3. Open `.env.local` and replace `your-api-key-here` with your actual API key:
+   ```
+   NEXT_PUBLIC_BUILDER_API_KEY=your-actual-api-key-here
+   ```
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and run the development server:
 
 ```bash
 npm run dev
@@ -16,7 +27,16 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Routes
+
+- `/` - Setup page (if Builder.io API key is not configured)
+- `/builder/*` - Builder.io managed pages (requires valid API key)
+
+## File Structure
+
+- `src/pages/index.tsx` - Homepage with setup instructions
+- `src/pages/builder/[[...page]].tsx` - Builder.io catch-all route for dynamic pages
+- `.env.local` - Environment variables (contains Builder.io API key)
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
