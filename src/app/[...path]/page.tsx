@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 
 interface PageProps {
   params: Promise<{
-    path?: string[];
+    path: string[];
   }>;
 }
 
