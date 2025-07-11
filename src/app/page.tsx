@@ -717,6 +717,136 @@ export default function CleanWinPage() {
         </div>
       </section>
 
+      {/* Client Logos Section */}
+      <section
+        style={{
+          backgroundColor: "#f9fafb",
+          borderTop: "1px solid #e5e7eb",
+          borderBottom: "1px solid #e5e7eb",
+          padding: "48px 0",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1152px",
+            margin: "0 auto",
+            padding: "0 16px",
+            textAlign: "center",
+          }}
+        >
+          <p
+            style={{
+              color: "#6b7280",
+              marginBottom: "32px",
+              marginTop: "16px",
+              textAlign: "center",
+            }}
+          >
+            Über 500 Firmen & Haushalte die mit Cleanwin reinigen
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(6, 1fr)",
+              gap: "32px",
+              alignItems: "center",
+              justifyItems: "center",
+            }}
+          >
+            <div
+              style={{
+                width: "120px",
+                height: "60px",
+                backgroundImage:
+                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/1_omqaqp.png")',
+                backgroundPosition: "50% 50%",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                border: "1px solid #e5e7eb",
+                borderRadius: "8px",
+                opacity: "0.7",
+                transition: "opacity 0.3s",
+              }}
+            />
+            <div
+              style={{
+                width: "120px",
+                height: "60px",
+                backgroundImage:
+                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/2_jgcfjz.png")',
+                backgroundPosition: "50% 50%",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                border: "1px solid #e5e7eb",
+                borderRadius: "8px",
+                opacity: "0.7",
+                transition: "opacity 0.3s",
+              }}
+            />
+            <div
+              style={{
+                width: "120px",
+                height: "60px",
+                backgroundImage:
+                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/4_mne8oq.png")',
+                backgroundPosition: "50% 50%",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                border: "1px solid #e5e7eb",
+                borderRadius: "8px",
+                opacity: "0.7",
+                transition: "opacity 0.3s",
+              }}
+            />
+            <div
+              style={{
+                width: "120px",
+                height: "60px",
+                backgroundImage:
+                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/5_xmwppy.png")',
+                backgroundPosition: "50% 50%",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                border: "1px solid #e5e7eb",
+                borderRadius: "8px",
+                opacity: "0.7",
+                transition: "opacity 0.3s",
+              }}
+            />
+            <div
+              style={{
+                width: "120px",
+                height: "60px",
+                backgroundImage:
+                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/3_jqqq29.png")',
+                backgroundPosition: "50% 50%",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                border: "1px solid #e5e7eb",
+                borderRadius: "8px",
+                opacity: "0.7",
+                transition: "opacity 0.3s",
+              }}
+            />
+            <div
+              style={{
+                width: "120px",
+                height: "60px",
+                backgroundImage:
+                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/7_wetsnc.png")',
+                backgroundPosition: "50% 50%",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                border: "1px solid #e5e7eb",
+                borderRadius: "8px",
+                opacity: "0.7",
+                transition: "opacity 0.3s",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section
         id="services"
