@@ -2199,10 +2199,9 @@ export default function CleanWinPage() {
                     }}
                     viewBox="0 0 24 24"
                   >
-                    <path d="M7 16a4 4 0 0 0 8 0" />
-                    <path d="M15 2c-.5 1.5-2 3-4 3s-3.5-1.5-4-3" />
-                    <path d="M9 18c.5-1.5 2-3 4-3s3.5 1.5 4 3" />
-                    <path d="M3 12h18" />
+                    <path d="M12 1s-3 3-3 8c0 2 1 4 3 4s3-2 3-4c0-5-3-8-3-8z" />
+                    <path d="M12 17v6" />
+                    <path d="M9 20h6" />
                   </svg>
                 </div>
               </div>
