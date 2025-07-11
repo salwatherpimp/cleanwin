@@ -107,12 +107,12 @@ export default function CleanWinPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "48px",
               alignItems: "center",
-              
-                
-              
+              "@media (min-width: 1024px)": {
+                gridTemplateColumns: "1fr 1fr",
+              },
             }}
           >
             <div>
@@ -146,9 +146,9 @@ export default function CleanWinPage() {
                   display: "flex",
                   flexDirection: "column",
                   gap: "16px",
-                  
-                    
-                  
+                  "@media (min-width: 640px)": {
+                    flexDirection: "row",
+                  },
                 }}
               >
                 <button
@@ -905,12 +905,12 @@ export default function CleanWinPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "48px",
               alignItems: "center",
-              
-                
-              
+              "@media (min-width: 1024px)": {
+                gridTemplateColumns: "1fr 1fr",
+              },
             }}
           >
             <div>
@@ -1001,7 +1001,7 @@ export default function CleanWinPage() {
                 <div
                   style={{
                     display: "grid",
-                    
+                    gridTemplateColumns: "1fr 1fr",
                     gap: "16px",
                   }}
                 >
