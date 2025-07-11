@@ -402,18 +402,15 @@ export default function CleanWinPage() {
 
       {/* Hero Section */}
       <section
+        className="hero-mobile"
         style={{
           position: "relative",
-          height: "400px",
-          minHeight: "350px",
+          height: "480px",
+          minHeight: "420px",
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
           paddingTop: "0px",
-          "@media (min-width: 768px)": {
-            height: "480px",
-            minHeight: "420px",
-          },
         }}
       >
         {/* Background Image */}
