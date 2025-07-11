@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 export default function CleanWinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +45,7 @@ export default function CleanWinPage() {
             justifyContent: "space-between",
             maxWidth: "1152px",
             margin: "0 auto",
-            padding: "12px 16px",
+            padding: "16px",
           }}
         >
           <a
@@ -66,31 +65,22 @@ export default function CleanWinPage() {
               width={200}
               height={56}
               style={{
-                width: "160px",
-                height: "45px",
+                width: "200px",
+                height: "56px",
                 aspectRatio: "auto 200 / 56",
                 overflowClipMargin: "content-box",
                 overflowX: "clip",
                 overflowY: "clip",
-                "@media (min-width: 768px)": {
-                  width: "200px",
-                  height: "56px",
-                },
               }}
             />
           </a>
 
-          {/* Desktop Navigation */}
           <nav
             style={{
               display: "flex",
               alignItems: "center",
               gap: "32px",
-              "@media (max-width: 768px)": {
-                display: "none",
-              },
             }}
-            className="hidden md:flex"
           >
             {/* Services Dropdown */}
             <div style={{ position: "relative" }}>
@@ -201,203 +191,47 @@ export default function CleanWinPage() {
             </a>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button (hidden on desktop) */}
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "40px",
-              height: "40px",
+              display: "none",
               padding: "8px",
               backgroundColor: "transparent",
               border: "none",
-              color: isScrolled ? "#374151" : "white",
               cursor: "pointer",
-              transition: "color 0.2s",
             }}
-            className="md:hidden"
           >
             <svg
               style={{
                 width: "24px",
                 height: "24px",
-                stroke: "currentColor",
-                strokeWidth: "2px",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
+                color: "white",
+                stroke: "white",
                 fill: "none",
               }}
               viewBox="0 0 24 24"
             >
-              {isMobileMenuOpen ? (
-                <>
-                  <path d="m18 6-12 12" />
-                  <path d="m6 6 12 12" />
-                </>
-              ) : (
-                <>
-                  <path d="M4 6h16" />
-                  <path d="M4 12h16" />
-                  <path d="M4 18h16" />
-                </>
-              )}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
-
-        {/* Mobile Menu Overlay */}
-        {isMobileMenuOpen && (
-          <div
-            style={{
-              position: "absolute",
-              top: "100%",
-              left: "0",
-              right: "0",
-              backgroundColor: "rgba(255, 255, 255, 0.98)",
-              backdropFilter: "blur(8px)",
-              borderTop: "1px solid rgba(0, 0, 0, 0.1)",
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-              zIndex: 40,
-            }}
-            className="md:hidden"
-          >
-            <div
-              style={{
-                padding: "24px 16px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
-              }}
-            >
-              <button
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  width: "100%",
-                  padding: "16px 0",
-                  backgroundColor: "transparent",
-                  border: "none",
-                  color: "#374151",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  textAlign: "left",
-                  cursor: "pointer",
-                  borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
-                }}
-              >
-                <span>Leistungen</span>
-                <svg
-                  style={{
-                    width: "20px",
-                    height: "20px",
-                    color: "#374151",
-                    stroke: "#374151",
-                    strokeWidth: "2px",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    fill: "none",
-                  }}
-                  viewBox="0 0 24 24"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-
-              <a
-                href="https://cleanwin.vercel.app/ueber-uns"
-                style={{
-                  display: "block",
-                  padding: "16px 0",
-                  color: "#374151",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  textDecoration: "none",
-                  borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
-                  transition: "color 0.2s",
-                }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Über uns
-              </a>
-
-              <a
-                href="https://cleanwin.vercel.app/referenzen"
-                style={{
-                  display: "block",
-                  padding: "16px 0",
-                  color: "#374151",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  textDecoration: "none",
-                  borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
-                  transition: "color 0.2s",
-                }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Referenzen
-              </a>
-
-              <a
-                href="#contact"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "8px",
-                  backgroundColor: "#10a0a4",
-                  color: "white",
-                  padding: "16px 24px",
-                  borderRadius: "9999px",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  textDecoration: "none",
-                  marginTop: "8px",
-                  transition: "background-color 0.2s",
-                }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <svg
-                  style={{
-                    width: "20px",
-                    height: "20px",
-                    color: "white",
-                    stroke: "white",
-                    strokeWidth: "2px",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    fill: "none",
-                  }}
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
-                  <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
-                  <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
-                  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
-                </svg>
-                <span>Kontaktiere uns</span>
-              </a>
-            </div>
-          </div>
-        )}
       </header>
 
       {/* Hero Section */}
       <section
         style={{
           position: "relative",
-          height: "400px",
-          minHeight: "350px",
+          height: "480px",
+          minHeight: "420px",
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
           paddingTop: "0px",
-          "@media (min-width: 768px)": {
-            height: "480px",
-            minHeight: "420px",
-          },
         }}
       >
         {/* Background Image */}
@@ -436,26 +270,19 @@ export default function CleanWinPage() {
             zIndex: 10,
             maxWidth: "1152px",
             margin: "0 auto",
-            padding: "60px 16px 24px",
+            padding: "80px 16px 24px",
             textAlign: "center",
             color: "white",
-            "@media (min-width: 768px)": {
-              padding: "80px 16px 24px",
-            },
           }}
         >
           <h1
             style={{
-              fontSize: "28px",
+              fontSize: "40px",
               fontWeight: "800",
-              lineHeight: "36px",
+              lineHeight: "48px",
               marginBottom: "16px",
               color: "white",
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
-              "@media (min-width: 768px)": {
-                fontSize: "40px",
-                lineHeight: "48px",
-              },
             }}
           >
             Ihr Reinigungsservice in Winterthur für Präzision, Sauberkeit &
@@ -464,17 +291,13 @@ export default function CleanWinPage() {
 
           <p
             style={{
-              fontSize: "16px",
-              lineHeight: "24px",
+              fontSize: "20px",
+              lineHeight: "32px",
               marginBottom: "24px",
               marginLeft: "auto",
               marginRight: "auto",
               maxWidth: "768px",
               color: "rgba(255, 255, 255, 0.95)",
-              "@media (min-width: 768px)": {
-                fontSize: "20px",
-                lineHeight: "32px",
-              },
             }}
           >
             Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere Räume,
@@ -630,7 +453,7 @@ export default function CleanWinPage() {
           backgroundColor: "#f9fafb",
           borderTop: "1px solid #e5e7eb",
           borderBottom: "1px solid #e5e7eb",
-          padding: "24px 0",
+          padding: "16px 0",
           overflow: "hidden",
         }}
       >
@@ -644,15 +467,10 @@ export default function CleanWinPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr",
-              gap: "16px",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "32px",
               alignItems: "center",
-              "@media (min-width: 768px)": {
-                gridTemplateColumns: "repeat(3, 1fr)",
-                gap: "32px",
-              },
             }}
-            className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8"
           >
             {/* Pricing Card */}
             <div
@@ -868,15 +686,10 @@ export default function CleanWinPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr",
-              gap: "32px",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "48px",
               alignItems: "center",
-              "@media (min-width: 768px)": {
-                gridTemplateColumns: "1fr 1fr",
-                gap: "48px",
-              },
             }}
-            className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12"
           >
             {/* Text Content */}
             <div>
@@ -931,13 +744,9 @@ export default function CleanWinPage() {
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
-                gap: "12px",
+                gap: "16px",
                 width: "100%",
-                "@media (min-width: 768px)": {
-                  gap: "16px",
-                },
               }}
-              className="grid grid-cols-2 gap-3 md:gap-4"
             >
               <div
                 style={{
@@ -1070,29 +879,16 @@ export default function CleanWinPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(2, 1fr)",
-              gap: "16px",
+              gridTemplateColumns: "repeat(6, 1fr)",
+              gap: "32px",
               alignItems: "center",
               justifyItems: "center",
-              "@media (min-width: 640px)": {
-                gridTemplateColumns: "repeat(3, 1fr)",
-                gap: "20px",
-              },
-              "@media (min-width: 768px)": {
-                gridTemplateColumns: "repeat(6, 1fr)",
-                gap: "32px",
-              },
             }}
-            className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 md:grid-cols-6 md:gap-8"
           >
             <div
               style={{
-                width: "80px",
-                height: "40px",
-                "@media (min-width: 768px)": {
-                  width: "120px",
-                  height: "60px",
-                },
+                width: "120px",
+                height: "60px",
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/1_omqaqp.png")',
                 backgroundPosition: "50% 50%",
@@ -1106,12 +902,8 @@ export default function CleanWinPage() {
             />
             <div
               style={{
-                width: "80px",
-                height: "40px",
-                "@media (min-width: 768px)": {
-                  width: "120px",
-                  height: "60px",
-                },
+                width: "120px",
+                height: "60px",
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/2_jgcfjz.png")',
                 backgroundPosition: "50% 50%",
@@ -1125,12 +917,8 @@ export default function CleanWinPage() {
             />
             <div
               style={{
-                width: "80px",
-                height: "40px",
-                "@media (min-width: 768px)": {
-                  width: "120px",
-                  height: "60px",
-                },
+                width: "120px",
+                height: "60px",
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/4_mne8oq.png")',
                 backgroundPosition: "50% 50%",
@@ -1144,12 +932,8 @@ export default function CleanWinPage() {
             />
             <div
               style={{
-                width: "80px",
-                height: "40px",
-                "@media (min-width: 768px)": {
-                  width: "120px",
-                  height: "60px",
-                },
+                width: "120px",
+                height: "60px",
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/5_xmwppy.png")',
                 backgroundPosition: "50% 50%",
@@ -1163,12 +947,8 @@ export default function CleanWinPage() {
             />
             <div
               style={{
-                width: "80px",
-                height: "40px",
-                "@media (min-width: 768px)": {
-                  width: "120px",
-                  height: "60px",
-                },
+                width: "120px",
+                height: "60px",
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/3_jqqq29.png")',
                 backgroundPosition: "50% 50%",
@@ -1182,12 +962,8 @@ export default function CleanWinPage() {
             />
             <div
               style={{
-                width: "80px",
-                height: "40px",
-                "@media (min-width: 768px)": {
-                  width: "120px",
-                  height: "60px",
-                },
+                width: "120px",
+                height: "60px",
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/7_wetsnc.png")',
                 backgroundPosition: "50% 50%",
