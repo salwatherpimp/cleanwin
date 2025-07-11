@@ -2567,30 +2567,6 @@ export default function CleanWinPage() {
                 <div>Frauenfeld, Uster</div>
               </div>
             </div>
-
-            {/* Additional Services */}
-            <div>
-              <h4
-                style={{
-                  fontWeight: "500",
-                  marginBottom: "16px",
-                  marginTop: "21.28px",
-                }}
-              >
-                Weitere Services
-              </h4>
-              <div
-                style={{
-                  color: "#9ca3af",
-                  fontSize: "14px",
-                }}
-              >
-                <div>24/7 Notfallreinigung</div>
-                <div>Kostenlose Besichtigung</div>
-                <div>Individuelle Angebote</div>
-                <div>Regelmäßige Termine</div>
-              </div>
-            </div>
           </div>
 
           {/* Bottom Section */}
