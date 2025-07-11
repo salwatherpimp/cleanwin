@@ -444,31 +444,26 @@ export default function CleanWinPage() {
 
         {/* Content */}
         <div
+          className="hero-content-mobile"
           style={{
             position: "relative",
             zIndex: 10,
             maxWidth: "1152px",
             margin: "0 auto",
-            padding: "60px 16px 24px",
+            padding: "80px 16px 24px",
             textAlign: "center",
             color: "white",
-            "@media (min-width: 768px)": {
-              padding: "80px 16px 24px",
-            },
           }}
         >
           <h1
+            className="hero-title-mobile"
             style={{
-              fontSize: "28px",
+              fontSize: "40px",
               fontWeight: "800",
-              lineHeight: "36px",
+              lineHeight: "48px",
               marginBottom: "16px",
               color: "white",
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
-              "@media (min-width: 768px)": {
-                fontSize: "40px",
-                lineHeight: "48px",
-              },
             }}
           >
             Ihr Reinigungsservice in Winterthur für Präzision, Sauberkeit &
