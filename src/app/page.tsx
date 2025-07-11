@@ -1171,8 +1171,7 @@ export default function CleanWinPage() {
       {/* Why Choose CleanWin Section */}
       <section
         style={{
-          background:
-            "linear-gradient(to right bottom, rgb(237, 221, 229), rgb(247, 242, 245))",
+          backgroundColor: "#f9fafb",
           padding: "24px 0",
           position: "relative",
           overflow: "hidden",
