@@ -852,7 +852,7 @@ export default function CleanWinPage() {
           backgroundColor: "#f9fafb",
           borderTop: "1px solid #e5e7eb",
           borderBottom: "1px solid #e5e7eb",
-          padding: "32px 0",
+          padding: "20px 0",
         }}
       >
         <div
