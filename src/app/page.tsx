@@ -5,6 +5,28 @@ import { useEffect, useState } from "react";
 export default function CleanWinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Mobile responsive styles
+  const mobileStyles = `
+    <style>
+      @media (max-width: 767px) {
+        .desktop-nav { display: none !important; }
+        .mobile-menu-btn { display: flex !important; }
+        .mobile-grid-1 { grid-template-columns: 1fr !important; gap: 16px !important; }
+        .mobile-grid-2 { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+        .mobile-grid-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
+        .mobile-text-sm { font-size: 28px !important; line-height: 36px !important; }
+        .mobile-text-base { font-size: 16px !important; line-height: 24px !important; }
+        .mobile-hero { height: 400px !important; min-height: 350px !important; }
+        .mobile-padding { padding: 60px 16px 24px !important; }
+        .mobile-logo { width: 160px !important; height: 45px !important; }
+      }
+      @media (min-width: 768px) {
+        .mobile-menu-btn { display: none !important; }
+        .mobile-menu-overlay { display: none !important; }
+      }
+    </style>
+  `;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
