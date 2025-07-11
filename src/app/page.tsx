@@ -1638,7 +1638,7 @@ export default function CleanWinPage() {
                 textAlign: "center",
               }}
             >
-              Dafür steht Cleanw
+              Dafür steht Cleanwin
             </h2>
           </div>
           <div
