@@ -536,6 +536,187 @@ export default function CleanWinPage() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section
+        style={{
+          backgroundColor: "#f9fafb",
+          padding: "24px 0",
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1152px",
+            margin: "0 auto",
+            padding: "0 16px",
+          }}
+        >
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "48px",
+              alignItems: "center",
+            }}
+          >
+            {/* Text Content */}
+            <div>
+              <h2
+                style={{
+                  fontSize: "28px",
+                  fontWeight: "700",
+                  color: "#111827",
+                  marginBottom: "24px",
+                  marginTop: "23.24px",
+                }}
+              >
+                Regionaler Reinigungsbetrieb für Privat, Gewerbe & Industrie
+              </h2>
+              <p
+                style={{
+                  color: "#6b7280",
+                  lineHeight: "28px",
+                  marginBottom: "24px",
+                  marginTop: "16px",
+                }}
+              >
+                CleanWin ist Ihr vertrauensvoller Partner für professionelle
+                Reinigungsdienstleistungen in der Region Winterthur. Seit über
+                10 Jahren bieten wir umfassende Lösungen für Fensterreinigung,
+                Büroreinigung, Fassadenreinigung und Spezialreinigungen. Unser
+                erfahrenes Team arbeitet mit modernsten Techniken und
+                umweltfreundlichen Produkten, um höchste Qualität und
+                Kundenzufriedenheit zu gewährleisten.
+              </p>
+              <a
+                href="#services"
+                style={{
+                  display: "inline-block",
+                  backgroundColor: "#10a0a4",
+                  color: "white",
+                  padding: "12px 32px",
+                  borderRadius: "9999px",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  transition: "background-color 0.3s",
+                }}
+              >
+                Leistungen Entdecken
+              </a>
+            </div>
+
+            {/* Image Gallery */}
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "16px",
+                width: "100%",
+              }}
+            >
+              <div
+                style={{
+                  borderRadius: "16px",
+                  height: "120px",
+                  overflow: "hidden",
+                  position: "relative",
+                }}
+              >
+                <img
+                  src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FFirmenwagen_vor_Geba%25CC%2588ude_zz0m0s.avif&w=750&q=75"
+                  alt="Cleaning Service"
+                  loading="lazy"
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+              <div
+                style={{
+                  borderRadius: "16px",
+                  height: "120px",
+                  overflow: "hidden",
+                  position: "relative",
+                }}
+              >
+                <img
+                  src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FGlasreinigung_aussen_Flaach_ec1fre.avif&w=750&q=75"
+                  alt="Office Cleaning"
+                  loading="lazy"
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+              <div
+                style={{
+                  borderRadius: "16px",
+                  height: "120px",
+                  overflow: "hidden",
+                  position: "relative",
+                }}
+              >
+                <img
+                  src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752005906%2Fhomepage-herosection_fsxqwc.avif&w=750&q=75"
+                  alt="Professional Cleaning"
+                  loading="lazy"
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+              <div
+                style={{
+                  borderRadius: "16px",
+                  height: "120px",
+                  overflow: "hidden",
+                  position: "relative",
+                }}
+              >
+                <img
+                  src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FFassadenreinigung_Sichtbeton_vm1lsq.avif&w=750&q=75"
+                  alt="Home Cleaning"
+                  loading="lazy"
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section
         id="services"
