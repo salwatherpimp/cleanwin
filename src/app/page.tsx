@@ -2327,83 +2327,266 @@ export default function CleanWinPage() {
       <footer
         style={{
           backgroundColor: "#111827",
-          color: "#ffffff",
-          padding: "48px 0",
+          color: "white",
+          position: "relative",
         }}
       >
         <div
           style={{
-            maxWidth: "1280px",
+            maxWidth: "1152px",
             margin: "0 auto",
-            padding: "0 16px",
+            padding: "48px 16px",
           }}
         >
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
               gap: "32px",
-              textAlign: "center",
             }}
           >
+            {/* Company Information */}
             <div>
               <h3
                 style={{
-                  fontSize: "24px",
-                  fontWeight: "bold",
+                  fontSize: "18.72px",
+                  fontWeight: "700",
                   marginBottom: "16px",
+                  marginTop: "0px",
                 }}
               >
-                CleanWin
+                CleanWin GmbH
               </h3>
-              <p
-                style={{
-                  color: "#9ca3af",
-                  marginBottom: "16px",
-                  lineHeight: "1.6",
-                }}
-              >
-                Professionelle Reinigungsdienste in Winterthur mit über 10
-                Jahren Erfahrung.
-              </p>
-            </div>
-            <div>
-              <h4
-                style={{
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  marginBottom: "16px",
-                }}
-              >
-                Kontakt
-              </h4>
               <div
                 style={{
                   color: "#9ca3af",
+                  fontSize: "14px",
+                  marginBottom: "16px",
+                }}
+              >
+                <div>Rychenbergstrasse 223</div>
+                <div>8404 Winterthur</div>
+                <div>Schweiz</div>
+              </div>
+              <div
+                style={{
                   display: "flex",
                   flexDirection: "column",
                   gap: "8px",
                 }}
               >
-                <div>CleanWin GmbH</div>
-                <div>Winterthur, Schweiz</div>
-                <div>info@cleanwin.ch</div>
-                <div>+41 52 XXX XX XX</div>
+                <a
+                  href="tel:+41522020100"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    color: "#9ca3af",
+                    textDecoration: "none",
+                    transition: "color 0.2s",
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "16px",
+                      height: "16px",
+                      color: "#9ca3af",
+                      stroke: "#9ca3af",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                  </svg>
+                  <span>+41 52 202 01 00</span>
+                </a>
+                <div
+                  style={{
+                    color: "#9ca3af",
+                    fontSize: "14px",
+                  }}
+                >
+                  info@cleanwin.ch
+                </div>
+              </div>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4
+                style={{
+                  fontWeight: "500",
+                  marginBottom: "16px",
+                  marginTop: "21.28px",
+                }}
+              >
+                Leistungen
+              </h4>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "8px",
+                }}
+              >
+                <a
+                  href="https://cleanwin.vercel.app/leistungen/fensterreinigung"
+                  style={{
+                    color: "#9ca3af",
+                    fontSize: "14px",
+                    textDecoration: "none",
+                    transition: "color 0.2s",
+                  }}
+                >
+                  Fensterreinigung
+                </a>
+                <a
+                  href="https://cleanwin.vercel.app/leistungen/bueroreinigung"
+                  style={{
+                    color: "#9ca3af",
+                    fontSize: "14px",
+                    textDecoration: "none",
+                    transition: "color 0.2s",
+                  }}
+                >
+                  Büroreinigung
+                </a>
+                <a
+                  href="https://cleanwin.vercel.app/leistungen/fassadenreinigung"
+                  style={{
+                    color: "#9ca3af",
+                    fontSize: "14px",
+                    textDecoration: "none",
+                    transition: "color 0.2s",
+                  }}
+                >
+                  Fassadenreinigung
+                </a>
+                <a
+                  href="https://cleanwin.vercel.app/leistungen/umzugsreinigung"
+                  style={{
+                    color: "#9ca3af",
+                    fontSize: "14px",
+                    textDecoration: "none",
+                    transition: "color 0.2s",
+                  }}
+                >
+                  Umzugsreinigung
+                </a>
+                <a
+                  href="https://cleanwin.vercel.app/leistungen/baureinigung"
+                  style={{
+                    color: "#9ca3af",
+                    fontSize: "14px",
+                    textDecoration: "none",
+                    transition: "color 0.2s",
+                  }}
+                >
+                  Baureinigung
+                </a>
+                <a
+                  href="https://cleanwin.vercel.app/leistungen/weitere-dienstleistungen"
+                  style={{
+                    color: "#9ca3af",
+                    fontSize: "14px",
+                    textDecoration: "none",
+                    transition: "color 0.2s",
+                  }}
+                >
+                  Weitere Dienstleistungen
+                </a>
+              </div>
+            </div>
+
+            {/* Service Areas */}
+            <div>
+              <h4
+                style={{
+                  fontWeight: "500",
+                  marginBottom: "16px",
+                  marginTop: "21.28px",
+                }}
+              >
+                Servicegebiete
+              </h4>
+              <div
+                style={{
+                  color: "#9ca3af",
+                  fontSize: "14px",
+                }}
+              >
+                <div>Winterthur, Zürich, Basel</div>
+                <div>Effretikon, Seuzach</div>
+                <div>Wiesendangen, Neftenbach</div>
+                <div>Frauenfeld, Uster</div>
+              </div>
+            </div>
+
+            {/* Additional Services */}
+            <div>
+              <h4
+                style={{
+                  fontWeight: "500",
+                  marginBottom: "16px",
+                  marginTop: "21.28px",
+                }}
+              >
+                Weitere Services
+              </h4>
+              <div
+                style={{
+                  color: "#9ca3af",
+                  fontSize: "14px",
+                }}
+              >
+                <div>24/7 Notfallreinigung</div>
+                <div>Kostenlose Besichtigung</div>
+                <div>Individuelle Angebote</div>
+                <div>Regelmäßige Termine</div>
               </div>
             </div>
           </div>
+
+          {/* Bottom Section */}
           <div
             style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: "16px",
               borderTop: "1px solid #374151",
               marginTop: "32px",
               paddingTop: "32px",
-              textAlign: "center",
+              fontSize: "14px",
               color: "#9ca3af",
             }}
           >
-            <p style={{ margin: 0 }}>
-              &copy; 2024 CleanWin. Alle Rechte vorbehalten.
-            </p>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                flexWrap: "wrap",
+                gap: "16px",
+              }}
+            >
+              <span>© 2025 CleanWin. Alle Rechte vorbehalten.</span>
+              <span>Gemacht mit ♥️ in Winterthur</span>
+            </div>
+            <a
+              href="https://cleanwin.vercel.app/datenschutz"
+              style={{
+                color: "#9ca3af",
+                fontSize: "14px",
+                textDecoration: "none",
+                transition: "color 0.2s",
+              }}
+            >
+              Datenschutzerklärung
+            </a>
           </div>
         </div>
       </footer>
