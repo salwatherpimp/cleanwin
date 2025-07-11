@@ -40,7 +40,6 @@ export default function CleanWinPage() {
               style={{
                 display: "flex",
                 gap: "32px",
-                "@media (max-width: 768px)": { display: "none" },
               }}
             >
               <a
