@@ -110,6 +110,7 @@ export default function CleanWinPage() {
               gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "48px",
               alignItems: "center",
+              "@media (min-width: 1024px)": {
                 gridTemplateColumns: "1fr 1fr",
               },
             }}
@@ -145,6 +146,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   flexDirection: "column",
                   gap: "16px",
+                  "@media (min-width: 640px)": {
                     flexDirection: "row",
                   },
                 }}
@@ -906,6 +908,7 @@ export default function CleanWinPage() {
               gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "48px",
               alignItems: "center",
+              "@media (min-width: 1024px)": {
                 gridTemplateColumns: "1fr 1fr",
               },
             }}
@@ -935,7 +938,8 @@ export default function CleanWinPage() {
               <div
                 style={{
                   display: "flex",
-                  flexDirection: "column",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
                   gap: "16px",
                 }}
               >
