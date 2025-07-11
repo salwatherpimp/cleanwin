@@ -102,9 +102,6 @@ export default function CleanWinPage() {
               display: "flex",
               alignItems: "center",
               gap: "32px",
-              "@media (max-width: 768px)": {
-                display: "none",
-              },
             }}
             className="hidden md:flex"
           >
@@ -466,7 +463,7 @@ export default function CleanWinPage() {
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
             }}
           >
-            Ihr Reinigungsservice in Winterthur für Präzision, Sauberkeit &
+            Ihr Reinigungsservice in Winterthur f��r Präzision, Sauberkeit &
             Begeisterung
           </h1>
 
