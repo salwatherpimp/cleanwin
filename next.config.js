@@ -5,6 +5,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   reactStrictMode: true,
+  allowedDevOrigins: ["*"],
   images: {
     remotePatterns: [
       {
@@ -33,9 +34,6 @@ const nextConfig = {
   generateEtags: true,
   // Performance Optimierungen
   // Dev server configuration
-  experimental: {
-    allowedDevOrigins: ["*"],
-  },
 };
 
 module.exports = nextConfig;
