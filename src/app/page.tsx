@@ -112,7 +112,7 @@ export default function CleanWinPage() {
               alignItems: "center",
               
                 
-              },
+              
             }}
           >
             <div>
@@ -148,7 +148,7 @@ export default function CleanWinPage() {
                   gap: "16px",
                   
                     
-                  },
+                  
                 }}
               >
                 <button
@@ -910,7 +910,7 @@ export default function CleanWinPage() {
               alignItems: "center",
               
                 
-              },
+              
             }}
           >
             <div>
