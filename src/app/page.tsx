@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function CleanWinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,8 +80,8 @@ export default function CleanWinPage() {
               transition: "transform 0.3s",
             }}
           >
-            <img
-              src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fv1752003683%2Fcleanwin-logo_ysvfv0.avif&w=640&q=75"
+            <Image
+              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.png"
               alt="CleanWin Logo"
               width={200}
               height={56}
@@ -411,17 +412,11 @@ export default function CleanWinPage() {
         }}
       >
         {/* Background Image */}
-        <img
+        <Image
           src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1200,h_600,c_fill,f_auto,q_auto/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
           alt="CleanWin Hero Background"
+          fill
           style={{
-            position: "absolute",
-            top: "0px",
-            left: "0px",
-            right: "0px",
-            bottom: "0px",
-            width: "100%",
-            height: "100%",
             objectFit: "cover",
             objectPosition: "60% 50%",
           }}
@@ -938,18 +933,11 @@ export default function CleanWinPage() {
                   position: "relative",
                 }}
               >
-                <img
+                <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FFirmenwagen_vor_Geba%25CC%2588ude_zz0m0s.avif&w=750&q=75"
                   alt="Cleaning Service"
-                  loading="lazy"
+                  fill
                   style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    width: "100%",
-                    height: "100%",
                     objectFit: "cover",
                   }}
                 />
@@ -962,18 +950,11 @@ export default function CleanWinPage() {
                   position: "relative",
                 }}
               >
-                <img
+                <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FGlasreinigung_aussen_Flaach_ec1fre.avif&w=750&q=75"
                   alt="Office Cleaning"
-                  loading="lazy"
+                  fill
                   style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    width: "100%",
-                    height: "100%",
                     objectFit: "cover",
                   }}
                 />
@@ -986,18 +967,11 @@ export default function CleanWinPage() {
                   position: "relative",
                 }}
               >
-                <img
+                <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752005906%2Fhomepage-herosection_fsxqwc.avif&w=750&q=75"
                   alt="Professional Cleaning"
-                  loading="lazy"
+                  fill
                   style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    width: "100%",
-                    height: "100%",
                     objectFit: "cover",
                   }}
                 />
@@ -1010,18 +984,11 @@ export default function CleanWinPage() {
                   position: "relative",
                 }}
               >
-                <img
+                <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FFassadenreinigung_Sichtbeton_vm1lsq.avif&w=750&q=75"
                   alt="Home Cleaning"
-                  loading="lazy"
+                  fill
                   style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    width: "100%",
-                    height: "100%",
                     objectFit: "cover",
                   }}
                 />
@@ -1221,9 +1188,11 @@ export default function CleanWinPage() {
               }}
             >
               <div style={{ position: "relative", overflow: "hidden" }}>
-                <img
+                <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-malen_gdvdci.avif"
                   alt="Fensterreinigung"
+                  width={400}
+                  height={192}
                   style={{
                     width: "100%",
                     height: "192px",
@@ -1288,9 +1257,11 @@ export default function CleanWinPage() {
               }}
             >
               <div style={{ position: "relative", overflow: "hidden" }}>
-                <img
+                <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1750015382/altbauwohnung-meilen_lrttoc.avif"
                   alt="Büroreinigung"
+                  width={400}
+                  height={192}
                   style={{
                     width: "100%",
                     height: "192px",
@@ -1355,9 +1326,11 @@ export default function CleanWinPage() {
               }}
             >
               <div style={{ position: "relative", overflow: "hidden" }}>
-                <img
+                <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif"
                   alt="Fassadenreinigung"
+                  width={400}
+                  height={192}
                   style={{
                     width: "100%",
                     height: "192px",
@@ -1422,9 +1395,11 @@ export default function CleanWinPage() {
               }}
             >
               <div style={{ position: "relative", overflow: "hidden" }}>
-                <img
+                <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-tapezieren_jvtgyo.avif"
                   alt="Umzugsreinigung"
+                  width={400}
+                  height={192}
                   style={{
                     width: "100%",
                     height: "192px",
@@ -1489,9 +1464,11 @@ export default function CleanWinPage() {
               }}
             >
               <div style={{ position: "relative", overflow: "hidden" }}>
-                <img
+                <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-spritzen_ij8jsj.avif"
                   alt="Baureinigung"
+                  width={400}
+                  height={192}
                   style={{
                     width: "100%",
                     height: "192px",
@@ -1556,9 +1533,11 @@ export default function CleanWinPage() {
               }}
             >
               <div style={{ position: "relative", overflow: "hidden" }}>
-                <img
+                <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif"
                   alt="Weitere Dienstleistungen"
+                  width={400}
+                  height={192}
                   style={{
                     width: "100%",
                     height: "192px",
@@ -2144,10 +2123,9 @@ export default function CleanWinPage() {
                         color: "rgb(31, 41, 55)",
                         fontSize: "14px",
                         fontStyle: "italic",
-                        height: "63px",
+                        height: "44px",
                         lineHeight: "21px",
                         marginBottom: "12px",
-                        height: "44px",
                         minHeight: "44px",
                         overflowWrap: "break-word",
                         overflowX: "hidden",
@@ -2157,13 +2135,13 @@ export default function CleanWinPage() {
                         wordWrap: "break-word",
                       }}
                     >
-                      <span>"</span>
+                      <span>&quot;</span>
                       <span>
                         Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich
                         bin sehr zufrieden mit der sorgfältigen Ausführung und
                         werde far...
                       </span>
-                      <span>"</span>
+                      <span>&quot;</span>
                     </div>
                     <div
                       style={{
@@ -2286,10 +2264,9 @@ export default function CleanWinPage() {
                         color: "rgb(31, 41, 55)",
                         fontSize: "14px",
                         fontStyle: "italic",
-                        height: "63px",
+                        height: "44px",
                         lineHeight: "21px",
                         marginBottom: "12px",
-                        height: "44px",
                         minHeight: "44px",
                         overflowWrap: "break-word",
                         overflowX: "hidden",
@@ -2299,13 +2276,13 @@ export default function CleanWinPage() {
                         wordWrap: "break-word",
                       }}
                     >
-                      <span>"</span>
+                      <span>&quot;</span>
                       <span>
                         Effizient, sehr professionell, sauber und zu einem
                         zahlbaren Preis: So darf ich die Arbeit dieser beiden
                         sympathischen B...
                       </span>
-                      <span>"</span>
+                      <span>&quot;</span>
                     </div>
                     <div
                       style={{
@@ -2427,10 +2404,9 @@ export default function CleanWinPage() {
                         color: "rgb(31, 41, 55)",
                         fontSize: "14px",
                         fontStyle: "italic",
-                        height: "63px",
+                        height: "44px",
                         lineHeight: "21px",
                         marginBottom: "12px",
-                        height: "44px",
                         minHeight: "44px",
                         overflowWrap: "break-word",
                         overflowX: "hidden",
@@ -2440,13 +2416,13 @@ export default function CleanWinPage() {
                         wordWrap: "break-word",
                       }}
                     >
-                      <span>"</span>
+                      <span>&quot;</span>
                       <span>
                         Für unser neues Restaurant, haben wir ein passendes
                         Farbkonzept gesucht. Durch die Kompetente Beratung von
                         Herr Niedehau...
                       </span>
-                      <span>"</span>
+                      <span>&quot;</span>
                     </div>
                     <div
                       style={{
