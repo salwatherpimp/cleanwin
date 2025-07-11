@@ -925,11 +925,8 @@ export default function CleanWinPage() {
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
-                gap: "12px",
+                gap: "16px",
                 width: "100%",
-                "@media (min-width: 768px)": {
-                  gap: "16px",
-                },
               }}
               className="grid grid-cols-2 gap-3 md:gap-4"
             >
