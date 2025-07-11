@@ -868,10 +868,15 @@ export default function CleanWinPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "48px",
+              gridTemplateColumns: "1fr",
+              gap: "32px",
               alignItems: "center",
+              "@media (min-width: 768px)": {
+                gridTemplateColumns: "1fr 1fr",
+                gap: "48px",
+              },
             }}
+            className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12"
           >
             {/* Text Content */}
             <div>
