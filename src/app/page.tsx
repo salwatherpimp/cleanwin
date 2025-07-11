@@ -1024,7 +1024,7 @@ export default function CleanWinPage() {
                 border: "1px solid rgba(255, 255, 255, 0.2)",
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                padding: "12px",
+                padding: "8px",
               }}
             >
               <div
@@ -1095,7 +1095,7 @@ export default function CleanWinPage() {
                 border: "1px solid rgba(255, 255, 255, 0.2)",
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                padding: "12px",
+                padding: "8px",
               }}
             >
               <div
@@ -1165,7 +1165,7 @@ export default function CleanWinPage() {
                 border: "1px solid rgba(255, 255, 255, 0.2)",
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                padding: "12px",
+                padding: "8px",
               }}
             >
               <div
@@ -1236,7 +1236,7 @@ export default function CleanWinPage() {
                 border: "1px solid rgba(255, 255, 255, 0.2)",
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                padding: "12px",
+                padding: "8px",
               }}
             >
               <div
@@ -2436,7 +2436,7 @@ export default function CleanWinPage() {
                     width: "100%",
                     backgroundColor: "#2563eb",
                     color: "#ffffff",
-                    padding: "12px",
+                    padding: "8px",
                     borderRadius: "8px",
                     fontWeight: "600",
                     border: "none",
