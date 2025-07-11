@@ -228,7 +228,7 @@ export default function CleanWinPage() {
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
-          paddingTop: "80px",
+          paddingTop: "0px",
         }}
       >
         {/* Background Image */}
