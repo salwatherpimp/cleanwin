@@ -108,7 +108,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
       name: "Fensterreinigung",
       href: "/leistungen/fensterreinigung",
       image:
-        "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-malen_gdvdci.avif",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_Close-up_of_a_hand_cleaning_a_glass_window_with_a_s_9d456c2b-edad-45fb-ad0d-a857626340ec_3_q2fskk.avif",
       description:
         "Kristallklare Fenster mit professioneller Reinigungstechnik.",
     },
