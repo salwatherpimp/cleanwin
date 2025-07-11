@@ -871,7 +871,7 @@ export default function CleanWinPage() {
               textAlign: "center",
             }}
           >
-            Über 500 Firmen & Haushalte die mit Cleanwin reinigen
+            +500 Firmen &amp; Haushalte reinigen mit Cleanwin
           </p>
           <div
             style={{
