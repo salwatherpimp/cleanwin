@@ -110,7 +110,7 @@ export default function CleanWinPage() {
               gridTemplateColumns: "1fr",
               gap: "48px",
               alignItems: "center",
-              "@media (min-width: 1024px)": {
+              
                 gridTemplateColumns: "1fr 1fr",
               },
             }}
@@ -908,7 +908,7 @@ export default function CleanWinPage() {
               gridTemplateColumns: "1fr",
               gap: "48px",
               alignItems: "center",
-              "@media (min-width: 1024px)": {
+              
                 gridTemplateColumns: "1fr 1fr",
               },
             }}
