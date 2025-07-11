@@ -19,18 +19,35 @@ export const metadata: Metadata = {
     template: "%s | Your Website",
   },
   description: "Professional website built with Builder.io Fusion",
+  keywords: ["website", "business", "service"], // Add your keywords
+  authors: [{ name: "Your Company" }],
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
     siteName: "Your Website",
+    images: ["/og-image.jpg"], // Add your OG image
   },
   twitter: {
     card: "summary_large_image",
+    creator: "@yourhandle", // Add your Twitter handle
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
