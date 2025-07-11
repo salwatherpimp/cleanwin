@@ -218,7 +218,7 @@ export default function CleanWinPage() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             style={{
-              display: "flex",
+              display: "none",
               alignItems: "center",
               justifyContent: "center",
               width: "40px",
@@ -1256,8 +1256,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      color: "#0F766E",
+                      stroke: "#0F766E",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
@@ -1333,8 +1333,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      color: "#0F766E",
+                      stroke: "#0F766E",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
@@ -1409,8 +1409,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      color: "#0F766E",
+                      stroke: "#0F766E",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
@@ -1486,8 +1486,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      color: "#0F766E",
+                      stroke: "#0F766E",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
@@ -2036,8 +2036,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      color: "#0F766E",
+                      stroke: "#0F766E",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
@@ -2113,8 +2113,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      color: "#0F766E",
+                      stroke: "#0F766E",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
@@ -2190,8 +2190,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      color: "#0F766E",
+                      stroke: "#0F766E",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
@@ -2266,8 +2266,8 @@ export default function CleanWinPage() {
                     style={{
                       width: "20px",
                       height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      color: "#0F766E",
+                      stroke: "#0F766E",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
