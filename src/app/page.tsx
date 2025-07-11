@@ -1024,7 +1024,7 @@ export default function CleanWinPage() {
                 border: "1px solid rgba(255, 255, 255, 0.2)",
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                padding: "16px",
+                padding: "12px",
               }}
             >
               <div
@@ -1032,7 +1032,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "8px",
+                  marginBottom: "4px",
                 }}
               >
                 <h3
@@ -1079,7 +1079,7 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "22.75px",
+                  lineHeight: "20px",
                 }}
               >
                 Wir sind in Winterthur zuhause. Persönlich, nah und immer für
@@ -1095,7 +1095,7 @@ export default function CleanWinPage() {
                 border: "1px solid rgba(255, 255, 255, 0.2)",
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                padding: "16px",
+                padding: "12px",
               }}
             >
               <div
@@ -1103,7 +1103,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "8px",
+                  marginBottom: "4px",
                 }}
               >
                 <h3
@@ -1149,7 +1149,7 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "22.75px",
+                  lineHeight: "20px",
                 }}
               >
                 Volle Versicherung und geschultes Team - damit Sie sorgenfrei
@@ -1165,7 +1165,7 @@ export default function CleanWinPage() {
                 border: "1px solid rgba(255, 255, 255, 0.2)",
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                padding: "16px",
+                padding: "12px",
               }}
             >
               <div
@@ -1173,7 +1173,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "8px",
+                  marginBottom: "4px",
                 }}
               >
                 <h3
@@ -1220,7 +1220,7 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "22.75px",
+                  lineHeight: "20px",
                 }}
               >
                 Umweltfreundliche Reinigungs-methode durch Umkehrosmose-Technik.
@@ -1236,7 +1236,7 @@ export default function CleanWinPage() {
                 border: "1px solid rgba(255, 255, 255, 0.2)",
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                padding: "16px",
+                padding: "12px",
               }}
             >
               <div
@@ -1244,7 +1244,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "8px",
+                  marginBottom: "4px",
                 }}
               >
                 <h3
@@ -1291,7 +1291,7 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "22.75px",
+                  lineHeight: "20px",
                 }}
               >
                 Von früh bis spät - wir richten uns stet nach Ihrem Alltag.
@@ -1384,7 +1384,7 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "4px",
                     marginTop: "0px",
                   }}
                 >
@@ -1449,7 +1449,7 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "4px",
                     marginTop: "0px",
                   }}
                 >
@@ -1514,7 +1514,7 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "4px",
                     marginTop: "0px",
                   }}
                 >
@@ -1579,7 +1579,7 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "4px",
                     marginTop: "0px",
                   }}
                 >
@@ -1644,7 +1644,7 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "4px",
                     marginTop: "0px",
                   }}
                 >
@@ -1709,7 +1709,7 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "4px",
                     marginTop: "0px",
                   }}
                 >
