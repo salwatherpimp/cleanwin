@@ -388,12 +388,16 @@ export default function CleanWinPage() {
       <section
         style={{
           position: "relative",
-          height: "480px",
-          minHeight: "420px",
+          height: "400px",
+          minHeight: "350px",
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
           paddingTop: "0px",
+          "@media (min-width: 768px)": {
+            height: "480px",
+            minHeight: "420px",
+          },
         }}
       >
         {/* Background Image */}
@@ -432,19 +436,26 @@ export default function CleanWinPage() {
             zIndex: 10,
             maxWidth: "1152px",
             margin: "0 auto",
-            padding: "80px 16px 24px",
+            padding: "60px 16px 24px",
             textAlign: "center",
             color: "white",
+            "@media (min-width: 768px)": {
+              padding: "80px 16px 24px",
+            },
           }}
         >
           <h1
             style={{
-              fontSize: "40px",
+              fontSize: "28px",
               fontWeight: "800",
-              lineHeight: "48px",
+              lineHeight: "36px",
               marginBottom: "16px",
               color: "white",
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
+              "@media (min-width: 768px)": {
+                fontSize: "40px",
+                lineHeight: "48px",
+              },
             }}
           >
             Ihr Reinigungsservice in Winterthur für Präzision, Sauberkeit &
@@ -453,13 +464,17 @@ export default function CleanWinPage() {
 
           <p
             style={{
-              fontSize: "20px",
-              lineHeight: "32px",
+              fontSize: "16px",
+              lineHeight: "24px",
               marginBottom: "24px",
               marginLeft: "auto",
               marginRight: "auto",
               maxWidth: "768px",
               color: "rgba(255, 255, 255, 0.95)",
+              "@media (min-width: 768px)": {
+                fontSize: "20px",
+                lineHeight: "32px",
+              },
             }}
           >
             Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere Räume,
