@@ -1195,7 +1195,7 @@ export default function CleanWinPage() {
                 textAlign: "center",
               }}
             >
-              Warum Cleanwin wählen?
+              Unsere Leistungen
             </h2>
           </div>
           <div
