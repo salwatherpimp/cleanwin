@@ -37,19 +37,6 @@ const nextConfig = {
   generateEtags: true,
   // Performance Optimierungen
   // Dev server configuration
-  webpack: (config, { dev }) => {
-    if (dev) {
-      config.watchOptions = {
-        ignored: ["**/node_modules", "**/.git"],
-        poll: false,
-      };
-      // Disable HMR completely in development
-      config.plugins = config.plugins.filter(
-        (plugin) => plugin.constructor.name !== "HotModuleReplacementPlugin",
-      );
-    }
-    return config;
-  },
 };
 
 module.exports = nextConfig;
