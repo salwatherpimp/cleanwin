@@ -1176,271 +1176,430 @@ export default function CleanWinPage() {
       {/* Services Section */}
       <section
         id="services"
-        style={{ padding: "80px 0", backgroundColor: "#ffffff" }}
+        style={{
+          backgroundColor: "#f9fafb",
+          padding: "20px 0",
+          position: "relative",
+        }}
       >
         <div
           style={{
-            maxWidth: "1280px",
+            maxWidth: "1152px",
             margin: "0 auto",
             padding: "0 16px",
           }}
         >
-          <div style={{ textAlign: "center", marginBottom: "64px" }}>
+          <div style={{ textAlign: "center" }}>
             <h2
               style={{
-                fontSize: "48px",
-                fontWeight: "bold",
+                fontSize: "28px",
+                fontWeight: "700",
                 color: "#111827",
-                marginBottom: "16px",
+                marginBottom: "24px",
+                marginTop: "23.24px",
+                textAlign: "center",
               }}
             >
-              Unsere Dienstleistungen
+              Unsere Leistungen
             </h2>
-            <p
-              style={{
-                fontSize: "20px",
-                color: "#4b5563",
-                maxWidth: "768px",
-                margin: "0 auto",
-              }}
-            >
-              Von Fensterreinigung bis zur Bauendreinigung – wir bieten
-              professionelle Reinigungslösungen für jeden Bedarf.
-            </p>
           </div>
-
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateColumns: "repeat(3, 1fr)",
               gap: "32px",
             }}
           >
-            {/* Service Cards */}
-            <div
+            {/* Fensterreinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/fensterreinigung"
               style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "12px",
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-                padding: "32px",
-                border: "1px solid #e5e7eb",
+                backgroundColor: "white",
+                borderRadius: "8px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                color: "rgb(0, 0, 238)",
+                cursor: "pointer",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s",
+                display: "block",
               }}
             >
-              <div
-                style={{
-                  width: "64px",
-                  height: "64px",
-                  backgroundColor: "#dbeafe",
-                  borderRadius: "8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "24px",
-                }}
-              >
-                <span style={{ fontSize: "32px", color: "#2563eb" }}>🪟</span>
+              <div style={{ position: "relative", overflow: "hidden" }}>
+                <img
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-malen_gdvdci.avif"
+                  alt="Fensterreinigung"
+                  style={{
+                    width: "100%",
+                    height: "192px",
+                    objectFit: "cover",
+                    display: "inline",
+                    transition: "transform 0.3s",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    backgroundImage:
+                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
               </div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  color: "#111827",
-                  marginBottom: "16px",
-                }}
-              >
-                Fensterreinigung
-              </h3>
-              <p
-                style={{
-                  color: "#4b5563",
-                  marginBottom: "24px",
-                  lineHeight: "1.6",
-                }}
-              >
-                Kristallklare Fenster mit professionellen Reinigungstechniken.
-                Sowohl für Privathaushalte als auch Gewerbeobjekte.
-              </p>
-            </div>
+              <div style={{ padding: "24px" }}>
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: "600",
+                    color: "#111827",
+                    marginBottom: "8px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Fensterreinigung
+                </h3>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#4b5563",
+                    marginBottom: "0px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Kristallklare Fenster mit professioneller Reinigungstechnik.
+                </p>
+              </div>
+            </a>
 
-            <div
+            {/* Büroreinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/bueroreinigung"
               style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "12px",
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-                padding: "32px",
-                border: "1px solid #e5e7eb",
+                backgroundColor: "white",
+                borderRadius: "8px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                color: "rgb(0, 0, 238)",
+                cursor: "pointer",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s",
+                display: "block",
               }}
             >
-              <div
-                style={{
-                  width: "64px",
-                  height: "64px",
-                  backgroundColor: "#dcfce7",
-                  borderRadius: "8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "24px",
-                }}
-              >
-                <span style={{ fontSize: "32px", color: "#16a34a" }}>🏢</span>
+              <div style={{ position: "relative", overflow: "hidden" }}>
+                <img
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1750015382/altbauwohnung-meilen_lrttoc.avif"
+                  alt="Büroreinigung"
+                  style={{
+                    width: "100%",
+                    height: "192px",
+                    objectFit: "cover",
+                    display: "inline",
+                    transition: "transform 0.3s",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    backgroundImage:
+                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
               </div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  color: "#111827",
-                  marginBottom: "16px",
-                }}
-              >
-                Büroreinigung
-              </h3>
-              <p
-                style={{
-                  color: "#4b5563",
-                  marginBottom: "24px",
-                  lineHeight: "1.6",
-                }}
-              >
-                Hygienische und gründliche Reinigung für Ihren Arbeitsplatz.
-                Regelmäßige oder einmalige Reinigungsdienste.
-              </p>
-            </div>
+              <div style={{ padding: "24px" }}>
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: "600",
+                    color: "#111827",
+                    marginBottom: "8px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Büroreinigung
+                </h3>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#4b5563",
+                    marginBottom: "0px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Hygienische und gründliche Büroreinigung für Ihr Unternehmen.
+                </p>
+              </div>
+            </a>
 
-            <div
+            {/* Fassadenreinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/fassadenreinigung"
               style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "12px",
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-                padding: "32px",
-                border: "1px solid #e5e7eb",
+                backgroundColor: "white",
+                borderRadius: "8px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                color: "rgb(0, 0, 238)",
+                cursor: "pointer",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s",
+                display: "block",
               }}
             >
-              <div
-                style={{
-                  width: "64px",
-                  height: "64px",
-                  backgroundColor: "#f3e8ff",
-                  borderRadius: "8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "24px",
-                }}
-              >
-                <span style={{ fontSize: "32px", color: "#9333ea" }}>🏠</span>
+              <div style={{ position: "relative", overflow: "hidden" }}>
+                <img
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif"
+                  alt="Fassadenreinigung"
+                  style={{
+                    width: "100%",
+                    height: "192px",
+                    objectFit: "cover",
+                    display: "inline",
+                    transition: "transform 0.3s",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    backgroundImage:
+                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
               </div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  color: "#111827",
-                  marginBottom: "16px",
-                }}
-              >
-                Fassadenreinigung
-              </h3>
-              <p
-                style={{
-                  color: "#4b5563",
-                  marginBottom: "24px",
-                  lineHeight: "1.6",
-                }}
-              >
-                Schonende Reinigungsverfahren für alle Fassadentypen. Erhaltung
-                und Pflege Ihrer Gebäudehülle.
-              </p>
-            </div>
+              <div style={{ padding: "24px" }}>
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: "600",
+                    color: "#111827",
+                    marginBottom: "8px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Fassadenreinigung
+                </h3>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#4b5563",
+                    marginBottom: "0px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Schonende Fassadenreinigung für alle Oberflächentypen.
+                </p>
+              </div>
+            </a>
 
-            <div
+            {/* Umzugsreinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/umzugsreinigung"
               style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "12px",
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-                padding: "32px",
-                border: "1px solid #e5e7eb",
+                backgroundColor: "white",
+                borderRadius: "8px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                color: "rgb(0, 0, 238)",
+                cursor: "pointer",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s",
+                display: "block",
               }}
             >
-              <div
-                style={{
-                  width: "64px",
-                  height: "64px",
-                  backgroundColor: "#fed7aa",
-                  borderRadius: "8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "24px",
-                }}
-              >
-                <span style={{ fontSize: "32px", color: "#ea580c" }}>📦</span>
+              <div style={{ position: "relative", overflow: "hidden" }}>
+                <img
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-tapezieren_jvtgyo.avif"
+                  alt="Umzugsreinigung"
+                  style={{
+                    width: "100%",
+                    height: "192px",
+                    objectFit: "cover",
+                    display: "inline",
+                    transition: "transform 0.3s",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    backgroundImage:
+                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
               </div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  color: "#111827",
-                  marginBottom: "16px",
-                }}
-              >
-                Auszugsreinigung
-              </h3>
-              <p
-                style={{
-                  color: "#4b5563",
-                  marginBottom: "24px",
-                  lineHeight: "1.6",
-                }}
-              >
-                Umfassende Endreinigung für einen stressfreien Umzug.
-                Garantierte Abnahme durch den Vermieter.
-              </p>
-            </div>
+              <div style={{ padding: "24px" }}>
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: "600",
+                    color: "#111827",
+                    marginBottom: "8px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Umzugsreinigung
+                </h3>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#4b5563",
+                    marginBottom: "0px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Professionelle Endreinigung für Ihren stressfreien Umzug.
+                </p>
+              </div>
+            </a>
 
-            <div
+            {/* Baureinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/baureinigung"
               style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "12px",
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-                padding: "32px",
-                border: "1px solid #e5e7eb",
+                backgroundColor: "white",
+                borderRadius: "8px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                color: "rgb(0, 0, 238)",
+                cursor: "pointer",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s",
+                display: "block",
               }}
             >
-              <div
-                style={{
-                  width: "64px",
-                  height: "64px",
-                  backgroundColor: "#fecaca",
-                  borderRadius: "8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "24px",
-                }}
-              >
-                <span style={{ fontSize: "32px", color: "#dc2626" }}>🔨</span>
+              <div style={{ position: "relative", overflow: "hidden" }}>
+                <img
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-spritzen_ij8jsj.avif"
+                  alt="Baureinigung"
+                  style={{
+                    width: "100%",
+                    height: "192px",
+                    objectFit: "cover",
+                    display: "inline",
+                    transition: "transform 0.3s",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    backgroundImage:
+                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
               </div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  color: "#111827",
-                  marginBottom: "16px",
-                }}
-              >
-                Bauendreinigung
-              </h3>
-              <p
-                style={{
-                  color: "#4b5563",
-                  marginBottom: "24px",
-                  lineHeight: "1.6",
-                }}
-              >
-                Detaillierte Reinigung nach Renovierungen oder Neubauten.
-                Entfernung von Baustaub und Materialresten.
-              </p>
-            </div>
+              <div style={{ padding: "24px" }}>
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: "600",
+                    color: "#111827",
+                    marginBottom: "8px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Baureinigung
+                </h3>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#4b5563",
+                    marginBottom: "0px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Gründliche Baureinigung nach Renovierung und Neubau.
+                </p>
+              </div>
+            </a>
+
+            {/* Weitere Dienstleistungen */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/weitere-dienstleistungen"
+              style={{
+                backgroundColor: "white",
+                borderRadius: "8px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                color: "rgb(0, 0, 238)",
+                cursor: "pointer",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s",
+                display: "block",
+              }}
+            >
+              <div style={{ position: "relative", overflow: "hidden" }}>
+                <img
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif"
+                  alt="Weitere Dienstleistungen"
+                  style={{
+                    width: "100%",
+                    height: "192px",
+                    objectFit: "cover",
+                    display: "inline",
+                    transition: "transform 0.3s",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    backgroundImage:
+                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
+              </div>
+              <div style={{ padding: "24px" }}>
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: "600",
+                    color: "#111827",
+                    marginBottom: "8px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Weitere Dienstleistungen
+                </h3>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#4b5563",
+                    marginBottom: "0px",
+                    marginTop: "0px",
+                  }}
+                >
+                  Erfahren Sie mehr über unsere Zusatzleistungen und
+                  Spezialdienste.
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
