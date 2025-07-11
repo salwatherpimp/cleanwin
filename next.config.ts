@@ -11,10 +11,10 @@ const nextConfig: NextConfig = {
   // Enable bundle analyzer in development
   bundlePagesRouterDependencies: true,
 
-  // Optimize CSS
-  experimental: {
-    optimizeCss: true,
-  },
+  // Remove CSS optimization for now due to critters dependency issue
+  // experimental: {
+  //   optimizeCss: true,
+  // },
 
   // Headers for better caching and SEO
   async headers() {
