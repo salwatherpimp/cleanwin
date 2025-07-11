@@ -146,7 +146,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   flexDirection: "column",
                   gap: "16px",
-                  "@media (min-width: 640px)": {
+                  
                     flexDirection: "row",
                   },
                 }}
