@@ -647,17 +647,13 @@ export default function CleanWinPage() {
           }}
         >
           <div
+            className="grid-mobile-3"
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr",
-              gap: "16px",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "32px",
               alignItems: "center",
-              "@media (min-width: 768px)": {
-                gridTemplateColumns: "repeat(3, 1fr)",
-                gap: "32px",
-              },
             }}
-            className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8"
           >
             {/* Pricing Card */}
             <div
