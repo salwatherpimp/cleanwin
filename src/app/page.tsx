@@ -630,7 +630,7 @@ export default function CleanWinPage() {
           backgroundColor: "#f9fafb",
           borderTop: "1px solid #e5e7eb",
           borderBottom: "1px solid #e5e7eb",
-          padding: "16px 0",
+          padding: "24px 0",
           overflow: "hidden",
         }}
       >
@@ -644,10 +644,15 @@ export default function CleanWinPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "32px",
+              gridTemplateColumns: "1fr",
+              gap: "16px",
               alignItems: "center",
+              "@media (min-width: 768px)": {
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "32px",
+              },
             }}
+            className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8"
           >
             {/* Pricing Card */}
             <div
