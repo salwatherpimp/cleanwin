@@ -701,7 +701,9 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "12px",
+                    height: "44px",
+                    minHeight: "44px",
                   }}
                 >
                   Reinigung ab CHF 199.-
@@ -765,7 +767,9 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "12px",
+                    height: "44px",
+                    minHeight: "44px",
                   }}
                 >
                   Kostenlose Fachberatung
@@ -829,7 +833,9 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "12px",
+                    height: "44px",
+                    minHeight: "44px",
                   }}
                 >
                   100% keine Schwarzarbeit
@@ -1250,7 +1256,9 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "12px",
+                    height: "44px",
+                    minHeight: "44px",
                     marginTop: "0px",
                   }}
                 >
@@ -1315,7 +1323,9 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "12px",
+                    height: "44px",
+                    minHeight: "44px",
                     marginTop: "0px",
                   }}
                 >
@@ -1380,7 +1390,9 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "12px",
+                    height: "44px",
+                    minHeight: "44px",
                     marginTop: "0px",
                   }}
                 >
@@ -1445,7 +1457,9 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "12px",
+                    height: "44px",
+                    minHeight: "44px",
                     marginTop: "0px",
                   }}
                 >
@@ -1510,7 +1524,9 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "12px",
+                    height: "44px",
+                    minHeight: "44px",
                     marginTop: "0px",
                   }}
                 >
@@ -1575,7 +1591,9 @@ export default function CleanWinPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "8px",
+                    marginBottom: "12px",
+                    height: "44px",
+                    minHeight: "44px",
                     marginTop: "0px",
                   }}
                 >
@@ -1658,13 +1676,16 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "8px",
+                  marginBottom: "12px",
+                  height: "44px",
+                  minHeight: "44px",
                 }}
               >
                 <h3
                   style={{
                     color: "#111827",
-                    fontSize: "19px",
+                    fontSize: "18px",
+                    lineHeight: "22px",
                     fontWeight: "600",
                     flexGrow: 1,
                   }}
@@ -1707,7 +1728,7 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "12px",
+                  marginTop: "0px",
                   flex: "1",
                 }}
               >
@@ -1736,13 +1757,16 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "8px",
+                  marginBottom: "12px",
+                  height: "44px",
+                  minHeight: "44px",
                 }}
               >
                 <h3
                   style={{
                     color: "#111827",
-                    fontSize: "19px",
+                    fontSize: "18px",
+                    lineHeight: "22px",
                     fontWeight: "600",
                     flexGrow: 1,
                   }}
@@ -1785,7 +1809,7 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "12px",
+                  marginTop: "0px",
                   flex: "1",
                 }}
               >
@@ -1814,13 +1838,16 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "8px",
+                  marginBottom: "12px",
+                  height: "44px",
+                  minHeight: "44px",
                 }}
               >
                 <h3
                   style={{
                     color: "#111827",
-                    fontSize: "19px",
+                    fontSize: "18px",
+                    lineHeight: "22px",
                     fontWeight: "600",
                     flexGrow: 1,
                   }}
@@ -1864,7 +1891,7 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "12px",
+                  marginTop: "0px",
                   flex: "1",
                 }}
               >
@@ -1893,13 +1920,16 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "8px",
+                  marginBottom: "12px",
+                  height: "44px",
+                  minHeight: "44px",
                 }}
               >
                 <h3
                   style={{
                     color: "#111827",
-                    fontSize: "19px",
+                    fontSize: "18px",
+                    lineHeight: "22px",
                     fontWeight: "600",
                     flexGrow: 1,
                   }}
@@ -1945,7 +1975,7 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "12px",
+                  marginTop: "0px",
                   flex: "1",
                 }}
               >
@@ -2049,7 +2079,9 @@ export default function CleanWinPage() {
                         alignItems: "center",
                         display: "flex",
                         gap: "12px",
-                        marginBottom: "8px",
+                        marginBottom: "12px",
+                        height: "44px",
+                        minHeight: "44px",
                       }}
                     >
                       <div
@@ -2078,7 +2110,9 @@ export default function CleanWinPage() {
                         <div
                           style={{
                             display: "flex",
-                            marginBottom: "8px",
+                            marginBottom: "12px",
+                            height: "44px",
+                            minHeight: "44px",
                           }}
                         >
                           {[...Array(5)].map((_, i) => (
@@ -2118,7 +2152,9 @@ export default function CleanWinPage() {
                         fontStyle: "italic",
                         height: "63px",
                         lineHeight: "21px",
-                        marginBottom: "8px",
+                        marginBottom: "12px",
+                        height: "44px",
+                        minHeight: "44px",
                         overflowWrap: "break-word",
                         overflowX: "hidden",
                         overflowY: "hidden",
@@ -2185,7 +2221,9 @@ export default function CleanWinPage() {
                         alignItems: "center",
                         display: "flex",
                         gap: "12px",
-                        marginBottom: "8px",
+                        marginBottom: "12px",
+                        height: "44px",
+                        minHeight: "44px",
                       }}
                     >
                       <div
@@ -2214,7 +2252,9 @@ export default function CleanWinPage() {
                         <div
                           style={{
                             display: "flex",
-                            marginBottom: "8px",
+                            marginBottom: "12px",
+                            height: "44px",
+                            minHeight: "44px",
                           }}
                         >
                           {[...Array(5)].map((_, i) => (
@@ -2254,7 +2294,9 @@ export default function CleanWinPage() {
                         fontStyle: "italic",
                         height: "63px",
                         lineHeight: "21px",
-                        marginBottom: "8px",
+                        marginBottom: "12px",
+                        height: "44px",
+                        minHeight: "44px",
                         overflowWrap: "break-word",
                         overflowX: "hidden",
                         overflowY: "hidden",
@@ -2320,7 +2362,9 @@ export default function CleanWinPage() {
                         alignItems: "center",
                         display: "flex",
                         gap: "12px",
-                        marginBottom: "8px",
+                        marginBottom: "12px",
+                        height: "44px",
+                        minHeight: "44px",
                       }}
                     >
                       <div
@@ -2349,7 +2393,9 @@ export default function CleanWinPage() {
                         <div
                           style={{
                             display: "flex",
-                            marginBottom: "8px",
+                            marginBottom: "12px",
+                            height: "44px",
+                            minHeight: "44px",
                           }}
                         >
                           {[...Array(5)].map((_, i) => (
@@ -2389,7 +2435,9 @@ export default function CleanWinPage() {
                         fontStyle: "italic",
                         height: "63px",
                         lineHeight: "21px",
-                        marginBottom: "8px",
+                        marginBottom: "12px",
+                        height: "44px",
+                        minHeight: "44px",
                         overflowWrap: "break-word",
                         overflowX: "hidden",
                         overflowY: "hidden",
