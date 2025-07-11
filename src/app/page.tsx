@@ -81,7 +81,7 @@ export default function CleanWinPage() {
             }}
           >
             <Image
-              src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fv1752003683%2Fcleanwin-logo_ysvfv0.avif&w=640&q=75"
+              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.png"
               alt="CleanWin Logo"
               width={200}
               height={56}
