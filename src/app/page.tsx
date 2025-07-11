@@ -20,7 +20,6 @@ export default function CleanWinPage() {
       style={{
         minHeight: "100vh",
         backgroundColor: "#ffffff",
-        paddingTop: "88px",
       }}
     >
       {/* Header Navigation */}
