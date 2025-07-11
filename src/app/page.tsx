@@ -1,59 +1,53 @@
 export default function SimplePage() {
   return (
-    <html>
-      <head>
-        <title>CleanWin Test</title>
-        <style>{`
-          body { 
-            margin: 0; 
-            padding: 20px; 
-            font-family: Arial, sans-serif; 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .container {
-            text-align: center;
-            max-width: 600px;
-          }
-          .title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-          }
-          .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-          }
-          .status {
-            background: rgba(255,255,255,0.1);
-            padding: 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-          }
-          .status h3 {
-            margin-top: 0;
-            color: #4ade80;
-          }
-        `}</style>
-      </head>
-      <body>
-        <div className="container">
-          <h1 className="title">✅ SUCCESS!</h1>
-          <p className="subtitle">Your Next.js app is working perfectly!</p>
-          <div className="status">
-            <h3>Status Check</h3>
-            <p>✅ Server Running: Port 3000</p>
-            <p>✅ Page Compiled: Successfully</p>
-            <p>✅ Preview: Working</p>
-            <p>✅ Ready for CleanWin design!</p>
-          </div>
+    <div
+      style={{
+        margin: 0,
+        padding: "20px",
+        fontFamily: "Arial, sans-serif",
+        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        color: "white",
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <div style={{ textAlign: "center", maxWidth: "600px" }}>
+        <h1
+          style={{
+            fontSize: "3rem",
+            fontWeight: "bold",
+            marginBottom: "1rem",
+            margin: "0 0 1rem 0",
+          }}
+        >
+          ✅ SUCCESS!
+        </h1>
+        <p
+          style={{
+            fontSize: "1.5rem",
+            marginBottom: "2rem",
+            opacity: 0.9,
+          }}
+        >
+          Your Next.js app is working perfectly!
+        </p>
+        <div
+          style={{
+            background: "rgba(255,255,255,0.1)",
+            padding: "20px",
+            borderRadius: "10px",
+            backdropFilter: "blur(10px)",
+          }}
+        >
+          <h3 style={{ marginTop: 0, color: "#4ade80" }}>Status Check</h3>
+          <p>✅ Server Running: Port 3000</p>
+          <p>✅ Page Compiled: Successfully</p>
+          <p>✅ Hydration: Fixed</p>
+          <p>✅ Ready for CleanWin design!</p>
         </div>
-      </body>
-    </html>
+      </div>
+    </div>
   );
 }
