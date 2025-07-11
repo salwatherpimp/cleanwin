@@ -1087,8 +1087,12 @@ export default function CleanWinPage() {
           >
             <div
               style={{
-                width: "120px",
-                height: "60px",
+                width: "80px",
+                height: "40px",
+                "@media (min-width: 768px)": {
+                  width: "120px",
+                  height: "60px",
+                },
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/1_omqaqp.png")',
                 backgroundPosition: "50% 50%",
@@ -1102,8 +1106,12 @@ export default function CleanWinPage() {
             />
             <div
               style={{
-                width: "120px",
-                height: "60px",
+                width: "80px",
+                height: "40px",
+                "@media (min-width: 768px)": {
+                  width: "120px",
+                  height: "60px",
+                },
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/2_jgcfjz.png")',
                 backgroundPosition: "50% 50%",
@@ -1117,8 +1125,12 @@ export default function CleanWinPage() {
             />
             <div
               style={{
-                width: "120px",
-                height: "60px",
+                width: "80px",
+                height: "40px",
+                "@media (min-width: 768px)": {
+                  width: "120px",
+                  height: "60px",
+                },
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/4_mne8oq.png")',
                 backgroundPosition: "50% 50%",
@@ -1132,8 +1144,12 @@ export default function CleanWinPage() {
             />
             <div
               style={{
-                width: "120px",
-                height: "60px",
+                width: "80px",
+                height: "40px",
+                "@media (min-width: 768px)": {
+                  width: "120px",
+                  height: "60px",
+                },
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/5_xmwppy.png")',
                 backgroundPosition: "50% 50%",
@@ -1147,8 +1163,12 @@ export default function CleanWinPage() {
             />
             <div
               style={{
-                width: "120px",
-                height: "60px",
+                width: "80px",
+                height: "40px",
+                "@media (min-width: 768px)": {
+                  width: "120px",
+                  height: "60px",
+                },
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/3_jqqq29.png")',
                 backgroundPosition: "50% 50%",
@@ -1162,8 +1182,12 @@ export default function CleanWinPage() {
             />
             <div
               style={{
-                width: "120px",
-                height: "60px",
+                width: "80px",
+                height: "40px",
+                "@media (min-width: 768px)": {
+                  width: "120px",
+                  height: "60px",
+                },
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/7_wetsnc.png")',
                 backgroundPosition: "50% 50%",
