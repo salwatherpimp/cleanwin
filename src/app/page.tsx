@@ -223,8 +223,8 @@ export default function CleanWinPage() {
       <section
         style={{
           position: "relative",
-          height: "550px",
-          minHeight: "480px",
+          height: "495px",
+          minHeight: "432px",
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
