@@ -1,6 +1,12 @@
 export default function CleanWinPage() {
   return (
-    <div style={{ minHeight: "100vh", backgroundColor: "#ffffff" }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "#ffffff",
+        paddingTop: "88px",
+      }}
+    >
       {/* Header Navigation */}
       <header
         style={{
