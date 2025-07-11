@@ -46,6 +46,7 @@ export default function CleanWinPage() {
         backgroundColor: "#ffffff",
       }}
     >
+      <div dangerouslySetInnerHTML={{ __html: mobileStyles }} />
       {/* Header Navigation */}
       <header
         style={{
