@@ -37,25 +37,6 @@ const nextConfig = {
   generateEtags: true,
   // Performance Optimierungen
   // Dev server configuration
-  webpack: (config, { dev }) => {
-    if (dev) {
-      // Remove all HMR-related plugins
-      config.plugins = config.plugins.filter((plugin) => {
-        return (
-          plugin.constructor.name !== "HotModuleReplacementPlugin" &&
-          plugin.constructor.name !== "WatchIgnorePlugin"
-        );
-      });
-
-      // Disable hot reloading completely
-      config.watchOptions = {
-        ignored: /node_modules/,
-        aggregateTimeout: 600,
-        poll: false,
-      };
-    }
-    return config;
-  },
 };
 
 module.exports = nextConfig;
