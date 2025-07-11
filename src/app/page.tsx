@@ -110,8 +110,6 @@ export default function CleanWinPage() {
               gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "48px",
               alignItems: "center",
-                gridTemplateColumns: "1fr 1fr",
-              },
             }}
           >
             <div>
@@ -143,10 +141,9 @@ export default function CleanWinPage() {
               <div
                 style={{
                   display: "flex",
-                  flexDirection: "column",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
                   gap: "16px",
-                    flexDirection: "row",
-                  },
                 }}
               >
                 <button
@@ -188,6 +185,7 @@ export default function CleanWinPage() {
                   fontSize: "14px",
                   color: "#6b7280",
                   gap: "24px",
+                  flexWrap: "wrap",
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center" }}>
@@ -294,7 +292,7 @@ export default function CleanWinPage() {
               gap: "32px",
             }}
           >
-            {/* Window Cleaning */}
+            {/* Service Cards */}
             <div
               style={{
                 backgroundColor: "#ffffff",
@@ -302,7 +300,6 @@ export default function CleanWinPage() {
                 boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                 padding: "32px",
                 border: "1px solid #e5e7eb",
-                transition: "box-shadow 0.3s",
               }}
             >
               <div
@@ -339,37 +336,8 @@ export default function CleanWinPage() {
                 Kristallklare Fenster mit professionellen Reinigungstechniken.
                 Sowohl für Privathaushalte als auch Gewerbeobjekte.
               </p>
-              <ul
-                style={{
-                  fontSize: "14px",
-                  color: "#6b7280",
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                }}
-              >
-                <li
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginBottom: "8px",
-                  }}
-                >
-                  <span style={{ color: "#10b981", marginRight: "8px" }}>
-                    ✓
-                  </span>
-                  Innen- und Außenreinigung
-                </li>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <span style={{ color: "#10b981", marginRight: "8px" }}>
-                    ✓
-                  </span>
-                  Rahmen- und Fensterbankpflege
-                </li>
-              </ul>
             </div>
 
-            {/* Office Cleaning */}
             <div
               style={{
                 backgroundColor: "#ffffff",
@@ -377,7 +345,6 @@ export default function CleanWinPage() {
                 boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                 padding: "32px",
                 border: "1px solid #e5e7eb",
-                transition: "box-shadow 0.3s",
               }}
             >
               <div
@@ -414,37 +381,8 @@ export default function CleanWinPage() {
                 Hygienische und gründliche Reinigung für Ihren Arbeitsplatz.
                 Regelmäßige oder einmalige Reinigungsdienste.
               </p>
-              <ul
-                style={{
-                  fontSize: "14px",
-                  color: "#6b7280",
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                }}
-              >
-                <li
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginBottom: "8px",
-                  }}
-                >
-                  <span style={{ color: "#10b981", marginRight: "8px" }}>
-                    ✓
-                  </span>
-                  Arbeitsplätze und Gemeinschaftsräume
-                </li>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <span style={{ color: "#10b981", marginRight: "8px" }}>
-                    ✓
-                  </span>
-                  Sanitäranlagen und Küchen
-                </li>
-              </ul>
             </div>
 
-            {/* Facade Cleaning */}
             <div
               style={{
                 backgroundColor: "#ffffff",
@@ -452,7 +390,6 @@ export default function CleanWinPage() {
                 boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                 padding: "32px",
                 border: "1px solid #e5e7eb",
-                transition: "box-shadow 0.3s",
               }}
             >
               <div
@@ -489,37 +426,8 @@ export default function CleanWinPage() {
                 Schonende Reinigungsverfahren für alle Fassadentypen. Erhaltung
                 und Pflege Ihrer Gebäudehülle.
               </p>
-              <ul
-                style={{
-                  fontSize: "14px",
-                  color: "#6b7280",
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                }}
-              >
-                <li
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginBottom: "8px",
-                  }}
-                >
-                  <span style={{ color: "#10b981", marginRight: "8px" }}>
-                    ✓
-                  </span>
-                  Alle Materialien und Oberflächen
-                </li>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <span style={{ color: "#10b981", marginRight: "8px" }}>
-                    ✓
-                  </span>
-                  Umweltschonende Verfahren
-                </li>
-              </ul>
             </div>
 
-            {/* Move-out Cleaning */}
             <div
               style={{
                 backgroundColor: "#ffffff",
@@ -527,7 +435,6 @@ export default function CleanWinPage() {
                 boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                 padding: "32px",
                 border: "1px solid #e5e7eb",
-                transition: "box-shadow 0.3s",
               }}
             >
               <div
@@ -564,37 +471,8 @@ export default function CleanWinPage() {
                 Umfassende Endreinigung für einen stressfreien Umzug.
                 Garantierte Abnahme durch den Vermieter.
               </p>
-              <ul
-                style={{
-                  fontSize: "14px",
-                  color: "#6b7280",
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                }}
-              >
-                <li
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginBottom: "8px",
-                  }}
-                >
-                  <span style={{ color: "#10b981", marginRight: "8px" }}>
-                    ✓
-                  </span>
-                  Komplette Wohnungsreinigung
-                </li>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <span style={{ color: "#10b981", marginRight: "8px" }}>
-                    ✓
-                  </span>
-                  Abnahme-Garantie
-                </li>
-              </ul>
             </div>
 
-            {/* Construction Cleaning */}
             <div
               style={{
                 backgroundColor: "#ffffff",
@@ -602,7 +480,6 @@ export default function CleanWinPage() {
                 boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                 padding: "32px",
                 border: "1px solid #e5e7eb",
-                transition: "box-shadow 0.3s",
               }}
             >
               <div
@@ -639,256 +516,12 @@ export default function CleanWinPage() {
                 Detaillierte Reinigung nach Renovierungen oder Neubauten.
                 Entfernung von Baustaub und Materialresten.
               </p>
-              <ul
-                style={{
-                  fontSize: "14px",
-                  color: "#6b7280",
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                }}
-              >
-                <li
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginBottom: "8px",
-                  }}
-                >
-                  <span style={{ color: "#10b981", marginRight: "8px" }}>
-                    ✓
-                  </span>
-                  Grob- und Feinreinigung
-                </li>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <span style={{ color: "#10b981", marginRight: "8px" }}>
-                    ✓
-                  </span>
-                  Spezialausrüstung verfügbar
-                </li>
-              </ul>
-            </div>
-
-            {/* Additional Service Placeholder */}
-            <div
-              style={{
-                backgroundColor: "#f9fafb",
-                borderRadius: "12px",
-                padding: "32px",
-                border: "2px dashed #d1d5db",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "48px",
-                  color: "#9ca3af",
-                  marginBottom: "16px",
-                }}
-              >
-                ➕
-              </span>
-              <h3
-                style={{
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  color: "#4b5563",
-                  marginBottom: "8px",
-                }}
-              >
-                Weitere Services
-              </h3>
-              <p
-                style={{
-                  color: "#6b7280",
-                  fontSize: "14px",
-                  margin: 0,
-                }}
-              >
-                Haben Sie einen speziellen Reinigungsbedarf? Kontaktieren Sie
-                uns für eine individuelle Lösung.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Section */}
-      <section
-        id="about"
-        style={{ padding: "80px 0", backgroundColor: "#f9fafb" }}
-      >
-        <div
-          style={{
-            maxWidth: "1280px",
-            margin: "0 auto",
-            padding: "0 16px",
-          }}
-        >
-          <div style={{ textAlign: "center", marginBottom: "64px" }}>
-            <h2
-              style={{
-                fontSize: "48px",
-                fontWeight: "bold",
-                color: "#111827",
-                marginBottom: "16px",
-              }}
-            >
-              Warum CleanWin wählen?
-            </h2>
-            <p
-              style={{
-                fontSize: "20px",
-                color: "#4b5563",
-                maxWidth: "768px",
-                margin: "0 auto",
-              }}
-            >
-              Mit über 10 Jahren Erfahrung und mehr als 500 zufriedenen Kunden
-              sind wir Ihr vertrauensvoller Partner für professionelle
-              Reinigung.
-            </p>
-          </div>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-              gap: "32px",
-            }}
-          >
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  backgroundColor: "#dbeafe",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  margin: "0 auto 24px",
-                }}
-              >
-                <span style={{ fontSize: "40px", color: "#2563eb" }}>📍</span>
-              </div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  color: "#111827",
-                  marginBottom: "12px",
-                }}
-              >
-                Lokal & Persönlich
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.6" }}>
-                Ansässig in Winterthur bieten wir persönliche und erreichbare
-                Services für die Region.
-              </p>
-            </div>
-
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  backgroundColor: "#dcfce7",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  margin: "0 auto 24px",
-                }}
-              >
-                <span style={{ fontSize: "40px", color: "#16a34a" }}>🛡️</span>
-              </div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  color: "#111827",
-                  marginBottom: "12px",
-                }}
-              >
-                Sicher & Versichert
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.6" }}>
-                Vollversichert mit geschultem Team für Ihre Sicherheit und
-                unseren Schutz.
-              </p>
-            </div>
-
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  backgroundColor: "#f3e8ff",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  margin: "0 auto 24px",
-                }}
-              >
-                <span style={{ fontSize: "40px", color: "#9333ea" }}>💚</span>
-              </div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  color: "#111827",
-                  marginBottom: "12px",
-                }}
-              >
-                Nachhaltig & Schonend
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.6" }}>
-                Umweltfreundliche Reinigungsverfahren wie Osmose-Technologie für
-                nachhaltiges Arbeiten.
-              </p>
-            </div>
-
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  backgroundColor: "#fed7aa",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  margin: "0 auto 24px",
-                }}
-              >
-                <span style={{ fontSize: "40px", color: "#ea580c" }}>⏰</span>
-              </div>
-              <h3
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  color: "#111827",
-                  marginBottom: "12px",
-                }}
-              >
-                Flexibel & Zuverlässig
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.6" }}>
-                Anpassung an Ihren Zeitplan und pünktliche Ausführung aller
-                vereinbarten Termine.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact/Quote Section */}
+      {/* Contact Section */}
       <section
         id="contact"
         style={{ padding: "80px 0", backgroundColor: "#2563eb" }}
@@ -903,10 +536,9 @@ export default function CleanWinPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
               gap: "48px",
-                gridTemplateColumns: "1fr 1fr",
-              },
+              alignItems: "center",
             }}
           >
             <div>
@@ -934,8 +566,7 @@ export default function CleanWinPage() {
               <div
                 style={{
                   display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "wrap",
+                  flexDirection: "column",
                   gap: "16px",
                 }}
               >
@@ -995,36 +626,18 @@ export default function CleanWinPage() {
                   gap: "16px",
                 }}
               >
-                <div
+                <input
+                  type="text"
+                  placeholder="Ihr Name"
                   style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: "16px",
+                    width: "100%",
+                    padding: "12px 16px",
+                    border: "1px solid #d1d5db",
+                    borderRadius: "8px",
+                    fontSize: "16px",
+                    boxSizing: "border-box",
                   }}
-                >
-                  <input
-                    type="text"
-                    placeholder="Vorname"
-                    style={{
-                      width: "100%",
-                      padding: "12px 16px",
-                      border: "1px solid #d1d5db",
-                      borderRadius: "8px",
-                      fontSize: "16px",
-                    }}
-                  />
-                  <input
-                    type="text"
-                    placeholder="Nachname"
-                    style={{
-                      width: "100%",
-                      padding: "12px 16px",
-                      border: "1px solid #d1d5db",
-                      borderRadius: "8px",
-                      fontSize: "16px",
-                    }}
-                  />
-                </div>
+                />
                 <input
                   type="email"
                   placeholder="E-Mail Adresse"
@@ -1034,36 +647,9 @@ export default function CleanWinPage() {
                     border: "1px solid #d1d5db",
                     borderRadius: "8px",
                     fontSize: "16px",
+                    boxSizing: "border-box",
                   }}
                 />
-                <input
-                  type="tel"
-                  placeholder="Telefonnummer"
-                  style={{
-                    width: "100%",
-                    padding: "12px 16px",
-                    border: "1px solid #d1d5db",
-                    borderRadius: "8px",
-                    fontSize: "16px",
-                  }}
-                />
-                <select
-                  style={{
-                    width: "100%",
-                    padding: "12px 16px",
-                    border: "1px solid #d1d5db",
-                    borderRadius: "8px",
-                    fontSize: "16px",
-                  }}
-                >
-                  <option value="">Service auswählen</option>
-                  <option value="window">Fensterreinigung</option>
-                  <option value="office">Büroreinigung</option>
-                  <option value="facade">Fassadenreinigung</option>
-                  <option value="moveout">Auszugsreinigung</option>
-                  <option value="construction">Bauendreinigung</option>
-                  <option value="other">Andere</option>
-                </select>
                 <textarea
                   placeholder="Beschreiben Sie Ihren Reinigungsbedarf..."
                   rows={4}
@@ -1074,6 +660,7 @@ export default function CleanWinPage() {
                     borderRadius: "8px",
                     fontSize: "16px",
                     resize: "vertical",
+                    boxSizing: "border-box",
                   }}
                 ></textarea>
                 <button
@@ -1118,6 +705,7 @@ export default function CleanWinPage() {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
               gap: "32px",
+              textAlign: "center",
             }}
           >
             <div>
@@ -1140,130 +728,6 @@ export default function CleanWinPage() {
                 Professionelle Reinigungsdienste in Winterthur mit über 10
                 Jahren Erfahrung.
               </p>
-              <div style={{ display: "flex", gap: "16px" }}>
-                <a href="#" style={{ color: "#9ca3af", fontSize: "24px" }}>
-                  📘
-                </a>
-                <a href="#" style={{ color: "#9ca3af", fontSize: "24px" }}>
-                  🐦
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4
-                style={{
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  marginBottom: "16px",
-                }}
-              >
-                Services
-              </h4>
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "8px",
-                }}
-              >
-                <li>
-                  <a
-                    href="#"
-                    style={{ color: "#9ca3af", textDecoration: "none" }}
-                  >
-                    Fensterreinigung
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style={{ color: "#9ca3af", textDecoration: "none" }}
-                  >
-                    Büroreinigung
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style={{ color: "#9ca3af", textDecoration: "none" }}
-                  >
-                    Fassadenreinigung
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style={{ color: "#9ca3af", textDecoration: "none" }}
-                  >
-                    Auszugsreinigung
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style={{ color: "#9ca3af", textDecoration: "none" }}
-                  >
-                    Bauendreinigung
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4
-                style={{
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  marginBottom: "16px",
-                }}
-              >
-                Unternehmen
-              </h4>
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "8px",
-                }}
-              >
-                <li>
-                  <a
-                    href="#"
-                    style={{ color: "#9ca3af", textDecoration: "none" }}
-                  >
-                    Über uns
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style={{ color: "#9ca3af", textDecoration: "none" }}
-                  >
-                    Karriere
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style={{ color: "#9ca3af", textDecoration: "none" }}
-                  >
-                    Referenzen
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style={{ color: "#9ca3af", textDecoration: "none" }}
-                  >
-                    Blog
-                  </a>
-                </li>
-              </ul>
             </div>
             <div>
               <h4
@@ -1275,21 +739,19 @@ export default function CleanWinPage() {
               >
                 Kontakt
               </h4>
-              <ul
+              <div
                 style={{
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
+                  color: "#9ca3af",
                   display: "flex",
                   flexDirection: "column",
                   gap: "8px",
                 }}
               >
-                <li style={{ color: "#9ca3af" }}>CleanWin GmbH</li>
-                <li style={{ color: "#9ca3af" }}>Musterstraße 123</li>
-                <li style={{ color: "#9ca3af" }}>8400 Winterthur</li>
-                <li style={{ color: "#9ca3af" }}>Schweiz</li>
-              </ul>
+                <div>CleanWin GmbH</div>
+                <div>Winterthur, Schweiz</div>
+                <div>info@cleanwin.ch</div>
+                <div>+41 52 XXX XX XX</div>
+              </div>
             </div>
           </div>
           <div
@@ -1302,16 +764,7 @@ export default function CleanWinPage() {
             }}
           >
             <p style={{ margin: 0 }}>
-              &copy; 2024 CleanWin. Alle Rechte vorbehalten. |
-              <a href="#" style={{ color: "#9ca3af", textDecoration: "none" }}>
-                {" "}
-                Datenschutz
-              </a>{" "}
-              |
-              <a href="#" style={{ color: "#9ca3af", textDecoration: "none" }}>
-                {" "}
-                Impressum
-              </a>
+              &copy; 2024 CleanWin. Alle Rechte vorbehalten.
             </p>
           </div>
         </div>
