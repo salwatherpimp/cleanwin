@@ -84,17 +84,14 @@ export default function CleanWinPage() {
               alt="CleanWin Logo"
               width={200}
               height={56}
+              className="logo-mobile"
               style={{
-                width: "160px",
-                height: "45px",
+                width: "200px",
+                height: "56px",
                 aspectRatio: "auto 200 / 56",
                 overflowClipMargin: "content-box",
                 overflowX: "clip",
                 overflowY: "clip",
-                "@media (min-width: 768px)": {
-                  width: "200px",
-                  height: "56px",
-                },
               }}
             />
           </a>
