@@ -267,7 +267,7 @@ export default function CleanWinPage() {
             zIndex: 10,
             maxWidth: "1152px",
             margin: "0 auto",
-            padding: "95px 16px 24px",
+            padding: "80px 16px 24px",
             textAlign: "center",
             color: "white",
           }}
