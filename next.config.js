@@ -7,6 +7,8 @@ const nextConfig = {
   experimental: {
     instrumentationHook: true,
   },
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
     remotePatterns: [
       {
