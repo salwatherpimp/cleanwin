@@ -66,12 +66,16 @@ export default function CleanWinPage() {
               width={200}
               height={56}
               style={{
-                width: "200px",
-                height: "56px",
+                width: "160px",
+                height: "45px",
                 aspectRatio: "auto 200 / 56",
                 overflowClipMargin: "content-box",
                 overflowX: "clip",
                 overflowY: "clip",
+                "@media (min-width: 768px)": {
+                  width: "200px",
+                  height: "56px",
+                },
               }}
             />
           </a>
