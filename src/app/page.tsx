@@ -1067,20 +1067,11 @@ export default function CleanWinPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(2, 1fr)",
-              gap: "16px",
+              gridTemplateColumns: "repeat(6, 1fr)",
+              gap: "32px",
               alignItems: "center",
               justifyItems: "center",
-              "@media (min-width: 640px)": {
-                gridTemplateColumns: "repeat(3, 1fr)",
-                gap: "20px",
-              },
-              "@media (min-width: 768px)": {
-                gridTemplateColumns: "repeat(6, 1fr)",
-                gap: "32px",
-              },
             }}
-            className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 md:grid-cols-6 md:gap-8"
           >
             <div
               style={{
