@@ -17,7 +17,8 @@ export default function CleanWinPage() {
         .logo-mobile { width: 160px !important; height: 45px !important; }
         .grid-mobile-1 { grid-template-columns: 1fr !important; gap: 16px !important; }
                 .grid-mobile-2 { grid-template-columns: 1fr !important; gap: 32px !important; }
-        .grid-mobile-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
+                .grid-mobile-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
+        .grid-mobile-logos { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
         .logo-container-mobile { width: 80px !important; height: 40px !important; }
       }
     </style>
