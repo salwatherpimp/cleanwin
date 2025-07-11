@@ -1948,6 +1948,358 @@ export default function CleanWinPage() {
         </div>
       </section>
 
+      {/* Why Choose CleanWin Section */}
+      <section
+        style={{
+          backgroundColor: "#f9fafb",
+          padding: "24px 0",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1152px",
+            margin: "0 auto",
+            padding: "0 16px",
+          }}
+        >
+          <div style={{ textAlign: "center" }}>
+            <h2
+              style={{
+                fontSize: "28px",
+                fontWeight: "700",
+                color: "#111827",
+                marginBottom: "24px",
+                marginTop: "23.24px",
+                textAlign: "center",
+              }}
+            >
+              Warum Cleanwin wählen?
+            </h2>
+          </div>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4, 1fr)",
+              gap: "16px",
+              marginTop: "24px",
+              width: "100%",
+            }}
+          >
+            {/* Regional & Personal Card */}
+            <div
+              style={{
+                backdropFilter: "blur(4px)",
+                backgroundColor: "rgba(255, 255, 255, 0.9)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                borderRadius: "12px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                padding: "16px",
+                height: "180px",
+                display: "flex",
+                flexDirection: "column",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: "2px",
+                }}
+              >
+                <h3
+                  style={{
+                    color: "#111827",
+                    fontWeight: "600",
+                    flexGrow: 1,
+                  }}
+                >
+                  Regional & persönlich
+                </h3>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "rgba(231, 2, 126, 0.1)",
+                    borderRadius: "50%",
+                    flexShrink: 0,
+                    marginLeft: "12px",
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      color: "#10a0a4",
+                      stroke: "#10a0a4",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                    <circle cx="12" cy="8" r="6" />
+                  </svg>
+                </div>
+              </div>
+              <p
+                style={{
+                  color: "#4b5563",
+                  fontSize: "13px",
+                  lineHeight: "16px",
+                  marginTop: "2px",
+                  flex: "1",
+                }}
+              >
+                Wir sind in Winterthur zuhause. Persönlich, nah und immer für
+                Sie erreichbar.
+              </p>
+            </div>
+
+            {/* Safe & Insured Card */}
+            <div
+              style={{
+                backdropFilter: "blur(4px)",
+                backgroundColor: "rgba(255, 255, 255, 0.9)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                borderRadius: "12px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                padding: "16px",
+                height: "180px",
+                display: "flex",
+                flexDirection: "column",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: "2px",
+                }}
+              >
+                <h3
+                  style={{
+                    color: "#111827",
+                    fontWeight: "600",
+                    flexGrow: 1,
+                  }}
+                >
+                  Sicher & versichert
+                </h3>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "rgba(16, 160, 164, 0.1)",
+                    borderRadius: "50%",
+                    flexShrink: 0,
+                    marginLeft: "12px",
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      color: "#e7027e",
+                      stroke: "#e7027e",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+              </div>
+              <p
+                style={{
+                  color: "#4b5563",
+                  fontSize: "13px",
+                  lineHeight: "16px",
+                  marginTop: "2px",
+                  flex: "1",
+                }}
+              >
+                Volle Versicherung und geschultes Team - damit Sie sorgenfrei
+                entspannen können.
+              </p>
+            </div>
+
+            {/* Sustainable & Gentle Card */}
+            <div
+              style={{
+                backdropFilter: "blur(4px)",
+                backgroundColor: "rgba(255, 255, 255, 0.9)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                borderRadius: "12px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                padding: "16px",
+                height: "180px",
+                display: "flex",
+                flexDirection: "column",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: "2px",
+                }}
+              >
+                <h3
+                  style={{
+                    color: "#111827",
+                    fontWeight: "600",
+                    flexGrow: 1,
+                  }}
+                >
+                  Nachhaltig & schonend
+                </h3>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "rgba(16, 160, 164, 0.1)",
+                    borderRadius: "50%",
+                    flexShrink: 0,
+                    marginLeft: "12px",
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      color: "#10a0a4",
+                      stroke: "#10a0a4",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
+                </div>
+              </div>
+              <p
+                style={{
+                  color: "#4b5563",
+                  fontSize: "13px",
+                  lineHeight: "16px",
+                  marginTop: "2px",
+                  flex: "1",
+                }}
+              >
+                Umweltfreundliche Reinigungs-methode durch Umkehrosmose-Technik.
+                Gut für Sie und die Natur.
+              </p>
+            </div>
+
+            {/* Flexible & Reliable Card */}
+            <div
+              style={{
+                backdropFilter: "blur(4px)",
+                backgroundColor: "rgba(255, 255, 255, 0.9)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                borderRadius: "12px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                padding: "16px",
+                height: "180px",
+                display: "flex",
+                flexDirection: "column",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: "2px",
+                }}
+              >
+                <h3
+                  style={{
+                    color: "#111827",
+                    fontWeight: "600",
+                    flexGrow: 1,
+                  }}
+                >
+                  Flexibel & zuverlässig
+                </h3>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "rgba(16, 160, 164, 0.1)",
+                    borderRadius: "50%",
+                    flexShrink: 0,
+                    marginLeft: "12px",
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      color: "#10a0a4",
+                      stroke: "#10a0a4",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 2v4" />
+                    <path d="M16 2v4" />
+                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                    <path d="M3 10h18" />
+                    <path d="m9 16 2 2 4-4" />
+                  </svg>
+                </div>
+              </div>
+              <p
+                style={{
+                  color: "#4b5563",
+                  fontSize: "13px",
+                  lineHeight: "16px",
+                  marginTop: "2px",
+                  flex: "1",
+                }}
+              >
+                Von früh bis spät - wir richten uns stet nach Ihrem Alltag.
+                Immer pünktlich.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Customer Testimonials Section */}
       <section
         style={{
