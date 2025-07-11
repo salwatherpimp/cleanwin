@@ -1228,7 +1228,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "4px",
+                  marginBottom: "2px",
                 }}
               >
                 <h3
@@ -1274,14 +1274,10 @@ export default function CleanWinPage() {
               <p
                 style={{
                   color: "#4b5563",
-                  fontSize: "14px",
+                  fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "4px",
+                  marginTop: "2px",
                   flex: "1",
-                  display: "-webkit-box",
-                  WebkitLineClamp: "4",
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
                 }}
               >
                 Wir sind in Winterthur zuhause. Persönlich, nah und immer für
@@ -1309,7 +1305,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "4px",
+                  marginBottom: "2px",
                 }}
               >
                 <h3
@@ -1354,14 +1350,10 @@ export default function CleanWinPage() {
               <p
                 style={{
                   color: "#4b5563",
-                  fontSize: "14px",
+                  fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "4px",
+                  marginTop: "2px",
                   flex: "1",
-                  display: "-webkit-box",
-                  WebkitLineClamp: "4",
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
                 }}
               >
                 Volle Versicherung und geschultes Team - damit Sie sorgenfrei
@@ -1389,7 +1381,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "4px",
+                  marginBottom: "2px",
                 }}
               >
                 <h3
@@ -1435,14 +1427,10 @@ export default function CleanWinPage() {
               <p
                 style={{
                   color: "#4b5563",
-                  fontSize: "14px",
+                  fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "4px",
+                  marginTop: "2px",
                   flex: "1",
-                  display: "-webkit-box",
-                  WebkitLineClamp: "4",
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
                 }}
               >
                 Umweltfreundliche Reinigungs-methode durch Umkehrosmose-Technik.
@@ -1470,7 +1458,7 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  marginBottom: "4px",
+                  marginBottom: "2px",
                 }}
               >
                 <h3
@@ -1516,14 +1504,10 @@ export default function CleanWinPage() {
               <p
                 style={{
                   color: "#4b5563",
-                  fontSize: "14px",
+                  fontSize: "13px",
                   lineHeight: "16px",
-                  marginTop: "4px",
+                  marginTop: "2px",
                   flex: "1",
-                  display: "-webkit-box",
-                  WebkitLineClamp: "4",
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
                 }}
               >
                 Von früh bis spät - wir richten uns stet nach Ihrem Alltag.
