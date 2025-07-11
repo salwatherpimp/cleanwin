@@ -2586,14 +2586,13 @@ export default function CleanWinPage() {
           >
             <div
               style={{
-                display: "flex",
-                alignItems: "center",
                 flexWrap: "wrap",
                 gap: "16px",
               }}
             >
-              <span>© 2025 CleanWin. Alle Rechte vorbehalten.</span>
-              <span>Gemacht mit ♥️ in Winterthur</span>
+              © 2025 CleanWin. Alle Rechte vorbehalten.
+              <br />
+              Gemacht mit ♥️ in Winterthur
             </div>
             <a
               href="https://cleanwin.vercel.app/datenschutz"
