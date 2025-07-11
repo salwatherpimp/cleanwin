@@ -1151,6 +1151,7 @@ export default function HomePage({ buildTime }: HomePageProps) {
                     Regionaler Reinigungsbetrieb für Privat, Gewerbe & Industrie
                   </h2>
                   <p
+                    key="company-description"
                     style={{
                       fontSize: "16px",
                       color: "#6b7280",
