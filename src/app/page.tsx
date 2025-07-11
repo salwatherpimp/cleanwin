@@ -241,36 +241,143 @@ export default function CleanWinPage() {
               )}
             </svg>
           </button>
-
-          {/* Mobile Menu Button (hidden on desktop) */}
-          <button
-            style={{
-              display: "none",
-              padding: "8px",
-              backgroundColor: "transparent",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            <svg
-              style={{
-                width: "24px",
-                height: "24px",
-                color: "white",
-                stroke: "white",
-                fill: "none",
-              }}
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div
+            style={{
+              position: "absolute",
+              top: "100%",
+              left: "0",
+              right: "0",
+              backgroundColor: "rgba(255, 255, 255, 0.98)",
+              backdropFilter: "blur(8px)",
+              borderTop: "1px solid rgba(0, 0, 0, 0.1)",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+              zIndex: 40,
+            }}
+            className="md:hidden"
+          >
+            <div
+              style={{
+                padding: "24px 16px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "16px",
+              }}
+            >
+              <button
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  width: "100%",
+                  padding: "16px 0",
+                  backgroundColor: "transparent",
+                  border: "none",
+                  color: "#374151",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  textAlign: "left",
+                  cursor: "pointer",
+                  borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+                }}
+              >
+                <span>Leistungen</span>
+                <svg
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    color: "#374151",
+                    stroke: "#374151",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+
+              <a
+                href="https://cleanwin.vercel.app/ueber-uns"
+                style={{
+                  display: "block",
+                  padding: "16px 0",
+                  color: "#374151",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  textDecoration: "none",
+                  borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+                  transition: "color 0.2s",
+                }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Über uns
+              </a>
+
+              <a
+                href="https://cleanwin.vercel.app/referenzen"
+                style={{
+                  display: "block",
+                  padding: "16px 0",
+                  color: "#374151",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  textDecoration: "none",
+                  borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+                  transition: "color 0.2s",
+                }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Referenzen
+              </a>
+
+              <a
+                href="#contact"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "8px",
+                  backgroundColor: "#10a0a4",
+                  color: "white",
+                  padding: "16px 24px",
+                  borderRadius: "9999px",
+                  fontSize: "16px",
+                  fontWeight: "500",
+                  textDecoration: "none",
+                  marginTop: "8px",
+                  transition: "background-color 0.2s",
+                }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <svg
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
+                  <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
+                  <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
+                  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
+                </svg>
+                <span>Kontaktiere uns</span>
+              </a>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
