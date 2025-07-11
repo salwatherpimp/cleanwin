@@ -1220,6 +1220,7 @@ export default function CleanWinPage() {
                 height: "180px",
                 display: "flex",
                 flexDirection: "column",
+                overflow: "hidden",
               }}
             >
               <div
@@ -1275,8 +1276,9 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "14px",
                   lineHeight: "20px",
-                  marginTop: "auto",
-                  paddingTop: "8px",
+                  marginTop: "16px",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
               >
                 Wir sind in Winterthur zuhause. Persönlich, nah und immer für
@@ -1296,6 +1298,7 @@ export default function CleanWinPage() {
                 height: "180px",
                 display: "flex",
                 flexDirection: "column",
+                overflow: "hidden",
               }}
             >
               <div
@@ -1350,8 +1353,9 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "14px",
                   lineHeight: "20px",
-                  marginTop: "auto",
-                  paddingTop: "8px",
+                  marginTop: "16px",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
               >
                 Volle Versicherung und geschultes Team - damit Sie sorgenfrei
@@ -1371,6 +1375,7 @@ export default function CleanWinPage() {
                 height: "180px",
                 display: "flex",
                 flexDirection: "column",
+                overflow: "hidden",
               }}
             >
               <div
@@ -1426,8 +1431,9 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "14px",
                   lineHeight: "20px",
-                  marginTop: "auto",
-                  paddingTop: "8px",
+                  marginTop: "16px",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
               >
                 Umweltfreundliche Reinigungs-methode durch Umkehrosmose-Technik.
@@ -1447,6 +1453,7 @@ export default function CleanWinPage() {
                 height: "180px",
                 display: "flex",
                 flexDirection: "column",
+                overflow: "hidden",
               }}
             >
               <div
@@ -1502,8 +1509,9 @@ export default function CleanWinPage() {
                   color: "#4b5563",
                   fontSize: "14px",
                   lineHeight: "20px",
-                  marginTop: "auto",
-                  paddingTop: "8px",
+                  marginTop: "16px",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
               >
                 Von früh bis spät - wir richten uns stet nach Ihrem Alltag.
