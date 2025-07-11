@@ -1750,7 +1750,7 @@ export default function CleanWinPage() {
             padding: "0 16px",
           }}
         >
-          <div style={{ textAlign: "center" }}>
+          <div style={{ textAlign: "center", marginBottom: "48px" }}>
             <h2
               style={{
                 fontSize: "28px",
