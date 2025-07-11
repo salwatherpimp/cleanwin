@@ -1464,9 +1464,11 @@ export default function CleanWinPage() {
               }}
             >
               <div style={{ position: "relative", overflow: "hidden" }}>
-                <img
+                <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-spritzen_ij8jsj.avif"
                   alt="Baureinigung"
+                  width={400}
+                  height={192}
                   style={{
                     width: "100%",
                     height: "192px",
@@ -1531,9 +1533,11 @@ export default function CleanWinPage() {
               }}
             >
               <div style={{ position: "relative", overflow: "hidden" }}>
-                <img
+                <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif"
                   alt="Weitere Dienstleistungen"
+                  width={400}
+                  height={192}
                   style={{
                     width: "100%",
                     height: "192px",
