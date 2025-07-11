@@ -4,89 +4,191 @@ export default function CleanWinPage() {
       {/* Header Navigation */}
       <header
         style={{
-          backgroundColor: "#ffffff",
-          boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1)",
-          borderBottom: "1px solid #e5e7eb",
+          position: "fixed",
+          top: "0px",
+          left: "0px",
+          right: "0px",
+          zIndex: 50,
+          backdropFilter: "blur(8px)",
+          backgroundColor: "rgba(255, 255, 255, 0.1)",
+          boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+          transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
         <div
           style={{
-            maxWidth: "1280px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            maxWidth: "1152px",
             margin: "0 auto",
-            padding: "0 16px",
+            padding: "16px",
           }}
         >
-          <div
+          <a
+            href="https://cleanwin.vercel.app/"
             style={{
               display: "flex",
-              justifyContent: "space-between",
               alignItems: "center",
-              height: "64px",
+              color: "rgb(0, 0, 238)",
+              textDecoration: "underline solid rgb(0, 0, 238)",
+              cursor: "pointer",
+              transition: "transform 0.3s",
             }}
           >
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <h1
+            <img
+              src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fv1752003683%2Fcleanwin-logo_ysvfv0.avif&w=640&q=75"
+              alt="CleanWin Logo"
+              width={200}
+              height={56}
+              style={{
+                width: "200px",
+                height: "56px",
+                aspectRatio: "auto 200 / 56",
+                overflowClipMargin: "content-box",
+                overflowX: "clip",
+                overflowY: "clip",
+              }}
+            />
+          </a>
+
+          <nav
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "32px",
+            }}
+          >
+            {/* Services Dropdown */}
+            <div style={{ position: "relative" }}>
+              <button
                 style={{
-                  fontSize: "24px",
-                  fontWeight: "bold",
-                  color: "#2563eb",
-                  margin: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "4px",
+                  padding: "8px 0",
+                  backgroundColor: "transparent",
+                  border: "none",
+                  color: "white",
+                  fontWeight: "500",
+                  cursor: "pointer",
+                  transition: "color 0.2s",
                 }}
               >
-                CleanWin
-              </h1>
+                <span>Leistungen</span>
+                <svg
+                  style={{
+                    width: "16px",
+                    height: "16px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                    transition: "transform 0.2s",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
             </div>
-            <nav
+
+            <a
+              href="https://cleanwin.vercel.app/ueber-uns"
               style={{
-                display: "flex",
-                gap: "32px",
+                color: "white",
+                fontWeight: "500",
+                padding: "8px 0",
+                textDecoration: "none",
+                textShadow: "rgba(0, 0, 0, 0.3) 0px 1px 3px",
+                transition: "color 0.2s",
               }}
             >
-              <a
-                href="#services"
-                style={{
-                  color: "#374151",
-                  textDecoration: "none",
-                  transition: "color 0.2s",
-                }}
-              >
-                Dienstleistungen
-              </a>
-              <a
-                href="#about"
-                style={{
-                  color: "#374151",
-                  textDecoration: "none",
-                  transition: "color 0.2s",
-                }}
-              >
-                Über uns
-              </a>
-              <a
-                href="#contact"
-                style={{
-                  color: "#374151",
-                  textDecoration: "none",
-                  transition: "color 0.2s",
-                }}
-              >
-                Kontakt
-              </a>
-            </nav>
-            <button
+              Über uns
+            </a>
+
+            <a
+              href="https://cleanwin.vercel.app/referenzen"
               style={{
-                backgroundColor: "#2563eb",
                 color: "white",
-                padding: "8px 24px",
-                borderRadius: "8px",
-                border: "none",
-                cursor: "pointer",
+                fontWeight: "500",
+                padding: "8px 0",
+                textDecoration: "none",
+                textShadow: "rgba(0, 0, 0, 0.3) 0px 1px 3px",
+                transition: "color 0.2s",
+              }}
+            >
+              Referenzen
+            </a>
+
+            <a
+              href="#contact"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                backgroundColor: "#10a0a4",
+                color: "white",
+                padding: "12px 16px",
+                borderRadius: "9999px",
+                fontSize: "14px",
+                fontWeight: "500",
+                textDecoration: "none",
                 transition: "background-color 0.2s",
               }}
             >
-              Offerte anfordern
-            </button>
-          </div>
+              <svg
+                style={{
+                  width: "16px",
+                  height: "16px",
+                  color: "white",
+                  stroke: "white",
+                  strokeWidth: "2px",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  fill: "none",
+                }}
+                viewBox="0 0 24 24"
+              >
+                <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
+                <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
+                <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
+                <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
+              </svg>
+              <span>Kontaktiere uns</span>
+            </a>
+          </nav>
+
+          {/* Mobile Menu Button (hidden on desktop) */}
+          <button
+            style={{
+              display: "none",
+              padding: "8px",
+              backgroundColor: "transparent",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            <svg
+              style={{
+                width: "24px",
+                height: "24px",
+                color: "white",
+                stroke: "white",
+                fill: "none",
+              }}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
       </header>
 
