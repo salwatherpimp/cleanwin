@@ -33,6 +33,15 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   generateEtags: true,
+  webpack: (config, { dev }) => {
+    if (dev) {
+      // Completely disable HMR
+      config.plugins = config.plugins.filter(
+        (plugin) => plugin.constructor.name !== "HotModuleReplacementPlugin",
+      );
+    }
+    return config;
+  },
 };
 
 module.exports = nextConfig;
