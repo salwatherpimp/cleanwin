@@ -23,7 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Dynamic Builder.io routes
   const builderRoutes = pages.map((page) => ({
     url: `${baseUrl}${page.data?.url || "/"}`,
-    lastModified: new Date(page.lastUpdated || page.dateCreated || Date.now()),
+    lastModified: new Date(page.lastUpdated || Date.now()),
     changeFrequency: "weekly" as const,
     priority: page.data?.url === "/" ? 1 : 0.8,
   }));
