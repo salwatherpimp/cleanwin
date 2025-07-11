@@ -4,6 +4,10 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   reactStrictMode: false,
+  allowedDevOrigins: [
+    "1a18bb3088f545299cf298ddd519a85b-5aa69977c98f44c486379bf7a.projects.builder.codes",
+    "*.projects.builder.codes",
+  ],
   images: {
     remotePatterns: [
       {
