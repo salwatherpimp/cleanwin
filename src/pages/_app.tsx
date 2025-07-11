@@ -12,7 +12,8 @@ const inter = Inter({
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    if (process.env.NODE_ENV === "development") {
+    // Enable hydration detection in both dev and prod
+    if (typeof window !== "undefined") {
       // Enhanced hydration error detection
       const originalError = console.error;
       const originalWarn = console.warn;
