@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function CleanWinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
