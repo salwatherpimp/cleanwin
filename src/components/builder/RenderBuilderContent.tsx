@@ -15,6 +15,7 @@ export function RenderBuilderContent({
   model,
 }: RenderBuilderContentProps) {
   const isPreviewing = useIsPreviewing();
+  const pathname = usePathname();
 
   // Show preview mode or 404 if no content
   if (!content && !isPreviewing) {
@@ -28,5 +29,10 @@ export function RenderBuilderContent({
     );
   }
 
-  return <BuilderComponent model={model} content={content} />;
+  return (
+    <>
+      {content && <StructuredData content={content} url={pathname} />}
+      <BuilderComponent model={model} content={content} />
+    </>
+  );
 }
