@@ -905,7 +905,6 @@ export default function CleanWinPage() {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "48px",
-              "@media (min-width: 1024px)": {
                 gridTemplateColumns: "1fr 1fr",
               },
             }}
