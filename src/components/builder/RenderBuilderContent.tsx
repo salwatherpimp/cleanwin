@@ -32,7 +32,7 @@ export function RenderBuilderContent({
   return (
     <>
       {content && <StructuredData content={content} url={pathname} />}
-      <BuilderComponent model={model} content={content} />
+      <BuilderComponent model={model} content={content || undefined} />
     </>
   );
 }
