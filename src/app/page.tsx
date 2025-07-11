@@ -1275,9 +1275,12 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "18px",
-                  marginTop: "8px",
+                  lineHeight: "16px",
+                  marginTop: "4px",
                   flex: "1",
+                  display: "-webkit-box",
+                  WebkitLineClamp: "4",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                 }}
               >
@@ -1352,9 +1355,12 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "18px",
-                  marginTop: "8px",
+                  lineHeight: "16px",
+                  marginTop: "4px",
                   flex: "1",
+                  display: "-webkit-box",
+                  WebkitLineClamp: "4",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                 }}
               >
@@ -1430,9 +1436,12 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "18px",
-                  marginTop: "8px",
+                  lineHeight: "16px",
+                  marginTop: "4px",
                   flex: "1",
+                  display: "-webkit-box",
+                  WebkitLineClamp: "4",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                 }}
               >
@@ -1508,9 +1517,12 @@ export default function CleanWinPage() {
                 style={{
                   color: "#4b5563",
                   fontSize: "14px",
-                  lineHeight: "18px",
-                  marginTop: "8px",
+                  lineHeight: "16px",
+                  marginTop: "4px",
                   flex: "1",
+                  display: "-webkit-box",
+                  WebkitLineClamp: "4",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                 }}
               >
