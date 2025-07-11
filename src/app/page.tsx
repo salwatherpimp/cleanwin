@@ -147,7 +147,7 @@ export default function CleanWinPage() {
                   flexDirection: "column",
                   gap: "16px",
                   
-                    flexDirection: "row",
+                    
                   },
                 }}
               >
