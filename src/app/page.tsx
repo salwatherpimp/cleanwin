@@ -94,6 +94,7 @@ export default function CleanWinPage() {
                   border: "none",
                   color: isScrolled ? "#374151" : "white",
                   fontWeight: "500",
+                  fontSize: "16px",
                   cursor: "pointer",
                   transition: "color 0.2s",
                 }}
