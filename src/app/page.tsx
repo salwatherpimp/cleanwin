@@ -436,10 +436,15 @@ export default function CleanWinPage() {
         }
       }
 
-      @media (min-width: 768px) {
+            @media (min-width: 768px) {
         .testimonial-card {
           width: calc(33.333% - 16px);
           min-width: calc(33.333% - 16px);
+        }
+
+        /* Hide pagination dots on desktop */
+        .testimonial-pagination {
+          display: none;
         }
       }
     </style>
