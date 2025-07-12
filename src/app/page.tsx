@@ -1060,7 +1060,7 @@ export default function CleanWinPage() {
 
         {/* Mobile Navigation Container */}
         <div
-          className="md:hidden flex"
+          className="md:hidden"
           style={{
             display: "flex",
             alignItems: "center",
