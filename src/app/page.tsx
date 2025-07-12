@@ -148,8 +148,18 @@ export default function CleanWinPage() {
         white-space: nowrap;
       }
 
-            .usp-scroll-track:hover {
+                  .usp-scroll-track:hover {
         animation-play-state: paused;
+      }
+
+      /* Touch support for mobile USP scroll */
+      .usp-scroll-container {
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+      }
+
+      .usp-scroll-track {
+        touch-action: pan-x;
       }
 
       /* Responsive visibility for USP layouts */
