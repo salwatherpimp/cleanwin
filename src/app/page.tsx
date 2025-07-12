@@ -3777,11 +3777,11 @@ export default function CleanWinPage() {
 
                   {/* Quote */}
                   <blockquote
+                    className="testimonial-quote"
                     style={{
                       fontSize: "16px",
                       fontStyle: "italic",
                       color: "#1f2937",
-                      lineHeight: "1.6",
                       marginBottom: "20px",
                       textAlign: "center",
                       flex: 1,
