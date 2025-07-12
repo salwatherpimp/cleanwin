@@ -3777,8 +3777,8 @@ export default function CleanWinPage() {
               Cleanwin - persönlich, zuverlässig, hochwertig
             </h2>
             <a
-              href="#contact"
-              className="button-spacing"
+              href="/kontakt"
+              className="button-spacing cta-button cta-button-primary"
               style={{
                 display: "inline-block",
                 backgroundColor: "#10a0a4",
@@ -3789,7 +3789,6 @@ export default function CleanWinPage() {
                 fontWeight: "600",
                 textDecoration: "none",
                 cursor: "pointer",
-                transition: "all 0.3s",
               }}
             >
               Jetzt unverbindlich kontaktieren
