@@ -3203,8 +3203,11 @@ export default function CleanWinPage() {
                   : "none",
               }}
             >
-              {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="testimonial-card">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={`${testimonial.id}-${index}`}
+                  className="testimonial-card"
+                >
                   {/* Star Rating */}
                   <div style={{ marginBottom: "12px" }}>
                     <div
