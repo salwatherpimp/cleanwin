@@ -1712,7 +1712,7 @@ export default function CleanWinPage() {
                 gap: "16px",
                 width: "100%",
               }}
-              className="grid grid-cols-2 gap-3 md:gap-4"
+              className="about-image-gallery grid grid-cols-2 gap-3 md:gap-4"
             >
               <div
                 style={{
