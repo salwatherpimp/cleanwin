@@ -603,8 +603,9 @@ export default function CleanWinPage() {
     if (!touchStart || !touchEnd) return;
 
     const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
+    const minSwipeDistance = isMobile ? 30 : 50; // Shorter distance for mobile
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
       nextTestimonial();
