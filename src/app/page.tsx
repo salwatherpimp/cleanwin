@@ -1263,8 +1263,8 @@ export default function CleanWinPage() {
 
         {/* Mobile Scrolling Layout */}
         <div
+          className="benefits-mobile-layout"
           style={{
-            display: "block",
             width: "100%",
           }}
         >
