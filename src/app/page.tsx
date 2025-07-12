@@ -1114,11 +1114,11 @@ export default function CleanWinPage() {
           {/* Center CTA Button */}
           <div
             style={{
-              flex: 1,
+              flex: "1 1 auto",
               display: "flex",
               justifyContent: "center",
-              paddingLeft: "16px",
-              paddingRight: "16px",
+              margin: "0 8px",
+              minWidth: "0",
             }}
           >
             <a
