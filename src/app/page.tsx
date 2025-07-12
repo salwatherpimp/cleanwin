@@ -29,6 +29,11 @@ export default function CleanWinPage() {
         .service-card-title { font-size: 18px !important; }
         .service-card-price { font-size: 12px !important; padding: 6px 10px !important; }
       }
+            .responsive-container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
       @media (min-width: 768px) and (max-width: 1023px) {
         /* Tablet styles - 32px padding */
         .responsive-container { padding-left: 32px !important; padding-right: 32px !important; }
