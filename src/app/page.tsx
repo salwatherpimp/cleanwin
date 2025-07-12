@@ -3075,7 +3075,7 @@ export default function CleanWinPage() {
             </h2>
             <p
               style={{
-                color: "white",
+                color: "#6b7280",
                 fontSize: "20px",
                 lineHeight: "32px",
                 marginBottom: "0px",
@@ -3083,7 +3083,6 @@ export default function CleanWinPage() {
                 marginRight: "auto",
                 maxWidth: "768px",
                 textAlign: "center",
-                textShadow: "0 1px 3px rgba(0,0,0,0.2)",
               }}
             >
               Überzeugen Sie sich von der Qualität unserer Arbeit und senden sie
