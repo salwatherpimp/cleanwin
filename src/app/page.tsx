@@ -63,8 +63,67 @@ export default function CleanWinPage() {
         justify-content: center;
       }
 
-      .logo-scroll-track:hover {
+            .logo-scroll-track:hover {
         animation-play-state: paused;
+      }
+
+      /* Mobile accordion styles for Cleanwin features */
+      @media (max-width: 767px) {
+        .cleanwin-features-grid {
+          display: none !important;
+        }
+
+        .cleanwin-features-accordion {
+          display: flex !important;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .accordion-item {
+          background: rgba(255, 255, 255, 0.9);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px;
+          backdrop-filter: blur(4px);
+          overflow: hidden;
+          transition: all 0.3s ease;
+        }
+
+        .accordion-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 16px;
+          cursor: pointer;
+          user-select: none;
+        }
+
+        .accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .accordion-content.expanded {
+          max-height: 200px;
+          padding: 0 16px 16px 16px;
+        }
+
+        .accordion-icon-toggle {
+          width: 24px;
+          height: 24px;
+          transition: transform 0.3s ease;
+        }
+
+        .accordion-icon-toggle.expanded {
+          transform: rotate(45deg);
+        }
+      }
+
+      @media (min-width: 768px) {
+        .cleanwin-features-accordion {
+          display: none !important;
+        }
       }
     </style>
     `;
