@@ -220,8 +220,30 @@ export default function CleanWinPage() {
           display: block !important;
         }
 
-        .benefits-mobile-layout {
+                .benefits-mobile-layout {
           display: none !important;
+        }
+      }
+
+      /* About Section Layout Improvements */
+      .about-section-grid {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 48px;
+        align-items: flex-start;
+      }
+
+      @media (max-width: 1023px) {
+        .about-section-grid {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .about-section-grid {
+          gap: 24px !important;
         }
       }
 
