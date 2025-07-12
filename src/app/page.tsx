@@ -225,7 +225,7 @@ export default function CleanWinPage() {
         }
       }
 
-            /* About Section Layout Improvements */
+      /* About Section Layout Improvements */
       .about-section-grid {
         display: grid;
         grid-template-columns: 3fr 2fr;
@@ -233,29 +233,11 @@ export default function CleanWinPage() {
         align-items: flex-start;
       }
 
-      .about-text-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-
-      .about-image-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        width: 100%;
-        margin-top: -4px; /* Align with H2 baseline */
-      }
-
       @media (max-width: 1023px) {
         .about-section-grid {
           grid-template-columns: 1fr !important;
           gap: 32px !important;
           text-align: center;
-        }
-
-        .about-image-content {
-          margin-top: 0px !important;
         }
       }
 
@@ -1665,7 +1647,7 @@ export default function CleanWinPage() {
         >
           <div className="about-section-grid">
             {/* Text Content */}
-            <div className="about-text-content">
+            <div>
               <h2
                 className="headline-spacing"
                 style={{
@@ -1680,7 +1662,7 @@ export default function CleanWinPage() {
                 style={{
                   color: "#6b7280",
                   lineHeight: "28px",
-                  marginBottom: "0px",
+                  marginBottom: "16px",
                   marginTop: "0px",
                 }}
               >
@@ -1705,7 +1687,7 @@ export default function CleanWinPage() {
                   fontWeight: "600",
                   textDecoration: "none",
                   cursor: "pointer",
-                  marginTop: "12px",
+                  marginTop: "8px",
                 }}
               >
                 Leistungen Entdecken
@@ -1713,7 +1695,15 @@ export default function CleanWinPage() {
             </div>
 
             {/* Image Gallery */}
-            <div className="about-image-content">
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "16px",
+                width: "100%",
+              }}
+              className="grid grid-cols-2 gap-3 md:gap-4"
+            >
               <div
                 style={{
                   borderRadius: "16px",
