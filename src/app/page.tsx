@@ -348,7 +348,7 @@ export default function CleanWinPage() {
         line-height: 1.5em !important;
       }
 
-      .carousel-nav {
+            .carousel-nav {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -364,6 +364,13 @@ export default function CleanWinPage() {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         transition: all 0.3s ease;
         z-index: 10;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .testimonial-carousel:hover .carousel-nav {
+        opacity: 1;
+        pointer-events: auto;
       }
 
       .carousel-nav:hover {
