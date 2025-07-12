@@ -2539,7 +2539,7 @@ export default function CleanWinPage() {
                 }}
               >
                 Von früh bis spät - wir richten uns stet nach Ihrem Alltag.
-                Immer p��nktlich.
+                Immer pünktlich.
               </p>
             </div>
           </div>
