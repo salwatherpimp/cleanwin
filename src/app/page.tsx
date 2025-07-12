@@ -3819,9 +3819,15 @@ export default function CleanWinPage() {
                       fontWeight: "700",
                       marginBottom: "20px",
                       boxShadow: "0 4px 12px rgba(16, 160, 164, 0.3)",
+                      ...(testimonial.profileImage && {
+                        backgroundImage: `url(${testimonial.profileImage})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                      }),
                     }}
                   >
-                    {testimonial.initial}
+                    {testimonial.profileImage ? "" : testimonial.initial}
                   </div>
 
                   {/* Quote */}
