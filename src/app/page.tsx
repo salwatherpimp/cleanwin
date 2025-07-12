@@ -1648,7 +1648,7 @@ export default function CleanWinPage() {
                 style={{
                   color: "#6b7280",
                   lineHeight: "28px",
-                  marginBottom: "24px",
+                  marginBottom: "16px",
                   marginTop: "0px",
                 }}
               >
@@ -1662,7 +1662,7 @@ export default function CleanWinPage() {
               </p>
               <a
                 href="#services"
-                className="button-spacing cta-button cta-button-primary"
+                className="cta-button cta-button-primary"
                 style={{
                   display: "inline-block",
                   backgroundColor: "#10a0a4",
