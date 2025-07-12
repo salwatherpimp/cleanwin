@@ -872,7 +872,6 @@ export default function CleanWinPage() {
         <div
           className="hidden md:flex"
           style={{
-            display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             maxWidth: "1152px",
