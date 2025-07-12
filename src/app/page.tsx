@@ -40,6 +40,8 @@ export default function CleanWinPage() {
       style={{
         minHeight: "100vh",
         backgroundColor: "#ffffff",
+        width: "100%",
+        overflow: "hidden",
       }}
     >
       <div dangerouslySetInnerHTML={{ __html: mobileStyles }} />
@@ -440,7 +442,7 @@ export default function CleanWinPage() {
           style={{
             position: "relative",
             zIndex: 10,
-            maxWidth: "1152px",
+            maxWidth: "1280px",
             margin: "0 auto",
             padding: "80px 16px 24px",
             textAlign: "center",
@@ -474,7 +476,7 @@ export default function CleanWinPage() {
               color: "rgba(255, 255, 255, 0.95)",
             }}
           >
-            Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere Räume,
+            Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere R��ume,
             Fassaden und mehr.
           </p>
 
@@ -629,11 +631,12 @@ export default function CleanWinPage() {
           borderBottom: "1px solid #e5e7eb",
           padding: "24px 0",
           overflow: "hidden",
+          width: "100%",
         }}
       >
         <div
           style={{
-            maxWidth: "1152px",
+            maxWidth: "1280px",
             margin: "0 auto",
             padding: "0 16px",
           }}
@@ -849,11 +852,12 @@ export default function CleanWinPage() {
           backgroundColor: "#f9fafb",
           padding: "24px 0",
           position: "relative",
+          width: "100%",
         }}
       >
         <div
           style={{
-            maxWidth: "1152px",
+            maxWidth: "1280px",
             margin: "0 auto",
             padding: "0 16px",
           }}
@@ -1005,6 +1009,7 @@ export default function CleanWinPage() {
           borderTop: "1px solid #e5e7eb",
           borderBottom: "1px solid #e5e7eb",
           padding: "20px 0",
+          width: "100%",
         }}
       >
         <div
@@ -1142,11 +1147,12 @@ export default function CleanWinPage() {
           backgroundColor: "#f9fafb",
           padding: "20px 0",
           position: "relative",
+          width: "100%",
         }}
       >
         <div
           style={{
-            maxWidth: "1152px",
+            maxWidth: "1280px",
             margin: "0 auto",
             padding: "0 16px",
           }}
@@ -1597,11 +1603,12 @@ export default function CleanWinPage() {
           padding: "20px 0",
           position: "relative",
           overflow: "hidden",
+          width: "100%",
         }}
       >
         <div
           style={{
-            maxWidth: "1152px",
+            maxWidth: "1280px",
             margin: "0 auto",
             padding: "0 16px",
           }}
@@ -1968,11 +1975,12 @@ export default function CleanWinPage() {
           padding: "64px 0",
           position: "relative",
           overflow: "hidden",
+          width: "100%",
         }}
       >
         <div
           style={{
-            maxWidth: "1152px",
+            maxWidth: "1280px",
             margin: "0 auto",
             padding: "0 16px",
           }}
@@ -2530,6 +2538,7 @@ export default function CleanWinPage() {
         style={{
           padding: "96px 0",
           position: "relative",
+          width: "100%",
         }}
       >
         {/* Background Image */}
@@ -2614,6 +2623,7 @@ export default function CleanWinPage() {
           backgroundColor: "#111827",
           color: "white",
           position: "relative",
+          width: "100%",
         }}
       >
         <div
