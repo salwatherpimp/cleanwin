@@ -986,6 +986,7 @@ export default function CleanWinPage() {
 
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
+              className="desktop-nav-item"
               style={{
                 color: isScrolled ? "#374151" : "white",
                 fontWeight: "500",
@@ -1003,6 +1004,7 @@ export default function CleanWinPage() {
 
             <a
               href="https://cleanwin.vercel.app/referenzen"
+              className="desktop-nav-item"
               style={{
                 color: isScrolled ? "#374151" : "white",
                 fontWeight: "500",
