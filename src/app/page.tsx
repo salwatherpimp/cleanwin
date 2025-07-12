@@ -3146,7 +3146,7 @@ export default function CleanWinPage() {
                 transform: `translateX(-${currentTestimonial * (isMobile ? 100 : 33.333)}%)`,
               }}
             >
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="testimonial-card">
                   {/* Star Rating */}
                   <div style={{ marginBottom: "12px" }}>
