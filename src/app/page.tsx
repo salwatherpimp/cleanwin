@@ -426,17 +426,13 @@ export default function CleanWinPage() {
 
         
 
+                /* Hide navigation arrows on mobile */
         .carousel-nav {
-          width: 40px;
-          height: 40px;
+          display: none !important;
         }
 
-        .carousel-nav.left {
-          left: 8px;
-        }
-
-        .carousel-nav.right {
-          right: 8px;
+        .testimonial-pagination {
+          margin-top: 24px;
         }
       }
 
