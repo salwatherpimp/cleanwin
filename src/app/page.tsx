@@ -1735,12 +1735,11 @@ export default function CleanWinPage() {
         >
           <div style={{ textAlign: "center" }}>
             <h2
+              className="headline-spacing"
               style={{
                 fontSize: "28px",
                 fontWeight: "700",
                 color: "#111827",
-                marginBottom: "24px",
-                marginTop: "23.24px",
                 textAlign: "center",
               }}
             >
