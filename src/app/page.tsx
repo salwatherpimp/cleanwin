@@ -234,6 +234,49 @@ export default function CleanWinPage() {
     setExpandedAccordion(expandedAccordion === index ? null : index);
   };
 
+  const testimonials = [
+    {
+      id: 1,
+      name: "Ursula Wirtz",
+      initial: "U",
+      text: "Ein engagiertes Team, flexibel, zuverlässig, kreativ. Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde CleanWin gerne weiterempfehlen.",
+    },
+    {
+      id: 2,
+      name: "Johanna Kelts",
+      initial: "J",
+      text: "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen Brüder bezeichnen.",
+    },
+    {
+      id: 3,
+      name: "Michael Schmidt",
+      initial: "M",
+      text: "Ausgezeichnete Fensterreinigung! Das Team war pünktlich, freundlich und hat perfekte Arbeit geleistet. Die Preise sind fair und transparent.",
+    },
+    {
+      id: 4,
+      name: "Sarah Weber",
+      initial: "S",
+      text: "Wir sind mit der Büroreinigung sehr zufrieden. CleanWin arbeitet zuverlässig und gründlich. Unser Büro ist immer tadellos sauber.",
+    },
+    {
+      id: 5,
+      name: "Thomas Müller",
+      initial: "T",
+      text: "Für unser Restaurant haben wir ein perfektes Reinigungskonzept erhalten. Durch die kompetente Beratung sind wir sehr zufrieden mit dem Service.",
+    },
+  ];
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
+    );
+  };
+
   return (
     <div
       style={{
