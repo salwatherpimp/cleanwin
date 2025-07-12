@@ -976,11 +976,11 @@ export default function CleanWinPage() {
 
       {/* Benefits Section */}
       <section
+        className="section-spacing-sm"
         style={{
           backgroundColor: "#f9fafb",
           borderTop: "1px solid #e5e7eb",
           borderBottom: "1px solid #e5e7eb",
-          padding: "24px 0",
           overflow: "hidden",
           width: "100%",
         }}
