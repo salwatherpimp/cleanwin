@@ -59,9 +59,9 @@ export default function CleanWinPage() {
         margin-top: 24px;
       }
 
-      .button-spacing {
-        margin-bottom: 48px;
-        margin-top: 48px;
+            .button-spacing {
+        margin-bottom: 24px;
+        margin-top: 24px;
       }
 
             @media (max-width: 767px) {
