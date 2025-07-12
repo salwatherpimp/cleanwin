@@ -1257,7 +1257,7 @@ export default function CleanWinPage() {
                   boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
                 }}
               >
-                ab CHF 150.–
+                Ab CHF 150.–
               </div>
 
               {/* Service title */}
@@ -1341,7 +1341,7 @@ export default function CleanWinPage() {
                   boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
                 }}
               >
-                ab CHF 199.–
+                Ab CHF 199.–
               </div>
 
               {/* Service title */}
@@ -1425,7 +1425,7 @@ export default function CleanWinPage() {
                   boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
                 }}
               >
-                ab CHF 250.–
+                Ab CHF 250.–
               </div>
 
               {/* Service title */}
@@ -1509,7 +1509,7 @@ export default function CleanWinPage() {
                   boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
                 }}
               >
-                ab CHF 320.–
+                Ab CHF 320.–
               </div>
 
               {/* Service title */}
@@ -1593,7 +1593,7 @@ export default function CleanWinPage() {
                   boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
                 }}
               >
-                ab CHF 280.–
+                Ab CHF 280.–
               </div>
 
               {/* Service title */}
