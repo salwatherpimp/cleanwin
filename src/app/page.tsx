@@ -1126,140 +1126,124 @@ export default function CleanWinPage() {
         </div>
 
         {/* Mobile Menu Overlay */}
-        {isMobileMenuOpen && (
-          <div
-            style={{
-              position: "absolute",
-              top: "100%",
-              left: "0",
-              right: "0",
-              backgroundColor: "rgba(255, 255, 255, 0.98)",
-              backdropFilter: "blur(8px)",
-              borderTop: "1px solid rgba(0, 0, 0, 0.1)",
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-              zIndex: 40,
-            }}
-            className="md:hidden"
-          >
-            <div
-              style={{
-                padding: "24px 16px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
-              }}
+        <div
+          className={`mobile-nav-overlay ${isMobileMenuOpen ? "open" : ""}`}
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+
+        {/* Mobile Menu */}
+        <div
+          className={`mobile-nav-menu ${isMobileMenuOpen ? "open" : ""} md:hidden`}
+        >
+          {/* Leistungen Section */}
+          <div className="mobile-nav-section">
+            <div className="mobile-nav-title">Leistungen</div>
+            <a
+              href="/fensterreinigung"
+              className="mobile-nav-item"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              <button
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  width: "100%",
-                  padding: "16px 0",
-                  backgroundColor: "transparent",
-                  border: "none",
-                  color: "#374151",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  textAlign: "left",
-                  cursor: "pointer",
-                  borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
-                }}
-              >
-                <span>Leistungen</span>
-                <svg
-                  style={{
-                    width: "20px",
-                    height: "20px",
-                    color: "#374151",
-                    stroke: "#374151",
-                    strokeWidth: "2px",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    fill: "none",
-                  }}
-                  viewBox="0 0 24 24"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-
-              <a
-                href="https://cleanwin.vercel.app/ueber-uns"
-                style={{
-                  display: "block",
-                  padding: "16px 0",
-                  color: "#374151",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  textDecoration: "none",
-                  borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
-                  transition: "color 0.2s",
-                }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Über uns
-              </a>
-
-              <a
-                href="https://cleanwin.vercel.app/referenzen"
-                style={{
-                  display: "block",
-                  padding: "16px 0",
-                  color: "#374151",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  textDecoration: "none",
-                  borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
-                  transition: "color 0.2s",
-                }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Referenzen
-              </a>
-
-              <a
-                href="#contact"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "8px",
-                  backgroundColor: "#10a0a4",
-                  color: "white",
-                  padding: "16px 24px",
-                  borderRadius: "9999px",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  textDecoration: "none",
-                  marginTop: "8px",
-                  transition: "background-color 0.2s",
-                }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <svg
-                  style={{
-                    width: "20px",
-                    height: "20px",
-                    color: "white",
-                    stroke: "white",
-                    strokeWidth: "2px",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    fill: "none",
-                  }}
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
-                  <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
-                  <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
-                  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
-                </svg>
-                <span>Kontaktiere uns</span>
-              </a>
-            </div>
+              Fensterreinigung
+            </a>
+            <a
+              href="/unterhaltsreinigung"
+              className="mobile-nav-item"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Unterhaltsreinigung
+            </a>
+            <a
+              href="/solarpanel-reinigen"
+              className="mobile-nav-item"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Solarpanel reinigen
+            </a>
+            <a
+              href="/fassadenreinigung"
+              className="mobile-nav-item"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Fassadenreinigung
+            </a>
+            <a
+              href="/umzugsreinigung"
+              className="mobile-nav-item"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Umzugsreinigung
+            </a>
+            <a
+              href="/baureinigung"
+              className="mobile-nav-item"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Baureinigung
+            </a>
           </div>
-        )}
+
+          {/* Weitere Seiten Section */}
+          <div className="mobile-nav-section">
+            <div className="mobile-nav-title">Weitere Seiten</div>
+            <a
+              href="https://cleanwin.vercel.app/ueber-uns"
+              className="mobile-nav-item"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Über uns
+            </a>
+            <a
+              href="https://cleanwin.vercel.app/referenzen"
+              className="mobile-nav-item"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Referenzen
+            </a>
+          </div>
+
+          {/* CTA Section */}
+          <div className="mobile-nav-cta">
+            <a
+              href="/kontakt"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px",
+                backgroundColor: "#10a0a4",
+                color: "white",
+                padding: "16px 24px",
+                borderRadius: "12px",
+                fontSize: "16px",
+                fontWeight: "600",
+                textDecoration: "none",
+                transition: "background-color 0.2s",
+                boxShadow: "0 4px 12px rgba(16, 160, 164, 0.3)",
+              }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <svg
+                style={{
+                  width: "20px",
+                  height: "20px",
+                  color: "white",
+                  stroke: "white",
+                  strokeWidth: "2px",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  fill: "none",
+                }}
+                viewBox="0 0 24 24"
+              >
+                <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
+                <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
+                <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
+                <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
+              </svg>
+              <span>Jetzt kontaktieren</span>
+            </a>
+          </div>
+        </div>
       </header>
 
       {/* Hero Section */}
