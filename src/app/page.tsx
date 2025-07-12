@@ -198,9 +198,7 @@ export default function CleanWinPage() {
           min-width: calc(100vw - 32px);
         }
 
-        .testimonial-track {
-          transform: translateX(calc(-100vw * var(--current-slide, 0))) !important;
-        }
+        
 
         .carousel-nav {
           width: 40px;
