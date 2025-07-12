@@ -1069,7 +1069,7 @@ export default function CleanWinPage() {
           <p
             style={{
               color: "#6b7280",
-              marginBottom: "16px",
+              marginBottom: "8px",
               marginTop: "16px",
               textAlign: "center",
             }}
@@ -2471,7 +2471,7 @@ export default function CleanWinPage() {
                 }}
               >
                 Von früh bis spät - wir richten uns stet nach Ihrem Alltag.
-                Immer pünktlich.
+                Immer p��nktlich.
               </p>
             </div>
           </div>
