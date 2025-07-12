@@ -64,13 +64,13 @@ export default function CleanWinPage() {
         margin-top: 48px;
       }
 
-      @media (max-width: 767px) {
+            @media (max-width: 767px) {
         .section-spacing {
-          padding: 64px 0 !important;
+          padding: 32px 0 !important;
         }
 
         .section-spacing-sm {
-          padding: 48px 0 !important;
+          padding: 24px 0 !important;
         }
 
         .headline-spacing {
