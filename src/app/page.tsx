@@ -84,8 +84,14 @@ export default function CleanWinPage() {
         }
       }
 
-      /* Infinite logo scroll animation */
+            /* Infinite logo scroll animation */
       @keyframes logoScroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      /* Infinite USP scroll animation - matches logo speed */
+      @keyframes uspScroll {
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
