@@ -1188,6 +1188,7 @@ export default function CleanWinPage() {
             </h2>
           </div>
           <div
+            className="services-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
@@ -1198,415 +1199,504 @@ export default function CleanWinPage() {
             <a
               href="https://cleanwin.vercel.app/leistungen/fensterreinigung"
               style={{
-                backgroundColor: "white",
-                borderRadius: "8px",
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                color: "rgb(0, 0, 238)",
-                cursor: "pointer",
+                position: "relative",
+                borderRadius: "16px",
                 overflow: "hidden",
                 textDecoration: "none",
-                transition: "all 0.3s",
                 display: "block",
+                height: "280px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 8px 24px -4px",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1)";
               }}
             >
-              <div style={{ position: "relative", overflow: "hidden" }}>
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-malen_gdvdci.avif"
-                  alt="Fensterreinigung"
-                  width={400}
-                  height={192}
-                  style={{
-                    width: "100%",
-                    height: "192px",
-                    objectFit: "cover",
-                    display: "inline",
-                    transition: "transform 0.3s",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    backgroundImage:
-                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
-                  }}
-                />
+              <Image
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1748417852/farbxpress-malen_gdvdci.avif"
+                alt="Fensterreinigung"
+                fill
+                style={{
+                  objectFit: "cover",
+                  transition: "transform 0.3s ease",
+                }}
+              />
+
+              {/* Dark gradient overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background:
+                    "linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 70%)",
+                }}
+              />
+
+              {/* Price label */}
+              <div
+                className="service-card-price"
+                style={{
+                  position: "absolute",
+                  top: "16px",
+                  right: "16px",
+                  backgroundColor: "#dc2626",
+                  color: "white",
+                  padding: "8px 12px",
+                  borderRadius: "12px",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
+                }}
+              >
+                ab CHF 150.–
               </div>
-              <div style={{ padding: "24px" }}>
-                <h3
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "600",
-                    color: "#111827",
-                    marginBottom: "12px",
-                    height: "44px",
-                    minHeight: "44px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Fensterreinigung
-                </h3>
-                <p
-                  style={{
-                    fontSize: "14px",
-                    lineHeight: "21px",
-                    color: "#4b5563",
-                    marginBottom: "0px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Kristallklare Fenster mit professioneller Reinigungstechnik.
-                </p>
-              </div>
+
+              {/* Service title */}
+              <h3
+                className="service-card-title"
+                style={{
+                  position: "absolute",
+                  bottom: "20px",
+                  left: "20px",
+                  color: "white",
+                  fontSize: "22px",
+                  fontWeight: "700",
+                  margin: 0,
+                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                  lineHeight: "1.2",
+                }}
+              >
+                Fensterreinigung
+              </h3>
             </a>
 
             {/* Büroreinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/bueroreinigung"
               style={{
-                backgroundColor: "white",
-                borderRadius: "8px",
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                color: "rgb(0, 0, 238)",
-                cursor: "pointer",
+                position: "relative",
+                borderRadius: "16px",
                 overflow: "hidden",
                 textDecoration: "none",
-                transition: "all 0.3s",
                 display: "block",
+                height: "280px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 8px 24px -4px",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1)";
               }}
             >
-              <div style={{ position: "relative", overflow: "hidden" }}>
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1750015382/altbauwohnung-meilen_lrttoc.avif"
-                  alt="Büroreinigung"
-                  width={400}
-                  height={192}
-                  style={{
-                    width: "100%",
-                    height: "192px",
-                    objectFit: "cover",
-                    display: "inline",
-                    transition: "transform 0.3s",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    backgroundImage:
-                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
-                  }}
-                />
+              <Image
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1750015382/altbauwohnung-meilen_lrttoc.avif"
+                alt="Büroreinigung"
+                fill
+                style={{
+                  objectFit: "cover",
+                  transition: "transform 0.3s ease",
+                }}
+              />
+
+              {/* Dark gradient overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background:
+                    "linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 70%)",
+                }}
+              />
+
+              {/* Price label */}
+              <div
+                className="service-card-price"
+                style={{
+                  position: "absolute",
+                  top: "16px",
+                  right: "16px",
+                  backgroundColor: "#dc2626",
+                  color: "white",
+                  padding: "8px 12px",
+                  borderRadius: "12px",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
+                }}
+              >
+                ab CHF 199.–
               </div>
-              <div style={{ padding: "24px" }}>
-                <h3
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "600",
-                    color: "#111827",
-                    marginBottom: "12px",
-                    height: "44px",
-                    minHeight: "44px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Büroreinigung
-                </h3>
-                <p
-                  style={{
-                    fontSize: "14px",
-                    lineHeight: "21px",
-                    color: "#4b5563",
-                    marginBottom: "0px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Hygienische und gründliche Büroreinigung für Ihr Unternehmen.
-                </p>
-              </div>
+
+              {/* Service title */}
+              <h3
+                className="service-card-title"
+                style={{
+                  position: "absolute",
+                  bottom: "20px",
+                  left: "20px",
+                  color: "white",
+                  fontSize: "22px",
+                  fontWeight: "700",
+                  margin: 0,
+                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                  lineHeight: "1.2",
+                }}
+              >
+                Büroreinigung
+              </h3>
             </a>
 
             {/* Fassadenreinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/fassadenreinigung"
               style={{
-                backgroundColor: "white",
-                borderRadius: "8px",
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                color: "rgb(0, 0, 238)",
-                cursor: "pointer",
+                position: "relative",
+                borderRadius: "16px",
                 overflow: "hidden",
                 textDecoration: "none",
-                transition: "all 0.3s",
                 display: "block",
+                height: "280px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 8px 24px -4px",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1)";
               }}
             >
-              <div style={{ position: "relative", overflow: "hidden" }}>
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif"
-                  alt="Fassadenreinigung"
-                  width={400}
-                  height={192}
-                  style={{
-                    width: "100%",
-                    height: "192px",
-                    objectFit: "cover",
-                    display: "inline",
-                    transition: "transform 0.3s",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    backgroundImage:
-                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
-                  }}
-                />
+              <Image
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif"
+                alt="Fassadenreinigung"
+                fill
+                style={{
+                  objectFit: "cover",
+                  transition: "transform 0.3s ease",
+                }}
+              />
+
+              {/* Dark gradient overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background:
+                    "linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 70%)",
+                }}
+              />
+
+              {/* Price label */}
+              <div
+                className="service-card-price"
+                style={{
+                  position: "absolute",
+                  top: "16px",
+                  right: "16px",
+                  backgroundColor: "#dc2626",
+                  color: "white",
+                  padding: "8px 12px",
+                  borderRadius: "12px",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
+                }}
+              >
+                ab CHF 250.–
               </div>
-              <div style={{ padding: "24px" }}>
-                <h3
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "600",
-                    color: "#111827",
-                    marginBottom: "12px",
-                    height: "44px",
-                    minHeight: "44px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Fassadenreinigung
-                </h3>
-                <p
-                  style={{
-                    fontSize: "14px",
-                    lineHeight: "21px",
-                    color: "#4b5563",
-                    marginBottom: "0px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Schonende Fassadenreinigung für alle Oberflächentypen.
-                </p>
-              </div>
+
+              {/* Service title */}
+              <h3
+                className="service-card-title"
+                style={{
+                  position: "absolute",
+                  bottom: "20px",
+                  left: "20px",
+                  color: "white",
+                  fontSize: "22px",
+                  fontWeight: "700",
+                  margin: 0,
+                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                  lineHeight: "1.2",
+                }}
+              >
+                Fassadenreinigung
+              </h3>
             </a>
 
             {/* Umzugsreinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/umzugsreinigung"
               style={{
-                backgroundColor: "white",
-                borderRadius: "8px",
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                color: "rgb(0, 0, 238)",
-                cursor: "pointer",
+                position: "relative",
+                borderRadius: "16px",
                 overflow: "hidden",
                 textDecoration: "none",
-                transition: "all 0.3s",
                 display: "block",
+                height: "280px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 8px 24px -4px",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1)";
               }}
             >
-              <div style={{ position: "relative", overflow: "hidden" }}>
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-tapezieren_jvtgyo.avif"
-                  alt="Umzugsreinigung"
-                  width={400}
-                  height={192}
-                  style={{
-                    width: "100%",
-                    height: "192px",
-                    objectFit: "cover",
-                    display: "inline",
-                    transition: "transform 0.3s",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    backgroundImage:
-                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
-                  }}
-                />
+              <Image
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1748417852/farbxpress-tapezieren_jvtgyo.avif"
+                alt="Umzugsreinigung"
+                fill
+                style={{
+                  objectFit: "cover",
+                  transition: "transform 0.3s ease",
+                }}
+              />
+
+              {/* Dark gradient overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background:
+                    "linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 70%)",
+                }}
+              />
+
+              {/* Price label */}
+              <div
+                className="service-card-price"
+                style={{
+                  position: "absolute",
+                  top: "16px",
+                  right: "16px",
+                  backgroundColor: "#dc2626",
+                  color: "white",
+                  padding: "8px 12px",
+                  borderRadius: "12px",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
+                }}
+              >
+                ab CHF 320.–
               </div>
-              <div style={{ padding: "24px" }}>
-                <h3
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "600",
-                    color: "#111827",
-                    marginBottom: "12px",
-                    height: "44px",
-                    minHeight: "44px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Umzugsreinigung
-                </h3>
-                <p
-                  style={{
-                    fontSize: "14px",
-                    lineHeight: "21px",
-                    color: "#4b5563",
-                    marginBottom: "0px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Professionelle Endreinigung für Ihren stressfreien Umzug.
-                </p>
-              </div>
+
+              {/* Service title */}
+              <h3
+                className="service-card-title"
+                style={{
+                  position: "absolute",
+                  bottom: "20px",
+                  left: "20px",
+                  color: "white",
+                  fontSize: "22px",
+                  fontWeight: "700",
+                  margin: 0,
+                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                  lineHeight: "1.2",
+                }}
+              >
+                Umzugsreinigung
+              </h3>
             </a>
 
             {/* Baureinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/baureinigung"
               style={{
-                backgroundColor: "white",
-                borderRadius: "8px",
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                color: "rgb(0, 0, 238)",
-                cursor: "pointer",
+                position: "relative",
+                borderRadius: "16px",
                 overflow: "hidden",
                 textDecoration: "none",
-                transition: "all 0.3s",
                 display: "block",
+                height: "280px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 8px 24px -4px",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1)";
               }}
             >
-              <div style={{ position: "relative", overflow: "hidden" }}>
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-spritzen_ij8jsj.avif"
-                  alt="Baureinigung"
-                  width={400}
-                  height={192}
-                  style={{
-                    width: "100%",
-                    height: "192px",
-                    objectFit: "cover",
-                    display: "inline",
-                    transition: "transform 0.3s",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    backgroundImage:
-                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
-                  }}
-                />
+              <Image
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1748417852/farbxpress-spritzen_ij8jsj.avif"
+                alt="Baureinigung"
+                fill
+                style={{
+                  objectFit: "cover",
+                  transition: "transform 0.3s ease",
+                }}
+              />
+
+              {/* Dark gradient overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background:
+                    "linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 70%)",
+                }}
+              />
+
+              {/* Price label */}
+              <div
+                className="service-card-price"
+                style={{
+                  position: "absolute",
+                  top: "16px",
+                  right: "16px",
+                  backgroundColor: "#dc2626",
+                  color: "white",
+                  padding: "8px 12px",
+                  borderRadius: "12px",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
+                }}
+              >
+                ab CHF 280.–
               </div>
-              <div style={{ padding: "24px" }}>
-                <h3
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "600",
-                    color: "#111827",
-                    marginBottom: "12px",
-                    height: "44px",
-                    minHeight: "44px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Baureinigung
-                </h3>
-                <p
-                  style={{
-                    fontSize: "14px",
-                    lineHeight: "21px",
-                    color: "#4b5563",
-                    marginBottom: "0px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Gründliche Baureinigung nach Renovierung und Neubau.
-                </p>
-              </div>
+
+              {/* Service title */}
+              <h3
+                className="service-card-title"
+                style={{
+                  position: "absolute",
+                  bottom: "20px",
+                  left: "20px",
+                  color: "white",
+                  fontSize: "22px",
+                  fontWeight: "700",
+                  margin: 0,
+                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                  lineHeight: "1.2",
+                }}
+              >
+                Baureinigung
+              </h3>
             </a>
 
             {/* Weitere Dienstleistungen */}
             <a
               href="https://cleanwin.vercel.app/leistungen/weitere-dienstleistungen"
               style={{
-                backgroundColor: "white",
-                borderRadius: "8px",
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                color: "rgb(0, 0, 238)",
-                cursor: "pointer",
+                position: "relative",
+                borderRadius: "16px",
                 overflow: "hidden",
                 textDecoration: "none",
-                transition: "all 0.3s",
                 display: "block",
+                height: "280px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 8px 24px -4px",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.style.transform = "scale(1)";
               }}
             >
-              <div style={{ position: "relative", overflow: "hidden" }}>
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif"
-                  alt="Weitere Dienstleistungen"
-                  width={400}
-                  height={192}
-                  style={{
-                    width: "100%",
-                    height: "192px",
-                    objectFit: "cover",
-                    display: "inline",
-                    transition: "transform 0.3s",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    backgroundImage:
-                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
-                  }}
-                />
+              <Image
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif"
+                alt="Weitere Dienstleistungen"
+                fill
+                style={{
+                  objectFit: "cover",
+                  transition: "transform 0.3s ease",
+                }}
+              />
+
+              {/* Dark gradient overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background:
+                    "linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 70%)",
+                }}
+              />
+
+              {/* Price label */}
+              <div
+                className="service-card-price"
+                style={{
+                  position: "absolute",
+                  top: "16px",
+                  right: "16px",
+                  backgroundColor: "#dc2626",
+                  color: "white",
+                  padding: "8px 12px",
+                  borderRadius: "12px",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
+                }}
+              >
+                Auf Anfrage
               </div>
-              <div style={{ padding: "24px" }}>
-                <h3
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "600",
-                    color: "#111827",
-                    marginBottom: "12px",
-                    height: "44px",
-                    minHeight: "44px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Weitere Dienstleistungen
-                </h3>
-                <p
-                  style={{
-                    fontSize: "14px",
-                    lineHeight: "21px",
-                    color: "#4b5563",
-                    marginBottom: "0px",
-                    marginTop: "0px",
-                  }}
-                >
-                  Erfahren Sie mehr über unsere Zusatzleistungen und
-                  Spezialdienste.
-                </p>
-              </div>
+
+              {/* Service title */}
+              <h3
+                className="service-card-title"
+                style={{
+                  position: "absolute",
+                  bottom: "20px",
+                  left: "20px",
+                  color: "white",
+                  fontSize: "22px",
+                  fontWeight: "700",
+                  margin: 0,
+                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                  lineHeight: "1.2",
+                }}
+              >
+                Weitere Dienstleistungen
+              </h3>
             </a>
           </div>
         </div>
