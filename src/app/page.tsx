@@ -3169,6 +3169,9 @@ export default function CleanWinPage() {
               className="testimonial-track"
               style={{
                 transform: `translateX(-${currentTestimonial * (isMobile ? 100 : 33.333)}%)`,
+                transition: isTransitioning
+                  ? "transform 0.5s ease-in-out"
+                  : "none",
               }}
             >
               {testimonials.map((testimonial) => (
