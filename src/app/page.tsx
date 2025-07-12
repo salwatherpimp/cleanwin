@@ -859,7 +859,11 @@ export default function CleanWinPage() {
             className="hidden md:flex"
           >
             {/* Services Dropdown */}
-            <div style={{ position: "relative" }}>
+            <div
+              style={{ position: "relative" }}
+              onMouseEnter={() => setIsDesktopDropdownOpen(true)}
+              onMouseLeave={() => setIsDesktopDropdownOpen(false)}
+            >
               <button
                 style={{
                   display: "flex",
@@ -887,12 +891,39 @@ export default function CleanWinPage() {
                     strokeLinejoin: "round",
                     fill: "none",
                     transition: "transform 0.2s",
+                    transform: isDesktopDropdownOpen
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
                   }}
                   viewBox="0 0 24 24"
                 >
                   <path d="m6 9 6 6 6-6" />
                 </svg>
               </button>
+
+              {/* Dropdown Menu */}
+              <div
+                className={`desktop-dropdown ${isDesktopDropdownOpen ? "open" : ""}`}
+              >
+                <a href="/fensterreinigung" className="dropdown-item">
+                  Fensterreinigung
+                </a>
+                <a href="/unterhaltsreinigung" className="dropdown-item">
+                  Unterhaltsreinigung
+                </a>
+                <a href="/solarpanel-reinigen" className="dropdown-item">
+                  Solarpanel reinigen
+                </a>
+                <a href="/fassadenreinigung" className="dropdown-item">
+                  Fassadenreinigung
+                </a>
+                <a href="/umzugsreinigung" className="dropdown-item">
+                  Umzugsreinigung
+                </a>
+                <a href="/baureinigung" className="dropdown-item">
+                  Baureinigung
+                </a>
+              </div>
             </div>
 
             <a
