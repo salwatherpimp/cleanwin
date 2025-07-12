@@ -1068,7 +1068,8 @@ export default function CleanWinPage() {
           {/* CTA Button */}
           <div>
             <a
-              href="#contact"
+              href="/kontakt"
+              className="cta-button cta-button-secondary"
               style={{
                 display: "inline-block",
                 backgroundColor: "white",
@@ -1080,7 +1081,6 @@ export default function CleanWinPage() {
                 textDecoration: "none",
                 cursor: "pointer",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 25px -5px",
-                transition: "all 0.3s",
               }}
             >
               Jetzt unverbindlich kontaktieren
