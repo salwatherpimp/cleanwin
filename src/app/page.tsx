@@ -479,10 +479,50 @@ export default function CleanWinPage() {
         }
       }
 
-            /* Navigation Responsive Styles */
+                  /* Navigation Responsive Styles */
       @media (max-width: 767px) {
         .hidden.md\\:flex {
           display: none !important;
+        }
+
+        .mobile-logo {
+          width: 120px !important;
+          height: 34px !important;
+        }
+
+        .mobile-cta-btn {
+          font-size: 11px !important;
+          padding: 5px 10px !important;
+          max-width: 120px !important;
+        }
+
+        .mobile-cta-btn span {
+          display: none;
+        }
+
+        .mobile-cta-btn::after {
+          content: "Kontakt";
+        }
+      }
+
+      @media (min-width: 375px) and (max-width: 767px) {
+        .mobile-logo {
+          width: 130px !important;
+          height: 36px !important;
+        }
+
+        .mobile-cta-btn {
+          font-size: 12px !important;
+          padding: 6px 12px !important;
+          max-width: 130px !important;
+        }
+
+        .mobile-cta-btn span {
+          display: inline;
+        }
+
+        .mobile-cta-btn::after {
+          content: "";
         }
       }
 
