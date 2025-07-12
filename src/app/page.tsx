@@ -418,10 +418,11 @@ export default function CleanWinPage() {
           padding: 0 16px;
         }
 
-        .testimonial-card {
-                    width: calc(100% - 16px);
-          min-width: calc(100% - 16px);
-          margin: 0 8px;
+                .testimonial-card {
+          width: 100%;
+          min-width: 100%;
+          margin: 0;
+          flex-shrink: 0;
         }
 
         
