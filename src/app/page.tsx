@@ -1087,25 +1087,29 @@ export default function CleanWinPage() {
           }}
         >
           {/* Logo */}
-          <a
-            href="https://cleanwin.vercel.app/"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              flexShrink: 0,
-            }}
+          <div
+            style={{ flex: "0 0 auto", display: "flex", alignItems: "center" }}
           >
-            <Image
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.png"
-              alt="CleanWin Logo"
-              width={160}
-              height={45}
+            <a
+              href="https://cleanwin.vercel.app/"
               style={{
-                width: "160px",
-                height: "45px",
+                display: "flex",
+                alignItems: "center",
               }}
-            />
-          </a>
+            >
+              <Image
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.png"
+                alt="CleanWin Logo"
+                width={140}
+                height={39}
+                className="mobile-logo"
+                style={{
+                  width: "140px",
+                  height: "39px",
+                }}
+              />
+            </a>
+          </div>
 
           {/* Center CTA Button */}
           <div
