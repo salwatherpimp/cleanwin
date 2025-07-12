@@ -543,9 +543,11 @@ export default function CleanWinPage() {
     },
     {
       id: 4,
-      name: "Sarah Weber",
-      initial: "S",
-      text: "Wir sind mit der Büroreinigung sehr zufrieden. CleanWin arbeitet zuverlässig und gründlich. Unser Büro ist immer tadellos sauber.",
+      name: "Roter Kater",
+      initial: "R",
+      profileImage:
+        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F1c44daee167347a484539109011800f1",
+      text: "Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal.",
     },
     {
       id: 5,
