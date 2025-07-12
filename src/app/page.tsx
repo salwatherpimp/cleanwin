@@ -519,21 +519,27 @@ export default function CleanWinPage() {
   const originalTestimonials = [
     {
       id: 1,
-      name: "Ursula Wirtz",
-      initial: "U",
-      text: "Ein engagiertes Team, flexibel, zuverlässig, kreativ. Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde CleanWin gerne weiterempfehlen.",
+      name: "Jeanine Ganz",
+      initial: "J",
+      profileImage:
+        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F420dc1dc3f73488b8591d4fb69ffbe31",
+      text: "Sehr freundlicher, unkomplizierter und qualitativ einwandfreier Service. Die Endreinigung der Wohnung wurde ohne Beanstandung abgenommen...",
     },
     {
       id: 2,
-      name: "Johanna Kelts",
-      initial: "J",
-      text: "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen Brüder bezeichnen.",
+      name: "Albert Radamonti",
+      initial: "A",
+      profileImage:
+        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F49e6510976af499cab9f04958c95e05f",
+      text: "Super Service und einwandfreie Erledigung. Preis-Leistung ist top! Einfache Abwicklung, günstiger Preis und saubere Arbeit mit...",
     },
     {
       id: 3,
-      name: "Michael Schmidt",
-      initial: "M",
-      text: "Ausgezeichnete Fensterreinigung! Das Team war pünktlich, freundlich und hat perfekte Arbeit geleistet. Die Preise sind fair und transparent.",
+      name: "Gerussi Renato",
+      initial: "G",
+      profileImage:
+        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2Fedb15459bd314253880175f896dc2783",
+      text: "Die Endreinigung war perfekt, inklusive Wohnungsabgabe. Herr Polli arbeitet nicht nur effektiv, er ist auch ausgesprochen sympathisch. Der Preis...",
     },
     {
       id: 4,
@@ -543,9 +549,11 @@ export default function CleanWinPage() {
     },
     {
       id: 5,
-      name: "Thomas Müller",
-      initial: "T",
-      text: "Für unser Restaurant haben wir ein perfektes Reinigungskonzept erhalten. Durch die kompetente Beratung sind wir sehr zufrieden mit dem Service.",
+      name: "Nikola C",
+      initial: "N",
+      profileImage:
+        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F483fb0592633420e993163e2c15850c9",
+      text: "TOP ZUFRIEDENHEIT. Wir waren mit der Endreinigung sehr zufrieden - unsere erste offizielle Wohnungsübergabe und alles verlief dank der super Reinigung bestens...",
     },
   ];
 
