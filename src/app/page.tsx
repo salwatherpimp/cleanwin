@@ -137,9 +137,8 @@ export default function CleanWinPage() {
         padding: 0 60px;
       }
 
-      .testimonial-track {
+            .testimonial-track {
         display: flex;
-        transition: transform 0.5s ease-in-out;
         gap: 24px;
       }
 
