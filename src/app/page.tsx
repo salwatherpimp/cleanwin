@@ -78,9 +78,51 @@ export default function CleanWinPage() {
           margin-top: 16px !important;
         }
 
-                .button-spacing {
+                        .button-spacing {
           margin-bottom: 16px !important;
           margin-top: 16px !important;
+        }
+      }
+
+      /* CTA Button Hover Effects */
+      .cta-button {
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .cta-button:focus {
+        outline: 3px solid rgba(16, 160, 164, 0.5);
+        outline-offset: 2px;
+      }
+
+      .cta-button-primary:hover {
+        background-color: #0e8c90;
+      }
+
+      .cta-button-secondary:hover {
+        background-color: #f8f9fa;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Disable hover effects on touch devices */
+      @media (hover: none) and (pointer: coarse) {
+        .cta-button:hover {
+          transform: none;
+          box-shadow: initial;
+        }
+
+        .cta-button-primary:hover {
+          background-color: #10a0a4;
+        }
+
+        .cta-button-secondary:hover {
+          background-color: white;
         }
       }
 
