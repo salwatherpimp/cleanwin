@@ -1662,7 +1662,7 @@ export default function CleanWinPage() {
                 style={{
                   color: "#6b7280",
                   lineHeight: "28px",
-                  marginBottom: "16px",
+                  marginBottom: "0px",
                   marginTop: "0px",
                 }}
               >
@@ -1687,7 +1687,7 @@ export default function CleanWinPage() {
                   fontWeight: "600",
                   textDecoration: "none",
                   cursor: "pointer",
-                  marginTop: "8px",
+                  marginTop: "12px",
                 }}
               >
                 Leistungen Entdecken
