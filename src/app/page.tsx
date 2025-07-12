@@ -65,12 +65,12 @@ export default function CleanWinPage() {
       }
 
             @media (max-width: 767px) {
-        .section-spacing {
-          padding: 32px 0 !important;
+                .section-spacing {
+          padding: 22px 0 !important;
         }
 
         .section-spacing-sm {
-          padding: 24px 0 !important;
+          padding: 14px 0 !important;
         }
 
         .headline-spacing {
