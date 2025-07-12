@@ -3150,12 +3150,11 @@ export default function CleanWinPage() {
         >
           <div style={{ textAlign: "center", marginBottom: "48px" }}>
             <h2
+              className="headline-spacing"
               style={{
                 fontSize: "28px",
                 fontWeight: "700",
                 color: "#111827",
-                marginBottom: "24px",
-                marginTop: "23.24px",
                 textAlign: "center",
               }}
             >
@@ -3166,7 +3165,8 @@ export default function CleanWinPage() {
                 color: "#6b7280",
                 fontSize: "20px",
                 lineHeight: "32px",
-                marginBottom: "0px",
+                marginBottom: "48px",
+                marginTop: "0px",
                 marginLeft: "auto",
                 marginRight: "auto",
                 maxWidth: "768px",
