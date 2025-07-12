@@ -1027,12 +1027,14 @@ export default function CleanWinPage() {
           width: "100%",
         }}
       >
+        {/* Desktop/Tablet Layout */}
         <div
           className="responsive-container"
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
             padding: "0 16px",
+            display: "none",
           }}
         >
           <div
