@@ -3320,7 +3320,7 @@ export default function CleanWinPage() {
                       margin: "0 0 20px 0",
                     }}
                   >
-                    " &ldquo;{testimonial.text}&rdquo;"
+                    &ldquo;{testimonial.text}&rdquo;
                   </blockquote>
 
                   {/* Customer Name */}
