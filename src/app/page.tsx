@@ -443,9 +443,25 @@ export default function CleanWinPage() {
           gap: 12px;
         }
 
-        .pagination-dot {
+                .pagination-dot {
           width: 14px;
           height: 14px;
+        }
+      }
+
+      /* Extra small screens (320px-480px) */
+      @media (max-width: 480px) {
+        .testimonial-carousel {
+          margin: 0 12px;
+        }
+
+        .testimonial-card {
+          padding: 20px;
+          min-height: 260px;
+        }
+
+        .testimonial-pagination {
+          margin-bottom: 24px;
         }
       }
 
