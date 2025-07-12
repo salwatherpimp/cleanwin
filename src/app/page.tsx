@@ -810,7 +810,9 @@ export default function CleanWinPage() {
           transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
+        {/* Desktop Navigation Container */}
         <div
+          className="hidden md:flex"
           style={{
             display: "flex",
             alignItems: "center",
@@ -836,7 +838,6 @@ export default function CleanWinPage() {
               alt="CleanWin Logo"
               width={200}
               height={56}
-              className="logo-mobile"
               style={{
                 width: "200px",
                 height: "56px",
