@@ -2883,8 +2883,8 @@ export default function CleanWinPage() {
                     margin: 0,
                   }}
                 >
-                  Von früh bis spät - wir richten uns stet nach Ihrem Alltag.
-                  Immer pünktlich.
+                  Von früh bis spät - wir richten uns nach Ihrem Alltag. Immer
+                  pünktlich.
                 </p>
               </div>
             </div>
