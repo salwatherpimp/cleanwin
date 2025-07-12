@@ -148,8 +148,29 @@ export default function CleanWinPage() {
         white-space: nowrap;
       }
 
-      .usp-scroll-track:hover {
+            .usp-scroll-track:hover {
         animation-play-state: paused;
+      }
+
+      /* Responsive visibility for USP layouts */
+      @media (max-width: 767px) {
+        .benefits-desktop-layout {
+          display: none !important;
+        }
+
+        .benefits-mobile-layout {
+          display: block !important;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .benefits-desktop-layout {
+          display: block !important;
+        }
+
+        .benefits-mobile-layout {
+          display: none !important;
+        }
       }
 
       /* Mobile accordion styles for Cleanwin features */
