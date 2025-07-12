@@ -49,9 +49,9 @@ export default function CleanWinPage() {
         padding: 20px 0;
       }
 
-      .logo-scroll-track {
+            .logo-scroll-track {
         display: flex;
-        animation: logoScroll 30s linear infinite;
+        animation: logoScroll 45s linear infinite;
         width: fit-content;
       }
 
