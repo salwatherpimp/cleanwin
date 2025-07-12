@@ -241,9 +241,19 @@ export default function CleanWinPage() {
         }
       }
 
-      @media (max-width: 767px) {
+            @media (max-width: 767px) {
         .about-section-grid {
           gap: 24px !important;
+        }
+      }
+
+      .about-image-gallery {
+        margin-top: 24px;
+      }
+
+      @media (max-width: 1023px) {
+        .about-image-gallery {
+          margin-top: 0px !important;
         }
       }
 
