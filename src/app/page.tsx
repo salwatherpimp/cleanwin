@@ -419,8 +419,9 @@ export default function CleanWinPage() {
         }
 
         .testimonial-card {
-          width: calc(100vw - 32px);
-          min-width: calc(100vw - 32px);
+                    width: calc(100% - 16px);
+          min-width: calc(100% - 16px);
+          margin: 0 8px;
         }
 
         
