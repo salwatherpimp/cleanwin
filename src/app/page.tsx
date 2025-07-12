@@ -291,6 +291,8 @@ export default function CleanWinPage() {
 
   const totalOriginal = originalTestimonials.length;
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   const nextTestimonial = () => {
     if (isTransitioning) return;
