@@ -124,9 +124,97 @@ export default function CleanWinPage() {
         }
       }
 
-      @media (min-width: 768px) {
+            @media (min-width: 768px) {
         .cleanwin-features-accordion {
           display: none !important;
+        }
+      }
+
+      /* Testimonial Carousel Styles */
+      .testimonial-carousel {
+        position: relative;
+        overflow: hidden;
+        padding: 0 60px;
+      }
+
+      .testimonial-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        gap: 24px;
+      }
+
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: 280px;
+      }
+
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 10;
+      }
+
+      .carousel-nav:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: translateY(-50%) scale(1.05);
+      }
+
+      .carousel-nav.left {
+        left: 12px;
+      }
+
+      .carousel-nav.right {
+        right: 12px;
+      }
+
+      @media (max-width: 767px) {
+        .testimonial-carousel {
+          padding: 0 16px;
+        }
+
+        .testimonial-card {
+          width: 100%;
+        }
+
+        .carousel-nav {
+          width: 40px;
+          height: 40px;
+        }
+
+        .carousel-nav.left {
+          left: 8px;
+        }
+
+        .carousel-nav.right {
+          right: 8px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .testimonial-card {
+          width: calc(33.333% - 16px);
         }
       }
     </style>
