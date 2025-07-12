@@ -449,6 +449,13 @@ export default function CleanWinPage() {
         }
       }
 
+            /* Custom testimonial section mobile padding */
+      @media (max-width: 767px) {
+        .testimonial-section-mobile {
+          padding-bottom: 32px !important;
+        }
+      }
+
       /* Extra small screens (320px-480px) */
       @media (max-width: 480px) {
         .testimonial-carousel {
@@ -462,6 +469,10 @@ export default function CleanWinPage() {
 
         .testimonial-pagination {
           margin-bottom: 24px;
+        }
+
+        .testimonial-section-mobile {
+          padding-bottom: 24px !important;
         }
       }
 
