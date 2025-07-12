@@ -1219,7 +1219,7 @@ export default function CleanWinPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1748417852/farbxpress-malen_gdvdci.avif"
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_Close-up_of_a_hand_cleaning_a_glass_window_with_a_s_9d456c2b-edad-45fb-ad0d-a857626340ec_3_q2fskk.avif"
                 alt="Fensterreinigung"
                 fill
                 style={{
@@ -1328,7 +1328,7 @@ export default function CleanWinPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1750015382/altbauwohnung-meilen_lrttoc.avif"
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_A_stack_of_cardboard_moving_boxes_with_blankets_and_aca55475-72f5-47ce-bd35-23f8455eeeb3_1_xumd8v.avif"
                 alt="Büroreinigung"
                 fill
                 style={{
@@ -1437,7 +1437,7 @@ export default function CleanWinPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif"
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_Man_cleaning_an_industrial_building_facade_using_a__d7268cb3-350e-4883-b1a3-b28fe5ab29bd_0_gfir2j.avif"
                 alt="Fassadenreinigung"
                 fill
                 style={{
@@ -1546,7 +1546,7 @@ export default function CleanWinPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1748417852/farbxpress-tapezieren_jvtgyo.avif"
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_A_stack_of_cardboard_moving_boxes_with_blankets_and_aca55475-72f5-47ce-bd35-23f8455eeeb3_1_xumd8v.avif"
                 alt="Umzugsreinigung"
                 fill
                 style={{
@@ -1655,7 +1655,7 @@ export default function CleanWinPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1748417852/farbxpress-spritzen_ij8jsj.avif"
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_A_construction_worker_in_work_boots_and_jeans_clean_8a86ab98-84bb-4372-a0bf-a47a89c60230_1_lnfpsa.avif"
                 alt="Baureinigung"
                 fill
                 style={{
@@ -1764,7 +1764,7 @@ export default function CleanWinPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_auto,q_auto/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif"
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_A_close-up_of_a_person_cleaning_a_solar_panel_under_0b5462d2-2c74-452a-bf63-cf91c008a0dc_1_alcwld.avif"
                 alt="Weitere Dienstleistungen"
                 fill
                 style={{
