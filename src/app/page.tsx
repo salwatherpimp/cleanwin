@@ -479,6 +479,22 @@ export default function CleanWinPage() {
         }
       }
 
+            /* Navigation Responsive Styles */
+      @media (max-width: 767px) {
+        .hidden.md\\:flex {
+          display: none !important;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .md\\:hidden {
+          display: none !important;
+        }
+        .hidden.md\\:flex {
+          display: flex !important;
+        }
+      }
+
       /* Navigation Styles */
       .desktop-dropdown {
         position: absolute;
