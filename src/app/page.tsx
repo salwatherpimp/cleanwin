@@ -1162,23 +1162,24 @@ export default function CleanWinPage() {
             </a>
           </div>
 
-          {/* Hamburger Menu */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "44px",
-              height: "44px",
-              backgroundColor: "transparent",
-              border: "none",
-              color: isScrolled ? "#374151" : "white",
-              cursor: "pointer",
-              transition: "color 0.2s",
-              flexShrink: 0,
-            }}
-          >
+                    {/* Hamburger Menu */}
+          <div style={{ flex: "0 0 auto", display: "flex", alignItems: "center" }}>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "40px",
+                height: "40px",
+                backgroundColor: "transparent",
+                border: "none",
+                color: isScrolled ? "#374151" : "white",
+                cursor: "pointer",
+                transition: "color 0.2s",
+                borderRadius: "8px",
+              }}
+            >
             <svg
               style={{
                 width: "24px",
