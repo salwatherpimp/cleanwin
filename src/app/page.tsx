@@ -1357,11 +1357,11 @@ export default function CleanWinPage() {
 
       {/* Client Logos Section */}
       <section
+        className="section-spacing-sm"
         style={{
           backgroundColor: "#f9fafb",
           borderTop: "1px solid #e5e7eb",
           borderBottom: "1px solid #e5e7eb",
-          padding: "20px 0",
           width: "100%",
         }}
       >
