@@ -189,13 +189,18 @@ export default function CleanWinPage() {
         right: 12px;
       }
 
-      @media (max-width: 767px) {
+            @media (max-width: 767px) {
         .testimonial-carousel {
           padding: 0 16px;
         }
 
         .testimonial-card {
-          width: 100%;
+          width: calc(100vw - 32px);
+          min-width: calc(100vw - 32px);
+        }
+
+        .testimonial-track {
+          transform: translateX(calc(-100vw * var(--current-slide, 0))) !important;
         }
 
         .carousel-nav {
@@ -215,6 +220,7 @@ export default function CleanWinPage() {
       @media (min-width: 768px) {
         .testimonial-card {
           width: calc(33.333% - 16px);
+          min-width: calc(33.333% - 16px);
         }
       }
     </style>
