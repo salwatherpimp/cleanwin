@@ -1200,9 +1200,9 @@ export default function CleanWinPage() {
 
       {/* About Section */}
       <section
+        className="section-spacing"
         style={{
           backgroundColor: "#f9fafb",
-          padding: "24px 0",
           position: "relative",
           width: "100%",
         }}
