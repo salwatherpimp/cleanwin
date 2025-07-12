@@ -1162,8 +1162,10 @@ export default function CleanWinPage() {
             </a>
           </div>
 
-                    {/* Hamburger Menu */}
-          <div style={{ flex: "0 0 auto", display: "flex", alignItems: "center" }}>
+          {/* Hamburger Menu */}
+          <div
+            style={{ flex: "0 0 auto", display: "flex", alignItems: "center" }}
+          >
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               style={{
@@ -1180,32 +1182,33 @@ export default function CleanWinPage() {
                 borderRadius: "8px",
               }}
             >
-            <svg
-              style={{
-                width: "24px",
-                height: "24px",
-                stroke: "currentColor",
-                strokeWidth: "2px",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                fill: "none",
-              }}
-              viewBox="0 0 24 24"
-            >
-              {isMobileMenuOpen ? (
-                <>
-                  <path d="m18 6-12 12" />
-                  <path d="m6 6 12 12" />
-                </>
-              ) : (
-                <>
-                  <path d="M4 6h16" />
-                  <path d="M4 12h16" />
-                  <path d="M4 18h16" />
-                </>
-              )}
-            </svg>
-          </button>
+              <svg
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  stroke: "currentColor",
+                  strokeWidth: "2px",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  fill: "none",
+                }}
+                viewBox="0 0 24 24"
+              >
+                {isMobileMenuOpen ? (
+                  <>
+                    <path d="m18 6-12 12" />
+                    <path d="m6 6 12 12" />
+                  </>
+                ) : (
+                  <>
+                    <path d="M4 6h16" />
+                    <path d="M4 12h16" />
+                    <path d="M4 18h16" />
+                  </>
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu Overlay */}
