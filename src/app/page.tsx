@@ -45,13 +45,13 @@ export default function CleanWinPage() {
                 .services-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 32px !important; }
       }
 
-      /* Responsive Section Spacing */
+            /* Responsive Section Spacing */
       .section-spacing {
-        padding: 96px 0;
+        padding: 48px 0;
       }
 
       .section-spacing-sm {
-        padding: 64px 0;
+        padding: 32px 0;
       }
 
       .headline-spacing {
