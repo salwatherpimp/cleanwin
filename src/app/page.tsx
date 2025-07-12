@@ -9,6 +9,7 @@ export default function CleanWinPage() {
   const [expandedAccordion, setExpandedAccordion] = useState<number | null>(
     null,
   );
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   // Mobile responsive styles - only add what's needed for mobile without affecting desktop
   const mobileStyles = `
