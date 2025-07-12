@@ -1240,6 +1240,268 @@ export default function CleanWinPage() {
             </div>
           </div>
         </div>
+
+        {/* Mobile Scrolling Layout */}
+        <div
+          style={{
+            display: "block",
+            width: "100%",
+          }}
+        >
+          <div className="usp-scroll-container">
+            <div className="usp-scroll-track">
+              {/* First set of USP items */}
+              <div className="usp-scroll-item">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "28px",
+                    height: "28px",
+                    backgroundColor: "#F3F4F6",
+                    borderRadius: "50%",
+                    marginRight: "12px",
+                    flexShrink: 0,
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <line x1="12" x2="12" y1="2" y2="22" />
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  </svg>
+                </div>
+                <span
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#111827",
+                  }}
+                >
+                  Reinigung ab CHF 199.-
+                </span>
+              </div>
+
+              <div className="usp-scroll-item">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "28px",
+                    height: "28px",
+                    backgroundColor: "#F3F4F6",
+                    borderRadius: "50%",
+                    marginRight: "12px",
+                    flexShrink: 0,
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                  </svg>
+                </div>
+                <span
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#111827",
+                  }}
+                >
+                  Kostenlose Fachberatung
+                </span>
+              </div>
+
+              <div className="usp-scroll-item">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "28px",
+                    height: "28px",
+                    backgroundColor: "#F3F4F6",
+                    borderRadius: "50%",
+                    marginRight: "12px",
+                    flexShrink: 0,
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                  </svg>
+                </div>
+                <span
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#111827",
+                  }}
+                >
+                  100% keine Schwarzarbeit
+                </span>
+              </div>
+
+              {/* Duplicate set for seamless loop */}
+              <div className="usp-scroll-item">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "28px",
+                    height: "28px",
+                    backgroundColor: "#F3F4F6",
+                    borderRadius: "50%",
+                    marginRight: "12px",
+                    flexShrink: 0,
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <line x1="12" x2="12" y1="2" y2="22" />
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  </svg>
+                </div>
+                <span
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#111827",
+                  }}
+                >
+                  Reinigung ab CHF 199.-
+                </span>
+              </div>
+
+              <div className="usp-scroll-item">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "28px",
+                    height: "28px",
+                    backgroundColor: "#F3F4F6",
+                    borderRadius: "50%",
+                    marginRight: "12px",
+                    flexShrink: 0,
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                  </svg>
+                </div>
+                <span
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#111827",
+                  }}
+                >
+                  Kostenlose Fachberatung
+                </span>
+              </div>
+
+              <div className="usp-scroll-item">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "28px",
+                    height: "28px",
+                    backgroundColor: "#F3F4F6",
+                    borderRadius: "50%",
+                    marginRight: "12px",
+                    flexShrink: 0,
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                  </svg>
+                </div>
+                <span
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#111827",
+                  }}
+                >
+                  100% keine Schwarzarbeit
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* About Section */}
