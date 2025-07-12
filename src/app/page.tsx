@@ -6,6 +6,9 @@ import Image from "next/image";
 export default function CleanWinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDesktopDropdownOpen, setIsDesktopDropdownOpen] = useState(false);
+  const [isMobileServicesExpanded, setIsMobileServicesExpanded] =
+    useState(false);
   const [expandedAccordion, setExpandedAccordion] = useState<number | null>(
     null,
   );
