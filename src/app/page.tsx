@@ -1069,7 +1069,7 @@ export default function CleanWinPage() {
           <p
             style={{
               color: "#6b7280",
-              marginBottom: "32px",
+              marginBottom: "16px",
               marginTop: "16px",
               textAlign: "center",
             }}
