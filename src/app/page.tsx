@@ -518,8 +518,34 @@ export default function CleanWinPage() {
         color: #10a0a4;
       }
 
-      .dropdown-item:last-child {
+            .dropdown-item:last-child {
         border-bottom: none;
+      }
+
+      /* Desktop Navigation Hover Effects */
+      .desktop-nav-item {
+        position: relative;
+        transition: color 0.2s ease;
+      }
+
+      .desktop-nav-item:hover {
+        color: #10a0a4 !important;
+      }
+
+      .desktop-nav-item::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 50%;
+        background-color: #10a0a4;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .desktop-nav-item:hover::after {
+        width: 100%;
       }
 
       /* Mobile Navigation Styles */
