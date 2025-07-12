@@ -1645,15 +1645,7 @@ export default function CleanWinPage() {
             padding: "0 16px",
           }}
         >
-          <div
-            className="grid-mobile-2"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "3fr 2fr",
-              gap: "48px",
-              alignItems: "flex-start",
-            }}
-          >
+          <div className="about-section-grid">
             {/* Text Content */}
             <div>
               <h2
