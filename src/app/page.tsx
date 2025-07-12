@@ -3142,7 +3142,12 @@ export default function CleanWinPage() {
             </p>
           </div>
           {/* Modern Testimonial Carousel */}
-          <div className="testimonial-carousel">
+          <div
+            className="testimonial-carousel"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             {/* Navigation Buttons */}
             <button
               className="carousel-nav left"
