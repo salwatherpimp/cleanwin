@@ -1139,7 +1139,7 @@ export default function CleanWinPage() {
                 backgroundColor: "white",
                 border: "1px solid rgba(16, 160, 164, 0.1)",
                 borderRadius: "12px",
-                padding: "16px",
+                padding: "24px",
                 gap: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.05) 0px 2px 8px 0px",
                 transition: "all 0.3s",
