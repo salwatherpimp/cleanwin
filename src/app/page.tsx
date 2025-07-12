@@ -17,10 +17,18 @@ export default function CleanWinPage() {
         .hero-subtitle-mobile { font-size: 16px !important; line-height: 24px !important; }
         .logo-mobile { width: 160px !important; height: 45px !important; }
         .grid-mobile-1 { grid-template-columns: 1fr !important; gap: 16px !important; }
-                .grid-mobile-2 { grid-template-columns: 1fr !important; gap: 32px !important; }
-                .grid-mobile-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
+        .grid-mobile-2 { grid-template-columns: 1fr !important; gap: 32px !important; }
+        .grid-mobile-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
         .grid-mobile-logos { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
         .logo-container-mobile { width: 80px !important; height: 40px !important; }
+      }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        /* Tablet styles - 32px padding */
+        .responsive-container { padding-left: 32px !important; padding-right: 32px !important; }
+      }
+      @media (min-width: 1024px) {
+        /* Desktop styles - 48px padding on larger screens */
+        .responsive-container { padding-left: 48px !important; padding-right: 48px !important; }
       }
     </style>
     `;
@@ -476,7 +484,7 @@ export default function CleanWinPage() {
               color: "rgba(255, 255, 255, 0.95)",
             }}
           >
-            Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere R��ume,
+            Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere Räume,
             Fassaden und mehr.
           </p>
 
