@@ -3646,7 +3646,7 @@ export default function CleanWinPage() {
 
       {/* Customer Testimonials Section */}
       <section
-        className="section-spacing"
+        className="section-spacing testimonial-section-mobile"
         style={{
           background: "linear-gradient(135deg, #f6f9f9 0%, #e7f1f3 100%)",
           position: "relative",
