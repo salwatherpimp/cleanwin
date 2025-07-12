@@ -1251,7 +1251,7 @@ export default function CleanWinPage() {
                 Büroreinigung, Fassadenreinigung und Spezialreinigungen. Unser
                 erfahrenes Team arbeitet mit modernsten Techniken und
                 umweltfreundlichen Produkten, um höchste Qualität und
-                Kundenzufriedenheit zu gewährleisten.
+                Kundenzufriedenheit zu gew��hrleisten.
               </p>
               <a
                 href="#services"
@@ -2415,9 +2415,9 @@ export default function CleanWinPage() {
 
       {/* Why Choose CleanWin Section */}
       <section
+        className="section-spacing"
         style={{
           backgroundColor: "#f9fafb",
-          padding: "20px 0",
           position: "relative",
           overflow: "hidden",
           width: "100%",
