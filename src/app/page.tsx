@@ -1627,9 +1627,9 @@ export default function CleanWinPage() {
             className="grid-mobile-2"
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
+              gridTemplateColumns: "3fr 2fr",
               gap: "48px",
-              alignItems: "center",
+              alignItems: "flex-start",
             }}
           >
             {/* Text Content */}
