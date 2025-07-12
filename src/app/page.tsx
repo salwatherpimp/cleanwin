@@ -3500,7 +3500,7 @@ export default function CleanWinPage() {
             <p
               style={{
                 color: "#6b7280",
-                fontSize: "20px",
+                fontSize: "16px",
                 lineHeight: "32px",
                 marginBottom: "48px",
                 marginTop: "0px",
