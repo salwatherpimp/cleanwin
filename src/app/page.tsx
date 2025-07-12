@@ -526,12 +526,34 @@ export default function CleanWinPage() {
         }
       }
 
-      @media (min-width: 768px) {
+            @media (min-width: 768px) {
         .md\\:hidden {
           display: none !important;
         }
         .hidden.md\\:flex {
           display: flex !important;
+        }
+      }
+
+      /* Header Height Compensation */
+      .hero-mobile {
+        padding-top: 64px !important;
+      }
+
+      @media (min-width: 768px) {
+        .hero-mobile {
+          padding-top: 80px !important;
+        }
+      }
+
+      /* Prevent content overlap */
+      .content-below-header {
+        margin-top: 64px;
+      }
+
+      @media (min-width: 768px) {
+        .content-below-header {
+          margin-top: 80px;
         }
       }
 
