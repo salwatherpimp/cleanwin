@@ -3805,6 +3805,27 @@ export default function CleanWinPage() {
                 </div>
               ))}
             </div>
+
+            {/* Pagination dots for mobile */}
+            <div className="testimonial-pagination">
+              {Array.from(
+                { length: originalTestimonials.length },
+                (_, index) => (
+                  <button
+                    key={index}
+                    className={`pagination-dot ${
+                      currentTestimonial % originalTestimonials.length === index
+                        ? "active"
+                        : ""
+                    }`}
+                    onClick={() =>
+                      setCurrentTestimonial(originalTestimonials.length + index)
+                    }
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  />
+                ),
+              )}
+            </div>
           </div>
         </div>
       </section>
