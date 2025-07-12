@@ -1123,19 +1123,21 @@ export default function CleanWinPage() {
           >
             <a
               href="/kontakt"
+              className="mobile-cta-btn"
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "6px",
+                gap: "4px",
                 backgroundColor: "#10a0a4",
                 color: "white",
-                padding: "8px 16px",
-                borderRadius: "20px",
-                fontSize: "13px",
+                padding: "6px 12px",
+                borderRadius: "16px",
+                fontSize: "12px",
                 fontWeight: "600",
                 textDecoration: "none",
                 transition: "background-color 0.2s",
                 whiteSpace: "nowrap",
+                maxWidth: "140px",
               }}
             >
               <svg
