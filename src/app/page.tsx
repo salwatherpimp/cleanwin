@@ -437,8 +437,15 @@ export default function CleanWinPage() {
           display: none !important;
         }
 
-        .testimonial-pagination {
-          margin-top: 24px;
+                .testimonial-pagination {
+          margin-top: 32px;
+          margin-bottom: 32px;
+          gap: 12px;
+        }
+
+        .pagination-dot {
+          width: 14px;
+          height: 14px;
         }
       }
 
