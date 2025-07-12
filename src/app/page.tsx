@@ -3143,7 +3143,7 @@ export default function CleanWinPage() {
             <div
               className="testimonial-track"
               style={{
-                transform: `translateX(-${currentTestimonial * 33.333}%)`,
+                transform: `translateX(-${currentTestimonial * (isMobile ? 100 : 33.333)}%)`,
               }}
             >
               {testimonials.map((testimonial, index) => (
