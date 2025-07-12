@@ -596,8 +596,14 @@ export default function CleanWinPage() {
         transition: color 0.2s ease;
       }
 
-      .mobile-nav-item:hover {
+            .mobile-nav-item:hover {
         color: #10a0a4;
+        background-color: rgba(16, 160, 164, 0.05);
+        border-radius: 8px;
+      }
+
+      .mobile-nav-item:active {
+        background-color: rgba(16, 160, 164, 0.1);
       }
 
       .mobile-nav-cta {
