@@ -446,7 +446,7 @@ export default function CleanWinPage() {
 
         {/* Content */}
         <div
-          className="hero-content-mobile"
+          className="hero-content-mobile responsive-container"
           style={{
             position: "relative",
             zIndex: 10,
@@ -643,6 +643,7 @@ export default function CleanWinPage() {
         }}
       >
         <div
+          className="responsive-container"
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
@@ -864,6 +865,7 @@ export default function CleanWinPage() {
         }}
       >
         <div
+          className="responsive-container"
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
@@ -1159,6 +1161,7 @@ export default function CleanWinPage() {
         }}
       >
         <div
+          className="responsive-container"
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
@@ -1615,6 +1618,7 @@ export default function CleanWinPage() {
         }}
       >
         <div
+          className="responsive-container"
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
@@ -1987,6 +1991,7 @@ export default function CleanWinPage() {
         }}
       >
         <div
+          className="responsive-container"
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
