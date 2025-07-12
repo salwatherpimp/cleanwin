@@ -117,7 +117,38 @@ export default function CleanWinPage() {
         justify-content: center;
       }
 
-            .logo-scroll-track:hover {
+                  .logo-scroll-track:hover {
+        animation-play-state: paused;
+      }
+
+      /* Mobile USP Scroll Styles */
+      .usp-scroll-container {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        padding: 16px 0;
+      }
+
+      .usp-scroll-track {
+        display: flex;
+        animation: uspScroll 45s linear infinite;
+        width: fit-content;
+        gap: 16px;
+      }
+
+      .usp-scroll-item {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        background: white;
+        border: 1px solid rgba(16, 160, 164, 0.1);
+        border-radius: 12px;
+        padding: 16px 20px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 8px 0px;
+        white-space: nowrap;
+      }
+
+      .usp-scroll-track:hover {
         animation-play-state: paused;
       }
 
