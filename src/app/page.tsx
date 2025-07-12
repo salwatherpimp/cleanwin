@@ -3045,7 +3045,7 @@ export default function CleanWinPage() {
       {/* Customer Testimonials Section */}
       <section
         style={{
-          background: "linear-gradient(135deg, #0fe4b0 0%, #11cbac 100%)",
+          background: "linear-gradient(135deg, #f6f9f9 0%, #e7f1f3 100%)",
           padding: "64px 0",
           position: "relative",
           overflow: "hidden",
