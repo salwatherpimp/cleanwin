@@ -225,7 +225,7 @@ export default function CleanWinPage() {
         }
       }
 
-      /* About Section Layout Improvements */
+            /* About Section Layout Improvements */
       .about-section-grid {
         display: grid;
         grid-template-columns: 3fr 2fr;
@@ -233,11 +233,29 @@ export default function CleanWinPage() {
         align-items: flex-start;
       }
 
+      .about-text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .about-image-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        width: 100%;
+        margin-top: -4px; /* Align with H2 baseline */
+      }
+
       @media (max-width: 1023px) {
         .about-section-grid {
           grid-template-columns: 1fr !important;
           gap: 32px !important;
           text-align: center;
+        }
+
+        .about-image-content {
+          margin-top: 0px !important;
         }
       }
 
