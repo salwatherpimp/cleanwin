@@ -1648,11 +1648,10 @@ export default function CleanWinPage() {
               style={{
                 fontSize: "28px",
                 fontWeight: "700",
-                color: "white",
+                color: "#111827",
                 marginBottom: "24px",
                 marginTop: "23.24px",
                 textAlign: "center",
-                textShadow: "0 2px 4px rgba(0,0,0,0.2)",
               }}
             >
               Unsere Leistungen
