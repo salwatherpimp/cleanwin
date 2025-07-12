@@ -1266,10 +1266,9 @@ export default function CleanWinPage() {
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  right: "20px",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "space-between",
+                  gap: "12px",
                 }}
               >
                 <h3
@@ -1376,10 +1375,9 @@ export default function CleanWinPage() {
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  right: "20px",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "space-between",
+                  gap: "12px",
                 }}
               >
                 <h3
@@ -1486,10 +1484,9 @@ export default function CleanWinPage() {
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  right: "20px",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "space-between",
+                  gap: "12px",
                 }}
               >
                 <h3
@@ -1596,10 +1593,9 @@ export default function CleanWinPage() {
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  right: "20px",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "space-between",
+                  gap: "12px",
                 }}
               >
                 <h3
@@ -1706,10 +1702,9 @@ export default function CleanWinPage() {
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  right: "20px",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "space-between",
+                  gap: "12px",
                 }}
               >
                 <h3
@@ -1816,10 +1811,9 @@ export default function CleanWinPage() {
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  right: "20px",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "space-between",
+                  gap: "12px",
                 }}
               >
                 <h3
