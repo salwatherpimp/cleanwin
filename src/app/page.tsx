@@ -1076,13 +1076,14 @@ export default function CleanWinPage() {
 
         {/* Mobile Navigation Container */}
         <div
-          className="md:hidden"
+          className="md:hidden mobile-nav-container"
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            padding: "12px 16px",
+            padding: "8px 12px",
             position: "relative",
+            minHeight: "64px",
           }}
         >
           {/* Logo */}
