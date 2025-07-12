@@ -46,12 +46,12 @@ export default function CleanWinPage() {
       }
 
             /* Responsive Section Spacing */
-      .section-spacing {
-        padding: 48px 0;
+            .section-spacing {
+        padding: 38px 0;
       }
 
       .section-spacing-sm {
-        padding: 32px 0;
+        padding: 22px 0;
       }
 
       .headline-spacing {
