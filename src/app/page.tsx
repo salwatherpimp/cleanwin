@@ -6,6 +6,9 @@ import Image from "next/image";
 export default function CleanWinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [expandedAccordion, setExpandedAccordion] = useState<number | null>(
+    null,
+  );
 
   // Mobile responsive styles - only add what's needed for mobile without affecting desktop
   const mobileStyles = `
