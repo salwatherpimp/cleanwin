@@ -1687,6 +1687,7 @@ export default function CleanWinPage() {
                   fontWeight: "600",
                   textDecoration: "none",
                   cursor: "pointer",
+                  marginTop: "8px",
                 }}
               >
                 Leistungen Entdecken
