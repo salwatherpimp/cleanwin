@@ -645,6 +645,32 @@ export default function CleanWinPage() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Handle mobile menu outside clicks and escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        setIsDesktopDropdownOpen(false);
+      }
+    };
+
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("keydown", handleEscape);
+      window.addEventListener("resize", handleResize);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMobileMenuOpen]);
+
   const originalTestimonials = [
     {
       id: 1,
