@@ -30,10 +30,41 @@ export default function CleanWinPage() {
         .responsive-container { padding-left: 32px !important; padding-right: 32px !important; }
         .services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 24px !important; }
       }
-      @media (min-width: 1024px) {
+            @media (min-width: 1024px) {
         /* Desktop styles - 48px padding on larger screens */
         .responsive-container { padding-left: 48px !important; padding-right: 48px !important; }
         .services-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 32px !important; }
+      }
+
+      /* Infinite logo scroll animation */
+      @keyframes logoScroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      .logo-scroll-container {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        padding: 20px 0;
+      }
+
+      .logo-scroll-track {
+        display: flex;
+        animation: logoScroll 30s linear infinite;
+        width: fit-content;
+      }
+
+      .logo-scroll-item {
+        flex: 0 0 auto;
+        margin-right: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-scroll-track:hover {
+        animation-play-state: paused;
       }
     </style>
     `;
