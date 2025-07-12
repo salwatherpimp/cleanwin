@@ -1260,23 +1260,49 @@ export default function CleanWinPage() {
                 Ab CHF 150.–
               </div>
 
-              {/* Service title */}
-              <h3
-                className="service-card-title"
+              {/* Service title with arrow */}
+              <div
                 style={{
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  color: "white",
-                  fontSize: "22px",
-                  fontWeight: "700",
-                  margin: 0,
-                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
-                  lineHeight: "1.2",
+                  right: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
                 }}
               >
-                Fensterreinigung
-              </h3>
+                <h3
+                  className="service-card-title"
+                  style={{
+                    color: "white",
+                    fontSize: "22px",
+                    fontWeight: "700",
+                    margin: 0,
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    lineHeight: "1.2",
+                  }}
+                >
+                  Fensterreinigung
+                </h3>
+                <svg
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    filter: "drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8))",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </div>
             </a>
 
             {/* Büroreinigung */}
@@ -1344,23 +1370,49 @@ export default function CleanWinPage() {
                 Ab CHF 199.–
               </div>
 
-              {/* Service title */}
-              <h3
-                className="service-card-title"
+              {/* Service title with arrow */}
+              <div
                 style={{
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  color: "white",
-                  fontSize: "22px",
-                  fontWeight: "700",
-                  margin: 0,
-                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
-                  lineHeight: "1.2",
+                  right: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
                 }}
               >
-                Büroreinigung
-              </h3>
+                <h3
+                  className="service-card-title"
+                  style={{
+                    color: "white",
+                    fontSize: "22px",
+                    fontWeight: "700",
+                    margin: 0,
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    lineHeight: "1.2",
+                  }}
+                >
+                  Büroreinigung
+                </h3>
+                <svg
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    filter: "drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8))",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </div>
             </a>
 
             {/* Fassadenreinigung */}
@@ -1428,23 +1480,49 @@ export default function CleanWinPage() {
                 Ab CHF 250.–
               </div>
 
-              {/* Service title */}
-              <h3
-                className="service-card-title"
+              {/* Service title with arrow */}
+              <div
                 style={{
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  color: "white",
-                  fontSize: "22px",
-                  fontWeight: "700",
-                  margin: 0,
-                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
-                  lineHeight: "1.2",
+                  right: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
                 }}
               >
-                Fassadenreinigung
-              </h3>
+                <h3
+                  className="service-card-title"
+                  style={{
+                    color: "white",
+                    fontSize: "22px",
+                    fontWeight: "700",
+                    margin: 0,
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    lineHeight: "1.2",
+                  }}
+                >
+                  Fassadenreinigung
+                </h3>
+                <svg
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    filter: "drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8))",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </div>
             </a>
 
             {/* Umzugsreinigung */}
@@ -1512,23 +1590,49 @@ export default function CleanWinPage() {
                 Ab CHF 320.–
               </div>
 
-              {/* Service title */}
-              <h3
-                className="service-card-title"
+              {/* Service title with arrow */}
+              <div
                 style={{
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  color: "white",
-                  fontSize: "22px",
-                  fontWeight: "700",
-                  margin: 0,
-                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
-                  lineHeight: "1.2",
+                  right: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
                 }}
               >
-                Umzugsreinigung
-              </h3>
+                <h3
+                  className="service-card-title"
+                  style={{
+                    color: "white",
+                    fontSize: "22px",
+                    fontWeight: "700",
+                    margin: 0,
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    lineHeight: "1.2",
+                  }}
+                >
+                  Umzugsreinigung
+                </h3>
+                <svg
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    filter: "drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8))",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </div>
             </a>
 
             {/* Baureinigung */}
@@ -1596,23 +1700,49 @@ export default function CleanWinPage() {
                 Ab CHF 280.–
               </div>
 
-              {/* Service title */}
-              <h3
-                className="service-card-title"
+              {/* Service title with arrow */}
+              <div
                 style={{
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  color: "white",
-                  fontSize: "22px",
-                  fontWeight: "700",
-                  margin: 0,
-                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
-                  lineHeight: "1.2",
+                  right: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
                 }}
               >
-                Baureinigung
-              </h3>
+                <h3
+                  className="service-card-title"
+                  style={{
+                    color: "white",
+                    fontSize: "22px",
+                    fontWeight: "700",
+                    margin: 0,
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    lineHeight: "1.2",
+                  }}
+                >
+                  Baureinigung
+                </h3>
+                <svg
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    filter: "drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8))",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </div>
             </a>
 
             {/* Weitere Dienstleistungen */}
@@ -1680,23 +1810,49 @@ export default function CleanWinPage() {
                 Auf Anfrage
               </div>
 
-              {/* Service title */}
-              <h3
-                className="service-card-title"
+              {/* Service title with arrow */}
+              <div
                 style={{
                   position: "absolute",
                   bottom: "20px",
                   left: "20px",
-                  color: "white",
-                  fontSize: "22px",
-                  fontWeight: "700",
-                  margin: 0,
-                  textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
-                  lineHeight: "1.2",
+                  right: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
                 }}
               >
-                Weitere Dienstleistungen
-              </h3>
+                <h3
+                  className="service-card-title"
+                  style={{
+                    color: "white",
+                    fontSize: "22px",
+                    fontWeight: "700",
+                    margin: 0,
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    lineHeight: "1.2",
+                  }}
+                >
+                  Weitere Dienstleistungen
+                </h3>
+                <svg
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                    textShadow: "rgba(0, 0, 0, 0.8) 0px 2px 4px",
+                    filter: "drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8))",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </div>
             </a>
           </div>
         </div>
