@@ -1956,7 +1956,7 @@ export default function CleanWinPage() {
                     lineHeight: "1.2",
                   }}
                 >
-                  Büroreinigung
+                  Unterhaltsreinigung
                 </h3>
                 <svg
                   style={{
