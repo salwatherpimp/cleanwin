@@ -3074,520 +3074,148 @@ export default function CleanWinPage() {
               uns noch heute eine unverbindliche Kontaktanfrage.
             </p>
           </div>
-          <div style={{ position: "relative" }}>
+          {/* Modern Testimonial Carousel */}
+          <div className="testimonial-carousel">
+            {/* Navigation Buttons */}
+            <button
+              className="carousel-nav left"
+              onClick={prevTestimonial}
+              aria-label="Previous testimonial"
+            >
+              <svg
+                style={{
+                  width: "20px",
+                  height: "20px",
+                  color: "#111827",
+                  fill: "none",
+                  stroke: "#111827",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: "2px",
+                }}
+                viewBox="0 0 24 24"
+              >
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+
+            <button
+              className="carousel-nav right"
+              onClick={nextTestimonial}
+              aria-label="Next testimonial"
+            >
+              <svg
+                style={{
+                  width: "20px",
+                  height: "20px",
+                  color: "#111827",
+                  fill: "none",
+                  stroke: "#111827",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: "2px",
+                }}
+                viewBox="0 0 24 24"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+
+            {/* Testimonial Track */}
             <div
+              className="testimonial-track"
               style={{
-                borderRadius: "8px",
-                overflowX: "hidden",
-                overflowY: "hidden",
+                transform: `translateX(-${currentTestimonial * (window.innerWidth < 768 ? 100 : 33.333)}%)`,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  transitionProperty: "transform",
-                  transitionTimingFunction: "ease-in-out",
-                  transitionDuration: "0.5s",
-                  transform: "matrix(1, 0, 0, 1, 0, 0)",
-                }}
-              >
-                {/* Card 1 - Ursula Wirtz */}
-                <div
-                  style={{
-                    minWidth: "33.333%",
-                    paddingLeft: "12px",
-                    paddingRight: "12px",
-                  }}
-                >
-                  <div
-                    style={{
-                      backdropFilter: "blur(4px)",
-                      backgroundColor: "rgba(255, 255, 255, 0.9)",
-                      border: "2px solid rgba(255, 255, 255, 0.2)",
-                      borderRadius: "8px",
-                      boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "200px",
-                      padding: "16px",
-                      position: "relative",
-                      transitionDuration: "0.3s",
-                      transform: "matrix(1, 0, 0, 1, 0, 0)",
-                    }}
-                  >
+              {testimonials.map((testimonial, index) => (
+                <div key={testimonial.id} className="testimonial-card">
+                  {/* Star Rating */}
+                  <div style={{ marginBottom: "12px" }}>
                     <div
                       style={{
-                        alignItems: "center",
                         display: "flex",
-                        gap: "12px",
-                        marginBottom: "12px",
-                        height: "44px",
-                        minHeight: "44px",
+                        justifyContent: "center",
+                        gap: "4px",
+                        marginBottom: "8px",
                       }}
                     >
-                      <div
-                        style={{
-                          alignItems: "center",
-                          backgroundColor: "rgb(16, 160, 164)",
-                          borderRadius: "50%",
-                          color: "rgb(255, 255, 255)",
-                          display: "flex",
-                          flexShrink: "0",
-                          fontSize: "14px",
-                          fontWeight: "600",
-                          height: "48px",
-                          justifyContent: "center",
-                          width: "48px",
-                        }}
-                      >
-                        U
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <div
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
                           style={{
-                            display: "flex",
-                            marginBottom: "12px",
-                            height: "44px",
-                            minHeight: "44px",
+                            width: "20px",
+                            height: "20px",
+                            color: "#fbbf24",
+                            fill: "#fbbf24",
                           }}
+                          viewBox="0 0 24 24"
                         >
-                          {[...Array(5)].map((_, i) => (
-                            <svg
-                              key={i}
-                              style={{
-                                width: "16px",
-                                height: "16px",
-                                color: "rgb(251, 191, 36)",
-                                fill: "rgb(251, 191, 36)",
-                                stroke: "rgb(251, 191, 36)",
-                                strokeLinecap: "round",
-                                strokeLinejoin: "round",
-                                strokeWidth: "2px",
-                              }}
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                          ))}
-                        </div>
-                        <div
-                          style={{
-                            color: "rgb(107, 114, 128)",
-                            fontSize: "12px",
-                            fontWeight: "500",
-                          }}
-                        >
-                          Google Bewertung
-                        </div>
-                      </div>
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
                     </div>
                     <div
                       style={{
-                        color: "rgb(31, 41, 55)",
-                        fontSize: "14px",
-                        fontStyle: "italic",
-                        height: "44px",
-                        lineHeight: "21px",
-                        marginBottom: "12px",
-                        minHeight: "44px",
-                        overflowWrap: "break-word",
-                        overflowX: "hidden",
-                        overflowY: "hidden",
-                        position: "relative",
-                        wordBreak: "break-word",
-                        wordWrap: "break-word",
+                        fontSize: "12px",
+                        color: "#6b7280",
+                        fontWeight: "500",
+                        textAlign: "center",
                       }}
                     >
-                      <span>&quot;</span>
-                      <span>
-                        Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich
-                        bin sehr zufrieden mit der sorgfältigen Ausführung und
-                        werde far...
-                      </span>
-                      <span>&quot;</span>
-                    </div>
-                    <div
-                      style={{
-                        backgroundColor: "rgb(255, 255, 255)",
-                        borderTop: "1px solid rgb(16, 160, 164)",
-                        bottom: "8px",
-                        color: "rgb(17, 24, 39)",
-                        fontSize: "14px",
-                        fontWeight: "700",
-                        left: "16px",
-                        paddingTop: "8px",
-                        position: "absolute",
-                        right: "16px",
-                        textAlign: "left",
-                        zIndex: "100",
-                      }}
-                    >
-                      Ursula Wirtz
+                      Google Review
                     </div>
                   </div>
-                </div>
 
-                {/* Card 2 - Johanna Kelts */}
-                <div
-                  style={{
-                    minWidth: "33.333%",
-                    paddingLeft: "12px",
-                    paddingRight: "12px",
-                  }}
-                >
+                  {/* Avatar */}
                   <div
                     style={{
-                      backdropFilter: "blur(4px)",
-                      backgroundColor: "rgba(255, 255, 255, 0.9)",
-                      border: "2px solid rgba(255, 255, 255, 0.2)",
-                      borderRadius: "8px",
-                      boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                      width: "60px",
+                      height: "60px",
+                      borderRadius: "50%",
+                      backgroundColor: "#10a0a4",
                       display: "flex",
-                      flexDirection: "column",
-                      height: "200px",
-                      padding: "16px",
-                      position: "relative",
-                      transitionDuration: "0.3s",
-                      transform: "matrix(1, 0, 0, 1, 0, 0)",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "white",
+                      fontSize: "24px",
+                      fontWeight: "700",
+                      marginBottom: "20px",
+                      boxShadow: "0 4px 12px rgba(16, 160, 164, 0.3)",
                     }}
                   >
-                    <div
-                      style={{
-                        alignItems: "center",
-                        display: "flex",
-                        gap: "12px",
-                        marginBottom: "12px",
-                        height: "44px",
-                        minHeight: "44px",
-                      }}
-                    >
-                      <div
-                        style={{
-                          alignItems: "center",
-                          backgroundColor: "rgb(16, 160, 164)",
-                          borderRadius: "50%",
-                          color: "rgb(255, 255, 255)",
-                          display: "flex",
-                          flexShrink: "0",
-                          fontSize: "14px",
-                          fontWeight: "600",
-                          height: "48px",
-                          justifyContent: "center",
-                          width: "48px",
-                        }}
-                      >
-                        J
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <div
-                          style={{
-                            display: "flex",
-                            marginBottom: "12px",
-                            height: "44px",
-                            minHeight: "44px",
-                          }}
-                        >
-                          {[...Array(5)].map((_, i) => (
-                            <svg
-                              key={i}
-                              style={{
-                                width: "16px",
-                                height: "16px",
-                                color: "rgb(251, 191, 36)",
-                                fill: "rgb(251, 191, 36)",
-                                stroke: "rgb(251, 191, 36)",
-                                strokeLinecap: "round",
-                                strokeLinejoin: "round",
-                                strokeWidth: "2px",
-                              }}
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                          ))}
-                        </div>
-                        <div
-                          style={{
-                            color: "rgb(107, 114, 128)",
-                            fontSize: "12px",
-                            fontWeight: "500",
-                          }}
-                        >
-                          Google Bewertung
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        color: "rgb(31, 41, 55)",
-                        fontSize: "14px",
-                        fontStyle: "italic",
-                        height: "44px",
-                        lineHeight: "21px",
-                        marginBottom: "12px",
-                        minHeight: "44px",
-                        overflowWrap: "break-word",
-                        overflowX: "hidden",
-                        overflowY: "hidden",
-                        position: "relative",
-                        wordBreak: "break-word",
-                        wordWrap: "break-word",
-                      }}
-                    >
-                      <span>&quot;</span>
-                      <span>
-                        Effizient, sehr professionell, sauber und zu einem
-                        zahlbaren Preis: So darf ich die Arbeit dieser beiden
-                        sympathischen B...
-                      </span>
-                      <span>&quot;</span>
-                    </div>
-                    <div
-                      style={{
-                        backgroundColor: "rgb(255, 255, 255)",
-                        borderTop: "1px solid rgb(16, 160, 164)",
-                        bottom: "8px",
-                        color: "rgb(17, 24, 39)",
-                        fontSize: "14px",
-                        fontWeight: "700",
-                        left: "16px",
-                        paddingTop: "8px",
-                        position: "absolute",
-                        right: "16px",
-                        textAlign: "left",
-                        zIndex: "100",
-                      }}
-                    >
-                      Johanna Kelts
-                    </div>
+                    {testimonial.initial}
                   </div>
-                </div>
 
-                {/* Card 3 - Frau achternbusch */}
-                <div
-                  style={{
-                    minWidth: "33.333%",
-                    paddingLeft: "12px",
-                    paddingRight: "12px",
-                  }}
-                >
-                  <div
+                  {/* Quote */}
+                  <blockquote
                     style={{
-                      backdropFilter: "blur(4px)",
-                      backgroundColor: "rgba(255, 255, 255, 0.9)",
-                      border: "2px solid rgba(255, 255, 255, 0.2)",
-                      borderRadius: "8px",
-                      boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "200px",
-                      padding: "16px",
-                      position: "relative",
-                      transitionDuration: "0.3s",
+                      fontSize: "16px",
+                      fontStyle: "italic",
+                      color: "#1f2937",
+                      lineHeight: "1.6",
+                      marginBottom: "20px",
+                      textAlign: "center",
+                      flex: 1,
+                      margin: "0 0 20px 0",
                     }}
                   >
-                    <div
-                      style={{
-                        alignItems: "center",
-                        display: "flex",
-                        gap: "12px",
-                        marginBottom: "12px",
-                        height: "44px",
-                        minHeight: "44px",
-                      }}
-                    >
-                      <div
-                        style={{
-                          alignItems: "center",
-                          backgroundColor: "rgb(16, 160, 164)",
-                          borderRadius: "50%",
-                          color: "rgb(255, 255, 255)",
-                          display: "flex",
-                          flexShrink: "0",
-                          fontSize: "14px",
-                          fontWeight: "600",
-                          height: "48px",
-                          justifyContent: "center",
-                          width: "48px",
-                        }}
-                      >
-                        F
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <div
-                          style={{
-                            display: "flex",
-                            marginBottom: "12px",
-                            height: "44px",
-                            minHeight: "44px",
-                          }}
-                        >
-                          {[...Array(5)].map((_, i) => (
-                            <svg
-                              key={i}
-                              style={{
-                                width: "16px",
-                                height: "16px",
-                                color: "rgb(251, 191, 36)",
-                                fill: "rgb(251, 191, 36)",
-                                stroke: "rgb(251, 191, 36)",
-                                strokeLinecap: "round",
-                                strokeLinejoin: "round",
-                                strokeWidth: "2px",
-                              }}
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                          ))}
-                        </div>
-                        <div
-                          style={{
-                            color: "rgb(107, 114, 128)",
-                            fontSize: "12px",
-                            fontWeight: "500",
-                          }}
-                        >
-                          Google Bewertung
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        color: "rgb(31, 41, 55)",
-                        fontSize: "14px",
-                        fontStyle: "italic",
-                        height: "44px",
-                        lineHeight: "21px",
-                        marginBottom: "12px",
-                        minHeight: "44px",
-                        overflowWrap: "break-word",
-                        overflowX: "hidden",
-                        overflowY: "hidden",
-                        position: "relative",
-                        wordBreak: "break-word",
-                        wordWrap: "break-word",
-                      }}
-                    >
-                      <span>&quot;</span>
-                      <span>
-                        Für unser neues Restaurant, haben wir ein passendes
-                        Farbkonzept gesucht. Durch die Kompetente Beratung von
-                        Herr Niedehau...
-                      </span>
-                      <span>&quot;</span>
-                    </div>
-                    <div
-                      style={{
-                        backgroundColor: "rgb(255, 255, 255)",
-                        borderTop: "1px solid rgb(16, 160, 164)",
-                        bottom: "8px",
-                        color: "rgb(17, 24, 39)",
-                        fontSize: "14px",
-                        fontWeight: "700",
-                        left: "16px",
-                        paddingTop: "8px",
-                        position: "absolute",
-                        right: "16px",
-                        textAlign: "left",
-                        zIndex: "100",
-                      }}
-                    >
-                      Frau achternbusch
-                    </div>
+                    "{testimonial.text}"
+                  </blockquote>
+
+                  {/* Customer Name */}
+                  <div
+                    style={{
+                      fontSize: "16px",
+                      fontWeight: "700",
+                      color: "#111827",
+                      textAlign: "center",
+                    }}
+                  >
+                    {testimonial.name}
                   </div>
                 </div>
-              </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                gap: "16px",
-                justifyContent: "center",
-                marginTop: "32px",
-              }}
-            >
-              <button
-                style={{
-                  alignItems: "center",
-                  backdropFilter: "blur(4px)",
-                  backgroundColor: "rgba(255, 255, 255, 0.9)",
-                  border: "2px solid rgba(255, 255, 255, 0.2)",
-                  borderRadius: "50%",
-                  boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                  cursor: "pointer",
-                  display: "flex",
-                  height: "48px",
-                  justifyContent: "center",
-                  padding: "6px",
-                  transitionDuration: "0.3s",
-                  width: "48px",
-                }}
-              >
-                <svg
-                  style={{
-                    width: "20px",
-                    height: "20px",
-                    color: "rgb(17, 24, 39)",
-                    fill: "none",
-                    stroke: "rgb(17, 24, 39)",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: "2px",
-                  }}
-                  viewBox="0 0 24 24"
-                >
-                  <path d="m15 18-6-6 6-6" />
-                </svg>
-              </button>
-              <button
-                style={{
-                  alignItems: "center",
-                  backdropFilter: "blur(4px)",
-                  backgroundColor: "rgba(255, 255, 255, 0.9)",
-                  border: "2px solid rgba(255, 255, 255, 0.2)",
-                  borderRadius: "50%",
-                  boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                  cursor: "pointer",
-                  display: "flex",
-                  height: "48px",
-                  justifyContent: "center",
-                  padding: "6px",
-                  transitionDuration: "0.3s",
-                  width: "48px",
-                }}
-              >
-                <svg
-                  style={{
-                    width: "20px",
-                    height: "20px",
-                    color: "rgb(17, 24, 39)",
-                    fill: "none",
-                    stroke: "rgb(17, 24, 39)",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: "2px",
-                  }}
-                  viewBox="0 0 24 24"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </button>
+              ))}
             </div>
           </div>
         </div>
