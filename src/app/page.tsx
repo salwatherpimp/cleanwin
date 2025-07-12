@@ -937,7 +937,7 @@ export default function CleanWinPage() {
           top: "0px",
           left: "0px",
           right: "0px",
-          zIndex: 50,
+          zIndex: 1000,
           backdropFilter: isScrolled ? "none" : "blur(8px)",
           backgroundColor: isScrolled
             ? "rgba(255, 255, 255, 1)"
