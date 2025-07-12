@@ -954,7 +954,8 @@ export default function CleanWinPage() {
             justifyContent: "space-between",
             maxWidth: "1152px",
             margin: "0 auto",
-            padding: "12px 16px",
+            padding: "16px 24px",
+            minHeight: "80px",
           }}
         >
           <a
