@@ -1893,8 +1893,8 @@ export default function CleanWinPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_A_stack_of_cardboard_moving_boxes_with_blankets_and_aca55475-72f5-47ce-bd35-23f8455eeeb3_1_xumd8v.avif"
-                alt="Büroreinigung"
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_a_professional_cleaning_person_wiping_an_office_des_ae82c6ac-ddf5-48e9-93d5-9ee8d062167c_3_xzzqja.avif"
+                alt="Unterhaltsreinigung"
                 fill
                 style={{
                   objectFit: "cover",
