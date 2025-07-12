@@ -328,7 +328,7 @@ export default function CleanWinPage() {
         gap: 24px;
       }
 
-      .testimonial-card {
+            .testimonial-card {
         background: rgba(255, 255, 255, 0.95);
         border-radius: 16px;
         padding: 24px;
@@ -341,6 +341,11 @@ export default function CleanWinPage() {
         align-items: center;
         text-align: center;
         min-height: 280px;
+      }
+
+      /* Improved line-height for testimonial text */
+      .testimonial-quote {
+        line-height: 1.5em !important;
       }
 
       .carousel-nav {
