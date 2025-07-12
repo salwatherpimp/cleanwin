@@ -501,6 +501,36 @@ export default function CleanWinPage() {
     }
   };
 
+  // Smooth scroll to services section
+  useEffect(() => {
+    const handleSmoothScroll = (e: Event) => {
+      const target = e.target as HTMLAnchorElement;
+      if (target.href && target.href.includes("#services")) {
+        e.preventDefault();
+        const servicesSection = document.getElementById("services");
+        if (servicesSection) {
+          servicesSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }
+    };
+
+    // Add event listener to all anchor links
+    const anchors = document.querySelectorAll('a[href="#services"]');
+    anchors.forEach((anchor) => {
+      anchor.addEventListener("click", handleSmoothScroll);
+    });
+
+    // Cleanup
+    return () => {
+      anchors.forEach((anchor) => {
+        anchor.removeEventListener("click", handleSmoothScroll);
+      });
+    };
+  }, []);
+
   return (
     <div
       style={{
