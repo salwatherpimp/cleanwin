@@ -1227,12 +1227,11 @@ export default function CleanWinPage() {
             {/* Text Content */}
             <div>
               <h2
+                className="headline-spacing"
                 style={{
                   fontSize: "28px",
                   fontWeight: "700",
                   color: "#111827",
-                  marginBottom: "24px",
-                  marginTop: "23.24px",
                 }}
               >
                 Regionaler Reinigungsbetrieb für Privat, Gewerbe & Industrie
@@ -1242,7 +1241,7 @@ export default function CleanWinPage() {
                   color: "#6b7280",
                   lineHeight: "28px",
                   marginBottom: "24px",
-                  marginTop: "16px",
+                  marginTop: "0px",
                 }}
               >
                 CleanWin ist Ihr vertrauensvoller Partner für professionelle
