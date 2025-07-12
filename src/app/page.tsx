@@ -37,7 +37,46 @@ export default function CleanWinPage() {
             @media (min-width: 1024px) {
         /* Desktop styles - 48px padding on larger screens */
         .responsive-container { padding-left: 48px !important; padding-right: 48px !important; }
-        .services-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 32px !important; }
+                .services-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 32px !important; }
+      }
+
+      /* Responsive Section Spacing */
+      .section-spacing {
+        padding: 96px 0;
+      }
+
+      .section-spacing-sm {
+        padding: 64px 0;
+      }
+
+      .headline-spacing {
+        margin-bottom: 24px;
+        margin-top: 24px;
+      }
+
+      .button-spacing {
+        margin-bottom: 48px;
+        margin-top: 48px;
+      }
+
+      @media (max-width: 767px) {
+        .section-spacing {
+          padding: 64px 0 !important;
+        }
+
+        .section-spacing-sm {
+          padding: 48px 0 !important;
+        }
+
+        .headline-spacing {
+          margin-bottom: 16px !important;
+          margin-top: 16px !important;
+        }
+
+        .button-spacing {
+          margin-bottom: 32px !important;
+          margin-top: 32px !important;
+        }
       }
 
       /* Infinite logo scroll animation */
