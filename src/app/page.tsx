@@ -414,8 +414,13 @@ export default function CleanWinPage() {
       }
 
             @media (max-width: 767px) {
-        .testimonial-carousel {
-          padding: 0 16px;
+                .testimonial-carousel {
+          padding: 0;
+          margin: 0 16px;
+        }
+
+        .testimonial-track {
+          gap: 0;
         }
 
                 .testimonial-card {
