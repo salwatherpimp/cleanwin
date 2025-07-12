@@ -382,8 +382,35 @@ export default function CleanWinPage() {
         left: 12px;
       }
 
-      .carousel-nav.right {
+            .carousel-nav.right {
         right: 12px;
+      }
+
+      /* Pagination dots */
+      .testimonial-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 32px;
+      }
+
+      .pagination-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(107, 114, 128, 0.3);
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .pagination-dot.active {
+        background-color: #10a0a4;
+        transform: scale(1.2);
+      }
+
+      .pagination-dot:hover {
+        background-color: rgba(16, 160, 164, 0.7);
       }
 
             @media (max-width: 767px) {
