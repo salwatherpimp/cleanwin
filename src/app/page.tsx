@@ -236,9 +236,21 @@ export default function CleanWinPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+
   const toggleAccordion = (index: number) => {
     setExpandedAccordion(expandedAccordion === index ? null : index);
   };
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const testimonials = [
     {
