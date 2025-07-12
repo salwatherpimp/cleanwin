@@ -21,14 +21,19 @@ export default function CleanWinPage() {
         .grid-mobile-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
         .grid-mobile-logos { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
         .logo-container-mobile { width: 80px !important; height: 40px !important; }
+        .services-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+        .service-card-title { font-size: 18px !important; }
+        .service-card-price { font-size: 12px !important; padding: 6px 10px !important; }
       }
       @media (min-width: 768px) and (max-width: 1023px) {
         /* Tablet styles - 32px padding */
         .responsive-container { padding-left: 32px !important; padding-right: 32px !important; }
+        .services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 24px !important; }
       }
       @media (min-width: 1024px) {
         /* Desktop styles - 48px padding on larger screens */
         .responsive-container { padding-left: 48px !important; padding-right: 48px !important; }
+        .services-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 32px !important; }
       }
     </style>
     `;
