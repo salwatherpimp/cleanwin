@@ -141,6 +141,10 @@ export default function CleanWinPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleAccordion = (index: number) => {
+    setExpandedAccordion(expandedAccordion === index ? null : index);
+  };
+
   return (
     <div
       style={{
