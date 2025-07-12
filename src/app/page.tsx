@@ -1719,9 +1719,9 @@ export default function CleanWinPage() {
       {/* Services Section */}
       <section
         id="services"
+        className="section-spacing"
         style={{
           background: "linear-gradient(135deg, #f6f9f9 0%, #e7f1f3 100%)",
-          padding: "20px 0",
           position: "relative",
           width: "100%",
         }}
