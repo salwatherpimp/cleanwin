@@ -1665,7 +1665,7 @@ export default function CleanWinPage() {
         >
           <div className="about-section-grid">
             {/* Text Content */}
-            <div>
+            <div className="about-text-content">
               <h2
                 className="headline-spacing"
                 style={{
