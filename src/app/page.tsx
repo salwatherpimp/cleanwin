@@ -1802,7 +1802,7 @@ export default function CleanWinPage() {
                   boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
                 }}
               >
-                Auf Anfrage
+                Ab CHF 200.-
               </div>
 
               {/* Service title with arrow */}
@@ -1827,7 +1827,7 @@ export default function CleanWinPage() {
                     lineHeight: "1.2",
                   }}
                 >
-                  Weitere Dienstleistungen
+                  Solarpanel reinigen
                 </h3>
                 <svg
                   style={{
