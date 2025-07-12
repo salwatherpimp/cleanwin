@@ -252,7 +252,7 @@ export default function CleanWinPage() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const testimonials = [
+  const originalTestimonials = [
     {
       id: 1,
       name: "Ursula Wirtz",
@@ -285,15 +285,43 @@ export default function CleanWinPage() {
     },
   ];
 
+  // Create extended array for infinite loop effect
+  const testimonials = [
+    ...originalTestimonials,
+    ...originalTestimonials,
+    ...originalTestimonials,
+  ];
+
+  const totalOriginal = originalTestimonials.length;
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentTestimonial((prev) => prev + 1);
   };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
-    );
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentTestimonial((prev) => prev - 1);
   };
+
+  // Handle infinite loop reset after animation completes
+  useEffect(() => {
+    if (isTransitioning) {
+      const timeout = setTimeout(() => {
+        if (currentTestimonial >= totalOriginal * 2) {
+          setCurrentTestimonial(totalOriginal);
+        } else if (currentTestimonial < totalOriginal) {
+          setCurrentTestimonial(totalOriginal + currentTestimonial);
+        }
+        setIsTransitioning(false);
+      }, 500); // Match CSS transition duration
+
+      return () => clearTimeout(timeout);
+    }
+  }, [currentTestimonial, isTransitioning, totalOriginal]);
 
   return (
     <div
