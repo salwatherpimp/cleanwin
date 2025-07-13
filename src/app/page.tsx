@@ -1326,6 +1326,7 @@ export default function CleanWinPage() {
               style={{
                 display: "flex",
                 alignItems: "center",
+                marginTop: "-1px",
               }}
             >
               <Image
