@@ -23,7 +23,7 @@ export default function CustomerTestimonialsSection() {
       name: "Jeanine Ganz",
       initial: "J",
       profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F6f632a458dcf44a9a8bf0888cf73689f",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/jganz_vjllm7.avif",
       text: "Sehr freundlicher, unkomplizierter und qualitativ einwandfreier Service. Die Endreinigung der Wohnung wurde ohne Beanstandung abgenommen...",
     },
     {
@@ -31,7 +31,7 @@ export default function CustomerTestimonialsSection() {
       name: "Albert Radamonti",
       initial: "A",
       profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F7495596da4634fb98885d61c2489c58a",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/albert_1_sionfn.avif",
       text: "Super Service und einwandfreie Erledigung. Preis-Leistung ist top! Einfache Abwicklung, günstiger Preis und saubere Arbeit mit...",
     },
     {
@@ -39,7 +39,7 @@ export default function CustomerTestimonialsSection() {
       name: "Gerussi Renato",
       initial: "G",
       profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2Fc7eddc79f0494af98960a9e24996b147",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/renato_zhinmm.avif",
       text: "Die Endreinigung war perfekt, inklusive Wohnungsabgabe. Herr Polli arbeitet nicht nur effektiv, er ist auch ausgesprochen sympathisch. Der Preis...",
     },
     {
@@ -47,7 +47,7 @@ export default function CustomerTestimonialsSection() {
       name: "Roter Kater",
       initial: "R",
       profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F2dcf6cd036c44e7587fbf13387356436",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/rkater_1_tkyxzs.avif",
       text: "Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal.",
     },
     {
@@ -55,7 +55,7 @@ export default function CustomerTestimonialsSection() {
       name: "Nikola C",
       initial: "N",
       profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F391098f2bc0e4a2d8aab72206e82879a",
+        "https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/nikolac_1_t1tzdu.avif",
       text: "TOP ZUFRIEDENHEIT. Wir waren mit der Endreinigung sehr zufrieden - unsere erste offizielle Wohnungsübergabe und alles verlief dank der super Reinigung bestens...",
     },
   ];
