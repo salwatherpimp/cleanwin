@@ -788,6 +788,7 @@ export default function CleanWinPage() {
       if (e.key === "Escape") {
         setIsMobileMenuOpen(false);
         setIsDesktopDropdownOpen(false);
+        setIsDesktopCtaDropdownOpen(false);
         setIsMobileDropdownOpen(false);
       }
     };
