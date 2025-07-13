@@ -1354,10 +1354,11 @@ export default function CleanWinPage() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "5px",
+                  justifyContent: "space-between",
+                  gap: "6px",
                   backgroundColor: "#10a0a4",
                   color: "white",
-                  padding: "8px 14px",
+                  padding: "8px 12px",
                   borderRadius: "20px",
                   fontSize: "13px",
                   fontWeight: "600",
@@ -1366,6 +1367,7 @@ export default function CleanWinPage() {
                   transition: "all 0.3s ease-in-out",
                   whiteSpace: "nowrap",
                   minHeight: "40px",
+                  maxWidth: "fit-content",
                   boxShadow: "0 1px 6px rgba(16, 160, 164, 0.25)",
                 }}
               >
