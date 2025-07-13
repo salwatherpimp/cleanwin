@@ -1307,7 +1307,7 @@ export default function CleanWinPage() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            padding: "14px 18px",
+            padding: "14px 16px",
             position: "relative",
             minHeight: "76px",
           }}
