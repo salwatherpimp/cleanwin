@@ -3800,7 +3800,7 @@ export default function CleanWinPage() {
                 }}
               >
                 Volle Versicherung und geschultes Team - damit Sie sorgenfrei
-                entspannen k��nnen.
+                entspannen können.
               </p>
             </div>
 
