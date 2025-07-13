@@ -2373,7 +2373,7 @@ export default function CleanWinPage() {
                   color: "#111827",
                 }}
               >
-                Regionaler Reinigungsbetrieb für Privat, Gewerbe & Industrie
+                Über 10 Jahre Reinigungserfahrung in Winterthur und Umgebung
               </h2>
               <p
                 style={{
