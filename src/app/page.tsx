@@ -1194,17 +1194,19 @@ export default function CleanWinPage() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "4px",
+                gap: "6px",
                 backgroundColor: "#10a0a4",
                 color: "white",
-                padding: "6px 12px",
-                borderRadius: "16px",
-                fontSize: "12px",
+                padding: "10px 16px",
+                borderRadius: "24px",
+                fontSize: "14px",
                 fontWeight: "600",
                 textDecoration: "none",
-                transition: "background-color 0.2s",
+                transition: "all 0.2s ease",
                 whiteSpace: "nowrap",
-                maxWidth: "140px",
+                minHeight: "44px",
+                boxShadow: "0 2px 8px rgba(16, 160, 164, 0.3)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
               }}
             >
               <svg
