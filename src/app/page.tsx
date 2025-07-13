@@ -2491,6 +2491,7 @@ export default function CleanwinPage() {
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_Close-up_of_a_hand_cleaning_a_glass_window_with_a_s_9d456c2b-edad-45fb-ad0d-a857626340ec_3_q2fskk.avif"
                 alt="Fensterreinigung"
                 fill
+                loading="lazy"
                 style={{
                   objectFit: "cover",
                   transition: "transform 0.3s ease",
