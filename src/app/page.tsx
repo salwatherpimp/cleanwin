@@ -1320,48 +1320,141 @@ export default function CleanWinPage() {
               minWidth: "0",
             }}
           >
-            <a
-              href="/kontakt"
-              className="mobile-cta-btn"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "5px",
-                backgroundColor: "#10a0a4",
-                color: "white",
-                padding: "8px 14px",
-                borderRadius: "20px",
-                fontSize: "13px",
-                fontWeight: "600",
-                textDecoration: "none",
-                transition: "all 0.2s ease",
-                whiteSpace: "nowrap",
-                minHeight: "40px",
-                boxShadow: "0 1px 6px rgba(16, 160, 164, 0.25)",
-                border: "1px solid rgba(255, 255, 255, 0.15)",
-              }}
+            <div
+              className="dropdown-container"
+              style={{ position: "relative" }}
             >
-              <svg
+              <button
+                onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+                className="mobile-cta-btn"
                 style={{
-                  width: "14px",
-                  height: "14px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  backgroundColor: "#10a0a4",
                   color: "white",
-                  stroke: "white",
-                  strokeWidth: "2px",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  fill: "none",
-                  flexShrink: 0,
+                  padding: "8px 14px",
+                  borderRadius: "20px",
+                  fontSize: "13px",
+                  fontWeight: "600",
+                  border: "1px solid rgba(255, 255, 255, 0.15)",
+                  cursor: "pointer",
+                  transition: "all 0.2s ease",
+                  whiteSpace: "nowrap",
+                  minHeight: "40px",
+                  boxShadow: "0 1px 6px rgba(16, 160, 164, 0.25)",
                 }}
-                viewBox="0 0 24 24"
               >
-                <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
-                <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
-                <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
-                <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
-              </svg>
-              <span>Kontaktiere uns</span>
-            </a>
+                <svg
+                  style={{
+                    width: "14px",
+                    height: "14px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                    flexShrink: 0,
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
+                  <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
+                  <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
+                  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
+                </svg>
+                <span>Kontaktiere uns</span>
+                <svg
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                    flexShrink: 0,
+                    transform: isMobileDropdownOpen
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                    transition: "transform 0.2s ease-in-out",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <polyline points="6,9 12,15 18,9" />
+                </svg>
+              </button>
+
+              {isMobileDropdownOpen && (
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "100%",
+                    right: "0",
+                    marginTop: "8px",
+                    backgroundColor: "white",
+                    borderRadius: "12px",
+                    boxShadow:
+                      "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                    border: "1px solid rgba(0, 0, 0, 0.1)",
+                    overflow: "hidden",
+                    zIndex: 50,
+                    minWidth: "180px",
+                    animation: "fadeIn 0.2s ease-in-out",
+                  }}
+                >
+                  <a
+                    href="/kontakt"
+                    style={{
+                      display: "block",
+                      padding: "12px 16px",
+                      color: "#374151",
+                      textDecoration: "none",
+                      fontSize: "13px",
+                      fontWeight: "500",
+                      textAlign: "center",
+                      borderBottom: isBusinessHours()
+                        ? "1px solid #f3f4f6"
+                        : "none",
+                      transition: "background-color 0.2s",
+                    }}
+                    onTouchStart={(e) => {
+                      e.currentTarget.style.backgroundColor = "#f9fafb";
+                    }}
+                    onTouchEnd={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                    }}
+                  >
+                    Kontaktanfrage senden
+                  </a>
+                  {isBusinessHours() && (
+                    <a
+                      href="tel:+41525512424"
+                      style={{
+                        display: "block",
+                        padding: "12px 16px",
+                        color: "#374151",
+                        textDecoration: "none",
+                        fontSize: "13px",
+                        fontWeight: "500",
+                        textAlign: "center",
+                        transition: "background-color 0.2s",
+                      }}
+                      onTouchStart={(e) => {
+                        e.currentTarget.style.backgroundColor = "#f9fafb";
+                      }}
+                      onTouchEnd={(e) => {
+                        e.currentTarget.style.backgroundColor = "transparent";
+                      }}
+                    >
+                      +41 52 551 24 24
+                    </a>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Hamburger Menu */}
