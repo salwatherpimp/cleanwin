@@ -203,7 +203,7 @@ export default function CleanWinPage() {
 
       .usp-scroll-track {
         display: flex;
-                        animation: uspScroll 45s linear infinite;
+                                animation: uspScroll 30s linear infinite;
         width: fit-content;
         gap: 16px;
       }
@@ -1760,7 +1760,7 @@ export default function CleanWinPage() {
               color: "rgba(255, 255, 255, 0.95)",
             }}
           >
-            Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere Räume,
+            Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere R��ume,
             Fassaden und mehr.
           </p>
 
@@ -3800,7 +3800,7 @@ export default function CleanWinPage() {
                 }}
               >
                 Volle Versicherung und geschultes Team - damit Sie sorgenfrei
-                entspannen können.
+                entspannen k��nnen.
               </p>
             </div>
 
