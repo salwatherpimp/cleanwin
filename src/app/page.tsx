@@ -2527,7 +2527,7 @@ export default function CleanwinPage() {
                   boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
                 }}
               >
-                Ab CHF 199.–
+                Ab CHF 199.���
               </div>
 
               {/* Service title with arrow */}
@@ -3041,6 +3041,7 @@ export default function CleanwinPage() {
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_A_close-up_of_a_person_cleaning_a_solar_panel_under_0b5462d2-2c74-452a-bf63-cf91c008a0dc_1_alcwld.avif"
                 alt="Weitere Dienstleistungen"
                 fill
+                loading="lazy"
                 style={{
                   objectFit: "cover",
                   transition: "transform 0.3s ease",
