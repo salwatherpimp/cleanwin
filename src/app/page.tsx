@@ -4353,7 +4353,7 @@ export default function CleanWinPage() {
               style={{
                 color: "#6b7280",
                 fontSize: "16px",
-                lineHeight: "32px",
+                lineHeight: "28px",
                 marginBottom: "48px",
                 marginTop: "0px",
                 marginLeft: "auto",
