@@ -1384,7 +1384,7 @@ export default function CleanWinPage() {
                   minHeight: "40px",
                   overflow: "visible",
                   textOverflow: "ellipsis",
-                  maxWidth: "140px",
+                  maxWidth: "150px",
                   overflowX: "visible",
                   overflowY: "visible",
                   width: "auto",
