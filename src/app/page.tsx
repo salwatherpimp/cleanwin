@@ -2931,6 +2931,7 @@ export default function CleanwinPage() {
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_A_construction_worker_in_work_boots_and_jeans_clean_8a86ab98-84bb-4372-a0bf-a47a89c60230_1_lnfpsa.avif"
                 alt="Baureinigung"
                 fill
+                loading="lazy"
                 style={{
                   objectFit: "cover",
                   transition: "transform 0.3s ease",
