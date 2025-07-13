@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function CleanWinPage() {
+export default function CleanwinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDesktopDropdownOpen, setIsDesktopDropdownOpen] = useState(false);
@@ -1039,7 +1039,7 @@ export default function CleanWinPage() {
           >
             <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
-              alt="CleanWin Logo"
+              alt="Cleanwin Logo"
               width={200}
               height={56}
               style={{
@@ -1333,7 +1333,7 @@ export default function CleanWinPage() {
             >
               <Image
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
-                alt="CleanWin Logo"
+                alt="Cleanwin Logo"
                 width={200}
                 height={56}
                 className="mobile-logo"
@@ -1651,7 +1651,7 @@ export default function CleanWinPage() {
         {/* Background Image */}
         <Image
           src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1200,h_600,c_fill,f_auto,q_auto/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-          alt="CleanWin Hero Background"
+          alt="Cleanwin Hero Background"
           fill
           priority
           style={{
@@ -3551,7 +3551,7 @@ export default function CleanWinPage() {
         </div>
       </section>
 
-      {/* Why Choose CleanWin Section */}
+      {/* Why Choose Cleanwin Section */}
       <section
         className="section-spacing"
         style={{
@@ -4618,7 +4618,7 @@ export default function CleanWinPage() {
                   marginTop: "0px",
                 }}
               >
-                CleanWin GmbH
+                Cleanwin GmbH
               </h3>
               <div
                 style={{
@@ -4810,7 +4810,7 @@ export default function CleanWinPage() {
                 gap: "16px",
               }}
             >
-              © 2025 CleanWin. Alle Rechte vorbehalten.
+              © 2025 Cleanwin. Alle Rechte vorbehalten.
               <br />
               Gemacht mit ♥️ in Winterthur
             </div>
