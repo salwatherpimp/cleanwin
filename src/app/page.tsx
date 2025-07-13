@@ -796,10 +796,15 @@ export default function CleanWinPage() {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as Element;
 
-      // Close dropdowns if clicking outside
+      // Close CTA dropdowns if clicking outside
       if (!target.closest(".dropdown-container")) {
-        setIsDesktopDropdownOpen(false);
+        setIsDesktopCtaDropdownOpen(false);
         setIsMobileDropdownOpen(false);
+      }
+
+      // Close Leistungen dropdown if clicking outside
+      if (!target.closest(".leistungen-dropdown")) {
+        setIsDesktopDropdownOpen(false);
       }
 
       // Close mobile menu if clicking outside
