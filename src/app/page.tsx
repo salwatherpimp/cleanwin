@@ -1474,6 +1474,7 @@ export default function CleanWinPage() {
             style={{ flex: "0 0 auto", display: "flex", alignItems: "center" }}
           >
             <button
+              className="hamburger-button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               style={{
                 display: "flex",
