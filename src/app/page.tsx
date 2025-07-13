@@ -486,22 +486,22 @@ export default function CleanWinPage() {
         }
       }
 
-      /* Enhanced mobile navigation styles */
+            /* Enhanced mobile navigation styles */
       @media (max-width: 360px) {
         .mobile-logo {
-          width: 140px !important;
-          height: 39px !important;
+          width: 160px !important;
+          height: 45px !important;
         }
 
         .mobile-cta-btn {
-          font-size: 13px !important;
-          padding: 8px 14px !important;
+          font-size: 12px !important;
+          padding: 7px 12px !important;
           gap: 4px !important;
         }
 
         .mobile-nav-container {
-          padding: 10px 12px !important;
-          min-height: 68px !important;
+          padding: 12px 14px !important;
+          min-height: 72px !important;
         }
       }
 
