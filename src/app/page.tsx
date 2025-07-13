@@ -849,7 +849,7 @@ export default function CleanWinPage() {
       name: "Jeanine Ganz",
       initial: "J",
       profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F420dc1dc3f73488b8591d4fb69ffbe31",
+        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F6f632a458dcf44a9a8bf0888cf73689f",
       text: "Sehr freundlicher, unkomplizierter und qualitativ einwandfreier Service. Die Endreinigung der Wohnung wurde ohne Beanstandung abgenommen...",
     },
     {
@@ -857,7 +857,7 @@ export default function CleanWinPage() {
       name: "Albert Radamonti",
       initial: "A",
       profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F49e6510976af499cab9f04958c95e05f",
+        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F7495596da4634fb98885d61c2489c58a",
       text: "Super Service und einwandfreie Erledigung. Preis-Leistung ist top! Einfache Abwicklung, günstiger Preis und saubere Arbeit mit...",
     },
     {
@@ -865,7 +865,7 @@ export default function CleanWinPage() {
       name: "Gerussi Renato",
       initial: "G",
       profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2Fedb15459bd314253880175f896dc2783",
+        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2Fc7eddc79f0494af98960a9e24996b147",
       text: "Die Endreinigung war perfekt, inklusive Wohnungsabgabe. Herr Polli arbeitet nicht nur effektiv, er ist auch ausgesprochen sympathisch. Der Preis...",
     },
     {
@@ -873,7 +873,7 @@ export default function CleanWinPage() {
       name: "Roter Kater",
       initial: "R",
       profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F1c44daee167347a484539109011800f1",
+        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F2dcf6cd036c44e7587fbf13387356436",
       text: "Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal.",
     },
     {
@@ -881,7 +881,7 @@ export default function CleanWinPage() {
       name: "Nikola C",
       initial: "N",
       profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F483fb0592633420e993163e2c15850c9",
+        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F391098f2bc0e4a2d8aab72206e82879a",
       text: "TOP ZUFRIEDENHEIT. Wir waren mit der Endreinigung sehr zufrieden - unsere erste offizielle Wohnungsübergabe und alles verlief dank der super Reinigung bestens...",
     },
   ];
