@@ -4563,7 +4563,7 @@ export default function CleanWinPage() {
                 textShadow: "rgba(0, 0, 0, 0.5) 2px 2px 4px",
               }}
             >
-              Cleanwin - persönlich, zuverlässig, hochwertig
+              Cleanwin - Reinigung, auf die Sie sich verlassen können
             </h2>
             <a
               href="/kontakt"
