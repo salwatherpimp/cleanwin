@@ -2357,6 +2357,7 @@ export default function CleanwinPage() {
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FFirmenwagen_vor_Geba%25CC%2588ude_zz0m0s.avif&w=750&q=75"
                   alt="Cleaning Service"
                   fill
+                  loading="lazy"
                   style={{
                     objectFit: "cover",
                   }}
