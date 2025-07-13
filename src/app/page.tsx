@@ -820,6 +820,9 @@ export default function CleanWinPage() {
       if (window.innerWidth >= 768) {
         setIsMobileMenuOpen(false);
         setIsMobileDropdownOpen(false);
+      } else {
+        setIsDesktopDropdownOpen(false);
+        setIsDesktopCtaDropdownOpen(false);
       }
     };
 
