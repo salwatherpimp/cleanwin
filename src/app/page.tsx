@@ -546,9 +546,9 @@ export default function CleanWinPage() {
         }
       }
 
-      /* Prevent content overlap */
+            /* Prevent content overlap */
       .content-below-header {
-        margin-top: 72px;
+        margin-top: 76px;
       }
 
       @media (min-width: 768px) {
