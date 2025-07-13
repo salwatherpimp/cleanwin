@@ -1055,6 +1055,7 @@ export default function CleanWinPage() {
           >
             {/* Services Dropdown */}
             <div
+              className="leistungen-dropdown"
               style={{ position: "relative" }}
               onMouseEnter={() => setIsDesktopDropdownOpen(true)}
               onMouseLeave={() => setIsDesktopDropdownOpen(false)}
