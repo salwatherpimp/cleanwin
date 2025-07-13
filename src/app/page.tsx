@@ -768,31 +768,51 @@ export default function CleanWinPage() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Handle mobile menu outside clicks and escape key
+  // Handle mobile menu and dropdown outside clicks and escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setIsMobileMenuOpen(false);
         setIsDesktopDropdownOpen(false);
+        setIsMobileDropdownOpen(false);
+      }
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Element;
+
+      // Close dropdowns if clicking outside
+      if (!target.closest(".dropdown-container")) {
+        setIsDesktopDropdownOpen(false);
+        setIsMobileDropdownOpen(false);
+      }
+
+      // Close mobile menu if clicking outside
+      if (
+        !target.closest(".mobile-menu-container") &&
+        !target.closest(".hamburger-button")
+      ) {
+        setIsMobileMenuOpen(false);
       }
     };
 
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setIsMobileMenuOpen(false);
+        setIsMobileDropdownOpen(false);
       }
     };
 
-    if (isMobileMenuOpen) {
-      document.addEventListener("keydown", handleEscape);
-      window.addEventListener("resize", handleResize);
-    }
+    document.addEventListener("keydown", handleEscape);
+    document.addEventListener("click", handleClickOutside);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("click", handleClickOutside);
       window.removeEventListener("resize", handleResize);
     };
-  }, [isMobileMenuOpen]);
+  }, []);
 
   const originalTestimonials = [
     {
@@ -1483,7 +1503,7 @@ export default function CleanWinPage() {
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
             }}
           >
-            Ihr Reinigungsservice in Winterthur für Präzision, Sauberkeit &
+            Ihr Reinigungsservice in Winterthur für Pr��zision, Sauberkeit &
             Begeisterung
           </h1>
 
