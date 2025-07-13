@@ -1504,7 +1504,12 @@ export default function CleanWinPage() {
 
           {/* Hamburger Menu */}
           <div
-            style={{ flex: "0 0 auto", display: "flex", alignItems: "center" }}
+            style={{
+              flex: "0 0 auto",
+              display: "flex",
+              alignItems: "center",
+              marginRight: "0px",
+            }}
           >
             <button
               className="hamburger-button"
