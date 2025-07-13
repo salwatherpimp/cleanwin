@@ -1617,6 +1617,20 @@ export default function CleanWinPage() {
             >
               Baureinigung
             </a>
+            <a
+              href="https://cleanwin.vercel.app/ueber-uns"
+              className="mobile-nav-item"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Über uns
+            </a>
+            <a
+              href="https://cleanwin.vercel.app/referenzen"
+              className="mobile-nav-item"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Referenzen
+            </a>
           </div>
 
           {/* Weitere Seiten Section */}
