@@ -1760,7 +1760,7 @@ export default function CleanWinPage() {
               color: "rgba(255, 255, 255, 0.95)",
             }}
           >
-            Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere R��ume,
+            Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere Räume,
             Fassaden und mehr.
           </p>
 
