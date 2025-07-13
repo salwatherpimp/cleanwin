@@ -309,13 +309,14 @@ export default function CleanwinPage() {
           transition: all 0.3s ease;
         }
 
-        .accordion-header {
+                .accordion-header {
           display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 16px;
           cursor: pointer;
           user-select: none;
+          min-height: 72px;
         }
 
         .accordion-content {
