@@ -607,6 +607,7 @@ export default function WhyChooseCleanwinSection() {
                     lineHeight: "22px",
                     fontWeight: "600",
                     margin: 0,
+                    whiteSpace: "nowrap",
                   }}
                 >
                   Nachhaltig & schonend
