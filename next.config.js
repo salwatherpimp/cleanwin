@@ -17,8 +17,6 @@ const nextConfig = {
     // Remove unused code in production
     removeConsole: process.env.NODE_ENV === "production",
   },
-  // Optimize for modern browsers
-  transpilePackages: [],
   async headers() {
     return [
       {
