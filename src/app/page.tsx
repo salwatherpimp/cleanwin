@@ -44,8 +44,9 @@ export default function CleanwinPage() {
         .grid-mobile-logos { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
         .logo-container-mobile { width: 80px !important; height: 40px !important; }
         .services-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
-        .service-card-title { font-size: 18px !important; }
+                .service-card-title { font-size: 18px !important; }
         .service-card-price { font-size: 12px !important; padding: 6px 10px !important; }
+        .feature-card-title { font-size: 16px !important; }
       }
             .responsive-container {
         padding-left: 16px;
