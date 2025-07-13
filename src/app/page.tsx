@@ -17,8 +17,8 @@ export default function CleanWinPage() {
   const mobileStyles = `
     <style>
       @media (max-width: 767px) {
-        .hero-mobile { height: 400px !important; min-height: 350px !important; }
-        .hero-content-mobile { padding: 60px 16px 24px !important; }
+                .hero-mobile { min-height: 500px !important; height: auto !important; }
+        .hero-content-mobile { padding: 60px 16px 40px !important; }
         .hero-title-mobile { font-size: 28px !important; line-height: 36px !important; }
         .hero-subtitle-mobile { font-size: 16px !important; line-height: 24px !important; }
         .logo-mobile { width: 160px !important; height: 45px !important; }
@@ -1413,12 +1413,13 @@ export default function CleanWinPage() {
         className="hero-mobile"
         style={{
           position: "relative",
-          height: "480px",
-          minHeight: "420px",
+          minHeight: "600px",
+          height: "auto",
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
           paddingTop: "76px",
+          paddingBottom: "40px",
         }}
       >
         {/* Background Image */}
@@ -1452,7 +1453,7 @@ export default function CleanWinPage() {
             zIndex: 10,
             maxWidth: "1280px",
             margin: "0 auto",
-            padding: "80px 16px 24px",
+            padding: "80px 16px 40px",
             textAlign: "center",
             color: "white",
           }}
