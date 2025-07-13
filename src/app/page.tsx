@@ -535,9 +535,9 @@ export default function CleanWinPage() {
         }
       }
 
-            /* Header Height Compensation */
+                  /* Header Height Compensation */
       .hero-mobile {
-        padding-top: 72px !important;
+        padding-top: 76px !important;
       }
 
       @media (min-width: 768px) {
