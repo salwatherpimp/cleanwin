@@ -203,7 +203,7 @@ export default function CleanWinPage() {
 
       .usp-scroll-track {
         display: flex;
-        animation: uspScroll 45s linear infinite;
+                animation: uspScroll 45s linear infinite;
         width: fit-content;
         gap: 16px;
       }
