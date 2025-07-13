@@ -609,7 +609,7 @@ export default function CleanWinPage() {
         transform: translateY(0);
       }
 
-      .dropdown-item {
+            .dropdown-item {
         display: block;
         padding: 12px 20px;
         color: #374151;
@@ -617,12 +617,14 @@ export default function CleanWinPage() {
         font-size: 15px;
         font-weight: 500;
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-        transition: all 0.15s ease;
+        transition: all 0.2s ease;
+        position: relative;
       }
 
       .dropdown-item:hover {
         background-color: #f8f9fa;
         color: #10a0a4;
+        transform: none;
       }
 
             .dropdown-item:last-child {
