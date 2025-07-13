@@ -759,7 +759,7 @@ export default function CleanwinPage() {
         color: #6b7280;
       }
 
-            .mobile-nav-item:hover {
+                        .mobile-nav-item:hover {
         color: #10a0a4;
         background-color: rgba(16, 160, 164, 0.05);
         border-radius: 8px;
@@ -767,6 +767,22 @@ export default function CleanwinPage() {
 
       .mobile-nav-item:active {
         background-color: rgba(16, 160, 164, 0.1);
+      }
+
+      .mobile-nav-main-title:hover {
+        color: #10a0a4;
+        background-color: rgba(16, 160, 164, 0.05);
+        border-radius: 8px;
+      }
+
+      .mobile-nav-main-title:active {
+        background-color: rgba(16, 160, 164, 0.1);
+      }
+
+      .mobile-nav-subitem:hover {
+        color: #10a0a4;
+        background-color: rgba(16, 160, 164, 0.03);
+        border-radius: 6px;
       }
 
       .mobile-nav-cta {
