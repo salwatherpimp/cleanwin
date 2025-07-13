@@ -1222,7 +1222,7 @@ export default function CleanWinPage() {
                 </svg>
               </button>
 
-              {isDesktopDropdownOpen && (
+              {isDesktopCtaDropdownOpen && (
                 <div
                   style={{
                     position: "absolute",
