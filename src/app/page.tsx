@@ -1166,12 +1166,13 @@ export default function CleanWinPage() {
               <Image
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.png"
                 alt="CleanWin Logo"
-                width={140}
-                height={39}
+                width={160}
+                height={45}
                 className="mobile-logo"
                 style={{
-                  width: "140px",
-                  height: "39px",
+                  width: "160px",
+                  height: "45px",
+                  filter: "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1))",
                 }}
               />
             </a>
