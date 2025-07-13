@@ -1696,8 +1696,7 @@ export default function CleanWinPage() {
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
             }}
           >
-            Ihr Reinigungsservice in Winterthur für Präzision, Sauberkeit &
-            Begeisterung
+            Professionelle Reinigung in Winterthur & Region
           </h1>
 
           <p
