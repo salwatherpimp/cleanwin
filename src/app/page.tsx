@@ -808,16 +808,6 @@ export default function CleanwinPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
   // Handle mobile menu and dropdown outside clicks and escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
