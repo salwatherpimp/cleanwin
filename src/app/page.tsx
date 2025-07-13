@@ -1154,6 +1154,7 @@ export default function CleanWinPage() {
               style={{ position: "relative" }}
             >
               <button
+                className="cta-button cta-button-primary"
                 onClick={() => setIsDesktopDropdownOpen(!isDesktopDropdownOpen)}
                 style={{
                   display: "flex",
@@ -1167,7 +1168,7 @@ export default function CleanWinPage() {
                   fontWeight: "500",
                   border: "none",
                   cursor: "pointer",
-                  transition: "background-color 0.2s",
+                  transition: "all 0.3s ease-in-out",
                 }}
               >
                 <svg
@@ -1338,7 +1339,7 @@ export default function CleanWinPage() {
             >
               <button
                 onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
-                className="mobile-cta-btn"
+                className="mobile-cta-btn cta-button cta-button-primary"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -1351,7 +1352,7 @@ export default function CleanWinPage() {
                   fontWeight: "600",
                   border: "1px solid rgba(255, 255, 255, 0.15)",
                   cursor: "pointer",
-                  transition: "all 0.2s ease",
+                  transition: "all 0.3s ease-in-out",
                   whiteSpace: "nowrap",
                   minHeight: "40px",
                   boxShadow: "0 1px 6px rgba(16, 160, 164, 0.25)",
