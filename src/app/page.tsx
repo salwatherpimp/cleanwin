@@ -737,30 +737,15 @@ export default function CleanwinPage() {
         opacity: 0.6;
       }
 
-                        .mobile-nav-item:hover {
+                              .mobile-nav-item:hover {
         color: #10a0a4;
         background-color: rgba(16, 160, 164, 0.05);
-        border-radius: 8px;
+        transform: translateX(2px);
       }
 
       .mobile-nav-item:active {
         background-color: rgba(16, 160, 164, 0.1);
-      }
-
-      .mobile-nav-main-title:hover {
-        color: #10a0a4;
-        background-color: rgba(16, 160, 164, 0.05);
-        border-radius: 8px;
-      }
-
-      .mobile-nav-main-title:active {
-        background-color: rgba(16, 160, 164, 0.1);
-      }
-
-      .mobile-nav-subitem:hover {
-        color: #10a0a4;
-        background-color: rgba(16, 160, 164, 0.03);
-        border-radius: 6px;
+        transform: translateX(0);
       }
 
       .mobile-nav-cta {
