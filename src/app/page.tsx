@@ -1613,69 +1613,68 @@ export default function CleanwinPage() {
         <div
           className={`mobile-nav-menu mobile-menu-container ${isMobileMenuOpen ? "open" : ""} md:hidden`}
         >
-          {/* Leistungen Section */}
-          <div className="mobile-nav-section">
+          <div className="mobile-nav-content">
+            {/* Leistungen Section Header */}
             <div className="mobile-nav-title">Leistungen</div>
+
+            {/* Service Items */}
             <a
               href="/fensterreinigung"
-              className="mobile-nav-item mobile-nav-subitem"
+              className="mobile-nav-item"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Fensterreinigung
             </a>
             <a
               href="/unterhaltsreinigung"
-              className="mobile-nav-item mobile-nav-subitem"
+              className="mobile-nav-item"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Unterhaltsreinigung
             </a>
             <a
               href="/solarpanel-reinigen"
-              className="mobile-nav-item mobile-nav-subitem"
+              className="mobile-nav-item"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Solarpanel reinigen
             </a>
             <a
               href="/fassadenreinigung"
-              className="mobile-nav-item mobile-nav-subitem"
+              className="mobile-nav-item"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Fassadenreinigung
             </a>
             <a
               href="/umzugsreinigung"
-              className="mobile-nav-item mobile-nav-subitem"
+              className="mobile-nav-item"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Umzugsreinigung
             </a>
             <a
               href="/baureinigung"
-              className="mobile-nav-item mobile-nav-subitem"
+              className="mobile-nav-item"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Baureinigung
             </a>
-          </div>
 
-          {/* Über uns - Main Category */}
-          <div className="mobile-nav-section mobile-nav-main-section">
+            {/* Divider */}
+            <div className="mobile-nav-divider"></div>
+
+            {/* Additional Pages */}
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
-              className="mobile-nav-title mobile-nav-main-title"
+              className="mobile-nav-item"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Über uns
             </a>
-          </div>
-
-          {/* Referenzen - Main Category */}
-          <div className="mobile-nav-section">
             <a
               href="https://cleanwin.vercel.app/referenzen"
-              className="mobile-nav-title mobile-nav-main-title"
+              className="mobile-nav-item"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Referenzen
