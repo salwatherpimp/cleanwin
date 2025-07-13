@@ -1372,7 +1372,11 @@ export default function CleanWinPage() {
                   whiteSpace: "nowrap",
                   minHeight: "44px",
                   overflow: "visible",
+                  overflowX: "visible",
+                  overflowY: "visible",
                   width: "auto",
+                  maxWidth: "none",
+                  position: "relative",
                   boxShadow: "0 1px 6px rgba(16, 160, 164, 0.25)",
                 }}
               >
