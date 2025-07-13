@@ -1349,7 +1349,7 @@ export default function CleanWinPage() {
           >
             <div
               className="dropdown-container"
-              style={{ position: "relative" }}
+              style={{ position: "relative", overflow: "visible" }}
             >
               <button
                 onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
