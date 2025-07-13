@@ -1186,8 +1186,9 @@ export default function CleanWinPage() {
             style={{
               flex: "1 1 auto",
               display: "flex",
-              justifyContent: "center",
-              margin: "0 8px",
+              justifyContent: "flex-end",
+              alignItems: "center",
+              margin: "0 12px",
               minWidth: "0",
             }}
           >
