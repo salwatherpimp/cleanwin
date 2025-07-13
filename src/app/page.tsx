@@ -6,7 +6,6 @@ import ClientLogosSection from "../components/ClientLogosSection";
 import WhyChooseCleanwinSection from "../components/WhyChooseCleanwinSection";
 import CustomerTestimonialsSection from "../components/CustomerTestimonialsSection";
 import CallToActionSection from "../components/CallToActionSection";
-import "./styles.css";
 
 export default function CleanwinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -903,6 +902,7 @@ export default function CleanwinPage() {
         overflow: "hidden",
       }}
     >
+      <div dangerouslySetInnerHTML={{ __html: mobileStyles }} />
       {/* Header Navigation */}
       <header
         style={{
