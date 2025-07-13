@@ -7,6 +7,20 @@ export default function CleanWinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDesktopDropdownOpen, setIsDesktopDropdownOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+
+  // Business hours logic (Monday to Friday, 08:00-17:00 CET)
+  const isBusinessHours = () => {
+    const now = new Date();
+    const cetTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "Europe/Zurich" }),
+    );
+    const day = cetTime.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+    const hour = cetTime.getHours();
+
+    // Monday (1) to Friday (5), 8 AM to 5 PM
+    return day >= 1 && day <= 5 && hour >= 8 && hour < 17;
+  };
 
   const [expandedAccordion, setExpandedAccordion] = useState<number | null>(
     null,
