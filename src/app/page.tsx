@@ -3673,6 +3673,7 @@ export default function CleanwinPage() {
                     fontWeight: "600",
                     flexGrow: 1,
                   }}
+                  className="feature-card-title"
                 >
                   Regional & persönlich
                 </h3>
@@ -3754,6 +3755,7 @@ export default function CleanwinPage() {
                     fontWeight: "600",
                     flexGrow: 1,
                   }}
+                  className="feature-card-title"
                 >
                   Sicher & versichert
                 </h3>
@@ -3835,6 +3837,7 @@ export default function CleanwinPage() {
                     fontWeight: "600",
                     flexGrow: 1,
                   }}
+                  className="feature-card-title"
                 >
                   Nachhaltig & schonend
                 </h3>
@@ -3917,6 +3920,7 @@ export default function CleanwinPage() {
                     fontWeight: "600",
                     flexGrow: 1,
                   }}
+                  className="feature-card-title"
                 >
                   Flexibel & zuverlässig
                 </h3>
