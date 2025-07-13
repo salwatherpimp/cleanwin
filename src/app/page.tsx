@@ -2821,6 +2821,7 @@ export default function CleanwinPage() {
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_A_stack_of_cardboard_moving_boxes_with_blankets_and_aca55475-72f5-47ce-bd35-23f8455eeeb3_1_xumd8v.avif"
                 alt="Umzugsreinigung"
                 fill
+                loading="lazy"
                 style={{
                   objectFit: "cover",
                   transition: "transform 0.3s ease",
