@@ -710,14 +710,33 @@ export default function CleanwinPage() {
         border-bottom: none;
       }
 
-      .mobile-nav-title {
+            .mobile-nav-title {
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 700;
         color: #111827;
         margin-bottom: 16px;
         padding-bottom: 8px;
         border-bottom: 2px solid #10a0a4;
         display: inline-block;
+        text-decoration: none;
+      }
+
+      .mobile-nav-main-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #111827;
+        padding: 12px 0;
+        border-bottom: 2px solid #10a0a4;
+        display: block;
+        text-decoration: none;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        transition: color 0.2s ease;
+      }
+
+      .mobile-nav-main-section {
+        margin-top: 24px;
       }
 
       .mobile-nav-item {
@@ -731,6 +750,13 @@ export default function CleanwinPage() {
         display: flex;
         align-items: center;
         transition: color 0.2s ease;
+      }
+
+      .mobile-nav-subitem {
+        padding-left: 24px;
+        margin-left: 8px;
+        font-size: 15px;
+        color: #6b7280;
       }
 
             .mobile-nav-item:hover {
