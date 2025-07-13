@@ -148,10 +148,22 @@ export default function CleanWinPage() {
         100% { transform: translateX(-50%); }
       }
 
-      /* Infinite USP scroll animation - matches logo speed */
+            /* Infinite USP scroll animation - matches logo speed */
       @keyframes uspScroll {
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
+      }
+
+      /* Dropdown fade in animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .logo-scroll-container {
