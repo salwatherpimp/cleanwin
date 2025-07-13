@@ -808,8 +808,6 @@ export default function CleanwinPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
