@@ -1174,9 +1174,11 @@ export default function CleanWinPage() {
                 className="mobile-logo"
                 style={{
                   width: "260px",
-                  height: "73px",
+                  height: "auto",
+                  maxHeight: "73px",
                   filter: "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15))",
-                  minHeight: "56px",
+                  objectFit: "contain",
+                  aspectRatio: "200/56",
                 }}
               />
             </a>
