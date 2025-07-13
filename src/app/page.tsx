@@ -3711,7 +3711,7 @@ export default function CleanWinPage() {
               </div>
               <p
                 style={{
-                  color: "#4b5563",
+                  color: "rgba(107, 114, 128, 1)",
                   fontSize: "13px",
                   lineHeight: "16px",
                   marginTop: "0px",
@@ -3792,7 +3792,7 @@ export default function CleanWinPage() {
               </div>
               <p
                 style={{
-                  color: "#4b5563",
+                  color: "rgba(107, 114, 128, 1)",
                   fontSize: "13px",
                   lineHeight: "16px",
                   marginTop: "0px",
@@ -3874,7 +3874,7 @@ export default function CleanWinPage() {
               </div>
               <p
                 style={{
-                  color: "#4b5563",
+                  color: "rgba(107, 114, 128, 1)",
                   fontSize: "13px",
                   lineHeight: "16px",
                   marginTop: "0px",
@@ -3958,7 +3958,7 @@ export default function CleanWinPage() {
               </div>
               <p
                 style={{
-                  color: "#4b5563",
+                  color: "rgba(107, 114, 128, 1)",
                   fontSize: "13px",
                   lineHeight: "16px",
                   marginTop: "0px",
