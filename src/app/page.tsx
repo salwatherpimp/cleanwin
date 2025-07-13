@@ -2601,6 +2601,7 @@ export default function CleanwinPage() {
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_a_professional_cleaning_person_wiping_an_office_des_ae82c6ac-ddf5-48e9-93d5-9ee8d062167c_3_xzzqja.avif"
                 alt="Unterhaltsreinigung"
                 fill
+                loading="lazy"
                 style={{
                   objectFit: "cover",
                   transition: "transform 0.3s ease",
