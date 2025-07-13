@@ -586,7 +586,7 @@ export default function CleanWinPage() {
       }
 
       /* Navigation Styles */
-      .desktop-dropdown {
+            .desktop-dropdown {
         position: absolute;
         top: 100%;
         left: 0;
@@ -599,6 +599,7 @@ export default function CleanWinPage() {
         visibility: hidden;
         transform: translateY(-8px);
         transition: all 0.2s ease-out;
+        overflow: hidden;
         z-index: 60;
       }
 
