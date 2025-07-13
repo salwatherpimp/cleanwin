@@ -1395,8 +1395,8 @@ export default function CleanWinPage() {
                 <span>Kontaktiere uns</span>
                 <svg
                   style={{
-                    width: "10px",
-                    height: "10px",
+                    width: "12px",
+                    height: "12px",
                     color: "white",
                     stroke: "white",
                     strokeWidth: "2px",
