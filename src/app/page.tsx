@@ -1211,14 +1211,15 @@ export default function CleanWinPage() {
             >
               <svg
                 style={{
-                  width: "14px",
-                  height: "14px",
+                  width: "16px",
+                  height: "16px",
                   color: "white",
                   stroke: "white",
                   strokeWidth: "2px",
                   strokeLinecap: "round",
                   strokeLinejoin: "round",
                   fill: "none",
+                  flexShrink: 0,
                 }}
                 viewBox="0 0 24 24"
               >
