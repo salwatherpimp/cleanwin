@@ -941,10 +941,13 @@ export default function CleanWinPage() {
           backdropFilter: isScrolled ? "none" : "blur(12px)",
           backgroundColor: isScrolled
             ? "rgba(255, 255, 255, 1)"
-            : "rgba(255, 255, 255, 0.25)",
+            : "rgba(255, 255, 255, 0.3)",
+          backgroundImage: isScrolled
+            ? "none"
+            : "linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.05) 100%)",
           borderBottom: isScrolled
             ? "1px solid rgba(0, 0, 0, 0.1)"
-            : "1px solid rgba(255, 255, 255, 0.2)",
+            : "1px solid rgba(255, 255, 255, 0.25)",
           boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
           transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
