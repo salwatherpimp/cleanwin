@@ -701,62 +701,40 @@ export default function CleanwinPage() {
         transform: translateY(0) scale(1);
       }
 
-      .mobile-nav-section {
-        padding: 24px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            .mobile-nav-content {
+        padding: 20px 24px;
       }
 
-      .mobile-nav-section:last-child {
-        border-bottom: none;
-      }
-
-            .mobile-nav-title {
+      .mobile-nav-title {
         font-size: 16px;
         font-weight: 700;
         color: #111827;
-        margin-bottom: 16px;
-        padding-bottom: 8px;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
         border-bottom: 2px solid #10a0a4;
         display: inline-block;
-        text-decoration: none;
-      }
-
-      .mobile-nav-main-title {
-        font-size: 16px;
-        font-weight: 700;
-        color: #111827;
-        padding: 12px 0;
-        border-bottom: 2px solid #10a0a4;
-        display: block;
-        text-decoration: none;
-        min-height: 48px;
-        display: flex;
-        align-items: center;
-        transition: color 0.2s ease;
-      }
-
-      .mobile-nav-main-section {
-        margin-top: 24px;
       }
 
       .mobile-nav-item {
-        display: block;
-        padding: 12px 0;
+        display: flex;
+        align-items: center;
+        padding: 10px 8px;
         color: #374151;
         text-decoration: none;
         font-size: 16px;
         font-weight: 500;
         min-height: 48px;
-        display: flex;
-        align-items: center;
-        transition: color 0.2s ease;
+        line-height: 1.4;
+        transition: all 0.2s ease;
+        border-radius: 6px;
+        margin: 2px 0;
       }
 
-      .mobile-nav-subitem {
-        padding-left: 24px;
-        margin-left: 8px;
-        font-size: 15px;
-        color: #6b7280;
+      .mobile-nav-divider {
+        height: 1px;
+        background-color: #e5e7eb;
+        margin: 16px 0;
+        opacity: 0.6;
       }
 
                         .mobile-nav-item:hover {
