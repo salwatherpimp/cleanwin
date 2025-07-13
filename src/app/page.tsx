@@ -4557,8 +4557,7 @@ export default function CleanWinPage() {
               style={{
                 fontSize: "28px",
                 fontWeight: "700",
-                marginBottom: "32px",
-                marginTop: "23.24px",
+                margin: "23px 0 32px -1px",
                 color: "white",
                 textShadow: "rgba(0, 0, 0, 0.5) 2px 2px 4px",
               }}
