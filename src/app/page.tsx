@@ -4110,7 +4110,7 @@ export default function CleanwinPage() {
                       margin: 0,
                     }}
                   >
-                    Sicher & versichert
+                    <p>Sicher & versichert</p>
                   </h3>
                 </div>
                 <svg
