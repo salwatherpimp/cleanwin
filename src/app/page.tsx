@@ -1576,56 +1576,64 @@ export default function CleanwinPage() {
             <div className="mobile-nav-title">Leistungen</div>
             <a
               href="/fensterreinigung"
-              className="mobile-nav-item"
+              className="mobile-nav-item mobile-nav-subitem"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Fensterreinigung
             </a>
             <a
               href="/unterhaltsreinigung"
-              className="mobile-nav-item"
+              className="mobile-nav-item mobile-nav-subitem"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Unterhaltsreinigung
             </a>
             <a
               href="/solarpanel-reinigen"
-              className="mobile-nav-item"
+              className="mobile-nav-item mobile-nav-subitem"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Solarpanel reinigen
             </a>
             <a
               href="/fassadenreinigung"
-              className="mobile-nav-item"
+              className="mobile-nav-item mobile-nav-subitem"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Fassadenreinigung
             </a>
             <a
               href="/umzugsreinigung"
-              className="mobile-nav-item"
+              className="mobile-nav-item mobile-nav-subitem"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Umzugsreinigung
             </a>
             <a
               href="/baureinigung"
-              className="mobile-nav-item"
+              className="mobile-nav-item mobile-nav-subitem"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Baureinigung
             </a>
+          </div>
+
+          {/* Über uns - Main Category */}
+          <div className="mobile-nav-section mobile-nav-main-section">
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
-              className="mobile-nav-item"
+              className="mobile-nav-title mobile-nav-main-title"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Über uns
             </a>
+          </div>
+
+          {/* Referenzen - Main Category */}
+          <div className="mobile-nav-section">
             <a
               href="https://cleanwin.vercel.app/referenzen"
-              className="mobile-nav-item"
+              className="mobile-nav-title mobile-nav-main-title"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Referenzen
