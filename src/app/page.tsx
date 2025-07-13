@@ -535,25 +535,25 @@ export default function CleanWinPage() {
         }
       }
 
-      /* Header Height Compensation */
+            /* Header Height Compensation */
       .hero-mobile {
-        padding-top: 64px !important;
+        padding-top: 72px !important;
       }
 
       @media (min-width: 768px) {
         .hero-mobile {
-          padding-top: 80px !important;
+          padding-top: 96px !important;
         }
       }
 
       /* Prevent content overlap */
       .content-below-header {
-        margin-top: 64px;
+        margin-top: 72px;
       }
 
       @media (min-width: 768px) {
         .content-below-header {
-          margin-top: 80px;
+          margin-top: 96px;
         }
       }
 
