@@ -1147,9 +1147,9 @@ export default function CleanWinPage() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            padding: "8px 12px",
+            padding: "12px 16px",
             position: "relative",
-            minHeight: "64px",
+            minHeight: "72px",
           }}
         >
           {/* Logo */}
