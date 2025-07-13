@@ -28,8 +28,6 @@ export default function CleanwinPage() {
     return day >= 1 && day <= 5 && hour >= 8 && hour < 17;
   };
 
-  const [currentTestimonial, setCurrentTestimonial] = useState(5); // Start in middle of array
-
   // Mobile responsive styles - only add what's needed for mobile without affecting desktop
   const mobileStyles = `
     <style>
@@ -876,115 +874,6 @@ export default function CleanwinPage() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  const originalTestimonials = [
-    {
-      id: 1,
-      name: "Jeanine Ganz",
-      initial: "J",
-      profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F6f632a458dcf44a9a8bf0888cf73689f",
-      text: "Sehr freundlicher, unkomplizierter und qualitativ einwandfreier Service. Die Endreinigung der Wohnung wurde ohne Beanstandung abgenommen...",
-    },
-    {
-      id: 2,
-      name: "Albert Radamonti",
-      initial: "A",
-      profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F7495596da4634fb98885d61c2489c58a",
-      text: "Super Service und einwandfreie Erledigung. Preis-Leistung ist top! Einfache Abwicklung, günstiger Preis und saubere Arbeit mit...",
-    },
-    {
-      id: 3,
-      name: "Gerussi Renato",
-      initial: "G",
-      profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2Fc7eddc79f0494af98960a9e24996b147",
-      text: "Die Endreinigung war perfekt, inklusive Wohnungsabgabe. Herr Polli arbeitet nicht nur effektiv, er ist auch ausgesprochen sympathisch. Der Preis...",
-    },
-    {
-      id: 4,
-      name: "Roter Kater",
-      initial: "R",
-      profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F2dcf6cd036c44e7587fbf13387356436",
-      text: "Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal.",
-    },
-    {
-      id: 5,
-      name: "Nikola C",
-      initial: "N",
-      profileImage:
-        "https://cdn.builder.io/api/v1/image/assets%2F18154339fbec4edebae6c80174487ba0%2F391098f2bc0e4a2d8aab72206e82879a",
-      text: "TOP ZUFRIEDENHEIT. Wir waren mit der Endreinigung sehr zufrieden - unsere erste offizielle Wohnungsübergabe und alles verlief dank der super Reinigung bestens...",
-    },
-  ];
-
-  // Create extended array for infinite loop effect
-  const testimonials = [
-    ...originalTestimonials,
-    ...originalTestimonials,
-    ...originalTestimonials,
-  ];
-
-  const totalOriginal = originalTestimonials.length;
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
-
-  const nextTestimonial = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentTestimonial((prev) => prev + 1);
-  };
-
-  const prevTestimonial = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentTestimonial((prev) => prev - 1);
-  };
-
-  // Handle infinite loop reset after animation completes
-  useEffect(() => {
-    if (isTransitioning) {
-      const timeout = setTimeout(() => {
-        if (currentTestimonial >= totalOriginal * 2) {
-          setCurrentTestimonial(totalOriginal);
-        } else if (currentTestimonial < totalOriginal) {
-          setCurrentTestimonial(totalOriginal + currentTestimonial);
-        }
-        setIsTransitioning(false);
-      }, 500); // Match CSS transition duration
-
-      return () => clearTimeout(timeout);
-    }
-  }, [currentTestimonial, isTransitioning, totalOriginal]);
-
-  // Touch/swipe handlers
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchEnd(0); // Reset touch end
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-
-    const distance = touchStart - touchEnd;
-    const minSwipeDistance = isMobile ? 30 : 50; // Shorter distance for mobile
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
-
-    if (isLeftSwipe) {
-      nextTestimonial();
-    }
-    if (isRightSwipe) {
-      prevTestimonial();
-    }
-  };
 
   // Smooth scroll to services section
   useEffect(() => {
