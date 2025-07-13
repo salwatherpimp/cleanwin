@@ -1314,7 +1314,12 @@ export default function CleanWinPage() {
         >
           {/* Logo */}
           <div
-            style={{ flex: "0 0 auto", display: "flex", alignItems: "center" }}
+            style={{
+              flex: "0 0 auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
           >
             <a
               href="https://cleanwin.vercel.app/"
