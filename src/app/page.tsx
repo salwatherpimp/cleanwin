@@ -520,10 +520,11 @@ export default function CleanWinPage() {
           height: 45px !important;
         }
 
-        .mobile-cta-btn {
+                .mobile-cta-btn {
           font-size: 12px !important;
-          padding: 7px 12px !important;
-          gap: 4px !important;
+          padding: 8px 14px !important;
+          gap: 6px !important;
+          overflow: visible !important;
         }
 
         .mobile-nav-container {
