@@ -1358,10 +1358,10 @@ export default function CleanWinPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  gap: "6px",
+                  gap: "8px",
                   backgroundColor: "#10a0a4",
                   color: "white",
-                  padding: "8px 14px",
+                  padding: "10px 16px",
                   borderRadius: "20px",
                   fontSize: "13px",
                   fontWeight: "600",
@@ -1369,14 +1369,16 @@ export default function CleanWinPage() {
                   cursor: "pointer",
                   transition: "all 0.3s ease-in-out",
                   whiteSpace: "nowrap",
-                  minHeight: "40px",
+                  minHeight: "44px",
+                  overflow: "visible",
+                  width: "auto",
                   boxShadow: "0 1px 6px rgba(16, 160, 164, 0.25)",
                 }}
               >
                 <svg
                   style={{
-                    width: "14px",
-                    height: "14px",
+                    width: "16px",
+                    height: "16px",
                     color: "white",
                     stroke: "white",
                     strokeWidth: "2px",
@@ -1384,6 +1386,7 @@ export default function CleanWinPage() {
                     strokeLinejoin: "round",
                     fill: "none",
                     flexShrink: 0,
+                    display: "block",
                   }}
                   viewBox="0 0 24 24"
                 >
