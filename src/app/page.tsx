@@ -1211,8 +1211,8 @@ export default function CleanWinPage() {
             >
               <svg
                 style={{
-                  width: "16px",
-                  height: "16px",
+                  width: "14px",
+                  height: "14px",
                   color: "white",
                   stroke: "white",
                   strokeWidth: "2px",
