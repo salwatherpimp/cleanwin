@@ -1634,8 +1634,11 @@ export default function CleanwinPage() {
               color: "rgba(255, 255, 255, 0.95)",
             }}
           >
-            Cleanwin steht für Qualität, faire Preise und echte Nähe. Keine
-            Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
+            <p>
+              Unsere Reinigungsdienstleistung steht für Qualität, faire Preise
+              und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit –
+              für Privat &amp; Gewerbe.
+            </p>
           </p>
 
           {/* Reviews Badge */}
