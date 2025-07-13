@@ -1211,7 +1211,7 @@ export default function CleanWinPage() {
                     strokeLinecap: "round",
                     strokeLinejoin: "round",
                     fill: "none",
-                    transform: isDesktopDropdownOpen
+                    transform: isDesktopCtaDropdownOpen
                       ? "rotate(180deg)"
                       : "rotate(0deg)",
                     transition: "transform 0.2s ease-in-out",
