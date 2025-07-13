@@ -903,7 +903,6 @@ export default function CleanwinPage() {
         overflow: "hidden",
       }}
     >
-      <div dangerouslySetInnerHTML={{ __html: mobileStyles }} />
       {/* Header Navigation */}
       <header
         style={{
