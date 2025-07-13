@@ -480,28 +480,28 @@ export default function CleanWinPage() {
       }
 
                   /* Navigation Responsive Styles */
-      @media (max-width: 767px) {
+            @media (max-width: 767px) {
         .hidden.md\\:flex {
           display: none !important;
         }
+      }
 
+      /* Enhanced mobile navigation styles */
+      @media (max-width: 360px) {
         .mobile-logo {
-          width: 120px !important;
-          height: 34px !important;
+          width: 140px !important;
+          height: 39px !important;
         }
 
         .mobile-cta-btn {
-          font-size: 11px !important;
-          padding: 5px 10px !important;
-          max-width: 120px !important;
+          font-size: 13px !important;
+          padding: 8px 14px !important;
+          gap: 4px !important;
         }
 
-        .mobile-cta-btn span {
-          display: none;
-        }
-
-        .mobile-cta-btn::after {
-          content: "Kontakt";
+        .mobile-nav-container {
+          padding: 10px 12px !important;
+          min-height: 68px !important;
         }
       }
 
