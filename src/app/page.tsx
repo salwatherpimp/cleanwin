@@ -1371,26 +1371,30 @@ export default function CleanWinPage() {
                   boxShadow: "0 1px 6px rgba(16, 160, 164, 0.25)",
                 }}
               >
-                <svg
-                  style={{
-                    width: "14px",
-                    height: "14px",
-                    color: "white",
-                    stroke: "white",
-                    strokeWidth: "2px",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    fill: "none",
-                    flexShrink: 0,
-                  }}
-                  viewBox="0 0 24 24"
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "5px" }}
                 >
-                  <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
-                  <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
-                  <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
-                  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
-                </svg>
-                <span>Kontaktiere uns</span>
+                  <svg
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      color: "white",
+                      stroke: "white",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                      flexShrink: 0,
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
+                    <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
+                    <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
+                    <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
+                  </svg>
+                  <span>Kontaktiere uns</span>
+                </div>
                 <svg
                   style={{
                     width: "10px",
