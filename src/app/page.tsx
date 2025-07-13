@@ -1164,7 +1164,9 @@ export default function CleanWinPage() {
             >
               <button
                 className="cta-button cta-button-primary"
-                onClick={() => setIsDesktopDropdownOpen(!isDesktopDropdownOpen)}
+                onClick={() =>
+                  setIsDesktopCtaDropdownOpen(!isDesktopCtaDropdownOpen)
+                }
                 style={{
                   display: "flex",
                   alignItems: "center",
