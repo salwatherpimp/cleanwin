@@ -763,7 +763,7 @@ export default function CleanwinPage() {
         opacity: 0.6;
       }
 
-                              .mobile-nav-item:hover {
+                                    .mobile-nav-item:hover {
         color: #10a0a4;
         background-color: rgba(16, 160, 164, 0.05);
         transform: translateX(2px);
@@ -772,6 +772,11 @@ export default function CleanwinPage() {
       .mobile-nav-item:active {
         background-color: rgba(16, 160, 164, 0.1);
         transform: translateX(0);
+      }
+
+      .mobile-nav-subitem:hover {
+        color: #10a0a4;
+        background-color: rgba(16, 160, 164, 0.03);
       }
 
       .mobile-nav-cta {
