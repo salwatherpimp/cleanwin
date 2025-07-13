@@ -12,17 +12,13 @@ const nextConfig = {
       },
     ],
   },
-  // Optimize for modern browsers
-  experimental: {
-    legacyBrowsers: false,
-    browsersListForSwc: true,
-  },
   // Configure SWC compiler for modern JavaScript
-  swcMinify: true,
   compiler: {
-    // Remove unused code
+    // Remove unused code in production
     removeConsole: process.env.NODE_ENV === "production",
   },
+  // Optimize for modern browsers
+  transpilePackages: [],
   async headers() {
     return [
       {
