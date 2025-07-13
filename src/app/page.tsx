@@ -1242,14 +1242,15 @@ export default function CleanWinPage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                width: "40px",
-                height: "40px",
-                backgroundColor: "transparent",
-                border: "none",
+                width: "44px",
+                height: "44px",
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
                 color: isScrolled ? "#374151" : "white",
                 cursor: "pointer",
-                transition: "color 0.2s",
-                borderRadius: "8px",
+                transition: "all 0.2s ease",
+                borderRadius: "12px",
+                backdropFilter: "blur(8px)",
               }}
             >
               <svg
