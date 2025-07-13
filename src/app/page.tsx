@@ -1528,7 +1528,7 @@ export default function CleanWinPage() {
 
         {/* Mobile Menu */}
         <div
-          className={`mobile-nav-menu ${isMobileMenuOpen ? "open" : ""} md:hidden`}
+          className={`mobile-nav-menu mobile-menu-container ${isMobileMenuOpen ? "open" : ""} md:hidden`}
         >
           {/* Leistungen Section */}
           <div className="mobile-nav-section">
