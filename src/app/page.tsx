@@ -1373,7 +1373,7 @@ export default function CleanWinPage() {
                   gap: "6px",
                   backgroundColor: "#10a0a4",
                   color: "white",
-                  padding: "8px 14px 8px 16px",
+                  padding: "8px 14px 8px 20px",
                   borderRadius: "20px",
                   fontSize: "13px",
                   fontWeight: "600",
