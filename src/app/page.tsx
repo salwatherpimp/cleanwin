@@ -1137,42 +1137,135 @@ export default function CleanWinPage() {
               Referenzen
             </a>
 
-            <a
-              href="#contact"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                backgroundColor: "#10a0a4",
-                color: "white",
-                padding: "12px 16px",
-                borderRadius: "9999px",
-                fontSize: "14px",
-                fontWeight: "500",
-                textDecoration: "none",
-                transition: "background-color 0.2s",
-              }}
+            <div
+              className="dropdown-container"
+              style={{ position: "relative" }}
             >
-              <svg
+              <button
+                onClick={() => setIsDesktopDropdownOpen(!isDesktopDropdownOpen)}
                 style={{
-                  width: "16px",
-                  height: "16px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  backgroundColor: "#10a0a4",
                   color: "white",
-                  stroke: "white",
-                  strokeWidth: "2px",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  fill: "none",
+                  padding: "12px 16px",
+                  borderRadius: "9999px",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  border: "none",
+                  cursor: "pointer",
+                  transition: "background-color 0.2s",
                 }}
-                viewBox="0 0 24 24"
               >
-                <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
-                <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
-                <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
-                <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
-              </svg>
-              <span>Kontaktiere uns</span>
-            </a>
+                <svg
+                  style={{
+                    width: "16px",
+                    height: "16px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
+                  <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" />
+                  <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
+                  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
+                </svg>
+                <span>Kontaktiere uns</span>
+                <svg
+                  style={{
+                    width: "12px",
+                    height: "12px",
+                    color: "white",
+                    stroke: "white",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                    transform: isDesktopDropdownOpen
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                    transition: "transform 0.2s ease-in-out",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <polyline points="6,9 12,15 18,9" />
+                </svg>
+              </button>
+
+              {isDesktopDropdownOpen && (
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "100%",
+                    right: "0",
+                    marginTop: "8px",
+                    backgroundColor: "white",
+                    borderRadius: "12px",
+                    boxShadow:
+                      "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                    border: "1px solid rgba(0, 0, 0, 0.1)",
+                    overflow: "hidden",
+                    zIndex: 50,
+                    minWidth: "200px",
+                    animation: "fadeIn 0.2s ease-in-out",
+                  }}
+                >
+                  <a
+                    href="/kontakt"
+                    style={{
+                      display: "block",
+                      padding: "12px 16px",
+                      color: "#374151",
+                      textDecoration: "none",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      textAlign: "center",
+                      borderBottom: isBusinessHours()
+                        ? "1px solid #f3f4f6"
+                        : "none",
+                      transition: "background-color 0.2s",
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.backgroundColor = "#f9fafb";
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                    }}
+                  >
+                    Kontaktanfrage senden
+                  </a>
+                  {isBusinessHours() && (
+                    <a
+                      href="tel:+41525512424"
+                      style={{
+                        display: "block",
+                        padding: "12px 16px",
+                        color: "#374151",
+                        textDecoration: "none",
+                        fontSize: "14px",
+                        fontWeight: "500",
+                        textAlign: "center",
+                        transition: "background-color 0.2s",
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.backgroundColor = "#f9fafb";
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.backgroundColor = "transparent";
+                      }}
+                    >
+                      +41 52 551 24 24
+                    </a>
+                  )}
+                </div>
+              )}
+            </div>
           </nav>
         </div>
 
