@@ -7,6 +7,8 @@ export default function CleanWinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDesktopDropdownOpen, setIsDesktopDropdownOpen] = useState(false);
+  const [isDesktopCtaDropdownOpen, setIsDesktopCtaDropdownOpen] =
+    useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
   // Business hours logic (Monday to Friday, 08:00-17:00 CET)
