@@ -1429,6 +1429,7 @@ export default function CleanwinPage() {
             <button
               className="hamburger-button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
               style={{
                 display: "flex",
                 alignItems: "center",
