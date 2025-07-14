@@ -1578,6 +1578,7 @@ export default function CleanwinPage() {
           alt="Cleanwin Hero Background"
           fill
           priority
+          fetchPriority="high"
           style={{
             objectFit: "cover",
             objectPosition: "60% 50%",
