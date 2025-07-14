@@ -1062,9 +1062,10 @@ export default function CleanwinPage() {
                 fontSize: "16px",
                 padding: "8px 0",
                 textDecoration: "none",
-                textShadow: isScrolled
-                  ? "none"
-                  : "rgba(0, 0, 0, 0.3) 0px 1px 3px",
+                textShadow:
+                  isClient && isScrolled
+                    ? "none"
+                    : "rgba(0, 0, 0, 0.3) 0px 1px 3px",
                 transition: "color 0.2s",
               }}
             >
@@ -1080,9 +1081,10 @@ export default function CleanwinPage() {
                 fontSize: "16px",
                 padding: "8px 0",
                 textDecoration: "none",
-                textShadow: isScrolled
-                  ? "none"
-                  : "rgba(0, 0, 0, 0.3) 0px 1px 3px",
+                textShadow:
+                  isClient && isScrolled
+                    ? "none"
+                    : "rgba(0, 0, 0, 0.3) 0px 1px 3px",
                 transition: "color 0.2s",
               }}
             >
