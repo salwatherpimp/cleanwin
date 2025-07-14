@@ -1012,7 +1012,7 @@ export default function CleanwinPage() {
                     width: "16px",
                     height: "16px",
                     color: isClient && isScrolled ? "#374151" : "white",
-                    stroke: isScrolled ? "#374151" : "white",
+                    stroke: isClient && isScrolled ? "#374151" : "white",
                     strokeWidth: "2px",
                     strokeLinecap: "round",
                     strokeLinejoin: "round",
