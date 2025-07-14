@@ -999,7 +999,7 @@ export default function CleanwinPage() {
                   padding: "8px 0",
                   backgroundColor: "transparent",
                   border: "none",
-                  color: isScrolled ? "#374151" : "white",
+                  color: isClient && isScrolled ? "#374151" : "white",
                   fontWeight: "500",
                   fontSize: "16px",
                   cursor: "pointer",
@@ -1011,7 +1011,7 @@ export default function CleanwinPage() {
                   style={{
                     width: "16px",
                     height: "16px",
-                    color: isScrolled ? "#374151" : "white",
+                    color: isClient && isScrolled ? "#374151" : "white",
                     stroke: isScrolled ? "#374151" : "white",
                     strokeWidth: "2px",
                     strokeLinecap: "round",
@@ -1057,7 +1057,7 @@ export default function CleanwinPage() {
               href="https://cleanwin.vercel.app/ueber-uns"
               className="desktop-nav-item"
               style={{
-                color: isScrolled ? "#374151" : "white",
+                color: isClient && isScrolled ? "#374151" : "white",
                 fontWeight: "500",
                 fontSize: "16px",
                 padding: "8px 0",
@@ -1075,7 +1075,7 @@ export default function CleanwinPage() {
               href="https://cleanwin.vercel.app/referenzen"
               className="desktop-nav-item"
               style={{
-                color: isScrolled ? "#374151" : "white",
+                color: isClient && isScrolled ? "#374151" : "white",
                 fontWeight: "500",
                 fontSize: "16px",
                 padding: "8px 0",
@@ -1448,7 +1448,7 @@ export default function CleanwinPage() {
                 height: "42px",
                 backgroundColor: "rgba(255, 255, 255, 0.12)",
                 border: "1px solid rgba(255, 255, 255, 0.25)",
-                color: isScrolled ? "#374151" : "white",
+                color: isClient && isScrolled ? "#374151" : "white",
                 cursor: "pointer",
                 transition: "all 0.2s ease",
                 borderRadius: "10px",
