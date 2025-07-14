@@ -1268,7 +1268,6 @@ export default function CleanwinPage() {
                 alt="Cleanwin Logo"
                 width={200}
                 height={56}
-                priority
                 loading="eager"
                 className="mobile-logo"
                 style={{
