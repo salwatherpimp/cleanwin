@@ -1879,7 +1879,7 @@ export default function CleanwinPage() {
                     marginBottom: "4px",
                   }}
                 >
-                  Reinigung ab CHF 199.–
+                  Reinigung ab CHF 199.-
                 </div>
                 <div
                   style={{
@@ -2070,7 +2070,7 @@ export default function CleanwinPage() {
                     color: "#111827",
                   }}
                 >
-                  Reinigung ab CHF 199.–
+                  Reinigung ab CHF 199.-
                 </span>
               </div>
 
@@ -2195,7 +2195,7 @@ export default function CleanwinPage() {
                     color: "#111827",
                   }}
                 >
-                  Reinigung ab CHF 199.–
+                  Reinigung ab CHF 199.-
                 </span>
               </div>
 
@@ -2543,7 +2543,7 @@ export default function CleanwinPage() {
                   boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
                 }}
               >
-                Ab CHF 199.–
+                Ab CHF 199.-
               </div>
 
               {/* Service title with arrow */}
@@ -2653,7 +2653,7 @@ export default function CleanwinPage() {
                   boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
                 }}
               >
-                Ab CHF 199.–
+                Ab CHF 199.-
               </div>
 
               {/* Service title with arrow */}
