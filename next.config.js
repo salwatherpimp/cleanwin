@@ -11,6 +11,9 @@ const nextConfig = {
         hostname: "res.cloudinary.com",
       },
     ],
+    // Force consistent loading behavior
+    loader: "default",
+    dangerouslyAllowSVG: false,
   },
   // Configure SWC compiler for modern JavaScript
   compiler: {
