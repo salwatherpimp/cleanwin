@@ -2763,7 +2763,7 @@ export default function CleanwinPage() {
                   boxShadow: "rgba(0, 0, 0, 0.3) 0px 2px 8px",
                 }}
               >
-                Ab CHF 699.–
+                Ab CHF 699.-
               </div>
 
               {/* Service title with arrow */}
