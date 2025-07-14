@@ -971,6 +971,7 @@ export default function CleanwinPage() {
               width={200}
               height={56}
               priority
+              loading="eager"
               style={{
                 width: "200px",
                 height: "56px",
