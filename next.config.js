@@ -36,6 +36,26 @@ const nextConfig = {
           },
         ],
       },
+      // Cache policy for static assets
+      {
+        source: "/(.*)\\.(png|jpg|jpeg|gif|webp|avif|ico|svg|woff|woff2)$",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      // Cache policy for Next.js static files
+      {
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
     ];
   },
 };
