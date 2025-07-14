@@ -1205,7 +1205,7 @@ export default function CleanwinPage() {
                   >
                     Kontaktanfrage senden
                   </a>
-                  {isBusinessHours() && (
+                  {isClient && isBusinessTime && (
                     <a
                       href="tel:+41525512424"
                       style={{
@@ -1411,7 +1411,7 @@ export default function CleanwinPage() {
                   >
                     Kontaktanfrage senden
                   </a>
-                  {isBusinessHours() && (
+                  {isClient && isBusinessTime && (
                     <a
                       href="tel:+41525512424"
                       style={{
