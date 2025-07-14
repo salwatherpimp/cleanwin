@@ -10,6 +10,7 @@ import CallToActionSection from "../components/CallToActionSection";
 export default function CleanwinPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const [isDesktopDropdownOpen, setIsDesktopDropdownOpen] = useState(false);
   const [isDesktopCtaDropdownOpen, setIsDesktopCtaDropdownOpen] =
     useState(false);
