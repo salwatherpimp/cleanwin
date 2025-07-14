@@ -964,6 +964,7 @@ export default function CleanwinPage() {
               alt="Cleanwin Logo"
               width={200}
               height={56}
+              priority
               style={{
                 width: "200px",
                 height: "56px",
