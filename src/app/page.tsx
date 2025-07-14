@@ -950,7 +950,7 @@ export default function CleanwinPage() {
             }}
           >
             <Image
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
+              src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_112,c_fit,f_auto,q_85/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="Cleanwin Logo"
               width={200}
               height={56}
@@ -1244,7 +1244,7 @@ export default function CleanwinPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_112,c_fit,f_auto,q_85/v1752409362/cleanwin-logo-new_1_zflok6.png"
                 alt="Cleanwin Logo"
                 width={200}
                 height={56}
