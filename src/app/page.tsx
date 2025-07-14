@@ -801,10 +801,16 @@ export default function CleanwinPage() {
     `;
 
   useEffect(() => {
+    // Mark as client-side to prevent hydration mismatches
+    setIsClient(true);
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setIsScrolled(scrollTop > 50);
     };
+
+    // Check initial scroll position
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
