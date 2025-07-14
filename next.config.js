@@ -34,6 +34,10 @@ const nextConfig = {
             key: "Access-Control-Allow-Headers",
             value: "Content-Type, Authorization",
           },
+          {
+            key: "Cache-Control",
+            value: "no-cache, no-store, must-revalidate",
+          },
         ],
       },
       // Cache policy for static assets
