@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "../styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "CleanWin - Professional Cleaning Services",
+  title: "Cleanwin - Professional Cleaning Services",
   description:
     "Professional cleaning services in Winterthur with over 10 years of experience",
   robots: {
