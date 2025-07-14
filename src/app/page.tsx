@@ -1662,7 +1662,7 @@ export default function CleanwinPage() {
             }}
           >
             Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und
-            echte Nähe. Keine Schwarzarbeit und 100% Verlässlichkeit - für
+            echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für
             Privat &amp; Gewerbe.
           </p>
 
