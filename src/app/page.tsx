@@ -1270,6 +1270,7 @@ export default function CleanwinPage() {
                 width={200}
                 height={56}
                 priority
+                loading="eager"
                 className="mobile-logo"
                 style={{
                   height: "56px",
