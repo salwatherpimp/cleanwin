@@ -16,8 +16,11 @@ export default function CleanwinPage() {
     useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
+  // Business hours state - only calculated on client to prevent hydration mismatch
+  const [isBusinessTime, setIsBusinessTime] = useState(false);
+
   // Business hours logic (Monday to Friday, 08:00-17:00 CET)
-  const isBusinessHours = () => {
+  const checkBusinessHours = () => {
     const now = new Date();
     const cetTime = new Date(
       now.toLocaleString("en-US", { timeZone: "Europe/Zurich" }),
