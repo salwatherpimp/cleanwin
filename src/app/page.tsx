@@ -807,6 +807,9 @@ export default function CleanwinPage() {
     // Mark as client-side to prevent hydration mismatches
     setIsClient(true);
 
+    // Check business hours on client only
+    setIsBusinessTime(checkBusinessHours());
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setIsScrolled(scrollTop > 50);
