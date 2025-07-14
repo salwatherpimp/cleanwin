@@ -1190,9 +1190,10 @@ export default function CleanwinPage() {
                       fontSize: "14px",
                       fontWeight: "500",
                       textAlign: "center",
-                      borderBottom: isBusinessHours()
-                        ? "1px solid #f3f4f6"
-                        : "none",
+                      borderBottom:
+                        isClient && isBusinessTime
+                          ? "1px solid #f3f4f6"
+                          : "none",
                       transition: "background-color 0.2s",
                     }}
                     onMouseOver={(e) => {
@@ -1395,9 +1396,10 @@ export default function CleanwinPage() {
                       fontSize: "13px",
                       fontWeight: "500",
                       textAlign: "center",
-                      borderBottom: isBusinessHours()
-                        ? "1px solid #f3f4f6"
-                        : "none",
+                      borderBottom:
+                        isClient && isBusinessTime
+                          ? "1px solid #f3f4f6"
+                          : "none",
                       transition: "background-color 0.2s",
                     }}
                     onTouchStart={(e) => {
