@@ -811,8 +811,7 @@ export default function CleanWinPage() {
                 opacity: "0.7",
                 transition: "opacity 0.3s",
               }}
-                        />
-            </div>
+            />
           </div>
         </div>
       </section>
@@ -2918,16 +2917,10 @@ export default function CleanWinPage() {
           }
         }
 
-                        /* USP Mobile Auto-Scroll Animation */
+                /* USP Mobile Auto-Scroll Animation */
         @keyframes usp-mobile-scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(calc(-100% - 24px)); }
-        }
-
-        /* Logo Scroll Animation */
-        @keyframes scroll-logos {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
         }
 
         /* Navigation Button Hover Effects */
