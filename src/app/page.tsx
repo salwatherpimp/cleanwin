@@ -23,17 +23,22 @@ export default function CleanWinPage() {
             {/* Pill Navigation */}
       <PillNavigation />
 
-      {/* Hero Section */}
+            {/* Hero Section */}
       <section
         className="hero-mobile"
         style={{
           position: "relative",
+          width: "100vw",
           height: "480px",
           minHeight: "420px",
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
-                    paddingTop: "80px",
+          margin: "0",
+          padding: "0",
+          paddingTop: "80px",
+          marginLeft: "calc(-50vw + 50%)",
+          marginRight: "calc(-50vw + 50%)",
         }}
       >
         {/* Background Image */}
