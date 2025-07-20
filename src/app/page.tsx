@@ -518,7 +518,7 @@ export default function CleanWinPage() {
                 10 Jahren bieten wir umfassende Lösungen für Fensterreinigung,
                 Büroreinigung, Fassadenreinigung und Spezialreinigungen. Unser
                 erfahrenes Team arbeitet mit modernsten Techniken und
-                umweltfreundlichen Produkten, um h��chste Qualität und
+                umweltfreundlichen Produkten, um höchste Qualität und
                 Kundenzufriedenheit zu gewährleisten.
               </p>
               <a
@@ -820,7 +820,7 @@ export default function CleanWinPage() {
             >
               <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
                 <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1752095182/Glasreinigung_aussen_Flaach_ec1fre.avif"
+                                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_Close-up_of_a_hand_cleaning_a_glass_window_with_a_s_9d456c2b-edad-45fb-ad0d-a857626340ec_3_q2fskk.avif"
                   alt="Fensterreinigung"
                   fill
                   style={{
@@ -2579,7 +2579,7 @@ export default function CleanWinPage() {
             >
               © 2025 CleanWin. Alle Rechte vorbehalten.
               <br />
-              Gemacht mit ♥��� in Winterthur
+              Gemacht mit ♥️ in Winterthur
             </div>
             <a
               href="https://cleanwin.vercel.app/datenschutz"
