@@ -182,13 +182,7 @@ export default function PillNavigation() {
           </div>
           
           <div className="pill-nav-mobile-menu-nav">
-            <a
-              href="https://cleanwin.vercel.app/dienstleistungen"
-              className="pill-nav-mobile-menu-item"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Dienstleistungen
-            </a>
+            
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
               className="pill-nav-mobile-menu-item"
