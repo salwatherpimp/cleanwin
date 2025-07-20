@@ -1620,7 +1620,8 @@ export default function CleanWinPage() {
               Dafür steht Cleanwin
             </h2>
           </div>
-          <div
+                    <div
+            className="cleanwin-values-container"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(4, 1fr)",
