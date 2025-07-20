@@ -2688,8 +2688,39 @@ export default function CleanWinPage() {
             gap: 20px !important;
           }
 
-          .services-section h2 {
+                    .services-section h2 {
             font-size: 28px !important;
+          }
+
+          /* Review Carousel Responsive Rules */
+          .review-carousel-track {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 24px !important;
+            overflow: visible !important;
+          }
+
+          .review-card {
+            min-width: auto !important;
+          }
+
+          @media (max-width: 1023px) {
+            .review-carousel-track {
+              grid-template-columns: repeat(2, 1fr) !important;
+              gap: 20px !important;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .review-carousel-track {
+              grid-template-columns: 1fr !important;
+              gap: 16px !important;
+            }
+          }
+
+          /* Hide scrollbar */
+          .review-carousel-track::-webkit-scrollbar {
+            display: none;
           }
         }
       `}</style>
