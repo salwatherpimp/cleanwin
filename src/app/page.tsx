@@ -1144,9 +1144,9 @@ export default function CleanWinPage() {
               </div>
             </a>
 
-            {/* Weitere Dienstleistungen */}
+                        {/* Solarpanel reinigen */}
             <a
-              href="https://cleanwin.vercel.app/leistungen/weitere-dienstleistungen"
+              href="https://cleanwin.vercel.app/leistungen/solarpanel-reinigen"
               style={{
                 backgroundColor: "white",
                 borderRadius: "8px",
