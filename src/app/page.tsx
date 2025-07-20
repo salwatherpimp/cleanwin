@@ -2909,7 +2909,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "                                    &quot;Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal.&quot;"
+                  "                                                      &quot;Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal.&quot;"
                 </div>
 
                 {/* Author Name */}
