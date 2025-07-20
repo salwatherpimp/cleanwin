@@ -5,6 +5,12 @@ import { useEffect, useState } from "react";
 import PillNavigation from "../components/PillNavigation";
 
 export default function CleanWinPage() {
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+
+  const handleCardClick = (cardIndex: number) => {
+    setExpandedCard(expandedCard === cardIndex ? null : cardIndex);
+  };
+
     useEffect(() => {
     // Carousel navigation functionality
     const carouselTrack = document.getElementById('carousel-track');
