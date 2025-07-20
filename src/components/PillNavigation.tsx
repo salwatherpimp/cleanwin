@@ -433,20 +433,25 @@ export default function PillNavigation() {
           position: relative;
         }
 
-        .pill-nav-cta-mobile {
+                .pill-nav-cta-mobile {
           display: flex;
           align-items: center;
           gap: 6px;
           background: #0DA6A6;
           color: white;
           border: none;
-          padding: 12px 18px;
+          padding: 14px 20px;
           border-radius: 20px;
           font-weight: 600;
           font-size: 14px;
           cursor: pointer;
           transition: all 0.2s ease;
           white-space: nowrap;
+          min-height: 44px;
+        }
+
+        .pill-nav-cta-mobile:hover {
+          background: #0b8d8d;
         }
 
         .pill-nav-cta-dropdown-mobile {
