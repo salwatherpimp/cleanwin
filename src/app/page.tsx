@@ -2410,8 +2410,8 @@ export default function CleanWinPage() {
                 margin: "0 auto",
                 lineHeight: "1.6",
               }}
-            >
-              Überzeugen Sie sich von der Qualität unserer Arbeit anhand echter Kundenbewertungen
+                        >
+              Über 500 zufriedene Kunden und mehr als 100 Google-Bewertungen mit einem Durchschnitt von 4,7 Sternen – überzeugen auch Sie sich von der Qualität unserer Arbeit und kontaktieren Sie uns noch heute unverbindlich.
             </p>
           </div>
 
