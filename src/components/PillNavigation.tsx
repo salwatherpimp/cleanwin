@@ -62,9 +62,28 @@ export default function PillNavigation() {
 
           {/* Navigation Items */}
           <div className="pill-nav-items">
-            <a href="https://cleanwin.vercel.app/dienstleistungen" className="pill-nav-link">
-              Dienstleistungen
-            </a>
+                        <div className="pill-nav-dropdown-container">
+              <button
+                className="pill-nav-link pill-nav-services-button"
+                onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+              >
+                <span>Dienstleistungen</span>
+                <AnchorIcon size={14} />
+              </button>
+              {isServicesDropdownOpen && (
+                <div className="pill-nav-services-dropdown">
+                  {services.map((service, index) => (
+                    <a
+                      key={index}
+                      href={service.href}
+                      className="pill-nav-services-dropdown-item"
+                    >
+                      {service.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
             
             <a href="https://cleanwin.vercel.app/ueber-uns" className="pill-nav-link">
               Über uns
