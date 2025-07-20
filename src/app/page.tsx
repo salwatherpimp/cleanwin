@@ -777,11 +777,11 @@ export default function CleanWinPage() {
           position: "relative",
         }}
       >
-        <div
+                <div
           style={{
-            maxWidth: "1200px",
+            maxWidth: "1152px",
             margin: "0 auto",
-            padding: "0 24px",
+            padding: "0 16px",
           }}
         >
           {/* Section Title */}
