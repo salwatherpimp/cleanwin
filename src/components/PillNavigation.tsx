@@ -170,19 +170,24 @@ export default function PillNavigation() {
       {/* Mobile Menu Dropdown */}
       <div className={`pill-nav-mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="pill-nav-mobile-menu-content">
-          <div className="pill-nav-mobile-menu-header">
-            
-            <button 
-              className="pill-nav-mobile-menu-close"
-              onClick={() => setIsMobileMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              ✕
-            </button>
-          </div>
           
+          <div className="pill-nav-mobile-menu-services">
+            <h3 className="pill-nav-mobile-menu-section-title">Leistungen</h3>
+            {services.map((service, index) => (
+              <a
+                key={index}
+                href={service.href}
+                className="pill-nav-mobile-menu-item"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {service.name}
+              </a>
+            ))}
+          </div>
+
+          <div className="pill-nav-mobile-menu-separator"></div>
+
           <div className="pill-nav-mobile-menu-nav">
-            
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
               className="pill-nav-mobile-menu-item"
@@ -198,25 +203,6 @@ export default function PillNavigation() {
               Referenzen
             </a>
           </div>
-
-          <div className="pill-nav-mobile-menu-separator"></div>
-
-          <div className="pill-nav-mobile-menu-services">
-                        <h3 className="pill-nav-mobile-menu-section-title">Leistungen</h3>
-            {services.map((service, index) => (
-              <a
-                key={index}
-                href={service.href}
-                className="pill-nav-mobile-menu-item"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {service.name}
-              </a>
-                        ))}
-          </div>
-
-          <div className="pill-nav-mobile-menu-separator"></div>
-
           
         </div>
       </div>
