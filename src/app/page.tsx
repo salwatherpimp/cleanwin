@@ -2544,7 +2544,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Sehr freundlicher, unkomplizierter und qualitativ einwandfreier Service. Die Endreinigung der Wohnung wurde ohne Beanstandung abgenommen..."
+                  "                  &quot;Sehr freundlicher, unkomplizierter und qualitativ einwandfreier Service. Die Endreinigung der Wohnung wurde ohne Beanstandung abgenommen...&quot;"
                 </div>
 
                 {/* Author Name */}
