@@ -1703,6 +1703,688 @@ export default function CleanWinPage() {
             </div>
           </div>
         </div>
+            </section>
+
+      {/* Customer Reviews Carousel Section */}
+      <section
+        style={{
+          backgroundColor: "#ffffff",
+          padding: "80px 0",
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 24px",
+          }}
+        >
+          {/* Section Title */}
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
+            <h2
+              style={{
+                fontSize: "42px",
+                fontWeight: "700",
+                color: "#111827",
+                marginBottom: "16px",
+                marginTop: "0",
+                textAlign: "center",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Das sagen unsere Kunden
+            </h2>
+            <p
+              style={{
+                fontSize: "18px",
+                color: "#6b7280",
+                maxWidth: "600px",
+                margin: "0 auto",
+                lineHeight: "1.6",
+              }}
+            >
+              Überzeugen Sie sich von der Qualität unserer Arbeit anhand echter Kundenbewertungen
+            </p>
+          </div>
+
+          {/* Carousel Container */}
+          <div style={{ position: "relative" }}>
+            {/* Carousel Track */}
+            <div
+              className="carousel-track"
+              style={{
+                display: "flex",
+                gap: "24px",
+                overflowX: "auto",
+                scrollBehavior: "smooth",
+                paddingBottom: "8px",
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+              }}
+            >
+              {/* Review Card 1 - Ursula Wirtz */}
+              <div
+                className="review-card"
+                style={{
+                  minWidth: "300px",
+                  backgroundColor: "white",
+                  borderRadius: "16px",
+                  padding: "24px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: "1px solid #f3f4f6",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "16px",
+                }}
+              >
+                {/* Header with Avatar and Rating */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "16px",
+                  }}
+                >
+                  {/* Avatar */}
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      backgroundColor: "#10a0a4",
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "white",
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      flexShrink: 0,
+                    }}
+                  >
+                    U
+                  </div>
+
+                  {/* Rating Section */}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "4px",
+                    }}
+                  >
+                    {/* 5 Stars */}
+                    <div style={{ display: "flex", gap: "2px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#fbbf24",
+                            fill: "#fbbf24",
+                          }}
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: "#6b7280",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Google Bewertung
+                    </span>
+                  </div>
+                </div>
+
+                {/* Review Text with Line Clamping */}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    color: "#374151",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    fontStyle: "italic",
+                  }}
+                >
+                  "Ein engagiertes Team, flexibel, zuverlässig, kreativ. Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde CleanWin gerne weiterempfehlen. Die Kommunikation war immer professionell und die Arbeit wurde termingerecht und in höchster Qualität erledigt."
+                </div>
+
+                {/* Author Name */}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "700",
+                    color: "#111827",
+                    borderTop: "1px solid #f3f4f6",
+                    paddingTop: "16px",
+                  }}
+                >
+                  Ursula Wirtz
+                </div>
+              </div>
+
+              {/* Review Card 2 - Johanna Kelts */}
+              <div
+                className="review-card"
+                style={{
+                  minWidth: "300px",
+                  backgroundColor: "white",
+                  borderRadius: "16px",
+                  padding: "24px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: "1px solid #f3f4f6",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "16px",
+                }}
+              >
+                {/* Header with Avatar and Rating */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "16px",
+                  }}
+                >
+                  {/* Avatar */}
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      backgroundColor: "#10a0a4",
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "white",
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      flexShrink: 0,
+                    }}
+                  >
+                    J
+                  </div>
+
+                  {/* Rating Section */}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "4px",
+                    }}
+                  >
+                    {/* 5 Stars */}
+                    <div style={{ display: "flex", gap: "2px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#fbbf24",
+                            fill: "#fbbf24",
+                          }}
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: "#6b7280",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Google Bewertung
+                    </span>
+                  </div>
+                </div>
+
+                {/* Review Text with Line Clamping */}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    color: "#374151",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    fontStyle: "italic",
+                  }}
+                >
+                  "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen und kompetenten Herren bezeichnen. CleanWin ist definitiv zu empfehlen!"
+                </div>
+
+                {/* Author Name */}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "700",
+                    color: "#111827",
+                    borderTop: "1px solid #f3f4f6",
+                    paddingTop: "16px",
+                  }}
+                >
+                  Johanna Kelts
+                </div>
+              </div>
+
+              {/* Review Card 3 - Franz Achtenberg */}
+              <div
+                className="review-card"
+                style={{
+                  minWidth: "300px",
+                  backgroundColor: "white",
+                  borderRadius: "16px",
+                  padding: "24px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: "1px solid #f3f4f6",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "16px",
+                }}
+              >
+                {/* Header with Avatar and Rating */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "16px",
+                  }}
+                >
+                  {/* Avatar */}
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      backgroundColor: "#10a0a4",
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "white",
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      flexShrink: 0,
+                    }}
+                  >
+                    F
+                  </div>
+
+                  {/* Rating Section */}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "4px",
+                    }}
+                  >
+                    {/* 5 Stars */}
+                    <div style={{ display: "flex", gap: "2px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#fbbf24",
+                            fill: "#fbbf24",
+                          }}
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: "#6b7280",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Google Bewertung
+                    </span>
+                  </div>
+                </div>
+
+                {/* Review Text with Line Clamping */}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    color: "#374151",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    fontStyle: "italic",
+                  }}
+                >
+                  "Perfekte Arbeit! Alles ist sauber, keine Flecken mehr an Fenstern und Türen. Kann man nur empfehlen! Das Team war pünktlich, freundlich und sehr gründlich bei der Arbeit."
+                </div>
+
+                {/* Author Name */}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "700",
+                    color: "#111827",
+                    borderTop: "1px solid #f3f4f6",
+                    paddingTop: "16px",
+                  }}
+                >
+                  Franz Achtenberg
+                </div>
+              </div>
+
+              {/* Review Card 4 - Maria Schneider */}
+              <div
+                className="review-card"
+                style={{
+                  minWidth: "300px",
+                  backgroundColor: "white",
+                  borderRadius: "16px",
+                  padding: "24px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: "1px solid #f3f4f6",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "16px",
+                }}
+              >
+                {/* Header with Avatar and Rating */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "16px",
+                  }}
+                >
+                  {/* Avatar */}
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      backgroundColor: "#10a0a4",
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "white",
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      flexShrink: 0,
+                    }}
+                  >
+                    M
+                  </div>
+
+                  {/* Rating Section */}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "4px",
+                    }}
+                  >
+                    {/* 5 Stars */}
+                    <div style={{ display: "flex", gap: "2px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#fbbf24",
+                            fill: "#fbbf24",
+                          }}
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: "#6b7280",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Google Bewertung
+                    </span>
+                  </div>
+                </div>
+
+                {/* Review Text with Line Clamping */}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    color: "#374151",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    fontStyle: "italic",
+                  }}
+                >
+                  "Ausgezeichneter Service! CleanWin hat unsere Büroräume gereinigt und das Ergebnis war beeindruckend. Sehr zuverlässig und das Preis-Leistungs-Verhältnis stimmt absolut. Gerne wieder!"
+                </div>
+
+                {/* Author Name */}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "700",
+                    color: "#111827",
+                    borderTop: "1px solid #f3f4f6",
+                    paddingTop: "16px",
+                  }}
+                >
+                  Maria Schneider
+                </div>
+              </div>
+
+              {/* Review Card 5 - Peter Weber */}
+              <div
+                className="review-card"
+                style={{
+                  minWidth: "300px",
+                  backgroundColor: "white",
+                  borderRadius: "16px",
+                  padding: "24px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: "1px solid #f3f4f6",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "16px",
+                }}
+              >
+                {/* Header with Avatar and Rating */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "16px",
+                  }}
+                >
+                  {/* Avatar */}
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      backgroundColor: "#10a0a4",
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "white",
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      flexShrink: 0,
+                    }}
+                  >
+                    P
+                  </div>
+
+                  {/* Rating Section */}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "4px",
+                    }}
+                  >
+                    {/* 5 Stars */}
+                    <div style={{ display: "flex", gap: "2px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#fbbf24",
+                            fill: "#fbbf24",
+                          }}
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: "#6b7280",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Google Bewertung
+                    </span>
+                  </div>
+                </div>
+
+                {/* Review Text with Line Clamping */}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    color: "#374151",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    fontStyle: "italic",
+                  }}
+                >
+                  "Top Qualität zu fairen Preisen! Die Fassadenreinigung unseres Gebäudes wurde professionell und termingerecht durchgeführt. Das gesamte Team war sehr kompetent und freundlich. Absolute Empfehlung!"
+                </div>
+
+                {/* Author Name */}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "700",
+                    color: "#111827",
+                    borderTop: "1px solid #f3f4f6",
+                    paddingTop: "16px",
+                  }}
+                >
+                  Peter Weber
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation Arrows */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "12px",
+                marginTop: "32px",
+              }}
+            >
+              <button
+                className="carousel-prev"
+                style={{
+                  width: "44px",
+                  height: "44px",
+                  borderRadius: "50%",
+                  backgroundColor: "white",
+                  border: "2px solid #e5e7eb",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  transition: "all 0.2s",
+                  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                }}
+              >
+                <svg
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    color: "#6b7280",
+                  }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                className="carousel-next"
+                style={{
+                  width: "44px",
+                  height: "44px",
+                  borderRadius: "50%",
+                  backgroundColor: "white",
+                  border: "2px solid #e5e7eb",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  transition: "all 0.2s",
+                  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                }}
+              >
+                <svg
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    color: "#6b7280",
+                  }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Call-to-Action Section */}
