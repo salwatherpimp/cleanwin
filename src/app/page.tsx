@@ -2779,9 +2779,68 @@ export default function CleanWinPage() {
             gap: 20px !important;
           }
 
-          .services-section h2 {
+                    .services-section h2 {
             font-size: 28px !important;
           }
+        }
+
+        /* Carousel responsive behavior */
+        .carousel-track {
+          scroll-snap-type: x mandatory;
+        }
+
+        .carousel-track::-webkit-scrollbar {
+          display: none;
+        }
+
+        .review-card {
+          scroll-snap-align: start;
+          flex-shrink: 0;
+        }
+
+        /* Desktop: show 3 cards */
+        @media (min-width: 1024px) {
+          .carousel-track {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 24px !important;
+            overflow: visible !important;
+          }
+          .review-card {
+            min-width: auto !important;
+          }
+        }
+
+        /* Tablet: show 2 cards */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .carousel-track {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 24px !important;
+            overflow: visible !important;
+          }
+          .review-card {
+            min-width: auto !important;
+          }
+        }
+
+        /* Mobile: show 1 card (keep horizontal scroll) */
+        @media (max-width: 767px) {
+          .review-card {
+            min-width: 280px !important;
+          }
+        }
+
+        /* Button hover effects */
+        .carousel-prev:hover,
+        .carousel-next:hover {
+          border-color: #10a0a4 !important;
+          background-color: #f8fafc !important;
+        }
+
+        .carousel-prev:hover svg,
+        .carousel-next:hover svg {
+          color: #10a0a4 !important;
         }
       `}</style>
     </div>
