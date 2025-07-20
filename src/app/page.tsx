@@ -764,30 +764,7 @@ export default function CleanWinPage() {
 
             {/* Services Section */}
             <ServicesSection />
-          <div style={{ textAlign: "center", marginBottom: "56px" }}>
-            <h2
-              style={{
-                fontSize: "42px",
-                fontWeight: "700",
-                color: "#111827",
-                marginBottom: "0",
-                marginTop: "0",
-                textAlign: "center",
-                letterSpacing: "-0.02em",
-              }}
-            >
-              Unsere Leistungen
-            </h2>
-          </div>
-                    <div
-            className="services-grid"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "24px",
-              maxWidth: "100%",
-            }}
-          >
+          
                         {/* Fensterreinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/fensterreinigung"
