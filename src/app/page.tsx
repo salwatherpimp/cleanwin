@@ -786,13 +786,13 @@ export default function CleanWinPage() {
         >
           {/* Section Title */}
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
-            <h2
+                        <h2
               style={{
-                fontSize: "42px",
+                fontSize: "28px",
                 fontWeight: "700",
                 color: "#111827",
-                marginBottom: "0",
-                marginTop: "0",
+                marginBottom: "24px",
+                marginTop: "23.24px",
                 textAlign: "center",
                 letterSpacing: "-0.02em",
               }}
