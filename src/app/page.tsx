@@ -1783,15 +1783,417 @@ export default function CleanWinPage() {
                 msOverflowStyle: "none",
               }}
             >
+                            {/* Review Card 1 - Ursula Wirtz */}
               <div
+                className="review-card"
                 style={{
+                  minWidth: "300px",
+                  backgroundColor: "rgba(255, 255, 255, 0.95)",
+                  borderRadius: "12px",
+                  padding: "20px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                  backdropFilter: "blur(4px)",
                   display: "flex",
-                  transitionProperty: "transform",
-                  transitionTimingFunction: "ease-in-out",
-                  transitionDuration: "0.5s",
-                  transform: "matrix(1, 0, 0, 1, 0, 0)",
+                  flexDirection: "column",
+                  height: "220px",
                 }}
               >
+                {/* Header with Avatar and Rating */}
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "16px" }}>
+                  {/* Avatar */}
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      backgroundColor: "#0DA6A6",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "16px",
+                      fontWeight: "600",
+                      flexShrink: 0,
+                    }}
+                  >
+                    U
+                  </div>
+
+                  {/* Rating Column */}
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center" }}>
+                    {/* 5 Stars */}
+                    <div style={{ display: "flex", marginBottom: "4px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#FFC107",
+                            fill: "#FFC107",
+                            marginRight: "2px",
+                          }}
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
+                    </div>
+                    {/* Google Bewertung Text */}
+                    <div style={{ fontSize: "12px", color: "#6B7280", fontWeight: "500" }}>
+                      Google Bewertung
+                    </div>
+                  </div>
+                </div>
+
+                {/* Review Text with 5-line clamp */}
+                <div
+                  style={{
+                    flex: 1,
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    color: "#374151",
+                    marginBottom: "16px",
+                    overflow: "hidden",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: "vertical",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  "Ein engagiertes Team, flexibel, zuverlässig und kreativ. Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde CleanWin definitiv weiterempfehlen. Die Qualität der Arbeit ist ausgezeichnet und das Preis-Leistungs-Verhältnis stimmt."
+                </div>
+
+                {/* Author Name */}
+                <div style={{ fontSize: "14px", fontWeight: "700", color: "#111827" }}>
+                  — Ursula Wirtz
+                </div>
+              </div>
+
+              {/* Review Card 2 - Marianne Anderegg */}
+              <div
+                className="review-card"
+                style={{
+                  minWidth: "300px",
+                  backgroundColor: "rgba(255, 255, 255, 0.95)",
+                  borderRadius: "12px",
+                  padding: "20px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                  backdropFilter: "blur(4px)",
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "220px",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "16px" }}>
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      backgroundColor: "#0DA6A6",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "16px",
+                      fontWeight: "600",
+                      flexShrink: 0,
+                    }}
+                  >
+                    M
+                  </div>
+
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center" }}>
+                    <div style={{ display: "flex", marginBottom: "4px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#FFC107",
+                            fill: "#FFC107",
+                            marginRight: "2px",
+                          }}
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <div style={{ fontSize: "12px", color: "#6B7280", fontWeight: "500" }}>
+                      Google Bewertung
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    flex: 1,
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    color: "#374151",
+                    marginBottom: "16px",
+                    overflow: "hidden",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: "vertical",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  "Sehr professionelle Reinigung mit fairen Preisen. Es bleibt alles top sauber und ich bin wirklich zufrieden. Das Team ist freundlich und arbeitet sehr gründlich. Kann ich nur weiterempfehlen."
+                </div>
+
+                <div style={{ fontSize: "14px", fontWeight: "700", color: "#111827" }}>
+                  — Marianne Anderegg
+                </div>
+              </div>
+
+              {/* Review Card 3 - Hans Müller */}
+              <div
+                className="review-card"
+                style={{
+                  minWidth: "300px",
+                  backgroundColor: "rgba(255, 255, 255, 0.95)",
+                  borderRadius: "12px",
+                  padding: "20px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                  backdropFilter: "blur(4px)",
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "220px",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "16px" }}>
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      backgroundColor: "#0DA6A6",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "16px",
+                      fontWeight: "600",
+                      flexShrink: 0,
+                    }}
+                  >
+                    H
+                  </div>
+
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center" }}>
+                    <div style={{ display: "flex", marginBottom: "4px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#FFC107",
+                            fill: "#FFC107",
+                            marginRight: "2px",
+                          }}
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <div style={{ fontSize: "12px", color: "#6B7280", fontWeight: "500" }}>
+                      Google Bewertung
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    flex: 1,
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    color: "#374151",
+                    marginBottom: "16px",
+                    overflow: "hidden",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: "vertical",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  "CleanWin macht einen ausgezeichneten Job. Pünktlich, zuverlässig und sehr gründlich. Die Kommunikation ist immer freundlich und professionell. Ein Team auf das man sich verlassen kann."
+                </div>
+
+                <div style={{ fontSize: "14px", fontWeight: "700", color: "#111827" }}>
+                  — Hans Müller
+                </div>
+              </div>
+
+              {/* Review Card 4 - Sarah Weber */}
+              <div
+                className="review-card"
+                style={{
+                  minWidth: "300px",
+                  backgroundColor: "rgba(255, 255, 255, 0.95)",
+                  borderRadius: "12px",
+                  padding: "20px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                  backdropFilter: "blur(4px)",
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "220px",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "16px" }}>
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      backgroundColor: "#0DA6A6",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "16px",
+                      fontWeight: "600",
+                      flexShrink: 0,
+                    }}
+                  >
+                    S
+                  </div>
+
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center" }}>
+                    <div style={{ display: "flex", marginBottom: "4px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#FFC107",
+                            fill: "#FFC107",
+                            marginRight: "2px",
+                          }}
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <div style={{ fontSize: "12px", color: "#6B7280", fontWeight: "500" }}>
+                      Google Bewertung
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    flex: 1,
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    color: "#374151",
+                    marginBottom: "16px",
+                    overflow: "hidden",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: "vertical",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  "Ich nutze CleanWin seit über einem Jahr für meine Büroräume. Die Reinigungsqualität ist konstant hoch und das Personal ist sehr vertrauenswürdig. Besonders schätze ich die Flexibilität bei Terminabsprachen."
+                </div>
+
+                <div style={{ fontSize: "14px", fontWeight: "700", color: "#111827" }}>
+                  — Sarah Weber
+                </div>
+              </div>
+
+              {/* Review Card 5 - Thomas Zimmermann */}
+              <div
+                className="review-card"
+                style={{
+                  minWidth: "300px",
+                  backgroundColor: "rgba(255, 255, 255, 0.95)",
+                  borderRadius: "12px",
+                  padding: "20px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                  backdropFilter: "blur(4px)",
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "220px",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "16px" }}>
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      backgroundColor: "#0DA6A6",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "16px",
+                      fontWeight: "600",
+                      flexShrink: 0,
+                    }}
+                  >
+                    T
+                  </div>
+
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center" }}>
+                    <div style={{ display: "flex", marginBottom: "4px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          style={{
+                            width: "16px",
+                            height: "16px",
+                            color: "#FFC107",
+                            fill: "#FFC107",
+                            marginRight: "2px",
+                          }}
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <div style={{ fontSize: "12px", color: "#6B7280", fontWeight: "500" }}>
+                      Google Bewertung
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    flex: 1,
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    color: "#374151",
+                    marginBottom: "16px",
+                    overflow: "hidden",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: "vertical",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  "Ausgezeichnete Fensterreinigung für unser Geschäftsgebäude. Die Arbeiten werden schnell und sauber erledigt. Das Preis-Leistungs-Verhältnis ist sehr gut und die Mitarbeiter sind kompetent und höflich."
+                </div>
+
+                <div style={{ fontSize: "14px", fontWeight: "700", color: "#111827" }}>
+                  — Thomas Zimmermann
+                </div>
+              </div>
                 {/* Card 1 - Ursula Wirtz */}
                 <div
                   style={{
