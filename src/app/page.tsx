@@ -2418,7 +2418,7 @@ export default function CleanWinPage() {
                 WebkitOverflowScrolling: "touch",
               }}
             >
-              {/* Review Card 1 - Ursula Wirtz */}
+                            {/* Review Card 1 - Jeanine Ganz */}
               <div
                 className="review-card"
                 style={{
@@ -2444,13 +2444,28 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
+                  <img
+                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/jganz_vjllm7.avif"
+                    alt="Jeanine Ganz"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      flexShrink: 0,
+                    }}
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      e.target.nextSibling.style.display = "flex";
+                    }}
+                  />
                   <div
                     style={{
                       width: "40px",
                       height: "40px",
                       backgroundColor: "#10a0a4",
                       borderRadius: "50%",
-                      display: "flex",
+                      display: "none",
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
@@ -2459,7 +2474,7 @@ export default function CleanWinPage() {
                       flexShrink: 0,
                     }}
                   >
-                    U
+                    JG
                   </div>
 
                   {/* Rating Section - Stacked vertically */}
@@ -2514,7 +2529,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Ein engagiertes Team, flexibel, zuverlässig, kreativ. Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde CleanWin gerne weiterempfehlen. Die Kommunikation war immer professionell und die Arbeit wurde termingerecht und in höchster Qualität erledigt."
+                  "Sehr freundlicher, unkomplizierter und qualitativ einwandfreier Service. Die Endreinigung der Wohnung wurde ohne Beanstandung abgenommen..."
                 </div>
 
                 {/* Author Name */}
@@ -2526,11 +2541,11 @@ export default function CleanWinPage() {
                     marginTop: "8px",
                   }}
                 >
-                  Ursula Wirtz
+                  Jeanine Ganz
                 </div>
               </div>
 
-              {/* Review Card 2 - Johanna Kelts */}
+                            {/* Review Card 2 - Albert Radamonti */}
               <div
                 className="review-card"
                 style={{
@@ -2556,13 +2571,28 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
+                  <img
+                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/albert_1_sionfn.avif"
+                    alt="Albert Radamonti"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      flexShrink: 0,
+                    }}
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      e.target.nextSibling.style.display = "flex";
+                    }}
+                  />
                   <div
                     style={{
                       width: "40px",
                       height: "40px",
                       backgroundColor: "#10a0a4",
                       borderRadius: "50%",
-                      display: "flex",
+                      display: "none",
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
@@ -2571,7 +2601,7 @@ export default function CleanWinPage() {
                       flexShrink: 0,
                     }}
                   >
-                    J
+                    AR
                   </div>
 
                   {/* Rating Section - Stacked vertically */}
@@ -2626,7 +2656,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen und kompetenten Herren bezeichnen. CleanWin ist definitiv zu empfehlen!"
+                  "Super Service und einwandfreie Erledigung. Preis-Leistung ist top! Einfache Abwicklung, günstiger Preis und saubere Arbeit mit..."
                 </div>
 
                 {/* Author Name */}
@@ -2638,11 +2668,11 @@ export default function CleanWinPage() {
                     marginTop: "8px",
                   }}
                 >
-                  Johanna Kelts
+                  Albert Radamonti
                 </div>
               </div>
 
-              {/* Review Card 3 - Franz Achtenberg */}
+                            {/* Review Card 3 - Gerussi Renato */}
               <div
                 className="review-card"
                 style={{
@@ -2668,13 +2698,28 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
+                  <img
+                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/renato_zhinmm.avif"
+                    alt="Gerussi Renato"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      flexShrink: 0,
+                    }}
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      e.target.nextSibling.style.display = "flex";
+                    }}
+                  />
                   <div
                     style={{
                       width: "40px",
                       height: "40px",
                       backgroundColor: "#10a0a4",
                       borderRadius: "50%",
-                      display: "flex",
+                      display: "none",
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
@@ -2683,7 +2728,7 @@ export default function CleanWinPage() {
                       flexShrink: 0,
                     }}
                   >
-                    F
+                    GR
                   </div>
 
                   {/* Rating Section - Stacked vertically */}
@@ -2738,7 +2783,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Perfekte Arbeit! Alles ist sauber, keine Flecken mehr an Fenstern und Türen. Kann man nur empfehlen! Das Team war pünktlich, freundlich und sehr gründlich bei der Arbeit."
+                  "Die Endreinigung war perfekt, inklusive Wohnungsabgabe. Herr Polli arbeitet nicht nur effektiv, er ist auch ausgesprochen sympathisch. Der Preis..."
                 </div>
 
                 {/* Author Name */}
@@ -2750,11 +2795,11 @@ export default function CleanWinPage() {
                     marginTop: "8px",
                   }}
                 >
-                  Franz Achtenberg
+                  Gerussi Renato
                 </div>
               </div>
 
-              {/* Review Card 4 - Maria Schneider */}
+                            {/* Review Card 4 - Roter Kater */}
               <div
                 className="review-card"
                 style={{
@@ -2780,13 +2825,28 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
+                  <img
+                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/rkater_1_tkyxzs.avif"
+                    alt="Roter Kater"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      flexShrink: 0,
+                    }}
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      e.target.nextSibling.style.display = "flex";
+                    }}
+                  />
                   <div
                     style={{
                       width: "40px",
                       height: "40px",
                       backgroundColor: "#10a0a4",
                       borderRadius: "50%",
-                      display: "flex",
+                      display: "none",
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
@@ -2795,7 +2855,7 @@ export default function CleanWinPage() {
                       flexShrink: 0,
                     }}
                   >
-                    M
+                    RK
                   </div>
 
                   {/* Rating Section - Stacked vertically */}
@@ -2850,7 +2910,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Ausgezeichneter Service! CleanWin hat unsere Büroräume gereinigt und das Ergebnis war beeindruckend. Sehr zuverlässig und das Preis-Leistungs-Verhältnis stimmt absolut. Gerne wieder!"
+                  "Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal."
                 </div>
 
                 {/* Author Name */}
@@ -2862,11 +2922,11 @@ export default function CleanWinPage() {
                     marginTop: "8px",
                   }}
                 >
-                  Maria Schneider
+                  Roter Kater
                 </div>
               </div>
 
-              {/* Review Card 5 - Peter Weber */}
+                            {/* Review Card 5 - Nikola C */}
               <div
                 className="review-card"
                 style={{
@@ -2892,13 +2952,28 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
+                  <img
+                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/nikolac_1_t1tzdu.avif"
+                    alt="Nikola C"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      flexShrink: 0,
+                    }}
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      e.target.nextSibling.style.display = "flex";
+                    }}
+                  />
                   <div
                     style={{
                       width: "40px",
                       height: "40px",
                       backgroundColor: "#10a0a4",
                       borderRadius: "50%",
-                      display: "flex",
+                      display: "none",
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
@@ -2907,7 +2982,7 @@ export default function CleanWinPage() {
                       flexShrink: 0,
                     }}
                   >
-                    P
+                    NC
                   </div>
 
                   {/* Rating Section - Stacked vertically */}
@@ -2962,7 +3037,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Top Qualität zu fairen Preisen! Die Fassadenreinigung unseres Gebäudes wurde professionell und termingerecht durchgeführt. Das gesamte Team war sehr kompetent und freundlich. Absolute Empfehlung!"
+                  "TOP ZUFRIEDENHEIT. Wir waren mit der Endreinigung sehr zufrieden - unsere erste offizielle Wohnungsübergabe und alles verlief dank der super Reinigung bestens..."
                 </div>
 
                 {/* Author Name */}
@@ -2973,8 +3048,8 @@ export default function CleanWinPage() {
                     color: "#111827",
                     marginTop: "8px",
                   }}
-                                >
-                  Peter Weber
+                >
+                  Nikola C
                 </div>
               </div>
             </div>
