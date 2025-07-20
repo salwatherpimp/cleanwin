@@ -66,7 +66,7 @@ export default function PillNavigation() {
                 onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
               >
                 <span>Dienstleistungen</span>
-                <AnchorIcon size={14} />
+                                <ChevronDownIcon size={14} />
               </button>
               {isServicesDropdownOpen && (
                 <div className="pill-nav-services-dropdown">
@@ -100,7 +100,7 @@ export default function PillNavigation() {
             >
                             <HandIcon />
               <span>Kontaktiere uns</span>
-              <AnchorIcon size={14} />
+                              <ChevronDownIcon size={14} />
             </button>
             {isCtaDropdownOpen && (
               <div className="pill-nav-cta-dropdown">
@@ -138,7 +138,7 @@ export default function PillNavigation() {
             >
                             <HandIcon />
               <span>Kontaktiere uns</span>
-              <AnchorIcon size={14} />
+                              <ChevronDownIcon size={14} />
             </button>
             {isCtaDropdownOpen && (
               <div className="pill-nav-cta-dropdown-mobile">
