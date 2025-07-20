@@ -3124,10 +3124,10 @@ export default function CleanWinPage() {
           100% { transform: translateX(calc(-100% - 24px)); }
         }
 
-                /* Logo Scroll Animation */
+                        /* Logo Scroll Animation */
         @keyframes scroll-logos {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(-1368px); }
         }
 
                                 /* Apply logo animation to all viewports */
