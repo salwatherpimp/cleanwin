@@ -2471,24 +2471,7 @@ export default function CleanWinPage() {
                         flexShrink: 0,
                       }}
                     />
-                  </div>
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      backgroundColor: "#10a0a4",
-                      borderRadius: "50%",
-                      display: "none",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: "700",
-                      flexShrink: 0,
-                    }}
-                  >
-                    JG
-                  </div>
+                                    </div>
 
                   {/* Rating Section - Stacked vertically */}
                   <div
@@ -2596,24 +2579,7 @@ export default function CleanWinPage() {
                         flexShrink: 0,
                       }}
                     />
-                  </div>
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      backgroundColor: "#10a0a4",
-                      borderRadius: "50%",
-                      display: "none",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: "700",
-                      flexShrink: 0,
-                    }}
-                  >
-                    AR
-                  </div>
+                                    </div>
 
                   {/* Rating Section - Stacked vertically */}
                   <div
@@ -2721,24 +2687,7 @@ export default function CleanWinPage() {
                         flexShrink: 0,
                       }}
                     />
-                  </div>
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      backgroundColor: "#10a0a4",
-                      borderRadius: "50%",
-                      display: "none",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: "700",
-                      flexShrink: 0,
-                    }}
-                  >
-                    GR
-                  </div>
+                                    </div>
 
                   {/* Rating Section - Stacked vertically */}
                   <div
@@ -2846,24 +2795,7 @@ export default function CleanWinPage() {
                         flexShrink: 0,
                       }}
                     />
-                  </div>
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      backgroundColor: "#10a0a4",
-                      borderRadius: "50%",
-                      display: "none",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: "700",
-                      flexShrink: 0,
-                    }}
-                  >
-                    RK
-                  </div>
+                                    </div>
 
                   {/* Rating Section - Stacked vertically */}
                   <div
@@ -2971,23 +2903,7 @@ export default function CleanWinPage() {
                         flexShrink: 0,
                       }}
                     />
-                  </div>
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      backgroundColor: "#10a0a4",
-                      borderRadius: "50%",
-                      display: "none",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: "700",
-                      flexShrink: 0,
-                    }}
-                  >
-                    NC
+                                    </div>
                   </div>
 
                   {/* Rating Section - Stacked vertically */}
