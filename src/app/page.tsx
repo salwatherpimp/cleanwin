@@ -2851,7 +2851,7 @@ export default function CleanWinPage() {
           .grid-mobile-3 > div {
             min-width: 280px !important;
             flex-shrink: 0 !important;
-            animation: usp-mobile-scroll 25s linear infinite !important;
+                        animation: usp-mobile-scroll 18s linear infinite !important;
           }
           .grid-mobile-logos {
             grid-template-columns: repeat(2, 1fr) !important;
