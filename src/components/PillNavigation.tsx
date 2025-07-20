@@ -522,10 +522,10 @@ export default function PillNavigation() {
 
         
 
-                .pill-nav-mobile-menu-item {
+                                .pill-nav-mobile-menu-item {
           display: flex;
           align-items: center;
-          padding: 16px 20px;
+          padding: 12px 16px;
           text-decoration: none;
           color: #6b7280;
           font-weight: 400;
@@ -533,7 +533,7 @@ export default function PillNavigation() {
           border-radius: 0;
           margin-bottom: 0;
           transition: all 0.2s ease;
-          min-height: 48px;
+          min-height: 44px;
         }
 
         .pill-nav-mobile-menu-item:hover {
