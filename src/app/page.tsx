@@ -2582,19 +2582,15 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
-                  <img
+                                    <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/albert_1_sionfn.avif"
                     alt="Albert Radamonti"
+                    width={40}
+                    height={40}
                     style={{
-                      width: "40px",
-                      height: "40px",
                       borderRadius: "50%",
                       objectFit: "cover",
                       flexShrink: 0,
-                    }}
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.nextSibling.style.display = "flex";
                     }}
                   />
                   <div
@@ -3436,7 +3432,7 @@ export default function CleanWinPage() {
                   href="https://cleanwin.vercel.app/ueber-uns"
                   style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
                 >
-                  Über uns
+                  ��ber uns
                 </a>
                 <a
                   href="https://cleanwin.vercel.app/referenzen"
