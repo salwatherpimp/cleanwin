@@ -920,8 +920,8 @@ export default function CleanWinPage() {
                     minHeight: "44px",
                     marginTop: "0px",
                   }}
-                >
-                  Büroreinigung
+                                >
+                  Unterhaltsreinigung
                 </h3>
                 <p
                   style={{
