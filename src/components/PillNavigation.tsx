@@ -536,15 +536,38 @@ export default function PillNavigation() {
           min-height: 44px;
         }
 
-        .pill-nav-mobile-menu-item:hover {
+                .pill-nav-mobile-menu-item:hover {
           background: #f3f4f6;
           color: #0DA6A6;
         }
 
+        .pill-nav-mobile-menu-top-item {
+          display: flex;
+          align-items: center;
+          padding: 12px 0;
+          text-decoration: none;
+          color: #1f2937;
+          font-weight: 700;
+          font-size: 18px;
+          border-radius: 0;
+          margin-bottom: 8px;
+          transition: all 0.2s ease;
+          min-height: 44px;
+        }
+
+        .pill-nav-mobile-menu-top-item:hover {
+          color: #0DA6A6;
+        }
+
+        .pill-nav-mobile-menu-top-item:last-child {
+          margin-bottom: 0;
+        }
+
         .pill-nav-mobile-menu-separator {
           height: 1px;
-          background: #e5e7eb;
-          margin: 16px 0;
+          background: #d1d5db;
+          margin: 12px 0;
+          border-top: 1px solid #d1d5db;
         }
 
         @media (max-width: 1023px) {
