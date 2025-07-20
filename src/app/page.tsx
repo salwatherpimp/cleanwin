@@ -1748,18 +1748,19 @@ export default function CleanWinPage() {
             </p>
           </div>
 
-          {/* Horizontal Scrollable Carousel */}
+                    {/* Carousel Container with Navigation */}
           <div style={{ position: "relative" }}>
+            {/* Carousel Track */}
             <div
-              className="carousel-container"
+              id="carousel-track"
+              className="carousel-track"
               style={{
                 display: "flex",
-                overflowX: "auto",
+                overflowX: "hidden",
                 scrollSnapType: "x mandatory",
-                gap: "16px",
-                paddingBottom: "8px",
-                scrollbarWidth: "none",
-                msOverflowStyle: "none",
+                gap: "24px",
+                scrollBehavior: "smooth",
+                transition: "transform 0.3s ease",
               }}
             >
               {/* Review Card 1 - Ursula Wirtz */}
