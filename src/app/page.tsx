@@ -48,29 +48,14 @@ export default function CleanWinPage() {
       });
     };
 
-    // Event listeners
+        // Event listeners
     prevButton.addEventListener('click', goToPrev);
     nextButton.addEventListener('click', goToNext);
-
-    // Handle window resize
-    const handleResize = () => {
-      const cardsPerView = getCardsPerView();
-      if (currentIndex >= totalCards - cardsPerView) {
-        currentIndex = Math.max(0, totalCards - cardsPerView);
-      }
-      updateCarousel();
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    // Initial setup
-    updateCarousel();
 
     // Cleanup
     return () => {
       prevButton.removeEventListener('click', goToPrev);
       nextButton.removeEventListener('click', goToNext);
-      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
