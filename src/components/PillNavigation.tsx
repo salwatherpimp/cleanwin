@@ -171,7 +171,7 @@ export default function PillNavigation() {
       <div className={`pill-nav-mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="pill-nav-mobile-menu-content">
           <div className="pill-nav-mobile-menu-header">
-            <span className="pill-nav-mobile-menu-title">Navigation</span>
+            
             <button 
               className="pill-nav-mobile-menu-close"
               onClick={() => setIsMobileMenuOpen(false)}
