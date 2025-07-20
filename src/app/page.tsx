@@ -3094,13 +3094,13 @@ export default function CleanWinPage() {
                   transition: "all 0.2s ease",
                   boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                 }}
-                onMouseEnter={(e) => {
-                  e.target.style.borderColor = "#10a0a4";
-                  e.target.style.backgroundColor = "#f8fafc";
+                                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.borderColor = "#10a0a4";
+                  (e.target as HTMLElement).style.backgroundColor = "#f8fafc";
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.borderColor = "#e5e7eb";
-                  e.target.style.backgroundColor = "white";
+                  (e.target as HTMLElement).style.borderColor = "#e5e7eb";
+                  (e.target as HTMLElement).style.backgroundColor = "white";
                 }}
               >
                 <svg
@@ -3132,13 +3132,13 @@ export default function CleanWinPage() {
                   transition: "all 0.2s ease",
                   boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                 }}
-                onMouseEnter={(e) => {
-                  e.target.style.borderColor = "#10a0a4";
-                  e.target.style.backgroundColor = "#f8fafc";
+                                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.borderColor = "#10a0a4";
+                  (e.target as HTMLElement).style.backgroundColor = "#f8fafc";
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.borderColor = "#e5e7eb";
-                  e.target.style.backgroundColor = "white";
+                  (e.target as HTMLElement).style.borderColor = "#e5e7eb";
+                  (e.target as HTMLElement).style.backgroundColor = "white";
                 }}
               >
                 <svg
