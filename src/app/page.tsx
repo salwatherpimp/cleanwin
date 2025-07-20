@@ -1753,8 +1753,10 @@ export default function CleanWinPage() {
               </p>
             </div>
 
-            {/* Safe & Insured Card */}
+                        {/* Safe & Insured Card */}
             <div
+              className="cleanwin-value-card"
+              onClick={() => handleCardClick(1)}
               style={{
                 backdropFilter: "blur(4px)",
                 backgroundColor: "rgba(255, 255, 255, 0.9)",
@@ -1766,6 +1768,7 @@ export default function CleanWinPage() {
                 display: "flex",
                 flexDirection: "column",
                 overflow: "hidden",
+                cursor: "pointer",
               }}
             >
               <div
@@ -1778,49 +1781,88 @@ export default function CleanWinPage() {
                   minHeight: "44px",
                 }}
               >
-                <h3
-                  style={{
-                    color: "#111827",
-                    fontSize: "18px",
-                    lineHeight: "22px",
-                    fontWeight: "600",
-                    flexGrow: 1,
-                  }}
-                >
-                  Sicher & versichert
-                </h3>
                 <div
                   style={{
                     display: "flex",
                     alignItems: "center",
+                    gap: "12px",
+                    flexGrow: 1,
+                  }}
+                >
+                  <div
+                    className="mobile-card-icon"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "40px",
+                      height: "40px",
+                      backgroundColor: "#F3F4F6",
+                      borderRadius: "50%",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <svg
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                        color: "#40d5ac",
+                        stroke: "#40d5ac",
+                        strokeWidth: "2px",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        fill: "none",
+                      }}
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                  </div>
+                  <h3
+                    style={{
+                      color: "#111827",
+                      fontSize: "18px",
+                      lineHeight: "22px",
+                      fontWeight: "600",
+                      margin: 0,
+                    }}
+                  >
+                    Sicher & versichert
+                  </h3>
+                </div>
+                <div
+                  className="mobile-toggle-icon"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
                     justifyContent: "center",
-                    width: "40px",
-                    height: "40px",
-                    backgroundColor: "#F3F4F6",
-                    borderRadius: "50%",
+                    width: "24px",
+                    height: "24px",
                     flexShrink: 0,
-                    marginLeft: "12px",
                   }}
                 >
                   <svg
                     style={{
-                      width: "20px",
-                      height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      width: "16px",
+                      height: "16px",
+                      color: "#6b7280",
+                      stroke: "#6b7280",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
                       fill: "none",
+                      transition: "transform 0.2s ease",
+                      transform: expandedCard === 1 ? "rotate(45deg)" : "rotate(0deg)",
                     }}
                     viewBox="0 0 24 24"
                   >
-                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-                    <path d="m9 12 2 2 4-4" />
+                    <path d="M12 5v14M5 12h14" />
                   </svg>
                 </div>
               </div>
               <p
+                className={`mobile-card-content ${expandedCard === 1 ? 'expanded' : ''}`}
                 style={{
                   color: "#4b5563",
                   fontSize: "13px",
