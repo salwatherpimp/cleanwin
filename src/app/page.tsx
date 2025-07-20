@@ -814,10 +814,10 @@ export default function CleanWinPage() {
             />
           </div>
         </div>
-      </section>
+            </section>
 
-{/* Services Section */}
-            <section
+      {/* Services Section */}
+      <section
         style={{
           backgroundColor: "#ffffff",
           padding: "24px 0",
