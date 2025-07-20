@@ -3032,7 +3032,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "                                                      &quot;TOP ZUFRIEDENHEIT. Wir waren mit der Endreinigung sehr zufrieden - unsere erste offizielle Wohnungsübergabe und alles verlief dank der super Reinigung bestens...&quot;"
+                  "                                                                        &quot;TOP ZUFRIEDENHEIT. Wir waren mit der Endreinigung sehr zufrieden - unsere erste offizielle Wohnungsübergabe und alles verlief dank der super Reinigung bestens...&quot;"
                 </div>
 
                 {/* Author Name */}
