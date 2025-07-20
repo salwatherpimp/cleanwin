@@ -18,7 +18,7 @@ export default function CleanWinPage() {
         backgroundColor: "#ffffff",
       }}
     >
-      <div dangerouslySetInnerHTML={{ __html: mobileStyles }} />
+      
       
 
             {/* Pill Navigation */}
