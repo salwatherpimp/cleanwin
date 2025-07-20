@@ -908,7 +908,7 @@ export default function CleanWinPage() {
             >
               <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
                 <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1750015382/altbauwohnung-meilen_lrttoc.avif"
+                                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_a_professional_cleaning_person_wiping_an_office_des_ae82c6ac-ddf5-48e9-93d5-9ee8d062167c_3_xzzqja.avif"
                   alt="Unterhaltsreinigung"
                   fill
                   style={{
