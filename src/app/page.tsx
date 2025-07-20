@@ -3582,8 +3582,11 @@ export default function CleanWinPage() {
             display: none !important;
           }
 
-          .cleanwin-value-card .mobile-card-header {
+                    .cleanwin-value-card .mobile-card-header {
             display: flex !important;
+            align-items: center !important;
+            min-height: 36px !important;
+            margin-bottom: 0 !important;
           }
 
           .mobile-card-content {
