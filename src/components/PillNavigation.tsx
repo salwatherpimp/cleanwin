@@ -187,17 +187,17 @@ export default function PillNavigation() {
 
           <div className="pill-nav-mobile-menu-separator"></div>
 
-          <div className="pill-nav-mobile-menu-nav">
+                    <div className="pill-nav-mobile-menu-nav">
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
-              className="pill-nav-mobile-menu-item"
+              className="pill-nav-mobile-menu-top-item"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Über uns
             </a>
             <a
               href="https://cleanwin.vercel.app/referenzen"
-              className="pill-nav-mobile-menu-item"
+              className="pill-nav-mobile-menu-top-item"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Referenzen
