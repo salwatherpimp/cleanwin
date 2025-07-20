@@ -811,7 +811,8 @@ export default function CleanWinPage() {
                 opacity: "0.7",
                 transition: "opacity 0.3s",
               }}
-            />
+                        />
+            </div>
           </div>
         </div>
       </section>
