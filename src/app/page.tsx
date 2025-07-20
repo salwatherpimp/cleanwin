@@ -3745,6 +3745,55 @@ export default function CleanWinPage() {
         }
 
         
+              /* Footer Responsive Styles */
+        .footer-responsive-grid {
+          grid-template-columns: repeat(4, 1fr) !important;
+        }
+
+        .footer-empty-column {
+          display: block;
+        }
+
+        /* Chevron rotation for details */
+        details[open] .chevron-icon {
+          transform: rotate(90deg);
+        }
+
+        /* Footer hover effects */
+        footer a:hover {
+          color: #ffffff !important;
+        }
+
+        /* Tablet Layout */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .footer-responsive-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+
+          .footer-empty-column {
+            display: none;
+          }
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 767px) {
+          .footer-responsive-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .footer-empty-column {
+            display: none;
+          }
+
+          .footer-bottom-responsive {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+          }
+
+          .footer-social {
+            gap: 16px !important;
+          }
+        }
       `}</style>
     </div>
   );
