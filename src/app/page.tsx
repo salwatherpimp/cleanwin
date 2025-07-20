@@ -3658,11 +3658,12 @@ export default function CleanWinPage() {
             gap: 8px !important;
           }
 
-                    .cleanwin-value-card {
+                                        .cleanwin-value-card {
             height: auto !important;
             min-height: 42px !important;
             padding: 12px !important;
             transition: all 0.3s ease !important;
+            overflow: hidden !important;
           }
 
           .cleanwin-value-card .mobile-card-icon {
