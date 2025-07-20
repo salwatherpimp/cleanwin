@@ -1,0 +1,602 @@
+{/* Services Section */}
+      <section
+        style={{
+          backgroundColor: "#ffffff",
+          padding: "80px 0",
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 24px",
+          }}
+        >
+          {/* Section Title */}
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
+            <h2
+              style={{
+                fontSize: "42px",
+                fontWeight: "700",
+                color: "#111827",
+                marginBottom: "0",
+                marginTop: "0",
+                textAlign: "center",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Unsere Leistungen
+            </h2>
+          </div>
+
+          {/* Services Grid */}
+          <div
+            className="services-grid"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "24px",
+              maxWidth: "100%",
+            }}
+          >
+            {/* Fensterreinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/fensterreinigung"
+              className="service-card"
+              style={{
+                position: "relative",
+                backgroundColor: "white",
+                borderRadius: "16px",
+                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+                display: "block",
+                height: "280px",
+              }}
+            >
+              <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+                <Image
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1752095182/Glasreinigung_aussen_Flaach_ec1fre.avif"
+                  alt="Fensterreinigung"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    transition: "transform 0.3s ease",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    right: "0",
+                    bottom: "0",
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "16px",
+                    right: "16px",
+                    background: "#0DA6A6",
+                    color: "white",
+                    padding: "8px 14px",
+                    borderRadius: "20px",
+                    fontSize: "13px",
+                    fontWeight: "600",
+                    boxShadow: "0 4px 12px rgba(13, 166, 166, 0.3)",
+                  }}
+                >
+                  Ab CHF 199.-
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "20px",
+                    left: "20px",
+                    right: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontSize: "22px",
+                      fontWeight: "700",
+                      color: "white",
+                      margin: "0",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    Fensterreinigung
+                  </h3>
+                  <span
+                    style={{
+                      color: "white",
+                      fontSize: "20px",
+                      fontWeight: "600",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    →
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            {/* Unterhaltsreinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/unterhaltsreinigung"
+              className="service-card"
+              style={{
+                position: "relative",
+                backgroundColor: "white",
+                borderRadius: "16px",
+                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+                display: "block",
+                height: "280px",
+              }}
+            >
+              <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+                <Image
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1750015382/altbauwohnung-meilen_lrttoc.avif"
+                  alt="Unterhaltsreinigung"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    transition: "transform 0.3s ease",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    right: "0",
+                    bottom: "0",
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "16px",
+                    right: "16px",
+                    background: "#0DA6A6",
+                    color: "white",
+                    padding: "8px 14px",
+                    borderRadius: "20px",
+                    fontSize: "13px",
+                    fontWeight: "600",
+                    boxShadow: "0 4px 12px rgba(13, 166, 166, 0.3)",
+                  }}
+                >
+                  Ab CHF 199.-
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "20px",
+                    left: "20px",
+                    right: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontSize: "22px",
+                      fontWeight: "700",
+                      color: "white",
+                      margin: "0",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    Unterhaltsreinigung
+                  </h3>
+                  <span
+                    style={{
+                      color: "white",
+                      fontSize: "20px",
+                      fontWeight: "600",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    →
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            {/* Fassadenreinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/fassadenreinigung"
+              className="service-card"
+              style={{
+                position: "relative",
+                backgroundColor: "white",
+                borderRadius: "16px",
+                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+                display: "block",
+                height: "280px",
+              }}
+            >
+              <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+                <Image
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1752095182/Fassadenreinigung_Sichtbeton_vm1lsq.avif"
+                  alt="Fassadenreinigung"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    transition: "transform 0.3s ease",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    right: "0",
+                    bottom: "0",
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "16px",
+                    right: "16px",
+                    background: "#0DA6A6",
+                    color: "white",
+                    padding: "8px 14px",
+                    borderRadius: "20px",
+                    fontSize: "13px",
+                    fontWeight: "600",
+                    boxShadow: "0 4px 12px rgba(13, 166, 166, 0.3)",
+                  }}
+                >
+                  Ab CHF 699.-
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "20px",
+                    left: "20px",
+                    right: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontSize: "22px",
+                      fontWeight: "700",
+                      color: "white",
+                      margin: "0",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    Fassadenreinigung
+                  </h3>
+                  <span
+                    style={{
+                      color: "white",
+                      fontSize: "20px",
+                      fontWeight: "600",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    →
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            {/* Umzugsreinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/umzugsreinigung"
+              className="service-card"
+              style={{
+                position: "relative",
+                backgroundColor: "white",
+                borderRadius: "16px",
+                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+                display: "block",
+                height: "280px",
+              }}
+            >
+              <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+                <Image
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1752005906/homepage-herosection_fsxqwc.avif"
+                  alt="Umzugsreinigung"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    transition: "transform 0.3s ease",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    right: "0",
+                    bottom: "0",
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "16px",
+                    right: "16px",
+                    background: "#0DA6A6",
+                    color: "white",
+                    padding: "8px 14px",
+                    borderRadius: "20px",
+                    fontSize: "13px",
+                    fontWeight: "600",
+                    boxShadow: "0 4px 12px rgba(13, 166, 166, 0.3)",
+                  }}
+                >
+                  Ab CHF 499.-
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "20px",
+                    left: "20px",
+                    right: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontSize: "22px",
+                      fontWeight: "700",
+                      color: "white",
+                      margin: "0",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    Umzugsreinigung
+                  </h3>
+                  <span
+                    style={{
+                      color: "white",
+                      fontSize: "20px",
+                      fontWeight: "600",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    →
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            {/* Baureinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/baureinigung"
+              className="service-card"
+              style={{
+                position: "relative",
+                backgroundColor: "white",
+                borderRadius: "16px",
+                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+                display: "block",
+                height: "280px",
+              }}
+            >
+              <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+                <Image
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1748417852/farbxpress-spritzen_ij8jsj.avif"
+                  alt="Baureinigung"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    transition: "transform 0.3s ease",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    right: "0",
+                    bottom: "0",
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "16px",
+                    right: "16px",
+                    background: "#0DA6A6",
+                    color: "white",
+                    padding: "8px 14px",
+                    borderRadius: "20px",
+                    fontSize: "13px",
+                    fontWeight: "600",
+                    boxShadow: "0 4px 12px rgba(13, 166, 166, 0.3)",
+                  }}
+                >
+                  Ab CHF 499.-
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "20px",
+                    left: "20px",
+                    right: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontSize: "22px",
+                      fontWeight: "700",
+                      color: "white",
+                      margin: "0",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    Baureinigung
+                  </h3>
+                  <span
+                    style={{
+                      color: "white",
+                      fontSize: "20px",
+                      fontWeight: "600",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    →
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            {/* Solarpanel reinigen */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/solarpanel-reinigen"
+              className="service-card"
+              style={{
+                position: "relative",
+                backgroundColor: "white",
+                borderRadius: "16px",
+                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+                display: "block",
+                height: "280px",
+              }}
+            >
+              <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+                <Image
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1752095182/Firmenwagen_vor_Geba%CC%88ude_zz0m0s.avif"
+                  alt="Solarpanel reinigen"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    transition: "transform 0.3s ease",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    right: "0",
+                    bottom: "0",
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0) 100%)",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "16px",
+                    right: "16px",
+                    background: "#0DA6A6",
+                    color: "white",
+                    padding: "8px 14px",
+                    borderRadius: "20px",
+                    fontSize: "13px",
+                    fontWeight: "600",
+                    boxShadow: "0 4px 12px rgba(13, 166, 166, 0.3)",
+                  }}
+                >
+                  Ab CHF 399.-
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "20px",
+                    left: "20px",
+                    right: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontSize: "22px",
+                      fontWeight: "700",
+                      color: "white",
+                      margin: "0",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    Solarpanel reinigen
+                  </h3>
+                  <span
+                    style={{
+                      color: "white",
+                      fontSize: "20px",
+                      fontWeight: "600",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    →
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {/* Mobile Responsive Styles */}
+        <style jsx>{`
+          .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+          }
+          
+          .service-card:hover img {
+            transform: scale(1.05);
+          }
+
+          /* Services responsive grid */
+          @media (max-width: 1200px) {
+            .services-grid {
+              grid-template-columns: repeat(2, 1fr) !important;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .services-grid {
+              grid-template-columns: 1fr !important;
+              gap: 20px !important;
+            }
+            
+            .services-section h2 {
+              font-size: 28px !important;
+            }
+          }
+        `}</style>
+      </section>
