@@ -2833,9 +2833,9 @@ export default function CleanWinPage() {
         }
 
         @media (max-width: 767px) {
-          .hero-mobile {
-            height: 400px !important;
-            min-height: 350px !important;
+                    .hero-mobile {
+            height: 460px !important;
+            min-height: 403px !important;
           }
           .hero-content-mobile {
             padding: 60px 16px 24px !important;
