@@ -501,8 +501,8 @@ export default function PillNavigation() {
 
         
 
-        .pill-nav-mobile-menu-nav {
-          margin-bottom: 16px;
+                .pill-nav-mobile-menu-nav {
+          margin-bottom: 0;
         }
 
                 .pill-nav-mobile-menu-section-title {
