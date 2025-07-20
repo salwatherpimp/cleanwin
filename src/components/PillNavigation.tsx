@@ -643,9 +643,10 @@ export default function PillNavigation() {
             padding: 0;
           }
 
-          .pill-nav-cta-mobile {
-            padding: 10px 14px;
+                    .pill-nav-cta-mobile {
+            padding: 8px 14px;
             font-size: 13px;
+            height: 36px;
           }
         }
       `}</style>
