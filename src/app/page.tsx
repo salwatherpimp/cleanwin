@@ -2479,7 +2479,24 @@ export default function CleanWinPage() {
             </footer>
 
       {/* Mobile Responsive Styles */}
-      <style jsx>{`
+            <style jsx>{`
+        /* Services hover effects */
+        .service-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card:hover img {
+          transform: scale(1.05);
+        }
+
+        /* Services responsive grid */
+        @media (max-width: 1200px) {
+          .services-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+
         @media (max-width: 767px) {
           .hero-mobile {
             height: 400px !important;
@@ -2519,6 +2536,16 @@ export default function CleanWinPage() {
           .logo-container-mobile {
             width: 80px !important;
             height: 40px !important;
+          }
+
+          /* Services mobile layout */
+          .services-grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+
+          .services-section h2 {
+            font-size: 28px !important;
           }
         }
       `}</style>
