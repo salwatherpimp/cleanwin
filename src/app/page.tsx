@@ -5,17 +5,13 @@ import { useEffect } from "react";
 import PillNavigation from "../components/PillNavigation";
 
 export default function CleanWinPage() {
-  useEffect(() => {
+    useEffect(() => {
     // Carousel navigation functionality
     const carouselTrack = document.getElementById('carousel-track');
     const prevButton = document.getElementById('carousel-prev');
     const nextButton = document.getElementById('carousel-next');
 
     if (!carouselTrack || !prevButton || !nextButton) return;
-
-    let currentIndex = 0;
-    const cards = carouselTrack.children;
-    const totalCards = cards.length;
 
     // Get viewport-based cards per view
     const getCardsPerView = () => {
@@ -24,30 +20,32 @@ export default function CleanWinPage() {
       return 3;
     };
 
-    const updateCarousel = () => {
-      const cardsPerView = getCardsPerView();
-      const cardWidth = carouselTrack.offsetWidth / cardsPerView;
-      const translateX = -currentIndex * cardWidth;
-      carouselTrack.style.transform = `translateX(${translateX}px)`;
-
-      // Update button states
-      prevButton.style.opacity = currentIndex === 0 ? '0.5' : '1';
-      nextButton.style.opacity = currentIndex >= totalCards - cardsPerView ? '0.5' : '1';
+    const getCardWidth = () => {
+      const firstCard = carouselTrack.children[0] as HTMLElement;
+      if (!firstCard) return 0;
+      const computedStyle = window.getComputedStyle(firstCard);
+      const marginRight = parseFloat(computedStyle.marginRight) || 0;
+      return firstCard.offsetWidth + marginRight + 24; // 24px is the gap
     };
 
     const goToPrev = () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
+      const cardWidth = getCardWidth();
+      const cardsPerView = getCardsPerView();
+      const scrollAmount = cardWidth * cardsPerView;
+      carouselTrack.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
     };
 
     const goToNext = () => {
+      const cardWidth = getCardWidth();
       const cardsPerView = getCardsPerView();
-      if (currentIndex < totalCards - cardsPerView) {
-        currentIndex++;
-        updateCarousel();
-      }
+      const scrollAmount = cardWidth * cardsPerView;
+      carouselTrack.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
     };
 
     // Event listeners
