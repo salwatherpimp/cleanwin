@@ -890,19 +890,20 @@ export default function CleanWinPage() {
               </div>
             </a>
 
-                        {/* Unterhaltsreinigung */}
+                                    {/* Unterhaltsreinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/unterhaltsreinigung"
+              className="service-card"
               style={{
+                position: "relative",
                 backgroundColor: "white",
-                borderRadius: "8px",
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                color: "rgb(0, 0, 238)",
-                cursor: "pointer",
+                borderRadius: "16px",
+                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                 overflow: "hidden",
                 textDecoration: "none",
-                transition: "all 0.3s",
+                transition: "all 0.3s ease",
                 display: "block",
+                height: "280px",
               }}
             >
               <div style={{ position: "relative", overflow: "hidden" }}>
