@@ -3054,9 +3054,9 @@ export default function CleanWinPage() {
             width: 100% !important;
           }
 
-                                        .grid-mobile-logos > div {
+                                                  .grid-mobile-logos > div {
             flex-shrink: 0 !important;
-            animation: scroll-logos 15s linear infinite !important;
+            animation: scroll-logos 19s linear infinite !important;
           }
           .logo-container-mobile {
             width: 80px !important;
