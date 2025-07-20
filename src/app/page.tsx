@@ -319,7 +319,7 @@ export default function CleanWinPage() {
             padding: "0 16px",
           }}
         >
-                    <div
+          <div
             className="grid-mobile-3"
             style={{
               display: "grid",
@@ -328,7 +328,6 @@ export default function CleanWinPage() {
               alignItems: "center",
             }}
           >
-            <div className="usp-mobile-scroll">
             {/* Pricing Card */}
             <div
               style={{
@@ -2842,22 +2841,9 @@ export default function CleanWinPage() {
             grid-template-columns: 1fr !important;
             gap: 32px !important;
           }
-                    .grid-mobile-3 {
-            display: block !important;
-            overflow: hidden !important;
-            width: 100% !important;
-          }
-
-          .usp-mobile-scroll {
-            display: flex !important;
-            gap: 24px !important;
-            animation: usp-scroll 25s linear infinite !important;
-            width: calc(200% + 24px) !important;
-          }
-
-          .usp-card-mobile {
-            min-width: 280px !important;
-            flex-shrink: 0 !important;
+          .grid-mobile-3 {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
           }
           .grid-mobile-logos {
             grid-template-columns: repeat(2, 1fr) !important;
@@ -2921,12 +2907,6 @@ export default function CleanWinPage() {
             min-width: 32% !important;
             max-width: 380px !important;
           }
-        }
-
-                /* USP Mobile Auto-Scroll Animation */
-        @keyframes usp-scroll {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
         }
 
         /* Navigation Button Hover Effects */
