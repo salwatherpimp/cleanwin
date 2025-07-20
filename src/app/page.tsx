@@ -1450,7 +1450,7 @@ export default function CleanWinPage() {
                   flex: "1",
                 }}
               >
-                Wir sind in Winterthur zuhause. Persönlich, nah und immer für
+                Wir sind in Winterthur zuhause. Persönlich, nah und immer f��r
                 Sie erreichbar.
               </p>
             </div>
@@ -1705,7 +1705,7 @@ export default function CleanWinPage() {
         </div>
             </section>
 
-      {/* Customer Reviews Carousel Section */}
+            {/* Customer Reviews Carousel Section */}
       <section
         style={{
           backgroundColor: "#ffffff",
@@ -1715,9 +1715,9 @@ export default function CleanWinPage() {
       >
         <div
           style={{
-            maxWidth: "1200px",
+            maxWidth: "1440px",
             margin: "0 auto",
-            padding: "0 24px",
+            padding: "0 16px",
           }}
         >
           {/* Section Title */}
@@ -1748,16 +1748,15 @@ export default function CleanWinPage() {
             </p>
           </div>
 
-          {/* Carousel Container */}
+          {/* Horizontal Scrollable Carousel */}
           <div style={{ position: "relative" }}>
-            {/* Carousel Track */}
             <div
-              className="carousel-track"
+              className="carousel-container"
               style={{
                 display: "flex",
-                gap: "24px",
                 overflowX: "auto",
-                scrollBehavior: "smooth",
+                scrollSnapType: "x mandatory",
+                gap: "16px",
                 paddingBottom: "8px",
                 scrollbarWidth: "none",
                 msOverflowStyle: "none",
@@ -1767,7 +1766,9 @@ export default function CleanWinPage() {
               <div
                 className="review-card"
                 style={{
-                  minWidth: "300px",
+                  flexShrink: 0,
+                  scrollSnapAlign: "start",
+                  width: "100%",
                   backgroundColor: "white",
                   borderRadius: "16px",
                   padding: "24px",
@@ -1778,39 +1779,40 @@ export default function CleanWinPage() {
                   gap: "16px",
                 }}
               >
-                {/* Header with Avatar and Rating */}
+                {/* Avatar and Rating Section */}
                 <div
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     gap: "16px",
                   }}
                 >
                   {/* Avatar */}
                   <div
                     style={{
-                      width: "48px",
-                      height: "48px",
+                      width: "40px",
+                      height: "40px",
                       backgroundColor: "#10a0a4",
                       borderRadius: "50%",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
-                      fontSize: "18px",
-                      fontWeight: "600",
+                      fontSize: "16px",
+                      fontWeight: "700",
                       flexShrink: 0,
                     }}
                   >
                     U
                   </div>
 
-                  {/* Rating Section */}
+                  {/* Rating Section - Stacked vertically */}
                   <div
                     style={{
                       display: "flex",
                       flexDirection: "column",
                       gap: "4px",
+                      alignItems: "center",
                     }}
                   >
                     {/* 5 Stars */}
@@ -1865,8 +1867,7 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "700",
                     color: "#111827",
-                    borderTop: "1px solid #f3f4f6",
-                    paddingTop: "16px",
+                    marginTop: "8px",
                   }}
                 >
                   Ursula Wirtz
@@ -1877,7 +1878,9 @@ export default function CleanWinPage() {
               <div
                 className="review-card"
                 style={{
-                  minWidth: "300px",
+                  flexShrink: 0,
+                  scrollSnapAlign: "start",
+                  width: "100%",
                   backgroundColor: "white",
                   borderRadius: "16px",
                   padding: "24px",
@@ -1888,39 +1891,40 @@ export default function CleanWinPage() {
                   gap: "16px",
                 }}
               >
-                {/* Header with Avatar and Rating */}
+                {/* Avatar and Rating Section */}
                 <div
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     gap: "16px",
                   }}
                 >
                   {/* Avatar */}
                   <div
                     style={{
-                      width: "48px",
-                      height: "48px",
+                      width: "40px",
+                      height: "40px",
                       backgroundColor: "#10a0a4",
                       borderRadius: "50%",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
-                      fontSize: "18px",
-                      fontWeight: "600",
+                      fontSize: "16px",
+                      fontWeight: "700",
                       flexShrink: 0,
                     }}
                   >
                     J
                   </div>
 
-                  {/* Rating Section */}
+                  {/* Rating Section - Stacked vertically */}
                   <div
                     style={{
                       display: "flex",
                       flexDirection: "column",
                       gap: "4px",
+                      alignItems: "center",
                     }}
                   >
                     {/* 5 Stars */}
@@ -1975,8 +1979,7 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "700",
                     color: "#111827",
-                    borderTop: "1px solid #f3f4f6",
-                    paddingTop: "16px",
+                    marginTop: "8px",
                   }}
                 >
                   Johanna Kelts
@@ -1987,7 +1990,9 @@ export default function CleanWinPage() {
               <div
                 className="review-card"
                 style={{
-                  minWidth: "300px",
+                  flexShrink: 0,
+                  scrollSnapAlign: "start",
+                  width: "100%",
                   backgroundColor: "white",
                   borderRadius: "16px",
                   padding: "24px",
@@ -1998,39 +2003,40 @@ export default function CleanWinPage() {
                   gap: "16px",
                 }}
               >
-                {/* Header with Avatar and Rating */}
+                {/* Avatar and Rating Section */}
                 <div
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     gap: "16px",
                   }}
                 >
                   {/* Avatar */}
                   <div
                     style={{
-                      width: "48px",
-                      height: "48px",
+                      width: "40px",
+                      height: "40px",
                       backgroundColor: "#10a0a4",
                       borderRadius: "50%",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
-                      fontSize: "18px",
-                      fontWeight: "600",
+                      fontSize: "16px",
+                      fontWeight: "700",
                       flexShrink: 0,
                     }}
                   >
                     F
                   </div>
 
-                  {/* Rating Section */}
+                  {/* Rating Section - Stacked vertically */}
                   <div
                     style={{
                       display: "flex",
                       flexDirection: "column",
                       gap: "4px",
+                      alignItems: "center",
                     }}
                   >
                     {/* 5 Stars */}
@@ -2085,8 +2091,7 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "700",
                     color: "#111827",
-                    borderTop: "1px solid #f3f4f6",
-                    paddingTop: "16px",
+                    marginTop: "8px",
                   }}
                 >
                   Franz Achtenberg
@@ -2097,7 +2102,9 @@ export default function CleanWinPage() {
               <div
                 className="review-card"
                 style={{
-                  minWidth: "300px",
+                  flexShrink: 0,
+                  scrollSnapAlign: "start",
+                  width: "100%",
                   backgroundColor: "white",
                   borderRadius: "16px",
                   padding: "24px",
@@ -2108,39 +2115,40 @@ export default function CleanWinPage() {
                   gap: "16px",
                 }}
               >
-                {/* Header with Avatar and Rating */}
+                {/* Avatar and Rating Section */}
                 <div
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     gap: "16px",
                   }}
                 >
                   {/* Avatar */}
                   <div
                     style={{
-                      width: "48px",
-                      height: "48px",
+                      width: "40px",
+                      height: "40px",
                       backgroundColor: "#10a0a4",
                       borderRadius: "50%",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
-                      fontSize: "18px",
-                      fontWeight: "600",
+                      fontSize: "16px",
+                      fontWeight: "700",
                       flexShrink: 0,
                     }}
                   >
                     M
                   </div>
 
-                  {/* Rating Section */}
+                  {/* Rating Section - Stacked vertically */}
                   <div
                     style={{
                       display: "flex",
                       flexDirection: "column",
                       gap: "4px",
+                      alignItems: "center",
                     }}
                   >
                     {/* 5 Stars */}
@@ -2195,8 +2203,7 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "700",
                     color: "#111827",
-                    borderTop: "1px solid #f3f4f6",
-                    paddingTop: "16px",
+                    marginTop: "8px",
                   }}
                 >
                   Maria Schneider
@@ -2207,7 +2214,9 @@ export default function CleanWinPage() {
               <div
                 className="review-card"
                 style={{
-                  minWidth: "300px",
+                  flexShrink: 0,
+                  scrollSnapAlign: "start",
+                  width: "100%",
                   backgroundColor: "white",
                   borderRadius: "16px",
                   padding: "24px",
@@ -2218,39 +2227,40 @@ export default function CleanWinPage() {
                   gap: "16px",
                 }}
               >
-                {/* Header with Avatar and Rating */}
+                {/* Avatar and Rating Section */}
                 <div
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     gap: "16px",
                   }}
                 >
                   {/* Avatar */}
                   <div
                     style={{
-                      width: "48px",
-                      height: "48px",
+                      width: "40px",
+                      height: "40px",
                       backgroundColor: "#10a0a4",
                       borderRadius: "50%",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
-                      fontSize: "18px",
-                      fontWeight: "600",
+                      fontSize: "16px",
+                      fontWeight: "700",
                       flexShrink: 0,
                     }}
                   >
                     P
                   </div>
 
-                  {/* Rating Section */}
+                  {/* Rating Section - Stacked vertically */}
                   <div
                     style={{
                       display: "flex",
                       flexDirection: "column",
                       gap: "4px",
+                      alignItems: "center",
                     }}
                   >
                     {/* 5 Stars */}
@@ -2305,83 +2315,12 @@ export default function CleanWinPage() {
                     fontSize: "14px",
                     fontWeight: "700",
                     color: "#111827",
-                    borderTop: "1px solid #f3f4f6",
-                    paddingTop: "16px",
+                    marginTop: "8px",
                   }}
                 >
                   Peter Weber
                 </div>
               </div>
-            </div>
-
-            {/* Navigation Arrows */}
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "12px",
-                marginTop: "32px",
-              }}
-            >
-              <button
-                className="carousel-prev"
-                style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "50%",
-                  backgroundColor: "white",
-                  border: "2px solid #e5e7eb",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: "pointer",
-                  transition: "all 0.2s",
-                  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-                }}
-              >
-                <svg
-                  style={{
-                    width: "20px",
-                    height: "20px",
-                    color: "#6b7280",
-                  }}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                className="carousel-next"
-                style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "50%",
-                  backgroundColor: "white",
-                  border: "2px solid #e5e7eb",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: "pointer",
-                  transition: "all 0.2s",
-                  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-                }}
-              >
-                <svg
-                  style={{
-                    width: "20px",
-                    height: "20px",
-                    color: "#6b7280",
-                  }}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
           </div>
         </div>
@@ -2696,7 +2635,7 @@ export default function CleanWinPage() {
             >
               © 2025 CleanWin. Alle Rechte vorbehalten.
               <br />
-              Gemacht mit ♥️ in Winterthur
+              Gemacht mit ��️ in Winterthur
             </div>
             <a
               href="https://cleanwin.vercel.app/datenschutz"
