@@ -46,9 +46,11 @@ export default function CleanWinPage() {
           src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1200,h_600,c_fill,f_auto,q_auto/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
           alt="CleanWin Hero Background"
           fill
-          style={{
+                    style={{
             objectFit: "cover",
             objectPosition: "60% 50%",
+            width: "100%",
+            height: "100%",
           }}
         />
 
