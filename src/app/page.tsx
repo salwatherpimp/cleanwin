@@ -3239,89 +3239,100 @@ export default function CleanWinPage() {
         </div>
       </section>
 
-            {/* Footer */}
-      <footer className="footer-section">
-        <div className="footer-container">
-          <div className="footer-grid">
+                  {/* Footer */}
+      <footer className="bg-[#343b3e] text-white py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Column 1: Company Info */}
-            <div className="footer-column">
-              <h3 className="footer-company-name">CleanWin GmbH</h3>
-              <div className="footer-address">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white">CleanWin GmbH</h3>
+              <div className="text-gray-100 text-sm space-y-1">
                 <div>Rychenbergstrasse 223</div>
                 <div>8404 Winterthur</div>
                 <div>Schweiz</div>
               </div>
 
-              <div className="footer-contact">
-                <a href="tel:+41762288071" className="footer-phone">
-                  <svg className="footer-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <div className="space-y-2">
+                <a href="tel:+41762288071" className="flex items-center gap-2 text-gray-100 hover:text-white transition-colors text-sm">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
                   </svg>
                   +41 76 228 80 71
                 </a>
-                <a href="mailto:info@cleanwin.ch" className="footer-email">
+                <a href="mailto:info@cleanwin.ch" className="text-gray-100 hover:text-white transition-colors text-sm block">
                   info@cleanwin.ch
                 </a>
               </div>
 
-              {/* Social Icons */}
-              <div className="footer-social">
-                <a href="https://www.instagram.com/cleanwin.ch/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
-                  <svg className="footer-social-icon" viewBox="0 0 24 24" fill="currentColor">
+              {/* Social Icons - Horizontal on mobile */}
+              <div className="flex gap-4">
+                <a href="https://www.instagram.com/cleanwin.ch/" target="_blank" rel="noopener noreferrer"
+                   className="text-gray-100 hover:text-white transition-colors" aria-label="Instagram">
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                   </svg>
                 </a>
-                <a href="https://www.facebook.com/reinigungwinterthur/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
-                  <svg className="footer-social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://www.facebook.com/reinigungwinterthur/" target="_blank" rel="noopener noreferrer"
+                   className="text-gray-100 hover:text-white transition-colors" aria-label="Facebook">
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
               </div>
             </div>
 
-            {/* Column 2: Services */}
-            <div className="footer-column">
-              <h4 className="footer-heading">Leistungen</h4>
-              <div className="footer-links">
-                <a href="https://cleanwin.vercel.app/leistungen/fensterreinigung" className="footer-link">Fensterreinigung</a>
-                <a href="https://cleanwin.vercel.app/leistungen/unterhaltsreinigung" className="footer-link">Unterhaltsreinigung</a>
-                <a href="https://cleanwin.vercel.app/leistungen/fassadenreinigung" className="footer-link">Fassadenreinigung</a>
-                <a href="https://cleanwin.vercel.app/leistungen/umzugsreinigung" className="footer-link">Umzugsreinigung</a>
-                <a href="https://cleanwin.vercel.app/leistungen/baureinigung" className="footer-link">Baureinigung</a>
-                <a href="https://cleanwin.vercel.app/leistungen/solarpanel-reinigen" className="footer-link">Solarpanel reinigen</a>
+            {/* Column 2: Services with Collapsible Section */}
+            <div className="space-y-4">
+              {/* Collapsible Services Section */}
+              <details className="group">
+                <summary className="flex items-center gap-2 cursor-pointer text-lg font-semibold text-white list-none">
+                  <svg className="w-4 h-4 transition-transform group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                  </svg>
+                  Leistungen
+                </summary>
+                <ul className="mt-3 space-y-2 ml-6">
+                  <li><a href="https://cleanwin.vercel.app/leistungen/fensterreinigung" className="text-gray-100 hover:text-white transition-colors text-sm">Fensterreinigung</a></li>
+                  <li><a href="https://cleanwin.vercel.app/leistungen/unterhaltsreinigung" className="text-gray-100 hover:text-white transition-colors text-sm">Unterhaltsreinigung</a></li>
+                  <li><a href="https://cleanwin.vercel.app/leistungen/fassadenreinigung" className="text-gray-100 hover:text-white transition-colors text-sm">Fassadenreinigung</a></li>
+                  <li><a href="https://cleanwin.vercel.app/leistungen/umzugsreinigung" className="text-gray-100 hover:text-white transition-colors text-sm">Umzugsreinigung</a></li>
+                  <li><a href="https://cleanwin.vercel.app/leistungen/baureinigung" className="text-gray-100 hover:text-white transition-colors text-sm">Baureinigung</a></li>
+                  <li><a href="https://cleanwin.vercel.app/leistungen/solarpanel-reinigen" className="text-gray-100 hover:text-white transition-colors text-sm">Solarpanel reinigen</a></li>
+                </ul>
+              </details>
+
+              {/* Separate Links Below */}
+              <div className="space-y-2">
+                <a href="https://cleanwin.vercel.app/ueber-uns" className="block text-gray-100 hover:text-white transition-colors text-sm">Über uns</a>
+                <a href="https://cleanwin.vercel.app/referenzen" className="block text-gray-100 hover:text-white transition-colors text-sm">Referenzen</a>
               </div>
             </div>
 
-            {/* Column 3: Main Links */}
-            <div className="footer-column">
-              <div className="footer-links footer-main-links">
-                <a href="https://cleanwin.vercel.app/ueber-uns" className="footer-link">Über uns</a>
-                <a href="https://cleanwin.vercel.app/referenzen" className="footer-link">Referenzen</a>
-              </div>
-            </div>
+            {/* Column 3: Empty for layout balance */}
+            <div className="hidden lg:block"></div>
 
-            {/* Column 4: Service Areas */}
-            <div className="footer-column">
-              <h4 className="footer-heading">Unsere Servicegebiete</h4>
-              <div className="footer-links">
-                <span className="footer-text">Fensterreinigung Region Winterthur</span>
-                <span className="footer-text">Unterhaltsreinigung Region Winterthur</span>
-                <span className="footer-text">Fassadenreinigung Region Winterthur</span>
-                <span className="footer-text">Umzugsreinigung Region Winterthur</span>
-                <span className="footer-text">Baureinigung Region Winterthur</span>
-                <span className="footer-text">Solarpanel Reinigen Region Winterthur</span>
+            {/* Column 4: Service Areas (Keep as-is) */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-white">Unsere Servicegebiete</h4>
+              <div className="space-y-2">
+                <span className="block text-gray-100 text-sm">Fensterreinigung Region Winterthur</span>
+                <span className="block text-gray-100 text-sm">Unterhaltsreinigung Region Winterthur</span>
+                <span className="block text-gray-100 text-sm">Fassadenreinigung Region Winterthur</span>
+                <span className="block text-gray-100 text-sm">Umzugsreinigung Region Winterthur</span>
+                <span className="block text-gray-100 text-sm">Baureinigung Region Winterthur</span>
+                <span className="block text-gray-100 text-sm">Solarpanel Reinigen Region Winterthur</span>
               </div>
             </div>
           </div>
 
           {/* Bottom Section */}
-          <div className="footer-bottom">
-            <div className="footer-copyright">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-6 border-t border-gray-600">
+            <div className="text-gray-100 text-sm">
               © 2025 CleanWin. Alle Rechte vorbehalten.
               <br />
               Gemacht mit ♥️ in Winterthur
             </div>
-            <a href="https://cleanwin.vercel.app/datenschutz" className="footer-link">
+            <a href="https://cleanwin.vercel.app/datenschutz" className="text-gray-100 hover:text-white transition-colors text-sm">
               Datenschutzerklärung
             </a>
           </div>
