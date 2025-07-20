@@ -1208,8 +1208,7 @@ export default function CleanWinPage() {
                     marginTop: "0px",
                   }}
                 >
-                  Erfahren Sie mehr ��ber unsere Zusatzleistungen und
-                  Spezialdienste.
+                                    Professionelle Reinigung für maximale Effizienz Ihrer Solaranlage.
                 </p>
               </div>
             </a>
