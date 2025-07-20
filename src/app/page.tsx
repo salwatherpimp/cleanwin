@@ -1876,8 +1876,10 @@ export default function CleanWinPage() {
               </p>
             </div>
 
-            {/* Sustainable & Gentle Card */}
+                        {/* Sustainable & Gentle Card */}
             <div
+              className="cleanwin-value-card"
+              onClick={() => handleCardClick(2)}
               style={{
                 backdropFilter: "blur(4px)",
                 backgroundColor: "rgba(255, 255, 255, 0.9)",
@@ -1889,6 +1891,7 @@ export default function CleanWinPage() {
                 display: "flex",
                 flexDirection: "column",
                 overflow: "hidden",
+                cursor: "pointer",
               }}
             >
               <div
@@ -1901,50 +1904,89 @@ export default function CleanWinPage() {
                   minHeight: "44px",
                 }}
               >
-                <h3
-                  style={{
-                    color: "#111827",
-                    fontSize: "18px",
-                    lineHeight: "22px",
-                    fontWeight: "600",
-                    flexGrow: 1,
-                  }}
-                >
-                  Nachhaltig & schonend
-                </h3>
                 <div
                   style={{
                     display: "flex",
                     alignItems: "center",
+                    gap: "12px",
+                    flexGrow: 1,
+                  }}
+                >
+                  <div
+                    className="mobile-card-icon"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "40px",
+                      height: "40px",
+                      backgroundColor: "#F3F4F6",
+                      borderRadius: "50%",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <svg
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                        color: "#40d5ac",
+                        stroke: "#40d5ac",
+                        strokeWidth: "2px",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        fill: "none",
+                      }}
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 1s-3 3-3 8c0 2 1 4 3 4s3-2 3-4c0-5-3-8-3-8z" />
+                      <path d="M12 17v6" />
+                      <path d="M9 20h6" />
+                    </svg>
+                  </div>
+                  <h3
+                    style={{
+                      color: "#111827",
+                      fontSize: "18px",
+                      lineHeight: "22px",
+                      fontWeight: "600",
+                      margin: 0,
+                    }}
+                  >
+                    Nachhaltig & schonend
+                  </h3>
+                </div>
+                <div
+                  className="mobile-toggle-icon"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
                     justifyContent: "center",
-                    width: "40px",
-                    height: "40px",
-                    backgroundColor: "#F3F4F6",
-                    borderRadius: "50%",
+                    width: "24px",
+                    height: "24px",
                     flexShrink: 0,
-                    marginLeft: "12px",
                   }}
                 >
                   <svg
                     style={{
-                      width: "20px",
-                      height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      width: "16px",
+                      height: "16px",
+                      color: "#6b7280",
+                      stroke: "#6b7280",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
                       fill: "none",
+                      transition: "transform 0.2s ease",
+                      transform: expandedCard === 2 ? "rotate(45deg)" : "rotate(0deg)",
                     }}
                     viewBox="0 0 24 24"
                   >
-                    <path d="M12 1s-3 3-3 8c0 2 1 4 3 4s3-2 3-4c0-5-3-8-3-8z" />
-                    <path d="M12 17v6" />
-                    <path d="M9 20h6" />
+                    <path d="M12 5v14M5 12h14" />
                   </svg>
                 </div>
               </div>
               <p
+                className={`mobile-card-content ${expandedCard === 2 ? 'expanded' : ''}`}
                 style={{
                   color: "#4b5563",
                   fontSize: "13px",
