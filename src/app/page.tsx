@@ -1115,7 +1115,7 @@ export default function CleanWinPage() {
                       textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
                     }}
                   >
-                    →
+                    ��
                   </span>
                 </div>
               </div>
@@ -2841,9 +2841,22 @@ export default function CleanWinPage() {
             grid-template-columns: 1fr !important;
             gap: 32px !important;
           }
-          .grid-mobile-3 {
-            grid-template-columns: 1fr !important;
-            gap: 16px !important;
+                    .grid-mobile-3 {
+            display: block !important;
+            overflow: hidden !important;
+            width: 100% !important;
+          }
+
+          .usp-mobile-scroll {
+            display: flex !important;
+            gap: 24px !important;
+            animation: usp-scroll 25s linear infinite !important;
+            width: calc(200% + 24px) !important;
+          }
+
+          .usp-card-mobile {
+            min-width: 280px !important;
+            flex-shrink: 0 !important;
           }
           .grid-mobile-logos {
             grid-template-columns: repeat(2, 1fr) !important;
