@@ -622,12 +622,12 @@ export default function PillNavigation() {
             display: none;
           }
 
-          .pill-nav-mobile {
+                    .pill-nav-mobile {
             display: flex;
           }
 
           .pill-nav {
-            padding: 8px 16px;
+            padding: 0;
           }
         }
 
