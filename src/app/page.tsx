@@ -3130,10 +3130,10 @@ export default function CleanWinPage() {
           100% { transform: translateX(-1368px); }
         }
 
-                                        /* Apply logo animation to all viewports */
+                                                /* Apply logo animation to all viewports */
         .grid-mobile-logos > div {
           flex-shrink: 0 !important;
-          animation: scroll-logos 19s linear infinite !important;
+          animation: scroll-logos 35s linear infinite !important;
         }
 
         /* Navigation Button Hover Effects */
