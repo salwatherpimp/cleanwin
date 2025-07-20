@@ -1172,7 +1172,7 @@ export default function CleanWinPage() {
             >
               <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
                 <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1748417852/farbxpress-spritzen_ij8jsj.avif"
+                                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752182062/dobiinter_A_construction_worker_in_work_boots_and_jeans_clean_8a86ab98-84bb-4372-a0bf-a47a89c60230_1_lnfpsa.avif"
                   alt="Baureinigung"
                   fill
                   style={{
