@@ -433,21 +433,22 @@ export default function PillNavigation() {
           position: relative;
         }
 
-                .pill-nav-cta-mobile {
+                        .pill-nav-cta-mobile {
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 4px;
           background: #0DA6A6;
           color: white;
           border: none;
-          padding: 14px 20px;
+          padding: 8px 16px;
           border-radius: 20px;
           font-weight: 600;
           font-size: 14px;
           cursor: pointer;
           transition: all 0.2s ease;
           white-space: nowrap;
-          min-height: 44px;
+          max-height: 44px;
+          height: 40px;
         }
 
         .pill-nav-cta-mobile:hover {
