@@ -2459,38 +2459,19 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
-                  <img
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/jganz_vjllm7.avif"
-                    alt="Jeanine Ganz"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                      flexShrink: 0,
-                    }}
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.nextSibling.style.display = "flex";
-                    }}
-                  />
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      backgroundColor: "#10a0a4",
-                      borderRadius: "50%",
-                      display: "none",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: "700",
-                      flexShrink: 0,
-                    }}
-                  >
-                    JG
-                  </div>
+                                    <div style={{ position: "relative", width: "40px", height: "40px" }}>
+                    <Image
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/jganz_vjllm7.avif"
+                      alt="Jeanine Ganz"
+                      width={40}
+                      height={40}
+                      style={{
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        flexShrink: 0,
+                      }}
+                    />
+                                    </div>
 
                   {/* Rating Section - Stacked vertically */}
                   <div
@@ -2544,7 +2525,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Sehr freundlicher, unkomplizierter und qualitativ einwandfreier Service. Die Endreinigung der Wohnung wurde ohne Beanstandung abgenommen..."
+                                    &quot;                  &quot;Sehr freundlicher, unkomplizierter und qualitativ einwandfreier Service. Die Endreinigung der Wohnung wurde ohne Beanstandung abgenommen...&quot;&quot;
                 </div>
 
                 {/* Author Name */}
@@ -2586,38 +2567,19 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
-                  <img
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/albert_1_sionfn.avif"
-                    alt="Albert Radamonti"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                      flexShrink: 0,
-                    }}
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.nextSibling.style.display = "flex";
-                    }}
-                  />
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      backgroundColor: "#10a0a4",
-                      borderRadius: "50%",
-                      display: "none",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: "700",
-                      flexShrink: 0,
-                    }}
-                  >
-                    AR
-                  </div>
+                                    <div style={{ position: "relative", width: "40px", height: "40px" }}>
+                    <Image
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/albert_1_sionfn.avif"
+                      alt="Albert Radamonti"
+                      width={40}
+                      height={40}
+                      style={{
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        flexShrink: 0,
+                      }}
+                    />
+                                    </div>
 
                   {/* Rating Section - Stacked vertically */}
                   <div
@@ -2671,7 +2633,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Super Service und einwandfreie Erledigung. Preis-Leistung ist top! Einfache Abwicklung, günstiger Preis und saubere Arbeit mit..."
+                                    &quot;Super Service und einwandfreie Erledigung. Preis-Leistung ist top! Einfache Abwicklung, günstiger Preis und saubere Arbeit mit...&quot;
                 </div>
 
                 {/* Author Name */}
@@ -2713,38 +2675,19 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
-                  <img
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/renato_zhinmm.avif"
-                    alt="Gerussi Renato"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                      flexShrink: 0,
-                    }}
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.nextSibling.style.display = "flex";
-                    }}
-                  />
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      backgroundColor: "#10a0a4",
-                      borderRadius: "50%",
-                      display: "none",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: "700",
-                      flexShrink: 0,
-                    }}
-                  >
-                    GR
-                  </div>
+                                    <div style={{ position: "relative", width: "40px", height: "40px" }}>
+                    <Image
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/renato_zhinmm.avif"
+                      alt="Gerussi Renato"
+                      width={40}
+                      height={40}
+                      style={{
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        flexShrink: 0,
+                      }}
+                    />
+                                    </div>
 
                   {/* Rating Section - Stacked vertically */}
                   <div
@@ -2798,7 +2741,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Die Endreinigung war perfekt, inklusive Wohnungsabgabe. Herr Polli arbeitet nicht nur effektiv, er ist auch ausgesprochen sympathisch. Der Preis..."
+                                    &quot;Die Endreinigung war perfekt, inklusive Wohnungsabgabe. Herr Polli arbeitet nicht nur effektiv, er ist auch ausgesprochen sympathisch. Der Preis...&quot;
                 </div>
 
                 {/* Author Name */}
@@ -2840,38 +2783,19 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
-                  <img
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/rkater_1_tkyxzs.avif"
-                    alt="Roter Kater"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                      flexShrink: 0,
-                    }}
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.nextSibling.style.display = "flex";
-                    }}
-                  />
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      backgroundColor: "#10a0a4",
-                      borderRadius: "50%",
-                      display: "none",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: "700",
-                      flexShrink: 0,
-                    }}
-                  >
-                    RK
-                  </div>
+                                    <div style={{ position: "relative", width: "40px", height: "40px" }}>
+                    <Image
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/rkater_1_tkyxzs.avif"
+                      alt="Roter Kater"
+                      width={40}
+                      height={40}
+                      style={{
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        flexShrink: 0,
+                      }}
+                    />
+                                    </div>
 
                   {/* Rating Section - Stacked vertically */}
                   <div
@@ -2925,7 +2849,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal."
+                                    &quot;Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal.&quot;
                 </div>
 
                 {/* Author Name */}
@@ -2967,37 +2891,19 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
-                  <img
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/nikolac_1_t1tzdu.avif"
-                    alt="Nikola C"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                      flexShrink: 0,
-                    }}
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.nextSibling.style.display = "flex";
-                    }}
-                  />
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      backgroundColor: "#10a0a4",
-                      borderRadius: "50%",
-                      display: "none",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "16px",
-                      fontWeight: "700",
-                      flexShrink: 0,
-                    }}
-                  >
-                    NC
+                                    <div style={{ position: "relative", width: "40px", height: "40px" }}>
+                    <Image
+                      src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/nikolac_1_t1tzdu.avif"
+                      alt="Nikola C"
+                      width={40}
+                      height={40}
+                      style={{
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        flexShrink: 0,
+                      }}
+                    />
+                                    </div>
                   </div>
 
                   {/* Rating Section - Stacked vertically */}
@@ -3052,7 +2958,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "TOP ZUFRIEDENHEIT. Wir waren mit der Endreinigung sehr zufrieden - unsere erste offizielle Wohnungsübergabe und alles verlief dank der super Reinigung bestens..."
+                                    &quot;TOP ZUFRIEDENHEIT. Wir waren mit der Endreinigung sehr zufrieden - unsere erste offizielle Wohnungsübergabe und alles verlief dank der super Reinigung bestens...&quot;
                 </div>
 
                 {/* Author Name */}
