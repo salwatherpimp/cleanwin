@@ -3320,7 +3320,67 @@ export default function CleanWinPage() {
 
         #carousel-prev:hover svg,
         #carousel-next:hover svg {
-          color: #10a0a4 !important;
+                    color: #10a0a4 !important;
+        }
+
+        /* Mobile Accordion Styles for Cleanwin Values Section */
+        @media (max-width: 767px) {
+          .cleanwin-values-container {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 12px !important;
+          }
+
+          .cleanwin-value-card {
+            height: auto !important;
+            min-height: 60px !important;
+            transition: all 0.3s ease !important;
+          }
+
+          .cleanwin-value-card .mobile-card-icon {
+            display: flex !important;
+          }
+
+          .cleanwin-value-card .mobile-toggle-icon {
+            display: flex !important;
+          }
+
+          .mobile-card-content {
+            display: none !important;
+            margin-top: 12px !important;
+            padding-top: 12px !important;
+            border-top: 1px solid #e5e7eb !important;
+          }
+
+          .mobile-card-content.expanded {
+            display: block !important;
+            animation: slideDown 0.3s ease !important;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .cleanwin-value-card .mobile-card-icon {
+            display: none !important;
+          }
+
+          .cleanwin-value-card .mobile-toggle-icon {
+            display: none !important;
+          }
+
+          .cleanwin-value-card {
+            cursor: default !important;
+          }
+        }
+
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            max-height: 0;
+          }
+          to {
+            opacity: 1;
+            max-height: 200px;
+          }
         }
       `}</style>
     </div>
