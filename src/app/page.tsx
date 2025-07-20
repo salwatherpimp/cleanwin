@@ -312,7 +312,7 @@ export default function CleanWinPage() {
           overflow: "hidden",
         }}
       >
-        <div
+                <div
           style={{
             maxWidth: "1152px",
             margin: "0 auto",
@@ -320,7 +320,7 @@ export default function CleanWinPage() {
           }}
         >
           <div
-            className="grid-mobile-3"
+            className="usp-container"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
@@ -328,6 +328,8 @@ export default function CleanWinPage() {
               alignItems: "center",
             }}
           >
+            <div className="usp-track">
+              <div className="usp-cards">
             {/* Pricing Card */}
             <div
               style={{
