@@ -282,10 +282,11 @@ export default function CleanWinPage() {
             </div>
           </div>
 
-          {/* CTA Button */}
+                    {/* CTA Button */}
           <div>
             <a
               href="#contact"
+              className="hero-cta-button"
               style={{
                 display: "inline-block",
                 backgroundColor: "white",
@@ -297,7 +298,7 @@ export default function CleanWinPage() {
                 textDecoration: "none",
                 cursor: "pointer",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 25px -5px",
-                transition: "all 0.3s",
+                transition: "all 0.2s ease",
               }}
             >
               Jetzt unverbindlich kontaktieren
@@ -575,11 +576,12 @@ export default function CleanWinPage() {
               >
                 Seit über zehn Jahren steht Cleanwin für gründliche, faire und nachhaltige Reinigungsdienstleistungen im Grossraum Winterthur. Ob Fensterreinigung, Fassadenpflege oder Umzugsreinigung - wir bringen Erfahrung, Sorgfalt und Menschlichkeit zusammen. Unsere kostenlose Vor-Ort-Beratung bietet Ihnen maximale Transparenz. Dahinter steht ein geschultes, fair entlöhntes Team, das sich mit Engagement und Fachwissen für beste Ergebnisse einsetzt.
               </p>
-              <a
+                            <a
                 href="#services"
+                className="about-cta-button"
                 style={{
                   display: "inline-block",
-                  backgroundColor: "#10a0a4",
+                  backgroundColor: "#0DA6A6",
                   color: "white",
                   padding: "12px 32px",
                   borderRadius: "9999px",
@@ -587,7 +589,8 @@ export default function CleanWinPage() {
                   fontWeight: "600",
                   textDecoration: "none",
                   cursor: "pointer",
-                  transition: "background-color 0.3s",
+                  boxShadow: "0 2px 8px rgba(13, 166, 166, 0.3)",
+                  transition: "all 0.2s ease",
                 }}
               >
                 Leistungen Entdecken
@@ -3218,11 +3221,12 @@ export default function CleanWinPage() {
             >
               Cleanwin - persönlich, zuverlässig, hochwertig
             </h2>
-            <a
+                        <a
               href="#contact"
+              className="final-cta-button"
               style={{
                 display: "inline-block",
-                backgroundColor: "#10a0a4",
+                backgroundColor: "#0DA6A6",
                 color: "white",
                 padding: "16px 32px",
                 borderRadius: "9999px",
@@ -3230,7 +3234,8 @@ export default function CleanWinPage() {
                 fontWeight: "600",
                 textDecoration: "none",
                 cursor: "pointer",
-                transition: "all 0.3s",
+                boxShadow: "0 2px 8px rgba(13, 166, 166, 0.3)",
+                transition: "all 0.2s ease",
               }}
             >
               Jetzt unverbindlich kontaktieren
@@ -3795,6 +3800,26 @@ export default function CleanWinPage() {
             flex-direction: row !important;
             display: flex !important;
           }
+                }
+
+        /* CTA Button Hover Effects */
+        .hero-cta-button:hover {
+          background: #f3f4f6 !important;
+          color: #0DA6A6 !important;
+          transform: translateY(-1px) !important;
+          box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
+        }
+
+        .about-cta-button:hover {
+          background: #0b8d8d !important;
+          transform: translateY(-1px) !important;
+          box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
+        }
+
+        .final-cta-button:hover {
+          background: #0b8d8d !important;
+          transform: translateY(-1px) !important;
+          box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
         }
       `}</style>
     </div>
