@@ -509,23 +509,8 @@ export default function PillNavigation() {
           transform: translateX(-50%) translateY(0);
         }
 
-        .pill-nav-mobile-menu-content {
-          padding: 20px;
-        }
-
-        .pill-nav-mobile-menu-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 20px;
-          padding-bottom: 12px;
-          border-bottom: 1px solid #e5e7eb;
-        }
-
-        .pill-nav-mobile-menu-title {
-          font-weight: 600;
-          font-size: 16px;
-          color: #1f2937;
+                .pill-nav-mobile-menu-content {
+          padding: 24px;
         }
 
         .pill-nav-mobile-menu-close {
