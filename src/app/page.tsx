@@ -330,8 +330,9 @@ export default function CleanWinPage() {
           >
             <div className="usp-track">
               <div className="usp-cards">
-            {/* Pricing Card */}
+                        {/* Pricing Card */}
             <div
+              className="usp-card"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -342,6 +343,8 @@ export default function CleanWinPage() {
                 gap: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.05) 0px 2px 8px 0px",
                 transition: "all 0.3s",
+                minWidth: "280px",
+                flexShrink: 0,
               }}
             >
               <div
