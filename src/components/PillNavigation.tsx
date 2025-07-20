@@ -121,11 +121,11 @@ export default function PillNavigation() {
         <div className="pill-nav-mobile">
           {/* Logo */}
           <a href="https://cleanwin.vercel.app/" className="pill-nav-logo-mobile">
-            <Image
+                        <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="CleanWin Logo"
-              width={140}
-              height={39}
+              width={110}
+              height={30}
               priority
             />
           </a>
