@@ -274,12 +274,13 @@ export default function PillNavigation() {
           gap: 40px;
         }
 
-                .pill-nav-mobile {
+                        .pill-nav-mobile {
           display: none;
           align-items: center;
           justify-content: space-between;
           padding-inline: 16px;
-          min-height: 64px;
+          min-height: 56px;
+          gap: 8px;
         }
 
         .pill-nav-logo {
