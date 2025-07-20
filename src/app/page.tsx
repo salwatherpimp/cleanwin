@@ -1706,15 +1706,7 @@ export default function CleanWinPage() {
       </section>
 
       
-      <section
-        style={{
-          background:
-            "linear-gradient(to right bottom, rgb(237, 221, 229), rgb(247, 242, 245))",
-          padding: "64px 0",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
+      
         <div
           style={{
             maxWidth: "1152px",
