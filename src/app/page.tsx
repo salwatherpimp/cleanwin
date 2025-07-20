@@ -706,14 +706,11 @@ export default function CleanWinPage() {
           >
             +500 Firmen &amp; Haushalte reinigen mit Cleanwin
           </p>
-          <div
+                    <div
             className="grid-mobile-logos"
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(6, 1fr)",
-              gap: "32px",
-              alignItems: "center",
-              justifyItems: "center",
+              overflow: "hidden",
+              width: "100%",
             }}
           >
             <div
