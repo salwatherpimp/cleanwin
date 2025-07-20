@@ -518,7 +518,7 @@ export default function CleanWinPage() {
                 10 Jahren bieten wir umfassende Lösungen für Fensterreinigung,
                 Büroreinigung, Fassadenreinigung und Spezialreinigungen. Unser
                 erfahrenes Team arbeitet mit modernsten Techniken und
-                umweltfreundlichen Produkten, um höchste Qualität und
+                umweltfreundlichen Produkten, um h��chste Qualität und
                 Kundenzufriedenheit zu gewährleisten.
               </p>
               <a
@@ -815,7 +815,7 @@ export default function CleanWinPage() {
                 textDecoration: "none",
                 transition: "all 0.3s ease",
                 display: "block",
-                height: "280px",
+                                height: "168px",
               }}
             >
               <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
@@ -903,7 +903,7 @@ export default function CleanWinPage() {
                 textDecoration: "none",
                 transition: "all 0.3s ease",
                 display: "block",
-                height: "280px",
+                                height: "168px",
               }}
             >
               <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
@@ -991,7 +991,7 @@ export default function CleanWinPage() {
                 textDecoration: "none",
                 transition: "all 0.3s ease",
                 display: "block",
-                height: "280px",
+                                height: "168px",
               }}
             >
               <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
@@ -1079,7 +1079,7 @@ export default function CleanWinPage() {
                 textDecoration: "none",
                 transition: "all 0.3s ease",
                 display: "block",
-                height: "280px",
+                                height: "168px",
               }}
             >
               <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
@@ -1167,7 +1167,7 @@ export default function CleanWinPage() {
                 textDecoration: "none",
                 transition: "all 0.3s ease",
                 display: "block",
-                height: "280px",
+                                height: "168px",
               }}
             >
               <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
@@ -1255,7 +1255,7 @@ export default function CleanWinPage() {
                 textDecoration: "none",
                 transition: "all 0.3s ease",
                 display: "block",
-                height: "280px",
+                                height: "168px",
               }}
             >
               <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
@@ -2579,7 +2579,7 @@ export default function CleanWinPage() {
             >
               © 2025 CleanWin. Alle Rechte vorbehalten.
               <br />
-              Gemacht mit ♥️ in Winterthur
+              Gemacht mit ♥��� in Winterthur
             </div>
             <a
               href="https://cleanwin.vercel.app/datenschutz"
