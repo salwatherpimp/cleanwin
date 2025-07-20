@@ -2106,7 +2106,7 @@ export default function CleanWinPage() {
                     textOverflow: "ellipsis",
                   }}
                 >
-                  "Ich nutze CleanWin seit über einem Jahr für meine Büroräume. Die Reinigungsqualität ist konstant hoch und das Personal ist sehr vertrauenswürdig. Besonders schätze ich die Flexibilität bei Terminabsprachen."
+                  "Ich nutze CleanWin seit über einem Jahr für meine B��roräume. Die Reinigungsqualität ist konstant hoch und das Personal ist sehr vertrauenswürdig. Besonders schätze ich die Flexibilität bei Terminabsprachen."
                 </div>
 
                 <div style={{ fontSize: "14px", fontWeight: "700", color: "#111827" }}>
@@ -2193,8 +2193,22 @@ export default function CleanWinPage() {
                 <div style={{ fontSize: "14px", fontWeight: "700", color: "#111827" }}>
                   — Thomas Zimmermann
                 </div>
-              </div>
-                {/* Card 1 - Ursula Wirtz */}
+                            </div>
+            </div>
+          </div>
+
+          {/* Navigation Info */}
+          <div
+            style={{
+              display: "flex",
+              gap: "16px",
+              justifyContent: "center",
+              marginTop: "32px",
+            }}
+          >
+            <div style={{ color: "#6B7280", fontSize: "14px", textAlign: "center" }}>
+              Nutzen Sie die horizontale Scrollbalken oder wischen Sie auf mobilen Geräten
+            </div>
                 <div
                   style={{
                     minWidth: "33.333%",
