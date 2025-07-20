@@ -498,8 +498,8 @@ export default function PillNavigation() {
           transform-origin: center;
         }
 
-        .hamburger-line.open:nth-child(1) {
-          transform: rotate(45deg) translate(5px, 5px);
+                .hamburger-line.open:nth-child(1) {
+          transform: rotate(45deg) translate(4px, 4px);
         }
 
         .hamburger-line.open:nth-child(2) {
@@ -507,7 +507,7 @@ export default function PillNavigation() {
         }
 
         .hamburger-line.open:nth-child(3) {
-          transform: rotate(-45deg) translate(6px, -6px);
+          transform: rotate(-45deg) translate(5px, -5px);
         }
 
         .pill-nav-mobile-menu {
