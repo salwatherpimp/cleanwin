@@ -202,7 +202,7 @@ export default function PillNavigation() {
           <div className="pill-nav-mobile-menu-separator"></div>
 
           <div className="pill-nav-mobile-menu-services">
-            <h3 className="pill-nav-mobile-menu-section-title">Dienstleistungen</h3>
+                        <h3 className="pill-nav-mobile-menu-section-title">Leistungen</h3>
             {services.map((service, index) => (
               <a
                 key={index}
