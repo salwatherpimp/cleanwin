@@ -2918,9 +2918,15 @@ export default function CleanWinPage() {
         }
 
                 /* USP Mobile Auto-Scroll Animation */
-        @keyframes usp-mobile-scroll {
+                @keyframes usp-mobile-scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(calc(-100% - 24px)); }
+        }
+
+        /* Logo Scroll Animation */
+        @keyframes scroll-logos {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
 
         /* Navigation Button Hover Effects */
