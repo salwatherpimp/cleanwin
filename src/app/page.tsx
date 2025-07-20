@@ -2671,7 +2671,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Super Service und einwandfreie Erledigung. Preis-Leistung ist top! Einfache Abwicklung, günstiger Preis und saubere Arbeit mit..."
+                  "                  &quot;Super Service und einwandfreie Erledigung. Preis-Leistung ist top! Einfache Abwicklung, günstiger Preis und saubere Arbeit mit...&quot;"
                 </div>
 
                 {/* Author Name */}
