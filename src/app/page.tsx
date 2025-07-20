@@ -37,6 +37,9 @@ export default function CleanWinPage() {
       <div dangerouslySetInnerHTML={{ __html: mobileStyles }} />
       
 
+            {/* Pill Navigation */}
+      <PillNavigation />
+
       {/* Hero Section */}
       <section
         className="hero-mobile"
