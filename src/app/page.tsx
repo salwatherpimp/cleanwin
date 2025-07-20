@@ -559,7 +559,7 @@ export default function CleanWinPage() {
                   marginTop: "23.24px",
                 }}
               >
-                Regionaler Reinigungsbetrieb für Privat, Gewerbe & Industrie
+                Regionaler Reinigungsbetrieb f��r Privat, Gewerbe & Industrie
               </h2>
               <p
                 style={{
@@ -1115,7 +1115,7 @@ export default function CleanWinPage() {
                       textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
                     }}
                   >
-                    ��
+                    →
                   </span>
                 </div>
               </div>
@@ -2920,6 +2920,12 @@ export default function CleanWinPage() {
             min-width: 32% !important;
             max-width: 380px !important;
           }
+        }
+
+                /* USP Mobile Auto-Scroll Animation */
+        @keyframes usp-scroll {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
         }
 
         /* Navigation Button Hover Effects */
