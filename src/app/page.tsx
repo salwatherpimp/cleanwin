@@ -2459,19 +2459,15 @@ export default function CleanWinPage() {
                   }}
                 >
                   {/* Avatar */}
-                  <img
+                                    <Image
                     src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752443987/jganz_vjllm7.avif"
                     alt="Jeanine Ganz"
+                    width={40}
+                    height={40}
                     style={{
-                      width: "40px",
-                      height: "40px",
                       borderRadius: "50%",
                       objectFit: "cover",
                       flexShrink: 0,
-                    }}
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.nextSibling.style.display = "flex";
                     }}
                   />
                   <div
