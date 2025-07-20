@@ -319,7 +319,7 @@ export default function CleanWinPage() {
             padding: "0 16px",
           }}
         >
-          <div
+                    <div
             className="grid-mobile-3"
             style={{
               display: "grid",
@@ -328,6 +328,7 @@ export default function CleanWinPage() {
               alignItems: "center",
             }}
           >
+            <div className="usp-mobile-scroll">
             {/* Pricing Card */}
             <div
               style={{
@@ -559,7 +560,7 @@ export default function CleanWinPage() {
                   marginTop: "23.24px",
                 }}
               >
-                Regionaler Reinigungsbetrieb f��r Privat, Gewerbe & Industrie
+                Regionaler Reinigungsbetrieb für Privat, Gewerbe & Industrie
               </h2>
               <p
                 style={{
