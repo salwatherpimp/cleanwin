@@ -706,23 +706,16 @@ export default function CleanWinPage() {
           >
             +500 Firmen &amp; Haushalte reinigen mit Cleanwin
           </p>
-                    <div
+          <div
             className="grid-mobile-logos"
             style={{
-              overflow: "hidden",
-              width: "100%",
+              display: "grid",
+              gridTemplateColumns: "repeat(6, 1fr)",
+              gap: "32px",
+              alignItems: "center",
+              justifyItems: "center",
             }}
           >
-            <div
-              className="logos-track"
-              style={{
-                display: "flex",
-                gap: "32px",
-                alignItems: "center",
-                animation: "scroll-logos 18s linear infinite",
-                width: "200%",
-              }}
-            >
             <div
               className="logo-container-mobile"
               style={{
@@ -803,61 +796,13 @@ export default function CleanWinPage() {
                 transition: "opacity 0.3s",
               }}
             />
-                        <div
+            <div
               className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
                 backgroundImage:
                   'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/7_wetsnc.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-              className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752310305/10_j4jopj.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-              className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752310305/8_y8yfiu.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-              className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752310305/9_a5yzm6.png")',
                 backgroundPosition: "50% 50%",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "contain",
@@ -2908,22 +2853,9 @@ export default function CleanWinPage() {
             flex-shrink: 0 !important;
                         animation: usp-mobile-scroll 18s linear infinite !important;
           }
-                    .grid-mobile-logos {
-            display: flex !important;
-            overflow: hidden !important;
-            gap: 32px !important;
-            width: 100% !important;
-          }
-
-          .logos-track {
-            display: flex !important;
-            gap: 32px !important;
-            animation: scroll-logos 18s linear infinite !important;
-            width: 200% !important;
-          }
-
-          .logo-container-mobile {
-            flex-shrink: 0 !important;
+          .grid-mobile-logos {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 16px !important;
           }
           .logo-container-mobile {
             width: 80px !important;
@@ -2986,15 +2918,9 @@ export default function CleanWinPage() {
         }
 
                 /* USP Mobile Auto-Scroll Animation */
-                @keyframes usp-mobile-scroll {
+        @keyframes usp-mobile-scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(calc(-100% - 24px)); }
-        }
-
-        /* Logo Scroll Animation */
-        @keyframes scroll-logos {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
         }
 
         /* Navigation Button Hover Effects */
