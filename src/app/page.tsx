@@ -2832,10 +2832,10 @@ export default function CleanWinPage() {
           }
         }
 
-        @media (max-width: 767px) {
+                @media (max-width: 767px) {
                     .hero-mobile {
-            height: 460px !important;
-            min-height: 403px !important;
+            height: 506px !important;
+            min-height: 443px !important;
           }
           .hero-content-mobile {
             padding: 60px 16px 24px !important;
