@@ -1631,7 +1631,7 @@ export default function CleanWinPage() {
             }}
           >
                                     {/* Regional & Personal Card */}
-            <div
+                        <div
               className="cleanwin-value-card"
               onClick={() => handleCardClick(0)}
               style={{
@@ -1641,10 +1641,9 @@ export default function CleanWinPage() {
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
                 padding: "16px",
-                height: "98px",
+                minHeight: "98px",
                 display: "flex",
                 flexDirection: "column",
-                overflow: "hidden",
                 cursor: "pointer",
               }}
             >
@@ -1817,7 +1816,7 @@ export default function CleanWinPage() {
             </div>
 
                                     {/* Safe & Insured Card */}
-            <div
+                        <div
               className="cleanwin-value-card"
               onClick={() => handleCardClick(1)}
               style={{
@@ -1827,10 +1826,9 @@ export default function CleanWinPage() {
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
                 padding: "16px",
-                height: "98px",
+                minHeight: "98px",
                 display: "flex",
                 flexDirection: "column",
-                overflow: "hidden",
                 cursor: "pointer",
               }}
             >
@@ -2003,7 +2001,7 @@ export default function CleanWinPage() {
             </div>
 
                                     {/* Sustainable & Gentle Card */}
-            <div
+                        <div
               className="cleanwin-value-card"
               onClick={() => handleCardClick(2)}
               style={{
@@ -2013,10 +2011,9 @@ export default function CleanWinPage() {
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
                 padding: "16px",
-                height: "98px",
+                minHeight: "98px",
                 display: "flex",
                 flexDirection: "column",
-                overflow: "hidden",
                 cursor: "pointer",
               }}
             >
@@ -2191,7 +2188,7 @@ export default function CleanWinPage() {
             </div>
 
                                     {/* Flexible & Reliable Card */}
-            <div
+                        <div
               className="cleanwin-value-card"
               onClick={() => handleCardClick(3)}
               style={{
@@ -2201,10 +2198,9 @@ export default function CleanWinPage() {
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
                 padding: "16px",
-                height: "98px",
+                minHeight: "98px",
                 display: "flex",
                 flexDirection: "column",
-                overflow: "hidden",
                 cursor: "pointer",
               }}
             >
