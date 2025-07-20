@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import PillNavigation from "../components/PillNavigation";
 
 export default function CleanWinPage() {
   
@@ -1219,7 +1220,7 @@ export default function CleanWinPage() {
                     marginTop: "0px",
                   }}
                 >
-                  Erfahren Sie mehr über unsere Zusatzleistungen und
+                  Erfahren Sie mehr ��ber unsere Zusatzleistungen und
                   Spezialdienste.
                 </p>
               </div>
