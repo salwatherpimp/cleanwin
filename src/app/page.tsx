@@ -1660,13 +1660,16 @@ export default function CleanWinPage() {
                   minHeight: "44px",
                 }}
               >
-                <h3
+                                <h3
                   style={{
                     color: "#111827",
-                    fontSize: "18px",
-                    lineHeight: "22px",
+                    fontSize: "20px",
+                    lineHeight: "24px",
                     fontWeight: "600",
                     flexGrow: 1,
+                    whiteSpace: "normal",
+                    overflow: "visible",
+                    wordWrap: "break-word",
                   }}
                 >
                   Regional & persönlich
@@ -1753,13 +1756,16 @@ export default function CleanWinPage() {
                       <polyline points="9,22 9,12 15,12 15,22" />
                     </svg>
                   </div>
-                  <h3
+                                    <h3
                     style={{
                       color: "#111827",
-                      fontSize: "18px",
-                      lineHeight: "22px",
+                      fontSize: "16px",
+                      lineHeight: "20px",
                       fontWeight: "600",
                       margin: 0,
+                      whiteSpace: "normal",
+                      overflow: "visible",
+                      wordWrap: "break-word",
                     }}
                   >
                     Regional & persönlich
@@ -1840,13 +1846,16 @@ export default function CleanWinPage() {
                   minHeight: "44px",
                 }}
               >
-                <h3
+                                <h3
                   style={{
                     color: "#111827",
-                    fontSize: "18px",
-                    lineHeight: "22px",
+                    fontSize: "20px",
+                    lineHeight: "24px",
                     fontWeight: "600",
                     flexGrow: 1,
+                    whiteSpace: "normal",
+                    overflow: "visible",
+                    wordWrap: "break-word",
                   }}
                 >
                   Sicher & versichert
@@ -1933,13 +1942,16 @@ export default function CleanWinPage() {
                       <path d="m9 12 2 2 4-4" />
                     </svg>
                   </div>
-                  <h3
+                                    <h3
                     style={{
                       color: "#111827",
-                      fontSize: "18px",
-                      lineHeight: "22px",
+                      fontSize: "16px",
+                      lineHeight: "20px",
                       fontWeight: "600",
                       margin: 0,
+                      whiteSpace: "normal",
+                      overflow: "visible",
+                      wordWrap: "break-word",
                     }}
                   >
                     Sicher & versichert
@@ -2020,13 +2032,16 @@ export default function CleanWinPage() {
                   minHeight: "44px",
                 }}
               >
-                <h3
+                                <h3
                   style={{
                     color: "#111827",
-                    fontSize: "18px",
-                    lineHeight: "22px",
+                    fontSize: "20px",
+                    lineHeight: "24px",
                     fontWeight: "600",
                     flexGrow: 1,
+                    whiteSpace: "normal",
+                    overflow: "visible",
+                    wordWrap: "break-word",
                   }}
                 >
                   Nachhaltig & schonend
@@ -2115,13 +2130,16 @@ export default function CleanWinPage() {
                       <path d="M9 20h6" />
                     </svg>
                   </div>
-                  <h3
+                                    <h3
                     style={{
                       color: "#111827",
-                      fontSize: "18px",
-                      lineHeight: "22px",
+                      fontSize: "16px",
+                      lineHeight: "20px",
                       fontWeight: "600",
                       margin: 0,
+                      whiteSpace: "normal",
+                      overflow: "visible",
+                      wordWrap: "break-word",
                     }}
                   >
                     Nachhaltig & schonend
@@ -2202,13 +2220,16 @@ export default function CleanWinPage() {
                   minHeight: "44px",
                 }}
               >
-                <h3
+                                <h3
                   style={{
                     color: "#111827",
-                    fontSize: "18px",
-                    lineHeight: "22px",
+                    fontSize: "20px",
+                    lineHeight: "24px",
                     fontWeight: "600",
                     flexGrow: 1,
+                    whiteSpace: "normal",
+                    overflow: "visible",
+                    wordWrap: "break-word",
                   }}
                 >
                   Flexibel & zuverlässig
@@ -2301,13 +2322,16 @@ export default function CleanWinPage() {
                       <path d="m9 16 2 2 4-4" />
                     </svg>
                   </div>
-                  <h3
+                                    <h3
                     style={{
                       color: "#111827",
-                      fontSize: "18px",
-                      lineHeight: "22px",
+                      fontSize: "16px",
+                      lineHeight: "20px",
                       fontWeight: "600",
                       margin: 0,
+                      whiteSpace: "normal",
+                      overflow: "visible",
+                      wordWrap: "break-word",
                     }}
                   >
                     Flexibel & zuverlässig
