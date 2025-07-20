@@ -1824,16 +1824,16 @@ export default function CleanWinPage() {
                     {/* Carousel Container with Navigation */}
           <div style={{ position: "relative" }}>
             {/* Carousel Track */}
-            <div
+                        <div
               id="carousel-track"
               className="carousel-track"
               style={{
                 display: "flex",
-                overflowX: "hidden",
+                overflowX: "auto",
                 scrollSnapType: "x mandatory",
                 gap: "24px",
                 scrollBehavior: "smooth",
-                transition: "transform 0.3s ease",
+                WebkitOverflowScrolling: "touch",
               }}
             >
               {/* Review Card 1 - Ursula Wirtz */}
@@ -2885,8 +2885,10 @@ export default function CleanWinPage() {
         }
 
                         /* Review Carousel with Navigation */
-        .carousel-track {
+                .carousel-track {
           scroll-snap-type: x mandatory;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
 
         .carousel-track::-webkit-scrollbar {
