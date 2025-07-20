@@ -771,22 +771,23 @@ export default function CleanWinPage() {
           position: "relative",
         }}
       >
-        <div
+                <div
           style={{
-            maxWidth: "1152px",
+            maxWidth: "1200px",
             margin: "0 auto",
-            padding: "0 16px",
+            padding: "0 24px",
           }}
         >
-          <div style={{ textAlign: "center" }}>
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <h2
               style={{
-                fontSize: "28px",
+                fontSize: "42px",
                 fontWeight: "700",
                 color: "#111827",
-                marginBottom: "24px",
-                marginTop: "23.24px",
+                marginBottom: "0",
+                marginTop: "0",
                 textAlign: "center",
+                letterSpacing: "-0.02em",
               }}
             >
               Unsere Leistungen
