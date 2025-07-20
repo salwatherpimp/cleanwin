@@ -217,25 +217,7 @@ export default function PillNavigation() {
 
           <div className="pill-nav-mobile-menu-separator"></div>
 
-          <div className="pill-nav-mobile-menu-cta">
-            <h3 className="pill-nav-mobile-menu-section-title">Kontakt</h3>
-            <a
-              href="#contact"
-              className="pill-nav-mobile-menu-item"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <HandIcon />
-              <span>Kontaktanfrage senden</span>
-            </a>
-            <a
-              href="tel:+41525512424"
-              className="pill-nav-mobile-menu-item"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <PhoneIcon />
-              <span>+41 52 551 24 24</span>
-            </a>
-          </div>
+          
         </div>
       </div>
 
