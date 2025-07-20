@@ -320,7 +320,51 @@ export default function PillNavigation() {
           white-space: nowrap;
         }
 
-        .pill-nav-link:hover {
+                .pill-nav-link:hover {
+          background: #f3f4f6;
+          color: #0DA6A6;
+        }
+
+        .pill-nav-dropdown-container {
+          position: relative;
+        }
+
+        .pill-nav-services-button {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background: none;
+          border: none;
+          cursor: pointer;
+        }
+
+        .pill-nav-services-dropdown {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: white;
+          border-radius: 16px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          padding: 8px;
+          margin-top: 8px;
+          min-width: 220px;
+          z-index: 100;
+        }
+
+        .pill-nav-services-dropdown-item {
+          display: block;
+          padding: 12px 16px;
+          text-decoration: none;
+          color: #374151;
+          font-weight: 500;
+          font-size: 14px;
+          border-radius: 8px;
+          transition: all 0.2s ease;
+          white-space: nowrap;
+        }
+
+        .pill-nav-services-dropdown-item:hover {
           background: #f3f4f6;
           color: #0DA6A6;
         }
