@@ -3323,7 +3323,7 @@ export default function CleanWinPage() {
                     color: #10a0a4 !important;
         }
 
-        /* Mobile Accordion Styles for Cleanwin Values Section */
+                /* Mobile Accordion Styles for Cleanwin Values Section */
         @media (max-width: 767px) {
           .cleanwin-values-container {
             display: flex !important;
@@ -3342,6 +3342,14 @@ export default function CleanWinPage() {
           }
 
           .cleanwin-value-card .mobile-toggle-icon {
+            display: flex !important;
+          }
+
+          .cleanwin-value-card .desktop-card-header {
+            display: none !important;
+          }
+
+          .cleanwin-value-card .mobile-card-header {
             display: flex !important;
           }
 
@@ -3367,8 +3375,20 @@ export default function CleanWinPage() {
             display: none !important;
           }
 
+          .cleanwin-value-card .desktop-card-header {
+            display: flex !important;
+          }
+
+          .cleanwin-value-card .mobile-card-header {
+            display: none !important;
+          }
+
           .cleanwin-value-card {
             cursor: default !important;
+          }
+
+          .mobile-card-content {
+            display: block !important;
           }
         }
 
