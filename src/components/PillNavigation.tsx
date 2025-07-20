@@ -552,13 +552,14 @@ export default function PillNavigation() {
           margin-bottom: 16px;
         }
 
-        .pill-nav-mobile-menu-section-title {
-          font-weight: 600;
-          font-size: 14px;
-          color: #6b7280;
-          margin-bottom: 12px;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
+                .pill-nav-mobile-menu-section-title {
+          font-weight: 700;
+          font-size: 18px;
+          color: #1f2937;
+          margin-bottom: 16px;
+          margin-top: 0;
+          text-transform: none;
+          letter-spacing: 0;
         }
 
                 .pill-nav-mobile-menu-services {
