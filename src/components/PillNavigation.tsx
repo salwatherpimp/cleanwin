@@ -463,7 +463,7 @@ export default function PillNavigation() {
           z-index: 100;
         }
 
-        .pill-nav-hamburger {
+                .pill-nav-hamburger {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -475,6 +475,12 @@ export default function PillNavigation() {
           cursor: pointer;
           padding: 6px;
           flex-shrink: 0;
+          border-radius: 18px;
+          transition: background-color 0.2s ease;
+        }
+
+        .pill-nav-hamburger:hover {
+          background: #f3f4f6;
         }
 
         .hamburger-line {
