@@ -793,11 +793,13 @@ export default function CleanWinPage() {
               Unsere Leistungen
             </h2>
           </div>
-          <div
+                    <div
+            className="services-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "32px",
+              gap: "24px",
+              maxWidth: "100%",
             }}
           >
             {/* Fensterreinigung */}
