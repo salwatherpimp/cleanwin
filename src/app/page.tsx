@@ -1760,12 +1760,27 @@ export default function CleanWinPage() {
               uns noch heute eine unverbindliche Kontaktanfrage.
             </p>
           </div>
-          <div style={{ position: "relative" }}>
+                    {/* Review Carousel Container */}
+          <div
+            className="review-carousel-container"
+            style={{
+              position: "relative",
+              overflow: "hidden",
+              borderRadius: "8px"
+            }}
+          >
+            {/* Carousel Track */}
             <div
+              className="review-carousel-track"
               style={{
-                borderRadius: "8px",
-                overflowX: "hidden",
+                display: "flex",
+                gap: "24px",
+                overflowX: "auto",
                 overflowY: "hidden",
+                scrollBehavior: "smooth",
+                paddingBottom: "8px",
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
               }}
             >
               <div
