@@ -762,16 +762,8 @@ export default function CleanWinPage() {
         </div>
       </section>
 
-      {/* Services Section */}
-                  <section
-        id="services"
-        className="services-section"
-        style={{
-          backgroundColor: "#f8fafc",
-          padding: "80px 0",
-          position: "relative",
-        }}
-      >
+            {/* Services Section */}
+      <ServicesSection />
                 <div
           style={{
             maxWidth: "1200px",
