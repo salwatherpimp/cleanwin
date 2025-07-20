@@ -99,10 +99,10 @@ export default function CleanWinPage() {
       {/* Hero Section */}
       <section
         className="hero-mobile"
-        style={{
+                style={{
           position: "relative",
-          height: "480px",
-          minHeight: "420px",
+          height: "552px",
+          minHeight: "483px",
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
