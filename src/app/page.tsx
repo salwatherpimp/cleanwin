@@ -763,14 +763,7 @@ export default function CleanWinPage() {
       </section>
 
             {/* Services Section */}
-      <ServicesSection />
-                <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 24px",
-          }}
-        >
+            <ServicesSection />
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <h2
               style={{
