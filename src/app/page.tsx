@@ -1196,8 +1196,8 @@ export default function CleanWinPage() {
                     minHeight: "44px",
                     marginTop: "0px",
                   }}
-                >
-                  Weitere Dienstleistungen
+                                >
+                  Solarpanel reinigen
                 </h3>
                 <p
                   style={{
