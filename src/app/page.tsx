@@ -3343,12 +3343,12 @@ export default function CleanWinPage() {
             {/* Column 2: Services with Collapsible Section */}
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               {/* Collapsible Services Section */}
-              <details>
+                            <details>
                 <summary
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    gap: "8px",
+                    justifyContent: "space-between",
                     cursor: "pointer",
                     fontSize: "18px",
                     fontWeight: "600",
@@ -3357,6 +3357,7 @@ export default function CleanWinPage() {
                     margin: "0",
                   }}
                 >
+                  Leistungen
                   <svg
                     style={{
                       width: "16px",
@@ -3371,9 +3372,8 @@ export default function CleanWinPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <path d="M9 18l6-6-6-6"/>
+                    <path d="M6 9l6 6 6-6"/>
                   </svg>
-                  Leistungen
                 </summary>
                 <ul style={{ margin: "12px 0 0 24px", padding: "0", listStyle: "none" }}>
                   <li style={{ marginBottom: "8px" }}>
