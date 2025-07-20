@@ -765,16 +765,7 @@ export default function CleanWinPage() {
             
           
                         
-              <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1752095182/Glasreinigung_aussen_Flaach_ec1fre.avif"
-                  alt="Fensterreinigung"
-                  fill
-                  style={{
-                    objectFit: "cover",
-                    transition: "transform 0.3s ease",
-                  }}
-                />
+              
                 <div
                   style={{
                     position: "absolute",
@@ -1714,7 +1705,7 @@ export default function CleanWinPage() {
                     >
                       <span>&quot;</span>
                       <span>
-                        Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich
+                        Ein engagiertes team,flexibel, zuverl��ssig, kreativ.Ich
                         bin sehr zufrieden mit der sorgfältigen Ausführung und
                         werde far...
                       </span>
