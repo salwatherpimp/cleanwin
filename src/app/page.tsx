@@ -2841,9 +2841,17 @@ export default function CleanWinPage() {
             grid-template-columns: 1fr !important;
             gap: 32px !important;
           }
-          .grid-mobile-3 {
-            grid-template-columns: 1fr !important;
-            gap: 16px !important;
+                    .grid-mobile-3 {
+            display: flex !important;
+            overflow: hidden !important;
+            gap: 24px !important;
+            width: 100% !important;
+          }
+
+          .grid-mobile-3 > div {
+            min-width: 280px !important;
+            flex-shrink: 0 !important;
+            animation: usp-mobile-scroll 25s linear infinite !important;
           }
           .grid-mobile-logos {
             grid-template-columns: repeat(2, 1fr) !important;
