@@ -1828,7 +1828,64 @@ export default function CleanWinPage() {
                 cursor: "pointer",
               }}
             >
+                            {/* Desktop Header (Original Layout) */}
               <div
+                className="desktop-card-header"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: "12px",
+                  height: "44px",
+                  minHeight: "44px",
+                }}
+              >
+                <h3
+                  style={{
+                    color: "#111827",
+                    fontSize: "18px",
+                    lineHeight: "22px",
+                    fontWeight: "600",
+                    flexGrow: 1,
+                  }}
+                >
+                  Sicher & versichert
+                </h3>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "#F3F4F6",
+                    borderRadius: "50%",
+                    flexShrink: 0,
+                    marginLeft: "12px",
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Mobile Header (Accordion Layout) */}
+              <div
+                className="mobile-card-header"
                 style={{
                   display: "flex",
                   alignItems: "center",
