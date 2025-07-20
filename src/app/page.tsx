@@ -1229,10 +1229,7 @@ export default function CleanWinPage() {
               </div>
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Why Choose CleanWin Section */}
+              {/* Why Choose CleanWin Section */}
       <section
         style={{
           backgroundColor: "#f9fafb",
