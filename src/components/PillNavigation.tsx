@@ -100,8 +100,9 @@ export default function PillNavigation() {
               className="pill-nav-cta"
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
             >
-              <HandIcon />
+                            <HandIcon />
               <span>Kontaktiere uns</span>
+              <AnchorIcon size={14} />
             </button>
             {isCtaDropdownOpen && (
               <div className="pill-nav-cta-dropdown">
@@ -137,8 +138,9 @@ export default function PillNavigation() {
               className="pill-nav-cta-mobile"
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
             >
-              <HandIcon />
+                            <HandIcon />
               <span>Kontaktiere uns</span>
+              <AnchorIcon size={14} />
             </button>
             {isCtaDropdownOpen && (
               <div className="pill-nav-cta-dropdown-mobile">
