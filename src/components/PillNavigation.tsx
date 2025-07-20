@@ -489,11 +489,11 @@ export default function PillNavigation() {
           background: #f3f4f6;
         }
 
-        .hamburger-line {
-          width: 22px;
+                .hamburger-line {
+          width: 20px;
           height: 2px;
           background: #374151;
-          margin: 2px 0;
+          margin: 1.5px 0;
           transition: all 0.3s ease;
           transform-origin: center;
         }
