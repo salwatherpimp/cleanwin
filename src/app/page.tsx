@@ -817,10 +817,10 @@ export default function CleanWinPage() {
       </section>
 
 {/* Services Section */}
-      <section
+            <section
         style={{
           backgroundColor: "#ffffff",
-          padding: "80px 0",
+          padding: "24px 0",
           position: "relative",
         }}
       >
@@ -835,13 +835,12 @@ export default function CleanWinPage() {
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <h2
               style={{
-                fontSize: "42px",
+                fontSize: "28px",
                 fontWeight: "700",
                 color: "#111827",
-                marginBottom: "0",
-                marginTop: "0",
+                marginBottom: "24px",
+                marginTop: "23.24px",
                 textAlign: "center",
-                letterSpacing: "-0.02em",
               }}
             >
               Unsere Leistungen
@@ -1762,10 +1761,10 @@ export default function CleanWinPage() {
             </section>
 
             {/* Customer Reviews Carousel Section */}
-      <section
+            <section
         style={{
           backgroundColor: "#ffffff",
-          padding: "80px 0",
+          padding: "24px 0",
           position: "relative",
         }}
       >
@@ -1780,13 +1779,12 @@ export default function CleanWinPage() {
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <h2
               style={{
-                fontSize: "42px",
+                fontSize: "28px",
                 fontWeight: "700",
                 color: "#111827",
-                marginBottom: "16px",
-                marginTop: "0",
+                marginBottom: "24px",
+                marginTop: "23.24px",
                 textAlign: "center",
-                letterSpacing: "-0.02em",
               }}
             >
               Das sagen unsere Kunden
