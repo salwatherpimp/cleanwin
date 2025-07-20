@@ -495,8 +495,8 @@ export default function PillNavigation() {
           transform: translateX(-50%) translateY(0);
         }
 
-                .pill-nav-mobile-menu-content {
-          padding: 24px;
+                                .pill-nav-mobile-menu-content {
+          padding: 16px;
         }
 
         
