@@ -2318,10 +2318,97 @@ export default function CleanWinPage() {
                     color: "#111827",
                     marginTop: "8px",
                   }}
-                >
+                                >
                   Peter Weber
                 </div>
               </div>
+            </div>
+
+            {/* Navigation Arrows */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "16px",
+                marginTop: "40px",
+              }}
+            >
+              <button
+                id="carousel-prev"
+                style={{
+                  width: "48px",
+                  height: "48px",
+                  borderRadius: "50%",
+                  backgroundColor: "white",
+                  border: "2px solid #e5e7eb",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  transition: "all 0.2s ease",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.borderColor = "#10a0a4";
+                  e.target.style.backgroundColor = "#f8fafc";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.borderColor = "#e5e7eb";
+                  e.target.style.backgroundColor = "white";
+                }}
+              >
+                <svg
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    color: "#6b7280",
+                  }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <button
+                id="carousel-next"
+                style={{
+                  width: "48px",
+                  height: "48px",
+                  borderRadius: "50%",
+                  backgroundColor: "white",
+                  border: "2px solid #e5e7eb",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  transition: "all 0.2s ease",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.borderColor = "#10a0a4";
+                  e.target.style.backgroundColor = "#f8fafc";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.borderColor = "#e5e7eb";
+                  e.target.style.backgroundColor = "white";
+                }}
+              >
+                <svg
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    color: "#6b7280",
+                  }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
