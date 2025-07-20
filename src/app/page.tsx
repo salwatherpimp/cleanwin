@@ -802,72 +802,91 @@ export default function CleanWinPage() {
               maxWidth: "100%",
             }}
           >
-            {/* Fensterreinigung */}
+                        {/* Fensterreinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/fensterreinigung"
+              className="service-card"
               style={{
+                position: "relative",
                 backgroundColor: "white",
-                borderRadius: "8px",
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
-                color: "rgb(0, 0, 238)",
-                cursor: "pointer",
+                borderRadius: "16px",
+                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                 overflow: "hidden",
                 textDecoration: "none",
-                transition: "all 0.3s",
+                transition: "all 0.3s ease",
                 display: "block",
+                height: "280px",
               }}
             >
-              <div style={{ position: "relative", overflow: "hidden" }}>
+              <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
                 <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-malen_gdvdci.avif"
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1752095182/Glasreinigung_aussen_Flaach_ec1fre.avif"
                   alt="Fensterreinigung"
-                  width={400}
-                  height={192}
+                  fill
                   style={{
-                    width: "100%",
-                    height: "192px",
                     objectFit: "cover",
-                    display: "inline",
-                    transition: "transform 0.3s",
+                    transition: "transform 0.3s ease",
                   }}
                 />
                 <div
                   style={{
                     position: "absolute",
-                    top: "0px",
-                    left: "0px",
-                    right: "0px",
-                    bottom: "0px",
-                    backgroundImage:
-                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
+                    top: "0",
+                    left: "0",
+                    right: "0",
+                    bottom: "0",
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0) 100%)",
                   }}
                 />
-              </div>
-              <div style={{ padding: "24px" }}>
-                <h3
+                <div
                   style={{
-                    fontSize: "20px",
+                    position: "absolute",
+                    top: "16px",
+                    right: "16px",
+                    background: "#0DA6A6",
+                    color: "white",
+                    padding: "8px 14px",
+                    borderRadius: "12px",
+                    fontSize: "13px",
                     fontWeight: "600",
-                    color: "#111827",
-                    marginBottom: "12px",
-                    height: "44px",
-                    minHeight: "44px",
-                    marginTop: "0px",
+                    boxShadow: "0 4px 12px rgba(13, 166, 166, 0.3)",
                   }}
                 >
-                  Fensterreinigung
-                </h3>
-                <p
+                  Ab CHF 199.-
+                </div>
+                <div
                   style={{
-                    fontSize: "14px",
-                    lineHeight: "21px",
-                    color: "#4b5563",
-                    marginBottom: "0px",
-                    marginTop: "0px",
+                    position: "absolute",
+                    bottom: "20px",
+                    left: "20px",
+                    right: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
                   }}
                 >
-                  Kristallklare Fenster mit professioneller Reinigungstechnik.
-                </p>
+                  <h3
+                    style={{
+                      fontSize: "22px",
+                      fontWeight: "700",
+                      color: "white",
+                      margin: "0",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    Fensterreinigung
+                  </h3>
+                  <span
+                    style={{
+                      color: "white",
+                      fontSize: "20px",
+                      fontWeight: "600",
+                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    →
+                  </span>
+                </div>
               </div>
             </a>
 
