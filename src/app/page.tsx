@@ -3754,9 +3754,9 @@ export default function CleanWinPage() {
           display: block;
         }
 
-        /* Chevron rotation for details */
+                /* Chevron rotation for details */
         details[open] .chevron-icon {
-          transform: rotate(90deg);
+          transform: rotate(180deg);
         }
 
         /* Footer hover effects */
