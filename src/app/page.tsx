@@ -765,22 +765,7 @@ export default function CleanWinPage() {
             {/* Services Section */}
             <ServicesSection />
           
-                        {/* Fensterreinigung */}
-            <a
-              href="https://cleanwin.vercel.app/leistungen/fensterreinigung"
-              className="service-card"
-              style={{
-                position: "relative",
-                backgroundColor: "white",
-                borderRadius: "16px",
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                overflow: "hidden",
-                textDecoration: "none",
-                transition: "all 0.3s ease",
-                display: "block",
-                height: "280px",
-              }}
-            >
+                        
               <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
                 <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1752095182/Glasreinigung_aussen_Flaach_ec1fre.avif"
