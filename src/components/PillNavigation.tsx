@@ -566,9 +566,7 @@ export default function PillNavigation() {
           margin-bottom: 16px;
         }
 
-        .pill-nav-mobile-menu-cta {
-          margin-bottom: 16px;
-        }
+        
 
         .pill-nav-mobile-menu-item {
           display: block;
