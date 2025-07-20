@@ -1630,8 +1630,10 @@ export default function CleanWinPage() {
               width: "100%",
             }}
           >
-            {/* Regional & Personal Card */}
+                        {/* Regional & Personal Card */}
             <div
+              className="cleanwin-value-card"
+              onClick={() => handleCardClick(0)}
               style={{
                 backdropFilter: "blur(4px)",
                 backgroundColor: "rgba(255, 255, 255, 0.9)",
@@ -1643,6 +1645,7 @@ export default function CleanWinPage() {
                 display: "flex",
                 flexDirection: "column",
                 overflow: "hidden",
+                cursor: "pointer",
               }}
             >
               <div
@@ -1655,49 +1658,88 @@ export default function CleanWinPage() {
                   minHeight: "44px",
                 }}
               >
-                <h3
-                  style={{
-                    color: "#111827",
-                    fontSize: "18px",
-                    lineHeight: "22px",
-                    fontWeight: "600",
-                    flexGrow: 1,
-                  }}
-                >
-                  Regional & persönlich
-                </h3>
                 <div
                   style={{
                     display: "flex",
                     alignItems: "center",
+                    gap: "12px",
+                    flexGrow: 1,
+                  }}
+                >
+                  <div
+                    className="mobile-card-icon"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "40px",
+                      height: "40px",
+                      backgroundColor: "#F3F4F6",
+                      borderRadius: "50%",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <svg
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                        color: "#40d5ac",
+                        stroke: "#40d5ac",
+                        strokeWidth: "2px",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        fill: "none",
+                      }}
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                      <polyline points="9,22 9,12 15,12 15,22" />
+                    </svg>
+                  </div>
+                  <h3
+                    style={{
+                      color: "#111827",
+                      fontSize: "18px",
+                      lineHeight: "22px",
+                      fontWeight: "600",
+                      margin: 0,
+                    }}
+                  >
+                    Regional & persönlich
+                  </h3>
+                </div>
+                <div
+                  className="mobile-toggle-icon"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
                     justifyContent: "center",
-                    width: "40px",
-                    height: "40px",
-                    backgroundColor: "#F3F4F6",
-                    borderRadius: "50%",
+                    width: "24px",
+                    height: "24px",
                     flexShrink: 0,
-                    marginLeft: "12px",
                   }}
                 >
                   <svg
                     style={{
-                      width: "20px",
-                      height: "20px",
-                      color: "#40d5ac",
-                      stroke: "#40d5ac",
+                      width: "16px",
+                      height: "16px",
+                      color: "#6b7280",
+                      stroke: "#6b7280",
                       strokeWidth: "2px",
                       strokeLinecap: "round",
                       strokeLinejoin: "round",
                       fill: "none",
+                      transition: "transform 0.2s ease",
+                      transform: expandedCard === 0 ? "rotate(45deg)" : "rotate(0deg)",
                     }}
                     viewBox="0 0 24 24"
                   >
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                    <polyline points="9,22 9,12 15,12 15,22" />
+                    <path d="M12 5v14M5 12h14" />
                   </svg>
                 </div>
               </div>
               <p
+                className={`mobile-card-content ${expandedCard === 0 ? 'expanded' : ''}`}
                 style={{
                   color: "#4b5563",
                   fontSize: "13px",
