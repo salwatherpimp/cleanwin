@@ -785,7 +785,7 @@ export default function CleanWinPage() {
           }}
         >
           {/* Section Title */}
-          <div style={{ textAlign: "center", marginBottom: "56px" }}>
+                    <div style={{ textAlign: "center", marginBottom: "24px" }}>
                         <h2
               style={{
                 fontSize: "28px",
