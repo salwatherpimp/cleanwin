@@ -1810,7 +1810,7 @@ export default function CleanWinPage() {
               </p>
             </div>
 
-                        {/* Safe & Insured Card */}
+                                    {/* Safe & Insured Card */}
             <div
               className="cleanwin-value-card"
               onClick={() => handleCardClick(1)}
@@ -1821,7 +1821,7 @@ export default function CleanWinPage() {
                 borderRadius: "12px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
                 padding: "16px",
-                height: "140px",
+                height: "98px",
                 display: "flex",
                 flexDirection: "column",
                 overflow: "hidden",
