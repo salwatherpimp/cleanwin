@@ -469,19 +469,19 @@ export default function PillNavigation() {
           z-index: 100;
         }
 
-                .pill-nav-hamburger {
+                        .pill-nav-hamburger {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: 36px;
-          height: 36px;
+          width: 32px;
+          height: 32px;
           background: none;
           border: none;
           cursor: pointer;
-          padding: 6px;
+          padding: 4px;
           flex-shrink: 0;
-          border-radius: 18px;
+          border-radius: 16px;
           transition: background-color 0.2s ease;
         }
 
