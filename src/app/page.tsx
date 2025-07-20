@@ -1450,7 +1450,7 @@ export default function CleanWinPage() {
                   flex: "1",
                 }}
               >
-                Wir sind in Winterthur zuhause. Persönlich, nah und immer f��r
+                Wir sind in Winterthur zuhause. Persönlich, nah und immer für
                 Sie erreichbar.
               </p>
             </div>
@@ -2635,7 +2635,7 @@ export default function CleanWinPage() {
             >
               © 2025 CleanWin. Alle Rechte vorbehalten.
               <br />
-              Gemacht mit ��️ in Winterthur
+              Gemacht mit ♥️ in Winterthur
             </div>
             <a
               href="https://cleanwin.vercel.app/datenschutz"
@@ -2723,12 +2723,12 @@ export default function CleanWinPage() {
           }
         }
 
-        /* Carousel responsive behavior */
-        .carousel-track {
+                /* Horizontal Scrollable Carousel */
+        .carousel-container {
           scroll-snap-type: x mandatory;
         }
 
-        .carousel-track::-webkit-scrollbar {
+        .carousel-container::-webkit-scrollbar {
           display: none;
         }
 
@@ -2737,49 +2737,28 @@ export default function CleanWinPage() {
           flex-shrink: 0;
         }
 
-        /* Desktop: show 3 cards */
-        @media (min-width: 1024px) {
-          .carousel-track {
-            display: grid !important;
-            grid-template-columns: repeat(3, 1fr) !important;
-            gap: 24px !important;
-            overflow: visible !important;
-          }
+        /* Mobile: show 1 card at a time */
+        @media (max-width: 767px) {
           .review-card {
-            min-width: auto !important;
+            width: 90% !important;
+            min-width: 90% !important;
           }
         }
 
         /* Tablet: show 2 cards */
         @media (min-width: 768px) and (max-width: 1023px) {
-          .carousel-track {
-            display: grid !important;
-            grid-template-columns: repeat(2, 1fr) !important;
-            gap: 24px !important;
-            overflow: visible !important;
-          }
           .review-card {
-            min-width: auto !important;
+            width: 50% !important;
+            min-width: 50% !important;
           }
         }
 
-        /* Mobile: show 1 card (keep horizontal scroll) */
-        @media (max-width: 767px) {
+        /* Desktop: show 3 cards */
+        @media (min-width: 1024px) {
           .review-card {
-            min-width: 280px !important;
+            width: 33.333% !important;
+            min-width: 33.333% !important;
           }
-        }
-
-        /* Button hover effects */
-        .carousel-prev:hover,
-        .carousel-next:hover {
-          border-color: #10a0a4 !important;
-          background-color: #f8fafc !important;
-        }
-
-        .carousel-prev:hover svg,
-        .carousel-next:hover svg {
-          color: #10a0a4 !important;
         }
       `}</style>
     </div>
