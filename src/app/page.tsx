@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import PillNavigation from "../components/PillNavigation";
+import ServicesSection from "../components/ServicesSection";
 
 export default function CleanWinPage() {
   
