@@ -5,15 +5,33 @@ import Image from "next/image";
 
 export default function PillNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
 
   const services = [
     { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
-    { name: "Büroreinigung", href: "https://cleanwin.vercel.app/leistungen/bueroreinigung" },
+    { name: "Unterhaltsreinigung", href: "https://cleanwin.vercel.app/leistungen/unterhaltsreinigung" },
     { name: "Fassadenreinigung", href: "https://cleanwin.vercel.app/leistungen/fassadenreinigung" },
     { name: "Umzugsreinigung", href: "https://cleanwin.vercel.app/leistungen/umzugsreinigung" },
     { name: "Baureinigung", href: "https://cleanwin.vercel.app/leistungen/baureinigung" },
-    { name: "Weitere Dienstleistungen", href: "https://cleanwin.vercel.app/leistungen/weitere-dienstleistungen" },
+    { name: "Solarpanel reinigen", href: "https://cleanwin.vercel.app/leistungen/solarpanel-reinigen" },
   ];
+
+  // Hand SVG icon
+  const HandIcon = () => (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+
+  // Phone SVG icon
+  const PhoneIcon = () => (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
 
   return (
     <div className="pill-nav-wrapper">
@@ -24,34 +42,19 @@ export default function PillNavigation() {
           {/* Logo */}
           <a href="https://cleanwin.vercel.app/" className="pill-nav-logo">
             <Image
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.png"
+              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="CleanWin Logo"
-              width={120}
-              height={34}
+              width={160}
+              height={45}
               priority
             />
           </a>
 
           {/* Navigation Items */}
           <div className="pill-nav-items">
-            <div className="pill-nav-dropdown">
-              <button className="pill-nav-link pill-nav-services">
-                <span>🔗</span>
-                <span>Leistungen</span>
-                <span className="pill-nav-chevron">▼</span>
-              </button>
-              <div className="pill-nav-dropdown-menu">
-                {services.map((service, index) => (
-                  <a
-                    key={index}
-                    href={service.href}
-                    className="pill-nav-dropdown-item"
-                  >
-                    {service.name}
-                  </a>
-                ))}
-              </div>
-            </div>
+            <a href="https://cleanwin.vercel.app/dienstleistungen" className="pill-nav-link">
+              Dienstleistungen
+            </a>
             
             <a href="https://cleanwin.vercel.app/ueber-uns" className="pill-nav-link">
               Über uns
@@ -62,11 +65,28 @@ export default function PillNavigation() {
             </a>
           </div>
 
-          {/* CTA Button */}
-          <a href="#contact" className="pill-nav-cta">
-            <span>🤝</span>
-            <span>Kontaktiere uns</span>
-          </a>
+          {/* CTA Button with Dropdown */}
+          <div className="pill-nav-cta-container">
+            <button 
+              className="pill-nav-cta"
+              onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+            >
+              <HandIcon />
+              <span>Kontaktiere uns</span>
+            </button>
+            {isCtaDropdownOpen && (
+              <div className="pill-nav-cta-dropdown">
+                <a href="#contact" className="pill-nav-cta-dropdown-item">
+                  <HandIcon />
+                  <span>Kontaktanfrage senden</span>
+                </a>
+                <a href="tel:+41525512424" className="pill-nav-cta-dropdown-item">
+                  <PhoneIcon />
+                  <span>+41 52 551 24 24</span>
+                </a>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Mobile Layout */}
@@ -74,19 +94,36 @@ export default function PillNavigation() {
           {/* Logo */}
           <a href="https://cleanwin.vercel.app/" className="pill-nav-logo-mobile">
             <Image
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752003683/cleanwin-logo_ysvfv0.png"
+              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="CleanWin Logo"
-              width={100}
-              height={28}
+              width={140}
+              height={39}
               priority
             />
           </a>
 
           {/* CTA Button Mobile */}
-          <a href="#contact" className="pill-nav-cta-mobile">
-            <span>🤝</span>
-            <span>Kontakt</span>
-          </a>
+          <div className="pill-nav-cta-container-mobile">
+            <button 
+              className="pill-nav-cta-mobile"
+              onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+            >
+              <HandIcon />
+              <span>Kontaktiere uns</span>
+            </button>
+            {isCtaDropdownOpen && (
+              <div className="pill-nav-cta-dropdown-mobile">
+                <a href="#contact" className="pill-nav-cta-dropdown-item">
+                  <HandIcon />
+                  <span>Kontaktanfrage senden</span>
+                </a>
+                <a href="tel:+41525512424" className="pill-nav-cta-dropdown-item">
+                  <PhoneIcon />
+                  <span>+41 52 551 24 24</span>
+                </a>
+              </div>
+            )}
+          </div>
 
           {/* Hamburger Menu */}
           <button 
@@ -115,23 +152,14 @@ export default function PillNavigation() {
             </button>
           </div>
           
-          <div className="pill-nav-mobile-menu-services">
-            <h3 className="pill-nav-mobile-menu-section-title">Dienstleistungen</h3>
-            {services.map((service, index) => (
-              <a
-                key={index}
-                href={service.href}
-                className="pill-nav-mobile-menu-item"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {service.name}
-              </a>
-            ))}
-          </div>
-
-          <div className="pill-nav-mobile-menu-separator"></div>
-
-          <div className="pill-nav-mobile-menu-pages">
+          <div className="pill-nav-mobile-menu-nav">
+            <a
+              href="https://cleanwin.vercel.app/dienstleistungen"
+              className="pill-nav-mobile-menu-item"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Dienstleistungen
+            </a>
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
               className="pill-nav-mobile-menu-item"
@@ -146,6 +174,22 @@ export default function PillNavigation() {
             >
               Referenzen
             </a>
+          </div>
+
+          <div className="pill-nav-mobile-menu-separator"></div>
+
+          <div className="pill-nav-mobile-menu-services">
+            <h3 className="pill-nav-mobile-menu-section-title">Dienstleistungen</h3>
+            {services.map((service, index) => (
+              <a
+                key={index}
+                href={service.href}
+                className="pill-nav-mobile-menu-item"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {service.name}
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -164,10 +208,10 @@ export default function PillNavigation() {
         .pill-nav {
           background: white;
           border-radius: 50px;
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
           backdrop-filter: blur(8px);
           border: 1px solid rgba(255, 255, 255, 0.2);
-          padding: 8px 16px;
+          padding: 12px 24px;
           margin: 0 auto;
           max-width: 1200px;
         }
@@ -176,14 +220,14 @@ export default function PillNavigation() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 32px;
+          gap: 40px;
         }
 
         .pill-nav-mobile {
           display: none;
           align-items: center;
           justify-content: space-between;
-          gap: 12px;
+          gap: 16px;
         }
 
         .pill-nav-logo {
@@ -191,134 +235,135 @@ export default function PillNavigation() {
           align-items: center;
           text-decoration: none;
           transition: transform 0.2s ease;
+          flex-shrink: 0;
         }
 
         .pill-nav-logo:hover {
-          transform: scale(1.05);
-        }
-
-        .pill-nav-items {
-          display: flex;
-          align-items: center;
-          gap: 24px;
-        }
-
-        .pill-nav-dropdown {
-          position: relative;
-        }
-
-        .pill-nav-link {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          text-decoration: none;
-          color: #374151;
-          font-weight: 500;
-          font-size: 14px;
-          padding: 8px 12px;
-          border-radius: 25px;
-          transition: all 0.2s ease;
-          cursor: pointer;
-          border: none;
-          background: none;
-        }
-
-        .pill-nav-link:hover {
-          background: #f3f4f6;
-          color: #10a0a4;
-        }
-
-        .pill-nav-services {
-          font-weight: 500;
-        }
-
-        .pill-nav-chevron {
-          font-size: 10px;
-          transition: transform 0.2s ease;
-        }
-
-        .pill-nav-dropdown:hover .pill-nav-chevron {
-          transform: rotate(180deg);
-        }
-
-        .pill-nav-dropdown-menu {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          background: white;
-          border-radius: 16px;
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-          border: 1px solid rgba(0, 0, 0, 0.1);
-          padding: 8px;
-          margin-top: 8px;
-          min-width: 200px;
-          opacity: 0;
-          visibility: hidden;
-          transform: translateY(-10px);
-          transition: all 0.2s ease;
-        }
-
-        .pill-nav-dropdown:hover .pill-nav-dropdown-menu {
-          opacity: 1;
-          visibility: visible;
-          transform: translateY(0);
-        }
-
-        .pill-nav-dropdown-item {
-          display: block;
-          padding: 10px 14px;
-          text-decoration: none;
-          color: #374151;
-          font-weight: 400;
-          font-size: 14px;
-          border-radius: 8px;
-          transition: all 0.2s ease;
-        }
-
-        .pill-nav-dropdown-item:hover {
-          background: #f3f4f6;
-          color: #10a0a4;
-        }
-
-        .pill-nav-cta {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          background: #84cc16;
-          color: #1f2937;
-          text-decoration: none;
-          padding: 10px 20px;
-          border-radius: 25px;
-          font-weight: 600;
-          font-size: 14px;
-          transition: all 0.2s ease;
-          box-shadow: 0 2px 8px rgba(132, 204, 22, 0.3);
-        }
-
-        .pill-nav-cta:hover {
-          background: #65a30d;
-          transform: translateY(-1px);
-          box-shadow: 0 4px 16px rgba(132, 204, 22, 0.4);
+          transform: scale(1.02);
         }
 
         .pill-nav-logo-mobile {
           display: flex;
           align-items: center;
           text-decoration: none;
+          flex-shrink: 0;
+        }
+
+        .pill-nav-items {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          margin-left: 24px;
+        }
+
+        .pill-nav-link {
+          text-decoration: none;
+          color: #374151;
+          font-weight: 500;
+          font-size: 15px;
+          padding: 8px 16px;
+          border-radius: 25px;
+          transition: all 0.2s ease;
+          white-space: nowrap;
+        }
+
+        .pill-nav-link:hover {
+          background: #f3f4f6;
+          color: #0DA6A6;
+        }
+
+        .pill-nav-cta-container {
+          position: relative;
+        }
+
+        .pill-nav-cta {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background: #0DA6A6;
+          color: white;
+          border: none;
+          padding: 12px 24px;
+          border-radius: 25px;
+          font-weight: 600;
+          font-size: 14px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          box-shadow: 0 2px 8px rgba(13, 166, 166, 0.3);
+          white-space: nowrap;
+        }
+
+        .pill-nav-cta:hover {
+          background: #0b8d8d;
+          transform: translateY(-1px);
+          box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4);
+        }
+
+        .pill-nav-cta-dropdown {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background: white;
+          border-radius: 16px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          padding: 8px;
+          margin-top: 8px;
+          min-width: 220px;
+          z-index: 100;
+        }
+
+        .pill-nav-cta-dropdown-item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 16px;
+          text-decoration: none;
+          color: #374151;
+          font-weight: 500;
+          font-size: 14px;
+          border-radius: 8px;
+          transition: all 0.2s ease;
+          white-space: nowrap;
+        }
+
+        .pill-nav-cta-dropdown-item:hover {
+          background: #f3f4f6;
+          color: #0DA6A6;
+        }
+
+        .pill-nav-cta-container-mobile {
+          position: relative;
         }
 
         .pill-nav-cta-mobile {
           display: flex;
           align-items: center;
-          gap: 4px;
-          background: #84cc16;
-          color: #1f2937;
-          text-decoration: none;
-          padding: 8px 12px;
+          gap: 6px;
+          background: #0DA6A6;
+          color: white;
+          border: none;
+          padding: 12px 18px;
           border-radius: 20px;
           font-weight: 600;
-          font-size: 12px;
+          font-size: 14px;
+          cursor: pointer;
           transition: all 0.2s ease;
+          white-space: nowrap;
+        }
+
+        .pill-nav-cta-dropdown-mobile {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          padding: 8px;
+          margin-top: 8px;
+          min-width: 200px;
+          z-index: 100;
         }
 
         .pill-nav-hamburger {
@@ -326,16 +371,17 @@ export default function PillNavigation() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: 32px;
-          height: 32px;
+          width: 36px;
+          height: 36px;
           background: none;
           border: none;
           cursor: pointer;
-          padding: 4px;
+          padding: 6px;
+          flex-shrink: 0;
         }
 
         .hamburger-line {
-          width: 20px;
+          width: 22px;
           height: 2px;
           background: #374151;
           margin: 2px 0;
@@ -357,7 +403,7 @@ export default function PillNavigation() {
 
         .pill-nav-mobile-menu {
           position: fixed;
-          top: 80px;
+          top: 90px;
           left: 50%;
           transform: translateX(-50%);
           width: calc(100vw - 32px);
@@ -417,6 +463,10 @@ export default function PillNavigation() {
           color: #374151;
         }
 
+        .pill-nav-mobile-menu-nav {
+          margin-bottom: 16px;
+        }
+
         .pill-nav-mobile-menu-section-title {
           font-weight: 600;
           font-size: 14px;
@@ -447,17 +497,13 @@ export default function PillNavigation() {
 
         .pill-nav-mobile-menu-item:hover {
           background: #f3f4f6;
-          color: #10a0a4;
+          color: #0DA6A6;
         }
 
         .pill-nav-mobile-menu-separator {
           height: 1px;
           background: #e5e7eb;
           margin: 16px 0;
-        }
-
-        .pill-nav-mobile-menu-pages .pill-nav-mobile-menu-item {
-          font-weight: 500;
         }
 
         @media (max-width: 1023px) {
@@ -470,7 +516,7 @@ export default function PillNavigation() {
           }
 
           .pill-nav {
-            padding: 6px 12px;
+            padding: 8px 16px;
           }
         }
 
@@ -481,11 +527,12 @@ export default function PillNavigation() {
           }
 
           .pill-nav {
-            padding: 6px 10px;
+            padding: 8px 12px;
           }
 
-          .pill-nav-cta-mobile span:last-child {
-            display: none;
+          .pill-nav-cta-mobile {
+            padding: 10px 14px;
+            font-size: 13px;
           }
         }
       `}</style>
