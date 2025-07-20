@@ -2811,18 +2811,19 @@ export default function CleanWinPage() {
           }
         }
 
-                /* Horizontal Scrollable Carousel */
-        .carousel-container {
+                        /* Review Carousel with Navigation */
+        .carousel-track {
           scroll-snap-type: x mandatory;
         }
 
-        .carousel-container::-webkit-scrollbar {
+        .carousel-track::-webkit-scrollbar {
           display: none;
         }
 
         .review-card {
           scroll-snap-align: start;
           flex-shrink: 0;
+          transition: transform 0.3s ease;
         }
 
         /* Mobile: show 1 card at a time */
@@ -2830,23 +2831,38 @@ export default function CleanWinPage() {
           .review-card {
             width: 90% !important;
             min-width: 90% !important;
+            max-width: 350px !important;
           }
         }
 
         /* Tablet: show 2 cards */
         @media (min-width: 768px) and (max-width: 1023px) {
           .review-card {
-            width: 50% !important;
-            min-width: 50% !important;
+            width: 48% !important;
+            min-width: 48% !important;
+            max-width: 400px !important;
           }
         }
 
         /* Desktop: show 3 cards */
         @media (min-width: 1024px) {
           .review-card {
-            width: 33.333% !important;
-            min-width: 33.333% !important;
+            width: 32% !important;
+            min-width: 32% !important;
+            max-width: 380px !important;
           }
+        }
+
+        /* Navigation Button Hover Effects */
+        #carousel-prev:hover,
+        #carousel-next:hover {
+          border-color: #10a0a4 !important;
+          background-color: #f8fafc !important;
+        }
+
+        #carousel-prev:hover svg,
+        #carousel-next:hover svg {
+          color: #10a0a4 !important;
         }
       `}</style>
     </div>
