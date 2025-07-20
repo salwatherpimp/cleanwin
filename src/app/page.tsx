@@ -838,22 +838,7 @@ export default function CleanWinPage() {
               </div>
             </a>
 
-                                    {/* Unterhaltsreinigung */}
-            <a
-              href="https://cleanwin.vercel.app/leistungen/unterhaltsreinigung"
-              className="service-card"
-              style={{
-                position: "relative",
-                backgroundColor: "white",
-                borderRadius: "16px",
-                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                overflow: "hidden",
-                textDecoration: "none",
-                transition: "all 0.3s ease",
-                display: "block",
-                height: "280px",
-              }}
-            >
+                                    
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1750015382/altbauwohnung-meilen_lrttoc.avif"
