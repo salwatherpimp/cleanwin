@@ -1648,7 +1648,64 @@ export default function CleanWinPage() {
                 cursor: "pointer",
               }}
             >
+                            {/* Desktop Header (Original Layout) */}
               <div
+                className="desktop-card-header"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: "12px",
+                  height: "44px",
+                  minHeight: "44px",
+                }}
+              >
+                <h3
+                  style={{
+                    color: "#111827",
+                    fontSize: "18px",
+                    lineHeight: "22px",
+                    fontWeight: "600",
+                    flexGrow: 1,
+                  }}
+                >
+                  Regional & persönlich
+                </h3>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "#F3F4F6",
+                    borderRadius: "50%",
+                    flexShrink: 0,
+                    marginLeft: "12px",
+                  }}
+                >
+                  <svg
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      color: "#40d5ac",
+                      stroke: "#40d5ac",
+                      strokeWidth: "2px",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round",
+                      fill: "none",
+                    }}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Mobile Header (Accordion Layout) */}
+              <div
+                className="mobile-card-header"
                 style={{
                   display: "flex",
                   alignItems: "center",
