@@ -932,7 +932,7 @@ export default function CleanWinPage() {
                     marginTop: "0px",
                   }}
                 >
-                  Hygienische und gründliche Büroreinigung für Ihr Unternehmen.
+                                    Professionelle Unterhaltsreinigung für Büros und Geschäftsräume.
                 </p>
               </div>
             </a>
