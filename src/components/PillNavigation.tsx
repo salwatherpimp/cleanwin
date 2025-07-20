@@ -513,25 +513,7 @@ export default function PillNavigation() {
           padding: 24px;
         }
 
-        .pill-nav-mobile-menu-close {
-          width: 28px;
-          height: 28px;
-          border-radius: 50%;
-          border: none;
-          background: #f3f4f6;
-          color: #6b7280;
-          cursor: pointer;
-          font-size: 14px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.2s ease;
-        }
-
-        .pill-nav-mobile-menu-close:hover {
-          background: #e5e7eb;
-          color: #374151;
-        }
+        
 
         .pill-nav-mobile-menu-nav {
           margin-bottom: 16px;
