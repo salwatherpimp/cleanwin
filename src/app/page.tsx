@@ -3697,7 +3697,7 @@ export default function CleanWinPage() {
           }
         }
 
-        @media (min-width: 768px) {
+                @media (min-width: 768px) {
           .cleanwin-value-card .mobile-card-icon {
             display: none !important;
           }
@@ -3716,6 +3716,9 @@ export default function CleanWinPage() {
 
           .cleanwin-value-card {
             cursor: default !important;
+            overflow: visible !important;
+            height: auto !important;
+            min-height: 98px !important;
           }
 
           .mobile-card-content {
