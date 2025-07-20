@@ -2925,7 +2925,7 @@ export default function CleanWinPage() {
                     fontStyle: "italic",
                   }}
                 >
-                  "Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal."
+                  "                  &quot;Reinigt einmal in der Woche unser pop-up. Super Service und freundliches Personal.&quot;"
                 </div>
 
                 {/* Author Name */}
