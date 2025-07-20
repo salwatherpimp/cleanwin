@@ -706,11 +706,14 @@ export default function CleanWinPage() {
           >
             +500 Firmen &amp; Haushalte reinigen mit Cleanwin
           </p>
-                    <div
+                              <div
             className="grid-mobile-logos"
             style={{
+              display: "flex",
               overflow: "hidden",
+              gap: "32px",
               width: "100%",
+              alignItems: "center",
             }}
           >
             <div
@@ -3044,7 +3047,7 @@ export default function CleanWinPage() {
             flex-shrink: 0 !important;
                         animation: usp-mobile-scroll 18s linear infinite !important;
           }
-                    .grid-mobile-logos {
+                                        .grid-mobile-logos {
             display: flex !important;
             overflow: hidden !important;
             gap: 32px !important;
