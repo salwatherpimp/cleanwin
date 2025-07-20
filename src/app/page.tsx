@@ -55,13 +55,15 @@ export default function CleanWinPage() {
         />
 
         {/* Dark Overlay */}
-        <div
+                <div
           style={{
             position: "absolute",
             top: "0px",
             left: "0px",
             right: "0px",
             bottom: "0px",
+            width: "100%",
+            height: "100%",
             backgroundColor: "rgba(0, 0, 0, 0.3)",
           }}
         />
