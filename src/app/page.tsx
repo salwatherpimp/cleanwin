@@ -766,7 +766,7 @@ export default function CleanWinPage() {
             <ServicesSection />
           
                         
-              <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+              
                 <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1752095182/Glasreinigung_aussen_Flaach_ec1fre.avif"
                   alt="Fensterreinigung"
