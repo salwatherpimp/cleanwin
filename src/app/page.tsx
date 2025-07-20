@@ -3557,10 +3557,10 @@ export default function CleanWinPage() {
 
                 /* Mobile Accordion Styles for Cleanwin Values Section */
         @media (max-width: 767px) {
-          .cleanwin-values-container {
+                    .cleanwin-values-container {
             display: flex !important;
             flex-direction: column !important;
-            gap: 12px !important;
+            gap: 8px !important;
           }
 
                     .cleanwin-value-card {
