@@ -637,8 +637,8 @@ export default function PillNavigation() {
             max-width: calc(100vw - 16px);
           }
 
-          .pill-nav {
-            padding: 8px 12px;
+                    .pill-nav {
+            padding: 0;
           }
 
           .pill-nav-cta-mobile {
