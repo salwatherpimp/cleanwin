@@ -3790,8 +3790,10 @@ export default function CleanWinPage() {
             align-items: flex-start !important;
           }
 
-          .footer-social {
+                    .footer-social {
             gap: 16px !important;
+            flex-direction: row !important;
+            display: flex !important;
           }
         }
       `}</style>
