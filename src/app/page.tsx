@@ -2853,9 +2853,22 @@ export default function CleanWinPage() {
             flex-shrink: 0 !important;
                         animation: usp-mobile-scroll 18s linear infinite !important;
           }
-          .grid-mobile-logos {
-            grid-template-columns: repeat(2, 1fr) !important;
-            gap: 16px !important;
+                    .grid-mobile-logos {
+            display: flex !important;
+            overflow: hidden !important;
+            gap: 32px !important;
+            width: 100% !important;
+          }
+
+          .logos-track {
+            display: flex !important;
+            gap: 32px !important;
+            animation: scroll-logos 18s linear infinite !important;
+            width: 200% !important;
+          }
+
+          .logo-container-mobile {
+            flex-shrink: 0 !important;
           }
           .logo-container-mobile {
             width: 80px !important;
