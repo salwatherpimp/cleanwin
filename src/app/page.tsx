@@ -2841,38 +2841,9 @@ export default function CleanWinPage() {
             grid-template-columns: 1fr !important;
             gap: 32px !important;
           }
-                    .grid-mobile-3 {
-            display: block !important;
-            overflow: hidden !important;
-            width: 100% !important;
-            position: relative !important;
-          }
-
-          .grid-mobile-3::after {
-            content: "" !important;
-            display: flex !important;
-            gap: 24px !important;
-            animation: usp-scroll 25s linear infinite !important;
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 200% !important;
-            height: 100% !important;
-            background: linear-gradient(90deg,
-              transparent 0%,
-              transparent 16.66%,
-              white 16.66%,
-              white 33.33%,
-              transparent 33.33%,
-              transparent 50%,
-              white 50%,
-              white 66.66%,
-              transparent 66.66%,
-              transparent 83.33%,
-              white 83.33%,
-              white 100%) !important;
-            pointer-events: none !important;
-            z-index: 2 !important;
+          .grid-mobile-3 {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
           }
           .grid-mobile-logos {
             grid-template-columns: repeat(2, 1fr) !important;
@@ -2935,38 +2906,6 @@ export default function CleanWinPage() {
             width: 32% !important;
             min-width: 32% !important;
             max-width: 380px !important;
-          }
-        }
-
-                /* USP Mobile Auto-Scroll Animation */
-        @keyframes usp-scroll {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
-        }
-
-        @media (max-width: 767px) {
-          .grid-mobile-3 {
-            flex-direction: row !important;
-            align-items: center !important;
-          }
-
-          .grid-mobile-3 > div {
-            min-width: 280px !important;
-            flex-shrink: 0 !important;
-            margin-right: 24px !important;
-          }
-
-          .grid-mobile-3::before {
-            content: "" !important;
-            display: flex !important;
-            gap: 24px !important;
-            animation: usp-scroll 25s linear infinite !important;
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 200% !important;
-            height: 100% !important;
-            z-index: 1 !important;
           }
         }
 
