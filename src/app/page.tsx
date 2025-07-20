@@ -2475,7 +2475,52 @@ export default function CleanWinPage() {
             </a>
           </div>
         </div>
-      </footer>
+            </footer>
+
+      {/* Mobile Responsive Styles */}
+      <style jsx>{`
+        @media (max-width: 767px) {
+          .hero-mobile {
+            height: 400px !important;
+            min-height: 350px !important;
+          }
+          .hero-content-mobile {
+            padding: 60px 16px 24px !important;
+          }
+          .hero-title-mobile {
+            font-size: 28px !important;
+            line-height: 36px !important;
+          }
+          .hero-subtitle-mobile {
+            font-size: 16px !important;
+            line-height: 24px !important;
+          }
+          .logo-mobile {
+            width: 160px !important;
+            height: 45px !important;
+          }
+          .grid-mobile-1 {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+          .grid-mobile-2 {
+            grid-template-columns: 1fr !important;
+            gap: 32px !important;
+          }
+          .grid-mobile-3 {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+          .grid-mobile-logos {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 16px !important;
+          }
+          .logo-container-mobile {
+            width: 80px !important;
+            height: 40px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
