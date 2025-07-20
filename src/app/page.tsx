@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import PillNavigation from "../components/PillNavigation";
-import ServicesSection from "../components/ServicesSection";
 
 export default function CleanWinPage() {
   
@@ -762,83 +761,131 @@ export default function CleanWinPage() {
         </div>
       </section>
 
-            {/* Services Section */}
-            <ServicesSection />
-          
-                        
-              <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+      {/* Services Section */}
+                  <section
+        id="services"
+        className="services-section"
+        style={{
+          backgroundColor: "#f8fafc",
+          padding: "80px 0",
+          position: "relative",
+        }}
+      >
+                <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 24px",
+          }}
+        >
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
+            <h2
+              style={{
+                fontSize: "42px",
+                fontWeight: "700",
+                color: "#111827",
+                marginBottom: "0",
+                marginTop: "0",
+                textAlign: "center",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Unsere Leistungen
+            </h2>
+          </div>
+                    <div
+            className="services-grid"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "24px",
+              maxWidth: "100%",
+            }}
+          >
+            {/* Fensterreinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/fensterreinigung"
+              style={{
+                backgroundColor: "white",
+                borderRadius: "8px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                color: "rgb(0, 0, 238)",
+                cursor: "pointer",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s",
+                display: "block",
+              }}
+            >
+              <div style={{ position: "relative", overflow: "hidden" }}>
                 <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_500,h_350,c_fill,f_auto,q_auto/v1752095182/Glasreinigung_aussen_Flaach_ec1fre.avif"
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-malen_gdvdci.avif"
                   alt="Fensterreinigung"
-                  fill
+                  width={400}
+                  height={192}
                   style={{
+                    width: "100%",
+                    height: "192px",
                     objectFit: "cover",
-                    transition: "transform 0.3s ease",
+                    display: "inline",
+                    transition: "transform 0.3s",
                   }}
                 />
                 <div
                   style={{
                     position: "absolute",
-                    top: "0",
-                    left: "0",
-                    right: "0",
-                    bottom: "0",
-                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0) 100%)",
+                    top: "0px",
+                    left: "0px",
+                    right: "0px",
+                    bottom: "0px",
+                    backgroundImage:
+                      "linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)",
                   }}
                 />
-                <div
+              </div>
+              <div style={{ padding: "24px" }}>
+                <h3
                   style={{
-                    position: "absolute",
-                    top: "16px",
-                    right: "16px",
-                    background: "#0DA6A6",
-                    color: "white",
-                    padding: "8px 14px",
-                    borderRadius: "12px",
-                    fontSize: "13px",
+                    fontSize: "20px",
                     fontWeight: "600",
-                    boxShadow: "0 4px 12px rgba(13, 166, 166, 0.3)",
+                    color: "#111827",
+                    marginBottom: "12px",
+                    height: "44px",
+                    minHeight: "44px",
+                    marginTop: "0px",
                   }}
                 >
-                  Ab CHF 199.-
-                </div>
-                <div
+                  Fensterreinigung
+                </h3>
+                <p
                   style={{
-                    position: "absolute",
-                    bottom: "20px",
-                    left: "20px",
-                    right: "20px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
+                    fontSize: "14px",
+                    lineHeight: "21px",
+                    color: "#4b5563",
+                    marginBottom: "0px",
+                    marginTop: "0px",
                   }}
                 >
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "700",
-                      color: "white",
-                      margin: "0",
-                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
-                    }}
-                  >
-                    Fensterreinigung
-                  </h3>
-                  <span
-                    style={{
-                      color: "white",
-                      fontSize: "20px",
-                      fontWeight: "600",
-                      textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
-                    }}
-                  >
-                    →
-                  </span>
-                </div>
+                  Kristallklare Fenster mit professioneller Reinigungstechnik.
+                </p>
               </div>
             </a>
 
-                                    
+                        {/* Unterhaltsreinigung */}
+            <a
+              href="https://cleanwin.vercel.app/leistungen/unterhaltsreinigung"
+              style={{
+                backgroundColor: "white",
+                borderRadius: "8px",
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px",
+                color: "rgb(0, 0, 238)",
+                cursor: "pointer",
+                overflow: "hidden",
+                textDecoration: "none",
+                transition: "all 0.3s",
+                display: "block",
+              }}
+            >
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1750015382/altbauwohnung-meilen_lrttoc.avif"
@@ -1168,7 +1215,11 @@ export default function CleanWinPage() {
                 </p>
               </div>
             </a>
-                {/* Why Choose CleanWin Section */}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose CleanWin Section */}
       <section
         style={{
           backgroundColor: "#f9fafb",
