@@ -144,9 +144,8 @@ export default function CleanWinPage() {
               color: "white",
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
             }}
-          >
-            Ihr Reinigungsservice in Winterthur für Präzision, Sauberkeit &
-            Begeisterung
+                    >
+            Professionelle Reinigung in Winterthur & Region
           </h1>
 
           <p
@@ -161,8 +160,7 @@ export default function CleanWinPage() {
               color: "rgba(255, 255, 255, 0.95)",
             }}
           >
-            Mit mehr als 10 Jahren Erfahrung gestaltet CleanWin saubere Räume,
-            Fassaden und mehr.
+            Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
           </p>
 
           {/* Reviews Badge */}
@@ -564,8 +562,8 @@ export default function CleanWinPage() {
                   marginBottom: "24px",
                   marginTop: "23.24px",
                 }}
-              >
-                Regionaler Reinigungsbetrieb für Privat, Gewerbe & Industrie
+                            >
+                Über 10 Jahre Reinigungserfahrung in Winterthur und Umgebung
               </h2>
               <p
                 style={{
@@ -575,13 +573,7 @@ export default function CleanWinPage() {
                   marginTop: "16px",
                 }}
               >
-                CleanWin ist Ihr vertrauensvoller Partner für professionelle
-                Reinigungsdienstleistungen in der Region Winterthur. Seit über
-                10 Jahren bieten wir umfassende Lösungen für Fensterreinigung,
-                Büroreinigung, Fassadenreinigung und Spezialreinigungen. Unser
-                erfahrenes Team arbeitet mit modernsten Techniken und
-                umweltfreundlichen Produkten, um höchste Qualität und
-                Kundenzufriedenheit zu gewährleisten.
+                Seit über zehn Jahren steht Cleanwin für gründliche, faire und nachhaltige Reinigungsdienstleistungen im Grossraum Winterthur. Ob Fensterreinigung, Fassadenpflege oder Umzugsreinigung - wir bringen Erfahrung, Sorgfalt und Menschlichkeit zusammen. Unsere kostenlose Vor-Ort-Beratung bietet Ihnen maximale Transparenz. Dahinter steht ein geschultes, fair entlöhntes Team, das sich mit Engagement und Fachwissen für beste Ergebnisse einsetzt.
               </p>
               <a
                 href="#services"
