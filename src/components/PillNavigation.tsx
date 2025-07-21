@@ -606,7 +606,7 @@ export default function PillNavigation() {
           font-size: 18px;
           border-radius: 0;
           margin-bottom: 8px;
-          transition: all 0.2s ease;
+          transition: color 0.2s ease;
           min-height: 44px;
         }
 
