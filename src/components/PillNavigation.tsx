@@ -159,9 +159,7 @@ export default function PillNavigation() {
             <div
               className="pill-nav-cta-dropdown-mobile"
               style={{
-                opacity: isCtaDropdownOpen ? 1 : 0,
-                visibility: isCtaDropdownOpen ? 'visible' : 'hidden',
-                transform: isCtaDropdownOpen ? 'translateY(0)' : 'translateY(-10px)',
+                display: isCtaDropdownOpen ? 'block' : 'none',
               }}
             >
               <a href="#contact" className="pill-nav-cta-dropdown-item">
