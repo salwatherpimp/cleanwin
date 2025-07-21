@@ -26,7 +26,17 @@ export default function CleanWinPage() {
 
       {/* Hero Section */}
             <section
-        className="hero-mobile relative flex items-center overflow-hidden pt-20"
+        className="hero-mobile"
+        style={{
+          position: "relative",
+          height: "680px",
+          minHeight: "680px",
+          display: "flex",
+          alignItems: "center",
+          overflow: "hidden",
+          paddingTop: "80px",
+          boxSizing: "border-box",
+        }}
       >
                 {/* Background Image */}
         <Image
