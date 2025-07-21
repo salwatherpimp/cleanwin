@@ -540,14 +540,14 @@ export default function PillNavigation() {
           border: 1px solid rgba(0, 0, 0, 0.1);
           opacity: 0;
           visibility: hidden;
-          transform: translateX(-50%) translateY(-20px);
-          transition: all 0.3s ease;
+          transform: translateX(-50%);
+          transition: opacity 0.2s ease, visibility 0.2s ease;
         }
 
         .pill-nav-mobile-menu.open {
           opacity: 1;
           visibility: visible;
-          transform: translateX(-50%) translateY(0);
+          transform: translateX(-50%);
         }
 
                                 .pill-nav-mobile-menu-content {
