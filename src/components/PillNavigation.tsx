@@ -430,11 +430,12 @@ export default function PillNavigation() {
 
         .pill-nav-cta-container-mobile {
           position: relative;
-          height: 40px !important;
-          min-height: 40px !important;
-          max-height: 40px !important;
+          height: 56px !important;
+          min-height: 56px !important;
+          max-height: 56px !important;
           display: flex;
           align-items: center;
+          box-sizing: border-box !important;
         }
 
                                                 .pill-nav-cta-mobile {
