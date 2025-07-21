@@ -42,6 +42,14 @@ body {
 }
 
 /* CLS Optimization Rules */
+.hero-mobile-wrapper {
+  height: 680px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  contain: layout style !important;
+  contain-intrinsic-size: 680px 680px !important;
+}
+
 .hero-mobile {
   height: 680px !important;
   min-height: 680px !important;
@@ -51,12 +59,28 @@ body {
   box-sizing: border-box !important;
 }
 
+.hero-content-mobile {
+  contain: layout style !important;
+  contain-intrinsic-size: 680px 500px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
 @media (min-width: 768px) {
+  .hero-mobile-wrapper {
+    height: 780px !important;
+    contain-intrinsic-size: 780px 780px !important;
+  }
+
   .hero-mobile {
     height: 780px !important;
     min-height: 780px !important;
     max-height: 780px !important;
     contain-intrinsic-size: 780px 780px !important;
+  }
+
+  .hero-content-mobile {
+    contain-intrinsic-size: 780px 500px !important;
   }
 }
 
