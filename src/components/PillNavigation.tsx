@@ -662,8 +662,13 @@ export default function PillNavigation() {
             display: none;
           }
 
-                    .pill-nav-mobile {
+          .pill-nav-mobile {
             display: flex;
+          }
+
+          .pill-nav-wrapper {
+            margin: 0 16px;
+            max-width: calc(100vw - 32px);
           }
 
           .pill-nav {
@@ -671,23 +676,26 @@ export default function PillNavigation() {
             min-height: 56px !important;
             padding: 0 16px !important;
             box-sizing: border-box !important;
+            margin: 0 auto;
           }
         }
 
         @media (max-width: 480px) {
           .pill-nav-wrapper {
             top: 12px;
-            max-width: calc(100vw - 16px);
+            margin: 0 16px;
+            max-width: calc(100vw - 32px);
           }
 
-                    .pill-nav {
+          .pill-nav {
             height: 56px !important;
             min-height: 56px !important;
             padding: 0 12px !important;
             box-sizing: border-box !important;
+            margin: 0 auto;
           }
 
-                    .pill-nav-cta-mobile {
+          .pill-nav-cta-mobile {
             padding: 8px 14px;
             font-size: 13px;
             min-height: 40px !important;
