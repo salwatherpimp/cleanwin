@@ -38,4 +38,30 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
+  font-display: swap;
+}
+
+/* CLS Optimization Rules */
+.hero-mobile {
+  height: 680px !important;
+  min-height: 680px !important;
+  max-height: 680px !important;
+  contain: layout style !important;
+  contain-intrinsic-size: 680px 680px !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 768px) {
+  .hero-mobile {
+    height: 780px !important;
+    min-height: 780px !important;
+    max-height: 780px !important;
+    contain-intrinsic-size: 780px 780px !important;
+  }
+}
+
+/* Font optimization */
+@font-face {
+  font-family: 'Arial';
+  font-display: swap;
 }
