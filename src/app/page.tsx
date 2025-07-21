@@ -89,20 +89,30 @@ export default function CleanWinPage() {
       <PillNavigation />
 
                   {/* Hero Section */}
-      <section
-        className="hero-mobile"
+      <div
+        className="hero-mobile-wrapper"
         style={{
-          position: "relative",
           height: "75vh",
           minHeight: "75vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
           overflow: "hidden",
-          paddingTop: "80px",
-          boxSizing: "border-box",
+          position: "relative",
+          contain: "layout style",
         }}
       >
+        <section
+          className="hero-mobile"
+          style={{
+            position: "relative",
+            height: "100%",
+            minHeight: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            overflow: "hidden",
+            paddingTop: "80px",
+            boxSizing: "border-box",
+          }}
+        >
                 {/* Background Image */}
         <Image
           src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
@@ -313,7 +323,8 @@ export default function CleanWinPage() {
             </a>
           </div>
         </div>
-      </section>
+        </section>
+      </div>
 
       {/* Benefits Section */}
       <section
