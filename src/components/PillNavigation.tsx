@@ -450,7 +450,7 @@ export default function PillNavigation() {
           font-weight: 600;
           font-size: 14px;
           cursor: pointer;
-          transition: all 0.2s ease;
+          transition: background-color 0.2s ease;
           white-space: nowrap;
           min-height: 44px !important;
           height: 44px !important;
