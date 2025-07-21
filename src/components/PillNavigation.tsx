@@ -217,11 +217,14 @@ export default function PillNavigation() {
         .pill-nav-wrapper {
           position: fixed;
           top: 16px;
-          left: 50%;
-          transform: translateX(-50%);
+          left: 0;
+          right: 0;
           z-index: 1000;
+          display: flex;
+          justify-content: center;
           width: 100%;
           max-width: calc(100vw - 32px);
+          margin: 0 auto;
         }
 
         .pill-nav {
