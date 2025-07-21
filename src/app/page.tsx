@@ -137,7 +137,16 @@ export default function CleanWinPage() {
           </h1>
 
           <p
-            className="hero-subtitle-mobile text-xl leading-8 mb-6 mx-auto max-w-3xl text-white/95"
+            className="hero-subtitle-mobile"
+            style={{
+              fontSize: "20px",
+              lineHeight: "32px",
+              marginBottom: "24px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              maxWidth: "768px",
+              color: "rgba(255, 255, 255, 0.95)",
+            }}
           >
             Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
           </p>
