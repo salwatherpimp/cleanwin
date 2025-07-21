@@ -401,6 +401,8 @@ export default function PillNavigation() {
           visibility: hidden;
           transition: opacity 0.2s ease, visibility 0.2s ease;
           pointer-events: none;
+          contain: layout style;
+          contain-intrinsic-size: 220px 120px;
         }
 
         .pill-nav-cta-dropdown.open {
