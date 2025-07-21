@@ -69,12 +69,7 @@ export default function PillNavigation() {
                                 <ChevronDownIcon size={14} />
               </button>
               <div
-                className="pill-nav-services-dropdown"
-                style={{
-                  opacity: isServicesDropdownOpen ? 1 : 0,
-                  visibility: isServicesDropdownOpen ? 'visible' : 'hidden',
-                  transform: isServicesDropdownOpen ? 'translateY(0)' : 'translateY(-10px)',
-                }}
+                className={`pill-nav-services-dropdown ${isServicesDropdownOpen ? 'open' : ''}`}
               >
                 {services.map((service, index) => (
                   <a
