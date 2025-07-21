@@ -108,12 +108,7 @@ export default function PillNavigation() {
                               <ChevronDownIcon size={14} />
             </button>
             <div
-              className="pill-nav-cta-dropdown"
-              style={{
-                opacity: isCtaDropdownOpen ? 1 : 0,
-                visibility: isCtaDropdownOpen ? 'visible' : 'hidden',
-                transform: isCtaDropdownOpen ? 'translateY(0)' : 'translateY(-10px)',
-              }}
+              className={`pill-nav-cta-dropdown ${isCtaDropdownOpen ? 'open' : ''}`}
             >
               <a href="#contact" className="pill-nav-cta-dropdown-item">
                 <HandIcon />
