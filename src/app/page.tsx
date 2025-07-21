@@ -3227,7 +3227,7 @@ export default function CleanWinPage() {
               Cleanwin - persönlich, zuverlässig, hochwertig
             </h2>
                         <a
-              href="#contact"
+              href="/kontakt"
               className="final-cta-button"
               style={{
                 display: "inline-block",
