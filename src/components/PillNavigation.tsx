@@ -385,6 +385,12 @@ export default function PillNavigation() {
           margin-top: 8px;
           min-width: 220px;
           z-index: 100;
+          transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+          pointer-events: none;
+        }
+
+        .pill-nav-cta-dropdown[style*="opacity: 1"] {
+          pointer-events: auto;
         }
 
         .pill-nav-cta-dropdown-item {
