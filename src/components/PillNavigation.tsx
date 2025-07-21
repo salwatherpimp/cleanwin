@@ -380,7 +380,6 @@ export default function PillNavigation() {
 
         .pill-nav-cta:hover {
           background: #0b8d8d;
-          transform: translateY(-1px);
           box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4);
         }
 
