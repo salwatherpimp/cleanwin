@@ -252,8 +252,10 @@ export default function PillNavigation() {
           align-items: center;
           justify-content: space-between;
           padding-inline: 16px;
-          min-height: 56px;
+          height: 56px !important;
+          min-height: 56px !important;
           gap: 8px;
+          box-sizing: border-box !important;
         }
 
         .pill-nav-logo {
