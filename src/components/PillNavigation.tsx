@@ -300,6 +300,9 @@ export default function PillNavigation() {
           white-space: nowrap;
           display: flex;
           align-items: center;
+          margin: 0;
+          vertical-align: middle;
+          box-sizing: border-box;
         }
 
                 .pill-nav-link:hover {
@@ -314,7 +317,8 @@ export default function PillNavigation() {
 
         .pill-nav-dropdown-container {
           position: relative;
-          min-height: 44px;
+          display: flex;
+          align-items: center;
         }
 
         .pill-nav-services-button {
@@ -333,6 +337,9 @@ export default function PillNavigation() {
           border-radius: 25px;
           transition: background-color 0.2s ease, color 0.2s ease;
           white-space: nowrap;
+          margin: 0;
+          vertical-align: middle;
+          box-sizing: border-box;
         }
 
         .pill-nav-services-dropdown {
