@@ -397,15 +397,13 @@ export default function PillNavigation() {
           z-index: 100;
           opacity: 0;
           visibility: hidden;
-          transform: translateY(-10px);
-          transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+          transition: opacity 0.2s ease, visibility 0.2s ease;
           pointer-events: none;
         }
 
         .pill-nav-cta-dropdown.open {
           opacity: 1;
           visibility: visible;
-          transform: translateY(0);
           pointer-events: auto;
         }
 
