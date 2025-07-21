@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  allowedDevOrigins: [
+    "juicy-bowler.name",
+    "necessary-giant.net",
+    "*.fly.dev",
+    "*.builder.io"
+  ],
   images: {
     remotePatterns: [
       {
