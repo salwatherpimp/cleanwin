@@ -3513,7 +3513,13 @@ export default function CleanWinPage() {
           }
                 }
 
-        /* Hero Section Heights */
+        /* Hero Section Heights - Base */
+        .hero-mobile {
+          height: 600px !important;
+          min-height: 600px !important;
+        }
+
+        /* Hero Section Heights - Desktop */
         @media (min-width: 768px) {
           .hero-mobile {
             height: 700px !important;
