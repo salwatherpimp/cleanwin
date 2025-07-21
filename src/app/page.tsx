@@ -3485,8 +3485,8 @@ export default function CleanWinPage() {
 
                                 @media (max-width: 767px) {
                     .hero-mobile {
-            height: 557px !important;
-            min-height: 487px !important;
+            min-height: 600px !important;
+            height: auto !important;
           }
           .hero-content-mobile {
             padding: 60px 16px 24px !important;
