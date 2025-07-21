@@ -26,15 +26,9 @@ export default function CleanWinPage() {
 
       {/* Hero Section */}
       <section
-        className="hero-mobile"
+        className="hero-mobile min-h-[600px] relative flex items-center overflow-hidden pt-20"
         style={{
-          position: "relative",
-          height: "480px",
-          minHeight: "420px",
-          display: "flex",
-          alignItems: "center",
-          overflow: "hidden",
-                    paddingTop: "80px",
+          height: "auto",
         }}
       >
                 {/* Background Image */}
@@ -1313,7 +1307,7 @@ export default function CleanWinPage() {
                     >
                       <span>&quot;</span>
                       <span>
-                        Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich
+                        Ein engagiertes team,flexibel, zuverl��ssig, kreativ.Ich
                         bin sehr zufrieden mit der sorgfältigen Ausführung und
                         werde far...
                       </span>
