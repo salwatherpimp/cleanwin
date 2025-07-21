@@ -3521,6 +3521,13 @@ export default function CleanWinPage() {
           transform: scale(1.05);
         }
 
+        /* Ensure full width coverage for all sections */
+        section, .hero-mobile {
+          width: 100% !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+
         /* Services responsive grid */
         @media (max-width: 1200px) {
           .services-grid {
