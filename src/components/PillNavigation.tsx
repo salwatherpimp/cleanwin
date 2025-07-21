@@ -141,7 +141,13 @@ export default function PillNavigation() {
           </a>
 
           {/* CTA Button Mobile */}
-          <div className="pill-nav-cta-container-mobile relative">
+          <div
+            className="pill-nav-cta-container-mobile relative"
+            style={{
+              height: "40px",
+              minHeight: "40px",
+            }}
+          >
                         <button
               className="pill-nav-cta-mobile"
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
