@@ -132,12 +132,9 @@ export default function PillNavigation() {
 
           {/* CTA Button Mobile */}
           <div className="pill-nav-cta-container-mobile relative">
-            <button
-              className="pill-nav-cta-mobile h-10 md:h-11 w-fit px-4 py-2 text-sm flex items-center gap-1 bg-[#0DA6A6] text-white border-none rounded-[20px] font-semibold cursor-pointer transition-all duration-200 whitespace-nowrap"
+                        <button
+              className="pill-nav-cta-mobile"
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
-              style={{
-                maxHeight: "44px",
-              }}
             >
                             <HandIcon />
               <span>Kontaktiere uns</span>
