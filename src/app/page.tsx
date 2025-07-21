@@ -76,6 +76,9 @@ export default function CleanWinPage() {
     <div
       style={{
         minHeight: "100vh",
+        width: "100%",
+        margin: 0,
+        padding: 0,
         backgroundColor: "#ffffff",
       }}
     >
