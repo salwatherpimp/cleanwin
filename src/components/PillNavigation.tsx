@@ -511,7 +511,7 @@ export default function PillNavigation() {
           height: 2px;
           background: #374151;
           margin: 1.5px 0;
-          transition: all 0.3s ease;
+          transition: transform 0.3s ease, opacity 0.3s ease;
           transform-origin: center;
         }
 
