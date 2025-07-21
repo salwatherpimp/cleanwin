@@ -90,12 +90,13 @@ export default function CleanWinPage() {
         className="hero-mobile"
         style={{
           position: "relative",
-          height: "600px",
-          minHeight: "600px",
+          height: "680px",
+          minHeight: "680px",
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
           paddingTop: "80px",
+          boxSizing: "border-box",
         }}
       >
                 {/* Background Image */}
