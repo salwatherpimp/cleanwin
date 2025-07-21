@@ -533,8 +533,9 @@ export default function PillNavigation() {
         .pill-nav-mobile-menu {
           position: fixed;
           top: 90px;
-          left: 50%;
-          transform: translateX(-50%);
+          left: 0;
+          right: 0;
+          margin: 0 auto;
           width: calc(100vw - 32px);
           max-width: 400px;
           background: white;
@@ -543,7 +544,6 @@ export default function PillNavigation() {
           border: 1px solid rgba(0, 0, 0, 0.1);
           opacity: 0;
           visibility: hidden;
-          transform: translateX(-50%);
           transition: opacity 0.2s ease, visibility 0.2s ease;
         }
 
