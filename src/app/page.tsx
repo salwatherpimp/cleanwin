@@ -274,9 +274,19 @@ export default function CleanWinPage() {
           <div>
             <a
               href="#contact"
-              className="hero-cta-button inline-block bg-white text-gray-700 px-8 py-4 rounded-full text-sm font-semibold no-underline transition-all duration-200"
+              className="hero-cta-button"
               style={{
+                display: "inline-block",
+                backgroundColor: "white",
+                color: "#374151",
+                padding: "16px 32px",
+                borderRadius: "9999px",
+                fontSize: "14px",
+                fontWeight: "600",
+                textDecoration: "none",
+                cursor: "pointer",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 25px -5px",
+                transition: "all 0.2s ease",
               }}
             >
               Jetzt unverbindlich kontaktieren
