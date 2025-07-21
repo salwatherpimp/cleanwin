@@ -282,7 +282,7 @@ export default function PillNavigation() {
 
         .pill-nav-items {
           display: flex;
-          align-items: center;
+          align-items: baseline;
           gap: 32px;
           margin-left: 24px;
         }
