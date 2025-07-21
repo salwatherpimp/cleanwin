@@ -307,6 +307,11 @@ export default function PillNavigation() {
           color: #0DA6A6;
         }
 
+        .pill-nav-services-button:hover {
+          background: #f3f4f6;
+          color: #0DA6A6;
+        }
+
         .pill-nav-dropdown-container {
           position: relative;
           min-height: 44px;
