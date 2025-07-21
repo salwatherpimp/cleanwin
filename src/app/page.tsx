@@ -3525,9 +3525,10 @@ export default function CleanWinPage() {
 
         /* Hero Section Heights - Force Override */
         section.hero-mobile {
-          height: 600px !important;
-          min-height: 600px !important;
-          max-height: 600px !important;
+          height: 680px !important;
+          min-height: 680px !important;
+          max-height: 680px !important;
+          box-sizing: border-box !important;
         }
 
         /* Hero Section Heights - Desktop Override */
