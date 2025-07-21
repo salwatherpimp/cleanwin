@@ -291,7 +291,7 @@ export default function PillNavigation() {
           font-size: 15px;
           padding: 8px 16px;
           border-radius: 25px;
-          transition: all 0.2s ease;
+          transition: background-color 0.2s ease, color 0.2s ease;
           white-space: nowrap;
         }
 
