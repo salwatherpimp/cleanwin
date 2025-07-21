@@ -305,6 +305,7 @@ export default function PillNavigation() {
 
         .pill-nav-dropdown-container {
           position: relative;
+          min-height: 44px;
         }
 
         .pill-nav-services-button {
