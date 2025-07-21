@@ -362,6 +362,7 @@ export default function PillNavigation() {
 
         .pill-nav-cta-container {
           position: relative;
+          min-height: 44px;
         }
 
         .pill-nav-cta {
