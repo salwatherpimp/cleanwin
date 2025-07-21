@@ -68,19 +68,24 @@ export default function PillNavigation() {
                 <span>Dienstleistungen</span>
                                 <ChevronDownIcon size={14} />
               </button>
-              {isServicesDropdownOpen && (
-                <div className="pill-nav-services-dropdown">
-                  {services.map((service, index) => (
-                    <a
-                      key={index}
-                      href={service.href}
-                      className="pill-nav-services-dropdown-item"
-                    >
-                      {service.name}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div
+                className="pill-nav-services-dropdown"
+                style={{
+                  opacity: isServicesDropdownOpen ? 1 : 0,
+                  visibility: isServicesDropdownOpen ? 'visible' : 'hidden',
+                  transform: isServicesDropdownOpen ? 'translateY(0)' : 'translateY(-10px)',
+                }}
+              >
+                {services.map((service, index) => (
+                  <a
+                    key={index}
+                    href={service.href}
+                    className="pill-nav-services-dropdown-item"
+                  >
+                    {service.name}
+                  </a>
+                ))}
+              </div>
             </div>
             
             <a href="https://cleanwin.vercel.app/ueber-uns" className="pill-nav-link">
