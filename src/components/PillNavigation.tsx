@@ -372,7 +372,7 @@ export default function PillNavigation() {
           font-weight: 600;
           font-size: 14px;
           cursor: pointer;
-          transition: all 0.2s ease;
+          transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
           box-shadow: 0 2px 8px rgba(13, 166, 166, 0.3);
           white-space: nowrap;
         }
