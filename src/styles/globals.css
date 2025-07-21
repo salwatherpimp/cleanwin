@@ -39,3 +39,15 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+
+/* Minimal CLS prevention for hero section */
+.hero-mobile-wrapper {
+  contain: layout style;
+}
+
+@media (min-width: 768px) {
+  .hero-mobile-wrapper {
+    height: 80vh;
+    min-height: 80vh;
+  }
+}
