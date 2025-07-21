@@ -88,6 +88,10 @@ export default function CleanWinPage() {
                   {/* Hero Section */}
       <section
         className="hero-mobile relative flex items-center overflow-hidden pt-20"
+        style={{
+          height: "600px",
+          minHeight: "600px",
+        }}
       >
                 {/* Background Image */}
         <Image
@@ -3488,7 +3492,7 @@ export default function CleanWinPage() {
                 transition: "color 0.2s ease"
               }}
             >
-              Datenschutzerklärung
+              Datenschutzerkl��rung
             </a>
           </div>
         </div>
