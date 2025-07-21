@@ -123,8 +123,13 @@ export default function CleanWinPage() {
           className="hero-content-mobile relative z-10 max-w-[1152px] mx-auto px-4 py-20 text-center text-white"
         >
           <h1
-            className="hero-title-mobile text-4xl font-extrabold leading-12 mb-4 text-white"
+            className="hero-title-mobile"
             style={{
+              fontSize: "40px",
+              fontWeight: "800",
+              lineHeight: "48px",
+              marginBottom: "16px",
+              color: "white",
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
             }}
           >
