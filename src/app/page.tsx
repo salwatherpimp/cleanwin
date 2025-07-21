@@ -3492,7 +3492,7 @@ export default function CleanWinPage() {
                 transition: "color 0.2s ease"
               }}
             >
-              Datenschutzerkl��rung
+              Datenschutzerklärung
             </a>
           </div>
         </div>
@@ -3517,17 +3517,19 @@ export default function CleanWinPage() {
           }
                 }
 
-        /* Hero Section Heights - Base */
-        .hero-mobile {
+        /* Hero Section Heights - Force Override */
+        section.hero-mobile {
           height: 600px !important;
           min-height: 600px !important;
+          max-height: 600px !important;
         }
 
-        /* Hero Section Heights - Desktop */
+        /* Hero Section Heights - Desktop Override */
         @media (min-width: 768px) {
-          .hero-mobile {
+          section.hero-mobile {
             height: 700px !important;
             min-height: 700px !important;
+            max-height: 700px !important;
           }
         }
 
