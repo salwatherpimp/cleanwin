@@ -7,6 +7,9 @@ import PillNavigation from "../components/PillNavigation";
 export default function CleanWinPage() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
 
+  // Hero section height - static to prevent hydration mismatch
+  const heroHeight = typeof window !== 'undefined' && window.innerWidth >= 768 ? "700px" : "600px";
+
   const handleCardClick = (cardIndex: number) => {
     setExpandedCard(expandedCard === cardIndex ? null : cardIndex);
   };
