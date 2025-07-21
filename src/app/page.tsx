@@ -3514,6 +3514,14 @@ export default function CleanWinPage() {
           .services-grid {
             grid-template-columns: repeat(2, 1fr) !important;
           }
+                }
+
+        /* Hero Section Heights */
+        @media (min-width: 768px) {
+          .hero-mobile {
+            height: 700px !important;
+            min-height: 700px !important;
+          }
         }
 
                                 @media (max-width: 767px) {
