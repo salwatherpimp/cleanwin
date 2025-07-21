@@ -12,12 +12,13 @@ export default function CleanWinPage() {
   };
 
     useEffect(() => {
-    // Carousel navigation functionality
-    const carouselTrack = document.getElementById('carousel-track');
-    const prevButton = document.getElementById('carousel-prev');
-    const nextButton = document.getElementById('carousel-next');
+    // Carousel navigation functionality with error handling
+    try {
+      const carouselTrack = document.getElementById('carousel-track');
+      const prevButton = document.getElementById('carousel-prev');
+      const nextButton = document.getElementById('carousel-next');
 
-    if (!carouselTrack || !prevButton || !nextButton) return;
+      if (!carouselTrack || !prevButton || !nextButton) return;
 
     // Get viewport-based cards per view
     const getCardsPerView = () => {
@@ -58,11 +59,14 @@ export default function CleanWinPage() {
     prevButton.addEventListener('click', goToPrev);
     nextButton.addEventListener('click', goToNext);
 
-    // Cleanup
-    return () => {
-      prevButton.removeEventListener('click', goToPrev);
-      nextButton.removeEventListener('click', goToNext);
-    };
+      // Cleanup
+      return () => {
+        prevButton.removeEventListener('click', goToPrev);
+        nextButton.removeEventListener('click', goToNext);
+      };
+    } catch (error) {
+      console.error('Carousel initialization error:', error);
+    }
   }, []);
 
 
