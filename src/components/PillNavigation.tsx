@@ -248,6 +248,7 @@ export default function PillNavigation() {
           align-items: center;
           justify-content: space-between;
           gap: 40px;
+          width: 100%;
         }
 
                         .pill-nav-mobile {
@@ -282,7 +283,7 @@ export default function PillNavigation() {
 
         .pill-nav-items {
           display: flex;
-          align-items: baseline;
+          align-items: center;
           gap: 32px;
           margin-left: 24px;
         }
@@ -291,11 +292,14 @@ export default function PillNavigation() {
           text-decoration: none;
           color: #374151;
           font-weight: 500;
-          font-size: 15px;
-          padding: 8px 16px;
+          font-size: 14px;
+          line-height: 1.4;
+          padding: 10px 16px;
           border-radius: 25px;
           transition: background-color 0.2s ease, color 0.2s ease;
           white-space: nowrap;
+          display: flex;
+          align-items: center;
         }
 
                 .pill-nav-link:hover {
@@ -309,15 +313,21 @@ export default function PillNavigation() {
         }
 
         .pill-nav-services-button {
-          display: inline-flex;
+          display: flex;
           align-items: center;
           gap: 8px;
           background: none;
           border: none;
           cursor: pointer;
           font-family: inherit;
-          line-height: inherit;
-          vertical-align: baseline;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1.4;
+          color: #374151;
+          padding: 10px 16px;
+          border-radius: 25px;
+          transition: background-color 0.2s ease, color 0.2s ease;
+          white-space: nowrap;
         }
 
         .pill-nav-services-dropdown {
@@ -365,7 +375,8 @@ export default function PillNavigation() {
 
         .pill-nav-cta-container {
           position: relative;
-          min-height: 44px;
+          display: flex;
+          align-items: center;
         }
 
         .pill-nav-cta {
@@ -375,10 +386,11 @@ export default function PillNavigation() {
           background: #0DA6A6;
           color: white;
           border: none;
-          padding: 12px 24px;
+          padding: 10px 24px;
           border-radius: 25px;
-          font-weight: 600;
+          font-weight: 500;
           font-size: 14px;
+          line-height: 1.4;
           cursor: pointer;
           transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
           box-shadow: 0 2px 8px rgba(13, 166, 166, 0.3);
