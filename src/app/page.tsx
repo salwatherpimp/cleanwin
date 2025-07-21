@@ -289,7 +289,7 @@ export default function CleanWinPage() {
                     {/* CTA Button */}
           <div>
             <a
-              href="#contact"
+              href="/kontakt"
               className="hero-cta-button"
               style={{
                 display: "inline-block",
