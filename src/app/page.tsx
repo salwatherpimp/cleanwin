@@ -150,6 +150,7 @@ export default function CleanWinPage() {
             padding: "0 16px",
             textAlign: "center",
             color: "white",
+            contain: "layout style",
           }}
         >
           <h1
