@@ -550,7 +550,6 @@ export default function PillNavigation() {
         .pill-nav-mobile-menu.open {
           opacity: 1;
           visibility: visible;
-          transform: translateX(-50%);
         }
 
                                 .pill-nav-mobile-menu-content {
