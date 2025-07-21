@@ -544,6 +544,8 @@ export default function PillNavigation() {
           opacity: 0;
           visibility: hidden;
           transition: opacity 0.2s ease, visibility 0.2s ease;
+          contain: layout style;
+          contain-intrinsic-size: 400px 350px;
         }
 
         .pill-nav-mobile-menu.open {
