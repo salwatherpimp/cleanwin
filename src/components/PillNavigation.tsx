@@ -134,8 +134,8 @@ export default function PillNavigation() {
           <div
             className="pill-nav-cta-container-mobile relative"
             style={{
-              height: "40px",
-              minHeight: "40px",
+              height: "56px",
+              minHeight: "56px",
             }}
           >
                         <button
