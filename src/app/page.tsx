@@ -120,7 +120,16 @@ export default function CleanWinPage() {
 
         {/* Content */}
         <div
-          className="hero-content-mobile relative z-10 max-w-[1152px] mx-auto px-4 py-20 text-center text-white"
+          className="hero-content-mobile"
+          style={{
+            position: "relative",
+            zIndex: 10,
+            maxWidth: "1152px",
+            margin: "0 auto",
+            padding: "80px 16px 24px",
+            textAlign: "center",
+            color: "white",
+          }}
         >
           <h1
             className="hero-title-mobile"
