@@ -452,8 +452,8 @@ export default function PillNavigation() {
           cursor: pointer;
           transition: all 0.2s ease;
           white-space: nowrap;
-          min-height: 40px !important;
-          height: 40px !important;
+          min-height: 44px !important;
+          height: 44px !important;
         }
 
         .pill-nav-cta-mobile:hover {
