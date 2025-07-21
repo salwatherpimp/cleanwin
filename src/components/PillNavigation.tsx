@@ -309,12 +309,15 @@ export default function PillNavigation() {
         }
 
         .pill-nav-services-button {
-          display: flex;
+          display: inline-flex;
           align-items: center;
           gap: 8px;
           background: none;
           border: none;
           cursor: pointer;
+          font-family: inherit;
+          line-height: inherit;
+          vertical-align: baseline;
         }
 
         .pill-nav-services-dropdown {
