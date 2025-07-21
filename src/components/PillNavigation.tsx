@@ -149,7 +149,7 @@ export default function PillNavigation() {
             <div
               className={`pill-nav-cta-dropdown-mobile ${isCtaDropdownOpen ? 'open' : ''}`}
             >
-              <a href="#contact" className="pill-nav-cta-dropdown-item">
+              <a href="/kontakt" className="pill-nav-cta-dropdown-item">
                 <HandIcon />
                 <span>Kontaktanfrage senden</span>
               </a>
