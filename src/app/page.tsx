@@ -93,16 +93,14 @@ export default function CleanWinPage() {
         className="hero-mobile"
         style={{
           position: "relative",
-          height: "680px",
-          minHeight: "680px",
+          height: "75vh",
+          minHeight: "75vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           overflow: "hidden",
           paddingTop: "80px",
           boxSizing: "border-box",
-          contain: "layout style",
-          containIntrinsicSize: "680px 680px",
         }}
       >
                 {/* Background Image */}
@@ -142,8 +140,6 @@ export default function CleanWinPage() {
             padding: "0 16px",
             textAlign: "center",
             color: "white",
-            contain: "layout style",
-            containIntrinsicSize: "680px 680px",
           }}
         >
           <h1
@@ -155,9 +151,6 @@ export default function CleanWinPage() {
               marginBottom: "16px",
               color: "white",
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
-              width: "100%",
-              height: "auto",
-              minHeight: "96px",
             }}
           >
             Professionelle Reinigung in Winterthur & Region
@@ -173,9 +166,6 @@ export default function CleanWinPage() {
               marginRight: "auto",
               maxWidth: "768px",
               color: "rgba(255, 255, 255, 0.95)",
-              width: "100%",
-              height: "auto",
-              minHeight: "64px",
             }}
           >
             Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
@@ -316,10 +306,7 @@ export default function CleanWinPage() {
                 textDecoration: "none",
                 cursor: "pointer",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 25px -5px",
-                transition: "background-color 0.2s ease, box-shadow 0.2s ease",
-                width: "auto",
-                height: "auto",
-                minHeight: "48px",
+                transition: "all 0.2s ease",
               }}
             >
               Jetzt unverbindlich kontaktieren
