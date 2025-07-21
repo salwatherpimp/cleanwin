@@ -85,7 +85,7 @@ export default function CleanWinPage() {
             {/* Pill Navigation */}
       <PillNavigation />
 
-            {/* Hero Section */}
+                  {/* Hero Section */}
       <section
         className="hero-mobile relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden pt-20"
         style={{
