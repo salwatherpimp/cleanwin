@@ -102,18 +102,23 @@ export default function PillNavigation() {
               <span>Kontaktiere uns</span>
                               <ChevronDownIcon size={14} />
             </button>
-            {isCtaDropdownOpen && (
-              <div className="pill-nav-cta-dropdown">
-                <a href="#contact" className="pill-nav-cta-dropdown-item">
-                  <HandIcon />
-                  <span>Kontaktanfrage senden</span>
-                </a>
-                <a href="tel:+41525512424" className="pill-nav-cta-dropdown-item">
-                  <PhoneIcon />
-                  <span>+41 52 551 24 24</span>
-                </a>
-              </div>
-            )}
+            <div
+              className="pill-nav-cta-dropdown"
+              style={{
+                opacity: isCtaDropdownOpen ? 1 : 0,
+                visibility: isCtaDropdownOpen ? 'visible' : 'hidden',
+                transform: isCtaDropdownOpen ? 'translateY(0)' : 'translateY(-10px)',
+              }}
+            >
+              <a href="#contact" className="pill-nav-cta-dropdown-item">
+                <HandIcon />
+                <span>Kontaktanfrage senden</span>
+              </a>
+              <a href="tel:+41525512424" className="pill-nav-cta-dropdown-item">
+                <PhoneIcon />
+                <span>+41 52 551 24 24</span>
+              </a>
+            </div>
           </div>
         </div>
 
