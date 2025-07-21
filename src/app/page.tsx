@@ -87,15 +87,9 @@ export default function CleanWinPage() {
 
       {/* Hero Section */}
       <section
-        className="hero-mobile"
-                style={{
-          position: "relative",
-          height: "552px",
-          minHeight: "483px",
-          display: "flex",
-          alignItems: "center",
-          overflow: "hidden",
-                    paddingTop: "80px",
+        className="hero-mobile min-h-[600px] relative flex items-center overflow-hidden pt-20"
+        style={{
+          height: "auto",
         }}
       >
                 {/* Background Image */}
@@ -126,42 +120,19 @@ export default function CleanWinPage() {
 
         {/* Content */}
         <div
-          className="hero-content-mobile"
-          style={{
-            position: "relative",
-            zIndex: 10,
-            maxWidth: "1152px",
-            margin: "0 auto",
-            padding: "80px 16px 24px",
-            textAlign: "center",
-            color: "white",
-          }}
+          className="hero-content-mobile relative z-10 max-w-[1152px] mx-auto px-4 py-20 text-center text-white"
         >
           <h1
-            className="hero-title-mobile"
+            className="hero-title-mobile text-4xl font-extrabold leading-12 mb-4 text-white"
             style={{
-              fontSize: "40px",
-              fontWeight: "800",
-              lineHeight: "48px",
-              marginBottom: "16px",
-              color: "white",
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
             }}
-                    >
+          >
             Professionelle Reinigung in Winterthur & Region
           </h1>
 
           <p
-            className="hero-subtitle-mobile"
-            style={{
-              fontSize: "20px",
-              lineHeight: "32px",
-              marginBottom: "24px",
-              marginLeft: "auto",
-              marginRight: "auto",
-              maxWidth: "768px",
-              color: "rgba(255, 255, 255, 0.95)",
-            }}
+            className="hero-subtitle-mobile text-xl leading-8 mb-6 mx-auto max-w-3xl text-white/95"
           >
             Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
           </p>
@@ -289,19 +260,9 @@ export default function CleanWinPage() {
           <div>
             <a
               href="#contact"
-              className="hero-cta-button"
+              className="hero-cta-button inline-block bg-white text-gray-700 px-8 py-4 rounded-full text-sm font-semibold no-underline transition-all duration-200"
               style={{
-                display: "inline-block",
-                backgroundColor: "white",
-                color: "#374151",
-                padding: "16px 32px",
-                borderRadius: "9999px",
-                fontSize: "14px",
-                fontWeight: "600",
-                textDecoration: "none",
-                cursor: "pointer",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 25px -5px",
-                transition: "all 0.2s ease",
               }}
             >
               Jetzt unverbindlich kontaktieren
@@ -3484,7 +3445,7 @@ export default function CleanWinPage() {
             className="footer-bottom-responsive"
           >
             <div style={{ color: "#EAEAEA", fontSize: "14px" }}>
-              © 2025 CleanWin. Alle Rechte vorbehalten.
+              �� 2025 CleanWin. Alle Rechte vorbehalten.
               <br />
               Gemacht mit ♥️ in Winterthur
             </div>
