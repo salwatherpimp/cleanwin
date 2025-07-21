@@ -648,7 +648,10 @@ export default function PillNavigation() {
           }
 
                     .pill-nav {
-            padding: 0;
+            height: 56px !important;
+            min-height: 56px !important;
+            padding: 0 12px !important;
+            box-sizing: border-box !important;
           }
 
                     .pill-nav-cta-mobile {
