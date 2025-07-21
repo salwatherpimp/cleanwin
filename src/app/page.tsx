@@ -90,10 +90,11 @@ export default function CleanWinPage() {
         className="hero-mobile"
         style={{
           position: "relative",
-          height: "680px",
-          minHeight: "680px",
+          height: "75vh",
+          minHeight: "75vh",
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           overflow: "hidden",
           paddingTop: "80px",
           boxSizing: "border-box",
