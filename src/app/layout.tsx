@@ -23,6 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/arial.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );
