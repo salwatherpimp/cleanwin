@@ -3548,7 +3548,7 @@ export default function CleanWinPage() {
             box-sizing: border-box !important;
           }
           .hero-content-mobile {
-            padding: 60px 16px 24px !important;
+            padding: 80px 16px 24px !important;
           }
           .hero-title-mobile {
             font-size: 28px !important;
