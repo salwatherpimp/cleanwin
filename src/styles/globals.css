@@ -104,7 +104,20 @@ button, a {
 
   /* Mobile hero adjustments */
   .hero-mobile {
-    padding-top: 88px !important;
+    padding-top: 100px !important;
+  }
+
+  /* Mobile font sizes - keep smaller for mobile */
+  .hero-content-mobile h1 {
+    font-size: 32px !important;
+    line-height: 38px !important;
+    min-height: 76px !important;
+  }
+
+  .hero-content-mobile p {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    min-height: 48px !important;
   }
 }
 
