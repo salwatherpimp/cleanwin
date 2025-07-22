@@ -79,14 +79,25 @@ button, a {
     contain-intrinsic-size: 100vw 80vh;
   }
 
-  /* Reduce h1 to subtitle spacing on desktop */
+  /* Restore desktop font sizes */
   .hero-content-mobile h1 {
+    font-size: 40px !important;
+    line-height: 48px !important;
+    min-height: 96px !important;
     margin-bottom: 12px !important;
   }
 
   .hero-content-mobile p {
+    font-size: 20px !important;
+    line-height: 32px !important;
+    min-height: 64px !important;
     margin-top: 0 !important;
     margin-bottom: 24px !important;
+  }
+
+  /* Remove mobile bottom padding on desktop */
+  .hero-content-mobile {
+    padding-bottom: 0 !important;
   }
 }
 
