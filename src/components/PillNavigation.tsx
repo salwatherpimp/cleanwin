@@ -972,31 +972,7 @@ export default function PillNavigation() {
           background: #0b8d8d;
         }
 
-        .pill-nav-cta-dropdown-mobile {
-          position: absolute;
-          top: 100%;
-          right: 0;
-          background: white;
-          border-radius: 12px;
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-          border: 1px solid rgba(0, 0, 0, 0.1);
-          padding: 8px;
-          margin-top: 8px;
-          min-width: 200px;
-          z-index: 100;
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 0.2s ease, visibility 0.2s ease;
-          pointer-events: none;
-          contain: layout style;
-          contain-intrinsic-size: 200px 120px;
-        }
 
-        .pill-nav-cta-dropdown-mobile.open {
-          opacity: 1;
-          visibility: visible;
-          pointer-events: auto;
-        }
 
                         .pill-nav-hamburger {
           display: flex;
