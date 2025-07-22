@@ -575,15 +575,51 @@ export default function PillNavigation() {
           }}>
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
-              className="pill-nav-mobile-menu-top-item"
               onClick={() => setIsMobileMenuOpen(false)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                padding: "12px 0",
+                textDecoration: "none",
+                color: "#1f2937",
+                fontWeight: "700",
+                fontSize: "18px",
+                borderRadius: "0",
+                marginBottom: "8px",
+                transition: "color 0.2s ease",
+                minHeight: "44px",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = "#0DA6A6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = "#1f2937";
+              }}
             >
               Über uns
             </a>
             <a
               href="https://cleanwin.vercel.app/referenzen"
-              className="pill-nav-mobile-menu-top-item"
               onClick={() => setIsMobileMenuOpen(false)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                padding: "12px 0",
+                textDecoration: "none",
+                color: "#1f2937",
+                fontWeight: "700",
+                fontSize: "18px",
+                borderRadius: "0",
+                marginBottom: "0",
+                transition: "color 0.2s ease",
+                minHeight: "44px",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = "#0DA6A6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = "#1f2937";
+              }}
             >
               Referenzen
             </a>
