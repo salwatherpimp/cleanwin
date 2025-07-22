@@ -171,6 +171,9 @@ export default function CleanWinPage() {
             textAlign: "center",
             color: "white",
             contain: "layout style",
+            containIntrinsicSize: "1152px 400px",
+            minHeight: "400px",
+            height: "400px",
           }}
         >
           <h1
@@ -182,6 +185,9 @@ export default function CleanWinPage() {
               marginBottom: "16px",
               color: "white",
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
+              minHeight: "96px",
+              height: "96px",
+              contain: "layout style",
             }}
           >
             Professionelle Reinigung in Winterthur & Region
@@ -197,6 +203,9 @@ export default function CleanWinPage() {
               marginRight: "auto",
               maxWidth: "768px",
               color: "rgba(255, 255, 255, 0.95)",
+              minHeight: "64px",
+              height: "64px",
+              contain: "layout style",
             }}
           >
             Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
@@ -214,6 +223,10 @@ export default function CleanWinPage() {
               padding: "8px 16px",
               marginBottom: "32px",
               color: "white",
+              minHeight: "48px",
+              height: "48px",
+              contain: "layout style",
+              containIntrinsicSize: "280px 48px",
             }}
           >
             {/* Google Icon */}
@@ -322,7 +335,13 @@ export default function CleanWinPage() {
           </div>
 
                     {/* CTA Button */}
-          <div>
+          <div
+            style={{
+              minHeight: "56px",
+              height: "56px",
+              contain: "layout style",
+              containIntrinsicSize: "320px 56px",
+            }}>
             <a
               href="/kontakt"
               className="hero-cta-button"
