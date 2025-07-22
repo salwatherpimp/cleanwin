@@ -161,8 +161,6 @@ export default function CleanWinPage() {
             color: "white",
             contain: "layout style",
             containIntrinsicSize: "1152px 400px",
-            minHeight: "400px",
-            height: "400px",
           }}
         >
           <h1
