@@ -3859,6 +3859,11 @@ export default function CleanWinPage() {
             grid-template-columns: 1fr !important;
           }
 
+          .footer-main-grid {
+            grid-template-columns: 1fr !important;
+            gap: 24px !important;
+          }
+
           .footer-empty-column {
             display: none;
           }
@@ -3866,14 +3871,15 @@ export default function CleanWinPage() {
           .footer-bottom-responsive {
             flex-direction: column !important;
             align-items: flex-start !important;
+            gap: 8px !important;
           }
 
-                    .footer-social {
+          .footer-social {
             gap: 16px !important;
             flex-direction: row !important;
             display: flex !important;
           }
-                }
+        }
 
         /* CTA Button Hover Effects */
         .hero-cta-button:hover {
