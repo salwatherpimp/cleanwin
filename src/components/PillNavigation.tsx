@@ -391,6 +391,8 @@ export default function PillNavigation() {
               display: "flex",
               alignItems: "center",
               boxSizing: "border-box",
+              contain: "layout style",
+              containIntrinsicSize: "180px 56px",
             }}
           >
             <button
