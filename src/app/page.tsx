@@ -12,49 +12,35 @@ export default function CleanWinPage() {
   };
 
     useEffect(() => {
-    // Carousel navigation functionality
+    // Simplified carousel navigation with fixed scroll amounts
     const carouselTrack = document.getElementById('carousel-track');
     const prevButton = document.getElementById('carousel-prev');
     const nextButton = document.getElementById('carousel-next');
 
     if (!carouselTrack || !prevButton || !nextButton) return;
 
-    // Get viewport-based cards per view
-    const getCardsPerView = () => {
-      if (window.innerWidth < 768) return 1;
-      if (window.innerWidth < 1024) return 2;
-      return 3;
-    };
-
-    const getCardWidth = () => {
-      const firstCard = carouselTrack.children[0] as HTMLElement;
-      if (!firstCard) return 0;
-      const computedStyle = window.getComputedStyle(firstCard);
-      const marginRight = parseFloat(computedStyle.marginRight) || 0;
-      return firstCard.offsetWidth + marginRight + 24; // 24px is the gap
+    // Fixed scroll amounts to prevent layout calculations
+    const getScrollAmount = () => {
+      if (window.innerWidth < 768) return 360; // Single card width on mobile
+      if (window.innerWidth < 1024) return 720; // Two cards on tablet
+      return 1080; // Three cards on desktop
     };
 
     const goToPrev = () => {
-      const cardWidth = getCardWidth();
-      const cardsPerView = getCardsPerView();
-      const scrollAmount = cardWidth * cardsPerView;
       carouselTrack.scrollBy({
-        left: -scrollAmount,
+        left: -getScrollAmount(),
         behavior: 'smooth'
       });
     };
 
     const goToNext = () => {
-      const cardWidth = getCardWidth();
-      const cardsPerView = getCardsPerView();
-      const scrollAmount = cardWidth * cardsPerView;
       carouselTrack.scrollBy({
-        left: scrollAmount,
+        left: getScrollAmount(),
         behavior: 'smooth'
       });
     };
 
-        // Event listeners
+    // Event listeners
     prevButton.addEventListener('click', goToPrev);
     nextButton.addEventListener('click', goToNext);
 
