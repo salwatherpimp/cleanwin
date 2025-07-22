@@ -364,6 +364,8 @@ export default function PillNavigation() {
           minHeight: "56px",
           gap: "8px",
           boxSizing: "border-box",
+          contain: "layout style",
+          containIntrinsicSize: "100% 56px",
         }}>
           {/* Logo */}
           <a href="https://cleanwin.vercel.app/" style={{
