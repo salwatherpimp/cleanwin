@@ -302,11 +302,51 @@ export default function PillNavigation() {
                 containIntrinsicSize: "220px 120px",
               }}
             >
-              <a href="/kontakt" className="pill-nav-cta-dropdown-item">
+              <a href="/kontakt" style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "12px 16px",
+                textDecoration: "none",
+                color: "#374151",
+                fontWeight: "500",
+                fontSize: "14px",
+                borderRadius: "8px",
+                transition: "background-color 0.2s ease, color 0.2s ease",
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#f3f4f6";
+                e.currentTarget.style.color = "#0DA6A6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#374151";
+              }}>
                 <HandIcon />
                 <span>Kontaktanfrage senden</span>
               </a>
-              <a href="tel:+41525512424" className="pill-nav-cta-dropdown-item">
+              <a href="tel:+41525512424" style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "12px 16px",
+                textDecoration: "none",
+                color: "#374151",
+                fontWeight: "500",
+                fontSize: "14px",
+                borderRadius: "8px",
+                transition: "background-color 0.2s ease, color 0.2s ease",
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#f3f4f6";
+                e.currentTarget.style.color = "#0DA6A6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#374151";
+              }}>
                 <PhoneIcon />
                 <span>+41 52 551 24 24</span>
               </a>
