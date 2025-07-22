@@ -118,7 +118,7 @@ export default function CleanWinPage() {
             alignItems: "center",
             justifyContent: "center",
             overflow: "hidden",
-            paddingTop: "88px",
+            paddingTop: "100px",
             boxSizing: "border-box",
           }}
         >
@@ -165,16 +165,16 @@ export default function CleanWinPage() {
         >
           <h1
             style={{
-              fontSize: "40px",
+              fontSize: "32px",
               fontWeight: "800",
-              lineHeight: "48px",
+              lineHeight: "38px",
               marginBottom: "16px",
               marginTop: "0",
               color: "white",
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
-              minHeight: "96px",
+              minHeight: "76px",
               contain: "layout style",
-              containIntrinsicSize: "100% 96px",
+              containIntrinsicSize: "100% 76px",
             }}
           >
             Professionelle Reinigung in Winterthur & Region
@@ -182,17 +182,17 @@ export default function CleanWinPage() {
 
           <p
             style={{
-              fontSize: "20px",
-              lineHeight: "32px",
+              fontSize: "16px",
+              lineHeight: "24px",
               marginBottom: "24px",
               marginTop: "0",
               marginLeft: "auto",
               marginRight: "auto",
               maxWidth: "768px",
               color: "rgba(255, 255, 255, 0.95)",
-              minHeight: "64px",
+              minHeight: "48px",
               contain: "layout style",
-              containIntrinsicSize: "100% 64px",
+              containIntrinsicSize: "100% 48px",
             }}
           >
             Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
@@ -3530,7 +3530,7 @@ export default function CleanWinPage() {
             className="footer-bottom-responsive"
           >
             <div style={{ color: "#EAEAEA", fontSize: "14px" }}>
-              ��� 2025 CleanWin. Alle Rechte vorbehalten.
+              ����� 2025 CleanWin. Alle Rechte vorbehalten.
               <br />
               Gemacht mit ♥️ in Winterthur
             </div>
