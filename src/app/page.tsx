@@ -210,15 +210,12 @@ export default function CleanWinPage() {
               border: "1px solid rgba(255, 255, 255, 0.3)",
               borderRadius: "8px",
               padding: "8px 16px",
-              marginBottom: "24px",
-              marginTop: "8px",
+              marginBottom: "32px",
+              marginTop: "16px",
               color: "white",
               minHeight: "48px",
-              height: "48px",
               contain: "layout style",
               containIntrinsicSize: "280px 48px",
-              fontFamily: "Arial, Helvetica, sans-serif",
-              fontDisplay: "swap",
             }}
           >
             {/* Google Icon */}
@@ -3545,7 +3542,7 @@ export default function CleanWinPage() {
             <div style={{ color: "#EAEAEA", fontSize: "14px" }}>
               ��� 2025 CleanWin. Alle Rechte vorbehalten.
               <br />
-              Gemacht mit ♥�� in Winterthur
+              Gemacht mit ♥️ in Winterthur
             </div>
             <a
               href="https://cleanwin.vercel.app/datenschutz"
