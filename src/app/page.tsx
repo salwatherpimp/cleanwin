@@ -3505,12 +3505,12 @@ export default function CleanWinPage() {
                 Unsere Servicegebiete
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                <span style={{ color: "#EAEAEA", fontSize: "14px" }}>Fensterreinigung Region Winterthur</span>
-                <span style={{ color: "#EAEAEA", fontSize: "14px" }}>Unterhaltsreinigung Region Winterthur</span>
-                <span style={{ color: "#EAEAEA", fontSize: "14px" }}>Fassadenreinigung Region Winterthur</span>
-                <span style={{ color: "#EAEAEA", fontSize: "14px" }}>Umzugsreinigung Region Winterthur</span>
-                <span style={{ color: "#EAEAEA", fontSize: "14px" }}>Baureinigung Region Winterthur</span>
-                <span style={{ color: "#EAEAEA", fontSize: "14px" }}>Solarpanel Reinigen Region Winterthur</span>
+                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Fensterreinigung Region Winterthur</span>
+                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Unterhaltsreinigung Region Winterthur</span>
+                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Fassadenreinigung Region Winterthur</span>
+                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Umzugsreinigung Region Winterthur</span>
+                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Baureinigung Region Winterthur</span>
+                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Solarpanel Reinigen Region Winterthur</span>
               </div>
             </div>
           </div>
