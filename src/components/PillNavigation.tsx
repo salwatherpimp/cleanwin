@@ -538,13 +538,13 @@ export default function PillNavigation() {
             }}
           >
             <span style={{
-              width: "20px",
+              width: "16px",
               height: "2px",
               background: "#374151",
-              margin: "1.5px 0",
+              margin: "1px 0",
               transition: "transform 0.3s ease, opacity 0.3s ease",
               transformOrigin: "center",
-              transform: isMobileMenuOpen ? "rotate(45deg) translate(4px, 4px)" : "none",
+              transform: isMobileMenuOpen ? "rotate(45deg) translate(3px, 3px)" : "none",
             }}></span>
             <span style={{
               width: "20px",
