@@ -438,21 +438,85 @@ export default function PillNavigation() {
           </div>
 
           {/* Hamburger Menu */}
-          <button 
-            className="pill-nav-hamburger"
+          <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "32px",
+              height: "32px",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: "4px",
+              flexShrink: 0,
+              borderRadius: "16px",
+              transition: "background-color 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#f3f4f6";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "none";
+            }}
           >
-            <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
-            <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
-            <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+            <span style={{
+              width: "20px",
+              height: "2px",
+              background: "#374151",
+              margin: "1.5px 0",
+              transition: "transform 0.3s ease, opacity 0.3s ease",
+              transformOrigin: "center",
+              transform: isMobileMenuOpen ? "rotate(45deg) translate(4px, 4px)" : "none",
+            }}></span>
+            <span style={{
+              width: "20px",
+              height: "2px",
+              background: "#374151",
+              margin: "1.5px 0",
+              transition: "transform 0.3s ease, opacity 0.3s ease",
+              transformOrigin: "center",
+              opacity: isMobileMenuOpen ? 0 : 1,
+            }}></span>
+            <span style={{
+              width: "20px",
+              height: "2px",
+              background: "#374151",
+              margin: "1.5px 0",
+              transition: "transform 0.3s ease, opacity 0.3s ease",
+              transformOrigin: "center",
+              transform: isMobileMenuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none",
+            }}></span>
           </button>
         </div>
       </nav>
 
       {/* Mobile Menu Dropdown */}
-      <div className={`pill-nav-mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        <div className="pill-nav-mobile-menu-content">
+      <div style={{
+        position: "fixed",
+        top: "90px",
+        left: "0",
+        right: "0",
+        margin: "0 auto",
+        width: "calc(100vw - 32px)",
+        maxWidth: "400px",
+        background: "white",
+        borderRadius: "20px",
+        boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+        border: "1px solid rgba(0, 0, 0, 0.1)",
+        opacity: isMobileMenuOpen ? 1 : 0,
+        visibility: isMobileMenuOpen ? "visible" : "hidden",
+        transition: "opacity 0.2s ease, visibility 0.2s ease",
+        contain: "layout style",
+        containIntrinsicSize: "400px 350px",
+        zIndex: 1000,
+      }}>
+        <div style={{
+          padding: "16px",
+        }}>
           
           <div className="pill-nav-mobile-menu-services">
             <h3 className="pill-nav-mobile-menu-section-title">Leistungen</h3>
