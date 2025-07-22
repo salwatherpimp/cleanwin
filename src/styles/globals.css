@@ -101,10 +101,36 @@ body {
   }
 }
 
-/* Mobile navigation visibility */
+/* Mobile navigation visibility and spacing */
 @media (max-width: 1023px) {
   .nav-desktop { display: none !important; }
   .nav-mobile { display: flex !important; }
+
+  /* Mobile top bar improvements */
+  .nav-stabilizer-wrapper {
+    left: 16px !important;
+    right: 16px !important;
+    width: calc(100vw - 32px) !important;
+  }
+
+  /* Mobile hero adjustments */
+  .hero-mobile {
+    padding-top: 104px !important;
+  }
+
+  /* Mobile text sizing */
+  .hero-content-mobile h1 {
+    font-size: clamp(28px, 7vw, 36px) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .hero-content-mobile p {
+    font-size: clamp(16px, 4vw, 18px) !important;
+    line-height: 1.5 !important;
+    margin-top: 8px !important;
+    margin-bottom: 20px !important;
+  }
 }
 
 @media (min-width: 1024px) {
