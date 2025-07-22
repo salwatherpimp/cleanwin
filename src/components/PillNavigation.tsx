@@ -42,13 +42,43 @@ export default function PillNavigation() {
   );
 
   return (
-    <div className="pill-nav-wrapper">
+    <div style={{
+      width: "100%",
+      display: "flex",
+      justifyContent: "center",
+    }}>
       {/* Main pill navigation */}
-      <nav className="pill-nav">
+      <nav style={{
+        background: "white",
+        borderRadius: "50px",
+        boxShadow: "0 8px 32px rgba(0, 0, 0, 0.12)",
+        backdropFilter: "blur(8px)",
+        border: "1px solid rgba(255, 255, 255, 0.2)",
+        height: "56px",
+        minHeight: "56px",
+        padding: "8px 24px",
+        margin: "0 auto",
+        maxWidth: "1200px",
+        boxSizing: "border-box",
+        display: "flex",
+        alignItems: "center",
+      }}>
         {/* Desktop Layout */}
-        <div className="pill-nav-desktop">
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "40px",
+          width: "100%",
+        }}>
           {/* Logo */}
-          <a href="https://cleanwin.vercel.app/" className="pill-nav-logo">
+          <a href="https://cleanwin.vercel.app/" style={{
+            display: "flex",
+            alignItems: "center",
+            textDecoration: "none",
+            transition: "transform 0.2s ease",
+            flexShrink: 0,
+          }}>
             <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="CleanWin Logo"
@@ -59,8 +89,17 @@ export default function PillNavigation() {
           </a>
 
           {/* Navigation Items */}
-          <div className="pill-nav-items">
-                        <div className="pill-nav-dropdown-container">
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "32px",
+            marginLeft: "24px",
+          }}>
+            <div style={{
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+            }}>
               <button
                 className="pill-nav-link pill-nav-services-button"
                 onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
