@@ -85,3 +85,18 @@ body {
   .nav-desktop { display: flex !important; }
   .nav-mobile { display: none !important; }
 }
+
+/* Review carousel CLS prevention */
+.carousel-track {
+  contain: layout style;
+  contain-intrinsic-size: 1440px 280px;
+}
+
+.review-card {
+  contain: layout style;
+  contain-intrinsic-size: 360px 280px;
+  min-height: 280px !important;
+  max-width: 360px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
