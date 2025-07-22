@@ -412,15 +412,15 @@ export default function PillNavigation() {
                 background: "#0DA6A6",
                 color: "white",
                 border: "none",
-                padding: "8px 16px",
-                borderRadius: "20px",
+                padding: "6px 12px",
+                borderRadius: "18px",
                 fontWeight: "600",
-                fontSize: "14px",
+                fontSize: "13px",
                 cursor: "pointer",
                 transition: "background-color 0.2s ease",
                 whiteSpace: "nowrap",
-                minHeight: "44px",
-                height: "44px",
+                minHeight: "36px",
+                height: "36px",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "#0b8d8d";
