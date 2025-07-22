@@ -355,9 +355,23 @@ export default function PillNavigation() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="pill-nav-mobile">
+        <div style={{
+          display: "none",
+          alignItems: "center",
+          justifyContent: "space-between",
+          paddingInline: "16px",
+          height: "56px",
+          minHeight: "56px",
+          gap: "8px",
+          boxSizing: "border-box",
+        }}>
           {/* Logo */}
-          <a href="https://cleanwin.vercel.app/" className="pill-nav-logo-mobile">
+          <a href="https://cleanwin.vercel.app/" style={{
+            display: "flex",
+            alignItems: "center",
+            textDecoration: "none",
+            flexShrink: 0,
+          }}>
                         <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="CleanWin Logo"
@@ -369,15 +383,41 @@ export default function PillNavigation() {
 
           {/* CTA Button Mobile */}
           <div
-            className="pill-nav-cta-container-mobile relative"
             style={{
+              position: "relative",
               height: "56px",
               minHeight: "56px",
+              maxHeight: "56px",
+              display: "flex",
+              alignItems: "center",
+              boxSizing: "border-box",
             }}
           >
-                        <button
-              className="pill-nav-cta-mobile"
+            <button
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "4px",
+                background: "#0DA6A6",
+                color: "white",
+                border: "none",
+                padding: "8px 16px",
+                borderRadius: "20px",
+                fontWeight: "600",
+                fontSize: "14px",
+                cursor: "pointer",
+                transition: "background-color 0.2s ease",
+                whiteSpace: "nowrap",
+                minHeight: "44px",
+                height: "44px",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#0b8d8d";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "#0DA6A6";
+              }}
             >
                             <HandIcon />
               <span>Kontaktiere uns</span>
