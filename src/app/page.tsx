@@ -77,8 +77,8 @@ export default function CleanWinPage() {
         style={{
           position: "fixed",
           top: "16px",
-          left: "0",
-          right: "0",
+          left: "16px",
+          right: "16px",
           zIndex: 1000,
           height: "56px",
           minHeight: "56px",
@@ -86,9 +86,12 @@ export default function CleanWinPage() {
           containIntrinsicSize: "100vw 56px",
           display: "flex",
           justifyContent: "center",
-          width: "100%",
+          width: "calc(100vw - 32px)",
           maxWidth: "calc(100vw - 32px)",
           margin: "0 auto",
+          paddingLeft: "0",
+          paddingRight: "0",
+          boxSizing: "border-box",
         }}
       >
         <PillNavigation />
@@ -115,7 +118,7 @@ export default function CleanWinPage() {
             alignItems: "center",
             justifyContent: "center",
             overflow: "hidden",
-            paddingTop: "80px",
+            paddingTop: "104px",
             boxSizing: "border-box",
           }}
         >
