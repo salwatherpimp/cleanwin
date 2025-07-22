@@ -214,12 +214,15 @@ export default function CleanWinPage() {
               border: "1px solid rgba(255, 255, 255, 0.3)",
               borderRadius: "8px",
               padding: "8px 16px",
-              marginBottom: "32px",
+              marginBottom: "24px",
+              marginTop: "8px",
               color: "white",
               minHeight: "48px",
               height: "48px",
               contain: "layout style",
               containIntrinsicSize: "280px 48px",
+              fontFamily: "Arial, Helvetica, sans-serif",
+              fontDisplay: "swap",
             }}
           >
             {/* Google Icon */}
@@ -337,7 +340,6 @@ export default function CleanWinPage() {
             }}>
             <a
               href="/kontakt"
-              className="hero-cta-button"
               style={{
                 display: "inline-block",
                 backgroundColor: "white",
@@ -350,6 +352,14 @@ export default function CleanWinPage() {
                 cursor: "pointer",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 25px -5px",
                 transition: "all 0.2s ease",
+                minHeight: "56px",
+                minWidth: "280px",
+                contain: "layout style",
+                containIntrinsicSize: "280px 56px",
+                fontFamily: "Arial, Helvetica, sans-serif",
+                fontDisplay: "swap",
+                lineHeight: "1.4",
+                whiteSpace: "nowrap",
               }}
             >
               Jetzt unverbindlich kontaktieren
@@ -3275,7 +3285,7 @@ export default function CleanWinPage() {
                 textShadow: "rgba(0, 0, 0, 0.5) 2px 2px 4px",
               }}
             >
-              Cleanwin - persönlich, zuverl��ssig, hochwertig
+              Cleanwin - persönlich, zuverlässig, hochwertig
             </h2>
                         <a
               href="/kontakt"
