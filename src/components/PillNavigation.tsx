@@ -518,23 +518,61 @@ export default function PillNavigation() {
           padding: "16px",
         }}>
           
-          <div className="pill-nav-mobile-menu-services">
-            <h3 className="pill-nav-mobile-menu-section-title">Leistungen</h3>
+          <div style={{
+            marginBottom: "12px",
+          }}>
+            <h3 style={{
+              fontWeight: "700",
+              fontSize: "18px",
+              color: "#1f2937",
+              marginBottom: "12px",
+              marginTop: "0",
+              textTransform: "none",
+              letterSpacing: "0",
+              paddingLeft: "0",
+            }}>Leistungen</h3>
             {services.map((service, index) => (
               <a
                 key={index}
                 href={service.href}
-                className="pill-nav-mobile-menu-item"
                 onClick={() => setIsMobileMenuOpen(false)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  padding: "12px 16px",
+                  textDecoration: "none",
+                  color: "#6b7280",
+                  fontWeight: "400",
+                  fontSize: "16px",
+                  borderRadius: "0",
+                  marginBottom: "0",
+                  transition: "background-color 0.2s ease, color 0.2s ease",
+                  minHeight: "44px",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f3f4f6";
+                  e.currentTarget.style.color = "#0DA6A6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#6b7280";
+                }}
               >
                 {service.name}
               </a>
             ))}
           </div>
 
-          <div className="pill-nav-mobile-menu-separator"></div>
+          <div style={{
+            height: "1px",
+            background: "#d1d5db",
+            margin: "12px 0",
+            borderTop: "1px solid #d1d5db",
+          }}></div>
 
-                    <div className="pill-nav-mobile-menu-nav">
+          <div style={{
+            marginBottom: "0",
+          }}>
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
               className="pill-nav-mobile-menu-top-item"
