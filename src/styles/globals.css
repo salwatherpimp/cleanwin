@@ -50,6 +50,19 @@ body {
 .nav-stabilizer-wrapper {
   contain: layout style;
   contain-intrinsic-size: 100vw 56px;
+  box-sizing: border-box;
+}
+
+/* Prevent any layout shifts from navigation */
+nav {
+  contain: layout style;
+  font-display: swap;
+}
+
+/* Ensure buttons have stable layout */
+button, a {
+  contain: layout style;
+  font-display: swap;
 }
 
 /* Hero content with proper spacing */
