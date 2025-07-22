@@ -46,32 +46,58 @@ body {
   contain-intrinsic-size: 100vw 75vh;
 }
 
+/* Top bar spacing and mobile improvements */
+.nav-stabilizer-wrapper {
+  contain: layout style;
+  contain-intrinsic-size: 100vw 56px;
+}
+
+/* Hero content with proper spacing */
 .hero-content-mobile {
   contain: layout style;
   contain-intrinsic-size: 100% 400px;
 }
 
-.hero-title-mobile {
-  contain: layout style;
-  contain-intrinsic-size: 100% 96px;
-}
-
-.hero-subtitle-mobile {
-  contain: layout style;
-  contain-intrinsic-size: 100% 64px;
-}
-
-.hero-cta-button {
-  contain: layout style;
-  contain-intrinsic-size: 320px 56px;
-  font-display: swap;
-}
-
+/* Desktop spacing improvements */
 @media (min-width: 768px) {
   .hero-mobile-wrapper {
     height: 80vh;
     min-height: 80vh;
     contain-intrinsic-size: 100vw 80vh;
+  }
+
+  /* Reduce h1 to subtitle spacing on desktop */
+  .hero-content-mobile h1 {
+    margin-bottom: 16px !important;
+  }
+
+  .hero-content-mobile p {
+    margin-top: 8px !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Desktop font sizes */
+  .hero-content-mobile h1 {
+    font-size: 48px !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero-content-mobile p {
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Large desktop optimizations */
+  .hero-content-mobile h1 {
+    font-size: 56px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hero-content-mobile p {
+    font-size: 24px !important;
+    margin-top: 12px !important;
   }
 }
 
