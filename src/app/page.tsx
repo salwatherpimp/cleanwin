@@ -324,8 +324,6 @@ export default function CleanWinPage() {
                     {/* CTA Button */}
           <div
             style={{
-              minHeight: "56px",
-              height: "56px",
               contain: "layout style",
               containIntrinsicSize: "320px 56px",
             }}>
