@@ -40,15 +40,38 @@ body {
   min-height: 100vh;
 }
 
-/* Minimal CLS prevention for hero section */
+/* Comprehensive CLS prevention for hero section */
 .hero-mobile-wrapper {
   contain: layout style;
+  contain-intrinsic-size: 100vw 75vh;
+}
+
+.hero-content-mobile {
+  contain: layout style;
+  contain-intrinsic-size: 100% 400px;
+}
+
+.hero-title-mobile {
+  contain: layout style;
+  contain-intrinsic-size: 100% 96px;
+}
+
+.hero-subtitle-mobile {
+  contain: layout style;
+  contain-intrinsic-size: 100% 64px;
+}
+
+.hero-cta-button {
+  contain: layout style;
+  contain-intrinsic-size: 320px 56px;
+  font-display: swap;
 }
 
 @media (min-width: 768px) {
   .hero-mobile-wrapper {
     height: 80vh;
     min-height: 80vh;
+    contain-intrinsic-size: 100vw 80vh;
   }
 }
 
