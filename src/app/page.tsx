@@ -345,14 +345,8 @@ export default function CleanWinPage() {
                 cursor: "pointer",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 25px -5px",
                 transition: "all 0.2s ease",
-                minHeight: "56px",
-                minWidth: "280px",
                 contain: "layout style",
-                containIntrinsicSize: "280px 56px",
-                fontFamily: "Arial, Helvetica, sans-serif",
-                fontDisplay: "swap",
-                lineHeight: "1.4",
-                whiteSpace: "nowrap",
+                containIntrinsicSize: "320px 56px",
               }}
             >
               Jetzt unverbindlich kontaktieren
