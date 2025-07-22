@@ -166,35 +166,39 @@ export default function CleanWinPage() {
           }}
         >
           <h1
-            className="hero-title-mobile"
             style={{
-              fontSize: "40px",
+              fontSize: "clamp(32px, 8vw, 40px)",
               fontWeight: "800",
-              lineHeight: "48px",
+              lineHeight: "1.2",
               marginBottom: "16px",
+              marginTop: "0",
               color: "white",
               textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
               minHeight: "96px",
-              height: "96px",
               contain: "layout style",
+              containIntrinsicSize: "100% 96px",
+              fontFamily: "Arial, Helvetica, sans-serif",
+              fontDisplay: "swap",
             }}
           >
             Professionelle Reinigung in Winterthur & Region
           </h1>
 
           <p
-            className="hero-subtitle-mobile"
             style={{
-              fontSize: "20px",
-              lineHeight: "32px",
-              marginBottom: "24px",
+              fontSize: "clamp(16px, 4vw, 20px)",
+              lineHeight: "1.6",
+              marginBottom: "32px",
+              marginTop: "16px",
               marginLeft: "auto",
               marginRight: "auto",
               maxWidth: "768px",
               color: "rgba(255, 255, 255, 0.95)",
               minHeight: "64px",
-              height: "64px",
               contain: "layout style",
+              containIntrinsicSize: "100% 64px",
+              fontFamily: "Arial, Helvetica, sans-serif",
+              fontDisplay: "swap",
             }}
           >
             Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
@@ -3271,7 +3275,7 @@ export default function CleanWinPage() {
                 textShadow: "rgba(0, 0, 0, 0.5) 2px 2px 4px",
               }}
             >
-              Cleanwin - persönlich, zuverlässig, hochwertig
+              Cleanwin - persönlich, zuverl��ssig, hochwertig
             </h2>
                         <a
               href="/kontakt"
