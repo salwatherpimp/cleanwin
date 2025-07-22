@@ -3130,6 +3130,7 @@ export default function CleanWinPage() {
             >
               <button
                 id="carousel-prev"
+                aria-label="Previous slide"
                 style={{
                   width: "48px",
                   height: "48px",
@@ -3168,6 +3169,7 @@ export default function CleanWinPage() {
 
               <button
                 id="carousel-next"
+                aria-label="Next slide"
                 style={{
                   width: "48px",
                   height: "48px",
