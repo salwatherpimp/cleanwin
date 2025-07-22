@@ -3325,9 +3325,8 @@ export default function CleanWinPage() {
                 CleanWin GmbH
               </h3>
 
-              <div style={{ color: "#EAEAEA", fontSize: "14px" }}>
-                <div style={{ marginBottom: "4px" }}>Rychenbergstrasse 223</div>
-                <div style={{ marginBottom: "4px" }}>8404 Winterthur</div>
+              <div style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>
+                <div>Rychenbergstrasse 223, 8404 Winterthur</div>
                 <div>Schweiz</div>
               </div>
 
