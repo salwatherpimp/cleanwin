@@ -167,9 +167,9 @@ export default function CleanWinPage() {
         >
           <h1
             style={{
-              fontSize: "clamp(32px, 8vw, 40px)",
+              fontSize: "40px",
               fontWeight: "800",
-              lineHeight: "1.2",
+              lineHeight: "48px",
               marginBottom: "16px",
               marginTop: "0",
               color: "white",
@@ -177,8 +177,6 @@ export default function CleanWinPage() {
               minHeight: "96px",
               contain: "layout style",
               containIntrinsicSize: "100% 96px",
-              fontFamily: "Arial, Helvetica, sans-serif",
-              fontDisplay: "swap",
             }}
           >
             Professionelle Reinigung in Winterthur & Region
@@ -186,10 +184,10 @@ export default function CleanWinPage() {
 
           <p
             style={{
-              fontSize: "clamp(16px, 4vw, 20px)",
-              lineHeight: "1.6",
-              marginBottom: "32px",
-              marginTop: "16px",
+              fontSize: "20px",
+              lineHeight: "32px",
+              marginBottom: "24px",
+              marginTop: "0",
               marginLeft: "auto",
               marginRight: "auto",
               maxWidth: "768px",
@@ -197,8 +195,6 @@ export default function CleanWinPage() {
               minHeight: "64px",
               contain: "layout style",
               containIntrinsicSize: "100% 64px",
-              fontFamily: "Arial, Helvetica, sans-serif",
-              fontDisplay: "swap",
             }}
           >
             Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
@@ -3549,7 +3545,7 @@ export default function CleanWinPage() {
             <div style={{ color: "#EAEAEA", fontSize: "14px" }}>
               ��� 2025 CleanWin. Alle Rechte vorbehalten.
               <br />
-              Gemacht mit ♥️ in Winterthur
+              Gemacht mit ♥�� in Winterthur
             </div>
             <a
               href="https://cleanwin.vercel.app/datenschutz"
