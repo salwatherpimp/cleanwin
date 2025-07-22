@@ -520,14 +520,14 @@ export default function PillNavigation() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              width: "32px",
-              height: "32px",
+              width: "28px",
+              height: "28px",
               background: "none",
               border: "none",
               cursor: "pointer",
-              padding: "4px",
+              padding: "2px",
               flexShrink: 0,
-              borderRadius: "16px",
+              borderRadius: "14px",
               transition: "background-color 0.2s ease",
             }}
             onMouseEnter={(e) => {
