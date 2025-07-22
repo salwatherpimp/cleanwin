@@ -3341,6 +3341,7 @@ export default function CleanWinPage() {
                     textDecoration: "none",
                     fontSize: "14px",
                     transition: "color 0.2s ease",
+                    whiteSpace: "nowrap",
                   }}
                 >
                   <svg
