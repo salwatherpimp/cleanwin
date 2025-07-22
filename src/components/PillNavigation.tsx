@@ -940,15 +940,7 @@ export default function PillNavigation() {
           color: #0DA6A6;
         }
 
-        .pill-nav-cta-container-mobile {
-          position: relative;
-          height: 56px !important;
-          min-height: 56px !important;
-          max-height: 56px !important;
-          display: flex;
-          align-items: center;
-          box-sizing: border-box !important;
-        }
+
 
                                                 .pill-nav-cta-mobile {
           display: flex;
