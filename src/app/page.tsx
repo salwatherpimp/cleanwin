@@ -3880,6 +3880,24 @@ export default function CleanWinPage() {
             flex-direction: row !important;
             display: flex !important;
           }
+
+          /* Prevent mobile text overflow */
+          .footer-main-grid > div {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+          }
+
+          /* Ensure service areas text doesn't overflow */
+          .footer-main-grid h4 {
+            font-size: 16px !important;
+            line-height: 1.3 !important;
+          }
+
+          .footer-main-grid span {
+            font-size: 13px !important;
+            line-height: 1.4 !important;
+          }
         }
 
         /* CTA Button Hover Effects */
