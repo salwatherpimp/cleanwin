@@ -46,6 +46,8 @@ export default function PillNavigation() {
       width: "100%",
       display: "flex",
       justifyContent: "center",
+      contain: "layout style",
+      containIntrinsicSize: "100% 56px",
     }}>
       {/* Main pill navigation */}
       <nav style={{
@@ -56,12 +58,17 @@ export default function PillNavigation() {
         border: "1px solid rgba(255, 255, 255, 0.2)",
         height: "56px",
         minHeight: "56px",
-        padding: "8px 24px",
-        margin: "0 auto",
+        padding: "8px 16px",
+        margin: "0",
+        width: "100%",
         maxWidth: "1200px",
         boxSizing: "border-box",
         display: "flex",
         alignItems: "center",
+        contain: "layout style",
+        containIntrinsicSize: "100% 56px",
+        fontFamily: "Arial, Helvetica, sans-serif",
+        fontDisplay: "swap",
       }}>
         {/* Desktop Layout */}
         <div className="nav-desktop" style={{
