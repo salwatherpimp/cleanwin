@@ -64,7 +64,7 @@ export default function PillNavigation() {
         alignItems: "center",
       }}>
         {/* Desktop Layout */}
-        <div style={{
+        <div className="nav-desktop" style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -355,7 +355,7 @@ export default function PillNavigation() {
         </div>
 
         {/* Mobile Layout */}
-        <div style={{
+        <div className="nav-mobile" style={{
           display: "none",
           alignItems: "center",
           justifyContent: "space-between",
