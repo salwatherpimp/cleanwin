@@ -86,7 +86,27 @@ export default function CleanWinPage() {
       
 
             {/* Pill Navigation */}
-      <PillNavigation />
+      <div
+        className="nav-stabilizer-wrapper"
+        style={{
+          position: "fixed",
+          top: "16px",
+          left: "0",
+          right: "0",
+          zIndex: 1000,
+          height: "56px",
+          minHeight: "56px",
+          contain: "layout style",
+          containIntrinsicSize: "100vw 56px",
+          display: "flex",
+          justifyContent: "center",
+          width: "100%",
+          maxWidth: "calc(100vw - 32px)",
+          margin: "0 auto",
+        }}
+      >
+        <PillNavigation />
+      </div>
 
                   {/* Hero Section */}
       <div
@@ -3502,7 +3522,7 @@ export default function CleanWinPage() {
             className="footer-bottom-responsive"
           >
             <div style={{ color: "#EAEAEA", fontSize: "14px" }}>
-              �� 2025 CleanWin. Alle Rechte vorbehalten.
+              ��� 2025 CleanWin. Alle Rechte vorbehalten.
               <br />
               Gemacht mit ♥️ in Winterthur
             </div>
