@@ -159,7 +159,25 @@ export default function PillNavigation() {
                   <a
                     key={index}
                     href={service.href}
-                    className="pill-nav-services-dropdown-item"
+                    style={{
+                      display: "block",
+                      padding: "12px 16px",
+                      textDecoration: "none",
+                      color: "#374151",
+                      fontWeight: "500",
+                      fontSize: "14px",
+                      borderRadius: "8px",
+                      transition: "background-color 0.2s ease, color 0.2s ease",
+                      whiteSpace: "nowrap",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = "#f3f4f6";
+                      e.currentTarget.style.color = "#0DA6A6";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = "transparent";
+                      e.currentTarget.style.color = "#374151";
+                    }}
                   >
                     {service.name}
                   </a>
@@ -167,11 +185,57 @@ export default function PillNavigation() {
               </div>
             </div>
             
-            <a href="https://cleanwin.vercel.app/ueber-uns" className="pill-nav-link">
+            <a href="https://cleanwin.vercel.app/ueber-uns" style={{
+              textDecoration: "none",
+              color: "#374151",
+              fontWeight: "500",
+              fontSize: "14px",
+              lineHeight: "1.4",
+              padding: "10px 16px",
+              borderRadius: "25px",
+              transition: "background-color 0.2s ease, color 0.2s ease",
+              whiteSpace: "nowrap",
+              display: "flex",
+              alignItems: "center",
+              margin: "0",
+              verticalAlign: "middle",
+              boxSizing: "border-box",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#f3f4f6";
+              e.currentTarget.style.color = "#0DA6A6";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.color = "#374151";
+            }}>
               Über uns
             </a>
-            
-            <a href="https://cleanwin.vercel.app/referenzen" className="pill-nav-link">
+
+            <a href="https://cleanwin.vercel.app/referenzen" style={{
+              textDecoration: "none",
+              color: "#374151",
+              fontWeight: "500",
+              fontSize: "14px",
+              lineHeight: "1.4",
+              padding: "10px 16px",
+              borderRadius: "25px",
+              transition: "background-color 0.2s ease, color 0.2s ease",
+              whiteSpace: "nowrap",
+              display: "flex",
+              alignItems: "center",
+              margin: "0",
+              verticalAlign: "middle",
+              boxSizing: "border-box",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#f3f4f6";
+              e.currentTarget.style.color = "#0DA6A6";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.color = "#374151";
+            }}>
               Referenzen
             </a>
           </div>
