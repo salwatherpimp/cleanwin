@@ -81,36 +81,12 @@ button, a {
 
   /* Reduce h1 to subtitle spacing on desktop */
   .hero-content-mobile h1 {
-    margin-bottom: 16px !important;
+    margin-bottom: 12px !important;
   }
 
   .hero-content-mobile p {
-    margin-top: 8px !important;
+    margin-top: 0 !important;
     margin-bottom: 24px !important;
-  }
-
-  /* Desktop font sizes */
-  .hero-content-mobile h1 {
-    font-size: 48px !important;
-    line-height: 1.1 !important;
-  }
-
-  .hero-content-mobile p {
-    font-size: 22px !important;
-    line-height: 1.5 !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* Large desktop optimizations */
-  .hero-content-mobile h1 {
-    font-size: 56px !important;
-    margin-bottom: 20px !important;
-  }
-
-  .hero-content-mobile p {
-    font-size: 24px !important;
-    margin-top: 12px !important;
   }
 }
 
