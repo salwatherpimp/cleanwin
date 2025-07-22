@@ -2477,6 +2477,9 @@ export default function CleanWinPage() {
                 gap: "24px",
                 scrollBehavior: "smooth",
                 WebkitOverflowScrolling: "touch",
+                contain: "layout style",
+                containIntrinsicSize: "1440px 280px",
+                minHeight: "280px",
               }}
             >
                             {/* Review Card 1 - Jeanine Ganz */}
