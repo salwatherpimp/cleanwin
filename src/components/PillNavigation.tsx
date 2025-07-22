@@ -241,17 +241,66 @@ export default function PillNavigation() {
           </div>
 
           {/* CTA Button with Dropdown */}
-          <div className="pill-nav-cta-container">
-            <button 
-              className="pill-nav-cta"
+          <div style={{
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+          }}>
+            <button
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                background: "#0DA6A6",
+                color: "white",
+                border: "none",
+                padding: "10px 24px",
+                borderRadius: "25px",
+                fontWeight: "500",
+                fontSize: "14px",
+                lineHeight: "1.4",
+                cursor: "pointer",
+                transition: "background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease",
+                boxShadow: "0 2px 8px rgba(13, 166, 166, 0.3)",
+                whiteSpace: "nowrap",
+                width: "auto",
+                height: "auto",
+                minHeight: "48px",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#0b8d8d";
+                e.currentTarget.style.boxShadow = "0 4px 16px rgba(13, 166, 166, 0.4)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "#0DA6A6";
+                e.currentTarget.style.boxShadow = "0 2px 8px rgba(13, 166, 166, 0.3)";
+              }}
             >
                             <HandIcon />
               <span>Kontaktiere uns</span>
                               <ChevronDownIcon size={14} />
             </button>
             <div
-              className={`pill-nav-cta-dropdown ${isCtaDropdownOpen ? 'open' : ''}`}
+              style={{
+                position: "absolute",
+                top: "100%",
+                right: "0",
+                background: "white",
+                borderRadius: "16px",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
+                padding: "8px",
+                marginTop: "8px",
+                minWidth: "220px",
+                zIndex: 100,
+                opacity: isCtaDropdownOpen ? 1 : 0,
+                visibility: isCtaDropdownOpen ? "visible" : "hidden",
+                transition: "opacity 0.2s ease, visibility 0.2s ease",
+                pointerEvents: isCtaDropdownOpen ? "auto" : "none",
+                contain: "layout style",
+                containIntrinsicSize: "220px 120px",
+              }}
             >
               <a href="/kontakt" className="pill-nav-cta-dropdown-item">
                 <HandIcon />
