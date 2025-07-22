@@ -47,7 +47,7 @@ export default function PillNavigation() {
       display: "flex",
       justifyContent: "center",
       contain: "layout style",
-      containIntrinsicSize: "100% 56px",
+      containIntrinsicSize: "1152px 56px",
     }}>
       {/* Main pill navigation */}
       <nav style={{
