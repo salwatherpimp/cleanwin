@@ -424,13 +424,77 @@ export default function PillNavigation() {
                               <ChevronDownIcon size={14} />
             </button>
             <div
-              className={`pill-nav-cta-dropdown-mobile ${isCtaDropdownOpen ? 'open' : ''}`}
+              style={{
+                position: "absolute",
+                top: "100%",
+                right: "0",
+                background: "white",
+                borderRadius: "12px",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
+                padding: "8px",
+                marginTop: "8px",
+                minWidth: "200px",
+                zIndex: 100,
+                opacity: isCtaDropdownOpen ? 1 : 0,
+                visibility: isCtaDropdownOpen ? "visible" : "hidden",
+                transition: "opacity 0.2s ease, visibility 0.2s ease",
+                pointerEvents: isCtaDropdownOpen ? "auto" : "none",
+                contain: "layout style",
+                containIntrinsicSize: "200px 120px",
+              }}
             >
-              <a href="/kontakt" className="pill-nav-cta-dropdown-item">
+              <a
+                href="/kontakt"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "12px 16px",
+                  textDecoration: "none",
+                  color: "#374151",
+                  fontWeight: "500",
+                  fontSize: "14px",
+                  borderRadius: "8px",
+                  transition: "background-color 0.2s ease, color 0.2s ease",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f3f4f6";
+                  e.currentTarget.style.color = "#0DA6A6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#374151";
+                }}
+              >
                 <HandIcon />
                 <span>Kontaktanfrage senden</span>
               </a>
-              <a href="tel:+41525512424" className="pill-nav-cta-dropdown-item">
+              <a
+                href="tel:+41525512424"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "12px 16px",
+                  textDecoration: "none",
+                  color: "#374151",
+                  fontWeight: "500",
+                  fontSize: "14px",
+                  borderRadius: "8px",
+                  transition: "background-color 0.2s ease, color 0.2s ease",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f3f4f6";
+                  e.currentTarget.style.color = "#0DA6A6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#374151";
+                }}
+              >
                 <PhoneIcon />
                 <span>+41 52 551 24 24</span>
               </a>
