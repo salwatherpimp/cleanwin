@@ -118,7 +118,7 @@ export default function CleanWinPage() {
             alignItems: "center",
             justifyContent: "center",
             overflow: "hidden",
-            paddingTop: "104px",
+            paddingTop: "88px",
             boxSizing: "border-box",
           }}
         >
