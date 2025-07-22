@@ -58,17 +58,15 @@ export default function PillNavigation() {
         border: "1px solid rgba(255, 255, 255, 0.2)",
         height: "56px",
         minHeight: "56px",
-        padding: "8px 16px",
-        margin: "0",
+        padding: "8px 24px",
+        margin: "0 auto",
         width: "100%",
-        maxWidth: "1200px",
+        maxWidth: "1152px",
         boxSizing: "border-box",
         display: "flex",
         alignItems: "center",
         contain: "layout style",
-        containIntrinsicSize: "100% 56px",
-        fontFamily: "Arial, Helvetica, sans-serif",
-        fontDisplay: "swap",
+        containIntrinsicSize: "1152px 56px",
       }}>
         {/* Desktop Layout */}
         <div className="nav-desktop" style={{
