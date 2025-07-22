@@ -101,14 +101,59 @@ export default function PillNavigation() {
               alignItems: "center",
             }}>
               <button
-                className="pill-nav-link pill-nav-services-button"
                 onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontFamily: "inherit",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  lineHeight: "1.4",
+                  color: "#374151",
+                  padding: "10px 16px",
+                  borderRadius: "25px",
+                  transition: "background-color 0.2s ease, color 0.2s ease",
+                  whiteSpace: "nowrap",
+                  margin: "0",
+                  verticalAlign: "middle",
+                  boxSizing: "border-box",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f3f4f6";
+                  e.currentTarget.style.color = "#0DA6A6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "none";
+                  e.currentTarget.style.color = "#374151";
+                }}
               >
                 <span>Dienstleistungen</span>
                                 <ChevronDownIcon size={14} />
               </button>
               <div
-                className={`pill-nav-services-dropdown ${isServicesDropdownOpen ? 'open' : ''}`}
+                style={{
+                  position: "absolute",
+                  top: "100%",
+                  left: "0",
+                  background: "white",
+                  borderRadius: "16px",
+                  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+                  border: "1px solid rgba(0, 0, 0, 0.1)",
+                  padding: "8px",
+                  marginTop: "8px",
+                  minWidth: "220px",
+                  zIndex: 100,
+                  opacity: isServicesDropdownOpen ? 1 : 0,
+                  visibility: isServicesDropdownOpen ? "visible" : "hidden",
+                  transition: "opacity 0.2s ease, visibility 0.2s ease",
+                  pointerEvents: isServicesDropdownOpen ? "auto" : "none",
+                  contain: "layout style",
+                  containIntrinsicSize: "220px 250px",
+                }}
               >
                 {services.map((service, index) => (
                   <a
