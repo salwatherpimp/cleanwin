@@ -3554,7 +3554,7 @@ export default function CleanWinPage() {
         </div>
       </footer>
 
-      {/* Mobile Responsive Styles */}
+      {/* Non-critical styles loaded after initial render */}
             <style jsx>{`
         /* Services hover effects */
         .service-card:hover {
@@ -3566,103 +3566,29 @@ export default function CleanWinPage() {
           transform: scale(1.05);
         }
 
-        /* Ensure full width coverage for all sections */
-        section, .hero-mobile {
-          width: 100% !important;
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-        }
-
-        /* Services responsive grid */
-        @media (max-width: 1200px) {
-          .services-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-                }
-
-        /* Hero Section Heights - Force Override */
-        section.hero-mobile {
-          height: 75vh !important;
-          min-height: 75vh !important;
-          max-height: 75vh !important;
-          box-sizing: border-box !important;
-        }
-
-        /* Hero Section Heights - Desktop Override */
-        @media (min-width: 768px) {
-          section.hero-mobile {
-            height: 80vh !important;
-            min-height: 80vh !important;
-            max-height: 80vh !important;
-            box-sizing: border-box !important;
-          }
-        }
-
-                                @media (max-width: 767px) {
-                                        .hero-mobile {
-            height: 75vh !important;
-            min-height: 75vh !important;
-            box-sizing: border-box !important;
-          }
-          .hero-content-mobile {
-            padding: 0 16px !important;
-          }
-          .hero-title-mobile {
-            font-size: 28px !important;
-            line-height: 36px !important;
-          }
-          .hero-subtitle-mobile {
-            font-size: 16px !important;
-            line-height: 24px !important;
-          }
-          .logo-mobile {
-            width: 160px !important;
-            height: 45px !important;
-          }
-          .grid-mobile-1 {
-            grid-template-columns: 1fr !important;
-            gap: 16px !important;
-          }
-          .grid-mobile-2 {
-            grid-template-columns: 1fr !important;
-            gap: 32px !important;
-          }
-                    .grid-mobile-3 {
-            display: flex !important;
-            overflow: hidden !important;
-            gap: 24px !important;
-            width: 100% !important;
-          }
-
+        /* Non-critical mobile specific styles */
+        @media (max-width: 767px) {
           .grid-mobile-3 > div {
             min-width: 280px !important;
             flex-shrink: 0 !important;
-                                                animation: usp-mobile-scroll 18s linear infinite !important;
+            animation: usp-mobile-scroll 18s linear infinite !important;
           }
-                                        .grid-mobile-logos {
+
+          .grid-mobile-logos {
             display: flex !important;
             overflow: hidden !important;
             gap: 32px !important;
             width: 100% !important;
           }
 
-                                                                      .grid-mobile-logos > div {
+          .grid-mobile-logos > div {
             flex-shrink: 0 !important;
             animation: scroll-logos 50s linear infinite !important;
           }
+
           .logo-container-mobile {
             width: 80px !important;
             height: 40px !important;
-          }
-
-          /* Services mobile layout */
-          .services-grid {
-            grid-template-columns: 1fr !important;
-            gap: 20px !important;
-          }
-
-                    .services-section h2 {
-            font-size: 28px !important;
           }
         }
 
