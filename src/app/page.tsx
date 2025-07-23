@@ -132,6 +132,20 @@ export default function CleanWinPage() {
                 objectFit: "cover",
                 objectPosition: "60% 50%",
                 display: "block",
+                visibility: "visible",
+                opacity: 1,
+                contain: "layout",
+                position: "static",
+                transform: "none",
+                animation: "none",
+                transition: "none",
+                willChange: "auto",
+                margin: 0,
+                padding: 0,
+                border: "none",
+                outline: "none",
+                backgroundColor: "transparent",
+                verticalAlign: "top",
               }}
             />
           </div>
