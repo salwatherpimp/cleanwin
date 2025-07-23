@@ -1,0 +1,22 @@
+# Modern browsers only - eliminates legacy polyfills
+defaults and supports es6-module
+not IE 11
+not dead
+> 0.5%
+last 2 versions
+Firefox ESR
+
+# Specific modern features we can rely on
+supports es6-module
+supports async-functions
+supports object-rest-spread
+supports array-flat
+supports object-fromentries
+supports string-trim-start-end
+
+# Exclude legacy browsers that require polyfills
+not IE < 12
+not Chrome < 63
+not Firefox < 67
+not Safari < 12
+not Edge < 79
