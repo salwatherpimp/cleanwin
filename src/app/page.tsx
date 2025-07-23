@@ -90,6 +90,7 @@ export default function CleanWinPage() {
           overflow: "hidden",
           position: "relative",
           contain: "layout style",
+          containIntrinsicSize: "100vw 720px",
         }}
       >
         <section
@@ -106,19 +107,34 @@ export default function CleanWinPage() {
             boxSizing: "border-box",
           }}
         >
-          {/* Background Image */}
-          <Image
-            src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-            alt="CleanWin Hero Background"
-            fill
-            priority={true}
-            fetchPriority="high"
-            sizes="100vw"
+          {/* Background Image Container */}
+          <div
             style={{
-              objectFit: "cover",
-              objectPosition: "60% 50%",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              contain: "layout style",
+              containIntrinsicSize: "100vw 720px",
             }}
-          />
+          >
+            <img
+              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+              alt="CleanWin Hero Background"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "60% 50%",
+                display: "block",
+              }}
+            />
+          </div>
 
           {/* Dark Overlay */}
           <div
