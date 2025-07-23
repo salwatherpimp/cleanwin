@@ -5,25 +5,14 @@ const nextConfig = {
     optimizePackageImports: ['react', 'react-dom'],
     // Enable advanced tree shaking
     esmExternals: true,
-    // Optimize CSS
-    optimizeCss: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
     // Remove React test props in production
     reactRemoveProperties: process.env.NODE_ENV === 'production',
   },
-  // Enable SWC minification for modern browsers
-  swcMinify: true,
   // Optimize chunks for better caching
   webpack: (config, { isServer }) => {
-    // Enable tree shaking for modern JavaScript
-    config.optimization = {
-      ...config.optimization,
-      usedExports: true,
-      sideEffects: false,
-    };
-    
     // Split chunks optimally for lazy loading
     if (!isServer) {
       config.optimization.splitChunks = {
