@@ -861,6 +861,11 @@ const InteractiveValueCards = () => {
             display: flex !important;
           }
 
+          .cleanwin-value-card .desktop-card-header h3 {
+            font-size: 18px !important;
+            line-height: 22px !important;
+          }
+
           .cleanwin-value-card .mobile-card-header {
             display: none !important;
           }
