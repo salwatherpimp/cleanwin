@@ -124,8 +124,20 @@ export default function RootLayout({
             contain-intrinsic-size: 100% 76px;
           }
 
-          /* Critical Image Container - Override styled-jsx delays */
-          [data-loc*="page.tsx"] img[alt="CleanWin Hero Background"] {
+          /* Critical: Override ALL styled-jsx for hero image */
+          img[alt="CleanWin Hero Background"] {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: 60% 50% !important;
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            position: static !important;
+          }
+
+          /* Critical: Target exact styled-jsx class */
+          .jsx-a529616e5809607e {
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
@@ -135,8 +147,21 @@ export default function RootLayout({
             visibility: visible !important;
           }
 
-          /* Critical Image Parent Container */
-          .hero-mobile div[style*="position: absolute"] {
+          /* Critical: Hero container immediate visibility */
+          .hero-mobile {
+            position: relative !important;
+            height: 100% !important;
+            min-height: 100% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            overflow: hidden !important;
+            padding-top: 100px !important;
+            box-sizing: border-box !important;
+          }
+
+          /* Critical: Image container immediate positioning */
+          .hero-mobile > div {
             position: absolute !important;
             top: 0 !important;
             left: 0 !important;
