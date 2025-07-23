@@ -24,6 +24,18 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
+        {/* Preconnect to critical domains */}
+        <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+
+        {/* Preload critical hero background image */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          fetchpriority="high"
+        />
+
         {/* Preload critical fonts */}
         <link
           rel="preload"
