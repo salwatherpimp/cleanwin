@@ -120,7 +120,7 @@ export default function CleanWinPage() {
             }}
           >
             <img
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/c_fill,w_1200,h_800,q_80,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha"
+              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turquis_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
               alt="CleanWin Hero Background"
               loading="eager"
               decoding="async"
