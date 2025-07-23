@@ -2216,7 +2216,7 @@ export default function CleanWinPage() {
           .grid-mobile-3 .usp-card {
             min-width: 280px !important;
             flex-shrink: 0 !important;
-            animation: usp-mobile-scroll 8s linear infinite !important;
+            animation: usp-mobile-scroll 15s linear infinite !important;
           }
 
           .grid-mobile-logos {
