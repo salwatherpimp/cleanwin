@@ -2216,7 +2216,7 @@ export default function CleanWinPage() {
           .grid-mobile-3 .usp-card {
             min-width: 280px !important;
             flex-shrink: 0 !important;
-            animation: usp-mobile-scroll 12s linear infinite !important;
+            animation: usp-mobile-scroll 8s linear infinite !important;
           }
 
           .grid-mobile-logos {
@@ -2247,7 +2247,7 @@ export default function CleanWinPage() {
         /* USP Mobile Auto-Scroll Animation - Continuous Loop */
         @keyframes usp-mobile-scroll {
           0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-50% - 12px)); }
+          100% { transform: translateX(calc(-912px)); }
         }
 
         /* Logo Scroll Animation */
