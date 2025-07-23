@@ -171,7 +171,7 @@ export default function CleanWinPage() {
               left: "0px",
               right: "0px",
               bottom: "0px",
-              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
             }}
           />
 
