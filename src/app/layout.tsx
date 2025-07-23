@@ -75,6 +75,54 @@ export default function RootLayout({
             color: var(--foreground);
             font-family: Arial, Helvetica, sans-serif;
             font-display: swap;
+          }
+
+          /* Critical Hero Section Styles */
+          .hero-mobile-wrapper {
+            height: 75vh;
+            min-height: 75vh;
+            overflow: hidden;
+            position: relative;
+            contain: layout style;
+            contain-intrinsic-size: 100vw 720px;
+          }
+
+          .hero-mobile {
+            position: relative;
+            height: 100%;
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding-top: 100px;
+            box-sizing: border-box;
+          }
+
+          .hero-content-mobile {
+            position: relative;
+            z-index: 10;
+            max-width: 1152px;
+            margin: 0 auto;
+            padding: 0 16px 32px 16px;
+            text-align: center;
+            color: white;
+            contain: layout style;
+            contain-intrinsic-size: 1152px 420px;
+          }
+
+          .hero-headline {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 38px;
+            margin-bottom: 16px;
+            margin-top: 0;
+            color: white;
+            text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+            min-height: 76px;
+            contain: layout style;
+            contain-intrinsic-size: 100% 76px;
+          }
             margin: 0;
             padding: 0;
             width: 100%;
