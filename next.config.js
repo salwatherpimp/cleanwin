@@ -32,20 +32,6 @@ const nextConfig = {
   webpack: (config, { dev, isServer }) => {
     // Only apply optimizations in production
     if (!dev && !isServer) {
-      // Exclude legacy polyfills for modern browsers
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        // Disable core-js polyfills for modern browsers
-        'core-js/modules/es.array.at': false,
-        'core-js/modules/es.array.flat': false,
-        'core-js/modules/es.array.flat-map': false,
-        'core-js/modules/es.object.from-entries': false,
-        'core-js/modules/es.object.has-own': false,
-        'core-js/modules/es.string.trim-start': false,
-        'core-js/modules/es.string.trim-end': false,
-        'core-js/modules/es.string.trim': false,
-      };
-
       // Optimize for modern browsers
       config.optimization = {
         ...config.optimization,
@@ -57,15 +43,23 @@ const nextConfig = {
           ...config.optimization.splitChunks,
           cacheGroups: {
             ...config.optimization.splitChunks?.cacheGroups,
-            // Separate modern vs legacy chunks
-            modern: {
+            // Separate vendor chunks for better caching
+            vendor: {
               test: /[\\/]node_modules[\\/](react|react-dom|next)[\\/]/,
-              name: 'modern-vendor',
+              name: 'vendor',
               chunks: 'all',
               priority: 20,
             },
           },
         },
+      };
+
+      // Configure for modern browsers - exclude polyfills from bundle
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+        crypto: false,
       };
     }
 
