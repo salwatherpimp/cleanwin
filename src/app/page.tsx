@@ -1774,7 +1774,8 @@ export default function CleanWinPage() {
               </h3>
 
               <div style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>
-                <div>Rychenbergstrasse 223, 8404 Winterthur</div>
+                <div>Rychenbergstrasse 223</div>
+                <div>8404 Winterthur</div>
                 <div>Schweiz</div>
               </div>
 
