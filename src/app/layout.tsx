@@ -33,10 +33,127 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <style>{`
-          /* Critical font-display: swap for Arial fallback */
-          body, * {
+          /* Critical above-the-fold CSS */
+          :root {
+            --background: #ffffff;
+            --foreground: #171717;
+          }
+
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --background: #0a0a0a;
+              --foreground: #ededed;
+            }
+          }
+
+          * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+
+          html {
+            scroll-behavior: smooth;
+            width: 100%;
+            height: 100%;
+          }
+
+          body {
+            background: var(--background);
+            color: var(--foreground);
             font-family: Arial, Helvetica, sans-serif;
             font-display: swap;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+          }
+
+          /* Critical navigation and hero CLS prevention */
+          .nav-stabilizer-wrapper {
+            contain: layout style;
+            contain-intrinsic-size: 100vw 56px;
+            box-sizing: border-box;
+          }
+
+          nav {
+            contain: layout style;
+            font-display: swap;
+          }
+
+          button, a {
+            contain: layout style;
+            font-display: swap;
+          }
+
+          .hero-mobile-wrapper {
+            contain: layout style;
+            contain-intrinsic-size: 100vw 75vh;
+          }
+
+          .hero-content-mobile {
+            contain: layout style;
+            contain-intrinsic-size: 100% 400px;
+          }
+
+          /* Critical mobile navigation visibility */
+          @media (max-width: 1023px) {
+            .nav-desktop { display: none !important; }
+            .nav-mobile { display: flex !important; }
+
+            .nav-stabilizer-wrapper {
+              left: 16px !important;
+              right: 16px !important;
+              width: calc(100vw - 32px) !important;
+            }
+
+            .hero-mobile {
+              padding-top: 100px !important;
+            }
+
+            .hero-content-mobile h1 {
+              font-size: 32px !important;
+              line-height: 38px !important;
+              min-height: 76px !important;
+            }
+
+            .hero-content-mobile p {
+              font-size: 16px !important;
+              line-height: 24px !important;
+              min-height: 48px !important;
+            }
+          }
+
+          @media (min-width: 768px) {
+            .hero-mobile-wrapper {
+              height: 80vh;
+              min-height: 80vh;
+              contain-intrinsic-size: 100vw 80vh;
+            }
+
+            .hero-content-mobile h1 {
+              font-size: 40px !important;
+              line-height: 48px !important;
+              min-height: 96px !important;
+              margin-bottom: 12px !important;
+            }
+
+            .hero-content-mobile p {
+              font-size: 20px !important;
+              line-height: 32px !important;
+              min-height: 64px !important;
+              margin-top: 0 !important;
+              margin-bottom: 24px !important;
+            }
+
+            .hero-content-mobile {
+              padding-bottom: 0 !important;
+            }
+          }
+
+          @media (min-width: 1024px) {
+            .nav-desktop { display: flex !important; }
+            .nav-mobile { display: none !important; }
           }
         `}</style>
       </head>
