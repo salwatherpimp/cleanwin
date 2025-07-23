@@ -207,6 +207,35 @@ export default function RootLayout({
               gap: 20px !important;
             }
           }
+
+          /* Critical carousel and card layout containment */
+          .carousel-track {
+            contain: layout style;
+            contain-intrinsic-size: 1440px 280px;
+          }
+
+          .review-card {
+            contain: layout style;
+            contain-intrinsic-size: 360px 280px;
+            min-height: 280px !important;
+            max-width: 360px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+          }
+
+          .mobile-card-content {
+            contain: layout style;
+            min-height: 24px;
+          }
+
+          .mobile-card-content.expanded {
+            contain: none;
+          }
+
+          .cleanwin-value-card {
+            contain: layout style;
+            contain-intrinsic-size: 100% 98px;
+          }
         `}</style>
       </head>
       <body className="antialiased">{children}</body>
