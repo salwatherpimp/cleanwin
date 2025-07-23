@@ -2456,7 +2456,7 @@ export default function CleanWinPage() {
             </h2>
             <p
               style={{
-                fontSize: "18px",
+                fontSize: "clamp(16px, 2.8vw, 18px)",
                 color: "#6b7280",
                 maxWidth: "600px",
                 margin: "0 auto",
