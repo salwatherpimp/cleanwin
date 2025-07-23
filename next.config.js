@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable modern build optimizations
-  swcMinify: true,
   modularizeImports: {
     // Optimize lodash imports
     lodash: {
@@ -13,15 +12,6 @@ const nextConfig = {
     esmExternals: true,
     // Reduce bundle size
     optimizePackageImports: ['react', 'react-dom'],
-    // Enable modern bundle splitting
-    turbo: {
-      // Use modern resolver
-      resolveAlias: {
-        // Modern polyfill alternatives
-        'core-js': false,
-        'regenerator-runtime': false,
-      },
-    },
   },
   compiler: {
     // Remove console.log in production
