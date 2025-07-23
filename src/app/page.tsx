@@ -153,7 +153,7 @@ export default function CleanWinPage() {
                 fontSize: "32px",
                 fontWeight: "800",
                 lineHeight: "38px",
-                marginBottom: "clamp(4px, 2vw, 16px)",
+                marginBottom: "16px",
                 marginTop: "0",
                 color: "white",
                 textShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px",
