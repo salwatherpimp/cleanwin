@@ -185,6 +185,7 @@ export default function CleanWinPage() {
 
             {/* Reviews Badge */}
             <div
+              className="hero-reviews-badge"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
