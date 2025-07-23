@@ -124,34 +124,38 @@ export default function RootLayout({
             contain-intrinsic-size: 100% 76px;
           }
 
-          /* Critical: Force immediate paint bypass styled-jsx delays */
+          /* Critical: Eliminate any styled-jsx interference */
           img[alt="CleanWin Hero Background"] {
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
             object-position: 60% 50% !important;
             display: block !important;
-            opacity: 1 !important;
             visibility: visible !important;
+            opacity: 1 !important;
+            contain: layout !important;
+            position: static !important;
             transform: none !important;
             animation: none !important;
             transition: none !important;
             will-change: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+            outline: none !important;
+            background-color: transparent !important;
+            vertical-align: top !important;
           }
 
-          /* Force paint regardless of styled-jsx class state */
-          .jsx-a529616e5809607e[alt="CleanWin Hero Background"] {
-            opacity: 1 !important;
-            visibility: visible !important;
+          /* Override any jsx class on hero image */
+          [class*="jsx-"][alt="CleanWin Hero Background"] {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: 60% 50% !important;
             display: block !important;
-            transform: none !important;
-          }
-
-          /* Ensure hero container is immediately visible */
-          .hero-mobile-wrapper {
-            opacity: 1 !important;
             visibility: visible !important;
-            display: block !important;
+            opacity: 1 !important;
           }
             margin: 0;
             padding: 0;
