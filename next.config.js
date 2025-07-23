@@ -13,6 +13,15 @@ const nextConfig = {
     esmExternals: true,
     // Reduce bundle size
     optimizePackageImports: ['react', 'react-dom'],
+    // Enable modern bundle splitting
+    turbo: {
+      // Use modern resolver
+      resolveAlias: {
+        // Modern polyfill alternatives
+        'core-js': false,
+        'regenerator-runtime': false,
+      },
+    },
   },
   compiler: {
     // Remove console.log in production
