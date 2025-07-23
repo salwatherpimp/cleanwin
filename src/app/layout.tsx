@@ -157,6 +157,16 @@ export default function RootLayout({
             visibility: visible !important;
             opacity: 1 !important;
           }
+
+          /* Force dark overlay - override styled-jsx */
+          .hero-mobile div[style*="background-color: rgba(0, 0, 0"] {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+          }
+
+          /* Target any jsx class overlay */
+          [class*="jsx-"][style*="background-color"] {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+          }
             margin: 0;
             padding: 0;
             width: 100%;
