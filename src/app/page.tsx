@@ -2213,10 +2213,10 @@ export default function CleanWinPage() {
 
         /* Non-critical mobile specific styles */
         @media (max-width: 767px) {
-          .grid-mobile-3 > div {
+          .grid-mobile-3 .usp-card {
             min-width: 280px !important;
             flex-shrink: 0 !important;
-            animation: usp-mobile-scroll 18s linear infinite !important;
+            animation: usp-mobile-scroll 12s linear infinite !important;
           }
 
           .grid-mobile-logos {
@@ -2237,10 +2237,17 @@ export default function CleanWinPage() {
           }
         }
 
-        /* USP Mobile Auto-Scroll Animation */
+        /* Hide duplicate USP cards on desktop */
+        @media (min-width: 768px) {
+          .usp-duplicate {
+            display: none !important;
+          }
+        }
+
+        /* USP Mobile Auto-Scroll Animation - Continuous Loop */
         @keyframes usp-mobile-scroll {
           0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-100% - 24px)); }
+          100% { transform: translateX(calc(-50% - 12px)); }
         }
 
         /* Logo Scroll Animation */
