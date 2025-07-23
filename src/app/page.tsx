@@ -366,6 +366,7 @@ export default function CleanWinPage() {
           >
             {/* Pricing Card */}
             <div
+              className="usp-card"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -431,6 +432,7 @@ export default function CleanWinPage() {
 
             {/* Consultation Card */}
             <div
+              className="usp-card"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -495,6 +497,7 @@ export default function CleanWinPage() {
 
             {/* Legitimacy Card */}
             <div
+              className="usp-card"
               style={{
                 display: "flex",
                 alignItems: "center",
