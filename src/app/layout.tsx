@@ -123,6 +123,27 @@ export default function RootLayout({
             contain: layout style;
             contain-intrinsic-size: 100% 76px;
           }
+
+          /* Critical Image Container - Override styled-jsx delays */
+          [data-loc*="page.tsx"] img[alt="CleanWin Hero Background"] {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: 60% 50% !important;
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+          }
+
+          /* Critical Image Parent Container */
+          .hero-mobile div[style*="position: absolute"] {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            contain: layout style !important;
+          }
             margin: 0;
             padding: 0;
             width: 100%;
