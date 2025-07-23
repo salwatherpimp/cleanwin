@@ -602,21 +602,23 @@ export default function CleanWinPage() {
             <div>
               <h2
                 style={{
-                  fontSize: "28px",
+                  fontSize: "clamp(24px, 4vw, 28px)",
                   fontWeight: "700",
                   color: "#111827",
-                  marginBottom: "24px",
-                  marginTop: "23.24px",
+                  marginBottom: "clamp(16px, 3vw, 24px)",
+                  marginTop: "clamp(16px, 3vw, 23.24px)",
+                  lineHeight: "1.2",
                 }}
                             >
                 Über 10 Jahre Reinigungserfahrung in Winterthur und Umgebung
               </h2>
               <p
                 style={{
+                  fontSize: "clamp(14px, 2.5vw, 16px)",
                   color: "#6b7280",
-                  lineHeight: "28px",
-                  marginBottom: "24px",
-                  marginTop: "16px",
+                  lineHeight: "clamp(22px, 4vw, 28px)",
+                  marginBottom: "clamp(16px, 3vw, 24px)",
+                  marginTop: "clamp(12px, 2vw, 16px)",
                 }}
               >
                 Seit über zehn Jahren steht Cleanwin für gründliche, faire und nachhaltige Reinigungsdienstleistungen im Grossraum Winterthur. Ob Fensterreinigung, Fassadenpflege oder Umzugsreinigung - wir bringen Erfahrung, Sorgfalt und Menschlichkeit zusammen. Unsere kostenlose Vor-Ort-Beratung bietet Ihnen maximale Transparenz. Dahinter steht ein geschultes, fair entlöhntes Team, das sich mit Engagement und Fachwissen für beste Ergebnisse einsetzt.
