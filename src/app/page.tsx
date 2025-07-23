@@ -2139,6 +2139,18 @@ export default function CleanWinPage() {
           transform: translateY(-1px) !important;
           box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
         }
+
+        /* Desktop Hero Section Spacing Optimization */
+        @media (min-width: 1024px) {
+          .hero-headline {
+            margin-bottom: 12px !important;
+          }
+
+          .hero-reviews-badge {
+            margin-top: 12px !important;
+            margin-bottom: 24px !important;
+          }
+        }
       `}</style>
     </div>
   );
