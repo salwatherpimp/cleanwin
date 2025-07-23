@@ -148,6 +148,7 @@ export default function CleanWinPage() {
             }}
           >
             <h1
+              className="hero-headline"
               style={{
                 fontSize: "32px",
                 fontWeight: "800",
