@@ -1,5 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enable modern build optimizations
+  swcMinify: true,
+  modularizeImports: {
+    // Optimize lodash imports
+    lodash: {
+      transform: 'lodash/{{member}}',
+    },
+  },
+  experimental: {
+    // Enable modern JS output
+    esmExternals: true,
+    // Reduce bundle size
+    optimizePackageImports: ['react', 'react-dom'],
+  },
+  compiler: {
+    // Remove console.log in production
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
   images: {
     remotePatterns: [
       {
