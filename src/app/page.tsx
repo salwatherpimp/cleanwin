@@ -117,6 +117,19 @@ export default function CleanWinPage() {
               height: "100%",
               contain: "layout style",
               containIntrinsicSize: "100vw 720px",
+              overflow: "hidden",
+              display: "block",
+              visibility: "visible",
+              opacity: 1,
+              margin: 0,
+              padding: 0,
+              border: "none",
+              outline: "none",
+              backgroundColor: "transparent",
+              transform: "none",
+              animation: "none",
+              transition: "none",
+              zIndex: 1,
             }}
           >
             <img
