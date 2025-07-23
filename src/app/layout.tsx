@@ -155,6 +155,58 @@ export default function RootLayout({
             .nav-desktop { display: flex !important; }
             .nav-mobile { display: none !important; }
           }
+
+          /* Critical hero section dimensions */
+          section.hero-mobile, .hero-mobile {
+            height: 75vh !important;
+            min-height: 75vh !important;
+            max-height: 75vh !important;
+            box-sizing: border-box !important;
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+
+          @media (min-width: 768px) {
+            section.hero-mobile, .hero-mobile {
+              height: 80vh !important;
+              min-height: 80vh !important;
+              max-height: 80vh !important;
+              box-sizing: border-box !important;
+            }
+          }
+
+          /* Critical mobile grid layouts */
+          @media (max-width: 767px) {
+            .grid-mobile-1 {
+              grid-template-columns: 1fr !important;
+              gap: 16px !important;
+            }
+            .grid-mobile-2 {
+              grid-template-columns: 1fr !important;
+              gap: 32px !important;
+            }
+            .grid-mobile-3 {
+              display: flex !important;
+              overflow: hidden !important;
+              gap: 24px !important;
+              width: 100% !important;
+            }
+          }
+
+          /* Critical services grid responsive */
+          @media (max-width: 1200px) {
+            .services-grid {
+              grid-template-columns: repeat(2, 1fr) !important;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .services-grid {
+              grid-template-columns: 1fr !important;
+              gap: 20px !important;
+            }
+          }
         `}</style>
       </head>
       <body className="antialiased">{children}</body>
