@@ -124,12 +124,33 @@ export default function RootLayout({
             contain-intrinsic-size: 100% 76px;
           }
 
-          /* Critical: Only target hero image specifically */
+          /* Critical: Force immediate paint bypass styled-jsx delays */
           img[alt="CleanWin Hero Background"] {
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
             object-position: 60% 50% !important;
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: none !important;
+            animation: none !important;
+            transition: none !important;
+            will-change: auto !important;
+          }
+
+          /* Force paint regardless of styled-jsx class state */
+          .jsx-a529616e5809607e[alt="CleanWin Hero Background"] {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: none !important;
+          }
+
+          /* Ensure hero container is immediately visible */
+          .hero-mobile-wrapper {
+            opacity: 1 !important;
+            visibility: visible !important;
             display: block !important;
           }
             margin: 0;
