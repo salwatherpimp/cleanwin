@@ -1,14 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable modern build optimizations
-  experimental: {
-    // Reduce bundle size
-    optimizePackageImports: ['react', 'react-dom'],
-  },
-  compiler: {
-    // Remove console.log in production
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
   images: {
     remotePatterns: [
       {
