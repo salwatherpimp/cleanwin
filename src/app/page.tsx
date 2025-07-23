@@ -559,6 +559,203 @@ export default function CleanWinPage() {
                 </div>
               </div>
             </div>
+
+            {/* Duplicate cards for seamless loop (mobile only) */}
+            {/* Duplicate Pricing Card */}
+            <div
+              className="usp-card usp-duplicate"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                backgroundColor: "white",
+                border: "1px solid rgba(16, 160, 164, 0.1)",
+                borderRadius: "12px",
+                padding: "16px",
+                gap: "12px",
+                boxShadow: "rgba(0, 0, 0, 0.05) 0px 2px 8px 0px",
+                transition: "all 0.3s",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "36px",
+                  height: "36px",
+                  backgroundColor: "#F3F4F6",
+                  borderRadius: "50%",
+                  flexShrink: 0,
+                }}
+              >
+                <svg
+                  style={{
+                    width: "18px",
+                    height: "18px",
+                    color: "#40d5ac",
+                    stroke: "#40d5ac",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <line x1="12" x2="12" y1="2" y2="22" />
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+              </div>
+              <div>
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#111827",
+                    marginBottom: "4px",
+                  }}
+                >
+                  Reinigung ab CHF 199.-
+                </div>
+                <div
+                  style={{
+                    fontSize: "12px",
+                    color: "#6b7280",
+                  }}
+                >
+                  Transparente Preise
+                </div>
+              </div>
+            </div>
+
+            {/* Duplicate Consultation Card */}
+            <div
+              className="usp-card usp-duplicate"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                backgroundColor: "white",
+                border: "1px solid rgba(16, 160, 164, 0.1)",
+                borderRadius: "12px",
+                padding: "16px",
+                gap: "12px",
+                boxShadow: "rgba(0, 0, 0, 0.05) 0px 2px 8px 0px",
+                transition: "all 0.3s",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "36px",
+                  height: "36px",
+                  backgroundColor: "#F3F4F6",
+                  borderRadius: "50%",
+                  flexShrink: 0,
+                }}
+              >
+                <svg
+                  style={{
+                    width: "18px",
+                    height: "18px",
+                    color: "#40d5ac",
+                    stroke: "#40d5ac",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                </svg>
+              </div>
+              <div>
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#111827",
+                    marginBottom: "4px",
+                  }}
+                >
+                  Kostenlose Fachberatung
+                </div>
+                <div
+                  style={{
+                    fontSize: "12px",
+                    color: "#6b7280",
+                  }}
+                >
+                  Unverbindlich & persönlich
+                </div>
+              </div>
+            </div>
+
+            {/* Duplicate Legitimacy Card */}
+            <div
+              className="usp-card usp-duplicate"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                backgroundColor: "white",
+                border: "1px solid rgba(16, 160, 164, 0.1)",
+                borderRadius: "12px",
+                padding: "16px",
+                gap: "12px",
+                boxShadow: "rgba(0, 0, 0, 0.05) 0px 2px 8px 0px",
+                transition: "all 0.3s",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "36px",
+                  height: "36px",
+                  backgroundColor: "#F3F4F6",
+                  borderRadius: "50%",
+                  flexShrink: 0,
+                }}
+              >
+                <svg
+                  style={{
+                    width: "18px",
+                    height: "18px",
+                    color: "#40d5ac",
+                    stroke: "#40d5ac",
+                    strokeWidth: "2px",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    fill: "none",
+                  }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                </svg>
+              </div>
+              <div>
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#111827",
+                    marginBottom: "4px",
+                  }}
+                >
+                  100% keine Schwarzarbeit
+                </div>
+                <div
+                  style={{
+                    fontSize: "12px",
+                    color: "#6b7280",
+                  }}
+                >
+                  Seriös & versichert
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
