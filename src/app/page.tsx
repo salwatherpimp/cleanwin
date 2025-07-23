@@ -2142,11 +2142,11 @@ export default function CleanWinPage() {
 
         /* Desktop Hero Section Spacing Optimization */
         @media (min-width: 1024px) {
-          .hero-headline {
-            margin-bottom: 8px !important;
+          .hero-content-mobile .hero-headline {
+            margin-bottom: 4px !important;
           }
 
-          .hero-reviews-badge {
+          .hero-content-mobile .hero-reviews-badge {
             margin-top: 8px !important;
             margin-bottom: 16px !important;
           }
