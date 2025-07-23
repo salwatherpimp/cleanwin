@@ -19,15 +19,22 @@ const CustomerReviews = () => {
     };
 
     const goToPrev = () => {
-      carouselTrack.scrollBy({
-        left: -getScrollAmount(),
+      const scrollAmount = getScrollAmount();
+      const newScrollLeft = Math.max(0, carouselTrack.scrollLeft - scrollAmount);
+
+      carouselTrack.scrollTo({
+        left: newScrollLeft,
         behavior: 'smooth'
       });
     };
 
     const goToNext = () => {
-      carouselTrack.scrollBy({
-        left: getScrollAmount(),
+      const scrollAmount = getScrollAmount();
+      const maxScrollLeft = carouselTrack.scrollWidth - carouselTrack.clientWidth;
+      const newScrollLeft = Math.min(maxScrollLeft, carouselTrack.scrollLeft + scrollAmount);
+
+      carouselTrack.scrollTo({
+        left: newScrollLeft,
         behavior: 'smooth'
       });
     };
