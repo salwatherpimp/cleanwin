@@ -172,6 +172,22 @@ export default function CleanWinPage() {
               right: "0px",
               bottom: "0px",
               backgroundColor: "rgba(0, 0, 0, 0.85)",
+              zIndex: 5,
+              pointerEvents: "none",
+            }}
+          />
+
+          {/* Additional Dark Overlay - Force Override */}
+          <div
+            style={{
+              position: "absolute",
+              top: "0px",
+              left: "0px",
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              zIndex: 6,
+              pointerEvents: "none",
             }}
           />
 
