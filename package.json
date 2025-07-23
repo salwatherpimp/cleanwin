@@ -35,8 +35,11 @@
     "defaults and supports es6-module",
     "not IE 11",
     "not dead",
-    "> 0.5%",
-    "last 2 versions",
-    "Firefox ESR"
+    "> 1%",
+    "last 1 versions",
+    "Chrome >= 91",
+    "Firefox >= 90",
+    "Safari >= 14",
+    "Edge >= 91"
   ]
 }
