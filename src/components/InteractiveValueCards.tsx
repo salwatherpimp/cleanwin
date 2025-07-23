@@ -28,12 +28,13 @@ const InteractiveValueCards = () => {
         <div style={{ textAlign: "center" }}>
           <h2
             style={{
-              fontSize: "28px",
+              fontSize: "clamp(24px, 4vw, 28px)",
               fontWeight: "700",
               color: "#111827",
-              marginBottom: "24px",
-              marginTop: "23.24px",
+              marginBottom: "clamp(16px, 3vw, 24px)",
+              marginTop: "clamp(16px, 3vw, 23.24px)",
               textAlign: "center",
+              lineHeight: "1.2",
             }}
           >
             Dafür steht Cleanwin
