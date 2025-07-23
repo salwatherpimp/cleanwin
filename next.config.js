@@ -30,36 +30,14 @@ const nextConfig = {
     ],
   },
   webpack: (config, { dev, isServer }) => {
-    // Only apply optimizations in production
+    // Only apply optimizations in production client builds
     if (!dev && !isServer) {
       // Optimize for modern browsers
       config.optimization = {
         ...config.optimization,
-        // Enable aggressive tree shaking
+        // Enable tree shaking
         usedExports: true,
         sideEffects: false,
-        // Modern code splitting
-        splitChunks: {
-          ...config.optimization.splitChunks,
-          cacheGroups: {
-            ...config.optimization.splitChunks?.cacheGroups,
-            // Separate vendor chunks for better caching
-            vendor: {
-              test: /[\\/]node_modules[\\/](react|react-dom|next)[\\/]/,
-              name: 'vendor',
-              chunks: 'all',
-              priority: 20,
-            },
-          },
-        },
-      };
-
-      // Configure for modern browsers - exclude polyfills from bundle
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        path: false,
-        crypto: false,
       };
     }
 
