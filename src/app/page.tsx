@@ -2142,7 +2142,7 @@ export default function CleanWinPage() {
 
         /* Desktop Hero Section Spacing Optimization */
         @media (min-width: 1024px) {
-          .hero-headline {
+          h1.hero-headline[style*="margin-bottom"] {
             margin-bottom: 4px !important;
           }
 
