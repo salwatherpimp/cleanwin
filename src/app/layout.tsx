@@ -124,24 +124,16 @@ export default function RootLayout({
             contain-intrinsic-size: 100% 76px;
           }
 
-<<<<<<< HEAD
           /* Critical: Override styled-jsx with maximum specificity */
           div.hero-mobile div img[alt="CleanWin Hero Background"].jsx-a529616e5809607e,
           img[alt="CleanWin Hero Background"].jsx-a529616e5809607e,
-=======
-          /* Critical: Eliminate any styled-jsx interference */
->>>>>>> 94b78b117bd1abc07fc83f3e7741ccf870fa74c9
+          [class*="jsx-"][alt="CleanWin Hero Background"],
           img[alt="CleanWin Hero Background"] {
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
             object-position: 60% 50% !important;
             display: block !important;
-<<<<<<< HEAD
-            opacity: 1 !important;
-            visibility: visible !important;
-            position: static !important;
-=======
             visibility: visible !important;
             opacity: 1 !important;
             contain: layout !important;
@@ -157,22 +149,6 @@ export default function RootLayout({
             background-color: transparent !important;
             vertical-align: top !important;
           }
-
-          /* Override any jsx class on hero image */
-          [class*="jsx-"][alt="CleanWin Hero Background"] {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            object-position: 60% 50% !important;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-          }
-
-          /* Target ONLY hero overlay specifically */
-          .hero-mobile > div[style*="position: absolute"][style*="top: 0px"][style*="background-color: rgba(0, 0, 0"] {
-            background-color: rgba(0, 0, 0, 0.9) !important;
->>>>>>> 94b78b117bd1abc07fc83f3e7741ccf870fa74c9
           }
             margin: 0;
             padding: 0;
