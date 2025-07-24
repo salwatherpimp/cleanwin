@@ -34,6 +34,7 @@ export default function RootLayout({
           as="image"
           href="https://res.cloudinary.com/dwlk9of7h/image/upload/q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
           fetchPriority="high"
+          type="image/avif"
         />
 
         {/* Preload critical fonts */}
