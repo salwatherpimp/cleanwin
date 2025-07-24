@@ -32,19 +32,19 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_720,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
           fetchPriority="high"
           type="image/avif"
-          media="(max-width: 1024px)"
+          media="(max-width: 767px)"
         />
         {/* Preload critical hero background image - Desktop */}
         <link
           rel="preload"
           as="image"
-          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
           fetchPriority="high"
           type="image/avif"
-          media="(min-width: 1025px)"
+          media="(min-width: 768px)"
         />
 
         {/* Preload critical fonts */}
