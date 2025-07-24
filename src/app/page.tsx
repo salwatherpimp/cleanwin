@@ -986,7 +986,7 @@ data-logo-container
 
           {/* Services Grid */}
           <div
-            className="services-grid"
+data-services-grid
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
