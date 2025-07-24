@@ -63,7 +63,7 @@ data-nav-stabilizer
           }}
         >
           <div
-            className="grid-mobile-3"
+data-grid-mobile
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
