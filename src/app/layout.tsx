@@ -303,7 +303,7 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body className="antialiased">{children}</body>
+      <body style={{WebkitFontSmoothing: "antialiased", MozOsxFontSmoothing: "grayscale"}}>{children}</body>
     </html>
   );
 }
