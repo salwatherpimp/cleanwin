@@ -88,7 +88,8 @@ export default function CleanWinPage() {
           position: "relative",
           width: "100vw",
           height: "75vh",
-          minHeight: "720px",
+          minHeight: "560px",
+          maxHeight: "75vh",
           contain: "layout",
           overflow: "hidden",
         }}
