@@ -94,26 +94,21 @@ export default function CleanWinPage() {
           overflow: "hidden",
         }}
       >
-        <img
-          src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_720,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-          srcSet="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 480w, https://res.cloudinary.com/dwlk9of7h/image/upload/w_720,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 720w, https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 1280w, https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 1920w"
-          sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 1920px"
-          alt="CleanWin Hero Background"
-          width="1920"
-          height="1080"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-          style={{
-            position: "absolute",
-            inset: "0",
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "60% 50%",
-            display: "block",
-            opacity: 1,
-            visibility: "visible",
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `<img
+              src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+              srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 480w,
+                      https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 1280w"
+              sizes="100vw"
+              alt="CleanWin Hero Background"
+              width="1920"
+              height="1080"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; display: block; opacity: 1; visibility: visible;"
+            />`
           }}
         />
         <div
