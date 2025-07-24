@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Suspense } from "react";
 import PillNavigation from "../components/PillNavigation";
 import HeroSection from "../components/HeroSection";
 import CustomerReviews from "../components/CustomerReviews";
