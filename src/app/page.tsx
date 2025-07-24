@@ -483,7 +483,7 @@ data-usp-duplicate
           }}
         >
           <div
-            className="grid-mobile-2"
+data-grid-mobile-2
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
