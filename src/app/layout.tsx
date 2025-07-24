@@ -78,40 +78,7 @@ export default function RootLayout({
             font-display: swap;
           }
 
-          /* Critical Hero Section Styles */
-          .hero-mobile-wrapper {
-            height: 75vh;
-            min-height: 75vh;
-            overflow: hidden;
-            position: relative;
-            contain: layout style;
-            contain-intrinsic-size: 100vw 720px;
-          }
-
-          .hero-mobile {
-            position: relative;
-            height: 100%;
-            min-height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            padding-top: 100px;
-            box-sizing: border-box;
-          }
-
-          .hero-content-mobile {
-            position: relative;
-            z-index: 10;
-            max-width: 1152px;
-            margin: 0 auto;
-            padding: 0 16px 32px 16px;
-            text-align: center;
-            color: white;
-            contain: layout style;
-            contain-intrinsic-size: 1152px 420px;
-          }
-
+          /* Critical: Global hero headline styles */
           .hero-headline {
             font-size: 32px;
             font-weight: 800;
@@ -121,34 +88,6 @@ export default function RootLayout({
             color: white;
             text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
             min-height: 76px;
-            contain: layout style;
-            contain-intrinsic-size: 100% 76px;
-          }
-
-          /* Critical: Override styled-jsx with maximum specificity */
-          div.hero-mobile div img[alt="CleanWin Hero Background"].jsx-a529616e5809607e,
-          img[alt="CleanWin Hero Background"].jsx-a529616e5809607e,
-          [class*="jsx-"][alt="CleanWin Hero Background"],
-          img[alt="CleanWin Hero Background"] {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            object-position: 60% 50% !important;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            contain: layout !important;
-            position: static !important;
-            transform: none !important;
-            animation: none !important;
-            transition: none !important;
-            will-change: auto !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            border: none !important;
-            outline: none !important;
-            background-color: transparent !important;
-            vertical-align: top !important;
           }
           }
             margin: 0;
