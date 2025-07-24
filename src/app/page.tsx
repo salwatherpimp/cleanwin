@@ -518,7 +518,7 @@ data-grid-mobile-2
               </p>
               <a
                 href="#services"
-                className="about-cta-button"
+data-about-cta
                 style={{
                   display: "inline-block",
                   backgroundColor: "#0DA6A6",
