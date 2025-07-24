@@ -89,6 +89,34 @@ export default function RootLayout({
             text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
             min-height: 76px;
           }
+
+          /* Hero responsive adjustments - Desktop only */
+          @media (min-width: 768px) {
+            .hero-headline {
+              font-size: 48px !important;
+              line-height: 54px !important;
+              min-height: 108px !important;
+            }
+
+            section[data-lcp] p {
+              font-size: 18px !important;
+              line-height: 28px !important;
+            }
+
+            section[data-lcp] {
+              height: 720px !important;
+              min-height: 720px !important;
+            }
+          }
+
+          /* Hero mobile adjustments */
+          @media (max-width: 767px) {
+            section[data-lcp] {
+              height: 75vh !important;
+              min-height: 560px !important;
+              max-height: 75vh !important;
+            }
+          }
           }
             margin: 0;
             padding: 0;
