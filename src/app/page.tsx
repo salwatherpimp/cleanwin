@@ -1852,7 +1852,7 @@ data-chevron-icon
               flexWrap: "wrap",
               gap: "16px",
             }}
-            className="footer-bottom-responsive"
+data-footer-bottom
           >
             <div style={{ color: "#EAEAEA", fontSize: "14px" }}>
               © 2025 CleanWin. Alle Rechte vorbehalten.
