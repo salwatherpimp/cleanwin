@@ -81,113 +81,62 @@ export default function CleanWinPage() {
         <PillNavigation />
       </div>
 
-      {/* Hero Section */}
-      <div
-        className="hero-mobile-wrapper"
+      {/* Hero Section - Static SSR, No styled-jsx */}
+      <section
+        data-lcp
         style={{
-          height: "75vh",
-          minHeight: "75vh",
-          overflow: "hidden",
           position: "relative",
-          contain: "layout style",
-          containIntrinsicSize: "100vw 720px",
+          width: "100vw",
+          height: "75vh",
+          minHeight: "720px",
+          contain: "layout",
+          overflow: "hidden",
         }}
       >
-        <section
-          className="hero-mobile"
+        <img
+          src="https://res.cloudinary.com/dwlk9of7h/image/upload/q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          alt="CleanWin Hero Background"
+          width="1920"
+          height="1080"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          style={{
+            position: "absolute",
+            inset: "0",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "60% 50%",
+            display: "block",
+            opacity: 1,
+            visibility: "visible",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: "0",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+          }}
+        />
+        <div
           style={{
             position: "relative",
+            zIndex: 10,
             height: "100%",
-            minHeight: "100%",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            overflow: "hidden",
-            paddingTop: "100px",
-            boxSizing: "border-box",
+            padding: "100px 16px 32px 16px",
+            textAlign: "center",
+            color: "white",
           }}
         >
-          {/* Background Image Container */}
           <div
             style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              contain: "layout style",
-              containIntrinsicSize: "100vw 720px",
-              overflow: "hidden",
-              display: "block",
-              visibility: "visible",
-              opacity: 1,
-              margin: 0,
-              padding: 0,
-              border: "none",
-              outline: "none",
-              backgroundColor: "transparent",
-              transform: "none",
-              animation: "none",
-              transition: "none",
-              zIndex: 1,
-            }}
-          >
-            <img
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-              alt="CleanWin Hero Background"
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "60% 50%",
-                display: "block",
-                visibility: "visible",
-                opacity: 1,
-                contain: "layout",
-                position: "static",
-                transform: "none",
-                animation: "none",
-                transition: "none",
-                willChange: "auto",
-                margin: 0,
-                padding: 0,
-                border: "none",
-                outline: "none",
-                backgroundColor: "transparent",
-                verticalAlign: "top",
-              }}
-            />
-          </div>
-
-          {/* Dark Overlay */}
-          <div
-            style={{
-              position: "absolute",
-              top: "0px",
-              left: "0px",
-              right: "0px",
-              bottom: "0px",
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
-            }}
-          />
-
-          {/* Content */}
-          <div
-            className="hero-content-mobile"
-            style={{
-              position: "relative",
-              zIndex: 10,
               maxWidth: "1152px",
-              margin: "0 auto",
-              padding: "0 16px 32px 16px",
-              textAlign: "center",
-              color: "white",
-              contain: "layout style",
-              containIntrinsicSize: "1152px 420px",
+              width: "100%",
             }}
           >
             <h1
@@ -378,8 +327,8 @@ export default function CleanWinPage() {
               </a>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       {/* Benefits Section */}
       <section
