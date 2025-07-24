@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import PillNavigation from "../components/PillNavigation";
+import HeroSection from "../components/HeroSection";
 
 // Lazy load non-critical components for better bundle size
 const CustomerReviews = dynamic(() => import('../components/CustomerReviews'), {
