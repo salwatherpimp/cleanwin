@@ -1526,43 +1526,11 @@ export default function CleanWinPage() {
 
       </section>
       
-      {/* Why Choose CleanWin Section - Lazy Loaded */}
-      <Suspense fallback={
-        <div 
-          style={{
-            backgroundColor: "#f9fafb",
-            padding: "20px 0",
-            minHeight: "200px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#6b7280"
-          }}
-        >
-          Laden...
-        </div>
-      }>
-        <InteractiveValueCards />
-      </Suspense>
+      {/* Why Choose CleanWin Section */}
+      <InteractiveValueCards />
 
-      {/* Customer Reviews Carousel Section - Lazy Loaded */}
-      <Suspense fallback={
-        <div 
-          style={{
-            backgroundColor: "#ffffff",
-            padding: "24px 0",
-            minHeight: "400px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#6b7280"
-          }}
-        >
-          Laden...
-        </div>
-      }>
-        <CustomerReviews />
-      </Suspense>
+      {/* Customer Reviews Carousel Section */}
+      <CustomerReviews />
 
       {/* Call-to-Action Section */}
       <section
