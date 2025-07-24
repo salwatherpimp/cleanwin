@@ -124,13 +124,18 @@ export default function RootLayout({
             contain-intrinsic-size: 100% 76px;
           }
 
-          /* Critical: Only target hero image specifically */
+          /* Critical: Override styled-jsx with maximum specificity */
+          div.hero-mobile div img[alt="CleanWin Hero Background"].jsx-a529616e5809607e,
+          img[alt="CleanWin Hero Background"].jsx-a529616e5809607e,
           img[alt="CleanWin Hero Background"] {
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
             object-position: 60% 50% !important;
             display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            position: static !important;
           }
             margin: 0;
             padding: 0;
