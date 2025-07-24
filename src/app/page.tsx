@@ -1,49 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import { Suspense } from "react";
-import dynamic from "next/dynamic";
 import PillNavigation from "../components/PillNavigation";
 import HeroSection from "../components/HeroSection";
-
-// Lazy load non-critical components for better bundle size
-const CustomerReviews = dynamic(() => import('../components/CustomerReviews'), {
-  ssr: false,
-  loading: () => (
-    <div 
-      style={{
-        backgroundColor: "#ffffff",
-        padding: "24px 0",
-        minHeight: "400px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "#6b7280"
-      }}
-    >
-      Laden...
-    </div>
-  )
-});
-
-const InteractiveValueCards = dynamic(() => import('../components/InteractiveValueCards'), {
-  ssr: false,
-  loading: () => (
-    <div 
-      style={{
-        backgroundColor: "#f9fafb",
-        padding: "20px 0",
-        minHeight: "200px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "#6b7280"
-      }}
-    >
-      Laden...
-    </div>
-  )
-});
+import CustomerReviews from "../components/CustomerReviews";
+import InteractiveValueCards from "../components/InteractiveValueCards";
 
 export default function CleanWinPage() {
   return (
