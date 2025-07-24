@@ -104,17 +104,17 @@ export default function RootLayout({
             }
 
             section[data-lcp] {
-              height: 720px !important;
-              min-height: 720px !important;
+              height: 612px !important;
+              min-height: 612px !important;
             }
           }
 
           /* Hero mobile adjustments */
           @media (max-width: 767px) {
             section[data-lcp] {
-              height: 75vh !important;
-              min-height: 560px !important;
-              max-height: 75vh !important;
+              height: 64vh !important;
+              min-height: 476px !important;
+              max-height: 64vh !important;
             }
           }
           }
