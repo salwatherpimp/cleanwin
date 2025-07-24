@@ -117,6 +117,19 @@ export default function CleanWinPage() {
               height: "100%",
               contain: "layout style",
               containIntrinsicSize: "100vw 720px",
+              overflow: "hidden",
+              display: "block",
+              visibility: "visible",
+              opacity: 1,
+              margin: 0,
+              padding: 0,
+              border: "none",
+              outline: "none",
+              backgroundColor: "transparent",
+              transform: "none",
+              animation: "none",
+              transition: "none",
+              zIndex: 1,
             }}
           >
             <img
@@ -132,6 +145,20 @@ export default function CleanWinPage() {
                 objectFit: "cover",
                 objectPosition: "60% 50%",
                 display: "block",
+                visibility: "visible",
+                opacity: 1,
+                contain: "layout",
+                position: "static",
+                transform: "none",
+                animation: "none",
+                transition: "none",
+                willChange: "auto",
+                margin: 0,
+                padding: 0,
+                border: "none",
+                outline: "none",
+                backgroundColor: "transparent",
+                verticalAlign: "top",
               }}
             />
           </div>
@@ -144,7 +171,7 @@ export default function CleanWinPage() {
               left: "0px",
               right: "0px",
               bottom: "0px",
-              backgroundColor: "rgba(0, 0, 0, 0.3)",
+              backgroundColor: "rgba(0, 0, 0, 0.4)",
             }}
           />
 
