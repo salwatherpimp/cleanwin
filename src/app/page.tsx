@@ -270,7 +270,7 @@ data-usp-card
             {/* Duplicate cards for seamless loop (mobile only) */}
             {/* Duplicate Pricing Card */}
             <div
-              className="usp-card usp-duplicate"
+data-usp-duplicate
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -336,7 +336,7 @@ data-usp-card
 
             {/* Duplicate Consultation Card */}
             <div
-              className="usp-card usp-duplicate"
+data-usp-duplicate
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -401,7 +401,7 @@ data-usp-card
 
             {/* Duplicate Legitimacy Card */}
             <div
-              className="usp-card usp-duplicate"
+data-usp-duplicate
               style={{
                 display: "flex",
                 alignItems: "center",
