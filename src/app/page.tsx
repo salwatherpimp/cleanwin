@@ -1640,7 +1640,7 @@ data-final-cta
               gap: "32px",
               marginBottom: "32px",
             }}
-            className="footer-main-grid"
+data-footer-grid
           >
 
             {/* Column 1: Company Info */}
