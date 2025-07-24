@@ -1745,7 +1745,7 @@ data-footer-grid
                       marginLeft: "0px",
                       transition: "transform 0.2s ease",
                     }}
-                    className="chevron-icon"
+data-chevron-icon
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
