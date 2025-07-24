@@ -18,7 +18,7 @@ export default function CleanWinPage() {
     >
       {/* Pill Navigation */}
       <div
-        className="nav-stabilizer-wrapper"
+data-nav-stabilizer
         style={{
           position: "fixed",
           top: "16px",
