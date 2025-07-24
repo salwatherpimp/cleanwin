@@ -73,7 +73,7 @@ data-grid-mobile
           >
             {/* Pricing Card */}
             <div
-              className="usp-card"
+data-usp-card
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -139,7 +139,7 @@ data-grid-mobile
 
             {/* Consultation Card */}
             <div
-              className="usp-card"
+data-usp-card
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -204,7 +204,7 @@ data-grid-mobile
 
             {/* Legitimacy Card */}
             <div
-              className="usp-card"
+data-usp-card
               style={{
                 display: "flex",
                 alignItems: "center",
