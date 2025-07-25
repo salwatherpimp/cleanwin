@@ -11,6 +11,19 @@
   ],
   "headers": [
     {
+      "source": "/hero-landing.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    },
+    {
       "source": "/(.*\\.(avif|webp|jpg|jpeg|png|gif|svg))",
       "headers": [
         {
