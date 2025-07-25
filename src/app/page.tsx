@@ -74,7 +74,7 @@ data-nav-stabilizer
           >
             {/* Pricing Card */}
             <div
-data-usp-card
+className="usp-card"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -140,7 +140,7 @@ data-usp-card
 
             {/* Consultation Card */}
             <div
-data-usp-card
+className="usp-card"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -205,7 +205,7 @@ data-usp-card
 
             {/* Legitimacy Card */}
             <div
-data-usp-card
+className="usp-card"
               style={{
                 display: "flex",
                 alignItems: "center",
