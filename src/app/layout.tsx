@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "../styles/globals.css";
 import "../styles/critical.css";
+import "../styles/components.css";
 
 export const metadata: Metadata = {
   title: "CleanWin - Professional Cleaning Services",
