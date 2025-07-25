@@ -30,7 +30,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
-        {/* Preload critical hero background image - Mobile */}
+        {/* CRITICAL: Preload hero images with performance hints */}
         <link
           rel="preload"
           as="image"
@@ -38,8 +38,8 @@ export default function RootLayout({
           fetchPriority="high"
           type="image/avif"
           media="(max-width: 767px)"
+          crossOrigin="anonymous"
         />
-        {/* Preload critical hero background image - Desktop */}
         <link
           rel="preload"
           as="image"
@@ -47,7 +47,12 @@ export default function RootLayout({
           fetchPriority="high"
           type="image/avif"
           media="(min-width: 768px)"
+          crossOrigin="anonymous"
         />
+
+        {/* Resource hints for performance */}
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
 
         {/* Preload critical fonts */}
         <link
