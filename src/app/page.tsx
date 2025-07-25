@@ -998,7 +998,7 @@ className="logo-container-mobile"
             {/* Fensterreinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/fensterreinigung"
-data-service-card
+className="service-card"
               style={{
                 position: "relative",
                 backgroundColor: "white",
@@ -1086,7 +1086,7 @@ data-service-card
             {/* Unterhaltsreinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/unterhaltsreinigung"
-data-service-card
+className="service-card"
               style={{
                 position: "relative",
                 backgroundColor: "white",
@@ -1174,7 +1174,7 @@ data-service-card
             {/* Fassadenreinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/fassadenreinigung"
-data-service-card
+className="service-card"
               style={{
                 position: "relative",
                 backgroundColor: "white",
@@ -1262,7 +1262,7 @@ data-service-card
             {/* Umzugsreinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/umzugsreinigung"
-data-service-card
+className="service-card"
               style={{
                 position: "relative",
                 backgroundColor: "white",
@@ -1350,7 +1350,7 @@ data-service-card
             {/* Baureinigung */}
             <a
               href="https://cleanwin.vercel.app/leistungen/baureinigung"
-data-service-card
+className="service-card"
               style={{
                 position: "relative",
                 backgroundColor: "white",
@@ -1438,7 +1438,7 @@ data-service-card
             {/* Solarpanel reinigen */}
             <a
               href="https://cleanwin.vercel.app/leistungen/solarpanel-reinigen"
-data-service-card
+className="service-card"
               style={{
                 position: "relative",
                 backgroundColor: "white",
