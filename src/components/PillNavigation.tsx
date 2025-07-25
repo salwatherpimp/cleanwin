@@ -525,14 +525,14 @@ export default function PillNavigation() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              width: "28px",
-              height: "28px",
+              width: "32px",
+              height: "32px",
               background: "none",
               border: "none",
               cursor: "pointer",
-              padding: "2px",
+              padding: "4px",
               flexShrink: 0,
-              borderRadius: "14px",
+              borderRadius: "16px",
               transition: "background-color 0.2s ease",
             }}
             onMouseEnter={(e) => {
@@ -542,36 +542,29 @@ export default function PillNavigation() {
               e.currentTarget.style.background = "none";
             }}
           >
-            <span style={{
-              width: "20px",
+            <div style={{
+              width: "18px",
               height: "2px",
-              background: "#374151",
-              margin: "2px 0",
-              transition: "transform 0.3s ease, opacity 0.3s ease",
-              transformOrigin: "center",
-              transform: isMobileMenuOpen ? "rotate(45deg) translate(4px, 4px)" : "none",
-              display: "block",
-            }}></span>
-            <span style={{
-              width: "20px",
+              backgroundColor: "#374151",
+              marginBottom: "3px",
+              transition: "transform 0.3s ease",
+              transform: isMobileMenuOpen ? "rotate(45deg) translate(5px, 5px)" : "none",
+            }}></div>
+            <div style={{
+              width: "18px",
               height: "2px",
-              background: "#374151",
-              margin: "2px 0",
-              transition: "transform 0.3s ease, opacity 0.3s ease",
-              transformOrigin: "center",
+              backgroundColor: "#374151",
+              marginBottom: "3px",
+              transition: "opacity 0.3s ease",
               opacity: isMobileMenuOpen ? 0 : 1,
-              display: "block",
-            }}></span>
-            <span style={{
-              width: "20px",
+            }}></div>
+            <div style={{
+              width: "18px",
               height: "2px",
-              background: "#374151",
-              margin: "2px 0",
-              transition: "transform 0.3s ease, opacity 0.3s ease",
-              transformOrigin: "center",
-              transform: isMobileMenuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none",
-              display: "block",
-            }}></span>
+              backgroundColor: "#374151",
+              transition: "transform 0.3s ease",
+              transform: isMobileMenuOpen ? "rotate(-45deg) translate(6px, -6px)" : "none",
+            }}></div>
           </button>
         </div>
       </nav>
