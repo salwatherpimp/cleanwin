@@ -217,8 +217,8 @@ export default function RootLayout({
           }
 
           @media (min-width: 1024px) {
-            .nav-desktop { display: flex !important; }
-            .nav-mobile { display: none !important; }
+            [data-nav="desktop"] { display: flex !important; }
+            [data-nav="mobile"] { display: none !important; }
           }
 
           /* Critical hero section dimensions */
