@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import styles from "./Navigation.module.css";
 
 export default function PillNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
