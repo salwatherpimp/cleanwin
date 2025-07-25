@@ -358,7 +358,7 @@ export default function PillNavigation() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          paddingInline: "16px",
+          paddingInline: "8px",
           height: "56px",
           minHeight: "56px",
           width: "100%",
@@ -376,11 +376,127 @@ export default function PillNavigation() {
             <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="CleanWin Logo"
-              width={120}
-              height={33}
+              width={110}
+              height={30}
               priority
             />
           </a>
+
+          {/* CTA Button Mobile */}
+          <div style={{
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            flexShrink: 0,
+          }}>
+            <button
+              onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "4px",
+                background: "#0DA6A6",
+                color: "white",
+                border: "none",
+                padding: "6px 12px",
+                borderRadius: "18px",
+                fontWeight: "600",
+                fontSize: "13px",
+                cursor: "pointer",
+                transition: "background-color 0.2s ease",
+                whiteSpace: "nowrap",
+                minHeight: "36px",
+                height: "36px",
+                boxSizing: "border-box",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#0b8d8d";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "#0DA6A6";
+              }}
+            >
+              <HandIcon />
+              <span>Kontaktiere uns</span>
+              <ChevronDownIcon size={14} />
+            </button>
+            <div
+              style={{
+                position: "absolute",
+                top: "100%",
+                right: "0",
+                background: "white",
+                borderRadius: "12px",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
+                padding: "8px",
+                marginTop: "8px",
+                minWidth: "200px",
+                zIndex: 100,
+                opacity: isCtaDropdownOpen ? 1 : 0,
+                visibility: isCtaDropdownOpen ? "visible" : "hidden",
+                transition: "opacity 0.2s ease, visibility 0.2s ease",
+                pointerEvents: isCtaDropdownOpen ? "auto" : "none",
+                contain: "layout style",
+                containIntrinsicSize: "200px 120px",
+              }}
+            >
+              <a
+                href="/kontakt"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "12px 16px",
+                  textDecoration: "none",
+                  color: "#374151",
+                  fontWeight: "500",
+                  fontSize: "14px",
+                  borderRadius: "8px",
+                  transition: "background-color 0.2s ease, color 0.2s ease",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f3f4f6";
+                  e.currentTarget.style.color = "#0DA6A6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#374151";
+                }}
+              >
+                <HandIcon />
+                <span>Kontaktanfrage senden</span>
+              </a>
+              <a
+                href="tel:+41525512424"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "12px 16px",
+                  textDecoration: "none",
+                  color: "#374151",
+                  fontWeight: "500",
+                  fontSize: "14px",
+                  borderRadius: "8px",
+                  transition: "background-color 0.2s ease, color 0.2s ease",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f3f4f6";
+                  e.currentTarget.style.color = "#0DA6A6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#374151";
+                }}
+              >
+                <PhoneIcon />
+                <span>+41 52 551 24 24</span>
+              </a>
+            </div>
+          </div>
 
           {/* Hamburger Menu */}
           <button
@@ -391,14 +507,14 @@ export default function PillNavigation() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              width: "32px",
-              height: "32px",
+              width: "28px",
+              height: "28px",
               background: "none",
               border: "none",
               cursor: "pointer",
-              padding: "4px",
+              padding: "2px",
               flexShrink: 0,
-              borderRadius: "16px",
+              borderRadius: "14px",
               transition: "background-color 0.2s ease",
             }}
             onMouseEnter={(e) => {
@@ -409,31 +525,31 @@ export default function PillNavigation() {
             }}
           >
             <span style={{
-              width: "20px",
+              width: "16px",
               height: "2px",
               background: "#374151",
-              margin: "1.5px 0",
+              margin: "1px 0",
               transition: "transform 0.3s ease, opacity 0.3s ease",
               transformOrigin: "center",
-              transform: isMobileMenuOpen ? "rotate(45deg) translate(4px, 4px)" : "none",
+              transform: isMobileMenuOpen ? "rotate(45deg) translate(3px, 3px)" : "none",
             }}></span>
             <span style={{
-              width: "20px",
+              width: "16px",
               height: "2px",
               background: "#374151",
-              margin: "1.5px 0",
+              margin: "1px 0",
               transition: "transform 0.3s ease, opacity 0.3s ease",
               transformOrigin: "center",
               opacity: isMobileMenuOpen ? 0 : 1,
             }}></span>
             <span style={{
-              width: "20px",
+              width: "16px",
               height: "2px",
               background: "#374151",
-              margin: "1.5px 0",
+              margin: "1px 0",
               transition: "transform 0.3s ease, opacity 0.3s ease",
               transformOrigin: "center",
-              transform: isMobileMenuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none",
+              transform: isMobileMenuOpen ? "rotate(-45deg) translate(4px, -4px)" : "none",
             }}></span>
           </button>
         </div>
