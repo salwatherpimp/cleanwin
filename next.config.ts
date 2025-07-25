@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Disable styled-jsx completely to eliminate render delays
+  compiler: {
+    styledComponents: false,
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+
   // Optimize images for better Core Web Vitals
   images: {
     formats: ["image/webp", "image/avif"],
