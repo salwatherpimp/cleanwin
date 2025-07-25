@@ -724,22 +724,23 @@ export default function PillNavigation() {
         }
 
         .pill-nav-desktop {
-          display: flex !important;
-          align-items: center !important;
-          justify-content: space-between !important;
-          gap: 40px !important;
-          width: 100% !important;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 40px;
+          width: 100%;
         }
 
         .pill-nav-mobile {
-          display: none !important;
-          align-items: center !important;
-          justify-content: space-between !important;
-          padding-inline: 8px !important;
-          height: 56px !important;
-          min-height: 56px !important;
-          width: 100% !important;
-          box-sizing: border-box !important;
+          display: none;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 16px;
+          height: 56px;
+          min-height: 56px;
+          width: 100%;
+          box-sizing: border-box;
+          position: relative;
         }
 
         .pill-nav-logo {
