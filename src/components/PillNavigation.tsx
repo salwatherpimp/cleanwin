@@ -1095,10 +1095,12 @@ export default function PillNavigation() {
             display: flex !important;
             align-items: center !important;
             justify-content: space-between !important;
-            width: 100% !important;
+            padding: 0 16px !important;
             height: 56px !important;
             min-height: 56px !important;
-            padding-inline: 8px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            position: relative !important;
           }
 
           .pill-nav-wrapper {
