@@ -1,13 +1,6 @@
 {
   "routes": [
     {
-      "src": "^/$",
-      "dest": "/hero-landing.html",
-      "headers": {
-        "Cache-Control": "public, max-age=86400, s-maxage=86400"
-      }
-    },
-    {
       "src": "^/app/(.*)",
       "dest": "/$1"
     },
