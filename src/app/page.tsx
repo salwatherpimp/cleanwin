@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import PillNavigation from "../components/PillNavigation";
 import HeroSection from "../components/HeroSection";
@@ -1253,7 +1251,7 @@ className="service-card"
                       textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
                     }}
                   >
-                    →
+                    ���
                   </span>
                 </div>
               </div>
