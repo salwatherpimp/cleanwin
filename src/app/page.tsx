@@ -659,7 +659,7 @@ data-image-grid
             }}
           >
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -675,7 +675,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -691,7 +691,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -707,7 +707,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -723,7 +723,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -739,7 +739,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -755,7 +755,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -771,7 +771,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -787,7 +787,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -805,7 +805,7 @@ data-logo-container
 
             {/* Duplicate all logos for seamless looping */}
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -821,7 +821,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -837,7 +837,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -853,7 +853,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -869,7 +869,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -885,7 +885,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -901,7 +901,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -917,7 +917,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
@@ -933,7 +933,7 @@ data-logo-container
               }}
             />
             <div
-data-logo-container
+className="logo-container-mobile"
               style={{
                 width: "120px",
                 height: "60px",
