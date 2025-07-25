@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import PillNavigation from "../components/PillNavigation";
-import HeroSection from "../components/HeroSection";
+import PureHeroSection from "../components/PureHeroSection";
 import CustomerReviews from "../components/CustomerReviews";
 import InteractiveValueCards from "../components/InteractiveValueCards";
 
