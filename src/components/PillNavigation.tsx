@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function PillNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 1023);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
     const services = [
     { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
@@ -70,7 +82,7 @@ export default function PillNavigation() {
       }}>
         {/* Desktop Layout */}
         <div className="pill-nav-desktop" style={{
-          display: "flex",
+          display: isMobile ? "none" : "flex",
           alignItems: "center",
           justifyContent: "space-between",
           gap: "40px",
@@ -361,7 +373,7 @@ export default function PillNavigation() {
 
         {/* Mobile Layout */}
         <div className="pill-nav-mobile" style={{
-          display: "none",
+          display: isMobile ? "flex" : "none",
           alignItems: "center",
           justifyContent: "space-between",
           paddingInline: "8px",
