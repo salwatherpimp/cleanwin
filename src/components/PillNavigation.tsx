@@ -360,7 +360,7 @@ export default function PillNavigation() {
         </div>
 
         {/* Mobile Layout */}
-        <div style={{
+        <div data-nav="mobile" style={{
           display: "none",
           alignItems: "center",
           justifyContent: "space-between",
