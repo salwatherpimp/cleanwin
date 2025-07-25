@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
     styledComponents: false,
     removeConsole: process.env.NODE_ENV === "production",
   },
+  experimental: {
+    // Disable styled-jsx completely
+    styledComponents: false,
+  },
 
   // Optimize images for better Core Web Vitals
   images: {
