@@ -52,6 +52,9 @@ export default function HeroSection() {
             display: "block",
             opacity: 1,
             visibility: "visible",
+            transform: "translateZ(0)",
+            willChange: "transform",
+            backfaceVisibility: "hidden",
           }}
         />
       </picture>
