@@ -987,7 +987,7 @@ className="logo-container-mobile"
 
           {/* Services Grid */}
           <div
-data-services-grid
+            className="services-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
