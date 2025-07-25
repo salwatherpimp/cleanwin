@@ -163,8 +163,8 @@ export default function RootLayout({
 
           /* Critical mobile navigation visibility */
           @media (max-width: 1023px) {
-            .nav-desktop { display: none !important; }
-            .nav-mobile { display: flex !important; }
+            [data-nav="desktop"] { display: none !important; }
+            [data-nav="mobile"] { display: flex !important; }
 
             .nav-stabilizer-wrapper {
               left: 16px !important;
