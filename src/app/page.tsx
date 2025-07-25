@@ -10,28 +10,7 @@ export default function CleanWinPage() {
   return (
     <div className="main-page-container">
       {/* Pill Navigation */}
-      <div
-        className="nav-stabilizer-wrapper"
-        style={{
-          position: "fixed",
-          top: "16px",
-          left: "16px",
-          right: "16px",
-          zIndex: 1000,
-          height: "56px",
-          minHeight: "56px",
-          contain: "layout style",
-          containIntrinsicSize: "100vw 56px",
-          display: "flex",
-          justifyContent: "center",
-          width: "calc(100vw - 32px)",
-          maxWidth: "calc(100vw - 32px)",
-          margin: "0 auto",
-          paddingLeft: "0",
-          paddingRight: "0",
-          boxSizing: "border-box",
-        }}
-      >
+      <div className="nav-wrapper">
         <PillNavigation />
       </div>
 
