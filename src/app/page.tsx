@@ -1597,7 +1597,7 @@ className="service-card"
             </h2>
             <a
               href="/kontakt"
-data-final-cta
+              className="final-cta-button"
               style={{
                 display: "inline-block",
                 backgroundColor: "#0DA6A6",
