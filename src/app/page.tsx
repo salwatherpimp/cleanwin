@@ -8,15 +8,7 @@ import InteractiveValueCards from "../components/InteractiveValueCards";
 
 export default function CleanWinPage() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        width: "100%",
-        margin: 0,
-        padding: 0,
-        backgroundColor: "#ffffff",
-      }}
-    >
+    <div className="main-page-container">
       {/* Pill Navigation */}
       <div
         className="nav-stabilizer-wrapper"
