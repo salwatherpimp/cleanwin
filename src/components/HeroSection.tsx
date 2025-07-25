@@ -8,8 +8,10 @@ export default function HeroSection() {
         height: "64vh",
         minHeight: "476px",
         maxHeight: "64vh",
-        contain: "layout",
+        contain: "strict",
         overflow: "hidden",
+        willChange: "auto",
+        transform: "translateZ(0)",
       }}
     >
       {/* Responsive Background Image - Layout Safe */}
