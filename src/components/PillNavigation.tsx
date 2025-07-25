@@ -42,7 +42,7 @@ export default function PillNavigation() {
   );
 
   return (
-    <div style={{
+    <div className="pill-nav-wrapper" style={{
       width: "100%",
       display: "flex",
       justifyContent: "center",
