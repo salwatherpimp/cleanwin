@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import PillNavigation from "../components/PillNavigation";
-import PureHeroSection from "../components/PureHeroSection";
 import CustomerReviews from "../components/CustomerReviews";
 import InteractiveValueCards from "../components/InteractiveValueCards";
 
-export default function CleanWinPage() {
+export default function CleanWinApp() {
   return (
     <div className="main-page-container">
       {/* Pill Navigation */}
@@ -14,17 +13,16 @@ export default function CleanWinPage() {
         <PillNavigation />
       </div>
 
-      {/* Hero Section - Pure HTML, No styled-jsx, Responsive Images */}
-      <PureHeroSection />
-
-      {/* Benefits Section */}
+      {/* Benefits Section - First section for /app routes */}
       <section
+        id="services"
         style={{
           backgroundColor: "#f9fafb",
           borderTop: "1px solid #e5e7eb",
           borderBottom: "1px solid #e5e7eb",
           padding: "24px 0",
           overflow: "hidden",
+          marginTop: "80px", // Add margin for navigation
         }}
       >
         <div
@@ -489,7 +487,7 @@ className="usp-card usp-duplicate"
                 Seit über zehn Jahren steht Cleanwin für gründliche, faire und nachhaltige Reinigungsdienstleistungen im Grossraum Winterthur. Ob Fensterreinigung, Fassadenpflege oder Umzugsreinigung - wir bringen Erfahrung, Sorgfalt und Menschlichkeit zusammen. Unsere kostenlose Vor-Ort-Beratung bietet Ihnen maximale Transparenz. Dahinter steht ein geschultes, fair entlöhntes Team, das sich mit Engagement und Fachwissen für beste Ergebnisse einsetzt.
               </p>
               <a
-                href="#services"
+                href="#services-detail"
                 className="about-cta-button"
                 style={{
                   display: "inline-block",
@@ -925,7 +923,7 @@ className="logo-container-mobile"
 
       {/* Services Section */}
       <section
-        id="services"
+        id="services-detail"
         style={{
           backgroundColor: "#ffffff",
           padding: "24px 0",
@@ -1783,13 +1781,13 @@ className="service-card"
               {/* Separate Links Below */}
               <div style={{ display: "flex", flexDirection: "column", gap: "8px", textAlign: "left" }}>
                 <a
-                  href="https://cleanwin.vercel.app/ueber-uns"
+                  href="/ueber-uns"
                   style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
                 >
                   Über uns
                 </a>
                 <a
-                  href="https://cleanwin.vercel.app/referenzen"
+                  href="/referenzen"
                   style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
                 >
                   Referenzen
@@ -1832,7 +1830,7 @@ className="service-card"
               Gemacht mit ♥️ in Winterthur
             </div>
             <a
-              href="https://cleanwin.vercel.app/datenschutz"
+              href="/datenschutz"
               style={{
                 color: "#EAEAEA",
                 textDecoration: "none",
@@ -1998,13 +1996,8 @@ className="service-card"
 
         /* Desktop Hero Section Spacing Optimization */
         @media (min-width: 1024px) {
-          h1.hero-headline[style*="margin-bottom"] {
-            margin-bottom: 4px !important;
-          }
-
-          .hero-content-mobile .hero-reviews-badge {
-            margin-top: 8px !important;
-            margin-bottom: 16px !important;
+          .nav-wrapper {
+            padding: 0 32px;
           }
         }
       `}</style>
