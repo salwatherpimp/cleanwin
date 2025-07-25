@@ -543,31 +543,34 @@ export default function PillNavigation() {
             }}
           >
             <span style={{
-              width: "16px",
+              width: "20px",
               height: "2px",
               background: "#374151",
-              margin: "1px 0",
+              margin: "2px 0",
               transition: "transform 0.3s ease, opacity 0.3s ease",
               transformOrigin: "center",
-              transform: isMobileMenuOpen ? "rotate(45deg) translate(3px, 3px)" : "none",
+              transform: isMobileMenuOpen ? "rotate(45deg) translate(4px, 4px)" : "none",
+              display: "block",
             }}></span>
             <span style={{
-              width: "16px",
+              width: "20px",
               height: "2px",
               background: "#374151",
-              margin: "1px 0",
+              margin: "2px 0",
               transition: "transform 0.3s ease, opacity 0.3s ease",
               transformOrigin: "center",
               opacity: isMobileMenuOpen ? 0 : 1,
+              display: "block",
             }}></span>
             <span style={{
-              width: "16px",
+              width: "20px",
               height: "2px",
               background: "#374151",
-              margin: "1px 0",
+              margin: "2px 0",
               transition: "transform 0.3s ease, opacity 0.3s ease",
               transformOrigin: "center",
-              transform: isMobileMenuOpen ? "rotate(-45deg) translate(4px, -4px)" : "none",
+              transform: isMobileMenuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none",
+              display: "block",
             }}></span>
           </button>
         </div>
