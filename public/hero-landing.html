@@ -496,22 +496,22 @@
     </div>
   </section>
 
-  <!-- Continue to rest of site JavaScript -->
+  <!-- Navigation and transition JavaScript -->
   <script>
-    // Add scroll behavior for navigation to rest of site
     document.addEventListener('DOMContentLoaded', function() {
-      // Smooth navigation to app sections
-      const navLinks = document.querySelectorAll('a[href^="/app"]');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          // Let the browser handle navigation naturally
-          // This ensures seamless transition to Next.js app
+      // Handle internal navigation (services link)
+      const servicesLink = document.querySelector('a[href="#services"]');
+      if (servicesLink) {
+        servicesLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Redirect to Next.js app with services anchor
+          window.location.href = '/#services';
         });
-      });
-      
+      }
+
       // Add scroll indicator after hero loads
       window.addEventListener('load', function() {
-        // Optional: Add scroll down indicator
+        // Add scroll down indicator
         const scrollIndicator = document.createElement('div');
         scrollIndicator.style.cssText = `
           position: absolute;
@@ -532,7 +532,7 @@
             </svg>
           </div>
         `;
-        
+
         // Add bounce animation
         const style = document.createElement('style');
         style.textContent = `
@@ -543,12 +543,12 @@
           }
         `;
         document.head.appendChild(style);
-        
+
         document.querySelector('.hero-section').appendChild(scrollIndicator);
-        
-        // Navigate to services on click
+
+        // Navigate to services section on click
         scrollIndicator.addEventListener('click', function() {
-          window.location.href = '#services';
+          window.location.href = '/#services';
         });
       });
     });
