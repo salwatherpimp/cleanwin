@@ -376,29 +376,33 @@ export default function PillNavigation() {
           display: isMobile ? "flex" : "none",
           alignItems: "center",
           justifyContent: "space-between",
-          paddingInline: "8px",
+          padding: "0 16px",
           height: "56px",
           minHeight: "56px",
           width: "100%",
           boxSizing: "border-box",
-          contain: "layout style",
-          containIntrinsicSize: "100% 56px",
+          position: "relative",
         }}>
           {/* Logo */}
-          <a href="https://cleanwin.vercel.app/" style={{
+          <div style={{
             display: "flex",
             alignItems: "center",
-            textDecoration: "none",
             flexShrink: 0,
           }}>
-            <Image
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
-              alt="CleanWin Logo"
-              width={110}
-              height={30}
-              priority
-            />
-          </a>
+            <a href="https://cleanwin.vercel.app/" style={{
+              display: "flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}>
+              <Image
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
+                alt="CleanWin Logo"
+                width={110}
+                height={30}
+                priority
+              />
+            </a>
+          </div>
 
           {/* CTA Button Mobile */}
           <div style={{
@@ -412,19 +416,18 @@ export default function PillNavigation() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "4px",
+                gap: "6px",
                 background: "#0DA6A6",
                 color: "white",
                 border: "none",
-                padding: "6px 12px",
-                borderRadius: "18px",
+                padding: "8px 16px",
+                borderRadius: "24px",
                 fontWeight: "600",
-                fontSize: "13px",
+                fontSize: "14px",
                 cursor: "pointer",
                 transition: "background-color 0.2s ease",
                 whiteSpace: "nowrap",
-                minHeight: "36px",
-                height: "36px",
+                height: "40px",
                 boxSizing: "border-box",
               }}
               onMouseEnter={(e) => {
@@ -455,8 +458,6 @@ export default function PillNavigation() {
                 visibility: isCtaDropdownOpen ? "visible" : "hidden",
                 transition: "opacity 0.2s ease, visibility 0.2s ease",
                 pointerEvents: isCtaDropdownOpen ? "auto" : "none",
-                contain: "layout style",
-                containIntrinsicSize: "200px 120px",
               }}
             >
               <a
@@ -517,55 +518,60 @@ export default function PillNavigation() {
           </div>
 
           {/* Hamburger Menu */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "32px",
-              height: "32px",
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              padding: "4px",
-              flexShrink: 0,
-              borderRadius: "16px",
-              transition: "background-color 0.2s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#f3f4f6";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "none";
-            }}
-          >
-            <div style={{
-              width: "18px",
-              height: "2px",
-              backgroundColor: "#374151",
-              marginBottom: "3px",
-              transition: "transform 0.3s ease",
-              transform: isMobileMenuOpen ? "rotate(45deg) translate(5px, 5px)" : "none",
-            }}></div>
-            <div style={{
-              width: "18px",
-              height: "2px",
-              backgroundColor: "#374151",
-              marginBottom: "3px",
-              transition: "opacity 0.3s ease",
-              opacity: isMobileMenuOpen ? 0 : 1,
-            }}></div>
-            <div style={{
-              width: "18px",
-              height: "2px",
-              backgroundColor: "#374151",
-              transition: "transform 0.3s ease",
-              transform: isMobileMenuOpen ? "rotate(-45deg) translate(6px, -6px)" : "none",
-            }}></div>
-          </button>
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            flexShrink: 0,
+          }}>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "32px",
+                height: "32px",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: "4px",
+                borderRadius: "16px",
+                transition: "background-color 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#f3f4f6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "none";
+              }}
+            >
+              <div style={{
+                width: "18px",
+                height: "2px",
+                backgroundColor: "#374151",
+                marginBottom: "3px",
+                transition: "transform 0.3s ease",
+                transform: isMobileMenuOpen ? "rotate(45deg) translate(5px, 5px)" : "none",
+              }}></div>
+              <div style={{
+                width: "18px",
+                height: "2px",
+                backgroundColor: "#374151",
+                marginBottom: "3px",
+                transition: "opacity 0.3s ease",
+                opacity: isMobileMenuOpen ? 0 : 1,
+              }}></div>
+              <div style={{
+                width: "18px",
+                height: "2px",
+                backgroundColor: "#374151",
+                transition: "transform 0.3s ease",
+                transform: isMobileMenuOpen ? "rotate(-45deg) translate(6px, -6px)" : "none",
+              }}></div>
+            </button>
+          </div>
         </div>
       </nav>
 
