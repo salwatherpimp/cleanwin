@@ -546,7 +546,7 @@ data-about-cta
                 gap: "16px",
                 width: "100%",
               }}
-data-image-grid
+              className="grid grid-cols-2 gap-3 md:gap-4"
             >
               <div
                 style={{
