@@ -69,7 +69,7 @@ export default function PillNavigation() {
         containIntrinsicSize: "1152px 56px",
       }}>
         {/* Desktop Layout */}
-        <div className="nav-desktop" style={{
+        <div style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
