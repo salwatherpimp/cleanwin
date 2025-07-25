@@ -1,0 +1,23 @@
+/* Critical navigation responsive behavior */
+@media (max-width: 1023px) {
+  [data-nav="desktop"] { 
+    display: none !important; 
+  }
+  [data-nav="mobile"] { 
+    display: flex !important; 
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-nav="desktop"] { 
+    display: flex !important; 
+  }
+  [data-nav="mobile"] { 
+    display: none !important; 
+  }
+}
+
+/* Prevent any styled-jsx interference */
+* {
+  /* Force disable styled-jsx */
+}
