@@ -516,7 +516,7 @@ export default function PillNavigation() {
           }}></div>
 
           <div style={{
-            marginBottom: "0",
+            marginBottom: "16px",
           }}>
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
@@ -567,6 +567,86 @@ export default function PillNavigation() {
               }}
             >
               Referenzen
+            </a>
+          </div>
+
+          <div style={{
+            height: "1px",
+            background: "#d1d5db",
+            margin: "12px 0",
+            borderTop: "1px solid #d1d5db",
+          }}></div>
+
+          <div style={{
+            marginBottom: "0",
+          }}>
+            <h3 style={{
+              fontWeight: "700",
+              fontSize: "18px",
+              color: "#1f2937",
+              marginBottom: "12px",
+              marginTop: "0",
+              textTransform: "none",
+              letterSpacing: "0",
+              paddingLeft: "0",
+            }}>Kontakt</h3>
+            <a
+              href="/kontakt"
+              onClick={() => setIsMobileMenuOpen(false)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "12px 16px",
+                textDecoration: "none",
+                color: "#6b7280",
+                fontWeight: "400",
+                fontSize: "16px",
+                borderRadius: "0",
+                marginBottom: "0",
+                transition: "background-color 0.2s ease, color 0.2s ease",
+                minHeight: "44px",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#f3f4f6";
+                e.currentTarget.style.color = "#0DA6A6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#6b7280";
+              }}
+            >
+              <HandIcon />
+              <span>Kontaktanfrage senden</span>
+            </a>
+            <a
+              href="tel:+41525512424"
+              onClick={() => setIsMobileMenuOpen(false)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "12px 16px",
+                textDecoration: "none",
+                color: "#6b7280",
+                fontWeight: "400",
+                fontSize: "16px",
+                borderRadius: "0",
+                marginBottom: "0",
+                transition: "background-color 0.2s ease, color 0.2s ease",
+                minHeight: "44px",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#f3f4f6";
+                e.currentTarget.style.color = "#0DA6A6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#6b7280";
+              }}
+            >
+              <PhoneIcon />
+              <span>+41 52 551 24 24</span>
             </a>
           </div>
           
