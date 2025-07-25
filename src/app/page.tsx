@@ -649,7 +649,7 @@ data-image-grid
             +500 Firmen &amp; Haushalte reinigen mit Cleanwin
           </p>
           <div
-data-logos-grid
+            className="grid-mobile-logos"
             style={{
               display: "flex",
               overflow: "hidden",
