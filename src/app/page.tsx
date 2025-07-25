@@ -519,7 +519,7 @@ className="usp-card usp-duplicate"
               </p>
               <a
                 href="#services"
-data-about-cta
+                className="about-cta-button"
                 style={{
                   display: "inline-block",
                   backgroundColor: "#0DA6A6",
