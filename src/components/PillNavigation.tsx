@@ -82,7 +82,7 @@ export default function PillNavigation() {
       }}>
         {/* Desktop Layout */}
         <div className="pill-nav-desktop" style={{
-          display: typeof window !== 'undefined' && window.innerWidth <= 1023 ? 'none' : 'flex',
+          display: isMobile ? 'none' : 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           gap: '40px',
