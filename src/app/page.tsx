@@ -1641,7 +1641,7 @@ className="service-card"
               gap: "32px",
               marginBottom: "32px",
             }}
-data-footer-grid
+            className="footer-main-grid"
           >
 
             {/* Column 1: Company Info */}
