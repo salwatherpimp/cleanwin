@@ -14,8 +14,8 @@ export default function CleanWinPage() {
         <PillNavigation />
       </div>
 
-      {/* Hero Section - Layout Safe, No styled-jsx, Responsive Images */}
-      <HeroSection />
+      {/* Hero Section - Pure HTML, No styled-jsx, Responsive Images */}
+      <PureHeroSection />
 
       {/* Benefits Section */}
       <section
