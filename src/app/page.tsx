@@ -1853,7 +1853,7 @@ className="service-card"
               flexWrap: "wrap",
               gap: "16px",
             }}
-data-footer-bottom
+            className="footer-bottom-responsive"
           >
             <div style={{ color: "#EAEAEA", fontSize: "14px" }}>
               © 2025 CleanWin. Alle Rechte vorbehalten.
