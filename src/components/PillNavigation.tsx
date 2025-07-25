@@ -355,6 +355,7 @@ export default function PillNavigation() {
 
         {/* Mobile Layout */}
         <div className="pill-nav-mobile" style={{
+          display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           paddingInline: "8px",
