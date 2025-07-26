@@ -415,7 +415,7 @@ export default function ResponsiveNavigation() {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      <div style={{
+      <div className="mobile-menu-container" style={{
         position: 'fixed',
         top: '90px',
         left: '0',
