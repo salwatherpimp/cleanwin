@@ -153,10 +153,10 @@ export default function ResponsiveNavigation() {
                 marginTop: '8px',
                 minWidth: '220px',
                 zIndex: 100,
-                opacity: 0,
-                visibility: 'hidden',
+                opacity: isServicesDropdownOpen ? 1 : 0,
+                visibility: isServicesDropdownOpen ? 'visible' : 'hidden',
                 transition: 'opacity 0.2s ease, visibility 0.2s ease',
-                pointerEvents: 'none',
+                pointerEvents: isServicesDropdownOpen ? 'auto' : 'none',
               }}>
                 {services.map((service, index) => (
                   <a
