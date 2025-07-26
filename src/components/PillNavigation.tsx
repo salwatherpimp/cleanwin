@@ -1115,6 +1115,7 @@ export default function PillNavigation() {
         @media (max-width: 1023px) {
           .pill-nav-desktop {
             display: none !important;
+            visibility: hidden !important;
           }
 
           .pill-nav-mobile {
@@ -1127,6 +1128,7 @@ export default function PillNavigation() {
             width: 100% !important;
             box-sizing: border-box !important;
             position: relative !important;
+            visibility: visible !important;
           }
 
           .pill-nav-wrapper {
