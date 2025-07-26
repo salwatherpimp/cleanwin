@@ -734,7 +734,7 @@ export default function PillNavigation() {
         }
 
         .pill-nav-desktop {
-          display: flex;
+          display: flex !important;
           align-items: center;
           justify-content: space-between;
           gap: 40px;
@@ -742,7 +742,7 @@ export default function PillNavigation() {
         }
 
         .pill-nav-mobile {
-          display: none;
+          display: none !important;
           align-items: center;
           justify-content: space-between;
           padding: 0 16px;
