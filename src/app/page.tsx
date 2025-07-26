@@ -12,7 +12,8 @@ export default function CleanWinPage() {
       {/* Responsive Navigation */}
       <ResponsiveNavigation />
 
-
+      {/* Hero Section - Pure HTML, No styled-jsx, Responsive Images */}
+      <PureHeroSection />
 
       {/* Benefits Section */}
       <section
