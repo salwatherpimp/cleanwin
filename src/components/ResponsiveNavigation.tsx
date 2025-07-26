@@ -126,7 +126,7 @@ export default function ResponsiveNavigation() {
             marginLeft: '24px',
           }} className="desktop-menu">
             {/* Services Dropdown */}
-            <div style={{ position: 'relative' }} className="dropdown-container">
+            <div style={{ position: 'relative' }} className="services-dropdown-container">
               <button
                 onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
                 className="dropdown-button"
@@ -256,7 +256,7 @@ export default function ResponsiveNavigation() {
             display: 'flex',
             alignItems: 'center',
             flexShrink: 0,
-          }} className="dropdown-container">
+          }} className="cta-dropdown-container">
             <button
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
               className="cta-button"
