@@ -103,7 +103,11 @@ export default function ResponsiveNavigation() {
             {/* Services Dropdown */}
             <div style={{ position: 'relative' }} className="services-dropdown-container">
               <button
-                onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                onClick={() => {
+                  console.log('Services button clicked! Current state:', isServicesDropdownOpen);
+                  setIsServicesDropdownOpen(!isServicesDropdownOpen);
+                  console.log('Services button clicked! New state should be:', !isServicesDropdownOpen);
+                }}
                 className="dropdown-button"
                 style={{
                   display: 'flex',
