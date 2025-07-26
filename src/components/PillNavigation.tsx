@@ -7,27 +7,24 @@ export default function PillNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // Default to mobile for mobile-first
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 1023);
+      const isMobileDevice = window.innerWidth <= 1023;
+      setIsMobile(isMobileDevice);
     };
 
-    // Set initial state
+    // Immediate check
     checkMobile();
+
+    // Check again after a short delay to ensure proper detection
+    setTimeout(checkMobile, 100);
 
     // Add resize listener
     window.addEventListener('resize', checkMobile);
 
     return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Also check on component mount to ensure proper initial state
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsMobile(window.innerWidth <= 1023);
-    }
   }, []);
 
     const services = [
