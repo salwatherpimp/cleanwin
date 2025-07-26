@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: false,
     esmExternals: true,
-    serverActions: false,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
