@@ -291,10 +291,10 @@ export default function ResponsiveNavigation() {
               marginTop: '8px',
               minWidth: '220px',
               zIndex: 100,
-              opacity: 0,
-              visibility: 'hidden',
+              opacity: isCtaDropdownOpen ? 1 : 0,
+              visibility: isCtaDropdownOpen ? 'visible' : 'hidden',
               transition: 'opacity 0.2s ease, visibility 0.2s ease',
-              pointerEvents: 'none',
+              pointerEvents: isCtaDropdownOpen ? 'auto' : 'none',
             }}>
               <a href="/kontakt" style={{
                 display: 'flex',
