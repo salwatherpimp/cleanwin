@@ -61,7 +61,7 @@ export default function ResponsiveNavigation() {
           border: '1px solid rgba(255, 255, 255, 0.2)',
           height: '56px',
           minHeight: '56px',
-          padding: '8px 24px',
+          padding: '8px 16px',
           margin: '0 auto',
           width: '100%',
           maxWidth: '1152px',
@@ -69,6 +69,7 @@ export default function ResponsiveNavigation() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
+          overflow: 'hidden',
         }}>
 
           {/* Logo */}
