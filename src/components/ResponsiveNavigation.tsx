@@ -239,6 +239,7 @@ export default function ResponsiveNavigation() {
           }} className="cta-dropdown-container">
             <button
               onClick={() => {
+                alert('CTA button clicked!');
                 console.log('CTA button clicked! Current state:', isCtaDropdownOpen);
                 setIsCtaDropdownOpen(!isCtaDropdownOpen);
                 console.log('CTA button clicked! New state should be:', !isCtaDropdownOpen);
