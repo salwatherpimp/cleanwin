@@ -8,6 +8,8 @@ export default function ResponsiveNavigation() {
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
+  console.log('Dropdown states:', { isServicesDropdownOpen, isCtaDropdownOpen, isMobileMenuOpen });
+
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
