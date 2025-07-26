@@ -126,10 +126,7 @@ export default function ResponsiveNavigation() {
             {/* Services Dropdown */}
             <div style={{ position: 'relative' }} className="services-dropdown-container">
               <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsServicesDropdownOpen(!isServicesDropdownOpen);
-                }}
+                onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
                 className="dropdown-button"
                 style={{
                   display: 'flex',
@@ -259,10 +256,7 @@ export default function ResponsiveNavigation() {
             flexShrink: 0,
           }} className="cta-dropdown-container">
             <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsCtaDropdownOpen(!isCtaDropdownOpen);
-              }}
+              onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
               className="cta-button"
               style={{
                 display: 'flex',
@@ -367,10 +361,7 @@ export default function ResponsiveNavigation() {
 
           {/* Hamburger Menu - Visible on mobile */}
           <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsMobileMenuOpen(!isMobileMenuOpen);
-            }}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="hamburger-menu"
             style={{
               display: 'flex',
