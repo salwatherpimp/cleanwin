@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import ResponsiveNavigation from "../components/ResponsiveNavigation";
-import PureHeroSection from "../components/PureHeroSection";
 import CustomerReviews from "../components/CustomerReviews";
 import InteractiveValueCards from "../components/InteractiveValueCards";
 
