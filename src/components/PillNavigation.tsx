@@ -388,7 +388,7 @@ export default function PillNavigation() {
         <div
           className="pill-nav-mobile"
           style={{
-            display: typeof window !== 'undefined' && window.innerWidth <= 1023 ? 'flex' : 'none',
+            display: isMobile ? 'flex' : 'none',
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '0 16px',
