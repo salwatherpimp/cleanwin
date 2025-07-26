@@ -84,7 +84,7 @@ export default function CleanWinPage() {
               Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
             </p>
 
-            <div style={{ textAlign: 'center', marginBottom: '32px', marginTop: '16px' }}>
+            <div style={{ textAlign: 'center', marginBottom: '32px', marginTop: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
               <div style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -93,8 +93,7 @@ export default function CleanWinPage() {
                 border: '1px solid rgba(255, 255, 255, 0.3)',
                 borderRadius: '8px',
                 padding: '8px 16px',
-                color: 'white',
-                marginBottom: '32px'
+                color: 'white'
               }}>
                 <svg style={{ width: '32px', height: '32px', marginRight: '8px' }} viewBox="0 0 24 24">
                   <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
