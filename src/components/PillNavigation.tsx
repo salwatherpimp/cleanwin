@@ -1,12 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function PillNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // Default to mobile for mobile-first
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const isMobileDevice = window.innerWidth <= 1023;
+      setIsMobile(isMobileDevice);
+    };
+
+    // Immediate check
+    checkMobile();
+
+    // Check again after a short delay to ensure proper detection
+    setTimeout(checkMobile, 100);
+
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
     const services = [
     { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
@@ -42,13 +61,51 @@ export default function PillNavigation() {
   );
 
   return (
-    <div className="pill-nav-wrapper">
+    <div className="pill-nav-wrapper" style={{
+      width: "100%",
+      display: "flex",
+      justifyContent: "center",
+      contain: "layout style",
+      containIntrinsicSize: "1152px 56px",
+    }}>
       {/* Main pill navigation */}
-      <nav className="pill-nav">
+      <nav style={{
+        background: "white",
+        borderRadius: "50px",
+        boxShadow: "0 8px 32px rgba(0, 0, 0, 0.12)",
+        backdropFilter: "blur(8px)",
+        border: "1px solid rgba(255, 255, 255, 0.2)",
+        height: "56px",
+        minHeight: "56px",
+        padding: "8px 24px",
+        margin: "0 auto",
+        width: "100%",
+        maxWidth: "1152px",
+        boxSizing: "border-box",
+        display: "flex",
+        alignItems: "center",
+        contain: "layout style",
+        containIntrinsicSize: "1152px 56px",
+      }}>
         {/* Desktop Layout */}
-        <div className="pill-nav-desktop">
+        <div
+          className="pill-nav-desktop"
+          style={{
+            display: isMobile ? 'none' : 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '40px',
+            width: '100%',
+          }}
+        >
           {/* Logo */}
-          <a href="https://cleanwin.vercel.app/" className="pill-nav-logo">
+          <a href="https://cleanwin.vercel.app/" style={{
+            display: "flex",
+            alignItems: "center",
+            textDecoration: "none",
+            transition: "transform 0.2s ease",
+            flexShrink: 0,
+          }}>
             <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="CleanWin Logo"
@@ -59,146 +116,604 @@ export default function PillNavigation() {
           </a>
 
           {/* Navigation Items */}
-          <div className="pill-nav-items">
-                        <div className="pill-nav-dropdown-container">
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "32px",
+            marginLeft: "24px",
+          }}>
+            <div style={{
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+            }}>
               <button
-                className="pill-nav-link pill-nav-services-button"
                 onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontFamily: "inherit",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  lineHeight: "1.4",
+                  color: "#374151",
+                  padding: "10px 16px",
+                  borderRadius: "25px",
+                  transition: "background-color 0.2s ease, color 0.2s ease",
+                  whiteSpace: "nowrap",
+                  margin: "0",
+                  verticalAlign: "middle",
+                  boxSizing: "border-box",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f3f4f6";
+                  e.currentTarget.style.color = "#0DA6A6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "none";
+                  e.currentTarget.style.color = "#374151";
+                }}
               >
                 <span>Dienstleistungen</span>
                                 <ChevronDownIcon size={14} />
               </button>
-              {isServicesDropdownOpen && (
-                <div className="pill-nav-services-dropdown">
-                  {services.map((service, index) => (
-                    <a
-                      key={index}
-                      href={service.href}
-                      className="pill-nav-services-dropdown-item"
-                    >
-                      {service.name}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div
+                style={{
+                  position: "absolute",
+                  top: "100%",
+                  left: "0",
+                  background: "white",
+                  borderRadius: "16px",
+                  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+                  border: "1px solid rgba(0, 0, 0, 0.1)",
+                  padding: "8px",
+                  marginTop: "8px",
+                  minWidth: "220px",
+                  zIndex: 100,
+                  opacity: isServicesDropdownOpen ? 1 : 0,
+                  visibility: isServicesDropdownOpen ? "visible" : "hidden",
+                  transition: "opacity 0.2s ease, visibility 0.2s ease",
+                  pointerEvents: isServicesDropdownOpen ? "auto" : "none",
+                  contain: "layout style",
+                  containIntrinsicSize: "220px 250px",
+                }}
+              >
+                {services.map((service, index) => (
+                  <a
+                    key={index}
+                    href={service.href}
+                    style={{
+                      display: "block",
+                      padding: "12px 16px",
+                      textDecoration: "none",
+                      color: "#374151",
+                      fontWeight: "500",
+                      fontSize: "14px",
+                      borderRadius: "8px",
+                      transition: "background-color 0.2s ease, color 0.2s ease",
+                      whiteSpace: "nowrap",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = "#f3f4f6";
+                      e.currentTarget.style.color = "#0DA6A6";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = "transparent";
+                      e.currentTarget.style.color = "#374151";
+                    }}
+                  >
+                    {service.name}
+                  </a>
+                ))}
+              </div>
             </div>
             
-            <a href="https://cleanwin.vercel.app/ueber-uns" className="pill-nav-link">
+            <a href="https://cleanwin.vercel.app/ueber-uns" style={{
+              textDecoration: "none",
+              color: "#374151",
+              fontWeight: "500",
+              fontSize: "14px",
+              lineHeight: "1.4",
+              padding: "10px 16px",
+              borderRadius: "25px",
+              transition: "background-color 0.2s ease, color 0.2s ease",
+              whiteSpace: "nowrap",
+              display: "flex",
+              alignItems: "center",
+              margin: "0",
+              verticalAlign: "middle",
+              boxSizing: "border-box",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#f3f4f6";
+              e.currentTarget.style.color = "#0DA6A6";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.color = "#374151";
+            }}>
               Über uns
             </a>
-            
-            <a href="https://cleanwin.vercel.app/referenzen" className="pill-nav-link">
+
+            <a href="https://cleanwin.vercel.app/referenzen" style={{
+              textDecoration: "none",
+              color: "#374151",
+              fontWeight: "500",
+              fontSize: "14px",
+              lineHeight: "1.4",
+              padding: "10px 16px",
+              borderRadius: "25px",
+              transition: "background-color 0.2s ease, color 0.2s ease",
+              whiteSpace: "nowrap",
+              display: "flex",
+              alignItems: "center",
+              margin: "0",
+              verticalAlign: "middle",
+              boxSizing: "border-box",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#f3f4f6";
+              e.currentTarget.style.color = "#0DA6A6";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.color = "#374151";
+            }}>
               Referenzen
             </a>
           </div>
 
           {/* CTA Button with Dropdown */}
-          <div className="pill-nav-cta-container">
-            <button 
-              className="pill-nav-cta"
+          <div style={{
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+          }}>
+            <button
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                background: "#0DA6A6",
+                color: "white",
+                border: "none",
+                padding: "10px 24px",
+                borderRadius: "25px",
+                fontWeight: "500",
+                fontSize: "14px",
+                lineHeight: "1.4",
+                cursor: "pointer",
+                transition: "background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease",
+                boxShadow: "0 2px 8px rgba(13, 166, 166, 0.3)",
+                whiteSpace: "nowrap",
+                width: "auto",
+                height: "auto",
+                minHeight: "48px",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#0b8d8d";
+                e.currentTarget.style.boxShadow = "0 4px 16px rgba(13, 166, 166, 0.4)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "#0DA6A6";
+                e.currentTarget.style.boxShadow = "0 2px 8px rgba(13, 166, 166, 0.3)";
+              }}
             >
                             <HandIcon />
               <span>Kontaktiere uns</span>
                               <ChevronDownIcon size={14} />
             </button>
-            {isCtaDropdownOpen && (
-              <div className="pill-nav-cta-dropdown">
-                <a href="#contact" className="pill-nav-cta-dropdown-item">
-                  <HandIcon />
-                  <span>Kontaktanfrage senden</span>
-                </a>
-                <a href="tel:+41525512424" className="pill-nav-cta-dropdown-item">
-                  <PhoneIcon />
-                  <span>+41 52 551 24 24</span>
-                </a>
-              </div>
-            )}
+            <div
+              style={{
+                position: "absolute",
+                top: "100%",
+                right: "0",
+                background: "white",
+                borderRadius: "16px",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
+                padding: "8px",
+                marginTop: "8px",
+                minWidth: "220px",
+                zIndex: 100,
+                opacity: isCtaDropdownOpen ? 1 : 0,
+                visibility: isCtaDropdownOpen ? "visible" : "hidden",
+                transition: "opacity 0.2s ease, visibility 0.2s ease",
+                pointerEvents: isCtaDropdownOpen ? "auto" : "none",
+                contain: "layout style",
+                containIntrinsicSize: "220px 120px",
+              }}
+            >
+              <a href="/kontakt" style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "12px 16px",
+                textDecoration: "none",
+                color: "#374151",
+                fontWeight: "500",
+                fontSize: "14px",
+                borderRadius: "8px",
+                transition: "background-color 0.2s ease, color 0.2s ease",
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#f3f4f6";
+                e.currentTarget.style.color = "#0DA6A6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#374151";
+              }}>
+                <HandIcon />
+                <span>Kontaktanfrage senden</span>
+              </a>
+              <a href="tel:+41525512424" style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "12px 16px",
+                textDecoration: "none",
+                color: "#374151",
+                fontWeight: "500",
+                fontSize: "14px",
+                borderRadius: "8px",
+                transition: "background-color 0.2s ease, color 0.2s ease",
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#f3f4f6";
+                e.currentTarget.style.color = "#0DA6A6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#374151";
+              }}>
+                <PhoneIcon />
+                <span>+41 52 551 24 24</span>
+              </a>
+            </div>
           </div>
         </div>
 
         {/* Mobile Layout */}
-        <div className="pill-nav-mobile">
+        <div
+          className="pill-nav-mobile"
+          style={{
+            display: isMobile ? 'flex' : 'none',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '0 16px',
+            height: '56px',
+            minHeight: '56px',
+            width: '100%',
+            boxSizing: 'border-box',
+            position: 'relative',
+          }}
+        >
           {/* Logo */}
-          <a href="https://cleanwin.vercel.app/" className="pill-nav-logo-mobile">
-                        <Image
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
-              alt="CleanWin Logo"
-              width={110}
-              height={30}
-              priority
-            />
-          </a>
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            flexShrink: 0,
+          }}>
+            <a href="https://cleanwin.vercel.app/" style={{
+              display: "flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}>
+              <Image
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
+                alt="CleanWin Logo"
+                width={110}
+                height={30}
+                priority
+              />
+            </a>
+          </div>
 
           {/* CTA Button Mobile */}
-          <div className="pill-nav-cta-container-mobile">
-            <button 
-              className="pill-nav-cta-mobile"
+          <div style={{
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            flexShrink: 0,
+          }}>
+            <button
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                background: "#0DA6A6",
+                color: "white",
+                border: "none",
+                padding: "8px 16px",
+                borderRadius: "24px",
+                fontWeight: "600",
+                fontSize: "14px",
+                cursor: "pointer",
+                transition: "background-color 0.2s ease",
+                whiteSpace: "nowrap",
+                height: "40px",
+                boxSizing: "border-box",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#0b8d8d";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "#0DA6A6";
+              }}
             >
-                            <HandIcon />
+              <HandIcon />
               <span>Kontaktiere uns</span>
-                              <ChevronDownIcon size={14} />
+              <ChevronDownIcon size={14} />
             </button>
-            {isCtaDropdownOpen && (
-              <div className="pill-nav-cta-dropdown-mobile">
-                <a href="#contact" className="pill-nav-cta-dropdown-item">
-                  <HandIcon />
-                  <span>Kontaktanfrage senden</span>
-                </a>
-                <a href="tel:+41525512424" className="pill-nav-cta-dropdown-item">
-                  <PhoneIcon />
-                  <span>+41 52 551 24 24</span>
-                </a>
-              </div>
-            )}
+            <div
+              style={{
+                position: "absolute",
+                top: "100%",
+                right: "0",
+                background: "white",
+                borderRadius: "12px",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
+                padding: "8px",
+                marginTop: "8px",
+                minWidth: "200px",
+                zIndex: 100,
+                opacity: isCtaDropdownOpen ? 1 : 0,
+                visibility: isCtaDropdownOpen ? "visible" : "hidden",
+                transition: "opacity 0.2s ease, visibility 0.2s ease",
+                pointerEvents: isCtaDropdownOpen ? "auto" : "none",
+              }}
+            >
+              <a
+                href="/kontakt"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "12px 16px",
+                  textDecoration: "none",
+                  color: "#374151",
+                  fontWeight: "500",
+                  fontSize: "14px",
+                  borderRadius: "8px",
+                  transition: "background-color 0.2s ease, color 0.2s ease",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f3f4f6";
+                  e.currentTarget.style.color = "#0DA6A6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#374151";
+                }}
+              >
+                <HandIcon />
+                <span>Kontaktanfrage senden</span>
+              </a>
+              <a
+                href="tel:+41525512424"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "12px 16px",
+                  textDecoration: "none",
+                  color: "#374151",
+                  fontWeight: "500",
+                  fontSize: "14px",
+                  borderRadius: "8px",
+                  transition: "background-color 0.2s ease, color 0.2s ease",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f3f4f6";
+                  e.currentTarget.style.color = "#0DA6A6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#374151";
+                }}
+              >
+                <PhoneIcon />
+                <span>+41 52 551 24 24</span>
+              </a>
+            </div>
           </div>
 
           {/* Hamburger Menu */}
-          <button 
-            className="pill-nav-hamburger"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
-            <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
-            <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
-          </button>
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            flexShrink: 0,
+          }}>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "32px",
+                height: "32px",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: "4px",
+                borderRadius: "16px",
+                transition: "background-color 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#f3f4f6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "none";
+              }}
+            >
+              <div style={{
+                width: "18px",
+                height: "2px",
+                backgroundColor: "#374151",
+                marginBottom: "3px",
+                transition: "transform 0.3s ease",
+                transform: isMobileMenuOpen ? "rotate(45deg) translate(5px, 5px)" : "none",
+              }}></div>
+              <div style={{
+                width: "18px",
+                height: "2px",
+                backgroundColor: "#374151",
+                marginBottom: "3px",
+                transition: "opacity 0.3s ease",
+                opacity: isMobileMenuOpen ? 0 : 1,
+              }}></div>
+              <div style={{
+                width: "18px",
+                height: "2px",
+                backgroundColor: "#374151",
+                transition: "transform 0.3s ease",
+                transform: isMobileMenuOpen ? "rotate(-45deg) translate(6px, -6px)" : "none",
+              }}></div>
+            </button>
+          </div>
         </div>
       </nav>
 
       {/* Mobile Menu Dropdown */}
-      <div className={`pill-nav-mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        <div className="pill-nav-mobile-menu-content">
+      <div style={{
+        position: "fixed",
+        top: "90px",
+        left: "0",
+        right: "0",
+        margin: "0 auto",
+        width: "calc(100vw - 32px)",
+        maxWidth: "400px",
+        background: "white",
+        borderRadius: "20px",
+        boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+        border: "1px solid rgba(0, 0, 0, 0.1)",
+        opacity: isMobileMenuOpen ? 1 : 0,
+        visibility: isMobileMenuOpen ? "visible" : "hidden",
+        transition: "opacity 0.2s ease, visibility 0.2s ease",
+        contain: "layout style",
+        containIntrinsicSize: "400px 350px",
+        zIndex: 1000,
+      }}>
+        <div style={{
+          padding: "16px",
+        }}>
           
-          <div className="pill-nav-mobile-menu-services">
-            <h3 className="pill-nav-mobile-menu-section-title">Leistungen</h3>
+          <div style={{
+            marginBottom: "12px",
+          }}>
+            <h3 style={{
+              fontWeight: "700",
+              fontSize: "18px",
+              color: "#1f2937",
+              marginBottom: "12px",
+              marginTop: "0",
+              textTransform: "none",
+              letterSpacing: "0",
+              paddingLeft: "0",
+            }}>Leistungen</h3>
             {services.map((service, index) => (
               <a
                 key={index}
                 href={service.href}
-                className="pill-nav-mobile-menu-item"
                 onClick={() => setIsMobileMenuOpen(false)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  padding: "12px 16px",
+                  textDecoration: "none",
+                  color: "#6b7280",
+                  fontWeight: "400",
+                  fontSize: "16px",
+                  borderRadius: "0",
+                  marginBottom: "0",
+                  transition: "background-color 0.2s ease, color 0.2s ease",
+                  minHeight: "44px",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f3f4f6";
+                  e.currentTarget.style.color = "#0DA6A6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#6b7280";
+                }}
               >
                 {service.name}
               </a>
             ))}
           </div>
 
-          <div className="pill-nav-mobile-menu-separator"></div>
+          <div style={{
+            height: "1px",
+            background: "#d1d5db",
+            margin: "12px 0",
+            borderTop: "1px solid #d1d5db",
+          }}></div>
 
-                    <div className="pill-nav-mobile-menu-nav">
+          <div style={{
+            marginBottom: "0",
+          }}>
             <a
               href="https://cleanwin.vercel.app/ueber-uns"
-              className="pill-nav-mobile-menu-top-item"
               onClick={() => setIsMobileMenuOpen(false)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                padding: "12px 0",
+                textDecoration: "none",
+                color: "#1f2937",
+                fontWeight: "700",
+                fontSize: "18px",
+                borderRadius: "0",
+                marginBottom: "8px",
+                transition: "color 0.2s ease",
+                minHeight: "44px",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = "#0DA6A6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = "#1f2937";
+              }}
             >
               Über uns
             </a>
             <a
               href="https://cleanwin.vercel.app/referenzen"
-              className="pill-nav-mobile-menu-top-item"
               onClick={() => setIsMobileMenuOpen(false)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                padding: "12px 0",
+                textDecoration: "none",
+                color: "#1f2937",
+                fontWeight: "700",
+                fontSize: "18px",
+                borderRadius: "0",
+                marginBottom: "0",
+                transition: "color 0.2s ease",
+                minHeight: "44px",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = "#0DA6A6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = "#1f2937";
+              }}
             >
               Referenzen
             </a>
@@ -211,11 +726,14 @@ export default function PillNavigation() {
         .pill-nav-wrapper {
           position: fixed;
           top: 16px;
-          left: 50%;
-          transform: translateX(-50%);
+          left: 0;
+          right: 0;
           z-index: 1000;
+          display: flex;
+          justify-content: center;
           width: 100%;
           max-width: calc(100vw - 32px);
+          margin: 0 auto;
         }
 
         .pill-nav {
@@ -224,25 +742,34 @@ export default function PillNavigation() {
           box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
           backdrop-filter: blur(8px);
           border: 1px solid rgba(255, 255, 255, 0.2);
-          padding: 12px 24px;
+          height: 56px !important;
+          min-height: 56px !important;
+          padding: 8px 24px !important;
           margin: 0 auto;
           max-width: 1200px;
+          box-sizing: border-box !important;
+          display: flex;
+          align-items: center;
         }
 
         .pill-nav-desktop {
-          display: flex;
+          display: flex !important;
           align-items: center;
           justify-content: space-between;
           gap: 40px;
+          width: 100%;
         }
 
-                        .pill-nav-mobile {
-          display: none;
+        .pill-nav-mobile {
+          display: none !important;
           align-items: center;
           justify-content: space-between;
-          padding-inline: 16px;
+          padding: 0 16px;
+          height: 56px;
           min-height: 56px;
-          gap: 8px;
+          width: 100%;
+          box-sizing: border-box;
+          position: relative;
         }
 
         .pill-nav-logo {
@@ -275,11 +802,17 @@ export default function PillNavigation() {
           text-decoration: none;
           color: #374151;
           font-weight: 500;
-          font-size: 15px;
-          padding: 8px 16px;
+          font-size: 14px;
+          line-height: 1.4;
+          padding: 10px 16px;
           border-radius: 25px;
-          transition: all 0.2s ease;
+          transition: background-color 0.2s ease, color 0.2s ease;
           white-space: nowrap;
+          display: flex;
+          align-items: center;
+          margin: 0;
+          vertical-align: middle;
+          box-sizing: border-box;
         }
 
                 .pill-nav-link:hover {
@@ -287,8 +820,15 @@ export default function PillNavigation() {
           color: #0DA6A6;
         }
 
+        .pill-nav-services-button:hover {
+          background: #f3f4f6;
+          color: #0DA6A6;
+        }
+
         .pill-nav-dropdown-container {
           position: relative;
+          display: flex;
+          align-items: center;
         }
 
         .pill-nav-services-button {
@@ -298,6 +838,18 @@ export default function PillNavigation() {
           background: none;
           border: none;
           cursor: pointer;
+          font-family: inherit;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1.4;
+          color: #374151;
+          padding: 10px 16px;
+          border-radius: 25px;
+          transition: background-color 0.2s ease, color 0.2s ease;
+          white-space: nowrap;
+          margin: 0;
+          vertical-align: middle;
+          box-sizing: border-box;
         }
 
         .pill-nav-services-dropdown {
@@ -312,6 +864,18 @@ export default function PillNavigation() {
           margin-top: 8px;
           min-width: 220px;
           z-index: 100;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.2s ease, visibility 0.2s ease;
+          pointer-events: none;
+          contain: layout style;
+          contain-intrinsic-size: 220px 250px;
+        }
+
+        .pill-nav-services-dropdown.open {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
         }
 
         .pill-nav-services-dropdown-item {
@@ -322,7 +886,7 @@ export default function PillNavigation() {
           font-weight: 500;
           font-size: 14px;
           border-radius: 8px;
-          transition: all 0.2s ease;
+          transition: background-color 0.2s ease, color 0.2s ease;
           white-space: nowrap;
         }
 
@@ -333,6 +897,8 @@ export default function PillNavigation() {
 
         .pill-nav-cta-container {
           position: relative;
+          display: flex;
+          align-items: center;
         }
 
         .pill-nav-cta {
@@ -342,19 +908,19 @@ export default function PillNavigation() {
           background: #0DA6A6;
           color: white;
           border: none;
-          padding: 12px 24px;
+          padding: 10px 24px;
           border-radius: 25px;
-          font-weight: 600;
+          font-weight: 500;
           font-size: 14px;
+          line-height: 1.4;
           cursor: pointer;
-          transition: all 0.2s ease;
+          transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
           box-shadow: 0 2px 8px rgba(13, 166, 166, 0.3);
           white-space: nowrap;
         }
 
         .pill-nav-cta:hover {
           background: #0b8d8d;
-          transform: translateY(-1px);
           box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4);
         }
 
@@ -370,6 +936,18 @@ export default function PillNavigation() {
           margin-top: 8px;
           min-width: 220px;
           z-index: 100;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.2s ease, visibility 0.2s ease;
+          pointer-events: none;
+          contain: layout style;
+          contain-intrinsic-size: 220px 120px;
+        }
+
+        .pill-nav-cta-dropdown.open {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
         }
 
         .pill-nav-cta-dropdown-item {
@@ -382,7 +960,7 @@ export default function PillNavigation() {
           font-weight: 500;
           font-size: 14px;
           border-radius: 8px;
-          transition: all 0.2s ease;
+          transition: background-color 0.2s ease, color 0.2s ease;
           white-space: nowrap;
         }
 
@@ -391,45 +969,11 @@ export default function PillNavigation() {
           color: #0DA6A6;
         }
 
-        .pill-nav-cta-container-mobile {
-          position: relative;
-        }
 
-                        .pill-nav-cta-mobile {
-          display: flex;
-          align-items: center;
-          gap: 4px;
-          background: #0DA6A6;
-          color: white;
-          border: none;
-          padding: 8px 16px;
-          border-radius: 20px;
-          font-weight: 600;
-          font-size: 14px;
-          cursor: pointer;
-          transition: all 0.2s ease;
-          white-space: nowrap;
-          max-height: 44px;
-          height: 40px;
-        }
 
-        .pill-nav-cta-mobile:hover {
-          background: #0b8d8d;
-        }
 
-        .pill-nav-cta-dropdown-mobile {
-          position: absolute;
-          top: 100%;
-          right: 0;
-          background: white;
-          border-radius: 12px;
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-          border: 1px solid rgba(0, 0, 0, 0.1);
-          padding: 8px;
-          margin-top: 8px;
-          min-width: 200px;
-          z-index: 100;
-        }
+
+
 
                         .pill-nav-hamburger {
           display: flex;
@@ -456,7 +1000,7 @@ export default function PillNavigation() {
           height: 2px;
           background: #374151;
           margin: 1.5px 0;
-          transition: all 0.3s ease;
+          transition: transform 0.3s ease, opacity 0.3s ease;
           transform-origin: center;
         }
 
@@ -475,8 +1019,9 @@ export default function PillNavigation() {
         .pill-nav-mobile-menu {
           position: fixed;
           top: 90px;
-          left: 50%;
-          transform: translateX(-50%);
+          left: 0;
+          right: 0;
+          margin: 0 auto;
           width: calc(100vw - 32px);
           max-width: 400px;
           background: white;
@@ -485,14 +1030,14 @@ export default function PillNavigation() {
           border: 1px solid rgba(0, 0, 0, 0.1);
           opacity: 0;
           visibility: hidden;
-          transform: translateX(-50%) translateY(-20px);
-          transition: all 0.3s ease;
+          transition: opacity 0.2s ease, visibility 0.2s ease;
+          contain: layout style;
+          contain-intrinsic-size: 400px 350px;
         }
 
         .pill-nav-mobile-menu.open {
           opacity: 1;
           visibility: visible;
-          transform: translateX(-50%) translateY(0);
         }
 
                                 .pill-nav-mobile-menu-content {
@@ -532,7 +1077,7 @@ export default function PillNavigation() {
           font-size: 16px;
           border-radius: 0;
           margin-bottom: 0;
-          transition: all 0.2s ease;
+          transition: background-color 0.2s ease, color 0.2s ease;
           min-height: 44px;
         }
 
@@ -551,7 +1096,7 @@ export default function PillNavigation() {
           font-size: 18px;
           border-radius: 0;
           margin-bottom: 8px;
-          transition: all 0.2s ease;
+          transition: color 0.2s ease;
           min-height: 44px;
         }
 
@@ -570,34 +1115,73 @@ export default function PillNavigation() {
           border-top: 1px solid #d1d5db;
         }
 
-        @media (max-width: 1023px) {
+        @media screen and (max-width: 1023px) {
           .pill-nav-desktop {
-            display: none;
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
           }
 
-                    .pill-nav-mobile {
-            display: flex;
+          .pill-nav-mobile {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            padding: 0 16px !important;
+            height: 56px !important;
+            min-height: 56px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            position: relative !important;
+            visibility: visible !important;
+            opacity: 1 !important;
           }
 
-          .pill-nav {
-            padding: 0;
+          .pill-nav-wrapper {
+            margin: 0 16px;
+            max-width: calc(100vw - 32px);
+            position: fixed !important;
+            top: 16px !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 1000 !important;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .pill-nav-desktop {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            gap: 40px !important;
+            width: 100% !important;
+          }
+
+          .pill-nav-mobile {
+            display: none !important;
           }
         }
 
         @media (max-width: 480px) {
           .pill-nav-wrapper {
             top: 12px;
-            max-width: calc(100vw - 16px);
+            margin: 0 16px;
+            max-width: calc(100vw - 32px);
           }
 
-                    .pill-nav {
-            padding: 0;
+          .pill-nav {
+            height: 56px !important;
+            min-height: 56px !important;
+            padding: 0 12px !important;
+            box-sizing: border-box !important;
+            margin: 0 auto;
           }
 
-                    .pill-nav-cta-mobile {
+          .pill-nav-cta-mobile {
             padding: 8px 14px;
             font-size: 13px;
-            height: 36px;
+            min-height: 40px !important;
+            height: 40px !important;
           }
         }
       `}</style>

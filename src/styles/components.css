@@ -1,0 +1,71 @@
+/* Pure CSS - No styled-jsx interference */
+
+/* Navigation responsive behavior */
+.pill-nav-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+.pill-nav-mobile {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1023px) {
+  .pill-nav-desktop {
+    display: none !important;
+  }
+  .pill-nav-mobile {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pill-nav-desktop {
+    display: flex !important;
+  }
+  .pill-nav-mobile {
+    display: none !important;
+  }
+}
+
+/* Main page container */
+.main-page-container {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/* Navigation wrapper */
+.nav-wrapper {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 1000;
+  height: 56px;
+  min-height: 56px;
+  contain: layout style;
+  contain-intrinsic-size: 100vw 56px;
+  display: flex;
+  justify-content: center;
+  width: calc(100vw - 32px);
+  max-width: calc(100vw - 32px);
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}

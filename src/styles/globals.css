@@ -2,29 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Review carousel CLS prevention */
+.carousel-track {
+  contain: layout style;
+  contain-intrinsic-size: 1440px 280px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.review-card {
+  contain: layout style;
+  contain-intrinsic-size: 360px 280px;
+  min-height: 280px !important;
+  max-width: 360px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Ensure mobile card content has stable layout */
+.mobile-card-content {
+  contain: layout style;
+  min-height: 24px;
 }
 
-/* Ensure basic styling works */
-* {
-  box-sizing: border-box;
+.mobile-card-content.expanded {
+  contain: none; /* Allow expansion when opened */
 }
 
-html {
-  scroll-behavior: smooth;
+/* Prevent accordion layout shifts */
+.cleanwin-value-card {
+  contain: layout style;
+  contain-intrinsic-size: 100% 98px;
 }

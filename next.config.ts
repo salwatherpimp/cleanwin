@@ -1,6 +1,32 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // NUCLEAR: Disable ALL CSS processing that causes render delays
+  experimental: {
+    optimizeCss: false,
+    esmExternals: true,
+    serverActions: false,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  // Force disable styled-jsx at webpack level
+  webpack: (config: any) => {
+    config.module.rules.push({
+      test: /\.(js|jsx|ts|tsx)$/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [['next/babel', { 'preset-env': { modules: false } }]],
+          plugins: [
+            // Remove styled-jsx plugin entirely
+          ]
+        }
+      }
+    });
+    return config;
+  },
+
   // Optimize images for better Core Web Vitals
   images: {
     formats: ["image/webp", "image/avif"],
