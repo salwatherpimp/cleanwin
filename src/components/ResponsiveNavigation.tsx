@@ -11,9 +11,22 @@ export default function ResponsiveNavigation() {
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest('.dropdown-container') && !event.target.closest('.dropdown-button')) {
-        setIsCtaDropdownOpen(false);
+      const servicesContainer = event.target.closest('.services-dropdown-container');
+      const ctaContainer = event.target.closest('.cta-dropdown-container');
+      const mobileContainer = event.target.closest('.mobile-menu-container');
+
+      // Close services dropdown if clicked outside of it
+      if (!servicesContainer && isServicesDropdownOpen) {
         setIsServicesDropdownOpen(false);
+      }
+
+      // Close CTA dropdown if clicked outside of it
+      if (!ctaContainer && isCtaDropdownOpen) {
+        setIsCtaDropdownOpen(false);
+      }
+
+      // Close mobile menu if clicked outside of it
+      if (!mobileContainer && isMobileMenuOpen) {
         setIsMobileMenuOpen(false);
       }
     };
@@ -22,7 +35,7 @@ export default function ResponsiveNavigation() {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [isServicesDropdownOpen, isCtaDropdownOpen, isMobileMenuOpen]);
 
   const services = [
     { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
