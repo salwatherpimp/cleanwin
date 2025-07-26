@@ -1945,7 +1945,8 @@ className="service-card"
 
           .footer-bottom-responsive {
             flex-direction: column !important;
-            align-items: flex-start !important;
+            align-items: center !important;
+            text-align: center !important;
             gap: 8px !important;
           }
 
