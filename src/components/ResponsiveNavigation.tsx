@@ -246,7 +246,7 @@ export default function ResponsiveNavigation() {
           }} className="dropdown-container">
             <button
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
-              className="dropdown-button"
+              className="cta-button"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -265,7 +265,6 @@ export default function ResponsiveNavigation() {
                 height: '36px',
                 minHeight: '36px',
               }}
-              className="cta-button"
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = '#0b8d8d';
                 e.currentTarget.style.boxShadow = '0 4px 16px rgba(13, 166, 166, 0.4)';
@@ -352,7 +351,7 @@ export default function ResponsiveNavigation() {
           {/* Hamburger Menu - Visible on mobile */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="dropdown-button"
+            className="hamburger-menu"
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -368,7 +367,6 @@ export default function ResponsiveNavigation() {
               borderRadius: '16px',
               transition: 'background-color 0.2s ease',
             }}
-            className="hamburger-menu"
             onMouseEnter={(e) => {
               e.currentTarget.style.background = '#f3f4f6';
             }}
