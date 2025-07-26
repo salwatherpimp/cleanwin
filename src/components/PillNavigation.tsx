@@ -14,10 +14,20 @@ export default function PillNavigation() {
       setIsMobile(window.innerWidth <= 1023);
     };
 
+    // Set initial state
     checkMobile();
+
+    // Add resize listener
     window.addEventListener('resize', checkMobile);
 
     return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Also check on component mount to ensure proper initial state
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth <= 1023);
+    }
   }, []);
 
     const services = [
