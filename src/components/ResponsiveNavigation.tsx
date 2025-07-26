@@ -528,6 +528,18 @@ export default function ResponsiveNavigation() {
             padding: 6px 10px !important;
             max-width: calc(100vw - 24px) !important;
           }
+          .cta-button {
+            padding: 6px 12px !important;
+            font-size: 12px !important;
+            height: 32px !important;
+            min-height: 32px !important;
+            gap: 4px !important;
+          }
+          .hamburger-menu {
+            width: 28px !important;
+            height: 28px !important;
+            padding: 2px !important;
+          }
         }
       `}</style>
     </>
