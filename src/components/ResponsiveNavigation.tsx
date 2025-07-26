@@ -503,6 +503,11 @@ export default function ResponsiveNavigation() {
           .hamburger-menu {
             display: flex !important;
           }
+          nav {
+            padding: 8px 12px !important;
+            height: 56px !important;
+            min-height: 56px !important;
+          }
         }
         @media (min-width: 1024px) {
           .desktop-menu {
@@ -510,6 +515,15 @@ export default function ResponsiveNavigation() {
           }
           .hamburger-menu {
             display: none !important;
+          }
+          nav {
+            padding: 8px 24px !important;
+          }
+        }
+        @media (max-width: 480px) {
+          nav {
+            padding: 6px 10px !important;
+            max-width: calc(100vw - 24px) !important;
           }
         }
       `}</style>
