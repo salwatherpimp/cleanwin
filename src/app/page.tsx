@@ -9,10 +9,8 @@ import InteractiveValueCards from "../components/InteractiveValueCards";
 export default function CleanWinPage() {
   return (
     <div className="main-page-container">
-      {/* Pill Navigation */}
-      <div className="nav-wrapper">
-        <PillNavigation />
-      </div>
+      {/* Responsive Navigation */}
+      <ResponsiveNavigation />
 
       {/* Hero Section - Pure HTML, No styled-jsx, Responsive Images */}
       <PureHeroSection />
