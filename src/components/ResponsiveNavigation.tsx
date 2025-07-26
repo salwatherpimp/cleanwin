@@ -11,24 +11,29 @@ export default function ResponsiveNavigation() {
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Check if click is outside any navigation elements
-      const clickedElement = event.target;
-      const isInsideNav = clickedElement.closest('nav') ||
-                          clickedElement.closest('.mobile-menu-container');
+      const target = event.target;
 
-      // If clicked outside nav area, close all dropdowns
-      if (!isInsideNav) {
+      // Close services dropdown if clicking outside of it
+      if (!target.closest('.services-dropdown-container') && isServicesDropdownOpen) {
         setIsServicesDropdownOpen(false);
+      }
+
+      // Close CTA dropdown if clicking outside of it
+      if (!target.closest('.cta-dropdown-container') && isCtaDropdownOpen) {
         setIsCtaDropdownOpen(false);
+      }
+
+      // Close mobile menu if clicking outside of it
+      if (!target.closest('.mobile-menu-container') && !target.closest('.hamburger-menu') && isMobileMenuOpen) {
         setIsMobileMenuOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
-  }, []);
+  }, [isServicesDropdownOpen, isCtaDropdownOpen, isMobileMenuOpen]);
 
   const services = [
     { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
