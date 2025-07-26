@@ -352,6 +352,7 @@ export default function ResponsiveNavigation() {
           {/* Hamburger Menu - Visible on mobile */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="dropdown-button"
             style={{
               display: 'flex',
               flexDirection: 'column',
