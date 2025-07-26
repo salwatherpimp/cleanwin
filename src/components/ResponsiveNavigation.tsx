@@ -113,9 +113,10 @@ export default function ResponsiveNavigation() {
             marginLeft: '24px',
           }} className="desktop-menu">
             {/* Services Dropdown */}
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative' }} className="dropdown-container">
               <button
                 onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                className="dropdown-button"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
