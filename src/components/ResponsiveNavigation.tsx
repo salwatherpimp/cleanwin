@@ -232,19 +232,22 @@ export default function ResponsiveNavigation() {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: '6px',
                 background: '#0DA6A6',
                 color: 'white',
                 border: 'none',
-                padding: '10px 24px',
-                borderRadius: '25px',
+                padding: '8px 14px',
+                borderRadius: '20px',
                 fontWeight: '500',
-                fontSize: '14px',
+                fontSize: '13px',
                 cursor: 'pointer',
                 transition: 'background-color 0.2s ease',
                 whiteSpace: 'nowrap',
                 boxShadow: '0 2px 8px rgba(13, 166, 166, 0.3)',
+                height: '36px',
+                minHeight: '36px',
               }}
+              className="cta-button"
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = '#0b8d8d';
                 e.currentTarget.style.boxShadow = '0 4px 16px rgba(13, 166, 166, 0.4)';
