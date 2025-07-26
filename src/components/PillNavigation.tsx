@@ -91,7 +91,16 @@ export default function PillNavigation() {
         containIntrinsicSize: "1152px 56px",
       }}>
         {/* Desktop Layout */}
-        <div className="pill-nav-desktop">
+        <div
+          className="pill-nav-desktop"
+          style={{
+            display: typeof window !== 'undefined' && window.innerWidth <= 1023 ? 'none' : 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '40px',
+            width: '100%',
+          }}
+        >
           {/* Logo */}
           <a href="https://cleanwin.vercel.app/" style={{
             display: "flex",
