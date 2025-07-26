@@ -1,17 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function ResponsiveNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [forceUpdate, setForceUpdate] = useState(0);
 
-  console.log('Dropdown states:', { isServicesDropdownOpen, isCtaDropdownOpen, isMobileMenuOpen });
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Check if click is outside any navigation elements
+      const clickedElement = event.target;
+      const isInsideNav = clickedElement.closest('nav') ||
+                          clickedElement.closest('.mobile-menu-container');
 
+      // If clicked outside nav area, close all dropdowns
+      if (!isInsideNav) {
+        setIsServicesDropdownOpen(false);
+        setIsCtaDropdownOpen(false);
+        setIsMobileMenuOpen(false);
+      }
+    };
 
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const services = [
     { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
@@ -45,7 +62,7 @@ export default function ResponsiveNavigation() {
 
   return (
     <>
-      <div key={forceUpdate} style={{
+      <div style={{
         position: 'fixed',
         top: '16px',
         left: '0',
@@ -104,11 +121,9 @@ export default function ResponsiveNavigation() {
             {/* Services Dropdown */}
             <div style={{ position: 'relative' }} className="services-dropdown-container">
               <button
-                onClick={() => {
-                  const newState = !isServicesDropdownOpen;
-                  console.log('Services button clicked! Current state:', isServicesDropdownOpen, 'New state:', newState);
-                  setIsServicesDropdownOpen(newState);
-                  setForceUpdate(prev => prev + 1);
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsServicesDropdownOpen(!isServicesDropdownOpen);
                 }}
                 className="dropdown-button"
                 style={{
@@ -239,11 +254,9 @@ export default function ResponsiveNavigation() {
             flexShrink: 0,
           }} className="cta-dropdown-container">
             <button
-              onClick={() => {
-                const newState = !isCtaDropdownOpen;
-                console.log('CTA button clicked! Current state:', isCtaDropdownOpen, 'New state:', newState);
-                setIsCtaDropdownOpen(newState);
-                setForceUpdate(prev => prev + 1);
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsCtaDropdownOpen(!isCtaDropdownOpen);
               }}
               className="cta-button"
               style={{
@@ -349,7 +362,10 @@ export default function ResponsiveNavigation() {
 
           {/* Hamburger Menu - Visible on mobile */}
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+            }}
             className="hamburger-menu"
             style={{
               display: 'flex',
