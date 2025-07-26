@@ -45,7 +45,7 @@ export default function ResponsiveNavigation() {
 
   return (
     <>
-      <div style={{
+      <div key={forceUpdate} style={{
         position: 'fixed',
         top: '16px',
         left: '0',
