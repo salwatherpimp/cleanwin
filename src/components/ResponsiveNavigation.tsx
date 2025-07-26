@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function ResponsiveNavigation() {
@@ -8,29 +8,32 @@ export default function ResponsiveNavigation() {
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
-  const servicesRef = useRef(null);
-  const ctaRef = useRef(null);
-  const mobileRef = useRef(null);
-
   // Close dropdowns when clicking outside
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+    const handleClickOutside = (event) => {
+      const target = event.target;
+
+      // Close services dropdown if clicking outside of it
+      if (!target.closest('.services-dropdown-container') && isServicesDropdownOpen) {
         setIsServicesDropdownOpen(false);
       }
-      if (ctaRef.current && !ctaRef.current.contains(event.target)) {
+
+      // Close CTA dropdown if clicking outside of it
+      if (!target.closest('.cta-dropdown-container') && isCtaDropdownOpen) {
         setIsCtaDropdownOpen(false);
       }
-      if (mobileRef.current && !mobileRef.current.contains(event.target)) {
+
+      // Close mobile menu if clicking outside of it
+      if (!target.closest('.mobile-menu-container') && !target.closest('.hamburger-menu') && isMobileMenuOpen) {
         setIsMobileMenuOpen(false);
       }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isServicesDropdownOpen, isCtaDropdownOpen, isMobileMenuOpen]);
 
   const services = [
     { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
@@ -66,16 +69,26 @@ export default function ResponsiveNavigation() {
     <>
       <div style={{
         position: 'fixed',
-        top: '0',
+        top: '16px',
         left: '0',
         right: '0',
         zIndex: 1000,
-        background: 'rgba(255, 255, 255, 0.95)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        display: 'flex',
+        justifyContent: 'center',
+        width: '100%',
+        maxWidth: 'calc(100vw - 32px)',
+        margin: '0 auto',
+        padding: '0 16px',
       }}>
         <nav style={{
-          padding: '8px 24px',
+          background: 'white',
+          borderRadius: '50px',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
+          backdropFilter: 'blur(8px)',
+          border: '1px solid rgba(255, 255, 255, 0.2)',
+          height: '56px',
+          minHeight: '56px',
+          padding: '8px 16px',
           margin: '0 auto',
           width: '100%',
           maxWidth: '1152px',
@@ -85,6 +98,7 @@ export default function ResponsiveNavigation() {
           justifyContent: 'space-between',
           overflow: 'hidden',
         }}>
+
           {/* Logo */}
           <a href="https://cleanwin.vercel.app/" style={{
             display: 'flex',
@@ -102,18 +116,18 @@ export default function ResponsiveNavigation() {
             />
           </a>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu - Hidden on mobile */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
             gap: '32px',
             marginLeft: '24px',
           }} className="desktop-menu">
-            
             {/* Services Dropdown */}
-            <div ref={servicesRef} style={{ position: 'relative' }}>
+            <div style={{ position: 'relative' }} className="services-dropdown-container">
               <button
                 onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                className="dropdown-button"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -143,53 +157,54 @@ export default function ResponsiveNavigation() {
                 <ChevronDownIcon size={14} />
               </button>
 
-              {/* Services Dropdown Content */}
-              {isServicesDropdownOpen && (
-                <div style={{
-                  position: 'absolute',
-                  top: '100%',
-                  left: '0',
-                  background: 'white',
-                  borderRadius: '16px',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
-                  border: '1px solid rgba(0, 0, 0, 0.1)',
-                  padding: '8px',
-                  marginTop: '8px',
-                  minWidth: '220px',
-                  zIndex: 100,
-                }}>
-                  {services.map((service, index) => (
-                    <a
-                      key={index}
-                      href={service.href}
-                      style={{
-                        display: 'block',
-                        padding: '12px 16px',
-                        textDecoration: 'none',
-                        color: '#374151',
-                        fontWeight: '500',
-                        fontSize: '14px',
-                        borderRadius: '8px',
-                        transition: 'background-color 0.2s ease, color 0.2s ease',
-                        whiteSpace: 'nowrap',
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.background = '#f3f4f6';
-                        e.currentTarget.style.color = '#0DA6A6';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.background = 'none';
-                        e.currentTarget.style.color = '#374151';
-                      }}
-                    >
-                      {service.name}
-                    </a>
-                  ))}
-                </div>
-              )}
+              {/* Services Dropdown */}
+              <div style={{
+                position: 'absolute',
+                top: '100%',
+                left: '0',
+                background: 'white',
+                borderRadius: '16px',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+                padding: '8px',
+                marginTop: '8px',
+                minWidth: '220px',
+                zIndex: 100,
+                opacity: isServicesDropdownOpen ? 1 : 0,
+                visibility: isServicesDropdownOpen ? 'visible' : 'hidden',
+                transition: 'opacity 0.2s ease, visibility 0.2s ease',
+                pointerEvents: isServicesDropdownOpen ? 'auto' : 'none',
+              }}>
+                {services.map((service, index) => (
+                  <a
+                    key={index}
+                    href={service.href}
+                    style={{
+                      display: 'block',
+                      padding: '12px 16px',
+                      textDecoration: 'none',
+                      color: '#374151',
+                      fontWeight: '500',
+                      fontSize: '14px',
+                      borderRadius: '8px',
+                      transition: 'background-color 0.2s ease, color 0.2s ease',
+                      whiteSpace: 'nowrap',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = '#f3f4f6';
+                      e.currentTarget.style.color = '#0DA6A6';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'transparent';
+                      e.currentTarget.style.color = '#374151';
+                    }}
+                  >
+                    {service.name}
+                  </a>
+                ))}
+              </div>
             </div>
 
-            {/* Other Nav Items */}
             <a href="https://cleanwin.vercel.app/ueber-uns" style={{
               textDecoration: 'none',
               color: '#374151',
@@ -205,7 +220,7 @@ export default function ResponsiveNavigation() {
               e.currentTarget.style.color = '#0DA6A6';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'none';
+              e.currentTarget.style.background = 'transparent';
               e.currentTarget.style.color = '#374151';
             }}>
               Über uns
@@ -226,7 +241,7 @@ export default function ResponsiveNavigation() {
               e.currentTarget.style.color = '#0DA6A6';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'none';
+              e.currentTarget.style.background = 'transparent';
               e.currentTarget.style.color = '#374151';
             }}>
               Referenzen
@@ -234,14 +249,15 @@ export default function ResponsiveNavigation() {
           </div>
 
           {/* CTA Button */}
-          <div ref={ctaRef} style={{
+          <div style={{
             position: 'relative',
             display: 'flex',
             alignItems: 'center',
             flexShrink: 0,
-          }}>
+          }} className="cta-dropdown-container">
             <button
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+              className="cta-button"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -274,186 +290,192 @@ export default function ResponsiveNavigation() {
               <ChevronDownIcon size={14} />
             </button>
 
-            {/* CTA Dropdown Content */}
-            {isCtaDropdownOpen && (
-              <div style={{
-                position: 'absolute',
-                top: '100%',
-                right: '0',
-                background: 'white',
-                borderRadius: '16px',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
-                border: '1px solid rgba(0, 0, 0, 0.1)',
-                padding: '16px',
-                marginTop: '8px',
-                minWidth: '220px',
-                zIndex: 100,
-              }}>
-                <a
-                  href="mailto:info@cleanwin.ch"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    padding: '12px 16px',
-                    textDecoration: 'none',
-                    color: '#374151',
-                    fontWeight: '500',
-                    fontSize: '14px',
-                    borderRadius: '8px',
-                    transition: 'background-color 0.2s ease, color 0.2s ease',
-                    marginBottom: '8px',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#f3f4f6';
-                    e.currentTarget.style.color = '#0DA6A6';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'none';
-                    e.currentTarget.style.color = '#374151';
-                  }}
-                >
-                  <span>✉️</span>
-                  <span>info@cleanwin.ch</span>
-                </a>
-                <a
-                  href="tel:+41525512424"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    padding: '12px 16px',
-                    textDecoration: 'none',
-                    color: '#374151',
-                    fontWeight: '500',
-                    fontSize: '14px',
-                    borderRadius: '8px',
-                    transition: 'background-color 0.2s ease, color 0.2s ease',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#f3f4f6';
-                    e.currentTarget.style.color = '#0DA6A6';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'none';
-                    e.currentTarget.style.color = '#374151';
-                  }}
-                >
-                  <PhoneIcon />
-                  <span>+41 52 551 24 24</span>
-                </a>
-              </div>
-            )}
-          </div>
-
-          {/* Hamburger Menu */}
-          <div ref={mobileRef}>
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="hamburger-menu"
-              style={{
+            {/* CTA Dropdown */}
+            <div style={{
+              position: 'absolute',
+              top: '100%',
+              right: '0',
+              background: 'white',
+              borderRadius: '16px',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
+              border: '1px solid rgba(0, 0, 0, 0.1)',
+              padding: '8px',
+              marginTop: '8px',
+              minWidth: '220px',
+              zIndex: 100,
+              opacity: isCtaDropdownOpen ? 1 : 0,
+              visibility: isCtaDropdownOpen ? 'visible' : 'hidden',
+              transition: 'opacity 0.2s ease, visibility 0.2s ease',
+              pointerEvents: isCtaDropdownOpen ? 'auto' : 'none',
+            }}>
+              <a href="/kontakt" style={{
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
                 alignItems: 'center',
-                width: '32px',
-                height: '32px',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                padding: '4px',
-                flexShrink: 0,
-                borderRadius: '16px',
-                transition: 'background-color 0.2s ease',
+                gap: '8px',
+                padding: '12px 16px',
+                textDecoration: 'none',
+                color: '#374151',
+                fontWeight: '500',
+                fontSize: '14px',
+                borderRadius: '8px',
+                transition: 'background-color 0.2s ease, color 0.2s ease',
+                whiteSpace: 'nowrap',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = '#f3f4f6';
+                e.currentTarget.style.color = '#0DA6A6';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'none';
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = '#374151';
+              }}>
+                <HandIcon />
+                <span>Kontaktanfrage senden</span>
+              </a>
+              <a href="tel:+41525512424" style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '12px 16px',
+                textDecoration: 'none',
+                color: '#374151',
+                fontWeight: '500',
+                fontSize: '14px',
+                borderRadius: '8px',
+                transition: 'background-color 0.2s ease, color 0.2s ease',
+                whiteSpace: 'nowrap',
               }}
-            >
-              <div style={{
-                width: '18px',
-                height: '2px',
-                backgroundColor: '#374151',
-                marginBottom: '3px',
-                transition: 'transform 0.3s ease',
-                transform: isMobileMenuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none',
-              }}></div>
-              <div style={{
-                width: '18px',
-                height: '2px',
-                backgroundColor: '#374151',
-                marginBottom: '3px',
-                transition: 'opacity 0.3s ease',
-                opacity: isMobileMenuOpen ? 0 : 1,
-              }}></div>
-              <div style={{
-                width: '18px',
-                height: '2px',
-                backgroundColor: '#374151',
-                transition: 'transform 0.3s ease',
-                transform: isMobileMenuOpen ? 'rotate(-45deg) translate(6px, -6px)' : 'none',
-              }}></div>
-            </button>
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#f3f4f6';
+                e.currentTarget.style.color = '#0DA6A6';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = '#374151';
+              }}>
+                <PhoneIcon />
+                <span>+41 52 551 24 24</span>
+              </a>
+            </div>
           </div>
+
+          {/* Hamburger Menu - Visible on mobile */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="hamburger-menu"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '32px',
+              height: '32px',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: '4px',
+              flexShrink: 0,
+              borderRadius: '16px',
+              transition: 'background-color 0.2s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#f3f4f6';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'none';
+            }}
+          >
+            <div style={{
+              width: '18px',
+              height: '2px',
+              backgroundColor: '#374151',
+              marginBottom: '3px',
+              transition: 'transform 0.3s ease',
+              transform: isMobileMenuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none',
+            }}></div>
+            <div style={{
+              width: '18px',
+              height: '2px',
+              backgroundColor: '#374151',
+              marginBottom: '3px',
+              transition: 'opacity 0.3s ease',
+              opacity: isMobileMenuOpen ? 0 : 1,
+            }}></div>
+            <div style={{
+              width: '18px',
+              height: '2px',
+              backgroundColor: '#374151',
+              transition: 'transform 0.3s ease',
+              transform: isMobileMenuOpen ? 'rotate(-45deg) translate(6px, -6px)' : 'none',
+            }}></div>
+          </button>
         </nav>
       </div>
 
       {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
+      <div className="mobile-menu-container" style={{
+        position: 'fixed',
+        top: '90px',
+        left: '0',
+        right: '0',
+        margin: '0 auto',
+        width: 'calc(100vw - 32px)',
+        maxWidth: '400px',
+        background: 'white',
+        borderRadius: '20px',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
+        border: '1px solid rgba(0, 0, 0, 0.1)',
+        opacity: isMobileMenuOpen ? 1 : 0,
+        visibility: isMobileMenuOpen ? 'visible' : 'hidden',
+        transition: 'opacity 0.2s ease, visibility 0.2s ease',
+        zIndex: 1000,
+        padding: '16px',
+      }}>
+        <div style={{ marginBottom: '12px' }}>
+          <h3 style={{
+            fontWeight: '700',
+            fontSize: '18px',
+            color: '#1f2937',
+            marginBottom: '12px',
+            marginTop: '0',
+          }}>Leistungen</h3>
+          {services.map((service, index) => (
+            <a
+              key={index}
+              href={service.href}
+              onClick={() => setIsMobileMenuOpen(false)}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                padding: '12px 16px',
+                textDecoration: 'none',
+                color: '#6b7280',
+                fontWeight: '400',
+                fontSize: '16px',
+                transition: 'background-color 0.2s ease, color 0.2s ease',
+                minHeight: '44px',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#f3f4f6';
+                e.currentTarget.style.color = '#0DA6A6';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = '#6b7280';
+              }}
+            >
+              {service.name}
+            </a>
+          ))}
+        </div>
+
         <div style={{
-          position: 'fixed',
-          top: '90px',
-          left: '0',
-          right: '0',
-          margin: '0 auto',
-          width: 'calc(100vw - 32px)',
-          maxWidth: '400px',
-          background: 'white',
-          borderRadius: '20px',
-          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
-          border: '1px solid rgba(0, 0, 0, 0.1)',
-          zIndex: 1000,
-          padding: '16px',
-        }}>
-          <div style={{ marginBottom: '12px' }}>
-            <h3 style={{
-              fontWeight: '700',
-              fontSize: '18px',
-              color: '#1f2937',
-              marginBottom: '12px',
-              marginTop: '0',
-            }}>Leistungen</h3>
-            {services.map((service, index) => (
-              <a
-                key={index}
-                href={service.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  padding: '12px 0',
-                  textDecoration: 'none',
-                  color: '#374151',
-                  fontWeight: '500',
-                  fontSize: '16px',
-                  transition: 'color 0.2s ease',
-                  borderBottom: index < services.length - 1 ? '1px solid #f3f4f6' : 'none',
-                  minHeight: '44px',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#0DA6A6';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = '#374151';
-                }}
-              >
-                {service.name}
-              </a>
-            ))}
-          </div>
+          height: '1px',
+          background: '#d1d5db',
+          margin: '12px 0',
+        }}></div>
+
+        <div>
           <a
             href="https://cleanwin.vercel.app/ueber-uns"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -502,7 +524,7 @@ export default function ResponsiveNavigation() {
             Referenzen
           </a>
         </div>
-      )}
+      </div>
 
       <style jsx>{`
         @media (max-width: 1023px) {
