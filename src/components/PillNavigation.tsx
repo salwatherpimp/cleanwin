@@ -376,17 +376,7 @@ export default function PillNavigation() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="pill-nav-mobile" style={{
-          display: isMobile ? 'flex' : 'none',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '0 16px',
-          height: '56px',
-          minHeight: '56px',
-          width: '100%',
-          boxSizing: 'border-box',
-          position: 'relative',
-        }}>
+        <div className="pill-nav-mobile">
           {/* Logo */}
           <div style={{
             display: "flex",
