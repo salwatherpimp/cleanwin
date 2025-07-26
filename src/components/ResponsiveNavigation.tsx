@@ -237,7 +237,11 @@ export default function ResponsiveNavigation() {
             flexShrink: 0,
           }} className="cta-dropdown-container">
             <button
-              onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+              onClick={() => {
+                console.log('CTA button clicked! Current state:', isCtaDropdownOpen);
+                setIsCtaDropdownOpen(!isCtaDropdownOpen);
+                console.log('CTA button clicked! New state should be:', !isCtaDropdownOpen);
+              }}
               className="cta-button"
               style={{
                 display: 'flex',
