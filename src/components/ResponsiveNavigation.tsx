@@ -243,9 +243,10 @@ export default function ResponsiveNavigation() {
             display: 'flex',
             alignItems: 'center',
             flexShrink: 0,
-          }}>
+          }} className="dropdown-container">
             <button
               onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+              className="dropdown-button"
               style={{
                 display: 'flex',
                 alignItems: 'center',
