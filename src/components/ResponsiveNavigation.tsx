@@ -7,6 +7,7 @@ export default function ResponsiveNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [forceUpdate, setForceUpdate] = useState(0);
 
   console.log('Dropdown states:', { isServicesDropdownOpen, isCtaDropdownOpen, isMobileMenuOpen });
 
