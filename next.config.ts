@@ -5,58 +5,17 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: false,
     esmExternals: true,
-    turbo: {
-      rules: {
-        '*.js': ['babel-loader'],
-      },
-    },
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
-  // Optimize bundle splitting and tree shaking
+  // Optimize for performance and tree shaking
   webpack: (config: any, { dev, isServer }) => {
-    // Enable aggressive tree shaking and dead code elimination
-    config.optimization = {
-      ...config.optimization,
-      sideEffects: false,
-      usedExports: true,
-      providedExports: true,
-      minimize: !dev,
-      splitChunks: {
-        chunks: 'all',
-        maxSize: 244000, // 244KB max chunk size
-        cacheGroups: {
-          framework: {
-            name: 'framework',
-            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-            priority: 40,
-            enforce: true,
-            chunks: 'all',
-          },
-          vendor: {
-            name: 'vendor',
-            test: /[\\/]node_modules[\\/](?!(react|react-dom)[\\/])/,
-            priority: 30,
-            chunks: 'all',
-            reuseExistingChunk: true,
-          },
-          commons: {
-            name: 'commons',
-            minChunks: 2,
-            priority: 20,
-            reuseExistingChunk: true,
-            chunks: 'all',
-          },
-        },
-      },
-    };
-
-    // Tree shake unused exports
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': './src',
-    };
+    if (!dev) {
+      // Enable tree shaking
+      config.optimization.sideEffects = false;
+      config.optimization.usedExports = true;
+    }
 
     return config;
   },
