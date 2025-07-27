@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import "../styles/globals.css";
+// Only import critical CSS - others will be loaded async
 import "../styles/critical.css";
-import "../styles/components.css";
 
 export const metadata: Metadata = {
   title: "CleanWin - Professional Cleaning Services",
