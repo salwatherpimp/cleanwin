@@ -12,12 +12,30 @@ const nextConfig: NextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
     styledJsx: false, // Disable styled-jsx to reduce bundle size
   },
-  // Optimize for performance and tree shaking - simpler approach
+  // Aggressive optimization to eliminate render blocking
   webpack: (config: any, { dev, isServer }) => {
+    // Completely disable styled-jsx at the webpack level
+    config.module.rules.forEach((rule: any) => {
+      if (rule.use) {
+        if (Array.isArray(rule.use)) {
+          rule.use = rule.use.filter((use: any) => {
+            return !use?.loader?.includes('styled-jsx');
+          });
+        }
+      }
+    });
+
     if (!dev) {
       // Enable tree shaking
       config.optimization.sideEffects = false;
       config.optimization.usedExports = true;
+    }
+
+    // Remove CSS extraction in production to prevent render blocking
+    if (!dev && !isServer) {
+      config.plugins = config.plugins.filter((plugin: any) => {
+        return !plugin.constructor.name.includes('MiniCssExtractPlugin');
+      });
     }
 
     return config;
