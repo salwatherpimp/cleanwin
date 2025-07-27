@@ -5,7 +5,7 @@ export default function PureHeroSection() {
       data-lcp
       dangerouslySetInnerHTML={{
         __html: `
-          <section style="position:relative;width:100vw;height:64vh;min-height:476px;max-height:64vh;overflow:hidden;">
+          <section style="position:relative;width:100vw;height:64vh;min-height:476px;max-height:64vh;overflow:hidden;padding-top:80px;" class="hero-section">
             <picture style="position:absolute;inset:0;width:100%;height:100%;display:block;">
               <source 
                 media="(max-width: 768px)" 
