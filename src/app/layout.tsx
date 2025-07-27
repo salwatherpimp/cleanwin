@@ -329,6 +329,39 @@ export default function RootLayout({
             contain-intrinsic-size: 100% 98px;
           }
         `}</style>
+
+        {/* Load non-critical CSS after initial render to avoid blocking */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function loadCSS(href) {
+                  var link = document.createElement('link');
+                  link.rel = 'stylesheet';
+                  link.href = href;
+                  link.media = 'print';
+                  link.onload = function() { this.media = 'all'; };
+                  document.head.appendChild(link);
+                }
+
+                // Load CSS after DOM is ready but non-blocking
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(function() {
+                      loadCSS('/_next/static/css/globals.css');
+                      loadCSS('/_next/static/css/components.css');
+                    }, 0);
+                  });
+                } else {
+                  setTimeout(function() {
+                    loadCSS('/_next/static/css/globals.css');
+                    loadCSS('/_next/static/css/components.css');
+                  }, 0);
+                }
+              })();
+            `
+          }}
+        />
       </head>
       <body style={{WebkitFontSmoothing: "antialiased", MozOsxFontSmoothing: "grayscale"}}>{children}</body>
     </html>
