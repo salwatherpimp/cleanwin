@@ -56,7 +56,7 @@ export default function RootLayout({
         <link rel="modulepreload" href="/_next/static/chunks/main.js" />
 
         <style>{`
-          /* Critical above-the-fold CSS */
+          /* Critical above-the-fold CSS - Inlined to prevent render blocking */
           :root {
             --background: #ffffff;
             --foreground: #171717;
@@ -67,6 +67,35 @@ export default function RootLayout({
               --background: #0a0a0a;
               --foreground: #ededed;
             }
+          }
+
+          /* Critical: Tailwind base reset - Inlined */
+          *, ::before, ::after {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e5e7eb;
+          }
+
+          html, body {
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
+            tab-size: 4;
+            font-family: ui-sans-serif, system-ui, sans-serif;
+          }
+
+          /* Critical navigation responsive behavior - Inlined */
+          @media (max-width: 1023px) {
+            [data-nav="desktop"] { display: none !important; }
+            [data-nav="mobile"] { display: flex !important; }
+          }
+
+          @media (min-width: 1024px) {
+            [data-nav="desktop"] { display: flex !important; }
+            [data-nav="mobile"] { display: none !important; }
           }
 
           * {
