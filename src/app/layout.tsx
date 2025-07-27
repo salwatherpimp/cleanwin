@@ -207,6 +207,39 @@ export default function RootLayout({
           }
 
           /* Critical: Navigation styles from ResponsiveNavigation component */
+          div[style*="position: fixed"][style*="top: 16px"] {
+            display: flex !important;
+            position: fixed !important;
+            top: 16px !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 1000 !important;
+            justify-content: center !important;
+            width: 100% !important;
+            max-width: calc(100vw - 20px) !important;
+            margin: 0 auto !important;
+            padding: 0 10px !important;
+          }
+
+          nav[style*="background: white"] {
+            display: flex !important;
+            background: white !important;
+            border-radius: 50px !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+            backdrop-filter: blur(8px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            height: 56px !important;
+            min-height: 56px !important;
+            padding: 8px 16px !important;
+            margin: 0 auto !important;
+            width: 100% !important;
+            max-width: 1152px !important;
+            box-sizing: border-box !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            overflow: visible !important;
+          }
+
           .desktop-menu {
             display: none !important;
           }
