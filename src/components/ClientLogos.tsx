@@ -131,7 +131,7 @@ export default function ClientLogos() {
 
         /* Animated track */
         .grid-mobile-logos {
-          animation: scroll-logos 30s linear infinite;
+          animation: scroll-logos 45s linear infinite;
         }
 
         .grid-mobile-logos > div {
@@ -142,7 +142,7 @@ export default function ClientLogos() {
           .grid-mobile-logos {
             display: flex !important;
             gap: 24px !important;
-            animation: scroll-logos 25s linear infinite;
+            animation: scroll-logos 40s linear infinite;
           }
 
           .logo-container-mobile {
@@ -154,7 +154,7 @@ export default function ClientLogos() {
         @media (min-width: 768px) {
           .grid-mobile-logos {
             gap: 32px !important;
-            animation: scroll-logos 30s linear infinite;
+            animation: scroll-logos 45s linear infinite;
           }
         }
       `}</style>
