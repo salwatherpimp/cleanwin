@@ -112,7 +112,7 @@ className="usp-card"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   Reinigung ab CHF 199.-
@@ -177,7 +177,7 @@ className="usp-card"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   Kostenlose Fachberatung
@@ -242,7 +242,7 @@ className="usp-card"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   100% keine Schwarzarbeit
@@ -309,7 +309,7 @@ className="usp-card usp-duplicate"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   Reinigung ab CHF 199.-
@@ -374,7 +374,7 @@ className="usp-card usp-duplicate"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   Kostenlose Fachberatung
@@ -439,7 +439,7 @@ className="usp-card usp-duplicate"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   100% keine Schwarzarbeit
