@@ -540,8 +540,8 @@ export default function ResponsiveNavigation() {
           }
           nav {
             padding: 8px 12px !important;
-            height: 56px !important;
-            min-height: 56px !important;
+            height: 60px !important;
+            min-height: 60px !important;
           }
         }
         @media (min-width: 1024px) {
