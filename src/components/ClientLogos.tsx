@@ -56,7 +56,7 @@ export default function ClientLogos() {
         transition: "opacity 0.3s",
         flexShrink: 0,
       }}
-      aria-label={logo.alt}
+      aria-hidden="true"
     />
   );
 
