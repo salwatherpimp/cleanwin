@@ -573,12 +573,7 @@ export default function ResponsiveNavigation() {
             padding: 2px !important;
           }
         }
-        /* On mobile, make CTA button a direct link instead of dropdown */
-        @media (max-width: 1023px) {
-          .cta-dropdown-container div[style*="position: absolute"] {
-            display: none !important;
-          }
-        }
+        /* Ensure dropdowns work properly on all screen sizes */
       `}</style>
     </>
   );
