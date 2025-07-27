@@ -1202,23 +1202,6 @@ className="service-card"
             flex-shrink: 0 !important;
             animation: usp-mobile-scroll 32s linear infinite !important;
           }
-
-          .grid-mobile-logos {
-            display: flex !important;
-            overflow: hidden !important;
-            gap: 32px !important;
-            width: 100% !important;
-          }
-
-          .grid-mobile-logos > div {
-            flex-shrink: 0 !important;
-            animation: scroll-logos 50s linear infinite !important;
-          }
-
-          .logo-container-mobile {
-            width: 80px !important;
-            height: 40px !important;
-          }
         }
 
         /* Hide duplicate USP cards on desktop */
@@ -1232,86 +1215,6 @@ className="service-card"
         @keyframes usp-mobile-scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(calc(-912px)); }
-        }
-
-        /* Logo Scroll Animation */
-        @keyframes scroll-logos {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-1368px); }
-        }
-
-        /* Apply logo animation to all viewports */
-        .grid-mobile-logos > div {
-          flex-shrink: 0 !important;
-          animation: scroll-logos 50s linear infinite !important;
-        }
-
-        /* Chevron rotation for details */
-        details[open] .chevron-icon {
-          transform: rotate(180deg);
-        }
-
-        /* Footer hover effects */
-        footer a:hover {
-          color: #ffffff !important;
-        }
-
-        /* Tablet Layout */
-        @media (min-width: 768px) and (max-width: 1023px) {
-          .footer-responsive-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-
-          .footer-empty-column {
-            display: none;
-          }
-        }
-
-        /* Mobile Layout */
-        @media (max-width: 767px) {
-          .footer-responsive-grid {
-            grid-template-columns: 1fr !important;
-          }
-
-          .footer-main-grid {
-            grid-template-columns: 1fr !important;
-            gap: 24px !important;
-          }
-
-          .footer-empty-column {
-            display: none;
-          }
-
-          .footer-bottom-responsive {
-            flex-direction: column !important;
-            align-items: center !important;
-            text-align: center !important;
-            gap: 8px !important;
-          }
-
-          .footer-social {
-            gap: 16px !important;
-            flex-direction: row !important;
-            display: flex !important;
-          }
-
-          /* Prevent mobile text overflow */
-          .footer-main-grid > div {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            max-width: 100%;
-          }
-
-          /* Ensure service areas text doesn't overflow */
-          .footer-main-grid h4 {
-            font-size: 16px !important;
-            line-height: 1.3 !important;
-          }
-
-          .footer-main-grid span {
-            font-size: 13px !important;
-            line-height: 1.4 !important;
-          }
         }
 
         /* CTA Button Hover Effects */
