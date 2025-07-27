@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
-    styledJsx: false, // Disable styled-jsx to reduce bundle size
+    // styledJsx: false, // Temporarily enable to restore navigation
   },
   // Optimize for performance and tree shaking
   webpack: (config: any, { dev, isServer }) => {
