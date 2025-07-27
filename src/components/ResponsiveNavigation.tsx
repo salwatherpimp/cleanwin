@@ -556,9 +556,14 @@ export default function ResponsiveNavigation() {
           }
         }
         @media (max-width: 480px) {
+          /* Make container even wider on small screens */
+          div[style*="max-width: calc(100vw - 20px)"] {
+            max-width: calc(100vw - 16px) !important;
+            padding: 0 8px !important;
+          }
           nav {
-            padding: 6px 10px !important;
-            max-width: calc(100vw - 24px) !important;
+            padding: 6px 12px !important;
+            max-width: 100% !important;
           }
           .cta-button {
             padding: 6px 12px !important;
