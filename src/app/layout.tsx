@@ -131,6 +131,57 @@ export default function RootLayout({
             }
           }
 
+          /* Critical: Complete CSS inlining to prevent external CSS blocking */
+          .usp-card {
+            display: flex !important;
+            align-items: center !important;
+            background-color: white !important;
+            border: 1px solid rgba(16, 160, 164, 0.1) !important;
+            border-radius: 12px !important;
+            padding: 16px !important;
+            gap: 12px !important;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 8px 0px !important;
+            transition: all 0.3s !important;
+          }
+
+          /* Logo animation keyframes - inlined for performance */
+          @keyframes scroll-logos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+
+          /* Complete mobile responsive grid */
+          @media (max-width: 767px) {
+            .grid-mobile-1 {
+              grid-template-columns: 1fr !important;
+              gap: 16px !important;
+            }
+            .grid-mobile-2 {
+              grid-template-columns: 1fr !important;
+              gap: 32px !important;
+            }
+            div[style*="animation"][style*="scroll-logos"] {
+              gap: 24px !important;
+              animation-duration: 40s !important;
+            }
+            .logo-container-mobile {
+              width: 80px !important;
+              height: 40px !important;
+            }
+          }
+
+          /* Critical: Button and interaction styles */
+          button, a, input {
+            font-display: swap !important;
+            contain: layout style !important;
+          }
+
+          /* Critical: Image optimization */
+          img {
+            contain: layout style !important;
+            font-display: swap !important;
+          }
+
           * {
             box-sizing: border-box;
             margin: 0;
