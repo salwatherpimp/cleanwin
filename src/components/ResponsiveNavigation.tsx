@@ -557,8 +557,8 @@ export default function ResponsiveNavigation() {
             height: 60px !important;
             min-height: 60px !important;
           }
-          /* Larger logo on desktop only - more specific selector */
-          nav a img[alt="CleanWin Logo"] {
+          /* Larger logo on desktop only - target specific class */
+          .nav-logo-img {
             width: auto !important;
             height: 42px !important;
             max-height: 42px !important;
