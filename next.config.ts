@@ -5,9 +5,42 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: false,
     esmExternals: true,
+    turbo: {
+      rules: {
+        '*.js': ['babel-loader'],
+      },
+    },
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
+  },
+  // Optimize bundle splitting and tree shaking
+  webpack: (config: any, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization = {
+        ...config.optimization,
+        sideEffects: false,
+        usedExports: true,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            framework: {
+              name: 'framework',
+              test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+              priority: 40,
+              enforce: true,
+            },
+            commons: {
+              name: 'commons',
+              minChunks: 2,
+              priority: 20,
+              reuseExistingChunk: true,
+            },
+          },
+        },
+      };
+    }
+    return config;
   },
   // Force disable styled-jsx at webpack level
   webpack: (config: any) => {
