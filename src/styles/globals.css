@@ -32,3 +32,10 @@
   contain: layout style;
   contain-intrinsic-size: 100% 98px;
 }
+
+/* Prevent mobile H1 overlap with fixed navigation */
+@media (max-width: 768px) {
+  .main-page-container > section:first-of-type {
+    padding-top: 80px !important;
+  }
+}
