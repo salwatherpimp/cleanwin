@@ -71,7 +71,7 @@ export default function PureHeroSection() {
                     </div>
                   </div>
                   <div>
-                    <a href="/kontakt" style="display:inline-block;background-color:white;color:#374151;padding:16px 32px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;">
+                    <a href="/kontakt" class="hero-cta-button" style="display:inline-block;background-color:white;color:#374151;padding:16px 32px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.2s ease;box-shadow:0 2px 8px rgba(0, 0, 0, 0.1);" onmouseover="this.style.backgroundColor='#f8fafc';this.style.color='#0DA6A6';this.style.boxShadow='0 4px 16px rgba(0, 0, 0, 0.15)';this.style.transform='translateY(-1px)'" onmouseout="this.style.backgroundColor='white';this.style.color='#374151';this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.1)';this.style.transform='translateY(0)'">
                       Jetzt unverbindlich kontaktieren
                     </a>
                   </div>
