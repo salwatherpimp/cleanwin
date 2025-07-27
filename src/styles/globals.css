@@ -35,7 +35,8 @@
 
 /* Prevent mobile H1 overlap with fixed navigation */
 @media (max-width: 768px) {
-  .main-page-container > section:first-of-type {
+  .main-page-container > div:nth-child(2) section,
+  .main-page-container section:first-of-type {
     padding-top: 80px !important;
   }
 }
