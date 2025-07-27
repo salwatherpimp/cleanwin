@@ -555,6 +555,16 @@ export default function ResponsiveNavigation() {
             padding: 8px 24px !important;
           }
         }
+        /* Medium mobile screens - make wider than default */
+        @media (max-width: 1023px) and (min-width: 481px) {
+          div[style*="max-width: calc(100vw - 20px)"] {
+            max-width: calc(100vw - 18px) !important;
+            padding: 0 9px !important;
+          }
+          nav {
+            padding: 8px 14px !important;
+          }
+        }
         @media (max-width: 480px) {
           /* Make container even wider on small screens */
           div[style*="max-width: calc(100vw - 20px)"] {
