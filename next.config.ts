@@ -7,11 +7,6 @@ const nextConfig: NextConfig = {
     esmExternals: true,
     // Reduce JavaScript bundle size
     optimizePackageImports: ['react', 'react-dom'],
-    serverComponentsExternalPackages: ['@builder.io/react'], // Externalize unused packages
-    turbotrace: {
-      // Reduce trace file size
-      logLevel: 'error',
-    },
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
