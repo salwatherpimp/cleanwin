@@ -16,6 +16,9 @@ const Footer = dynamic(() => import("../components/Footer"), { ssr: true });
 export default function CleanWinPage() {
   return (
     <div className="main-page-container">
+      {/* Load non-critical CSS after initial render */}
+      <CSSLoader />
+
       {/* Responsive Navigation */}
       <ResponsiveNavigation />
 
