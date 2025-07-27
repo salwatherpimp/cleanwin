@@ -104,10 +104,10 @@ export default function ResponsiveNavigation() {
             <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="CleanWin Logo"
-              width={150}
-              height={42}
+              width={110}
+              height={30}
               priority
-              style={{ width: 'auto', height: '42px' }}
+              style={{ width: 'auto', height: '30px' }}
             />
           </a>
 
