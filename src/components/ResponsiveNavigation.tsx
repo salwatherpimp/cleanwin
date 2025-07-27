@@ -557,11 +557,10 @@ export default function ResponsiveNavigation() {
             height: 60px !important;
             min-height: 60px !important;
           }
-          /* Larger logo on desktop only - target specific class */
-          .nav-logo-img {
-            width: auto !important;
+          /* Larger logo on desktop only - use global targeting */
+          nav :global(.nav-logo-img) {
             height: 42px !important;
-            max-height: 42px !important;
+            width: auto !important;
           }
         }
         /* Medium mobile screens - make wider than default */
