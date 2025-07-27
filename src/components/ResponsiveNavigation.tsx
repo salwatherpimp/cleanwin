@@ -10,7 +10,7 @@ export default function ResponsiveNavigation() {
 
   // Close dropdowns when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: MouseEvent) => {
       // Check if click is outside any navigation elements
       const clickedElement = event.target;
       const isInsideNav = clickedElement.closest('nav') ||
