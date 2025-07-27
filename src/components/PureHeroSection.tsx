@@ -26,7 +26,7 @@ export default function PureHeroSection() {
                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;display:block;">
             </picture>
             <div style="position:absolute;inset:0;background-color:rgba(0,0,0,0.4);"></div>
-            <div style="position:relative;z-index:10;height:100%;display:flex;align-items:center;justify-content:center;padding:100px 16px 32px 16px;text-align:center;color:white;">
+            <div style="position:relative;z-index:10;height:100%;display:flex;align-items:center;justify-content:center;padding:100px 16px 32px 16px;text-align:center;color:white;" class="hero-content">
               <div style="max-width:1152px;width:100%;">
                 <h1 style="font-size:32px;font-weight:800;line-height:38px;margin-bottom:16px;margin-top:0;color:white;text-shadow:rgba(0,0,0,0.1) 0px 4px 6px;">
                   Professionelle Reinigung in Winterthur & Region
