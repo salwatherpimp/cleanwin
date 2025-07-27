@@ -71,9 +71,9 @@ export default function ResponsiveNavigation() {
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
-        maxWidth: 'calc(100vw - 32px)',
+        maxWidth: 'calc(100vw - 20px)',
         margin: '0 auto',
-        padding: '0 16px',
+        padding: '0 10px',
       }}>
         <nav style={{
           background: 'white',
