@@ -114,12 +114,13 @@ export default function ClientLogos() {
         /* Logo Scroll Animation */
         @keyframes scroll-logos {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-100%); }
+          100% { transform: translateX(calc(-50% - 16px)); }
         }
 
-        /* Apply animation to the container, not individual items */
+        /* Apply animation to the container */
         .grid-mobile-logos {
           animation: scroll-logos 30s linear infinite;
+          width: calc(200% + 64px);
         }
 
         .grid-mobile-logos > div {
@@ -129,15 +130,22 @@ export default function ClientLogos() {
         @media (max-width: 767px) {
           .grid-mobile-logos {
             display: flex !important;
-            overflow: hidden !important;
+            overflow: visible !important;
             gap: 24px !important;
-            width: 100% !important;
             animation: scroll-logos 25s linear infinite;
+            width: calc(200% + 48px) !important;
           }
 
           .logo-container-mobile {
             width: 80px !important;
             height: 40px !important;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .grid-mobile-logos {
+            justify-content: center;
+            animation: scroll-logos 30s linear infinite;
           }
         }
       `}</style>
