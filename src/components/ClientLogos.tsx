@@ -88,7 +88,6 @@ export default function ClientLogos() {
           +500 Firmen &amp; Haushalte reinigen mit Cleanwin
         </p>
         <div
-          className="logo-container-wrapper"
           style={{
             overflow: "hidden",
             width: "100%",
@@ -96,12 +95,12 @@ export default function ClientLogos() {
           }}
         >
           <div
-            className="grid-mobile-logos"
             style={{
               display: "flex",
               gap: "32px",
               alignItems: "center",
               width: "fit-content",
+              animation: "45s linear infinite scroll-logos",
             }}
           >
             {/* Original logos */}
