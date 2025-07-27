@@ -100,6 +100,37 @@ export default function RootLayout({
             [data-nav="mobile"] { display: none !important; }
           }
 
+          /* Critical: Carousel and layout stability - Inlined to prevent CLS */
+          .carousel-track {
+            contain: layout style;
+            contain-intrinsic-size: 1440px 280px;
+          }
+
+          .review-card {
+            contain: layout style;
+            contain-intrinsic-size: 360px 280px;
+            min-height: 280px !important;
+            max-width: 360px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+          }
+
+          /* Critical: Mobile navigation spacing - Prevent H1 overlap */
+          @media (max-width: 768px) {
+            .hero-content,
+            div[style*="position:relative"][style*="z-index:10"] {
+              margin-top: 60px !important;
+              padding-top: 10px !important;
+              padding-bottom: 40px !important;
+            }
+
+            .hero-section,
+            section[style*="64vh"] {
+              min-height: 520px !important;
+              max-height: none !important;
+            }
+          }
+
           * {
             box-sizing: border-box;
             margin: 0;
