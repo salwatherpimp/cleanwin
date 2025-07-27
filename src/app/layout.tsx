@@ -206,6 +206,60 @@ export default function RootLayout({
             contain-intrinsic-size: 100% 98px !important;
           }
 
+          /* Critical: Navigation styles from ResponsiveNavigation component */
+          .desktop-menu {
+            display: none !important;
+          }
+
+          .hamburger-menu {
+            display: flex !important;
+          }
+
+          @media (min-width: 1024px) {
+            .desktop-menu {
+              display: flex !important;
+            }
+            .hamburger-menu {
+              display: none !important;
+            }
+            nav {
+              padding: 8px 24px !important;
+              height: 60px !important;
+              min-height: 60px !important;
+            }
+            .nav-logo-img {
+              height: 42px !important;
+              width: auto !important;
+            }
+          }
+
+          @media (max-width: 1023px) and (min-width: 481px) {
+            div[style*="max-width: calc(100vw - 20px)"] {
+              max-width: calc(100vw - 18px) !important;
+              padding: 0 9px !important;
+            }
+            nav {
+              padding: 8px 14px !important;
+            }
+          }
+
+          @media (max-width: 480px) {
+            div[style*="max-width: calc(100vw - 20px)"] {
+              max-width: calc(100vw - 16px) !important;
+              padding: 0 8px !important;
+            }
+            nav {
+              padding: 6px 12px !important;
+              max-width: 100% !important;
+            }
+            .cta-button {
+              padding: 6px 12px !important;
+              font-size: 12px !important;
+              height: 32px !important;
+              min-height: 32px !important;
+            }
+          }
+
           /* Critical: Remove any remaining styled-jsx */
           [class*="jsx-"] {
             all: unset !important;
