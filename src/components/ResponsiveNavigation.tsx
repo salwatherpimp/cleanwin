@@ -573,6 +573,12 @@ export default function ResponsiveNavigation() {
             padding: 2px !important;
           }
         }
+        /* Hide CTA dropdown on mobile - use hamburger menu instead */
+        @media (max-width: 1023px) {
+          .cta-dropdown-container {
+            display: none !important;
+          }
+        }
       `}</style>
     </>
   );
