@@ -52,18 +52,9 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        {/* Resource hints for performance */}
-        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
-        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
-
-        {/* Preload critical fonts */}
-        <link
-          rel="preload"
-          href="data:font/woff2;base64,"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        {/* Performance hint: Preload critical resources */}
+        <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
+        <link rel="modulepreload" href="/_next/static/chunks/main.js" />
         <style>{`
           /* Critical above-the-fold CSS */
           :root {
