@@ -6,11 +6,26 @@ import ResponsiveNavigation from "../components/ResponsiveNavigation";
 import PureHeroSection from "../components/PureHeroSection";
 
 // Dynamic imports for below-the-fold components to reduce initial bundle
-const CustomerReviews = dynamic(() => import("../components/CustomerReviews"), { ssr: true });
-const InteractiveValueCards = dynamic(() => import("../components/InteractiveValueCards"), { ssr: true });
-const ClientLogos = dynamic(() => import("../components/ClientLogos"), { ssr: true });
-const FinalCTA = dynamic(() => import("../components/FinalCTA"), { ssr: true });
-const Footer = dynamic(() => import("../components/Footer"), { ssr: true });
+const CustomerReviews = dynamic(() => import("../components/CustomerReviews"), {
+  ssr: true,
+  loading: () => <div style={{ height: '280px', background: '#f9fafb' }} />
+});
+const InteractiveValueCards = dynamic(() => import("../components/InteractiveValueCards"), {
+  ssr: true,
+  loading: () => <div style={{ height: '400px', background: '#ffffff' }} />
+});
+const ClientLogos = dynamic(() => import("../components/ClientLogos"), {
+  ssr: true,
+  loading: () => <div style={{ height: '120px', background: '#f9fafb' }} />
+});
+const FinalCTA = dynamic(() => import("../components/FinalCTA"), {
+  ssr: true,
+  loading: () => <div style={{ height: '200px', background: '#1f2937' }} />
+});
+const Footer = dynamic(() => import("../components/Footer"), {
+  ssr: true,
+  loading: () => <div style={{ height: '300px', background: '#374151' }} />
+});
 
 export default function CleanWinPage() {
   return (
