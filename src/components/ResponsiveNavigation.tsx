@@ -12,7 +12,9 @@ export default function ResponsiveNavigation() {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       // Check if click is outside any navigation elements
-      const clickedElement = event.target;
+      const clickedElement = event.target as Element | null;
+      if (!clickedElement) return;
+
       const isInsideNav = clickedElement.closest('nav') ||
                           clickedElement.closest('.mobile-menu-container');
 
