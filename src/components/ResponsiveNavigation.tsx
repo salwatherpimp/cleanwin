@@ -107,6 +107,7 @@ export default function ResponsiveNavigation() {
               width={110}
               height={30}
               priority
+              className="nav-logo-img"
               style={{ width: 'auto', height: '30px' }}
             />
           </a>
