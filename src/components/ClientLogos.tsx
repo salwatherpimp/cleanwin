@@ -100,7 +100,7 @@ export default function ClientLogos() {
               gap: "32px",
               alignItems: "center",
               width: "fit-content",
-              animation: "45s linear infinite scroll-logos",
+              animation: "scroll-logos 45s linear infinite",
             }}
           >
             {/* Original logos */}
