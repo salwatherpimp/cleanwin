@@ -15,64 +15,15 @@ const nextConfig: NextConfig = {
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
-    styledJsx: false, // Completely disable styled-jsx to reduce bundle size
+    styledJsx: false, // Disable styled-jsx to reduce bundle size
   },
-  // Optimize for performance and tree shaking
+  // Optimize for performance and tree shaking - simpler approach
   webpack: (config: any, { dev, isServer }) => {
     if (!dev) {
-      // Aggressive tree shaking
+      // Enable tree shaking
       config.optimization.sideEffects = false;
       config.optimization.usedExports = true;
-      config.optimization.providedExports = true;
-
-      // Optimize vendor chunk splitting to reduce unused code
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        maxSize: 200000, // 200KB max chunk
-        cacheGroups: {
-          // Separate React/React-DOM into their own chunk
-          react: {
-            name: 'react',
-            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-            priority: 50,
-            chunks: 'all',
-            enforce: true,
-          },
-          // Builder.io into separate chunk (likely unused)
-          builder: {
-            name: 'builder',
-            test: /[\\/]node_modules[\\/]@builder\.io[\\/]/,
-            priority: 40,
-            chunks: 'async', // Only load when needed
-          },
-          // Other vendor libraries
-          vendor: {
-            name: 'vendor',
-            test: /[\\/]node_modules[\\/](?!(react|react-dom|@builder\.io)[\\/])/,
-            priority: 30,
-            chunks: 'all',
-            minChunks: 1,
-            reuseExistingChunk: true,
-          },
-          // Common code
-          common: {
-            name: 'common',
-            minChunks: 2,
-            priority: 20,
-            chunks: 'all',
-            reuseExistingChunk: true,
-          },
-        },
-      };
     }
-
-    // Remove unused modules from final bundle
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      // Remove styled-jsx entirely if not used
-      'styled-jsx': false,
-      'styled-jsx/style': false,
-    };
 
     return config;
   },
