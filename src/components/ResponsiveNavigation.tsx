@@ -573,9 +573,9 @@ export default function ResponsiveNavigation() {
             padding: 2px !important;
           }
         }
-        /* Hide CTA dropdown on mobile - use hamburger menu instead */
+        /* On mobile, make CTA button a direct link instead of dropdown */
         @media (max-width: 1023px) {
-          .cta-dropdown-container {
+          .cta-dropdown-container div[style*="position: absolute"] {
             display: none !important;
           }
         }
