@@ -4,7 +4,6 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import ResponsiveNavigation from "../components/ResponsiveNavigation";
 import PureHeroSection from "../components/PureHeroSection";
-import CSSLoader from "../components/CSSLoader";
 
 // Dynamic imports for below-the-fold components to reduce initial bundle
 const CustomerReviews = dynamic(() => import("../components/CustomerReviews"), { ssr: true });
