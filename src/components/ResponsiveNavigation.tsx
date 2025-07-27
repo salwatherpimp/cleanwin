@@ -556,10 +556,11 @@ export default function ResponsiveNavigation() {
             height: 60px !important;
             min-height: 60px !important;
           }
-          /* Larger logo on desktop only */
-          nav img {
+          /* Larger logo on desktop only - more specific selector */
+          nav a img[alt="CleanWin Logo"] {
             width: auto !important;
             height: 42px !important;
+            max-height: 42px !important;
           }
         }
         /* Medium mobile screens - make wider than default */
