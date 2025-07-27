@@ -167,7 +167,7 @@ export default function ResponsiveNavigation() {
                 padding: '8px',
                 marginTop: '8px',
                 minWidth: '220px',
-                zIndex: 100,
+                zIndex: 1001,
                 opacity: isServicesDropdownOpen ? 1 : 0,
                 visibility: isServicesDropdownOpen ? 'visible' : 'hidden',
                 transition: 'opacity 0.2s ease, visibility 0.2s ease',
