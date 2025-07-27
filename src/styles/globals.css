@@ -44,8 +44,15 @@
     padding-top: 20px !important;
   }
 
-  /* Additional fallback selector */
-  div[data-lcp] section {
+  /* Additional fallback selectors for all possible hero containers */
+  div[data-lcp] section,
+  section[style*="position:relative"],
+  section[style*="64vh"] {
+    padding-top: 80px !important;
+  }
+
+  /* Ensure the first section after navigation gets proper spacing */
+  .main-page-container > div:nth-child(2) section:first-child {
     padding-top: 80px !important;
   }
 }
