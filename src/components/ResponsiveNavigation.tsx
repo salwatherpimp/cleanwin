@@ -256,12 +256,7 @@ export default function ResponsiveNavigation() {
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                // On mobile (screen width < 1024px), redirect to contact page
-                if (window.innerWidth < 1024) {
-                  window.location.href = '/kontakt';
-                } else {
-                  setIsCtaDropdownOpen(!isCtaDropdownOpen);
-                }
+                setIsCtaDropdownOpen(!isCtaDropdownOpen);
               }}
               className="cta-button"
               style={{
