@@ -5,6 +5,9 @@ import ResponsiveNavigation from "../components/ResponsiveNavigation";
 import PureHeroSection from "../components/PureHeroSection";
 import CustomerReviews from "../components/CustomerReviews";
 import InteractiveValueCards from "../components/InteractiveValueCards";
+import ClientLogos from "../components/ClientLogos";
+import FinalCTA from "../components/FinalCTA";
+import Footer from "../components/Footer";
 
 export default function CleanWinPage() {
   return (
