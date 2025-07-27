@@ -180,6 +180,31 @@ export default function RootLayout({
             font-display: swap !important;
           }
 
+          /* Critical: CLS prevention for components */
+          .carousel-track {
+            contain: layout style !important;
+            contain-intrinsic-size: 1440px 280px !important;
+          }
+
+          .mobile-card-content {
+            contain: layout style !important;
+            min-height: 24px !important;
+          }
+
+          .mobile-card-content.expanded {
+            contain: none !important;
+          }
+
+          .cleanwin-value-card {
+            contain: layout style !important;
+            contain-intrinsic-size: 100% 98px !important;
+          }
+
+          /* Critical: Remove any remaining styled-jsx */
+          [class*="jsx-"] {
+            all: unset !important;
+          }
+
           * {
             box-sizing: border-box;
             margin: 0;
