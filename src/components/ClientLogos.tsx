@@ -121,13 +121,17 @@ export default function ClientLogos() {
         /* Logo Scroll Animation */
         @keyframes scroll-logos {
           0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-50% - 16px)); }
+          100% { transform: translateX(-50%); }
         }
 
-        /* Apply animation to the container */
+        /* Wrapper container */
+        .logo-container-wrapper {
+          overflow: hidden !important;
+        }
+
+        /* Animated track */
         .grid-mobile-logos {
           animation: scroll-logos 30s linear infinite;
-          width: calc(200% + 64px);
         }
 
         .grid-mobile-logos > div {
@@ -137,10 +141,8 @@ export default function ClientLogos() {
         @media (max-width: 767px) {
           .grid-mobile-logos {
             display: flex !important;
-            overflow: visible !important;
             gap: 24px !important;
             animation: scroll-logos 25s linear infinite;
-            width: calc(200% + 48px) !important;
           }
 
           .logo-container-mobile {
@@ -151,7 +153,7 @@ export default function ClientLogos() {
 
         @media (min-width: 768px) {
           .grid-mobile-logos {
-            justify-content: center;
+            gap: 32px !important;
             animation: scroll-logos 30s linear infinite;
           }
         }
