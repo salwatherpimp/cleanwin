@@ -1,13 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import ResponsiveNavigation from "../components/ResponsiveNavigation";
 import PureHeroSection from "../components/PureHeroSection";
-import CustomerReviews from "../components/CustomerReviews";
-import InteractiveValueCards from "../components/InteractiveValueCards";
-import ClientLogos from "../components/ClientLogos";
-import FinalCTA from "../components/FinalCTA";
-import Footer from "../components/Footer";
+
+// Dynamic imports for below-the-fold components to reduce initial bundle
+const CustomerReviews = dynamic(() => import("../components/CustomerReviews"), { ssr: true });
+const InteractiveValueCards = dynamic(() => import("../components/InteractiveValueCards"), { ssr: true });
+const ClientLogos = dynamic(() => import("../components/ClientLogos"), { ssr: true });
+const FinalCTA = dynamic(() => import("../components/FinalCTA"), { ssr: true });
+const Footer = dynamic(() => import("../components/Footer"), { ssr: true });
 
 export default function CleanWinPage() {
   return (
