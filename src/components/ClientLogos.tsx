@@ -116,47 +116,7 @@ export default function ClientLogos() {
         </div>
       </div>
 
-      <style jsx>{`
-        /* Logo Scroll Animation */
-        @keyframes scroll-logos {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
 
-        /* Wrapper container */
-        .logo-container-wrapper {
-          overflow: hidden !important;
-        }
-
-        /* Animated track */
-        .grid-mobile-logos {
-          animation: scroll-logos 45s linear infinite;
-        }
-
-        .grid-mobile-logos > div {
-          flex-shrink: 0 !important;
-        }
-
-        @media (max-width: 767px) {
-          .grid-mobile-logos {
-            display: flex !important;
-            gap: 24px !important;
-            animation: scroll-logos 40s linear infinite;
-          }
-
-          .logo-container-mobile {
-            width: 80px !important;
-            height: 40px !important;
-          }
-        }
-
-        @media (min-width: 768px) {
-          .grid-mobile-logos {
-            gap: 32px !important;
-            animation: scroll-logos 45s linear infinite;
-          }
-        }
-      `}</style>
     </section>
   );
 }
