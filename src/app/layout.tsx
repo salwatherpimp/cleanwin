@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
-// Only import critical CSS - others will be loaded async
+// Import CSS in order of priority - critical first
 import "../styles/critical.css";
+import "../styles/globals.css";
+import "../styles/components.css";
 
 export const metadata: Metadata = {
   title: "CleanWin - Professional Cleaning Services",
