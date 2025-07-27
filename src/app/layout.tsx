@@ -26,9 +26,12 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        {/* Critical domain preconnections for performance */}
+        {/* Critical domain preconnections for performance - Max 4 as recommended */}
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <link rel="dns-prefetch" href="https://vercel.com" />
 
         {/* CRITICAL: Preload hero images with performance hints */}
         <link
