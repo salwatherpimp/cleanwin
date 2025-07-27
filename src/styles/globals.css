@@ -50,3 +50,22 @@
     max-height: none !important;
   }
 }
+
+/* Logo scroll animation - moved from styled-jsx to reduce bundle size */
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Mobile logo carousel adjustments */
+@media (max-width: 767px) {
+  div[style*="animation"][style*="scroll-logos"] {
+    gap: 24px !important;
+    animation-duration: 40s !important;
+  }
+
+  .logo-container-mobile {
+    width: 80px !important;
+    height: 40px !important;
+  }
+}
