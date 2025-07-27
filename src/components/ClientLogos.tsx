@@ -88,25 +88,32 @@ export default function ClientLogos() {
           +500 Firmen &amp; Haushalte reinigen mit Cleanwin
         </p>
         <div
-          className="grid-mobile-logos"
+          className="logo-container-wrapper"
           style={{
-            display: "flex",
             overflow: "hidden",
-            gap: "32px",
             width: "100%",
-            alignItems: "center",
             position: "relative",
           }}
         >
-          {/* Original logos */}
-          {logos.map((logo, index) => (
-            <LogoItem key={`original-${index}`} logo={logo} />
-          ))}
-          
-          {/* Duplicate logos for seamless looping */}
-          {logos.map((logo, index) => (
-            <LogoItem key={`duplicate-${index}`} logo={logo} isDuplicate />
-          ))}
+          <div
+            className="grid-mobile-logos"
+            style={{
+              display: "flex",
+              gap: "32px",
+              alignItems: "center",
+              width: "fit-content",
+            }}
+          >
+            {/* Original logos */}
+            {logos.map((logo, index) => (
+              <LogoItem key={`original-${index}`} logo={logo} />
+            ))}
+
+            {/* Duplicate logos for seamless looping */}
+            {logos.map((logo, index) => (
+              <LogoItem key={`duplicate-${index}`} logo={logo} isDuplicate />
+            ))}
+          </div>
         </div>
       </div>
 
