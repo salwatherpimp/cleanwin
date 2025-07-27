@@ -574,6 +574,14 @@ export default function ResponsiveNavigation() {
           }
         }
         /* Ensure dropdowns work properly on all screen sizes */
+        @media (max-width: 1023px) {
+          .cta-dropdown-container div[style*="position: absolute"] {
+            right: 0 !important;
+            left: auto !important;
+            min-width: 200px !important;
+            max-width: calc(100vw - 32px) !important;
+          }
+        }
       `}</style>
     </>
   );
