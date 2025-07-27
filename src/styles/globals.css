@@ -35,11 +35,17 @@
 
 /* Prevent mobile H1 overlap with fixed navigation */
 @media (max-width: 768px) {
-  .hero-section {
+  section.hero-section {
     padding-top: 80px !important;
+    margin-top: 0 !important;
   }
 
-  .hero-content {
+  .hero-section .hero-content {
     padding-top: 20px !important;
+  }
+
+  /* Additional fallback selector */
+  div[data-lcp] section {
+    padding-top: 80px !important;
   }
 }
