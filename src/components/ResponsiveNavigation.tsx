@@ -370,6 +370,7 @@ export default function ResponsiveNavigation() {
               setIsMobileMenuOpen(!isMobileMenuOpen);
             }}
             className="hamburger-menu"
+            aria-label="Navigation menu öffnen"
             style={{
               display: 'flex',
               flexDirection: 'column',
