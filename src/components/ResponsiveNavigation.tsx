@@ -91,7 +91,7 @@ export default function ResponsiveNavigation() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          overflow: 'hidden',
+          overflow: 'visible',
         }}>
 
           {/* Logo */}
