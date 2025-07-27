@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
-// All CSS now inlined - no external CSS imports to prevent render blocking
+// Import CSS with critical styles inlined above to minimize render blocking
+import "../styles/globals.css";
+import "../styles/components.css";
 
 export const metadata: Metadata = {
   title: "CleanWin - Professional Cleaning Services",
