@@ -35,24 +35,19 @@
 
 /* Prevent mobile H1 overlap with fixed navigation */
 @media (max-width: 768px) {
-  section.hero-section {
+  /* Target hero section with maximum specificity */
+  html body .main-page-container div[data-lcp] section.hero-section,
+  html body .main-page-container div[data-lcp] section,
+  html body section.hero-section,
+  html body section[style*="position:relative"][style*="64vh"] {
     padding-top: 80px !important;
     margin-top: 0 !important;
+    box-sizing: border-box !important;
   }
 
-  .hero-section .hero-content {
+  /* Adjust content container */
+  html body .hero-content,
+  html body div[style*="position:relative"][style*="z-index:10"] {
     padding-top: 20px !important;
-  }
-
-  /* Additional fallback selectors for all possible hero containers */
-  div[data-lcp] section,
-  section[style*="position:relative"],
-  section[style*="64vh"] {
-    padding-top: 80px !important;
-  }
-
-  /* Ensure the first section after navigation gets proper spacing */
-  .main-page-container > div:nth-child(2) section:first-child {
-    padding-top: 80px !important;
   }
 }
