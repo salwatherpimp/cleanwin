@@ -113,21 +113,25 @@ export default function ClientLogos() {
         /* Logo Scroll Animation */
         @keyframes scroll-logos {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-1368px); }
+          100% { transform: translateX(-100%); }
         }
 
-        /* Apply logo animation to all viewports */
+        /* Apply animation to the container, not individual items */
+        .grid-mobile-logos {
+          animation: scroll-logos 30s linear infinite;
+        }
+
         .grid-mobile-logos > div {
           flex-shrink: 0 !important;
-          animation: scroll-logos 50s linear infinite !important;
         }
 
         @media (max-width: 767px) {
           .grid-mobile-logos {
             display: flex !important;
             overflow: hidden !important;
-            gap: 32px !important;
+            gap: 24px !important;
             width: 100% !important;
+            animation: scroll-logos 25s linear infinite;
           }
 
           .logo-container-mobile {
