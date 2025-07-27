@@ -95,6 +95,7 @@ export default function ClientLogos() {
             gap: "32px",
             width: "100%",
             alignItems: "center",
+            position: "relative",
           }}
         >
           {/* Original logos */}
