@@ -553,6 +553,13 @@ export default function ResponsiveNavigation() {
           }
           nav {
             padding: 8px 24px !important;
+            height: 60px !important;
+            min-height: 60px !important;
+          }
+          /* Larger logo on desktop only */
+          nav img {
+            width: auto !important;
+            height: 42px !important;
           }
         }
         /* Medium mobile screens - make wider than default */
