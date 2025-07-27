@@ -16,30 +16,48 @@ const nextConfig: NextConfig = {
   },
   // Optimize bundle splitting and tree shaking
   webpack: (config: any, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      config.optimization = {
-        ...config.optimization,
-        sideEffects: false,
-        usedExports: true,
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            framework: {
-              name: 'framework',
-              test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-              priority: 40,
-              enforce: true,
-            },
-            commons: {
-              name: 'commons',
-              minChunks: 2,
-              priority: 20,
-              reuseExistingChunk: true,
-            },
+    // Enable aggressive tree shaking and dead code elimination
+    config.optimization = {
+      ...config.optimization,
+      sideEffects: false,
+      usedExports: true,
+      providedExports: true,
+      minimize: !dev,
+      splitChunks: {
+        chunks: 'all',
+        maxSize: 244000, // 244KB max chunk size
+        cacheGroups: {
+          framework: {
+            name: 'framework',
+            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            priority: 40,
+            enforce: true,
+            chunks: 'all',
+          },
+          vendor: {
+            name: 'vendor',
+            test: /[\\/]node_modules[\\/](?!(react|react-dom)[\\/])/,
+            priority: 30,
+            chunks: 'all',
+            reuseExistingChunk: true,
+          },
+          commons: {
+            name: 'commons',
+            minChunks: 2,
+            priority: 20,
+            reuseExistingChunk: true,
+            chunks: 'all',
           },
         },
-      };
-    }
+      },
+    };
+
+    // Tree shake unused exports
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': './src',
+    };
+
     return config;
   },
 
