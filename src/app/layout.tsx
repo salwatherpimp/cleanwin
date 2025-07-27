@@ -53,13 +53,6 @@ export default function RootLayout({
         <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
         <link rel="modulepreload" href="/_next/static/chunks/main.js" />
 
-        {/* Async load non-critical CSS to prevent render blocking */}
-        <link rel="preload" href="/_next/static/css/globals.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-        <noscript><link rel="stylesheet" href="/_next/static/css/globals.css" /></noscript>
-
-        <link rel="preload" href="/_next/static/css/components.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-        <noscript><link rel="stylesheet" href="/_next/static/css/components.css" /></noscript>
-
         <style>{`
           /* Critical above-the-fold CSS */
           :root {
