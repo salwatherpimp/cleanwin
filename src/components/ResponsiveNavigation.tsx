@@ -118,8 +118,8 @@ export default function ResponsiveNavigation() {
           <div style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '40px',
-            marginLeft: '48px',
+            gap: '32px',
+            marginLeft: '32px',
           }} className="desktop-menu">
             {/* Services Dropdown */}
             <div style={{ position: 'relative' }} className="services-dropdown-container">
