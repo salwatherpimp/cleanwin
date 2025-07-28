@@ -73,52 +73,166 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - cache-first strategy for hero images
+// Advanced fetch strategies with intelligent caching
 self.addEventListener('fetch', (event) => {
-  const url = event.request.url;
-  
-  // Handle hero images with cache-first strategy
-  if (HERO_ASSETS.some(asset => url.includes(asset.split('/').pop()))) {
-    event.respondWith(
-      caches.open(CACHE_NAME)
-        .then((cache) => {
-          return cache.match(event.request)
-            .then((response) => {
-              if (response) {
-                // Cache hit - return immediately (0ms network delay)
-                return response;
-              }
-              
-              // Cache miss - fetch and cache
-              return fetch(event.request)
-                .then((fetchResponse) => {
-                  // Clone response before caching
-                  const responseClone = fetchResponse.clone();
-                  cache.put(event.request, responseClone);
-                  return fetchResponse;
-                })
-                .catch(() => {
-                  // Fallback to gradient placeholder
-                  return new Response(
-                    `<svg width="480" height="270" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0d9488"/><stop offset="100%" stop-color="#075985"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#a)"/></svg>`,
-                    {
-                      headers: {
-                        'Content-Type': 'image/svg+xml',
-                        'Cache-Control': 'max-age=31536000'
-                      }
-                    }
-                  );
-                });
-            });
-        })
-    );
+  const url = new URL(event.request.url);
+  const request = event.request;
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') {
+    return;
   }
-  
-  // Handle other requests normally
+
+  // Hero images - Cache First (instant loading)
+  if (HERO_ASSETS.some(asset => url.href.includes(asset.split('/').pop()))) {
+    event.respondWith(handleHeroAssets(request));
+  }
+
+  // Critical JS/CSS - Stale While Revalidate
+  else if (CRITICAL_ASSETS.some(asset => url.pathname.includes(asset))) {
+    event.respondWith(handleCriticalAssets(request));
+  }
+
+  // Static assets - Cache First with long TTL
+  else if (STATIC_ASSETS.some(asset => url.pathname.includes(asset))) {
+    event.respondWith(handleStaticAssets(request));
+  }
+
+  // Images - Cache First with image optimization
+  else if (request.destination === 'image' || /\.(jpg|jpeg|png|gif|webp|avif|svg)$/i.test(url.pathname)) {
+    event.respondWith(handleImageAssets(request));
+  }
+
+  // API calls - Network First with short cache
+  else if (url.pathname.startsWith('/api/')) {
+    event.respondWith(handleAPIRequests(request));
+  }
+
+  // HTML pages - Network First
+  else if (request.destination === 'document') {
+    event.respondWith(handleDocumentRequests(request));
+  }
+
+  // Everything else - Network with cache fallback
   else {
-    event.respondWith(fetch(event.request));
+    event.respondWith(handleGenericRequests(request));
   }
 });
+
+// Cache-First strategy for hero assets (0ms repeat visits)
+async function handleHeroAssets(request) {
+  const cache = await caches.open(CACHE_NAMES.HERO);
+  const cached = await cache.match(request);
+
+  if (cached) {
+    return cached; // Instant return from cache
+  }
+
+  try {
+    const response = await fetch(request);
+    cache.put(request, response.clone());
+    return response;
+  } catch (error) {
+    // Fallback to optimized gradient
+    return new Response(
+      '<svg width="480" height="270" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0d9488"/><stop offset="100%" stop-color="#075985"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#a)"/></svg>',
+      { headers: { 'Content-Type': 'image/svg+xml', 'Cache-Control': 'max-age=31536000' } }
+    );
+  }
+}
+
+// Stale-While-Revalidate for critical assets
+async function handleCriticalAssets(request) {
+  const cache = await caches.open(CACHE_NAMES.CRITICAL);
+  const cached = await cache.match(request);
+
+  const fetchPromise = fetch(request).then(response => {
+    cache.put(request, response.clone());
+    return response;
+  });
+
+  return cached || await fetchPromise;
+}
+
+// Cache-First for static assets
+async function handleStaticAssets(request) {
+  const cache = await caches.open(CACHE_NAMES.STATIC);
+  const cached = await cache.match(request);
+
+  if (cached) {
+    return cached;
+  }
+
+  const response = await fetch(request);
+  cache.put(request, response.clone());
+  return response;
+}
+
+// Cache-First for images with optimization
+async function handleImageAssets(request) {
+  const cache = await caches.open(CACHE_NAMES.IMAGES);
+  const cached = await cache.match(request);
+
+  if (cached) {
+    return cached;
+  }
+
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      cache.put(request, response.clone());
+    }
+    return response;
+  } catch (error) {
+    // Return a placeholder image
+    return new Response('', { status: 404 });
+  }
+}
+
+// Network-First for API requests with short cache
+async function handleAPIRequests(request) {
+  const cache = await caches.open(CACHE_NAMES.API);
+
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      // Cache API responses for 5 minutes
+      const responseClone = response.clone();
+      setTimeout(() => cache.delete(request), 300000); // 5 minutes
+      cache.put(request, responseClone);
+    }
+    return response;
+  } catch (error) {
+    const cached = await cache.match(request);
+    return cached || new Response('Network error', { status: 503 });
+  }
+}
+
+// Network-First for documents
+async function handleDocumentRequests(request) {
+  try {
+    return await fetch(request);
+  } catch (error) {
+    // Could implement offline page here
+    return new Response('Offline', { status: 503 });
+  }
+}
+
+// Generic network with cache fallback
+async function handleGenericRequests(request) {
+  const cache = await caches.open(CACHE_NAMES.STATIC);
+
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      cache.put(request, response.clone());
+    }
+    return response;
+  } catch (error) {
+    const cached = await cache.match(request);
+    return cached || new Response('Network error', { status: 503 });
+  }
+}
 
 // Background sync for preloading hero images
 self.addEventListener('sync', (event) => {
