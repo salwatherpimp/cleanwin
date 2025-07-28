@@ -45,8 +45,7 @@ export default function CLSOptimizer() {
       buttons.forEach((btn: Element) => {
         const button = btn as HTMLElement;
         if (!button.style.minHeight) {
-          const styles = window.getComputedStyle(button);
-          const height = button.offsetHeight;
+        const height = button.offsetHeight;
           if (height > 0) {
             button.style.minHeight = `${height}px`;
             button.style.contain = 'layout style';
@@ -174,20 +173,22 @@ export default function CLSOptimizer() {
       try {
         const clsObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if ((entry as any).hadRecentInput) {
+            const layoutShiftEntry = entry as LayoutShift;
+            if (layoutShiftEntry.hadRecentInput) {
               continue; // Ignore shifts caused by user interaction
             }
-            
+
             // Log significant layout shifts for debugging
-            if ((entry as any).value > 0.1) {
+            if (layoutShiftEntry.value > 0.1) {
               console.warn('Significant CLS detected:', entry);
             }
           }
         });
         
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
+      } catch (error) {
         // Silently fail if PerformanceObserver not supported
+        console.debug('PerformanceObserver not supported:', error);
       }
     }
 
