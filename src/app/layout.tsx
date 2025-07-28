@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de" className={inter.variable}>
+    <html lang="de">
       <head>
         {/* Critical domain preconnections for performance - Max 4 as recommended */}
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
