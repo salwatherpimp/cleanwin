@@ -153,16 +153,15 @@ export default function RootLayout({
                   document.head.appendChild(link);
                 }
 
+                // Only load CSS files that actually exist
+                const cssFiles = ['/styles/globals.css', '/styles/components.css'];
+
                 if (document.readyState === 'complete') {
-                  loadCSS('/styles/globals.css');
-                  loadCSS('/styles/components.css');
-                  loadCSS('/styles/hero-critical.css');
+                  cssFiles.forEach(loadCSS);
                 } else {
                   window.addEventListener('load', function() {
                     setTimeout(function() {
-                      loadCSS('/styles/globals.css');
-                      loadCSS('/styles/components.css');
-                      loadCSS('/styles/hero-critical.css');
+                      cssFiles.forEach(loadCSS);
                     }, 50);
                   });
                 }
