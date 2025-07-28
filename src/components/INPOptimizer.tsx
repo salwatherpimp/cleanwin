@@ -5,32 +5,32 @@ import { useEffect } from 'react';
 // INP (Interaction to Next Paint) optimization component
 export default function INPOptimizer() {
   useEffect(() => {
+    // Utility functions - defined first
+    const debounce = (func: Function, wait: number) => {
+      let timeout: NodeJS.Timeout;
+      return function executedFunction(...args: any[]) {
+        const later = () => {
+          clearTimeout(timeout);
+          func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    };
+
+    const throttle = (func: Function, limit: number) => {
+      let inThrottle: boolean;
+      return function executedFunction(...args: any[]) {
+        if (!inThrottle) {
+          func.apply(null, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+        }
+      };
+    };
+
     // Optimize event handlers for better INP scores
     const optimizeEventHandlers = () => {
-      // Debounce function for expensive operations
-      const debounce = (func: Function, wait: number) => {
-        let timeout: NodeJS.Timeout;
-        return function executedFunction(...args: any[]) {
-          const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-          };
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-        };
-      };
-
-      // Throttle function for scroll/resize events
-      const throttle = (func: Function, limit: number) => {
-        let inThrottle: boolean;
-        return function executedFunction(...args: any[]) {
-          if (!inThrottle) {
-            func.apply(null, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-          }
-        };
-      };
 
       // Optimize button interactions
       const buttons = document.querySelectorAll('button, a[role="button"], .btn, .hero-cta-optimized');
