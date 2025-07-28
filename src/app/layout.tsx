@@ -333,7 +333,14 @@ export default function RootLayout({
             }
           }
 
-          @media (max-width: 1200px) {
+          @media (max-width: 767px) {
+            .services-grid {
+              grid-template-columns: repeat(2, 1fr) !important;
+              gap: 16px !important;
+            }
+          }
+
+          @media (min-width: 768px) and (max-width: 1200px) {
             .services-grid {
               grid-template-columns: repeat(2, 1fr) !important;
             }
