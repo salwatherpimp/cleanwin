@@ -1,0 +1,111 @@
+// Service Worker for LCP optimization - Hero image caching
+const CACHE_NAME = 'cleanwin-hero-v1';
+const HERO_ASSETS = [
+  'https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif',
+  'https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif'
+];
+
+// Install event - preload critical hero assets
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        // Aggressively cache hero images
+        return cache.addAll(HERO_ASSETS);
+      })
+      .then(() => {
+        // Force activation
+        return self.skipWaiting();
+      })
+  );
+});
+
+// Activate event - cleanup old caches
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => {
+      return self.clients.claim();
+    })
+  );
+});
+
+// Fetch event - cache-first strategy for hero images
+self.addEventListener('fetch', (event) => {
+  const url = event.request.url;
+  
+  // Handle hero images with cache-first strategy
+  if (HERO_ASSETS.some(asset => url.includes(asset.split('/').pop()))) {
+    event.respondWith(
+      caches.open(CACHE_NAME)
+        .then((cache) => {
+          return cache.match(event.request)
+            .then((response) => {
+              if (response) {
+                // Cache hit - return immediately (0ms network delay)
+                return response;
+              }
+              
+              // Cache miss - fetch and cache
+              return fetch(event.request)
+                .then((fetchResponse) => {
+                  // Clone response before caching
+                  const responseClone = fetchResponse.clone();
+                  cache.put(event.request, responseClone);
+                  return fetchResponse;
+                })
+                .catch(() => {
+                  // Fallback to gradient placeholder
+                  return new Response(
+                    `<svg width="480" height="270" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0d9488"/><stop offset="100%" stop-color="#075985"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#a)"/></svg>`,
+                    {
+                      headers: {
+                        'Content-Type': 'image/svg+xml',
+                        'Cache-Control': 'max-age=31536000'
+                      }
+                    }
+                  );
+                });
+            });
+        })
+    );
+  }
+  
+  // Handle other requests normally
+  else {
+    event.respondWith(fetch(event.request));
+  }
+});
+
+// Background sync for preloading hero images
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'hero-preload') {
+    event.waitUntil(
+      caches.open(CACHE_NAME)
+        .then((cache) => {
+          return cache.addAll(HERO_ASSETS);
+        })
+    );
+  }
+});
+
+// Performance optimization: Immediate response for repeated requests
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'PRELOAD_HERO') {
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        HERO_ASSETS.forEach((url) => {
+          fetch(url).then((response) => {
+            cache.put(url, response.clone());
+          });
+        });
+      });
+  }
+});
