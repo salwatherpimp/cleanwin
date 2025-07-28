@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/components.css";
 
