@@ -1228,7 +1228,7 @@ className="service-card"
           .grid-mobile-3 .usp-card {
             min-width: 280px !important;
             flex-shrink: 0 !important;
-            animation: usp-mobile-scroll 20s linear infinite !important;
+            animation: usp-mobile-scroll 16s linear infinite !important;
           }
 
           .grid-mobile-3 {
