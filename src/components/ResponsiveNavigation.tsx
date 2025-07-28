@@ -599,11 +599,13 @@ export default function ResponsiveNavigation() {
             padding: 8px 14px !important;
           }
 
-          /* Equal spacing for medium mobile */
+          /* Perfect balance for medium mobile */
+          nav > a:first-child {
+            margin-right: 22px !important;
+          }
+
           .cta-dropdown-container {
-            margin-left: auto !important;
-            margin-right: 12px !important;
-            padding-left: 6px !important;
+            margin: 0 22px 0 auto !important;
           }
         }
         @media (max-width: 480px) {
