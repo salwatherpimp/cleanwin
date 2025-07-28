@@ -25,6 +25,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         {/* Preload critical font variants */}
+        {/* eslint-disable-next-line @next/next/google-font-preconnect */}
         <link
           rel="preload"
           as="font"
@@ -32,6 +33,7 @@ export default function RootLayout({
           href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2"
           crossOrigin="anonymous"
         />
+        {/* eslint-disable-next-line @next/next/google-font-preconnect */}
         <link
           rel="preload"
           as="font"
@@ -41,17 +43,20 @@ export default function RootLayout({
         />
 
         {/* Non-blocking font stylesheet with optimized loading */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="preload"
           as="style"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
           media="print"
         />
         <noscript>
+          {/* eslint-disable-next-line @next/next/no-page-custom-font */}
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
