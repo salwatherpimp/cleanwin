@@ -57,11 +57,24 @@ export default function RootLayout({
         <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
         <link rel="modulepreload" href="/_next/static/chunks/main.js" />
 
-        {/* Critical image decode optimization */}
+        {/* Critical image decode optimization + Service Worker */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(){
+                // Register Service Worker for hero caching
+                if ('serviceWorker' in navigator) {
+                  window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                      // Send preload message to SW
+                      if (registration.active) {
+                        registration.active.postMessage({type: 'PRELOAD_HERO'});
+                      }
+                    }).catch(function() {});
+                  });
+                }
+
+                // Critical image decode optimization
                 var heroImg = new Image();
                 heroImg.decoding = 'async';
                 heroImg.fetchPriority = 'high';
