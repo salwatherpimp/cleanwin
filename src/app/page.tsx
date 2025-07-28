@@ -4,6 +4,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import ResponsiveNavigation from "../components/ResponsiveNavigation";
 import PureHeroSection from "../components/PureHeroSection";
+import HeroProgressiveEnhancement from "../components/HeroProgressiveEnhancement";
 
 // Dynamic imports for below-the-fold components to reduce initial bundle
 const CustomerReviews = dynamic(() => import("../components/CustomerReviews"), {
