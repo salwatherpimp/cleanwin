@@ -75,17 +75,12 @@ export default function RootLayout({
                   }
                 });
 
-                // Register Service Worker for hero caching
-                if ('serviceWorker' in navigator) {
-                  window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                      // Send preload message to SW
-                      if (registration.active) {
-                        registration.active.postMessage({type: 'PRELOAD_HERO'});
-                      }
-                    }).catch(function() {});
-                  });
-                }
+                // Simplified Service Worker registration (disabled for debugging)
+                // if ('serviceWorker' in navigator) {
+                //   window.addEventListener('load', function() {
+                //     navigator.serviceWorker.register('/sw.js').catch(function() {});
+                //   });
+                // }
 
                 // Critical image decode optimization
                 var heroImg = new Image();
