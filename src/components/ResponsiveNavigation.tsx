@@ -249,9 +249,6 @@ export default function ResponsiveNavigation() {
             </a>
           </div>
 
-          {/* Spacer div for mobile to create equal gaps */}
-          <div style={{ flex: 1 }} className="mobile-spacer"></div>
-
           {/* CTA Button */}
           <div style={{
             position: 'relative',
@@ -555,13 +552,10 @@ export default function ResponsiveNavigation() {
             min-height: 56px !important;
           }
 
-          /* Remove spacer and fix spacing manually */
-          .mobile-spacer {
-            display: none !important;
-          }
+          /* Create equal spacing between logo-CTA-burger */
           .cta-dropdown-container {
-            margin-left: 20px !important;
-            margin-right: 20px !important;
+            margin-left: auto !important;
+            margin-right: 16px !important;
           }
         }
         @media (min-width: 1024px) {
@@ -569,9 +563,6 @@ export default function ResponsiveNavigation() {
             display: flex !important;
           }
           .hamburger-menu {
-            display: none !important;
-          }
-          .mobile-spacer {
             display: none !important;
           }
           nav {
@@ -595,13 +586,10 @@ export default function ResponsiveNavigation() {
             padding: 8px 14px !important;
           }
 
-          /* Medium mobile spacing */
-          .mobile-spacer {
-            display: none !important;
-          }
+          /* Equal spacing for medium mobile */
           .cta-dropdown-container {
-            margin-left: 18px !important;
-            margin-right: 18px !important;
+            margin-left: auto !important;
+            margin-right: 14px !important;
           }
         }
         @media (max-width: 480px) {
@@ -627,13 +615,10 @@ export default function ResponsiveNavigation() {
             padding: 2px !important;
           }
 
-          /* Small mobile spacing */
-          .mobile-spacer {
-            display: none !important;
-          }
+          /* Equal spacing for small mobile */
           .cta-dropdown-container {
-            margin-left: 16px !important;
-            margin-right: 16px !important;
+            margin-left: auto !important;
+            margin-right: 12px !important;
           }
         }
         /* Ensure dropdowns work properly on all screen sizes */
