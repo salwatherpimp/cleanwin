@@ -555,9 +555,11 @@ export default function ResponsiveNavigation() {
             min-height: 56px !important;
           }
 
-          /* Create equal spacing between logo-CTA-burger */
+          /* Mobile spacer creates equal gaps */
+          .mobile-spacer {
+            display: block !important;
+          }
           .cta-dropdown-container {
-            margin-left: auto !important;
             margin-right: 16px !important;
           }
         }
@@ -566,6 +568,9 @@ export default function ResponsiveNavigation() {
             display: flex !important;
           }
           .hamburger-menu {
+            display: none !important;
+          }
+          .mobile-spacer {
             display: none !important;
           }
           nav {
@@ -589,9 +594,11 @@ export default function ResponsiveNavigation() {
             padding: 8px 14px !important;
           }
 
-          /* Equal spacing for medium mobile */
+          /* Medium mobile spacing */
+          .mobile-spacer {
+            display: block !important;
+          }
           .cta-dropdown-container {
-            margin-left: auto !important;
             margin-right: 14px !important;
           }
         }
@@ -618,9 +625,11 @@ export default function ResponsiveNavigation() {
             padding: 2px !important;
           }
 
-          /* Equal spacing for small mobile */
+          /* Small mobile spacing */
+          .mobile-spacer {
+            display: block !important;
+          }
           .cta-dropdown-container {
-            margin-left: auto !important;
             margin-right: 12px !important;
           }
         }
