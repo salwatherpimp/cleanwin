@@ -232,7 +232,7 @@ export default function INPOptimizer() {
       document.addEventListener('keydown', throttle((e: unknown) => {
         const event = e as KeyboardEvent;
         // Optimize tab navigation
-        if (e.key === 'Tab') {
+        if (event.key === 'Tab') {
           requestAnimationFrame(() => {
             const activeElement = document.activeElement as HTMLElement;
             if (activeElement) {
