@@ -21,6 +21,12 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  // Disable dev overlay in problematic environments
+  devIndicators: {
+    buildActivity: true,
+    buildActivityPosition: 'bottom-right',
+  },
+
   // Performance budgets for Core Web Vitals
   performanceBudgets: {
     maxAssetSize: 250000, // 250KB
