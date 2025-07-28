@@ -321,19 +321,20 @@ export default function RootLayout({
               display: flex !important;
               overflow-x: auto !important;
               overflow-y: hidden !important;
-              gap: 24px !important;
+              gap: 16px !important;
               width: 100% !important;
               scroll-snap-type: x mandatory !important;
               -webkit-overflow-scrolling: touch !important;
               padding: 0 16px !important;
+              justify-content: flex-start !important;
             }
 
           }
 
           @media (max-width: 767px) {
             .services-grid {
-              grid-template-columns: repeat(2, 1fr) !important;
-              gap: 16px !important;
+              grid-template-columns: 1fr !important;
+              gap: 20px !important;
             }
           }
 
@@ -422,6 +423,15 @@ export default function RootLayout({
 
             .grid-mobile-3::-webkit-scrollbar {
               display: none !important;
+            }
+
+            /* Fix USP cards width and prevent animation issues */
+            .grid-mobile-3 .usp-card {
+              min-width: 280px !important;
+              max-width: 280px !important;
+              flex-shrink: 0 !important;
+              animation: none !important;
+              transform: none !important;
             }
           }
         `}</style>
