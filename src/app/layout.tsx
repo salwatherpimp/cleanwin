@@ -425,13 +425,11 @@ export default function RootLayout({
               display: none !important;
             }
 
-            /* Fix USP cards width and prevent animation issues */
+            /* Fix USP cards width */
             .grid-mobile-3 .usp-card {
               min-width: 280px !important;
               max-width: 280px !important;
               flex-shrink: 0 !important;
-              animation: none !important;
-              transform: none !important;
             }
           }
         `}</style>
