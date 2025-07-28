@@ -7,14 +7,26 @@ export default function PureHeroSection() {
         __html: `
           <section class="hero-lcp-container">
             <picture class="hero-picture">
+              <!-- Mobile AVIF -->
               <source
                 media="(max-width: 768px)"
                 srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-                type="image/svg+xml">
-              <source 
-                media="(min-width: 769px)" 
-                srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif" 
                 type="image/avif">
+              <!-- Mobile WebP fallback -->
+              <source
+                media="(max-width: 768px)"
+                srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp"
+                type="image/webp">
+              <!-- Desktop AVIF -->
+              <source
+                media="(min-width: 769px)"
+                srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+                type="image/avif">
+              <!-- Desktop WebP fallback -->
+              <source
+                media="(min-width: 769px)"
+                srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp"
+                type="image/webp">
               <img 
                 class="hero-image"
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
