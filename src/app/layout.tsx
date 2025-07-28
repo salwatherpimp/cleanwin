@@ -240,40 +240,6 @@ export default function RootLayout({
 
           /* Mobile responsive fixes */
           @media (max-width: 768px) {
-            .hero-content-optimized {
-              margin-top: 85px !important;
-              padding: 20px 16px 40px 16px !important;
-            }
-            .hero-lcp-container {
-              min-height: 600px !important;
-              height: auto !important;
-            }
-            .hero-headline-optimized {
-              font-size: 28px !important;
-              line-height: 34px !important;
-              margin-bottom: 16px !important;
-            }
-            .hero-description-optimized {
-              font-size: 15px !important;
-              line-height: 23px !important;
-              margin-bottom: 24px !important;
-            }
-            .hero-rating-badge {
-              padding: 8px 14px !important;
-              margin-bottom: 24px !important;
-              font-size: 13px !important;
-            }
-            .hero-cta-optimized {
-              padding: 14px 28px !important;
-              font-size: 14px !important;
-              min-height: 48px !important;
-              display: inline-flex !important;
-              align-items: center !important;
-              justify-content: center !important;
-              cursor: pointer !important;
-              -webkit-tap-highlight-color: transparent !important;
-            }
-
             /* Fix mobile sections spacing */
             section {
               padding: 32px 16px !important;
@@ -283,21 +249,6 @@ export default function RootLayout({
             img {
               will-change: auto !important;
               transform: none !important;
-            }
-          }
-
-          @media (min-width: 769px) {
-            .hero-headline-optimized {
-              font-size: 48px;
-              line-height: 54px;
-            }
-            .hero-description-optimized {
-              font-size: 18px;
-              line-height: 28px;
-            }
-            .hero-lcp-container {
-              height: 612px;
-              min-height: 612px;
             }
           }
 
