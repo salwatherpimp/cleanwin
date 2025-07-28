@@ -1,6 +1,4 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   // Experimental features - cleaned up for stability
   experimental: {
     optimizeCss: false,
