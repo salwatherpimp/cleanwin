@@ -143,6 +143,37 @@ export default function RootLayout({
           /* Duplicate styles removed - optimized above */
         `}</style>
 
+        {/* Deferred CSS loading for non-critical styles */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Load non-critical CSS asynchronously after page load
+              (function(){
+                function loadCSS(href) {
+                  var link = document.createElement('link');
+                  link.rel = 'stylesheet';
+                  link.href = href;
+                  link.media = 'all';
+                  document.head.appendChild(link);
+                }
+
+                if (document.readyState === 'complete') {
+                  loadCSS('/styles/globals.css');
+                  loadCSS('/styles/components.css');
+                  loadCSS('/styles/hero-critical.css');
+                } else {
+                  window.addEventListener('load', function() {
+                    setTimeout(function() {
+                      loadCSS('/styles/globals.css');
+                      loadCSS('/styles/components.css');
+                      loadCSS('/styles/hero-critical.css');
+                    }, 50);
+                  });
+                }
+              })();
+            `
+          }}
+        />
 
       </head>
       <body style={{WebkitFontSmoothing: "antialiased", MozOsxFontSmoothing: "grayscale"}}>{children}</body>
