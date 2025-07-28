@@ -139,36 +139,7 @@ export default function RootLayout({
           /* Duplicate styles removed - optimized above */
         `}</style>
 
-        {/* Deferred CSS loading for non-critical styles */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Load non-critical CSS asynchronously after page load
-              (function(){
-                function loadCSS(href) {
-                  var link = document.createElement('link');
-                  link.rel = 'stylesheet';
-                  link.href = href;
-                  link.media = 'all';
-                  document.head.appendChild(link);
-                }
-
-                // Only load CSS files that actually exist - correct paths
-                const cssFiles = ['/_next/static/css/globals.css', '/_next/static/css/components.css'];
-
-                if (document.readyState === 'complete') {
-                  cssFiles.forEach(loadCSS);
-                } else {
-                  window.addEventListener('load', function() {
-                    setTimeout(function() {
-                      cssFiles.forEach(loadCSS);
-                    }, 50);
-                  });
-                }
-              })();
-            `
-          }}
-        />
+        {/* Deferred CSS loading removed - critical CSS is inlined above */}
 
       </head>
       <body style={{WebkitFontSmoothing: "antialiased", MozOsxFontSmoothing: "grayscale"}}>{children}</body>
