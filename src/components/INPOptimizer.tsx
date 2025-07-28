@@ -13,9 +13,9 @@ export default function INPOptimizer() {
   useEffect(() => {
     if (!isHydrated) return;
     // Utility functions - defined first
-    const debounce = (func: Function, wait: number) => {
+    const debounce = (func: (...args: unknown[]) => void, wait: number) => {
       let timeout: NodeJS.Timeout;
-      return function executedFunction(...args: any[]) {
+      return function executedFunction(...args: unknown[]) {
         const later = () => {
           clearTimeout(timeout);
           func(...args);
@@ -25,11 +25,11 @@ export default function INPOptimizer() {
       };
     };
 
-    const throttle = (func: Function, limit: number) => {
+    const throttle = (func: (...args: unknown[]) => void, limit: number) => {
       let inThrottle: boolean;
-      return function executedFunction(...args: any[]) {
+      return function executedFunction(...args: unknown[]) {
         if (!inThrottle) {
-          func.apply(null, args);
+          func(...args);
           inThrottle = true;
           setTimeout(() => inThrottle = false, limit);
         }
