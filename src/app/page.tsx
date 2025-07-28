@@ -41,6 +41,9 @@ export default function CleanWinPage() {
       {/* Progressive Enhancement for Hero - Deferred */}
       <HeroProgressiveEnhancement />
 
+      {/* CLS Optimization - Prevent layout shifts */}
+      <CLSOptimizer />
+
       {/* Benefits Section */}
       <section
         style={{
@@ -1008,7 +1011,7 @@ className="service-card"
                       textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
                     }}
                   >
-                    →
+                    ��
                   </span>
                 </div>
               </div>
