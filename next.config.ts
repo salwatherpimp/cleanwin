@@ -103,6 +103,14 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   generateEtags: true,
 
+  // Fix CORS issues for fly.dev domain
+  allowedDevOrigins: [
+    '24348628ebd248898e7ba693cd0a7911-2d0d2a9d9013445c91830c23d.fly.dev',
+    '24348628ebd248898e7ba693cd0a7911-2d0d2a9d9013445c91830c23d.projects.builder.codes',
+    'localhost:3000',
+    '172.19.5.114:3000'
+  ],
+
   // Remove CSS optimization for now due to critters dependency issue
   // experimental: {
   //   optimizeCss: true,
