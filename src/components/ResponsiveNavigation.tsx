@@ -608,6 +608,12 @@ export default function ResponsiveNavigation() {
             height: 28px !important;
             padding: 2px !important;
           }
+
+          /* Add spacing between logo and CTA on small mobile screens */
+          .cta-dropdown-container {
+            margin-left: auto !important;
+            padding-left: 24px !important;
+          }
         }
         /* Ensure dropdowns work properly on all screen sizes */
         @media (max-width: 1023px) {
