@@ -283,7 +283,7 @@ export default function INPOptimizer() {
       }
     }
 
-  }, []);
+  }, [isHydrated]);
 
   return null; // This component only optimizes interactions
 }
