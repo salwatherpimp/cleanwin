@@ -1,10 +1,17 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // INP (Interaction to Next Paint) optimization component
 export default function INPOptimizer() {
+  const [isHydrated, setIsHydrated] = useState(false);
+
   useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isHydrated) return;
     // Utility functions - defined first
     const debounce = (func: Function, wait: number) => {
       let timeout: NodeJS.Timeout;
