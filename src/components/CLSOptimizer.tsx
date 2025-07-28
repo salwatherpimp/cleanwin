@@ -4,14 +4,13 @@ import { useEffect, useState } from 'react';
 
 // Advanced CLS (Cumulative Layout Shift) optimization component
 export default function CLSOptimizer() {
+  const [isHydrated, setIsHydrated] = useState(false);
+
   useEffect(() => {
-    // Only run after hydration to prevent SSR/client mismatch
-    const [isHydrated, setIsHydrated] = useState(false);
+    setIsHydrated(true);
+  }, []);
 
-    useEffect(() => {
-      setIsHydrated(true);
-    }, []);
-
+  useEffect(() => {
     if (!isHydrated) return;
 
     // Prevent layout shifts during image loading
