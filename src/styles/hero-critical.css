@@ -1,5 +1,6 @@
 /* CRITICAL: Hero-specific styles for LCP optimization */
 /* Separated from global CSS to reduce render blocking */
+/* GPU acceleration and render optimization for sub-800ms LCP */
 
 /* Hero container with aspect ratio and hardware acceleration */
 .hero-lcp-container {
