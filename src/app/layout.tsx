@@ -82,7 +82,7 @@ export default function RootLayout({
 
         {/* Critical CSS preload - only for existing assets */}
 
-        {/* Critical image decode optimization + Service Worker + Error handling */}
+        {/* Critical image decode optimization + Service Worker + Error handling + Font loading */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -94,6 +94,12 @@ export default function RootLayout({
                     event.preventDefault();
                   }
                 });
+
+                // Optimized font loading to prevent render blocking
+                if ('fonts' in document) {
+                  document.fonts.load('400 16px Inter').catch(function(){});
+                  document.fonts.load('600 16px Inter').catch(function(){});
+                }
 
                 // Simplified Service Worker registration (disabled for debugging)
                 // if ('serviceWorker' in navigator) {
