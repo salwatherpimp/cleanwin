@@ -229,7 +229,8 @@ export default function INPOptimizer() {
 
     // Optimize keyboard interactions
     const optimizeKeyboardInteractions = () => {
-      document.addEventListener('keydown', throttle((e: KeyboardEvent) => {
+      document.addEventListener('keydown', throttle((e: unknown) => {
+        const event = e as KeyboardEvent;
         // Optimize tab navigation
         if (e.key === 'Tab') {
           requestAnimationFrame(() => {
