@@ -9,6 +9,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
+        <meta charSet="utf-8" />
         <title>CleanWin - Professional Cleaning Services</title>
         <meta name="description" content="Professional cleaning services in Winterthur with over 10 years of experience" />
         <meta name="robots" content="index, follow" />
