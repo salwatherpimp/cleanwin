@@ -79,7 +79,7 @@ export default function HeroProgressiveEnhancement() {
         setTimeout(enhanceHero, 100);
       });
     }
-  }, []);
+  }, [isHydrated]);
 
   return null; // This component only adds progressive enhancement
 }
