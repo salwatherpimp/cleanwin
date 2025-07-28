@@ -6,6 +6,7 @@ import ResponsiveNavigation from "../components/ResponsiveNavigation";
 import PureHeroSection from "../components/PureHeroSection";
 import HeroProgressiveEnhancement from "../components/HeroProgressiveEnhancement";
 import CLSOptimizer from "../components/CLSOptimizer";
+import INPOptimizer from "../components/INPOptimizer";
 
 // Dynamic imports for below-the-fold components to reduce initial bundle
 const CustomerReviews = dynamic(() => import("../components/CustomerReviews"), {
@@ -1011,7 +1012,7 @@ className="service-card"
                       textShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
                     }}
                   >
-                    ��
+                    →
                   </span>
                 </div>
               </div>
