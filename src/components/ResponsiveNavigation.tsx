@@ -551,6 +551,12 @@ export default function ResponsiveNavigation() {
             height: 56px !important;
             min-height: 56px !important;
           }
+
+          /* Increase space between logo and CTA button on mobile */
+          .cta-dropdown-container {
+            margin-left: auto !important;
+            padding-left: 40px !important;
+          }
         }
         @media (min-width: 1024px) {
           .desktop-menu {
