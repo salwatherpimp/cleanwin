@@ -1,45 +1,15 @@
-// LCP-Optimized Pure HTML Hero Section
+// LCP-Optimized CSS Background Hero Section
 export default function PureHeroSection() {
   return (
     <div
       data-lcp
       dangerouslySetInnerHTML={{
         __html: `
-          <section class="hero-lcp-container">
-            <picture class="hero-picture">
-              <!-- Mobile AVIF -->
-              <source
-                media="(max-width: 768px)"
-                srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-                type="image/avif">
-              <!-- Mobile WebP fallback -->
-              <source
-                media="(max-width: 768px)"
-                srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp"
-                type="image/webp">
-              <!-- Desktop AVIF -->
-              <source
-                media="(min-width: 769px)"
-                srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-                type="image/avif">
-              <!-- Desktop WebP fallback -->
-              <source
-                media="(min-width: 769px)"
-                srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp"
-                type="image/webp">
-              <img
-                class="hero-image"
-                src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp"
-                alt="CleanWin Hero Background"
-                width="1920"
-                height="1080"
-                loading="eager"
-                decoding="sync"
-                fetchpriority="high"
-                sizes="(max-width: 768px) 480px, 1280px"
-                onload="this.style.contentVisibility='visible';this.style.contain='layout style';this.decode().catch(()=>{});"
-                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgwIiBoZWlnaHQ9IjI3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwZDk0ODgiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNzU5ODUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+'">
-            </picture>
+          <section
+            class="hero-bg-optimized"
+            role="img"
+            aria-label="CleanWin Hero Background"
+          >
             <div class="hero-overlay"></div>
             <div class="hero-content-optimized">
               <div class="hero-content-wrapper">
