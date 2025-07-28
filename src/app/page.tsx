@@ -512,7 +512,7 @@ className="usp-card usp-duplicate"
                   marginTop: "clamp(12px, 2vw, 16px)",
                 }}
               >
-                Seit über zehn Jahren steht Cleanwin für gr��ndliche, faire und nachhaltige Reinigungsdienstleistungen im Grossraum Winterthur. Ob Fensterreinigung, Fassadenpflege oder Umzugsreinigung - wir bringen Erfahrung, Sorgfalt und Menschlichkeit zusammen. Unsere kostenlose Vor-Ort-Beratung bietet Ihnen maximale Transparenz. Dahinter steht ein geschultes, fair entlöhntes Team, das sich mit Engagement und Fachwissen für beste Ergebnisse einsetzt.
+                Seit über zehn Jahren steht Cleanwin für gründliche, faire und nachhaltige Reinigungsdienstleistungen im Grossraum Winterthur. Ob Fensterreinigung, Fassadenpflege oder Umzugsreinigung - wir bringen Erfahrung, Sorgfalt und Menschlichkeit zusammen. Unsere kostenlose Vor-Ort-Beratung bietet Ihnen maximale Transparenz. Dahinter steht ein geschultes, fair entlöhntes Team, das sich mit Engagement und Fachwissen für beste Ergebnisse einsetzt.
               </p>
               <a
                 href="#services"
