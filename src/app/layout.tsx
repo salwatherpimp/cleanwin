@@ -22,6 +22,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://vercel.com" />
 
         {/* Optimized font loading - async to avoid blocking */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
