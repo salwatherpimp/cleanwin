@@ -421,24 +421,28 @@ export default function ResponsiveNavigation() {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      <div className="mobile-menu-container" style={{
-        position: 'fixed',
-        top: '90px',
-        left: '0',
-        right: '0',
-        margin: '0 auto',
-        width: 'calc(100vw - 32px)',
-        maxWidth: '400px',
-        background: 'white',
-        borderRadius: '20px',
-        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
-        border: '1px solid rgba(0, 0, 0, 0.1)',
-        opacity: isMobileMenuOpen ? 1 : 0,
-        visibility: isMobileMenuOpen ? 'visible' : 'hidden',
-        transition: 'opacity 0.2s ease, visibility 0.2s ease',
-        zIndex: 1000,
-        padding: '16px',
-      }}>
+      <div
+        className={`mobile-menu-container ${isMobileMenuOpen ? 'menu-open' : ''}`}
+        style={{
+          position: 'fixed',
+          top: '80px',
+          left: '16px',
+          right: '16px',
+          margin: '0 auto',
+          width: 'auto',
+          maxWidth: '400px',
+          background: 'white',
+          borderRadius: '20px',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
+          border: '1px solid rgba(0, 0, 0, 0.1)',
+          opacity: isMobileMenuOpen ? 1 : 0,
+          visibility: isMobileMenuOpen ? 'visible' : 'hidden',
+          transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)',
+          transition: 'all 0.3s ease',
+          zIndex: 9999,
+          padding: '20px',
+          display: isMobileMenuOpen ? 'block' : 'none',
+        }}>
         <div style={{ marginBottom: '12px' }}>
           <h3 style={{
             fontWeight: '700',
