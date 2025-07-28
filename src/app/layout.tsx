@@ -119,12 +119,14 @@ export default function RootLayout({
               left: 16px !important;
               right: 16px !important;
               background: white !important;
-              border-radius: 16px !important;
+              border-radius: 20px !important;
               box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15) !important;
               border: 1px solid rgba(0, 0, 0, 0.1) !important;
-              z-index: 999 !important;
+              z-index: 99999 !important;
               max-height: calc(100vh - 120px) !important;
               overflow-y: auto !important;
+              margin: 0 auto !important;
+              max-width: 400px !important;
             }
 
             /* Ensure mobile menu is visible when open */
@@ -139,6 +141,13 @@ export default function RootLayout({
             nav {
               margin: 0 auto !important;
               max-width: calc(100vw - 32px) !important;
+              z-index: 1000 !important;
+              position: relative !important;
+            }
+
+            /* Mobile navigation wrapper */
+            div[style*="position: fixed"][style*="top: 16px"] {
+              z-index: 1000 !important;
             }
           }
 
