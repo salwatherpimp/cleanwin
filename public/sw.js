@@ -234,28 +234,129 @@ async function handleGenericRequests(request) {
   }
 }
 
-// Background sync for preloading hero images
+// Advanced background sync for performance optimization
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'hero-preload') {
-    event.waitUntil(
-      caches.open(CACHE_NAME)
-        .then((cache) => {
-          return cache.addAll(HERO_ASSETS);
-        })
-    );
+  console.log('Service Worker: Background sync triggered', event.tag);
+
+  switch (event.tag) {
+    case 'hero-preload':
+      event.waitUntil(preloadHeroAssets());
+      break;
+    case 'static-preload':
+      event.waitUntil(preloadStaticAssets());
+      break;
+    case 'cache-cleanup':
+      event.waitUntil(cleanupOldCaches());
+      break;
   }
 });
 
-// Performance optimization: Immediate response for repeated requests
+// Enhanced messaging system
 self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'PRELOAD_HERO') {
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        HERO_ASSETS.forEach((url) => {
-          fetch(url).then((response) => {
-            cache.put(url, response.clone());
-          });
-        });
+  const { type, data } = event.data || {};
+
+  switch (type) {
+    case 'PRELOAD_HERO':
+      preloadHeroAssets();
+      break;
+    case 'PRELOAD_CRITICAL':
+      preloadCriticalAssets();
+      break;
+    case 'CACHE_STATS':
+      getCacheStats().then(stats => {
+        event.ports[0].postMessage({ type: 'CACHE_STATS_RESPONSE', data: stats });
       });
+      break;
+    case 'CLEAR_CACHE':
+      clearSpecificCache(data.cacheName).then(() => {
+        event.ports[0].postMessage({ type: 'CACHE_CLEARED', data: { cacheName: data.cacheName } });
+      });
+      break;
+  }
+});
+
+// Preload functions
+async function preloadHeroAssets() {
+  const cache = await caches.open(CACHE_NAMES.HERO);
+  return Promise.all(
+    HERO_ASSETS.map(url =>
+      fetch(url).then(response => {
+        if (response.ok) {
+          cache.put(url, response.clone());
+        }
+      }).catch(() => {})
+    )
+  );
+}
+
+async function preloadCriticalAssets() {
+  const cache = await caches.open(CACHE_NAMES.CRITICAL);
+  return Promise.all(
+    CRITICAL_ASSETS.map(url =>
+      fetch(url).then(response => {
+        if (response.ok) {
+          cache.put(url, response.clone());
+        }
+      }).catch(() => {})
+    )
+  );
+}
+
+async function preloadStaticAssets() {
+  const cache = await caches.open(CACHE_NAMES.STATIC);
+  return Promise.all(
+    STATIC_ASSETS.map(url =>
+      fetch(url).then(response => {
+        if (response.ok) {
+          cache.put(url, response.clone());
+        }
+      }).catch(() => {})
+    )
+  );
+}
+
+// Cache management functions
+async function getCacheStats() {
+  const cacheNames = await caches.keys();
+  const stats = {};
+
+  for (const cacheName of cacheNames) {
+    const cache = await caches.open(cacheName);
+    const keys = await cache.keys();
+    stats[cacheName] = keys.length;
+  }
+
+  return stats;
+}
+
+async function clearSpecificCache(cacheName) {
+  return caches.delete(cacheName);
+}
+
+async function cleanupOldCaches() {
+  const cacheNames = await caches.keys();
+  const expectedCaches = Object.values(CACHE_NAMES);
+
+  return Promise.all(
+    cacheNames.map(cacheName => {
+      if (!expectedCaches.includes(cacheName)) {
+        return caches.delete(cacheName);
+      }
+    })
+  );
+}
+
+// Performance monitoring
+self.addEventListener('notificationclick', (event) => {
+  // Handle performance notifications
+  event.notification.close();
+
+  if (event.action === 'optimize') {
+    // Trigger performance optimizations
+    Promise.all([
+      preloadHeroAssets(),
+      preloadCriticalAssets(),
+      cleanupOldCaches()
+    ]);
   }
 });
