@@ -7,6 +7,20 @@ const nextConfig: NextConfig = {
     esmExternals: true,
     // Reduce JavaScript bundle size
     optimizePackageImports: ['react', 'react-dom'],
+    // Advanced optimizations
+    scrollRestoration: true,
+    legacyBrowsers: false,
+    browsersListForSwc: true,
+    // Performance budgets
+    bundlePagesRouterDependencies: true,
+    optimizeServerReact: true,
+  },
+
+  // Performance budgets for Core Web Vitals
+  performanceBudgets: {
+    maxAssetSize: 250000, // 250KB
+    maxEntrypointSize: 300000, // 300KB
+    maxPageBundleSize: 500000, // 500KB
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
