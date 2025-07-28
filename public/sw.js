@@ -28,18 +28,27 @@ const STATIC_ASSETS = [
   '/site.webmanifest'
 ];
 
-// Install event - preload critical hero assets
+// Install event - preload critical assets with priority
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        // Aggressively cache hero images
-        return cache.addAll(HERO_ASSETS);
-      })
-      .then(() => {
-        // Force activation
-        return self.skipWaiting();
-      })
+    Promise.all([
+      // Critical assets - highest priority
+      caches.open(CACHE_NAMES.CRITICAL)
+        .then((cache) => cache.addAll(CRITICAL_ASSETS)),
+
+      // Hero assets - high priority
+      caches.open(CACHE_NAMES.HERO)
+        .then((cache) => cache.addAll(HERO_ASSETS)),
+
+      // Static assets - medium priority
+      caches.open(CACHE_NAMES.STATIC)
+        .then((cache) => cache.addAll(STATIC_ASSETS))
+    ]).then(() => {
+      console.log('Service Worker: All assets cached successfully');
+      return self.skipWaiting();
+    }).catch((error) => {
+      console.error('Service Worker: Cache installation failed', error);
+    })
   );
 });
 
