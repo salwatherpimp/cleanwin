@@ -61,9 +61,7 @@ export default function RootLayout({
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
 
-        {/* Critical CSS preload */}
-        <link rel="preload" href="/_next/static/css/app.css" as="style" />
-        <link rel="preload" href="/styles/hero-critical.css" as="style" />
+        {/* Critical CSS preload - only for existing assets */}
 
         {/* Critical image decode optimization + Service Worker */}
         <script
