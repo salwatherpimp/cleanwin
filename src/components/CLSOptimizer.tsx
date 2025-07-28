@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // Advanced CLS (Cumulative Layout Shift) optimization component
 export default function CLSOptimizer() {
