@@ -579,6 +579,12 @@ export default function ResponsiveNavigation() {
           nav {
             padding: 8px 14px !important;
           }
+
+          /* Add spacing between logo and CTA on mobile */
+          .cta-dropdown-container {
+            margin-left: auto !important;
+            padding-left: 32px !important;
+          }
         }
         @media (max-width: 480px) {
           /* Make container even wider on small screens */
