@@ -72,7 +72,7 @@ export default function INPOptimizer() {
           });
         };
 
-        const handleClick = (e: Event) => {
+        const handleClick = () => {
           // Immediate visual feedback
           btn.style.transform = 'scale(0.98) translateZ(0)';
           setTimeout(() => {
@@ -271,15 +271,17 @@ export default function INPOptimizer() {
         const inpObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             // Log slow interactions for debugging
-            if ((entry as any).duration > 200) {
+            const eventEntry = entry as PerformanceEventTiming;
+            if (eventEntry.duration > 200) {
               console.warn('Slow interaction detected:', entry);
             }
           }
         });
         
         inpObserver.observe({ entryTypes: ['event'] });
-      } catch (e) {
+      } catch (error) {
         // Silently fail if not supported
+        console.debug('PerformanceObserver not supported:', error);
       }
     }
 
