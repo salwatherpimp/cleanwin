@@ -44,7 +44,12 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   render() {
     if (this.state.hasError) {
       // Don't render anything for dev overlay fetch errors
-      if (this.state.error?.message?.includes('Failed to fetch')) {
+      if (this.state.error?.message && (
+        this.state.error.message.includes('Failed to fetch') ||
+        this.state.error.message.includes('fetch') ||
+        this.state.error.message.includes('CORS') ||
+        this.state.error.message.includes('stack-frame')
+      )) {
         return this.props.children;
       }
       
