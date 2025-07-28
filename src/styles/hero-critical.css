@@ -51,6 +51,8 @@
   background-color: rgba(0,0,0,0.4);
   transform: translateZ(0);
   will-change: auto;
+  backface-visibility: hidden;
+  isolation: isolate;
 }
 
 /* Hero content container optimized */
