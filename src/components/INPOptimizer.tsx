@@ -249,18 +249,7 @@ export default function INPOptimizer() {
       }, 16), { passive: true });
     };
 
-    // Debounce function for expensive operations
-    function debounce(func: Function, wait: number) {
-      let timeout: NodeJS.Timeout;
-      return function executedFunction(...args: any[]) {
-        const later = () => {
-          clearTimeout(timeout);
-          func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-      };
-    }
+    // Utility functions already defined above
 
     // Execute all optimizations
     optimizeEventHandlers();
