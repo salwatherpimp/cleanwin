@@ -108,7 +108,7 @@ export default function RootLayout({
           /* Reset and layout */
           *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
           html { line-height: 1.5; font-family: ui-sans-serif, system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
-          body { margin: 0; background: #ffffff; color: #171717; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+          body { margin: 0; background: #ffffff; color: #171717; font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 
           /* Navigation and mobile menu */
           nav { position: relative; z-index: 1000; }
