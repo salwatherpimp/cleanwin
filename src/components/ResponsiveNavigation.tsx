@@ -555,12 +555,13 @@ export default function ResponsiveNavigation() {
             min-height: 56px !important;
           }
 
-          /* Mobile spacer creates equal gaps */
+          /* Remove spacer and fix spacing manually */
           .mobile-spacer {
-            display: block !important;
+            display: none !important;
           }
           .cta-dropdown-container {
-            margin-right: 16px !important;
+            margin-left: 20px !important;
+            margin-right: 20px !important;
           }
         }
         @media (min-width: 1024px) {
@@ -596,10 +597,11 @@ export default function ResponsiveNavigation() {
 
           /* Medium mobile spacing */
           .mobile-spacer {
-            display: block !important;
+            display: none !important;
           }
           .cta-dropdown-container {
-            margin-right: 14px !important;
+            margin-left: 18px !important;
+            margin-right: 18px !important;
           }
         }
         @media (max-width: 480px) {
@@ -627,10 +629,11 @@ export default function ResponsiveNavigation() {
 
           /* Small mobile spacing */
           .mobile-spacer {
-            display: block !important;
+            display: none !important;
           }
           .cta-dropdown-container {
-            margin-right: 12px !important;
+            margin-left: 16px !important;
+            margin-right: 16px !important;
           }
         }
         /* Ensure dropdowns work properly on all screen sizes */
