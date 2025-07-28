@@ -14,11 +14,14 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Dev indicators configuration
+  // Dev indicators configuration - disable overlay to prevent fetch errors
   devIndicators: {
-    buildActivity: true,
+    buildActivity: false,
     buildActivityPosition: 'bottom-right',
   },
+
+  // Disable React dev overlay in development to prevent CORS fetch errors
+  reactStrictMode: false,
 
   // Compiler optimizations
   compiler: {
