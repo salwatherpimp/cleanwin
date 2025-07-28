@@ -150,45 +150,7 @@ export default function RootLayout({
             font-display: swap;
           }
 
-          /* Critical: Global hero headline styles */
-          .hero-headline {
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 38px;
-            margin-bottom: 16px;
-            margin-top: 0;
-            color: white;
-            text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
-            min-height: 76px;
-          }
-
-          /* Hero responsive adjustments - Desktop only */
-          @media (min-width: 768px) {
-            .hero-headline {
-              font-size: 48px !important;
-              line-height: 54px !important;
-              min-height: 108px !important;
-            }
-
-            section[data-lcp] p {
-              font-size: 18px !important;
-              line-height: 28px !important;
-            }
-
-            section[data-lcp] {
-              height: 612px !important;
-              min-height: 612px !important;
-            }
-          }
-
-          /* Hero mobile adjustments */
-          @media (max-width: 767px) {
-            section[data-lcp] {
-              height: 64vh !important;
-              min-height: 476px !important;
-              max-height: 64vh !important;
-            }
-          }
+          /* Hero styles moved to hero-critical.css for better performance */
           }
             margin: 0;
             padding: 0;
