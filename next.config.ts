@@ -20,8 +20,8 @@ const nextConfig: NextConfig = {
     buildActivityPosition: 'bottom-right',
   },
 
-  // Disable React dev overlay in development to prevent CORS fetch errors
-  reactStrictMode: false,
+  // Enable React strict mode for better development experience
+  reactStrictMode: true,
 
   // Compiler optimizations
   compiler: {
