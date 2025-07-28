@@ -1,9 +1,16 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function HeroProgressiveEnhancement() {
+  const [isHydrated, setIsHydrated] = useState(false);
+
   useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isHydrated) return;
     // Defer hero enhancements until after LCP
     const enhanceHero = () => {
       // Add advanced hover effects post-LCP
