@@ -52,18 +52,22 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate event - cleanup old caches
+// Activate event - cleanup old caches with versioning
 self.addEventListener('activate', (event) => {
+  const expectedCaches = Object.values(CACHE_NAMES);
+
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
+          if (!expectedCaches.includes(cacheName)) {
+            console.log('Service Worker: Deleting old cache', cacheName);
             return caches.delete(cacheName);
           }
         })
       );
     }).then(() => {
+      console.log('Service Worker: Activated and ready');
       return self.clients.claim();
     })
   );
