@@ -1223,11 +1223,30 @@ className="service-card"
           transform: scale(1.05);
         }
 
+        /* USP Mobile Auto-Scroll Animation - Improved Implementation */
+        @media (max-width: 767px) {
+          .grid-mobile-3 .usp-card {
+            min-width: 280px !important;
+            flex-shrink: 0 !important;
+            animation: usp-mobile-scroll 20s linear infinite !important;
+          }
+
+          .grid-mobile-3 {
+            animation-play-state: running !important;
+          }
+        }
+
         /* Hide duplicate USP cards on desktop */
         @media (min-width: 768px) {
           .usp-duplicate {
             display: none !important;
           }
+        }
+
+        /* USP Mobile Auto-Scroll Animation - Seamless Loop */
+        @keyframes usp-mobile-scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
         }
 
         /* CTA Button Hover Effects */
