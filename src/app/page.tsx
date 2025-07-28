@@ -45,6 +45,9 @@ export default function CleanWinPage() {
       {/* CLS Optimization - Prevent layout shifts */}
       <CLSOptimizer />
 
+      {/* INP Optimization - Improve interaction responsiveness */}
+      <INPOptimizer />
+
       {/* Benefits Section */}
       <section
         style={{
