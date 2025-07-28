@@ -57,6 +57,26 @@ export default function RootLayout({
         <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
         <link rel="modulepreload" href="/_next/static/chunks/main.js" />
 
+        {/* Critical image decode optimization */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                var heroImg = new Image();
+                heroImg.decoding = 'async';
+                heroImg.fetchPriority = 'high';
+                heroImg.loading = 'eager';
+                if (window.innerWidth <= 768) {
+                  heroImg.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgwIiBoZWlnaHQ9IjI3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwZDk0ODgiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNzU5ODUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+';
+                } else {
+                  heroImg.src = 'https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif';
+                }
+                if (heroImg.decode) heroImg.decode().catch(function(){});
+              })();
+            `
+          }}
+        />
+
         <style>{`
           /* Critical above-the-fold CSS - Inlined to prevent render blocking */
           :root {
