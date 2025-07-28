@@ -5,48 +5,37 @@ import { useEffect } from 'react';
 // Advanced CLS (Cumulative Layout Shift) optimization component
 export default function CLSOptimizer() {
   useEffect(() => {
+    // Only run after hydration to prevent SSR/client mismatch
+    const [isHydrated, setIsHydrated] = useState(false);
+
+    useEffect(() => {
+      setIsHydrated(true);
+    }, []);
+
+    if (!isHydrated) return;
+
     // Prevent layout shifts during image loading
     const optimizeImages = () => {
       const images = document.querySelectorAll('img:not([data-cls-optimized])');
-      
+
       images.forEach((img: Element) => {
         const image = img as HTMLImageElement;
-        
+
         // Mark as optimized
         image.setAttribute('data-cls-optimized', 'true');
-        
-        // Set intrinsic size if not already set
+
+        // Set intrinsic size if not already set - without DOM manipulation
         if (!image.style.aspectRatio && image.width && image.height) {
           image.style.aspectRatio = `${image.width} / ${image.height}`;
         }
-        
-        // Add container with reserved space
-        if (!image.parentElement?.classList.contains('cls-image-container')) {
-          const container = document.createElement('div');
-          container.className = 'cls-image-container';
-          container.style.cssText = `
-            width: 100%;
-            max-width: ${image.width || 'auto'}px;
-            aspect-ratio: ${image.width || 16} / ${image.height || 9};
-            overflow: hidden;
-            position: relative;
-            display: block;
-            contain: layout style;
-          `;
-          
-          image.parentNode?.insertBefore(container, image);
-          container.appendChild(image);
-          
-          // Ensure image fills container
-          image.style.cssText += `
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-          `;
-        }
+
+        // Apply optimizations directly to image without wrapper to avoid hydration issues
+        image.style.cssText += `
+          contain: layout style;
+          max-width: 100%;
+          height: auto;
+          display: block;
+        `;
       });
     };
 
