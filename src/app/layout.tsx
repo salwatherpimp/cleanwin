@@ -327,10 +327,7 @@ export default function RootLayout({
               -webkit-overflow-scrolling: touch !important;
               padding: 0 16px !important;
             }
-            .services-grid {
-              grid-template-columns: 1fr !important;
-              gap: 20px !important;
-            }
+
           }
 
           @media (max-width: 767px) {
