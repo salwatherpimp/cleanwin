@@ -326,6 +326,22 @@ export default function RootLayout({
             flex-shrink: 0 !important;
           }
 
+          /* USP Cards - Hide duplicates properly */
+          @media (min-width: 768px) {
+            .usp-duplicate {
+              display: none !important;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .usp-card:not(.usp-duplicate) {
+              display: none !important;
+            }
+            .usp-duplicate {
+              display: flex !important;
+            }
+          }
+
           /* Touch improvements for mobile */
           @media (max-width: 768px) {
             button, a {
@@ -340,6 +356,20 @@ export default function RootLayout({
               align-items: center !important;
               justify-content: center !important;
             }
+
+            /* Fix mobile navigation */
+            nav {
+              padding: 8px 12px !important;
+              height: 56px !important;
+              min-height: 56px !important;
+            }
+
+            /* Wider navigation on mobile */
+            .mobile-menu-container {
+              left: 12px !important;
+              right: 12px !important;
+              max-width: calc(100vw - 24px) !important;
+            }
           }
 
           /* Fix for scrollable content */
@@ -348,6 +378,19 @@ export default function RootLayout({
               scroll-snap-align: start !important;
               flex-shrink: 0 !important;
               min-width: 280px !important;
+            }
+          }
+
+          /* Better mobile scrolling for USP section */
+          @media (max-width: 767px) {
+            .grid-mobile-3 {
+              -webkit-overflow-scrolling: touch !important;
+              scrollbar-width: none !important;
+              -ms-overflow-style: none !important;
+            }
+
+            .grid-mobile-3::-webkit-scrollbar {
+              display: none !important;
             }
           }
         `}</style>
