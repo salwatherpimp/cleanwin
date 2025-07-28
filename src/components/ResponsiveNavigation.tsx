@@ -88,7 +88,7 @@ export default function ResponsiveNavigation() {
           padding: '8px 16px',
           margin: '0 auto',
           width: '100%',
-          maxWidth: '1280px',
+          maxWidth: '1400px',
           boxSizing: 'border-box',
           display: 'flex',
           alignItems: 'center',
@@ -118,8 +118,8 @@ export default function ResponsiveNavigation() {
           <div style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '32px',
-            marginLeft: '24px',
+            gap: '40px',
+            marginLeft: '48px',
           }} className="desktop-menu">
             {/* Services Dropdown */}
             <div style={{ position: 'relative' }} className="services-dropdown-container">
