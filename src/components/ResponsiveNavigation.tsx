@@ -547,15 +547,28 @@ export default function ResponsiveNavigation() {
             display: flex !important;
           }
           nav {
-            padding: 8px 12px !important;
+            padding: 8px 16px !important;
             height: 56px !important;
             min-height: 56px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
           }
 
-          /* Create equal spacing between logo-CTA-burger */
+          /* Perfect mobile balance - equal 20px spacing */
+          nav > a:first-child {
+            flex: 0 0 auto !important;
+            margin-right: 20px !important;
+          }
+
           .cta-dropdown-container {
-            margin-left: auto !important;
-            margin-right: 16px !important;
+            flex: 0 0 auto !important;
+            margin: 0 20px 0 auto !important;
+          }
+
+          .hamburger-menu {
+            flex: 0 0 auto !important;
+            margin: 0 !important;
           }
         }
         @media (min-width: 1024px) {
