@@ -37,6 +37,9 @@ export default function CleanWinPage() {
       {/* Hero Section - Pure HTML, No styled-jsx, Responsive Images */}
       <PureHeroSection />
 
+      {/* Progressive Enhancement for Hero - Deferred */}
+      <HeroProgressiveEnhancement />
+
       {/* Benefits Section */}
       <section
         style={{
