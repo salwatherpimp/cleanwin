@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import "../styles/hero-critical.css";
 import "../styles/globals.css";
 import "../styles/components.css";
 
