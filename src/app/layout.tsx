@@ -62,11 +62,26 @@ export default function RootLayout({
 
         {/* Critical CSS preload - only for existing assets */}
 
-        {/* Critical image decode optimization + Service Worker */}
+        {/* Critical image decode optimization + Service Worker + Error handling */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(){
+                // Global error handler for dev overlay fetch errors
+                window.addEventListener('error', function(event) {
+                  if (event.message && event.message.includes('Failed to fetch')) {
+                    event.preventDefault();
+                    return false;
+                  }
+                });
+
+                window.addEventListener('unhandledrejection', function(event) {
+                  if (event.reason && event.reason.message && event.reason.message.includes('Failed to fetch')) {
+                    event.preventDefault();
+                    return false;
+                  }
+                });
+
                 // Register Service Worker for hero caching
                 if ('serviceWorker' in navigator) {
                   window.addEventListener('load', function() {
