@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-// Import CSS with critical styles inlined above to minimize render blocking
 import "../styles/globals.css";
 import "../styles/components.css";
 
