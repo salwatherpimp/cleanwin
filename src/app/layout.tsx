@@ -220,29 +220,46 @@ export default function RootLayout({
             [data-nav="mobile"] { display: none !important; }
           }
 
-          /* Hero section */
-          .hero-lcp-container {
+          /* Hero section - CSS Background Image Optimization */
+          .hero-bg-optimized {
             position: relative;
             width: 100vw;
             height: 64vh;
             min-height: 476px;
             overflow: hidden;
+            contain: layout paint;
+            background-size: cover;
+            background-position: 60% 50%;
+            background-repeat: no-repeat;
+            background-attachment: local;
           }
-          .hero-picture {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            display: block;
+
+          /* Progressive background image loading */
+          @media (max-width: 768px) {
+            .hero-bg-optimized {
+              background-image:
+                image-set(
+                  url('https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif') type('image/avif'),
+                  url('https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp') type('image/webp'),
+                  url('https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70,f_jpg/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.jpg') type('image/jpeg')
+                );
+            }
           }
-          .hero-image {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 60% 50%;
-            display: block;
+
+          @media (min-width: 769px) {
+            .hero-bg-optimized {
+              background-image:
+                image-set(
+                  url('https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif') type('image/avif'),
+                  url('https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp') type('image/webp'),
+                  url('https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70,f_jpg/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.jpg') type('image/jpeg')
+                );
+            }
+          }
+
+          /* Fallback for browsers that don't support image-set */
+          .hero-bg-optimized {
+            background-image: url('https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp');
           }
           .hero-overlay {
             position: absolute;
