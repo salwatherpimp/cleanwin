@@ -59,23 +59,26 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* CRITICAL: Preload hero images with performance hints */}
+        {/* CRITICAL: Optimized hero image preload with responsive srcset */}
         <link
           rel="preload"
           as="image"
           href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          imagesrcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 480w, https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 1280w"
+          imagesizes="(max-width: 768px) 480px, 1280px"
           fetchPriority="high"
           type="image/avif"
-          media="(max-width: 767px)"
           crossOrigin="anonymous"
         />
+        {/* WebP preload fallback for better browser support */}
         <link
           rel="preload"
           as="image"
-          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp"
+          imagesrcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp 480w, https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp 1280w"
+          imagesizes="(max-width: 768px) 480px, 1280px"
           fetchPriority="high"
-          type="image/avif"
-          media="(min-width: 768px)"
+          type="image/webp"
           crossOrigin="anonymous"
         />
 
