@@ -33,7 +33,8 @@ const Footer = dynamic(() => import("../components/Footer"), {
 
 export default function CleanWinPage() {
   return (
-    <div className="main-page-container">
+    <ErrorBoundary>
+      <div className="main-page-container">
       {/* Responsive Navigation */}
       <ResponsiveNavigation />
 
@@ -1275,6 +1276,7 @@ className="service-card"
           }
         }
       `}</style>
-    </div>
+      </div>
+    </ErrorBoundary>
   );
 }
