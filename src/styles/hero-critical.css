@@ -2,6 +2,16 @@
 /* Separated from global CSS to reduce render blocking */
 /* GPU acceleration and render optimization for sub-800ms LCP */
 
+/* Performance optimization directives */
+* {
+  transform-style: preserve-3d;
+}
+
+.hero-lcp-container * {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
 /* Hero container with aspect ratio and hardware acceleration */
 .hero-lcp-container {
   position: relative;
