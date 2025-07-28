@@ -97,6 +97,12 @@ const nextConfig: NextConfig = {
   // Enable bundle analyzer in development
   bundlePagesRouterDependencies: true,
 
+  // Output optimization
+  output: 'standalone',
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+
   // Remove CSS optimization for now due to critters dependency issue
   // experimental: {
   //   optimizeCss: true,
