@@ -198,25 +198,7 @@ export default function RootLayout({
             [data-nav="mobile"] { display: none !important; }
           }
 
-          /* Critical hero section dimensions */
-          section.hero-mobile, .hero-mobile {
-            height: 75vh !important;
-            min-height: 75vh !important;
-            max-height: 75vh !important;
-            box-sizing: border-box !important;
-            width: 100% !important;
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-          }
-
-          @media (min-width: 768px) {
-            section.hero-mobile, .hero-mobile {
-              height: 80vh !important;
-              min-height: 80vh !important;
-              max-height: 80vh !important;
-              box-sizing: border-box !important;
-            }
-          }
+          /* Hero section dimensions moved to hero-critical.css */
 
           /* Critical mobile grid layouts */
           @media (max-width: 767px) {
