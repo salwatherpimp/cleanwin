@@ -1,27 +1,8 @@
 const nextConfig = {
-  // Experimental features - cleaned up for stability
-  experimental: {
-    optimizeCss: false,
-    esmExternals: true,
-    // Reduce JavaScript bundle size
-    optimizePackageImports: ['react', 'react-dom'],
-    // Fix CORS for fly.dev domains
-    allowedDevOrigins: [
-      '24348628ebd248898e7ba693cd0a7911-2d0d2a9d9013445c91830c23d.fly.dev',
-      '24348628ebd248898e7ba693cd0a7911-2d0d2a9d9013445c91830c23d.projects.builder.codes'
-    ],
-  },
-
-  // Dev indicators configuration - disable overlay to prevent fetch errors
-  devIndicators: {
-    buildActivity: false,
-    buildActivityPosition: 'bottom-right',
-  },
-
-  // Enable React strict mode for better development experience
+  // Minimal stable configuration
   reactStrictMode: true,
 
-  // Disable type checking during build to focus on functionality
+  // Disable complex optimizations that may cause issues
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -30,21 +11,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 
-  // Compiler optimizations
+  // Basic compiler optimizations only
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
-    styledJsx: false,
-  },
-
-  // Webpack configuration for optimization
-  webpack: (config: any, { dev, isServer }: { dev: boolean; isServer: boolean }) => {
-    if (!dev) {
-      // Basic optimization for production
-      config.optimization.sideEffects = false;
-      config.optimization.usedExports = true;
-    }
-    
-    return config;
   },
 
   // Image optimization
