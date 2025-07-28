@@ -106,6 +106,14 @@ export default function RootLayout({
                   document.fonts.load('600 16px Inter').catch(function(){});
                 }
 
+                // Handle non-blocking font stylesheet loading
+                window.addEventListener('load', function() {
+                  var printStylesheet = document.querySelector('link[href*="fonts.googleapis.com"][media="print"]');
+                  if (printStylesheet) {
+                    printStylesheet.media = 'all';
+                  }
+                });
+
                 // Simplified Service Worker registration (disabled for debugging)
                 // if ('serviceWorker' in navigator) {
                 //   window.addEventListener('load', function() {
