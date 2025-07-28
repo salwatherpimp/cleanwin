@@ -54,8 +54,6 @@ export default function RootLayout({
         {/* Performance hint: Preload critical resources */}
         <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
         <link rel="modulepreload" href="/_next/static/chunks/main.js" />
-        <link rel="modulepreload" href="/_next/static/chunks/pages/_app.js" />
-        <link rel="modulepreload" href="/_next/static/chunks/pages/_document.js" />
 
         {/* Preload critical fonts with high priority */}
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" />
