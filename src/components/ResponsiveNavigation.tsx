@@ -249,6 +249,9 @@ export default function ResponsiveNavigation() {
             </a>
           </div>
 
+          {/* Spacer div for mobile to create equal gaps */}
+          <div style={{ flex: 1 }} className="mobile-spacer"></div>
+
           {/* CTA Button */}
           <div style={{
             position: 'relative',
