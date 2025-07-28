@@ -1,21 +1,22 @@
-// Pure HTML implementation - No React styling patterns
+// LCP-Optimized Pure HTML Hero Section
 export default function PureHeroSection() {
   return (
     <div
       data-lcp
       dangerouslySetInnerHTML={{
         __html: `
-          <section style="position:relative;width:100vw;height:64vh;min-height:476px;max-height:64vh;overflow:hidden;" class="hero-section">
-            <picture style="position:absolute;inset:0;width:100%;height:100%;display:block;">
+          <section class="hero-lcp-container">
+            <picture class="hero-picture">
               <source 
                 media="(max-width: 768px)" 
-                srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif" 
-                type="image/avif">
+                srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgwIiBoZWlnaHQ9IjI3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMEQ5NDg4Ii8+PC9zdmc+" 
+                type="image/svg+xml">
               <source 
                 media="(min-width: 769px)" 
                 srcset="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif" 
                 type="image/avif">
               <img 
+                class="hero-image"
                 src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
                 alt="CleanWin Hero Background" 
                 width="1920" 
@@ -23,19 +24,20 @@ export default function PureHeroSection() {
                 loading="eager" 
                 decoding="async" 
                 fetchpriority="high"
-                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;display:block;">
+                onload="this.style.contentVisibility='visible';this.style.contain='layout style';"
+                onerror="this.src='https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif';">
             </picture>
-            <div style="position:absolute;inset:0;background-color:rgba(0,0,0,0.4);"></div>
-            <div style="position:relative;z-index:10;height:100%;display:flex;align-items:center;justify-content:center;padding:100px 16px 32px 16px;text-align:center;color:white;" class="hero-content">
-              <div style="max-width:1152px;width:100%;">
-                <h1 style="font-size:32px;font-weight:800;line-height:38px;margin-bottom:16px;margin-top:0;color:white;text-shadow:rgba(0,0,0,0.1) 0px 4px 6px;">
+            <div class="hero-overlay"></div>
+            <div class="hero-content-optimized">
+              <div class="hero-content-wrapper">
+                <h1 class="hero-headline-optimized">
                   Professionelle Reinigung in Winterthur & Region
                 </h1>
-                <p style="font-size:16px;line-height:24px;margin-bottom:24px;margin-top:0;margin-left:auto;margin-right:auto;max-width:768px;color:rgba(255,255,255,0.95);">
+                <p class="hero-description-optimized">
                   Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. Keine Schwarzarbeit und 100 % Verlässlichkeit – für Privat & Gewerbe.
                 </p>
-                <div style="text-align:center;margin-bottom:32px;margin-top:16px;">
-                  <div style="display:inline-flex;align-items:center;background-color:rgba(255,255,255,0.2);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.3);border-radius:8px;padding:8px 16px;color:white;margin-bottom:32px;">
+                <div class="hero-cta-section">
+                  <div class="hero-rating-badge">
                     <svg style="width:32px;height:32px;margin-right:8px;" viewBox="0 0 24 24">
                       <path fill="#4285f4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                       <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -71,7 +73,7 @@ export default function PureHeroSection() {
                     </div>
                   </div>
                   <div>
-                    <a href="/kontakt" class="hero-cta-button" style="display:inline-block;background-color:white;color:#374151;padding:16px 32px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.2s ease;box-shadow:0 2px 8px rgba(0, 0, 0, 0.1);" onmouseover="this.style.backgroundColor='#f8fafc';this.style.color='#0DA6A6';this.style.boxShadow='0 4px 16px rgba(0, 0, 0, 0.15)';this.style.transform='translateY(-1px)'" onmouseout="this.style.backgroundColor='white';this.style.color='#374151';this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.1)';this.style.transform='translateY(0)'">
+                    <a href="/kontakt" class="hero-cta-optimized">
                       Jetzt unverbindlich kontaktieren
                     </a>
                   </div>
