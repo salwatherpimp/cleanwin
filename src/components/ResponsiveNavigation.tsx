@@ -631,10 +631,13 @@ export default function ResponsiveNavigation() {
             padding: 2px !important;
           }
 
-          /* Equal spacing for small mobile */
+          /* Perfect balance for small mobile */
+          nav > a:first-child {
+            margin-right: 16px !important;
+          }
+
           .cta-dropdown-container {
-            margin-left: auto !important;
-            margin-right: 12px !important;
+            margin: 0 16px 0 auto !important;
           }
         }
         /* Ensure dropdowns work properly on all screen sizes */
