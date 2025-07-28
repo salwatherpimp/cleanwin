@@ -248,7 +248,7 @@ export default function INPOptimizer() {
         }
         
         // Optimize escape key interactions
-        if (e.key === 'Escape') {
+        if (event.key === 'Escape') {
           requestAnimationFrame(() => {
             const modals = document.querySelectorAll('.modal, .dropdown, [data-modal]');
             modals.forEach((modal: Element) => {
