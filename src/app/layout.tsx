@@ -67,60 +67,13 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function(){
-                // Enhanced error handler for all fetch-related errors
-                window.addEventListener('error', function(event) {
-                  if (event.message && (
-                    event.message.includes('Failed to fetch') ||
-                    event.message.includes('fetch') ||
-                    event.message.includes('CORS') ||
-                    event.message.includes('stack-frame')
-                  )) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    return false;
-                  }
-                }, true);
-
+                // Minimal error handler - only for specific dev overlay issues
                 window.addEventListener('unhandledrejection', function(event) {
-                  if (event.reason && (
-                    (event.reason.message && (
-                      event.reason.message.includes('Failed to fetch') ||
-                      event.reason.message.includes('fetch') ||
-                      event.reason.message.includes('CORS') ||
-                      event.reason.message.includes('stack-frame')
-                    )) ||
-                    (typeof event.reason === 'string' && (
-                      event.reason.includes('Failed to fetch') ||
-                      event.reason.includes('fetch') ||
-                      event.reason.includes('CORS')
-                    ))
-                  )) {
+                  if (event.reason && event.reason.message &&
+                      event.reason.message.includes('__nextjs_original-stack-frame')) {
                     event.preventDefault();
-                    event.stopPropagation();
-                    return false;
                   }
-                }, true);
-
-                // Override fetch to suppress dev overlay errors
-                if (typeof window !== 'undefined' && window.fetch) {
-                  const originalFetch = window.fetch;
-                  window.fetch = function(...args) {
-                    return originalFetch.apply(this, args).catch(function(error) {
-                      // Suppress fetch errors from dev overlay and FullStory
-                      if (error.message && (
-                        error.message.includes('Failed to fetch') ||
-                        args[0] && (
-                          args[0].includes('__nextjs_original-stack-frame') ||
-                          args[0].includes('webpack-hmr') ||
-                          args[0].includes('_next/static')
-                        )
-                      )) {
-                        return Promise.resolve(new Response('', { status: 200 }));
-                      }
-                      throw error;
-                    });
-                  };
-                }
+                });
 
                 // Register Service Worker for hero caching
                 if ('serviceWorker' in navigator) {
