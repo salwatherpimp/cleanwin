@@ -7,6 +7,7 @@ import PureHeroSection from "../components/PureHeroSection";
 import HeroProgressiveEnhancement from "../components/HeroProgressiveEnhancement";
 import CLSOptimizer from "../components/CLSOptimizer";
 import INPOptimizer from "../components/INPOptimizer";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 // Dynamic imports for below-the-fold components to reduce initial bundle
 const CustomerReviews = dynamic(() => import("../components/CustomerReviews"), {
