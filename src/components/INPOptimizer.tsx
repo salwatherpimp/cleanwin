@@ -2,6 +2,11 @@
 
 import { useEffect, useState } from 'react';
 
+// Interface for PerformanceEventTiming
+interface PerformanceEventTiming extends PerformanceEntry {
+  duration: number;
+}
+
 // INP (Interaction to Next Paint) optimization component
 export default function INPOptimizer() {
   const [isHydrated, setIsHydrated] = useState(false);
