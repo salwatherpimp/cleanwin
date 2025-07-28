@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
     // Performance budgets
     bundlePagesRouterDependencies: true,
     optimizeServerReact: true,
+    // Fix CORS for fly.dev domains
+    allowedDevOrigins: [
+      '24348628ebd248898e7ba693cd0a7911-2d0d2a9d9013445c91830c23d.fly.dev',
+      '24348628ebd248898e7ba693cd0a7911-2d0d2a9d9013445c91830c23d.projects.builder.codes'
+    ],
   },
 
   // Performance budgets for Core Web Vitals
