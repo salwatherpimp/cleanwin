@@ -1,7 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import "../styles/hero-critical.css";
-import "../styles/globals.css";
-import "../styles/components.css";
+// Critical CSS is inlined below - non-critical CSS loaded asynchronously
 
 export const metadata: Metadata = {
   title: "CleanWin - Professional Cleaning Services",
