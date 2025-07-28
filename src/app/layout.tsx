@@ -32,6 +32,14 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://vercel.com" />
 
+        {/* Optimized font loading - async to avoid blocking */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          media="print"
+          onLoad="this.media='all'; this.onload=null;"
+        />
+
         {/* CRITICAL: Preload hero images with performance hints */}
         <link
           rel="preload"
