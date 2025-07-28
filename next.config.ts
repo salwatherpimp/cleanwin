@@ -37,7 +37,7 @@ const nextConfig = {
   },
 
   // Webpack configuration for optimization
-  webpack: (config: any, { dev, isServer }) => {
+  webpack: (config: any, { dev, isServer }: { dev: boolean; isServer: boolean }) => {
     if (!dev) {
       // Basic optimization for production
       config.optimization.sideEffects = false;
