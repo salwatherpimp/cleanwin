@@ -41,14 +41,10 @@ export default function CleanWinPage() {
       {/* Hero Section - Pure HTML, No styled-jsx, Responsive Images */}
       <PureHeroSection />
 
-      {/* Progressive Enhancement for Hero - Deferred */}
-      <HeroProgressiveEnhancement />
-
-      {/* CLS Optimization - Prevent layout shifts */}
-      <CLSOptimizer />
-
-      {/* INP Optimization - Improve interaction responsiveness */}
-      <INPOptimizer />
+      {/* Optimization components temporarily disabled for stability */}
+      {/* <HeroProgressiveEnhancement /> */}
+      {/* <CLSOptimizer /> */}
+      {/* <INPOptimizer /> */}
 
       {/* Benefits Section */}
       <section
