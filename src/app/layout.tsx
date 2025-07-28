@@ -188,21 +188,7 @@ export default function RootLayout({
               width: calc(100vw - 32px) !important;
             }
 
-            .hero-mobile {
-              padding-top: 100px !important;
-            }
-
-            .hero-content-mobile h1 {
-              font-size: 32px !important;
-              line-height: 38px !important;
-              min-height: 76px !important;
-            }
-
-            .hero-content-mobile p {
-              font-size: 16px !important;
-              line-height: 24px !important;
-              min-height: 48px !important;
-            }
+            /* Mobile hero content styles moved to hero-critical.css */
           }
 
           @media (min-width: 768px) {
