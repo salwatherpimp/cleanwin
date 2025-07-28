@@ -1,21 +1,6 @@
 import "../styles/globals.css";
 import "../styles/components.css";
 
-export const metadata = {
-  title: "CleanWin - Professional Cleaning Services",
-  description:
-    "Professional cleaning services in Winterthur with over 10 years of experience",
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
-
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
-
 export default function RootLayout({
   children,
 }: {
