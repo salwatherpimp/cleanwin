@@ -23,7 +23,18 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error details but don't crash the app
+    // Suppress fetch-related errors from dev overlay
+    if (error.message && (
+      error.message.includes('Failed to fetch') ||
+      error.message.includes('fetch') ||
+      error.message.includes('CORS') ||
+      error.message.includes('stack-frame')
+    )) {
+      // Silently suppress these errors
+      return;
+    }
+
+    // Log other error details but don't crash the app
     if (process.env.NODE_ENV === 'development') {
       console.warn('ErrorBoundary caught an error:', error);
       console.warn('Error info:', errorInfo);
