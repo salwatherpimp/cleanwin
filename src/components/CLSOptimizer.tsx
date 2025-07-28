@@ -2,6 +2,12 @@
 
 import { useEffect, useState } from 'react';
 
+// Interface for LayoutShift performance entry
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 // Advanced CLS (Cumulative Layout Shift) optimization component
 export default function CLSOptimizer() {
   const [isHydrated, setIsHydrated] = useState(false);
