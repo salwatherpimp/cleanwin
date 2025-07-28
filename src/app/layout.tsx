@@ -22,7 +22,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://vercel.com" />
 
-        {/* Optimized non-blocking font loading */}
+        {/* Optimized non-blocking font loading with preconnect */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
         {/* Preload critical font variants */}
         <link
           rel="preload"
@@ -40,13 +43,11 @@ export default function RootLayout({
         />
 
         {/* Non-blocking font stylesheet with optimized loading */}
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="preload"
           as="style"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
