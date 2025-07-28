@@ -195,7 +195,7 @@ export default function CLSOptimizer() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [isHydrated]);
 
   return null; // This component only optimizes layout
 }
