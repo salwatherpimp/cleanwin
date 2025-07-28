@@ -88,7 +88,7 @@ export default function ResponsiveNavigation() {
           padding: '8px 16px',
           margin: '0 auto',
           width: '100%',
-          maxWidth: '1400px',
+          maxWidth: '1200px',
           boxSizing: 'border-box',
           display: 'flex',
           alignItems: 'center',
