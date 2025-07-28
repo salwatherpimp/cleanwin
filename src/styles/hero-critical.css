@@ -73,6 +73,9 @@
   max-width: 1152px;
   width: 100%;
   contain: layout style;
+  transform: translateZ(0);
+  will-change: auto;
+  backface-visibility: hidden;
 }
 
 /* Optimized hero headline */
