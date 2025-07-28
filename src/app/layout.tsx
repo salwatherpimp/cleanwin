@@ -153,8 +153,8 @@ export default function RootLayout({
                   document.head.appendChild(link);
                 }
 
-                // Only load CSS files that actually exist
-                const cssFiles = ['/styles/globals.css', '/styles/components.css'];
+                // Only load CSS files that actually exist - correct paths
+                const cssFiles = ['/_next/static/css/globals.css', '/_next/static/css/components.css'];
 
                 if (document.readyState === 'complete') {
                   cssFiles.forEach(loadCSS);
