@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/components.css";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "CleanWin - Professional Cleaning Services",
   description:
     "Professional cleaning services in Winterthur with over 10 years of experience",
