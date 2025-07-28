@@ -10,16 +10,13 @@ const nextConfig: NextConfig = {
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
-    // styledJsx: false, // Temporarily enable to restore navigation
+    styledJsx: false,
   },
-  // Optimize for performance and tree shaking
   webpack: (config: any, { dev, isServer }) => {
     if (!dev) {
-      // Enable tree shaking
       config.optimization.sideEffects = false;
       config.optimization.usedExports = true;
     }
-
     return config;
   },
 
