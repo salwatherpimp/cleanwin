@@ -548,7 +548,11 @@ export default function ResponsiveNavigation() {
             opacity: 1 !important;
             visibility: visible !important;
             position: relative !important;
-            z-index: 1 !important;
+            z-index: 10 !important;
+            background: rgba(0,0,0,0.1) !important;
+            border: 1px solid rgba(0,0,0,0.2) !important;
+            min-width: 32px !important;
+            min-height: 32px !important;
           }
           nav {
             padding: 8px 16px !important;
