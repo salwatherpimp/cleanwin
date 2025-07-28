@@ -589,7 +589,8 @@ export default function ResponsiveNavigation() {
           /* Equal spacing for medium mobile */
           .cta-dropdown-container {
             margin-left: auto !important;
-            margin-right: 14px !important;
+            margin-right: 12px !important;
+            padding-left: 6px !important;
           }
         }
         @media (max-width: 480px) {
