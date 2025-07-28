@@ -238,30 +238,48 @@ export default function RootLayout({
           /* Mobile responsive fixes */
           @media (max-width: 768px) {
             .hero-content-optimized {
-              margin-top: 80px !important;
+              margin-top: 85px !important;
               padding: 20px 16px 40px 16px !important;
             }
             .hero-lcp-container {
-              min-height: 550px !important;
+              min-height: 600px !important;
+              height: auto !important;
             }
             .hero-headline-optimized {
               font-size: 28px !important;
               line-height: 34px !important;
-              margin-bottom: 12px !important;
+              margin-bottom: 16px !important;
             }
             .hero-description-optimized {
-              font-size: 14px !important;
-              line-height: 22px !important;
-              margin-bottom: 20px !important;
+              font-size: 15px !important;
+              line-height: 23px !important;
+              margin-bottom: 24px !important;
             }
             .hero-rating-badge {
-              padding: 6px 12px !important;
-              margin-bottom: 20px !important;
-              font-size: 12px !important;
+              padding: 8px 14px !important;
+              margin-bottom: 24px !important;
+              font-size: 13px !important;
             }
             .hero-cta-optimized {
-              padding: 12px 24px !important;
-              font-size: 13px !important;
+              padding: 14px 28px !important;
+              font-size: 14px !important;
+              min-height: 48px !important;
+              display: inline-flex !important;
+              align-items: center !important;
+              justify-content: center !important;
+              cursor: pointer !important;
+              -webkit-tap-highlight-color: transparent !important;
+            }
+
+            /* Fix mobile sections spacing */
+            section {
+              padding: 32px 16px !important;
+            }
+
+            /* Ensure images don't disappear on scroll */
+            img {
+              will-change: auto !important;
+              transform: none !important;
             }
           }
 
