@@ -191,32 +191,7 @@ export default function RootLayout({
             /* Mobile hero content styles moved to hero-critical.css */
           }
 
-          @media (min-width: 768px) {
-            .hero-mobile-wrapper {
-              height: 80vh;
-              min-height: 80vh;
-              contain-intrinsic-size: 100vw 80vh;
-            }
-
-            .hero-content-mobile h1 {
-              font-size: 40px !important;
-              line-height: 48px !important;
-              min-height: 96px !important;
-              margin-bottom: 12px !important;
-            }
-
-            .hero-content-mobile p {
-              font-size: 20px !important;
-              line-height: 32px !important;
-              min-height: 64px !important;
-              margin-top: 0 !important;
-              margin-bottom: 24px !important;
-            }
-
-            .hero-content-mobile {
-              padding-bottom: 0 !important;
-            }
-          }
+          /* Desktop hero styles moved to hero-critical.css */
 
           @media (min-width: 1024px) {
             [data-nav="desktop"] { display: flex !important; }
