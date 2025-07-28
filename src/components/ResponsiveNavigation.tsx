@@ -552,10 +552,10 @@ export default function ResponsiveNavigation() {
             min-height: 56px !important;
           }
 
-          /* Increase space between logo and CTA button on mobile */
+          /* Create equal spacing between logo-CTA-burger */
           .cta-dropdown-container {
             margin-left: auto !important;
-            padding-left: 40px !important;
+            margin-right: 16px !important;
           }
         }
         @media (min-width: 1024px) {
@@ -586,10 +586,10 @@ export default function ResponsiveNavigation() {
             padding: 8px 14px !important;
           }
 
-          /* Add spacing between logo and CTA on mobile */
+          /* Equal spacing for medium mobile */
           .cta-dropdown-container {
             margin-left: auto !important;
-            padding-left: 32px !important;
+            margin-right: 14px !important;
           }
         }
         @media (max-width: 480px) {
@@ -615,10 +615,10 @@ export default function ResponsiveNavigation() {
             padding: 2px !important;
           }
 
-          /* Add spacing between logo and CTA on small mobile screens */
+          /* Equal spacing for small mobile */
           .cta-dropdown-container {
             margin-left: auto !important;
-            padding-left: 24px !important;
+            margin-right: 12px !important;
           }
         }
         /* Ensure dropdowns work properly on all screen sizes */
