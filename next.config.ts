@@ -14,9 +14,62 @@ const nextConfig: NextConfig = {
   },
   webpack: (config: any, { dev, isServer }) => {
     if (!dev) {
+      // Advanced tree-shaking and bundle optimization
       config.optimization.sideEffects = false;
       config.optimization.usedExports = true;
+      config.optimization.providedExports = true;
+      config.optimization.innerGraph = true;
+
+      // Advanced code splitting
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          // Vendor chunk for third-party libraries
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+            priority: 10,
+            reuseExistingChunk: true,
+          },
+          // Critical chunk for above-the-fold components
+          critical: {
+            name: 'critical',
+            chunks: 'initial',
+            minChunks: 2,
+            priority: 15,
+            reuseExistingChunk: true,
+          },
+          // Common chunk for shared utilities
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            priority: 5,
+            reuseExistingChunk: true,
+            enforce: true,
+          },
+        },
+      };
+
+      // Module concatenation for better compression
+      config.optimization.concatenateModules = true;
+
+      // Advanced minification
+      config.optimization.minimize = true;
+
+      // Eliminate dead code more aggressively
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        // Remove unused React features
+        'react-dom$': 'react-dom/profiling',
+        'scheduler/tracing': 'scheduler/tracing-profiling',
+      };
     }
+
+    // Module resolution optimization
+    config.resolve.extensions = ['.tsx', '.ts', '.jsx', '.js', '.json'];
+
     return config;
   },
 
