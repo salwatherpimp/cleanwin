@@ -175,15 +175,7 @@ export default function RootLayout({
             font-display: swap;
           }
 
-          .hero-mobile-wrapper {
-            contain: layout style;
-            contain-intrinsic-size: 100vw 75vh;
-          }
-
-          .hero-content-mobile {
-            contain: layout style;
-            contain-intrinsic-size: 100% 400px;
-          }
+          /* Mobile hero styles moved to hero-critical.css */
 
           /* Critical mobile navigation visibility */
           @media (max-width: 1023px) {
