@@ -7,6 +7,7 @@ export default function ResponsiveNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isNavCSSReady, setIsNavCSSReady] = useState(false);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
