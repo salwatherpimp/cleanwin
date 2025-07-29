@@ -59,7 +59,6 @@ export default function PureHeroSection() {
           minHeight: '476px',
           overflow: 'hidden',
           contain: 'layout paint',
-          contentVisibility: 'auto',
           willChange: 'transform',
           backgroundSize: 'cover',
           backgroundPosition: '60% 50%',
