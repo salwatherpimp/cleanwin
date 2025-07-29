@@ -116,19 +116,11 @@ export default function RootLayout({
                   }
                 });
 
-                // Optimized font loading to prevent render blocking
+                // Optimized font loading to prevent render blocking (for non-LCP content)
                 if ('fonts' in document) {
                   document.fonts.load('400 16px Inter').catch(function(){});
                   document.fonts.load('600 16px Inter').catch(function(){});
                 }
-
-                // Handle non-blocking font stylesheet loading
-                window.addEventListener('load', function() {
-                  var printStylesheet = document.querySelector('link[href*="fonts.googleapis.com"][media="print"]');
-                  if (printStylesheet) {
-                    printStylesheet.media = 'all';
-                  }
-                });
 
                 // Simplified Service Worker registration (disabled for debugging)
                 // if ('serviceWorker' in navigator) {
