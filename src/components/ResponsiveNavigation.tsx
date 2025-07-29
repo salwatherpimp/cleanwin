@@ -9,14 +9,10 @@ export default function ResponsiveNavigation() {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isNavCSSReady, setIsNavCSSReady] = useState(false);
 
-  // Defer navigation CSS until after LCP to avoid render blocking
+  // Immediate navigation CSS for mobile functionality
   useEffect(() => {
-    // Wait for hero/LCP content to render first
-    const timer = setTimeout(() => {
-      setIsNavCSSReady(true);
-    }, 100); // Short delay to let hero section paint first
-
-    return () => clearTimeout(timer);
+    // Load navigation CSS immediately to ensure mobile nav works
+    setIsNavCSSReady(true);
   }, []);
 
   // Close dropdowns when clicking outside
