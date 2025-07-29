@@ -14,6 +14,16 @@ export default function ResponsiveNavigation() {
   useEffect(() => {
     // Load navigation CSS immediately to ensure mobile nav works
     setIsNavCSSReady(true);
+
+    // Detect mobile on mount and resize
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 1023);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   // Close dropdowns when clicking outside
