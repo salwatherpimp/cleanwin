@@ -370,6 +370,160 @@ export default function ResponsiveNavigation() {
             </div>
           </div>
 
+          {/* CTA Button - Always visible (mobile + desktop) */}
+          <div style={{
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            flexShrink: 0,
+          }} className="cta-dropdown-container">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsCtaDropdownOpen(!isCtaDropdownOpen);
+              }}
+              className="cta-button"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                background: '#0DA6A6',
+                color: 'white',
+                border: 'none',
+                padding: '8px 14px',
+                borderRadius: '20px',
+                fontWeight: '500',
+                fontSize: '13px',
+                cursor: 'pointer',
+                transition: 'background-color 0.2s ease',
+                whiteSpace: 'nowrap',
+                boxShadow: '0 2px 8px rgba(13, 166, 166, 0.3)',
+                height: '36px',
+                minHeight: '36px',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#0b8d8d';
+                e.currentTarget.style.boxShadow = '0 4px 16px rgba(13, 166, 166, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = '#0DA6A6';
+                e.currentTarget.style.boxShadow = '0 2px 8px rgba(13, 166, 166, 0.3)';
+              }}
+            >
+              <HandIcon />
+              <span>Kontaktiere uns</span>
+              <ChevronDownIcon size={14} />
+            </button>
+
+            {/* CTA Dropdown */}
+            <div style={{
+              position: 'absolute',
+              top: '100%',
+              right: '0',
+              background: 'white',
+              borderRadius: '16px',
+              boxShadow: '0 16px 64px rgba(0, 0, 0, 0.15)',
+              border: '1px solid rgba(0, 0, 0, 0.08)',
+              padding: '16px',
+              minWidth: '280px',
+              zIndex: 1000,
+              marginTop: '8px',
+              display: isCtaDropdownOpen ? 'block' : 'none',
+            }}>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+              }}>
+                <a
+                  href="tel:+41762951831"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    padding: '12px 16px',
+                    borderRadius: '12px',
+                    textDecoration: 'none',
+                    color: '#374151',
+                    transition: 'background-color 0.2s ease',
+                    border: '1px solid #e5e7eb',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#f9fafb';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                  }}
+                >
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    background: '#0DA6A6',
+                    borderRadius: '20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    flexShrink: 0,
+                  }}>
+                    <PhoneIcon />
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: '600', fontSize: '14px', marginBottom: '2px' }}>
+                      Jetzt anrufen
+                    </div>
+                    <div style={{ fontSize: '13px', color: '#6b7280' }}>
+                      +41 76 295 18 31
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="/kontakt"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    padding: '12px 16px',
+                    borderRadius: '12px',
+                    textDecoration: 'none',
+                    color: '#374151',
+                    transition: 'background-color 0.2s ease',
+                    border: '1px solid #e5e7eb',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#f9fafb';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                  }}
+                >
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    background: '#0DA6A6',
+                    borderRadius: '20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    flexShrink: 0,
+                  }}>
+                    <HandIcon />
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: '600', fontSize: '14px', marginBottom: '2px' }}>
+                      Kontakt Formular
+                    </div>
+                    <div style={{ fontSize: '13px', color: '#6b7280' }}>
+                      Unverbindlich anfragen
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
           {/* Hamburger Menu - Visible on mobile */}
           <button
             onClick={(e) => {
