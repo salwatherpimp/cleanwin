@@ -1,15 +1,11 @@
-// LCP-Optimized Hero Section with Pure Inline Styles - Zero Runtime CSS Processing
+// LCP-Optimized Hero Section with HTML img - Zero Background-Image CSS
 export default function PureHeroSection() {
   return (
     <>
       <style dangerouslySetInnerHTML={{
         __html: `
-          [data-lcp] {
-            background-image: url('https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif');
-          }
           @media (max-width: 768px) {
             [data-lcp] {
-              background-image: url('https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif') !important;
               min-height: 600px !important;
               height: auto !important;
             }
@@ -59,56 +55,59 @@ export default function PureHeroSection() {
           minHeight: '476px',
           overflow: 'hidden',
           contain: 'layout paint',
-          willChange: 'transform',
-          backgroundSize: 'cover',
-          backgroundPosition: '60% 50%',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'local'
+          willChange: 'transform'
         }}
         role="img"
         aria-label="CleanWin Hero Background"
         data-lcp
       >
-        {/* Invisible high-priority images for browser resource prioritization */}
-        <img
-          src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-          alt=""
-          fetchPriority="high"
-          loading="eager"
-          decoding="async"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '1px',
-            height: '1px',
-            opacity: 0,
-            pointerEvents: 'none',
-            zIndex: -1
-          }}
-        />
+        {/* Main hero background image - visible for desktop */}
         <img
           src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
           alt=""
-          fetchPriority="high"
           loading="eager"
+          fetchPriority="high"
           decoding="async"
           style={{
             position: 'absolute',
             top: 0,
             left: 0,
-            width: '1px',
-            height: '1px',
-            opacity: 0,
-            pointerEvents: 'none',
-            zIndex: -1
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: '60% 50%',
+            zIndex: 0,
+            display: 'block'
           }}
         />
+        
+        {/* Mobile hero background image - hidden on desktop, shown on mobile */}
+        <img
+          src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          alt=""
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: '60% 50%',
+            zIndex: 0,
+            display: 'none'
+          }}
+          media="(max-width: 768px)"
+        />
 
+        {/* Dark overlay */}
         <div style={{
           position: 'absolute',
           inset: 0,
-          backgroundColor: 'rgba(0,0,0,0.4)'
+          backgroundColor: 'rgba(0,0,0,0.4)',
+          zIndex: 5
         }} />
         
         <div 
@@ -140,7 +139,9 @@ export default function PureHeroSection() {
                 color: 'white',
                 textShadow: 'rgba(0,0,0,0.1) 0px 4px 6px',
                 willChange: 'transform',
-                transform: 'translateZ(0)'
+                transform: 'translateZ(0)',
+                position: 'relative',
+                zIndex: 15
               }}
             >
               Professionelle Reinigung in Winterthur & Region
@@ -154,7 +155,9 @@ export default function PureHeroSection() {
                 lineHeight: '24px',
                 margin: '0 auto 24px auto',
                 maxWidth: '768px',
-                color: 'rgba(255,255,255,0.95)'
+                color: 'rgba(255,255,255,0.95)',
+                position: 'relative',
+                zIndex: 15
               }}
             >
               Unsere Reinigungsdienstleistung steht für Qualität, faire Preise und echte Nähe. 
@@ -164,7 +167,9 @@ export default function PureHeroSection() {
             <div style={{
               textAlign: 'center',
               marginBottom: '32px',
-              marginTop: '16px'
+              marginTop: '16px',
+              position: 'relative',
+              zIndex: 15
             }}>
               <div 
                 data-hero-rating
@@ -177,7 +182,9 @@ export default function PureHeroSection() {
                   borderRadius: '8px',
                   padding: '8px 16px',
                   color: 'white',
-                  marginBottom: '32px'
+                  marginBottom: '32px',
+                  position: 'relative',
+                  zIndex: 15
                 }}
               >
                 <svg style={{width: '32px', height: '32px', marginRight: '8px'}} viewBox="0 0 24 24">
@@ -244,7 +251,9 @@ export default function PureHeroSection() {
                     transition: 'all 0.2s ease',
                     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                     cursor: 'pointer',
-                    WebkitTapHighlightColor: 'transparent'
+                    WebkitTapHighlightColor: 'transparent',
+                    position: 'relative',
+                    zIndex: 15
                   }}
                 >
                   Jetzt unverbindlich kontaktieren
@@ -254,6 +263,19 @@ export default function PureHeroSection() {
           </div>
         </div>
       </section>
+      
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @media (max-width: 768px) {
+            [data-lcp] img:first-of-type {
+              display: none !important;
+            }
+            [data-lcp] img:nth-of-type(2) {
+              display: block !important;
+            }
+          }
+        `
+      }} />
     </>
   );
 }
