@@ -633,20 +633,29 @@ export default function ResponsiveNavigation() {
             justify-content: space-between !important;
           }
 
-          /* Perfect mobile balance - equal 7px spacing */
+          /* Improved mobile spacing - wider gaps */
           nav > a:first-child {
             flex: 0 0 auto !important;
-            margin-right: 7px !important;
+            margin-right: 12px !important;
           }
 
           .cta-dropdown-container {
             flex: 0 0 auto !important;
-            margin: 0 7px 0 auto !important;
+            margin: 0 12px 0 auto !important;
           }
 
           .hamburger-menu {
             flex: 0 0 auto !important;
             margin: 0 !important;
+          }
+
+          /* Make CTA button less wide on mobile */
+          .cta-button {
+            padding: 6px 10px !important;
+            font-size: 12px !important;
+            height: 32px !important;
+            min-height: 32px !important;
+            gap: 4px !important;
           }
         }
         @media (min-width: 1024px) {
@@ -682,18 +691,18 @@ export default function ResponsiveNavigation() {
 
           /* Perfect balance for medium mobile */
           nav > a:first-child {
-            margin-right: 7px !important;
+            margin-right: 12px !important;
           }
 
           .cta-dropdown-container {
-            margin: 0 7px 0 auto !important;
+            margin: 0 12px 0 auto !important;
           }
         }
         @media (max-width: 480px) {
-          /* Make container even wider on small screens */
+          /* Make container wider on small screens to accommodate gaps */
           div[style*="max-width: calc(100vw - 20px)"] {
-            max-width: calc(100vw - 16px) !important;
-            padding: 0 8px !important;
+            max-width: calc(100vw - 14px) !important;
+            padding: 0 7px !important;
           }
           nav {
             padding: 6px 12px !important;
@@ -714,11 +723,11 @@ export default function ResponsiveNavigation() {
 
           /* Perfect balance for small mobile */
           nav > a:first-child {
-            margin-right: 7px !important;
+            margin-right: 10px !important;
           }
 
           .cta-dropdown-container {
-            margin: 0 7px 0 auto !important;
+            margin: 0 10px 0 auto !important;
           }
         }
         /* Ensure dropdowns work properly on all screen sizes */
