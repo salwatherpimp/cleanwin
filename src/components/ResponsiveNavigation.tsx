@@ -8,6 +8,7 @@ export default function ResponsiveNavigation() {
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isNavCSSReady, setIsNavCSSReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Immediate navigation CSS for mobile functionality
   useEffect(() => {
