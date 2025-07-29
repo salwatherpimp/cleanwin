@@ -99,7 +99,6 @@ export default function PureHeroSection() {
             zIndex: 0,
             display: 'none'
           }}
-          media="(max-width: 768px)"
         />
 
         {/* Dark overlay */}
