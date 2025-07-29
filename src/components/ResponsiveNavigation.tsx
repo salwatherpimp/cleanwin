@@ -633,15 +633,15 @@ export default function ResponsiveNavigation() {
             justify-content: space-between !important;
           }
 
-          /* Improved mobile spacing - wider gaps */
+          /* Exact 6px gaps between elements */
           nav > a:first-child {
             flex: 0 0 auto !important;
-            margin-right: 12px !important;
+            margin-right: 6px !important;
           }
 
           .cta-dropdown-container {
             flex: 0 0 auto !important;
-            margin: 0 12px 0 auto !important;
+            margin: 0 6px 0 auto !important;
           }
 
           .hamburger-menu {
@@ -691,11 +691,11 @@ export default function ResponsiveNavigation() {
 
           /* Perfect balance for medium mobile */
           nav > a:first-child {
-            margin-right: 12px !important;
+            margin-right: 6px !important;
           }
 
           .cta-dropdown-container {
-            margin: 0 12px 0 auto !important;
+            margin: 0 6px 0 auto !important;
           }
         }
         @media (max-width: 480px) {
@@ -723,11 +723,11 @@ export default function ResponsiveNavigation() {
 
           /* Perfect balance for small mobile */
           nav > a:first-child {
-            margin-right: 10px !important;
+            margin-right: 6px !important;
           }
 
           .cta-dropdown-container {
-            margin: 0 10px 0 auto !important;
+            margin: 0 6px 0 auto !important;
           }
         }
         /* Ensure dropdowns work properly on all screen sizes */
