@@ -649,13 +649,14 @@ export default function ResponsiveNavigation() {
             margin: 0 !important;
           }
 
-          /* Make CTA button less wide on mobile */
+          /* Make CTA button much smaller on mobile - reduced by 1.5x */
           .cta-button {
-            padding: 6px 10px !important;
-            font-size: 12px !important;
-            height: 32px !important;
-            min-height: 32px !important;
-            gap: 4px !important;
+            padding: 4px 7px !important;
+            font-size: 10px !important;
+            height: 24px !important;
+            min-height: 24px !important;
+            gap: 3px !important;
+            border-radius: 15px !important;
           }
         }
         @media (min-width: 1024px) {
