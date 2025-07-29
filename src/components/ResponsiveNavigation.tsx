@@ -133,6 +133,7 @@ export default function ResponsiveNavigation() {
           </a>
 
           {/* Desktop Menu - Hidden on mobile */}
+          {!isMobile && (
           <div style={{
             display: 'flex',
             alignItems: 'center',
@@ -266,7 +267,7 @@ export default function ResponsiveNavigation() {
               Referenzen
             </a>
           </div>
-
+          )}
 
 
           {/* CTA Button - Always visible (mobile + desktop) */}
@@ -424,6 +425,7 @@ export default function ResponsiveNavigation() {
           </div>
 
           {/* Hamburger Menu - Visible on mobile */}
+          {isMobile && (
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -476,6 +478,7 @@ export default function ResponsiveNavigation() {
               transform: isMobileMenuOpen ? 'rotate(-45deg) translate(6px, -6px)' : 'none',
             }}></div>
           </button>
+          )}
         </nav>
       </div>
 
