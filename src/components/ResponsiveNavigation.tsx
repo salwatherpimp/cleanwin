@@ -591,6 +591,8 @@ export default function ResponsiveNavigation() {
         @media (max-width: 1023px) {
           .desktop-menu {
             display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
           }
           .mobile-menu-container {
             display: none !important;
@@ -603,6 +605,7 @@ export default function ResponsiveNavigation() {
             z-index: 10 !important;
             min-width: 32px !important;
             min-height: 32px !important;
+            pointer-events: auto !important;
           }
           nav {
             padding: 8px 16px !important;
