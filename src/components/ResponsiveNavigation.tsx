@@ -588,10 +588,14 @@ export default function ResponsiveNavigation() {
 
       {isNavCSSReady && <style jsx>{`
         @media (max-width: 1023px) {
-          .desktop-menu {
+          .desktop-menu,
+          .desktop-menu *,
+          .services-dropdown-container,
+          .dropdown-button {
             display: none !important;
             visibility: hidden !important;
             opacity: 0 !important;
+            pointer-events: none !important;
           }
           .mobile-menu-container {
             display: none !important;
