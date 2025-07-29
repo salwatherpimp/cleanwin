@@ -42,7 +42,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        {/* Non-blocking font stylesheet with optimized loading */}
+        {/* Progressive font loading - non-blocking for non-LCP content */}
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="preload"
@@ -53,15 +53,8 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          media="print"
+          media="all"
         />
-        <noscript>
-          {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          />
-        </noscript>
 
         {/* CRITICAL: CSS Background Image Preload - Mobile First */}
         <link
