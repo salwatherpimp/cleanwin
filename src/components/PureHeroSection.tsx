@@ -69,6 +69,42 @@ export default function PureHeroSection() {
         aria-label="CleanWin Hero Background"
         data-lcp
       >
+        {/* Invisible high-priority images for browser resource prioritization */}
+        <img
+          src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          alt=""
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '1px',
+            height: '1px',
+            opacity: 0,
+            pointerEvents: 'none',
+            zIndex: -1
+          }}
+        />
+        <img
+          src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          alt=""
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '1px',
+            height: '1px',
+            opacity: 0,
+            pointerEvents: 'none',
+            zIndex: -1
+          }}
+        />
+
         <div style={{
           position: 'absolute',
           inset: 0,
