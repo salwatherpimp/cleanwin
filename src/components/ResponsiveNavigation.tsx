@@ -550,6 +550,9 @@ export default function ResponsiveNavigation() {
           .desktop-menu {
             display: none !important;
           }
+          .mobile-menu-container {
+            display: none !important;
+          }
           .hamburger-menu {
             display: flex !important;
             opacity: 1 !important;
