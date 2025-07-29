@@ -421,7 +421,7 @@ export default function ResponsiveNavigation() {
             className="hamburger-menu"
             aria-label="Navigation menu öffnen"
             style={{
-              display: 'flex',
+              display: window.innerWidth >= 1024 ? 'none' : 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
