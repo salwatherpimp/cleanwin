@@ -549,7 +549,7 @@ export default function ResponsiveNavigation() {
         </div>
       </div>
 
-      <style jsx>{`
+      {isNavCSSReady && <style jsx>{`
         @media (max-width: 1023px) {
           .desktop-menu {
             display: none !important;
@@ -666,7 +666,7 @@ export default function ResponsiveNavigation() {
             max-width: calc(100vw - 32px) !important;
           }
         }
-      `}</style>
+      `}</style>}
     </>
   );
 }
