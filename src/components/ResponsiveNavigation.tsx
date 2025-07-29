@@ -635,6 +635,9 @@ export default function ResponsiveNavigation() {
           }
           .hamburger-menu {
             display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
           }
           nav {
             padding: 8px 24px !important;
