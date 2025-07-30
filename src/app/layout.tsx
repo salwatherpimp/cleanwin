@@ -143,22 +143,66 @@ export default function RootLayout({
         />
 
         <style>{`
-          /* Critical font loading optimization */
-          @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+          /* Critical CSS for LCP optimization - Hero section only */
+
+          /* HERO SECTION CRITICAL CSS */
+          [data-lcp] {
+            position: relative;
+            width: 100vw;
+            height: 64vh;
+            min-height: 476px;
+            overflow: hidden;
+            contain: layout style paint;
+            isolation: isolate;
           }
-          @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 600;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+
+          @media (max-width: 768px) {
+            [data-lcp] {
+              min-height: 520px !important;
+              height: 520px !important;
+            }
+            [data-hero-content] {
+              margin-top: 85px !important;
+              padding: 20px 16px 40px 16px !important;
+            }
+            [data-hero-headline] {
+              font-size: 28px !important;
+              line-height: 34px !important;
+            }
+            [data-hero-description] {
+              font-size: 15px !important;
+              line-height: 23px !important;
+            }
+            [data-hero-rating] {
+              padding: 8px 14px !important;
+              margin-bottom: 24px !important;
+            }
+            [data-hero-cta] {
+              padding: 14px 28px !important;
+              min-height: 48px !important;
+            }
+          }
+
+          @media (min-width: 769px) {
+            [data-lcp] {
+              height: 580px !important;
+              min-height: 580px !important;
+            }
+            [data-hero-headline] {
+              font-size: 48px;
+              line-height: 54px;
+            }
+            [data-hero-description] {
+              font-size: 18px;
+              line-height: 28px;
+            }
+          }
+
+          @media (min-width: 1200px) {
+            [data-lcp] {
+              height: 640px !important;
+              min-height: 640px !important;
+            }
           }
 
           /* Reset and layout */
