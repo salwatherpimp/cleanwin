@@ -39,12 +39,21 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{
           __html: `
             // Defer font loading until after LCP
-            requestIdleCallback(function() {
-              var link = document.createElement('link');
-              link.rel = 'stylesheet';
-              link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
-              document.head.appendChild(link);
-            }, { timeout: 1000 });
+            if (typeof requestIdleCallback === 'function') {
+              requestIdleCallback(function() {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
+                document.head.appendChild(link);
+              }, { timeout: 1000 });
+            } else {
+              setTimeout(function() {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
+                document.head.appendChild(link);
+              }, 100);
+            }
           `
         }} />
 
