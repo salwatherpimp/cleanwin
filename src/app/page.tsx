@@ -27,8 +27,7 @@ const Footer = dynamic(() => import("../components/Footer"), {
 export default function CleanWinPage() {
   return (
     <ErrorBoundary>
-      {/* PERFORMANCE CRITICAL: Static navigation during LCP, interactive after */}
-      <NavigationHandler />
+      {/* PERFORMANCE CRITICAL: Navigation is pure HTML/CSS in layout.tsx */}
 
       {/* Hero Section - Pure HTML, No styled-jsx, Responsive Images */}
       <PureHeroSection />
