@@ -105,11 +105,7 @@ export default function RootLayout({
                   }
                 });
 
-                // Optimized font loading to prevent render blocking (for non-LCP content)
-                if ('fonts' in document) {
-                  document.fonts.load('400 16px Inter').catch(function(){});
-                  document.fonts.load('600 16px Inter').catch(function(){});
-                }
+                // Font loading removed for LCP optimization - Hero uses system fonts
 
                 // Simplified Service Worker registration (disabled for debugging)
                 // if ('serviceWorker' in navigator) {
