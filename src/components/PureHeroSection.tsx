@@ -6,8 +6,8 @@ export default function PureHeroSection() {
         __html: `
           @media (max-width: 768px) {
             [data-lcp] {
-              min-height: 600px !important;
-              height: auto !important;
+              min-height: 520px !important;
+              height: 520px !important;
             }
             [data-hero-content] {
               margin-top: 85px !important;
