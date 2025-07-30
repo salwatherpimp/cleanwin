@@ -2,7 +2,40 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import ResponsiveNavigation from "../components/ResponsiveNavigation";
+// Navigation deferred to improve LCP - loads after hero paint
+const ResponsiveNavigation = dynamic(() => import("../components/ResponsiveNavigation"), {
+  ssr: false,
+  loading: () => (
+    <div style={{
+      position: 'fixed',
+      top: '16px',
+      left: '0',
+      right: '0',
+      zIndex: 1000,
+      display: 'flex',
+      justifyContent: 'center',
+      width: '100%',
+      maxWidth: 'calc(100vw - 20px)',
+      margin: '0 auto',
+      padding: '0 10px',
+    }}>
+      <nav style={{
+        background: 'white',
+        borderRadius: '50px',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
+        height: '56px',
+        width: '100%',
+        maxWidth: '1200px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '0 24px'
+      }}>
+        <div style={{fontSize: '14px', color: '#6b7280'}}>Loading navigation...</div>
+      </nav>
+    </div>
+  )
+});
 import PureHeroSection from "../components/PureHeroSection";
 import ErrorBoundary from "../components/ErrorBoundary";
 
