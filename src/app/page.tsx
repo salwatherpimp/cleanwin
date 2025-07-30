@@ -1215,15 +1215,54 @@ className="service-card"
       <Footer />
 
       {/* Non-critical styles deferred for LCP optimization */}
-      <script dangerouslySetInnerHTML={{
+      <style dangerouslySetInnerHTML={{
         __html: `
-          // Defer CSS injection until after LCP paint
-          if (typeof requestIdleCallback === 'function') {
-            requestIdleCallback(function() {
-              var style = document.createElement('style');
-              style.textContent = '.service-card:hover{transform:translateY(-8px);box-shadow:0 16px 64px rgba(0,0,0,0.15);}.service-card:hover img{transform:scale(1.05);}@media(max-width:767px){.grid-mobile-3 .usp-card{min-width:280px!important;flex-shrink:0!important;animation:usp-mobile-scroll 16s linear infinite!important;}.grid-mobile-3{animation-play-state:running!important;}}@media(min-width:768px){.usp-duplicate{display:none!important;}}@keyframes usp-mobile-scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}';
-              document.head.appendChild(style);
-            }, { timeout: 1000 });
+          .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+          }
+          .service-card:hover img {
+            transform: scale(1.05);
+          }
+          @media (max-width: 767px) {
+            .grid-mobile-3 .usp-card {
+              min-width: 280px !important;
+              flex-shrink: 0 !important;
+              animation: usp-mobile-scroll 16s linear infinite !important;
+            }
+            .grid-mobile-3 {
+              animation-play-state: running !important;
+            }
+          }
+          @media (min-width: 768px) {
+            .usp-duplicate {
+              display: none !important;
+            }
+          }
+          @keyframes usp-mobile-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+          }
+          .hero-cta-button:hover {
+            background: #f3f4f6 !important;
+            color: #0DA6A6 !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
+          }
+          .about-cta-button:hover {
+            background: #0b8d8d !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
+          }
+          .final-cta-button:hover {
+            background: #0b8d8d !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
+          }
+          @media (min-width: 1024px) {
+            .nav-wrapper {
+              padding: 0 32px;
+            }
           }
         `
       }} />
