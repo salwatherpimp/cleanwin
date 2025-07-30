@@ -61,43 +61,7 @@ export default function RootLayout({
 
         {/* Critical CSS preload - only for existing assets */}
 
-        {/* Critical image decode optimization + Service Worker + Error handling + Font loading */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(){
-                // Minimal error handler - only for specific dev overlay issues
-                window.addEventListener('unhandledrejection', function(event) {
-                  if (event.reason && event.reason.message &&
-                      event.reason.message.includes('__nextjs_original-stack-frame')) {
-                    event.preventDefault();
-                  }
-                });
-
-                // Font loading removed for LCP optimization - Hero uses system fonts
-
-                // Simplified Service Worker registration (disabled for debugging)
-                // if ('serviceWorker' in navigator) {
-                //   window.addEventListener('load', function() {
-                //     navigator.serviceWorker.register('/sw.js').catch(function() {});
-                //   });
-                // }
-
-                // Critical image decode optimization
-                var heroImg = new Image();
-                heroImg.decoding = 'async';
-                heroImg.fetchPriority = 'high';
-                heroImg.loading = 'eager';
-                if (window.innerWidth <= 768) {
-                  heroImg.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgwIiBoZWlnaHQ9IjI3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwZDk0ODgiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNzU5ODUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+';
-                } else {
-                  heroImg.src = 'https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif';
-                }
-                if (heroImg.decode) heroImg.decode().catch(function(){});
-              })();
-            `
-          }}
-        />
+        {/* All JavaScript deferred for LCP optimization - Hero uses preloaded image only */}
 
         <style>{`
           /* Critical CSS for LCP optimization - Hero section only */
