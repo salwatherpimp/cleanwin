@@ -44,6 +44,12 @@ export default function PureHeroSection() {
               line-height: 28px;
             }
           }
+          @media (min-width: 1200px) {
+            [data-lcp] {
+              height: 640px;
+              min-height: 640px;
+            }
+          }
         `
       }} />
       
