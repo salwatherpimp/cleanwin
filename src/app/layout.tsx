@@ -55,9 +55,7 @@ export default function RootLayout({
           `
         }} />
 
-        {/* Performance hint: Preload critical resources */}
-        <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
-        <link rel="modulepreload" href="/_next/static/chunks/main.js" />
+        {/* Module preloads removed to give hero image exclusive priority during LCP */}
 
 
 
