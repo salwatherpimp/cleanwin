@@ -17,14 +17,13 @@ export default function PureHeroSection() {
         aria-label="CleanWin Hero Background"
         data-lcp
       >
-        {/* Single responsive hero background image - eliminates resource contention */}
+        {/* Hero image - priority set via preload in head */}
         <img
           src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
           srcSet="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 480w, https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 1280w"
           sizes="(max-width: 768px) 480px, 1280px"
           alt=""
           loading="eager"
-          fetchPriority="high"
           decoding="async"
           style={{
             position: 'absolute',
