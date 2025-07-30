@@ -252,18 +252,7 @@ export default function PureHeroSection() {
         </div>
       </section>
       
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          @media (max-width: 768px) {
-            [data-lcp] img:first-of-type {
-              display: none !important;
-            }
-            [data-lcp] img:nth-of-type(2) {
-              display: block !important;
-            }
-          }
-        `
-      }} />
+
     </>
   );
 }
