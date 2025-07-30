@@ -68,9 +68,11 @@ export default function PureHeroSection() {
         aria-label="CleanWin Hero Background"
         data-lcp
       >
-        {/* Main hero background image - visible for desktop */}
+        {/* Single responsive hero background image - eliminates resource contention */}
         <img
           src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          srcSet="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 480w, https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 1280w"
+          sizes="(max-width: 768px) 480px, 1280px"
           alt=""
           loading="eager"
           fetchPriority="high"
@@ -85,26 +87,6 @@ export default function PureHeroSection() {
             objectPosition: '60% 50%',
             zIndex: 0,
             display: 'block'
-          }}
-        />
-        
-        {/* Mobile hero background image - hidden on desktop, shown on mobile */}
-        <img
-          src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-          alt=""
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: '60% 50%',
-            zIndex: 0,
-            display: 'none'
           }}
         />
 
