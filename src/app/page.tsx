@@ -1243,71 +1243,71 @@ className="service-card"
       {/* Footer */}
       <Footer />
 
-      {/* Non-critical styles loaded after initial render */}
-      <style jsx>{`
-        /* Services hover effects */
-        .service-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
-        }
-
-        .service-card:hover img {
-          transform: scale(1.05);
-        }
-
-        /* USP Mobile Auto-Scroll Animation - Improved Implementation */
-        @media (max-width: 767px) {
-          .grid-mobile-3 .usp-card {
-            min-width: 280px !important;
-            flex-shrink: 0 !important;
-            animation: usp-mobile-scroll 16s linear infinite !important;
-          }
-
-          .grid-mobile-3 {
-            animation-play-state: running !important;
-          }
-        }
-
-        /* Hide duplicate USP cards on desktop */
-        @media (min-width: 768px) {
-          .usp-duplicate {
-            display: none !important;
-          }
-        }
-
-        /* USP Mobile Auto-Scroll Animation - Seamless Loop */
-        @keyframes usp-mobile-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-100%); }
-        }
-
-        /* CTA Button Hover Effects */
-        .hero-cta-button:hover {
-          background: #f3f4f6 !important;
-          color: #0DA6A6 !important;
-          transform: translateY(-1px) !important;
-          box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
-        }
-
-        .about-cta-button:hover {
-          background: #0b8d8d !important;
-          transform: translateY(-1px) !important;
-          box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
-        }
-
-        .final-cta-button:hover {
-          background: #0b8d8d !important;
-          transform: translateY(-1px) !important;
-          box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
-        }
-
-        /* Desktop Hero Section Spacing Optimization */
-        @media (min-width: 1024px) {
-          .nav-wrapper {
-            padding: 0 32px;
-          }
-        }
-      `}</style>
+      {/* Non-critical styles deferred for LCP optimization */}
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          // Defer CSS injection until after LCP paint
+          requestIdleCallback(function() {
+            var style = document.createElement('style');
+            style.textContent = \`
+              /* Services hover effects */
+              .service-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+              }
+              .service-card:hover img {
+                transform: scale(1.05);
+              }
+              /* USP Mobile Auto-Scroll Animation */
+              @media (max-width: 767px) {
+                .grid-mobile-3 .usp-card {
+                  min-width: 280px !important;
+                  flex-shrink: 0 !important;
+                  animation: usp-mobile-scroll 16s linear infinite !important;
+                }
+                .grid-mobile-3 {
+                  animation-play-state: running !important;
+                }
+              }
+              /* Hide duplicate USP cards on desktop */
+              @media (min-width: 768px) {
+                .usp-duplicate {
+                  display: none !important;
+                }
+              }
+              /* USP Mobile Auto-Scroll Animation - Seamless Loop */
+              @keyframes usp-mobile-scroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-100%); }
+              }
+              /* CTA Button Hover Effects */
+              .hero-cta-button:hover {
+                background: #f3f4f6 !important;
+                color: #0DA6A6 !important;
+                transform: translateY(-1px) !important;
+                box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
+              }
+              .about-cta-button:hover {
+                background: #0b8d8d !important;
+                transform: translateY(-1px) !important;
+                box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
+              }
+              .final-cta-button:hover {
+                background: #0b8d8d !important;
+                transform: translateY(-1px) !important;
+                box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
+              }
+              /* Desktop Hero Section Spacing Optimization */
+              @media (min-width: 1024px) {
+                .nav-wrapper {
+                  padding: 0 32px;
+                }
+              }
+            \`;
+            document.head.appendChild(style);
+          }, { timeout: 1000 });
+        `
+      }} />
       </div>
     </ErrorBoundary>
   );
