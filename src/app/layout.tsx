@@ -35,15 +35,18 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Inter fonts removed from preload - Hero uses system fonts for LCP optimization */}
-        {/* Non-blocking font loading for below-the-fold content */}
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          media="print"
-          onLoad="this.media='all'"
-        />
+        {/* Inter fonts deferred for LCP optimization - Hero uses system fonts */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            // Defer font loading until after LCP
+            requestIdleCallback(function() {
+              var link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
+              document.head.appendChild(link);
+            }, { timeout: 1000 });
+          `
+        }} />
 
         {/* CRITICAL: CSS Background Image Preload - Mobile First */}
         <link
