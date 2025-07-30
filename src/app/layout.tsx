@@ -31,40 +31,12 @@ export default function RootLayout({
           type="image/avif"
         />
 
-        {/* Font preconnects deferred for LCP - Hero uses system fonts only */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            // Defer font loading until after LCP paint
-            requestIdleCallback(function() {
-              var preconnect1 = document.createElement('link');
-              preconnect1.rel = 'preconnect';
-              preconnect1.href = 'https://fonts.googleapis.com';
-              document.head.appendChild(preconnect1);
-
-              var preconnect2 = document.createElement('link');
-              preconnect2.rel = 'preconnect';
-              preconnect2.href = 'https://fonts.gstatic.com';
-              preconnect2.crossOrigin = 'anonymous';
-              document.head.appendChild(preconnect2);
-
-              var link = document.createElement('link');
-              link.rel = 'stylesheet';
-              link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
-              document.head.appendChild(link);
-            }, { timeout: 1000 });
-          `
-        }} />
-
-        {/* Module preloads removed to give hero image exclusive priority during LCP */}
-
-
-
-        {/* Critical CSS preload - only for existing assets */}
-
-        {/* All JavaScript deferred for LCP optimization - Hero uses preloaded image only */}
-
+        {/* Complete navigation and layout CSS - NO JavaScript dependencies */}
         <style>{`
-          /* Critical CSS for LCP optimization - Hero section only */
+          /* Reset and base styles */
+          *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+          html { line-height: 1.5; font-family: ui-sans-serif, system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
+          body { margin: 0; background: #ffffff; color: #171717; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 
           /* HERO SECTION CRITICAL CSS */
           [data-lcp] {
@@ -76,7 +48,7 @@ export default function RootLayout({
             contain: layout style paint;
             isolation: isolate;
           }
-
+          
           @media (max-width: 768px) {
             [data-lcp] {
               min-height: 520px !important;
@@ -103,7 +75,7 @@ export default function RootLayout({
               min-height: 48px !important;
             }
           }
-
+          
           @media (min-width: 769px) {
             [data-lcp] {
               height: 580px !important;
@@ -118,7 +90,7 @@ export default function RootLayout({
               line-height: 28px;
             }
           }
-
+          
           @media (min-width: 1200px) {
             [data-lcp] {
               height: 640px !important;
@@ -126,114 +98,220 @@ export default function RootLayout({
             }
           }
 
-          /* Reset and layout */
-          *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
-          html { line-height: 1.5; font-family: ui-sans-serif, system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
-          body { margin: 0; background: #ffffff; color: #171717; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, 'Inter'; -webkit-font-smoothing: antialiased; }
+          /* STATIC NAVIGATION - PURE HTML/CSS */
+          .nav-wrapper {
+            position: fixed;
+            top: 16px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: calc(100vw - 20px);
+            margin: 0 auto;
+            padding: 0 10px;
+          }
 
-          /* Navigation and mobile menu */
-          nav { position: relative; z-index: 1000; }
+          .nav-pill {
+            background: white;
+            border-radius: 50px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            height: 56px;
+            min-height: 56px;
+            padding: 8px 16px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: visible;
+          }
 
-          /* Mobile navigation fixes */
+          .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            flex-shrink: 0;
+          }
+
+          .nav-logo img {
+            width: auto;
+            height: 30px;
+            max-width: 110px;
+          }
+
+          .desktop-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-left: 32px;
+          }
+
+          .nav-link {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 10px 16px;
+            border-radius: 25px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            white-space: nowrap;
+            font-family: inherit;
+          }
+
+          .nav-link:hover {
+            background: #f3f4f6;
+            color: #0DA6A6;
+          }
+
+          .cta-button {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #0DA6A6;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 13px;
+            text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(13, 166, 166, 0.3);
+            height: 36px;
+            min-height: 36px;
+            font-family: inherit;
+            transition: background-color 0.2s ease;
+          }
+
+          .cta-button:hover {
+            background: #0b8d8d;
+            box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4);
+          }
+
+          .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            transition: background-color 0.2s ease;
+          }
+
+          .hamburger:hover {
+            background: #f3f4f6;
+          }
+
+          .hamburger-line {
+            width: 18px;
+            height: 2px;
+            background-color: #374151;
+            margin-bottom: 3px;
+            transition: transform 0.3s ease;
+          }
+
+          .hamburger-line:last-child {
+            margin-bottom: 0;
+          }
+
+          /* Mobile responsive navigation */
           @media (max-width: 1023px) {
-            [data-nav="desktop"] { display: none !important; }
-            [data-nav="mobile"] { display: flex !important; }
-
-            /* Mobile menu container */
-            .mobile-menu-container {
-              position: fixed !important;
-              top: 80px !important;
-              left: 16px !important;
-              right: 16px !important;
-              background: white !important;
-              border-radius: 20px !important;
-              box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15) !important;
-              border: 1px solid rgba(0, 0, 0, 0.1) !important;
-              z-index: 99999 !important;
-              max-height: calc(100vh - 120px) !important;
-              overflow-y: auto !important;
-              margin: 0 auto !important;
-              max-width: 400px !important;
+            .desktop-menu {
+              display: none !important;
             }
-
-            /* Ensure mobile menu is visible when open */
-            .mobile-menu-container.menu-open {
-              opacity: 1 !important;
-              visibility: visible !important;
-              transform: translateY(0) !important;
-              display: block !important;
+            .hamburger {
+              display: flex !important;
             }
-
-            /* Mobile navigation pill */
-            nav {
-              margin: 0 auto !important;
-              max-width: calc(100vw - 32px) !important;
-              z-index: 1000 !important;
-              position: relative !important;
+            .nav-pill {
+              padding: 8px 16px !important;
+              height: 56px !important;
+              min-height: 56px !important;
             }
-
-            /* Mobile navigation wrapper */
-            div[style*="position: fixed"][style*="top: 16px"] {
-              z-index: 1000 !important;
+            .nav-logo {
+              margin-right: 6px !important;
+            }
+            .cta-button {
+              padding: 8px 14px !important;
+              font-size: 13px !important;
+              height: 36px !important;
+              min-height: 36px !important;
+              gap: 6px !important;
+              margin: 0 6px 0 auto !important;
             }
           }
 
           @media (min-width: 1024px) {
-            [data-nav="desktop"] { display: flex !important; }
-            [data-nav="mobile"] { display: none !important; }
-          }
-
-          /* Hero section styles moved to CSS modules */
-
-          /* Mobile responsive fixes */
-          @media (max-width: 768px) {
-            /* Fix mobile sections spacing */
-            section {
-              padding: 32px 16px !important;
+            .desktop-menu {
+              display: flex !important;
             }
-
-            /* Ensure images don't disappear on scroll */
-            img {
-              will-change: auto !important;
-              transform: none !important;
+            .hamburger {
+              display: none !important;
+            }
+            .nav-pill {
+              padding: 8px 24px !important;
+              height: 60px !important;
+              min-height: 60px !important;
+            }
+            .nav-logo img {
+              height: 42px !important;
+              width: auto !important;
             }
           }
 
-          /* Grid and layout fixes */
+          /* Layout and grid fixes */
+          .grid-mobile-1 { grid-template-columns: 1fr; gap: 16px; }
+          .grid-mobile-2 { grid-template-columns: 1fr; gap: 32px; }
+          .grid-mobile-3 { 
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 16px;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 16px;
+            justify-content: flex-start;
+          }
+
+          @media (min-width: 768px) {
+            .grid-mobile-2 { grid-template-columns: 1fr 1fr; }
+            .grid-mobile-3 { grid-template-columns: repeat(3, 1fr); }
+          }
+
+          .services-grid { 
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+          }
+
           @media (max-width: 767px) {
-            .grid-mobile-1 {
-              grid-template-columns: 1fr !important;
-              gap: 16px !important;
-            }
-            .grid-mobile-2 {
-              grid-template-columns: 1fr !important;
-              gap: 32px !important;
-            }
-            .grid-mobile-3 {
+            .services-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+            .grid-mobile-3 { 
               display: flex !important;
               overflow-x: auto !important;
-              overflow-y: hidden !important;
-              gap: 16px !important;
-              width: 100% !important;
-              scroll-snap-type: x mandatory !important;
-              -webkit-overflow-scrolling: touch !important;
-              padding: 0 16px !important;
-              justify-content: flex-start !important;
+              grid-template-columns: none !important;
             }
-
-          }
-
-          @media (max-width: 767px) {
-            .services-grid {
-              grid-template-columns: 1fr !important;
-              gap: 20px !important;
+            .grid-mobile-3 > * {
+              scroll-snap-align: start !important;
+              flex-shrink: 0 !important;
+              min-width: 280px !important;
             }
           }
 
           @media (min-width: 768px) and (max-width: 1200px) {
-            .services-grid {
-              grid-template-columns: repeat(2, 1fr) !important;
-            }
+            .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }
 
           /* Images and media */
@@ -250,86 +328,101 @@ export default function RootLayout({
             flex-shrink: 0 !important;
           }
 
-          /* USP Cards - Hide duplicates properly */
+          /* USP Cards visibility */
           @media (min-width: 768px) {
-            .usp-duplicate {
-              display: none !important;
-            }
+            .usp-duplicate { display: none !important; }
           }
 
           @media (max-width: 767px) {
-            .usp-card:not(.usp-duplicate) {
-              display: none !important;
-            }
-            .usp-duplicate {
-              display: flex !important;
-            }
+            .usp-card:not(.usp-duplicate) { display: none !important; }
+            .usp-duplicate { display: flex !important; }
           }
 
           /* Touch improvements for mobile */
           @media (max-width: 768px) {
-            button, a {
-              min-height: 44px !important;
-              min-width: 44px !important;
-            }
-
-            /* Ensure touch targets are large enough */
-            .hero-cta-optimized {
-              min-height: 48px !important;
-              display: inline-flex !important;
-              align-items: center !important;
-              justify-content: center !important;
-            }
-
-            /* Fix mobile navigation */
-            nav {
-              padding: 8px 12px !important;
-              height: 56px !important;
-              min-height: 56px !important;
-            }
-
-            /* Wider navigation on mobile */
-            .mobile-menu-container {
-              left: 12px !important;
-              right: 12px !important;
-              max-width: calc(100vw - 24px) !important;
-            }
-          }
-
-          /* Fix for scrollable content */
-          @media (max-width: 768px) {
-            .grid-mobile-3 > * {
-              scroll-snap-align: start !important;
-              flex-shrink: 0 !important;
-              min-width: 280px !important;
-            }
-          }
-
-          /* Better mobile scrolling for USP section */
-          @media (max-width: 767px) {
-            .grid-mobile-3 {
-              -webkit-overflow-scrolling: touch !important;
-              scrollbar-width: none !important;
-              -ms-overflow-style: none !important;
-            }
-
-            .grid-mobile-3::-webkit-scrollbar {
-              display: none !important;
-            }
-
-            /* Fix USP cards width */
-            .grid-mobile-3 .usp-card {
-              min-width: 280px !important;
-              max-width: 280px !important;
-              flex-shrink: 0 !important;
-            }
+            button, a { min-height: 44px !important; min-width: 44px !important; }
+            section { padding: 32px 16px !important; }
           }
         `}</style>
 
-        {/* Deferred CSS loading removed - critical CSS is inlined above */}
+        {/* Load interactive navigation AFTER page load - NO JavaScript during LCP */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            // CRITICAL: No JavaScript execution during HTML parse/LCP
+            window.addEventListener('load', function() {
+              // Only load interactive navigation AFTER LCP completes
+              setTimeout(function() {
+                import('./navigation-interactive.js').catch(function() {
+                  // Fallback for development
+                  var script = document.createElement('script');
+                  script.src = '/navigation-interactive.js';
+                  script.async = true;
+                  document.head.appendChild(script);
+                });
+              }, 100);
+            });
+            
+            // Defer all non-critical resources
+            requestIdleCallback(function() {
+              var link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
+              document.head.appendChild(link);
+            }, { timeout: 2000 });
+          `
+        }} />
 
       </head>
-      <body style={{WebkitFontSmoothing: "antialiased", MozOsxFontSmoothing: "grayscale"}}>{children}</body>
+      <body>
+        {/* STATIC NAVIGATION - Pure HTML/CSS, zero JavaScript during LCP */}
+        <div className="nav-wrapper">
+          <nav className="nav-pill">
+            {/* Logo */}
+            <a href="https://cleanwin.vercel.app/" className="nav-logo">
+              <img
+                src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
+                alt="CleanWin Logo"
+                width={110}
+                height={30}
+                decoding="async"
+              />
+            </a>
+            
+            {/* Desktop Menu */}
+            <div className="desktop-menu">
+              <a href="https://cleanwin.vercel.app/leistungen/fensterreinigung" className="nav-link">
+                Dienstleistungen
+              </a>
+              <a href="https://cleanwin.vercel.app/ueber-uns" className="nav-link">
+                Über uns
+              </a>
+              <a href="https://cleanwin.vercel.app/referenzen" className="nav-link">
+                Referenzen
+              </a>
+            </div>
+
+            {/* CTA Button */}
+            <a href="/kontakt" className="cta-button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span>Kontaktiere uns</span>
+            </a>
+
+            {/* Mobile Hamburger */}
+            <button className="hamburger" type="button" aria-label="Navigation menu">
+              <div className="hamburger-line"></div>
+              <div className="hamburger-line"></div>
+              <div className="hamburger-line"></div>
+            </button>
+          </nav>
+        </div>
+
+        {children}
+      </body>
     </html>
   );
 }

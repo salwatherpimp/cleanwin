@@ -1,21 +1,5 @@
-import type { Metadata, Viewport } from "next";
 import "../styles/globals.css";
 import "../styles/components.css";
-
-export const metadata: Metadata = {
-  title: "CleanWin - Professional Cleaning Services",
-  description:
-    "Professional cleaning services in Winterthur with over 10 years of experience",
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
 
 export default function RootLayout({
   children,
@@ -25,132 +9,321 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
+        <meta charSet="utf-8" />
+        <title>CleanWin - Professional Cleaning Services</title>
+        <meta name="description" content="Professional cleaning services in Winterthur with over 10 years of experience" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         {/* Critical domain preconnections for performance - Max 4 as recommended */}
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://vercel.com" />
 
-        {/* CRITICAL: Preload hero images with performance hints */}
-        <link
-          rel="preload"
-          as="image"
-          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-          fetchPriority="high"
-          type="image/avif"
-          media="(max-width: 767px)"
-          crossOrigin="anonymous"
-        />
+        {/* HERO IMAGE EXCLUSIVE PRIORITY - No competing resources during LCP */}
         <link
           rel="preload"
           as="image"
           href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
+          imageSrcSet="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 480w, https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif 1280w"
+          imageSizes="(max-width: 768px) 480px, 1280px"
           fetchPriority="high"
           type="image/avif"
-          media="(min-width: 768px)"
-          crossOrigin="anonymous"
         />
 
-        {/* Performance hint: Preload critical resources */}
-        <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
-        <link rel="modulepreload" href="/_next/static/chunks/main.js" />
+        {/* Font preconnects deferred for LCP - Hero uses system fonts only */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            // Defer font loading until after LCP paint
+            requestIdleCallback(function() {
+              var preconnect1 = document.createElement('link');
+              preconnect1.rel = 'preconnect';
+              preconnect1.href = 'https://fonts.googleapis.com';
+              document.head.appendChild(preconnect1);
+
+              var preconnect2 = document.createElement('link');
+              preconnect2.rel = 'preconnect';
+              preconnect2.href = 'https://fonts.gstatic.com';
+              preconnect2.crossOrigin = 'anonymous';
+              document.head.appendChild(preconnect2);
+
+              var link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
+              document.head.appendChild(link);
+            }, { timeout: 1000 });
+          `
+        }} />
+
+        {/* Module preloads removed to give hero image exclusive priority during LCP */}
 
 
 
         {/* Critical CSS preload - only for existing assets */}
 
-        {/* Critical image decode optimization + Service Worker + Error handling */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(){
-                // Global error handler for dev overlay fetch errors
-                window.addEventListener('error', function(event) {
-                  if (event.message && event.message.includes('Failed to fetch')) {
-                    event.preventDefault();
-                    return false;
-                  }
-                });
-
-                window.addEventListener('unhandledrejection', function(event) {
-                  if (event.reason && event.reason.message && event.reason.message.includes('Failed to fetch')) {
-                    event.preventDefault();
-                    return false;
-                  }
-                });
-
-                // Register Service Worker for hero caching
-                if ('serviceWorker' in navigator) {
-                  window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                      // Send preload message to SW
-                      if (registration.active) {
-                        registration.active.postMessage({type: 'PRELOAD_HERO'});
-                      }
-                    }).catch(function() {});
-                  });
-                }
-
-                // Critical image decode optimization
-                var heroImg = new Image();
-                heroImg.decoding = 'async';
-                heroImg.fetchPriority = 'high';
-                heroImg.loading = 'eager';
-                if (window.innerWidth <= 768) {
-                  heroImg.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgwIiBoZWlnaHQ9IjI3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwZDk0ODgiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNzU5ODUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+';
-                } else {
-                  heroImg.src = 'https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif';
-                }
-                if (heroImg.decode) heroImg.decode().catch(function(){});
-              })();
-            `
-          }}
-        />
+        {/* All JavaScript deferred for LCP optimization - Hero uses preloaded image only */}
 
         <style>{`
-          /* CRITICAL INLINE CSS - Above-the-fold optimization <14KB */
-          *,::before,::after{box-sizing:border-box;border:0 solid #e5e7eb}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif;scroll-behavior:smooth;width:100%;height:100%}body{margin:0;line-height:inherit;background:#ffffff;color:#171717;font-family:Arial,Helvetica,sans-serif;font-display:swap}
+          /* Critical CSS for LCP optimization - Hero section only */
 
-          /* Critical navigation */
-          nav{contain:layout style;font-display:swap}
-          .nav-stabilizer-wrapper{contain:layout style;contain-intrinsic-size:100vw 56px;box-sizing:border-box}
+          /* HERO SECTION CRITICAL CSS */
+          [data-lcp] {
+            position: relative;
+            width: 100vw;
+            height: 64vh;
+            min-height: 476px;
+            overflow: hidden;
+            contain: layout style paint;
+            isolation: isolate;
+          }
 
-          /* Critical hero - LCP optimized */
-          .hero-lcp-container{position:relative;width:100vw;height:64vh;min-height:476px;max-height:64vh;overflow:hidden;contain:layout style paint;content-visibility:auto;contain-intrinsic-size:100vw 476px;transform:translateZ(0);will-change:transform}
-          .hero-picture{position:absolute;inset:0;width:100%;height:100%;display:block;contain:layout style;aspect-ratio:16/9}
-          .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;display:block;image-rendering:-webkit-optimize-contrast;transform:translateZ(0);will-change:auto;contain:layout style}
-          .hero-overlay{position:absolute;inset:0;background-color:rgba(0,0,0,0.4);transform:translateZ(0);will-change:auto;backface-visibility:hidden;isolation:isolate}
-          .hero-content-optimized{position:relative;z-index:10;height:100%;display:flex;align-items:center;justify-content:center;padding:100px 16px 32px 16px;text-align:center;color:white;contain:layout style;transform:translateZ(0)}
-          .hero-content-wrapper{max-width:1152px;width:100%;contain:layout style;transform:translateZ(0);will-change:auto;backface-visibility:hidden}
-          .hero-headline-optimized{font-size:32px;font-weight:800;line-height:38px;margin:0 0 16px 0;color:white;text-shadow:rgba(0,0,0,0.1) 0px 4px 6px;min-height:76px;contain:layout style;will-change:auto}
-          .hero-description-optimized{font-size:16px;line-height:24px;margin:0 auto 24px auto;max-width:768px;color:rgba(255,255,255,0.95);contain:layout style;min-height:48px}
-          .hero-cta-section{text-align:center;margin-bottom:32px;margin-top:16px;contain:layout style}
-          .hero-rating-badge{display:inline-flex;align-items:center;background-color:rgba(255,255,255,0.2);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.3);border-radius:8px;padding:8px 16px;color:white;margin-bottom:32px;contain:layout style;transform:translateZ(0)}
-          .hero-cta-optimized{display:inline-block;background-color:white;color:#374151;padding:16px 32px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.2s ease;box-shadow:0 2px 8px rgba(0,0,0,0.1);contain:layout style;transform:translateZ(0);will-change:transform,background-color,color,box-shadow}
+          @media (max-width: 768px) {
+            [data-lcp] {
+              min-height: 520px !important;
+              height: 520px !important;
+            }
+            [data-hero-content] {
+              margin-top: 85px !important;
+              padding: 20px 16px 40px 16px !important;
+            }
+            [data-hero-headline] {
+              font-size: 28px !important;
+              line-height: 34px !important;
+            }
+            [data-hero-description] {
+              font-size: 15px !important;
+              line-height: 23px !important;
+            }
+            [data-hero-rating] {
+              padding: 8px 14px !important;
+              margin-bottom: 24px !important;
+            }
+            [data-hero-cta] {
+              padding: 14px 28px !important;
+              min-height: 48px !important;
+            }
+          }
 
-          /* Critical responsive */
-          @media (max-width:768px){.hero-content-optimized{margin-top:60px!important;padding-top:10px!important;padding-bottom:40px!important}.hero-lcp-container{min-height:520px!important;max-height:none!important;contain-intrinsic-size:100vw 520px}}
-          @media (min-width:768px){.hero-headline-optimized{font-size:48px!important;line-height:54px!important;min-height:108px!important}.hero-description-optimized{font-size:18px!important;line-height:28px!important;min-height:64px!important}.hero-lcp-container{height:612px!important;min-height:612px!important;contain-intrinsic-size:100vw 612px}}
-          @media (max-width:1023px){[data-nav="desktop"]{display:none!important}[data-nav="mobile"]{display:flex!important}.nav-stabilizer-wrapper{left:16px!important;right:16px!important;width:calc(100vw - 32px)!important}}
-          @media (min-width:1024px){[data-nav="desktop"]{display:flex!important}[data-nav="mobile"]{display:none!important}}
+          @media (min-width: 769px) {
+            [data-lcp] {
+              height: 580px !important;
+              min-height: 580px !important;
+            }
+            [data-hero-headline] {
+              font-size: 48px;
+              line-height: 54px;
+            }
+            [data-hero-description] {
+              font-size: 18px;
+              line-height: 28px;
+            }
+          }
 
-          /* Critical layout stability - CLS prevention */
-          .carousel-track{contain:layout style;contain-intrinsic-size:1440px 280px}
-          .review-card{contain:layout style;contain-intrinsic-size:360px 280px;min-height:280px!important;max-width:360px!important;width:100%!important;box-sizing:border-box!important}
-          .mobile-card-content{contain:layout style;min-height:24px}
-          .cleanwin-value-card{contain:layout style;contain-intrinsic-size:100% 98px}
+          @media (min-width: 1200px) {
+            [data-lcp] {
+              height: 640px !important;
+              min-height: 640px !important;
+            }
+          }
 
-          /* Critical grids responsive */
-          @media (max-width:767px){.grid-mobile-1{grid-template-columns:1fr!important;gap:16px!important}.grid-mobile-2{grid-template-columns:1fr!important;gap:32px!important}.grid-mobile-3{display:flex!important;overflow:hidden!important;gap:24px!important;width:100%!important}.services-grid{grid-template-columns:1fr!important;gap:20px!important}}
-          @media (max-width:1200px){.services-grid{grid-template-columns:repeat(2,1fr)!important}}
+          /* Reset and layout */
+          *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+          html { line-height: 1.5; font-family: ui-sans-serif, system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
+          body { margin: 0; background: #ffffff; color: #171717; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, 'Inter'; -webkit-font-smoothing: antialiased; }
 
-          /* Performance optimizations */
-          *{transform-style:preserve-3d}
-          .hero-lcp-container *{backface-visibility:hidden;perspective:1000px}
-          img,picture,video{max-width:100%;height:auto;display:block}
-          button,a{contain:layout style;font-display:swap}
-          /* Duplicate styles removed - optimized above */
+          /* Navigation and mobile menu */
+          nav { position: relative; z-index: 1000; }
+
+          /* Mobile navigation fixes */
+          @media (max-width: 1023px) {
+            [data-nav="desktop"] { display: none !important; }
+            [data-nav="mobile"] { display: flex !important; }
+
+            /* Mobile menu container */
+            .mobile-menu-container {
+              position: fixed !important;
+              top: 80px !important;
+              left: 16px !important;
+              right: 16px !important;
+              background: white !important;
+              border-radius: 20px !important;
+              box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15) !important;
+              border: 1px solid rgba(0, 0, 0, 0.1) !important;
+              z-index: 99999 !important;
+              max-height: calc(100vh - 120px) !important;
+              overflow-y: auto !important;
+              margin: 0 auto !important;
+              max-width: 400px !important;
+            }
+
+            /* Ensure mobile menu is visible when open */
+            .mobile-menu-container.menu-open {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              display: block !important;
+            }
+
+            /* Mobile navigation pill */
+            nav {
+              margin: 0 auto !important;
+              max-width: calc(100vw - 32px) !important;
+              z-index: 1000 !important;
+              position: relative !important;
+            }
+
+            /* Mobile navigation wrapper */
+            div[style*="position: fixed"][style*="top: 16px"] {
+              z-index: 1000 !important;
+            }
+          }
+
+          @media (min-width: 1024px) {
+            [data-nav="desktop"] { display: flex !important; }
+            [data-nav="mobile"] { display: none !important; }
+          }
+
+          /* Hero section styles moved to CSS modules */
+
+          /* Mobile responsive fixes */
+          @media (max-width: 768px) {
+            /* Fix mobile sections spacing */
+            section {
+              padding: 32px 16px !important;
+            }
+
+            /* Ensure images don't disappear on scroll */
+            img {
+              will-change: auto !important;
+              transform: none !important;
+            }
+          }
+
+          /* Grid and layout fixes */
+          @media (max-width: 767px) {
+            .grid-mobile-1 {
+              grid-template-columns: 1fr !important;
+              gap: 16px !important;
+            }
+            .grid-mobile-2 {
+              grid-template-columns: 1fr !important;
+              gap: 32px !important;
+            }
+            .grid-mobile-3 {
+              display: flex !important;
+              overflow-x: auto !important;
+              overflow-y: hidden !important;
+              gap: 16px !important;
+              width: 100% !important;
+              scroll-snap-type: x mandatory !important;
+              -webkit-overflow-scrolling: touch !important;
+              padding: 0 16px !important;
+              justify-content: flex-start !important;
+            }
+
+          }
+
+          @media (max-width: 767px) {
+            .services-grid {
+              grid-template-columns: 1fr !important;
+              gap: 20px !important;
+            }
+          }
+
+          @media (min-width: 768px) and (max-width: 1200px) {
+            .services-grid {
+              grid-template-columns: repeat(2, 1fr) !important;
+            }
+          }
+
+          /* Images and media */
+          img, picture, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+          }
+
+          /* Cards and reviews */
+          .review-card {
+            min-height: 280px !important;
+            box-sizing: border-box !important;
+            flex-shrink: 0 !important;
+          }
+
+          /* USP Cards - Hide duplicates properly */
+          @media (min-width: 768px) {
+            .usp-duplicate {
+              display: none !important;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .usp-card:not(.usp-duplicate) {
+              display: none !important;
+            }
+            .usp-duplicate {
+              display: flex !important;
+            }
+          }
+
+          /* Touch improvements for mobile */
+          @media (max-width: 768px) {
+            button, a {
+              min-height: 44px !important;
+              min-width: 44px !important;
+            }
+
+            /* Ensure touch targets are large enough */
+            .hero-cta-optimized {
+              min-height: 48px !important;
+              display: inline-flex !important;
+              align-items: center !important;
+              justify-content: center !important;
+            }
+
+            /* Fix mobile navigation */
+            nav {
+              padding: 8px 12px !important;
+              height: 56px !important;
+              min-height: 56px !important;
+            }
+
+            /* Wider navigation on mobile */
+            .mobile-menu-container {
+              left: 12px !important;
+              right: 12px !important;
+              max-width: calc(100vw - 24px) !important;
+            }
+          }
+
+          /* Fix for scrollable content */
+          @media (max-width: 768px) {
+            .grid-mobile-3 > * {
+              scroll-snap-align: start !important;
+              flex-shrink: 0 !important;
+              min-width: 280px !important;
+            }
+          }
+
+          /* Better mobile scrolling for USP section */
+          @media (max-width: 767px) {
+            .grid-mobile-3 {
+              -webkit-overflow-scrolling: touch !important;
+              scrollbar-width: none !important;
+              -ms-overflow-style: none !important;
+            }
+
+            .grid-mobile-3::-webkit-scrollbar {
+              display: none !important;
+            }
+
+            /* Fix USP cards width */
+            .grid-mobile-3 .usp-card {
+              min-width: 280px !important;
+              max-width: 280px !important;
+              flex-shrink: 0 !important;
+            }
+          }
         `}</style>
 
         {/* Deferred CSS loading removed - critical CSS is inlined above */}
