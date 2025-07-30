@@ -60,8 +60,9 @@ export default function PureHeroSection() {
           height: '520px',
           minHeight: '476px',
           overflow: 'hidden',
-          contain: 'layout paint',
-          willChange: 'transform'
+          contain: 'layout style paint',
+          willChange: 'auto',
+          isolation: 'isolate'
         }}
         role="img"
         aria-label="CleanWin Hero Background"
