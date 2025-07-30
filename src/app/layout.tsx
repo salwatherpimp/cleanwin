@@ -20,7 +20,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://vercel.com" />
 
-        {/* Single responsive hero image preload - eliminates resource contention */}
+        {/* HERO IMAGE EXCLUSIVE PRIORITY - No competing resources during LCP */}
         <link
           rel="preload"
           as="image"
