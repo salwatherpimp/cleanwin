@@ -2,11 +2,7 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
-// Navigation deferred to improve LCP - loads after hero paint
-const ResponsiveNavigation = dynamic(() => import("../components/ResponsiveNavigation"), {
-  ssr: false,
-  loading: () => null // Minimal loading state for maximum LCP performance
-});
+import ResponsiveNavigation from "../components/ResponsiveNavigation";
 import PureHeroSection from "../components/PureHeroSection";
 import ErrorBoundary from "../components/ErrorBoundary";
 
