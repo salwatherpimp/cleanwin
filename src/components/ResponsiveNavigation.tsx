@@ -128,7 +128,7 @@ export default function ResponsiveNavigation() {
               height={30}
               decoding="async"
               className="nav-logo-img"
-              style={{ width: 'auto', height: 'auto' }}
+              style={{ width: 'auto', height: '30px', maxWidth: '110px' }}
             />
           </a>
 
