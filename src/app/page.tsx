@@ -1,33 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
-import StaticNavigation from "../components/StaticNavigation";
-
-// Interactive navigation deferred until after LCP
-const ResponsiveNavigation = dynamic(() => import("../components/ResponsiveNavigation"), {
-  ssr: false
-});
-
-// Navigation handler that switches from static to interactive after LCP
-function NavigationHandler() {
-  const [showInteractive, setShowInteractive] = useState(false);
-
-  useEffect(() => {
-    // Defer interactive navigation until after critical render path
-    const timer = requestIdleCallback(() => {
-      setShowInteractive(true);
-    }, { timeout: 1500 }); // Fallback after 1.5s
-
-    return () => {
-      if (timer) cancelIdleCallback(timer);
-    };
-  }, []);
-
-  // Show static navigation during LCP, switch to interactive after
-  return showInteractive ? <ResponsiveNavigation /> : <StaticNavigation />;
-}
 import PureHeroSection from "../components/PureHeroSection";
 import ErrorBoundary from "../components/ErrorBoundary";
 
