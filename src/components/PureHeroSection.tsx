@@ -32,8 +32,8 @@ export default function PureHeroSection() {
           }
           @media (min-width: 769px) {
             [data-lcp] {
-              height: 580px;
-              min-height: 580px;
+              height: 580px !important;
+              min-height: 580px !important;
             }
             [data-hero-headline] {
               font-size: 48px;
