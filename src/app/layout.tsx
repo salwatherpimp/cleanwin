@@ -20,7 +20,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://vercel.com" />
 
-        {/* Hero background image preload for immediate LCP */}
+        {/* Single responsive hero image preload - eliminates resource contention */}
         <link
           rel="preload"
           as="image"
@@ -31,70 +31,29 @@ export default function RootLayout({
           type="image/avif"
         />
 
-        {/* Optimized non-blocking font loading with preconnect */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        {/* Inter fonts deferred for LCP optimization - Hero uses system fonts */}
+        {/* Font preconnects deferred for LCP - Hero uses system fonts only */}
         <script dangerouslySetInnerHTML={{
           __html: `
-            // Defer font loading until after LCP
-            if (typeof requestIdleCallback === 'function') {
-              requestIdleCallback(function() {
-                var link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
-                document.head.appendChild(link);
-              }, { timeout: 1000 });
-            } else {
-              setTimeout(function() {
-                var link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
-                document.head.appendChild(link);
-              }, 100);
-            }
+            // Defer font loading until after LCP paint
+            requestIdleCallback(function() {
+              var preconnect1 = document.createElement('link');
+              preconnect1.rel = 'preconnect';
+              preconnect1.href = 'https://fonts.googleapis.com';
+              document.head.appendChild(preconnect1);
+
+              var preconnect2 = document.createElement('link');
+              preconnect2.rel = 'preconnect';
+              preconnect2.href = 'https://fonts.gstatic.com';
+              preconnect2.crossOrigin = 'anonymous';
+              document.head.appendChild(preconnect2);
+
+              var link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
+              document.head.appendChild(link);
+            }, { timeout: 1000 });
           `
         }} />
-
-        {/* CRITICAL: CSS Background Image Preload - Mobile First */}
-        <link
-          rel="preload"
-          as="image"
-          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-          fetchPriority="high"
-          type="image/avif"
-          media="(max-width: 768px)"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.avif"
-          fetchPriority="high"
-          type="image/avif"
-          media="(min-width: 769px)"
-          crossOrigin="anonymous"
-        />
-        {/* WebP fallback preload */}
-        <link
-          rel="preload"
-          as="image"
-          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_480,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp"
-          fetchPriority="high"
-          type="image/webp"
-          media="(max-width: 768px)"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1280,q_70,f_webp/v1752095181/dobiinter_A_close-up_of_a_cleaning_bucket_filled_with_turqois_c8b4fac7-6123-4eb8-a980-923d98629a76_2_ijdnha.webp"
-          fetchPriority="high"
-          type="image/webp"
-          media="(min-width: 769px)"
-          crossOrigin="anonymous"
-        />
 
         {/* Performance hint: Preload critical resources */}
         <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
