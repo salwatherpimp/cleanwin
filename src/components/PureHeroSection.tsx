@@ -1,58 +1,7 @@
 // LCP-Optimized Hero Section with HTML img - Zero Background-Image CSS
 export default function PureHeroSection() {
   return (
-    <>
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          @media (max-width: 768px) {
-            [data-lcp] {
-              min-height: 520px !important;
-              height: 520px !important;
-            }
-            [data-hero-content] {
-              margin-top: 85px !important;
-              padding: 20px 16px 40px 16px !important;
-            }
-            [data-hero-headline] {
-              font-size: 28px !important;
-              line-height: 34px !important;
-            }
-            [data-hero-description] {
-              font-size: 15px !important;
-              line-height: 23px !important;
-            }
-            [data-hero-rating] {
-              padding: 8px 14px !important;
-              margin-bottom: 24px !important;
-            }
-            [data-hero-cta] {
-              padding: 14px 28px !important;
-              min-height: 48px !important;
-            }
-          }
-          @media (min-width: 769px) {
-            [data-lcp] {
-              height: 580px !important;
-              min-height: 580px !important;
-            }
-            [data-hero-headline] {
-              font-size: 48px;
-              line-height: 54px;
-            }
-            [data-hero-description] {
-              font-size: 18px;
-              line-height: 28px;
-            }
-          }
-          @media (min-width: 1200px) {
-            [data-lcp] {
-              height: 640px;
-              min-height: 640px;
-            }
-          }
-        `
-      }} />
-      
+    <>      
       <section
         style={{
           position: 'relative',
