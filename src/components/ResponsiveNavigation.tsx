@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+
 
 export default function ResponsiveNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -121,14 +121,14 @@ export default function ResponsiveNavigation() {
             textDecoration: 'none',
             flexShrink: 0,
           }}>
-            <Image
+            <img
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="CleanWin Logo"
               width={110}
               height={30}
-              priority
+              decoding="async"
               className="nav-logo-img"
-              style={{ width: 'auto' }}
+              style={{ width: 'auto', height: 'auto' }}
             />
           </a>
 
