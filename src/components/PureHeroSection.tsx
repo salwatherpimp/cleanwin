@@ -6,7 +6,7 @@ export default function PureHeroSection() {
         style={{
           position: 'relative',
           width: '100vw',
-          height: '520px',
+          height: '64vh',
           minHeight: '476px',
           overflow: 'hidden',
           contain: 'layout style paint',
