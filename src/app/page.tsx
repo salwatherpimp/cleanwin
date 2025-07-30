@@ -31,12 +31,14 @@ const Footer = dynamic(() => import("../components/Footer"), {
 export default function CleanWinPage() {
   return (
     <ErrorBoundary>
-      <div className="main-page-container">
+      {/* PERFORMANCE CRITICAL: Navigation and Hero outside styled-jsx for maximum LCP */}
       {/* Responsive Navigation */}
       <ResponsiveNavigation />
 
       {/* Hero Section - Pure HTML, No styled-jsx, Responsive Images */}
       <PureHeroSection />
+
+      <div className="main-page-container">
 
       {/* Optimization components temporarily disabled for stability */}
       {/* <HeroProgressiveEnhancement /> */}
