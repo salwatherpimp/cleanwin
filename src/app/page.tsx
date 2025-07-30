@@ -1,4 +1,5 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import PureHeroSection from "../components/PureHeroSection";
 import ErrorBoundary from "../components/ErrorBoundary";
 
