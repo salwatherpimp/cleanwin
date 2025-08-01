@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 export default function NavigationInteractive() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
-  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  // Services dropdown state removed as it's not used in this implementation
   const [isMobile, setIsMobile] = useState(false);
 
   // Detect mobile and add resize listener
