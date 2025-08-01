@@ -18,10 +18,25 @@ const nextConfig = {
     // Remove React test props in production
     reactRemoveProperties: process.env.NODE_ENV === 'production',
   },
-  // Optimize chunks for better caching
-  webpack: (config, { isServer }) => {
-    // Split chunks optimally for lazy loading
-    if (!isServer) {
+  // Optimize chunks for better caching and HMR stability
+  webpack: (config, { dev, isServer }) => {
+    // Improve HMR reliability in development
+    if (dev && !isServer) {
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
+        ignored: ['**/node_modules', '**/.git', '**/.next'],
+      };
+
+      // Ensure HMR works properly with dynamic imports
+      config.optimization = {
+        ...config.optimization,
+        moduleIds: 'deterministic',
+      };
+    }
+
+    // Split chunks optimally for lazy loading (production only)
+    if (!isServer && !dev) {
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
@@ -40,7 +55,7 @@ const nextConfig = {
         },
       };
     }
-    
+
     return config;
   },
   images: {
