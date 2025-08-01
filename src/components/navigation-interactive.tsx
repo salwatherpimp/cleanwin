@@ -205,17 +205,37 @@ export default function NavigationInteractive() {
   return null;
 }
 
-// Auto-initialize when loaded
-if (typeof window !== 'undefined') {
+// Auto-initialize when loaded (HMR-safe)
+if (typeof window !== 'undefined' && !window.__navigationEnhanced) {
+  window.__navigationEnhanced = true;
+
   import('react').then(React => {
     import('react-dom/client').then(ReactDOM => {
-      const container = document.createElement('div');
-      container.style.display = 'none';
-      document.body.appendChild(container);
-      
+      // Check if container already exists to prevent duplicates
+      let container = document.querySelector('#navigation-enhancement-container');
+      if (!container) {
+        container = document.createElement('div');
+        container.id = 'navigation-enhancement-container';
+        container.style.display = 'none';
+        document.body.appendChild(container);
+      }
+
       const root = ReactDOM.createRoot(container);
       root.render(React.createElement(NavigationInteractive));
     });
+  });
+}
+
+// HMR cleanup
+if (typeof module !== 'undefined' && module.hot) {
+  module.hot.dispose(() => {
+    if (typeof window !== 'undefined') {
+      window.__navigationEnhanced = false;
+      const container = document.querySelector('#navigation-enhancement-container');
+      if (container) {
+        container.remove();
+      }
+    }
   });
 }
 
