@@ -68,7 +68,18 @@ export default function NavigationInteractive() {
     const hamburger = document.querySelector('.hamburger');
     const ctaButton = document.querySelector('.cta-button');
 
-    if (!navWrapper || !nav || !hamburger) return;
+    // Debug: Check if elements are found
+    console.log('Navigation elements found:', {
+      navWrapper: !!navWrapper,
+      nav: !!nav,
+      hamburger: !!hamburger,
+      ctaButton: !!ctaButton
+    });
+
+    if (!navWrapper || !nav || !hamburger) {
+      console.warn('Navigation enhancement failed: Missing required elements');
+      return;
+    }
 
     // Enhance hamburger with click functionality
     const handleHamburgerClick = (e: Event) => {
