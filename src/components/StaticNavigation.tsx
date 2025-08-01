@@ -94,8 +94,8 @@ export default function StaticNavigation() {
           </a>
         </div>
 
-        {/* Static CTA Button - Simple link, no dropdowns */}
-        <a href="/kontakt" style={{
+        {/* Static CTA Button - Will be enhanced with dropdown */}
+        <a href="/kontakt" className="cta-button" style={{
           display: 'flex',
           alignItems: 'center',
           gap: '6px',
