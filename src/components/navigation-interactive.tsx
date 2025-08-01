@@ -212,25 +212,37 @@ export default function NavigationInteractive() {
   return null;
 }
 
-// Auto-initialize when loaded (HMR-safe)
+// Auto-initialize when DOM is ready (HMR-safe)
 if (typeof window !== 'undefined' && !window.__navigationEnhanced) {
   window.__navigationEnhanced = true;
 
-  import('react').then(React => {
-    import('react-dom/client').then(ReactDOM => {
-      // Check if container already exists to prevent duplicates
-      let container = document.querySelector('#navigation-enhancement-container');
-      if (!container) {
-        container = document.createElement('div');
-        container.id = 'navigation-enhancement-container';
-        container.style.display = 'none';
-        document.body.appendChild(container);
-      }
+  const initializeNavigation = () => {
+    import('react').then(React => {
+      import('react-dom/client').then(ReactDOM => {
+        // Check if container already exists to prevent duplicates
+        let container = document.querySelector('#navigation-enhancement-container');
+        if (!container) {
+          container = document.createElement('div');
+          container.id = 'navigation-enhancement-container';
+          container.style.display = 'none';
+          document.body.appendChild(container);
+        }
 
-      const root = ReactDOM.createRoot(container);
-      root.render(React.createElement(NavigationInteractive));
+        const root = ReactDOM.createRoot(container);
+        root.render(React.createElement(NavigationInteractive));
+      });
     });
-  });
+  };
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    // Delay to ensure static navigation is rendered
+    setTimeout(initializeNavigation, 100);
+  } else {
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(initializeNavigation, 100);
+    });
+  }
 }
 
 // HMR cleanup
