@@ -1,7 +1,7 @@
 // Static Navigation - Zero JavaScript for LCP optimization
 export default function StaticNavigation() {
   return (
-    <div style={{
+    <div className="nav-wrapper" style={{
       position: 'fixed',
       top: '16px',
       left: '0',
@@ -14,7 +14,7 @@ export default function StaticNavigation() {
       margin: '0 auto',
       padding: '0 10px',
     }}>
-      <nav style={{
+      <nav className="nav-pill" style={{
         background: 'white',
         borderRadius: '50px',
         boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
