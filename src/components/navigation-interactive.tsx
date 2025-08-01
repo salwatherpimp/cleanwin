@@ -58,7 +58,7 @@ export default function NavigationInteractive() {
     const navWrapper = document.querySelector('.nav-wrapper');
     const nav = document.querySelector('.nav-pill');
     const hamburger = document.querySelector('.hamburger');
-    const desktopMenu = document.querySelector('.desktop-menu');
+    // Desktop menu selector removed to eliminate unused variable warning
     const ctaButton = document.querySelector('.cta-button');
 
     if (!navWrapper || !nav || !hamburger) return;
