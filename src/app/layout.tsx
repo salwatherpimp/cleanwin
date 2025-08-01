@@ -226,6 +226,56 @@ export default function RootLayout({
             margin-bottom: 0;
           }
 
+          /* Mobile menu container */
+          .mobile-menu-container {
+            position: fixed;
+            top: 80px;
+            left: 16px;
+            right: 16px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            z-index: 99999;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            margin: 0 auto;
+            max-width: 400px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            display: none;
+            padding: 20px;
+          }
+
+          /* CTA dropdown container */
+          .cta-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 16px;
+            min-width: 280px;
+            z-index: 1000;
+            margin-top: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            pointer-events: none;
+          }
+
+          .cta-dropdown.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+          }
+
           /* Mobile responsive navigation */
           @media (max-width: 1023px) {
             .desktop-menu {
@@ -234,6 +284,13 @@ export default function RootLayout({
             .hamburger {
               display: flex !important;
             }
+            .cta-dropdown {
+              right: 0 !important;
+              left: auto !important;
+              min-width: 200px !important;
+              max-width: calc(100vw - 32px) !important;
+            }
+          }
             .nav-pill {
               padding: 8px 16px !important;
               height: 56px !important;
