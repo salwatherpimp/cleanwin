@@ -41,14 +41,7 @@ export default function NavigationInteractive() {
     };
   }, []);
 
-  const services = [
-    { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
-    { name: "Unterhaltsreinigung", href: "https://cleanwin.vercel.app/leistungen/unterhaltsreinigung" },
-    { name: "Solarpanel reinigen", href: "https://cleanwin.vercel.app/leistungen/solarpanel-reinigen" },
-    { name: "Fassadenreinigung", href: "https://cleanwin.vercel.app/leistungen/fassadenreinigung" },
-    { name: "Umzugsreinigung", href: "https://cleanwin.vercel.app/leistungen/umzugsreinigung" },
-    { name: "Baureinigung", href: "https://cleanwin.vercel.app/leistungen/baureinigung" },
-  ];
+  // Services array moved inside useEffect to avoid dependency issues
 
   // Icon components removed to eliminate unused variable warnings
 
