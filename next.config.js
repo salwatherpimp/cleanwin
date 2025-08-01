@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Allow cross-origin requests for development (fixes HMR fetch errors)
+  allowedDevOrigins: [
+    '24348628ebd248898e7ba693cd0a7911-2d0d2a9d9013445c91830c23d.fly.dev',
+    'localhost:3000',
+    '127.0.0.1:3000',
+    '0.0.0.0:3000'
+  ],
   // Modern build optimizations for bundle size reduction
   experimental: {
     optimizePackageImports: ['react', 'react-dom'],
