@@ -156,7 +156,12 @@ export default function NavigationInteractive() {
 
     return () => {
       hamburger.removeEventListener('click', handleHamburgerClick);
-      if (ctaButton) {
+      if (ctaButton && !isMobile) {
+        const handleCtaClick = (e: Event) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setIsCtaDropdownOpen(!isCtaDropdownOpen);
+        };
         ctaButton.removeEventListener('click', handleCtaClick);
       }
     };
