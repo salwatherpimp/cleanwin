@@ -2,6 +2,12 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import PureHeroSection from "../components/PureHeroSection";
 import ErrorBoundary from "../components/ErrorBoundary";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CleanWin - Professional Cleaning Services",
+  description: "Professional cleaning services in Winterthur with over 10 years of experience",
+};
 
 // Dynamic imports for below-the-fold components to reduce initial bundle
 const CustomerReviews = dynamic(() => import("../components/CustomerReviews"), {
