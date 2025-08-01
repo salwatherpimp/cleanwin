@@ -170,7 +170,7 @@ export default function StaticNavigation() {
             .desktop-menu {
               display: none !important;
             }
-            .hamburger-placeholder {
+            .hamburger {
               display: flex !important;
             }
           }
@@ -178,7 +178,7 @@ export default function StaticNavigation() {
             .desktop-menu {
               display: flex !important;
             }
-            .hamburger-placeholder {
+            .hamburger {
               display: none !important;
             }
           }
