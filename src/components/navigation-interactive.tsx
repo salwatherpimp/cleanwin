@@ -175,7 +175,7 @@ export default function NavigationInteractive() {
 
     return () => {
       hamburger.removeEventListener('click', handleHamburgerClick);
-      if (ctaButton && !isMobile) {
+      if (ctaButton) {
         ctaButton.removeEventListener('click', handleCtaClick);
       }
     };
