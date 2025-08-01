@@ -94,33 +94,35 @@ export default function StaticNavigation() {
           </a>
         </div>
 
-        {/* Static CTA Button - Will be enhanced with dropdown */}
-        <a href="/kontakt" className="cta-button" style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '6px',
-          background: '#0DA6A6',
-          color: 'white',
-          border: 'none',
-          padding: '8px 14px',
-          borderRadius: '20px',
-          fontWeight: '500',
-          fontSize: '13px',
-          textDecoration: 'none',
-          whiteSpace: 'nowrap',
-          boxShadow: '0 2px 8px rgba(13, 166, 166, 0.3)',
-          height: '36px',
-          minHeight: '36px',
-          fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif'
-        }}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          <span>Kontaktiere uns</span>
-        </a>
+        {/* CTA Button Container for dropdown positioning */}
+        <div style={{ position: 'relative', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+          <a href="/kontakt" className="cta-button" style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            background: '#0DA6A6',
+            color: 'white',
+            border: 'none',
+            padding: '8px 14px',
+            borderRadius: '20px',
+            fontWeight: '500',
+            fontSize: '13px',
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
+            boxShadow: '0 2px 8px rgba(13, 166, 166, 0.3)',
+            height: '36px',
+            minHeight: '36px',
+            fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif'
+          }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <span>Kontaktiere uns</span>
+          </a>
+        </div>
 
         {/* Mobile hamburger menu - will be enhanced with functionality */}
         <button
