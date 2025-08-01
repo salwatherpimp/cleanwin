@@ -122,38 +122,45 @@ export default function StaticNavigation() {
           <span>Kontaktiere uns</span>
         </a>
 
-        {/* Mobile hamburger placeholder - no functionality during LCP */}
-        <div style={{
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '32px',
-          height: '32px',
-          background: 'none',
-          border: 'none',
-          padding: '4px',
-          flexShrink: 0,
-          borderRadius: '16px',
-          display: 'none'
-        }} className="hamburger-placeholder">
-          <div style={{
+        {/* Mobile hamburger menu - will be enhanced with functionality */}
+        <button
+          className="hamburger"
+          type="button"
+          style={{
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '32px',
+            height: '32px',
+            background: 'none',
+            border: 'none',
+            padding: '4px',
+            flexShrink: 0,
+            borderRadius: '16px',
+            display: 'none',
+            cursor: 'pointer'
+          }}>
+          <div className="hamburger-line" style={{
             width: '18px',
             height: '2px',
             backgroundColor: '#374151',
             marginBottom: '3px',
+            transition: 'transform 0.3s ease, opacity 0.3s ease'
           }}></div>
-          <div style={{
+          <div className="hamburger-line" style={{
             width: '18px',
             height: '2px',
             backgroundColor: '#374151',
             marginBottom: '3px',
+            transition: 'transform 0.3s ease, opacity 0.3s ease'
           }}></div>
-          <div style={{
+          <div className="hamburger-line" style={{
             width: '18px',
             height: '2px',
             backgroundColor: '#374151',
+            transition: 'transform 0.3s ease, opacity 0.3s ease'
           }}></div>
-        </div>
+        </button>
       </nav>
       
       {/* Critical static navigation CSS - no styled-jsx */}
