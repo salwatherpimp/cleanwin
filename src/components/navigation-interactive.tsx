@@ -123,9 +123,10 @@ export default function NavigationInteractive() {
       document.body.appendChild(mobileMenuContainer);
     }
 
-    if (ctaButton && !isMobile) {
-      // Add dropdown functionality to desktop CTA
+    if (ctaButton) {
+      // Add dropdown functionality to CTA button (both desktop and mobile)
       ctaButton.addEventListener('click', handleCtaClick);
+      console.log('CTA button enhanced with dropdown functionality');
 
       // Add dropdown container if it doesn't exist
       let ctaDropdown = document.querySelector('.cta-dropdown');
