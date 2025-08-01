@@ -30,7 +30,6 @@ export default function NavigationInteractive() {
                           clickedElement.closest('.mobile-menu-container');
 
       if (!isInsideNav) {
-        setIsServicesDropdownOpen(false);
         setIsCtaDropdownOpen(false);
         setIsMobileMenuOpen(false);
       }
