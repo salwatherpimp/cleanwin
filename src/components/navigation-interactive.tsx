@@ -3,6 +3,13 @@
 
 import { useState, useEffect } from "react";
 
+// TypeScript declaration for HMR tracking
+declare global {
+  interface Window {
+    __navigationEnhanced?: boolean;
+  }
+}
+
 export default function NavigationInteractive() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
