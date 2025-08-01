@@ -1,5 +1,17 @@
 import "../styles/globals.css";
 import "../styles/components.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: "CleanWin - Professional Cleaning Services",
+    template: "%s | CleanWin"
+  },
+  description: "Professional cleaning services in Winterthur with over 10 years of experience",
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow",
+  charset: "utf-8"
+};
 
 export default function RootLayout({
   children,
