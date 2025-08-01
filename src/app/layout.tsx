@@ -21,11 +21,6 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        <meta charSet="utf-8" />
-        <title>CleanWin - Professional Cleaning Services</title>
-        <meta name="description" content="Professional cleaning services in Winterthur with over 10 years of experience" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* Critical domain preconnections for performance - Max 4 as recommended */}
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
