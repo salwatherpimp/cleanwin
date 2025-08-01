@@ -160,7 +160,7 @@ export default function NavigationInteractive() {
         ctaButton.removeEventListener('click', handleCtaClick);
       }
     };
-  }, [isMobileMenuOpen, isCtaDropdownOpen, isMobile, services]);
+  }, [isMobileMenuOpen, isCtaDropdownOpen, isMobile]);
 
   // Update mobile menu visibility
   useEffect(() => {
