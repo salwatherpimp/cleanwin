@@ -58,7 +58,6 @@ export default function NavigationInteractive() {
     const navWrapper = document.querySelector('.nav-wrapper');
     const nav = document.querySelector('.nav-pill');
     const hamburger = document.querySelector('.hamburger');
-    // Desktop menu selector removed to eliminate unused variable warning
     const ctaButton = document.querySelector('.cta-button');
 
     if (!navWrapper || !nav || !hamburger) return;
@@ -67,6 +66,13 @@ export default function NavigationInteractive() {
     const handleHamburgerClick = (e: Event) => {
       e.stopPropagation();
       setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    // Enhanced CTA button with dropdown functionality
+    const handleCtaClick = (e: Event) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setIsCtaDropdownOpen(!isCtaDropdownOpen);
     };
 
     hamburger.addEventListener('click', handleHamburgerClick);
@@ -98,14 +104,7 @@ export default function NavigationInteractive() {
       document.body.appendChild(mobileMenuContainer);
     }
 
-    // Enhanced CTA button with dropdown functionality
     if (ctaButton && !isMobile) {
-      const handleCtaClick = (e: Event) => {
-        e.preventDefault();
-        e.stopPropagation();
-        setIsCtaDropdownOpen(!isCtaDropdownOpen);
-      };
-
       // Add dropdown functionality to desktop CTA
       ctaButton.addEventListener('click', handleCtaClick);
 
@@ -157,11 +156,6 @@ export default function NavigationInteractive() {
     return () => {
       hamburger.removeEventListener('click', handleHamburgerClick);
       if (ctaButton && !isMobile) {
-        const handleCtaClick = (e: Event) => {
-          e.preventDefault();
-          e.stopPropagation();
-          setIsCtaDropdownOpen(!isCtaDropdownOpen);
-        };
         ctaButton.removeEventListener('click', handleCtaClick);
       }
     };
