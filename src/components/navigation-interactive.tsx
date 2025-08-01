@@ -185,10 +185,18 @@ export default function NavigationInteractive() {
   useEffect(() => {
     const mobileMenuContainer = document.querySelector('.mobile-menu-container');
     if (mobileMenuContainer) {
+      console.log('Updating mobile menu visibility:', isMobileMenuOpen);
       (mobileMenuContainer as HTMLElement).style.display = isMobileMenuOpen ? 'block' : 'none';
       (mobileMenuContainer as HTMLElement).style.opacity = isMobileMenuOpen ? '1' : '0';
       (mobileMenuContainer as HTMLElement).style.visibility = isMobileMenuOpen ? 'visible' : 'hidden';
       (mobileMenuContainer as HTMLElement).style.transform = isMobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)';
+      if (isMobileMenuOpen) {
+        (mobileMenuContainer as HTMLElement).classList.add('menu-open');
+      } else {
+        (mobileMenuContainer as HTMLElement).classList.remove('menu-open');
+      }
+    } else {
+      console.log('Mobile menu container not found');
     }
   }, [isMobileMenuOpen]);
 
