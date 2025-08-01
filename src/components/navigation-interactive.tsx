@@ -196,7 +196,15 @@ export default function NavigationInteractive() {
   useEffect(() => {
     const ctaDropdown = document.querySelector('.cta-dropdown');
     if (ctaDropdown) {
+      console.log('Updating CTA dropdown visibility:', isCtaDropdownOpen);
       (ctaDropdown as HTMLElement).style.display = isCtaDropdownOpen ? 'block' : 'none';
+      if (isCtaDropdownOpen) {
+        (ctaDropdown as HTMLElement).classList.add('show');
+      } else {
+        (ctaDropdown as HTMLElement).classList.remove('show');
+      }
+    } else {
+      console.log('CTA dropdown element not found');
     }
   }, [isCtaDropdownOpen]);
 
