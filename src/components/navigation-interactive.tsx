@@ -47,6 +47,15 @@ export default function NavigationInteractive() {
 
   // Find and enhance existing static navigation
   useEffect(() => {
+    const services = [
+      { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
+      { name: "Unterhaltsreinigung", href: "https://cleanwin.vercel.app/leistungen/unterhaltsreinigung" },
+      { name: "Solarpanel reinigen", href: "https://cleanwin.vercel.app/leistungen/solarpanel-reinigen" },
+      { name: "Fassadenreinigung", href: "https://cleanwin.vercel.app/leistungen/fassadenreinigung" },
+      { name: "Umzugsreinigung", href: "https://cleanwin.vercel.app/leistungen/umzugsreinigung" },
+      { name: "Baureinigung", href: "https://cleanwin.vercel.app/leistungen/baureinigung" },
+    ];
+
     const navWrapper = document.querySelector('.nav-wrapper');
     const nav = document.querySelector('.nav-pill');
     const hamburger = document.querySelector('.hamburger');
