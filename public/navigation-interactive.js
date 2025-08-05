@@ -356,11 +356,12 @@
     console.log('Navigation interactive features loaded');
   }
 
-  // Initialize immediately if DOM is ready, otherwise wait
+  // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initialize);
   } else {
-    initialize();
+    // Add small delay to ensure elements are ready
+    setTimeout(initialize, 100);
   }
 
 })();
