@@ -364,4 +364,9 @@
     setTimeout(initialize, 100);
   }
 
+  // Backup initialization on window load
+  window.addEventListener('load', function() {
+    setTimeout(initialize, 200);
+  });
+
 })();
