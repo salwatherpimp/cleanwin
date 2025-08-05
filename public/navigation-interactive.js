@@ -45,15 +45,13 @@
 
   // Handle CTA button click
   function handleCtaClick(e) {
-    if (!isMobile) {
-      e.preventDefault();
-      e.stopPropagation();
-      isCtaDropdownOpen = !isCtaDropdownOpen;
-      isServicesDropdownOpen = false; // Close other dropdown
-      updateCtaDropdown();
-      updateServicesDropdown();
-      updateDropdownStates();
-    }
+    e.preventDefault();
+    e.stopPropagation();
+    isCtaDropdownOpen = !isCtaDropdownOpen;
+    isServicesDropdownOpen = false; // Close other dropdown
+    updateCtaDropdown();
+    updateServicesDropdown();
+    updateDropdownStates();
   }
 
   // Handle outside clicks
