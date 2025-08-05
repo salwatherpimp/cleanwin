@@ -329,7 +329,10 @@
     }
 
     if (servicesButton) {
+      console.log('Adding click listener to services button');
       servicesButton.addEventListener('click', handleServicesClick);
+    } else {
+      console.log('Services button not found during initialization');
     }
 
     // Handle outside clicks
