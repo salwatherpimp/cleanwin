@@ -330,6 +330,10 @@ export default function RootLayout({
               left: auto !important;
               min-width: 200px !important;
               max-width: calc(100vw - 32px) !important;
+              margin-top: 8px !important;
+            }
+            .services-dropdown {
+              display: none !important;
             }
           }
             .nav-pill {
