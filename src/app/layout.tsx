@@ -256,17 +256,16 @@ export default function RootLayout({
             padding: 20px;
           }
 
-          /* CTA dropdown container */
+          /* Dropdown containers */
+          .services-dropdown,
           .cta-dropdown {
             position: absolute;
             top: 100%;
-            right: 0;
             background: white;
             border-radius: 16px;
             box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
             border: 1px solid rgba(0, 0, 0, 0.08);
             padding: 16px;
-            min-width: 280px;
             z-index: 1000;
             margin-top: 8px;
             opacity: 0;
@@ -276,11 +275,42 @@ export default function RootLayout({
             pointer-events: none;
           }
 
+          .services-dropdown {
+            left: 0;
+            min-width: 200px;
+          }
+
+          .cta-dropdown {
+            right: 0;
+            min-width: 280px;
+          }
+
+          .services-dropdown.show,
           .cta-dropdown.show {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
             pointer-events: auto;
+          }
+
+          /* Dropdown buttons with chevrons */
+          .dropdown-button {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+          }
+
+          .chevron {
+            transition: transform 0.2s ease;
+            width: 12px;
+            height: 12px;
+          }
+
+          .dropdown-button.open .chevron {
+            transform: rotate(180deg);
           }
 
           /* Mobile responsive navigation */
@@ -454,9 +484,12 @@ export default function RootLayout({
             
             {/* Desktop Menu */}
             <div className="desktop-menu">
-              <a href="https://cleanwin.vercel.app/leistungen/fensterreinigung" className="nav-link">
-                Dienstleistungen
-              </a>
+              <div className="nav-link dropdown-button" data-dropdown="services">
+                <span>Dienstleistungen</span>
+                <svg className="chevron" viewBox="0 0 12 12" fill="none">
+                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
               <a href="https://cleanwin.vercel.app/ueber-uns" className="nav-link">
                 Über uns
               </a>
@@ -466,7 +499,7 @@ export default function RootLayout({
             </div>
 
             {/* CTA Button */}
-            <a href="/kontakt" className="cta-button">
+            <div className="cta-button dropdown-button" data-dropdown="cta">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -474,7 +507,10 @@ export default function RootLayout({
                 <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <span>Kontaktiere uns</span>
-            </a>
+              <svg className="chevron" viewBox="0 0 12 12" fill="none">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
 
             {/* Mobile Hamburger */}
             <button className="hamburger" type="button" aria-label="Navigation menu">
