@@ -286,6 +286,15 @@
     updateHamburgerAnimation();
   };
 
+  // Global function to close dropdowns
+  window.closeDropdowns = function() {
+    isCtaDropdownOpen = false;
+    isServicesDropdownOpen = false;
+    updateCtaDropdown();
+    updateServicesDropdown();
+    updateDropdownStates();
+  };
+
   // Initialize when DOM is ready
   function initialize() {
     checkMobile();
