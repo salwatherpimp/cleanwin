@@ -137,13 +137,21 @@
 
   // Update services dropdown
   function updateServicesDropdown() {
+    console.log('updateServicesDropdown called, isServicesDropdownOpen:', isServicesDropdownOpen);
     const servicesButton = document.querySelector('[data-dropdown="services"]');
-    if (!servicesButton) return;
+    if (!servicesButton) {
+      console.log('Services button not found');
+      return;
+    }
 
     // Skip on mobile (width <= 1023)
-    if (window.innerWidth <= 1023) return;
+    if (window.innerWidth <= 1023) {
+      console.log('Skipping services dropdown on mobile');
+      return;
+    }
 
     let servicesDropdown = document.querySelector('.services-dropdown');
+    console.log('Services dropdown element:', servicesDropdown);
 
     if (isServicesDropdownOpen && !servicesDropdown) {
       // Create services dropdown
