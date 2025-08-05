@@ -568,22 +568,53 @@ export default function RootLayout({
               }
 
               function init() {
+                // Fix chevron SVG content first
+                const chevrons = document.querySelectorAll('.chevron');
+                chevrons.forEach(function(chevron) {
+                  if (!chevron.innerHTML) {
+                    chevron.innerHTML = '<path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>';
+                    chevron.setAttribute('viewBox', '0 0 12 12');
+                    chevron.setAttribute('fill', 'none');
+                  }
+                });
+
                 const servicesBtn = document.querySelector('[data-dropdown="services"]');
                 const ctaBtn = document.querySelector('[data-dropdown="cta"]');
 
+                console.log('Services button found:', !!servicesBtn);
+                console.log('CTA button found:', !!ctaBtn);
+
                 if (servicesBtn) {
-                  servicesBtn.addEventListener('click', function(e) {
+                  // Remove any existing listeners
+                  const newServicesBtn = servicesBtn.cloneNode(true);
+                  servicesBtn.parentNode.replaceChild(newServicesBtn, servicesBtn);
+
+                  newServicesBtn.addEventListener('click', function(e) {
+                    console.log('Services button clicked!');
                     e.preventDefault();
                     e.stopPropagation();
                     toggleServices();
                   });
+
+                  newServicesBtn.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                  });
                 }
 
                 if (ctaBtn) {
-                  ctaBtn.addEventListener('click', function(e) {
+                  // Remove any existing listeners
+                  const newCtaBtn = ctaBtn.cloneNode(true);
+                  ctaBtn.parentNode.replaceChild(newCtaBtn, ctaBtn);
+
+                  newCtaBtn.addEventListener('click', function(e) {
+                    console.log('CTA button clicked!');
                     e.preventDefault();
                     e.stopPropagation();
                     toggleCta();
+                  });
+
+                  newCtaBtn.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
                   });
                 }
 
@@ -593,7 +624,7 @@ export default function RootLayout({
                   }
                 });
 
-                console.log('Navigation dropdowns initialized');
+                console.log('Navigation dropdowns initialized with chevron fixes');
               }
 
               if (document.readyState === 'loading') {
