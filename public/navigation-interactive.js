@@ -301,7 +301,8 @@
 
     // Add event listeners
     const hamburger = document.querySelector('.hamburger');
-    const ctaButton = document.querySelector('.cta-button');
+    const ctaButton = document.querySelector('[data-dropdown="cta"]');
+    const servicesButton = document.querySelector('[data-dropdown="services"]');
 
     if (hamburger) {
       hamburger.addEventListener('click', handleHamburgerClick);
@@ -309,6 +310,10 @@
 
     if (ctaButton) {
       ctaButton.addEventListener('click', handleCtaClick);
+    }
+
+    if (servicesButton) {
+      servicesButton.addEventListener('click', handleServicesClick);
     }
 
     // Handle outside clicks
