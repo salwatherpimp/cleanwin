@@ -63,14 +63,18 @@
 
     const isInsideNav = clickedElement.closest('nav') ||
                         clickedElement.closest('.mobile-menu-container') ||
-                        clickedElement.closest('.cta-dropdown');
+                        clickedElement.closest('.cta-dropdown') ||
+                        clickedElement.closest('.services-dropdown');
 
     if (!isInsideNav) {
       isMobileMenuOpen = false;
       isCtaDropdownOpen = false;
+      isServicesDropdownOpen = false;
       updateMobileMenu();
       updateCtaDropdown();
+      updateServicesDropdown();
       updateHamburgerAnimation();
+      updateDropdownStates();
     }
   }
 
