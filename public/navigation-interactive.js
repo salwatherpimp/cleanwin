@@ -180,7 +180,7 @@
   // Update CTA dropdown
   function updateCtaDropdown() {
     const ctaButton = document.querySelector('[data-dropdown="cta"]');
-    if (!ctaButton || isMobile) return;
+    if (!ctaButton) return;
 
     let ctaDropdown = document.querySelector('.cta-dropdown');
     
