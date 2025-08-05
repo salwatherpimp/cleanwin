@@ -8,9 +8,13 @@ export const metadata: Metadata = {
     template: "%s | CleanWin"
   },
   description: "Professional cleaning services in Winterthur with over 10 years of experience",
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   charset: "utf-8"
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
