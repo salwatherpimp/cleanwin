@@ -683,9 +683,16 @@ export default function RootLayout({
                     e.stopPropagation();
                     toggleCta();
                   });
+                }
 
-                  newCtaBtn.addEventListener('mousedown', function(e) {
+                // Add hamburger menu functionality
+                const hamburger = document.querySelector('.hamburger');
+                if (hamburger) {
+                  hamburger.addEventListener('click', function(e) {
+                    console.log('Hamburger clicked!');
                     e.preventDefault();
+                    e.stopPropagation();
+                    toggleMobileMenu();
                   });
                 }
 
