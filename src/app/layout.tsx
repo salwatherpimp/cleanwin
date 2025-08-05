@@ -697,8 +697,11 @@ export default function RootLayout({
                 }
 
                 document.addEventListener('click', function(e) {
-                  if (!e.target.closest('[data-dropdown]') && !e.target.closest('.services-dropdown') && !e.target.closest('.cta-dropdown')) {
+                  if (!e.target.closest('[data-dropdown]') && !e.target.closest('.services-dropdown') && !e.target.closest('.cta-dropdown') && !e.target.closest('.hamburger') && !e.target.closest('.mobile-menu-container')) {
                     closeAll();
+                    if (isMobileMenuOpen) {
+                      window.closeMobileMenu();
+                    }
                   }
                 });
 
