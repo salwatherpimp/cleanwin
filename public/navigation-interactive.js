@@ -135,7 +135,10 @@
   // Update services dropdown
   function updateServicesDropdown() {
     const servicesButton = document.querySelector('[data-dropdown="services"]');
-    if (!servicesButton || isMobile) return;
+    if (!servicesButton) return;
+
+    // Skip on mobile (width <= 1023)
+    if (window.innerWidth <= 1023) return;
 
     let servicesDropdown = document.querySelector('.services-dropdown');
 
