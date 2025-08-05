@@ -324,8 +324,13 @@
       checkMobile();
       if (!isMobile) {
         isMobileMenuOpen = false;
+        isCtaDropdownOpen = false;
+        isServicesDropdownOpen = false;
         updateMobileMenu();
         updateHamburgerAnimation();
+        updateCtaDropdown();
+        updateServicesDropdown();
+        updateDropdownStates();
       }
     });
 
