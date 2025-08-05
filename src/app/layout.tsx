@@ -447,13 +447,163 @@ export default function RootLayout({
           }
         `}</style>
 
-        {/* Load interactive navigation */}
-        <script src="/navigation-interactive.js" async></script>
-
-        {/* Defer fonts */}
+        {/* Inline navigation JavaScript to ensure it works */}
         <script dangerouslySetInnerHTML={{
           __html: `
-            // Defer all non-critical resources
+            (function() {
+              'use strict';
+
+              let isServicesOpen = false;
+              let isCtaOpen = false;
+
+              const services = [
+                { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
+                { name: "Unterhaltsreinigung", href: "https://cleanwin.vercel.app/leistungen/unterhaltsreinigung" },
+                { name: "Solarpanel reinigen", href: "https://cleanwin.vercel.app/leistungen/solarpanel-reinigen" },
+                { name: "Fassadenreinigung", href: "https://cleanwin.vercel.app/leistungen/fassadenreinigung" },
+                { name: "Umzugsreinigung", href: "https://cleanwin.vercel.app/leistungen/umzugsreinigung" },
+                { name: "Baureinigung", href: "https://cleanwin.vercel.app/leistungen/baureinigung" }
+              ];
+
+              function createServicesDropdown() {
+                const servicesBtn = document.querySelector('[data-dropdown="services"]');
+                if (!servicesBtn) return;
+
+                let dropdown = servicesBtn.querySelector('.services-dropdown');
+                if (!dropdown) {
+                  dropdown = document.createElement('div');
+                  dropdown.className = 'services-dropdown';
+                  dropdown.style.cssText = 'position: absolute; top: 100%; left: 0; background: white; border-radius: 16px; box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15); border: 1px solid rgba(0, 0, 0, 0.08); padding: 16px; min-width: 200px; z-index: 1000; margin-top: 8px; display: none;';
+
+                  dropdown.innerHTML = services.map(service =>
+                    '<a href="' + service.href + '" style="display: flex; align-items: center; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: #374151; transition: background-color 0.2s ease; font-family: inherit; font-size: 14px; font-weight: 500;" onmouseover="this.style.background=\\'#f3f4f6\\'; this.style.color=\\'#0DA6A6\\';" onmouseout="this.style.background=\\'transparent\\'; this.style.color=\\'#374151\\';">' + service.name + '</a>'
+                  ).join('');
+
+                  servicesBtn.style.position = 'relative';
+                  servicesBtn.appendChild(dropdown);
+                }
+                return dropdown;
+              }
+
+              function createCtaDropdown() {
+                const ctaBtn = document.querySelector('[data-dropdown="cta"]');
+                if (!ctaBtn) return;
+
+                let dropdown = ctaBtn.querySelector('.cta-dropdown');
+                if (!dropdown) {
+                  dropdown = document.createElement('div');
+                  dropdown.className = 'cta-dropdown';
+                  dropdown.style.cssText = 'position: absolute; top: 100%; right: 0; background: white; border-radius: 16px; box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15); border: 1px solid rgba(0, 0, 0, 0.08); padding: 16px; min-width: 280px; z-index: 1000; margin-top: 8px; display: none;';
+
+                  dropdown.innerHTML = '<div style="display: flex; flex-direction: column; gap: 12px;"><a href="tel:+41762951831" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; text-decoration: none; color: #374151; transition: background-color 0.2s ease; border: 1px solid #e5e7eb; font-family: inherit;" onmouseover="this.style.background=\\'#f9fafb\\';" onmouseout="this.style.background=\\'transparent\\';"><div style="width: 40px; height: 40px; background: #0DA6A6; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div style="font-weight: 600; font-size: 14px; margin-bottom: 2px; font-family: inherit;">Jetzt anrufen</div><div style="font-size: 13px; color: #6b7280; font-family: inherit;">+41 76 295 18 31</div></div></a><a href="/kontakt" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; text-decoration: none; color: #374151; transition: background-color 0.2s ease; border: 1px solid #e5e7eb; font-family: inherit;" onmouseover="this.style.background=\\'#f9fafb\\';" onmouseout="this.style.background=\\'transparent\\';"><div style="width: 40px; height: 40px; background: #0DA6A6; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div style="font-weight: 600; font-size: 14px; margin-bottom: 2px; font-family: inherit;">Kontakt Formular</div><div style="font-size: 13px; color: #6b7280; font-family: inherit;">Unverbindlich anfragen</div></div></a></div>';
+
+                  ctaBtn.style.position = 'relative';
+                  ctaBtn.appendChild(dropdown);
+                }
+                return dropdown;
+              }
+
+              function toggleServices() {
+                if (window.innerWidth <= 1023) return;
+                isServicesOpen = !isServicesOpen;
+                isCtaOpen = false;
+
+                const servicesDropdown = createServicesDropdown();
+                const ctaDropdown = document.querySelector('.cta-dropdown');
+
+                if (servicesDropdown) {
+                  servicesDropdown.style.display = isServicesOpen ? 'block' : 'none';
+                }
+                if (ctaDropdown) {
+                  ctaDropdown.style.display = 'none';
+                }
+
+                updateChevrons();
+              }
+
+              function toggleCta() {
+                isCtaOpen = !isCtaOpen;
+                isServicesOpen = false;
+
+                const ctaDropdown = createCtaDropdown();
+                const servicesDropdown = document.querySelector('.services-dropdown');
+
+                if (ctaDropdown) {
+                  ctaDropdown.style.display = isCtaOpen ? 'block' : 'none';
+                }
+                if (servicesDropdown && window.innerWidth > 1023) {
+                  servicesDropdown.style.display = 'none';
+                }
+
+                updateChevrons();
+              }
+
+              function updateChevrons() {
+                const servicesBtn = document.querySelector('[data-dropdown="services"]');
+                const ctaBtn = document.querySelector('[data-dropdown="cta"]');
+
+                if (servicesBtn) {
+                  const chevron = servicesBtn.querySelector('.chevron');
+                  if (chevron) {
+                    chevron.style.transform = isServicesOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+                  }
+                }
+
+                if (ctaBtn) {
+                  const chevron = ctaBtn.querySelector('.chevron');
+                  if (chevron) {
+                    chevron.style.transform = isCtaOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+                  }
+                }
+              }
+
+              function closeAll() {
+                isServicesOpen = false;
+                isCtaOpen = false;
+                const servicesDropdown = document.querySelector('.services-dropdown');
+                const ctaDropdown = document.querySelector('.cta-dropdown');
+                if (servicesDropdown) servicesDropdown.style.display = 'none';
+                if (ctaDropdown) ctaDropdown.style.display = 'none';
+                updateChevrons();
+              }
+
+              function init() {
+                const servicesBtn = document.querySelector('[data-dropdown="services"]');
+                const ctaBtn = document.querySelector('[data-dropdown="cta"]');
+
+                if (servicesBtn) {
+                  servicesBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleServices();
+                  });
+                }
+
+                if (ctaBtn) {
+                  ctaBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleCta();
+                  });
+                }
+
+                document.addEventListener('click', function(e) {
+                  if (!e.target.closest('[data-dropdown]') && !e.target.closest('.services-dropdown') && !e.target.closest('.cta-dropdown')) {
+                    closeAll();
+                  }
+                });
+
+                console.log('Navigation dropdowns initialized');
+              }
+
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+              } else {
+                init();
+              }
+            })();
+
+            // Defer fonts
             requestIdleCallback(function() {
               var link = document.createElement('link');
               link.rel = 'stylesheet';
