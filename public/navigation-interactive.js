@@ -32,7 +32,8 @@
 
   // Handle services dropdown click
   function handleServicesClick(e) {
-    if (!isMobile) {
+    // Only work on desktop (width > 1023)
+    if (window.innerWidth > 1023) {
       e.preventDefault();
       e.stopPropagation();
       isServicesDropdownOpen = !isServicesDropdownOpen;
