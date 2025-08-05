@@ -237,6 +237,28 @@
     }
   }
 
+  // Update dropdown button states (chevron rotation)
+  function updateDropdownStates() {
+    const servicesButton = document.querySelector('[data-dropdown="services"]');
+    const ctaButton = document.querySelector('[data-dropdown="cta"]');
+
+    if (servicesButton) {
+      if (isServicesDropdownOpen) {
+        servicesButton.classList.add('open');
+      } else {
+        servicesButton.classList.remove('open');
+      }
+    }
+
+    if (ctaButton) {
+      if (isCtaDropdownOpen) {
+        ctaButton.classList.add('open');
+      } else {
+        ctaButton.classList.remove('open');
+      }
+    }
+  }
+
   // Update hamburger animation
   function updateHamburgerAnimation() {
     const hamburgerLines = document.querySelectorAll('.hamburger-line');
