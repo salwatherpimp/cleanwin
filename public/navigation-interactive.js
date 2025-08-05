@@ -30,13 +30,29 @@
     updateHamburgerAnimation();
   }
 
+  // Handle services dropdown click
+  function handleServicesClick(e) {
+    if (!isMobile) {
+      e.preventDefault();
+      e.stopPropagation();
+      isServicesDropdownOpen = !isServicesDropdownOpen;
+      isCtaDropdownOpen = false; // Close other dropdown
+      updateServicesDropdown();
+      updateCtaDropdown();
+      updateDropdownStates();
+    }
+  }
+
   // Handle CTA button click
   function handleCtaClick(e) {
     if (!isMobile) {
       e.preventDefault();
       e.stopPropagation();
       isCtaDropdownOpen = !isCtaDropdownOpen;
+      isServicesDropdownOpen = false; // Close other dropdown
       updateCtaDropdown();
+      updateServicesDropdown();
+      updateDropdownStates();
     }
   }
 
