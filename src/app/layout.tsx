@@ -504,6 +504,7 @@ export default function RootLayout({
               }
 
               function toggleServices() {
+                // Only work on desktop
                 if (window.innerWidth <= 1023) return;
                 isServicesOpen = !isServicesOpen;
                 isCtaOpen = false;
@@ -520,6 +521,76 @@ export default function RootLayout({
 
                 updateChevrons();
               }
+
+              // Mobile menu management
+              let isMobileMenuOpen = false;
+
+              function createMobileMenu() {
+                let mobileMenu = document.querySelector('.mobile-menu-container');
+                if (!mobileMenu) {
+                  mobileMenu = document.createElement('div');
+                  mobileMenu.className = 'mobile-menu-container';
+                  mobileMenu.style.cssText = 'position: fixed; top: 80px; left: 16px; right: 16px; margin: 0 auto; width: auto; max-width: 400px; background: white; border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(0, 0, 0, 0.1); z-index: 9999; padding: 20px; transition: all 0.3s ease; display: none;';
+
+                  mobileMenu.innerHTML = '<div style="margin-bottom: 12px;"><h3 style="font-weight: 700; font-size: 18px; color: #1f2937; margin-bottom: 12px; margin-top: 0; font-family: inherit;">Leistungen</h3>' + services.map(service => '<a href="' + service.href + '" onclick="closeMobileMenu()" style="display: flex; align-items: center; padding: 12px 16px; text-decoration: none; color: #6b7280; font-weight: 400; font-size: 16px; transition: background-color 0.2s ease, color 0.2s ease; min-height: 44px; font-family: inherit;" onmouseover="this.style.background=\\'#f3f4f6\\'; this.style.color=\\'#0DA6A6\\';" onmouseout="this.style.background=\\'transparent\\'; this.style.color=\\'#6b7280\\';">' + service.name + '</a>').join('') + '</div><div style="height: 1px; background: #d1d5db; margin: 12px 0;"></div><div><a href="https://cleanwin.vercel.app/ueber-uns" onclick="closeMobileMenu()" style="display: flex; align-items: center; padding: 12px 0; text-decoration: none; color: #1f2937; font-weight: 700; font-size: 18px; margin-bottom: 8px; transition: color 0.2s ease; min-height: 44px; font-family: inherit;" onmouseover="this.style.color=\\'#0DA6A6\\';" onmouseout="this.style.color=\\'#1f2937\\';">Über uns</a><a href="https://cleanwin.vercel.app/referenzen" onclick="closeMobileMenu()" style="display: flex; align-items: center; padding: 12px 0; text-decoration: none; color: #1f2937; font-weight: 700; font-size: 18px; transition: color 0.2s ease; min-height: 44px; font-family: inherit;" onmouseover="this.style.color=\\'#0DA6A6\\';" onmouseout="this.style.color=\\'#1f2937\\';">Referenzen</a></div>';
+
+                  document.body.appendChild(mobileMenu);
+                }
+                return mobileMenu;
+              }
+
+              function toggleMobileMenu() {
+                if (window.innerWidth > 1023) return;
+                isMobileMenuOpen = !isMobileMenuOpen;
+
+                const mobileMenu = createMobileMenu();
+                const hamburger = document.querySelector('.hamburger');
+
+                if (mobileMenu) {
+                  mobileMenu.style.display = isMobileMenuOpen ? 'block' : 'none';
+                  mobileMenu.style.opacity = isMobileMenuOpen ? '1' : '0';
+                  mobileMenu.style.visibility = isMobileMenuOpen ? 'visible' : 'hidden';
+                  mobileMenu.style.transform = isMobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)';
+                }
+
+                // Animate hamburger
+                if (hamburger) {
+                  const lines = hamburger.querySelectorAll('.hamburger-line');
+                  if (lines.length >= 3) {
+                    if (isMobileMenuOpen) {
+                      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                      lines[1].style.opacity = '0';
+                      lines[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+                    } else {
+                      lines[0].style.transform = 'none';
+                      lines[1].style.opacity = '1';
+                      lines[2].style.transform = 'none';
+                    }
+                  }
+                }
+              }
+
+              window.closeMobileMenu = function() {
+                isMobileMenuOpen = false;
+                const mobileMenu = document.querySelector('.mobile-menu-container');
+                const hamburger = document.querySelector('.hamburger');
+
+                if (mobileMenu) {
+                  mobileMenu.style.display = 'none';
+                  mobileMenu.style.opacity = '0';
+                  mobileMenu.style.visibility = 'hidden';
+                  mobileMenu.style.transform = 'translateY(-10px)';
+                }
+
+                if (hamburger) {
+                  const lines = hamburger.querySelectorAll('.hamburger-line');
+                  if (lines.length >= 3) {
+                    lines[0].style.transform = 'none';
+                    lines[1].style.opacity = '1';
+                    lines[2].style.transform = 'none';
+                  }
+                }
+              };
 
               function toggleCta() {
                 isCtaOpen = !isCtaOpen;
