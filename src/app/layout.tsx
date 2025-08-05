@@ -447,23 +447,12 @@ export default function RootLayout({
           }
         `}</style>
 
-        {/* Load interactive navigation AFTER page load - NO JavaScript during LCP */}
+        {/* Load interactive navigation */}
+        <script src="/navigation-interactive.js" async></script>
+
+        {/* Defer fonts */}
         <script dangerouslySetInnerHTML={{
           __html: `
-            // CRITICAL: No JavaScript execution during HTML parse/LCP
-            window.addEventListener('load', function() {
-              // Only load interactive navigation AFTER LCP completes
-              setTimeout(function() {
-                import('./navigation-interactive.js').catch(function() {
-                  // Fallback for development
-                  var script = document.createElement('script');
-                  script.src = '/navigation-interactive.js';
-                  script.async = true;
-                  document.head.appendChild(script);
-                });
-              }, 100);
-            });
-            
             // Defer all non-critical resources
             requestIdleCallback(function() {
               var link = document.createElement('link');
