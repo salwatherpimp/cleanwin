@@ -661,14 +661,14 @@ export default function RootLayout({
                   servicesBtn.parentNode.replaceChild(newServicesBtn, servicesBtn);
 
                   newServicesBtn.addEventListener('click', function(e) {
-                    console.log('Services button clicked!');
+                    console.log('Services button clicked! Width:', window.innerWidth);
                     e.preventDefault();
                     e.stopPropagation();
-                    toggleServices();
-                  });
 
-                  newServicesBtn.addEventListener('mousedown', function(e) {
-                    e.preventDefault();
+                    // Only toggle dropdown on desktop
+                    if (window.innerWidth > 1023) {
+                      toggleServices();
+                    }
                   });
                 }
 
