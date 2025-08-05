@@ -187,7 +187,11 @@
     }
 
     if (servicesDropdown) {
-      servicesDropdown.style.display = isServicesDropdownOpen ? 'block' : 'none';
+      const displayValue = isServicesDropdownOpen ? 'block' : 'none';
+      console.log('Setting services dropdown display to:', displayValue);
+      servicesDropdown.style.display = displayValue;
+    } else {
+      console.log('No services dropdown found to update display');
     }
   }
 
