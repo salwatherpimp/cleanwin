@@ -228,8 +228,8 @@
       `;
       
       // Position relative to CTA button
-      ctaButton.parentElement.style.position = 'relative';
-      ctaButton.parentElement.appendChild(ctaDropdown);
+      ctaButton.style.position = 'relative';
+      ctaButton.appendChild(ctaDropdown);
     }
 
     if (ctaDropdown) {
