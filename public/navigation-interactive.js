@@ -4,6 +4,7 @@
 
   let isMobileMenuOpen = false;
   let isCtaDropdownOpen = false;
+  let isServicesDropdownOpen = false;
   let isMobile = false;
 
   // Detect mobile
