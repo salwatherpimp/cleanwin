@@ -134,9 +134,54 @@
     }
   }
 
+  // Update services dropdown
+  function updateServicesDropdown() {
+    const servicesButton = document.querySelector('[data-dropdown="services"]');
+    if (!servicesButton || isMobile) return;
+
+    let servicesDropdown = document.querySelector('.services-dropdown');
+
+    if (isServicesDropdownOpen && !servicesDropdown) {
+      // Create services dropdown
+      servicesDropdown = document.createElement('div');
+      servicesDropdown.className = 'services-dropdown';
+      servicesDropdown.style.cssText = `
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 16px;
+        min-width: 200px;
+        z-index: 1000;
+        margin-top: 8px;
+      `;
+
+      servicesDropdown.innerHTML = `
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          ${services.map(service => `
+            <a href="${service.href}" style="display: flex; align-items: center; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: #374151; transition: background-color 0.2s ease; font-family: inherit; font-size: 14px; font-weight: 500;" onmouseover="this.style.background='#f3f4f6'; this.style.color='#0DA6A6';" onmouseout="this.style.background='transparent'; this.style.color='#374151';">
+              ${service.name}
+            </a>
+          `).join('')}
+        </div>
+      `;
+
+      // Position relative to services button
+      servicesButton.style.position = 'relative';
+      servicesButton.appendChild(servicesDropdown);
+    }
+
+    if (servicesDropdown) {
+      servicesDropdown.style.display = isServicesDropdownOpen ? 'block' : 'none';
+    }
+  }
+
   // Update CTA dropdown
   function updateCtaDropdown() {
-    const ctaButton = document.querySelector('.cta-button');
+    const ctaButton = document.querySelector('[data-dropdown="cta"]');
     if (!ctaButton || isMobile) return;
 
     let ctaDropdown = document.querySelector('.cta-dropdown');
