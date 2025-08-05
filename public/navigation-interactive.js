@@ -32,12 +32,14 @@
 
   // Handle services dropdown click
   function handleServicesClick(e) {
+    console.log('Services button clicked, window width:', window.innerWidth);
     // Only work on desktop (width > 1023)
     if (window.innerWidth > 1023) {
       e.preventDefault();
       e.stopPropagation();
       isServicesDropdownOpen = !isServicesDropdownOpen;
       isCtaDropdownOpen = false; // Close other dropdown
+      console.log('Services dropdown state:', isServicesDropdownOpen);
       updateServicesDropdown();
       updateCtaDropdown();
       updateDropdownStates();
