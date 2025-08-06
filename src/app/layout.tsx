@@ -425,6 +425,33 @@ export default function RootLayout({
             button, a { min-height: 44px !important; min-width: 44px !important; }
             section { padding: 32px 16px !important; }
           }
+
+          /* About section image gallery responsive */
+          .about-image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            width: 100%;
+          }
+
+          @media (max-width: 768px) {
+            .about-image-gallery {
+              gap: 12px !important;
+              margin-top: 16px;
+            }
+            .about-image-gallery > div {
+              height: 140px !important;
+            }
+          }
+
+          @media (min-width: 769px) {
+            .about-image-gallery {
+              gap: 16px;
+            }
+            .about-image-gallery > div {
+              height: 120px;
+            }
+          }
         `}</style>
 
         {/* BULLETPROOF Navigation JavaScript - Immediate execution */}
