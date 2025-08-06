@@ -578,11 +578,22 @@ export default function RootLayout({
             
             {/* Desktop Menu */}
             <div className="desktop-menu">
-              <div className="nav-link dropdown-button" data-dropdown="services">
+              <div className="nav-link dropdown-button" data-dropdown="services" style={{position: 'relative'}}>
                 <span>Dienstleistungen</span>
-                <svg className="chevron" viewBox="0 0 12 12" fill="none">
+                <svg className="chevron" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
+                {/* Services Dropdown */}
+                <div className="services-dropdown" style={{display: 'none'}}>
+                  <div style={{display: 'flex', flexDirection: 'column', gap: '4px'}}>
+                    <a href="https://cleanwin.vercel.app/leistungen/fensterreinigung" style={{display: 'flex', alignItems: 'center', padding: '8px 12px', borderRadius: '8px', textDecoration: 'none', color: '#374151', transition: 'background-color 0.2s ease', fontFamily: 'inherit', fontSize: '14px', fontWeight: '500'}}>Fensterreinigung</a>
+                    <a href="https://cleanwin.vercel.app/leistungen/unterhaltsreinigung" style={{display: 'flex', alignItems: 'center', padding: '8px 12px', borderRadius: '8px', textDecoration: 'none', color: '#374151', transition: 'background-color 0.2s ease', fontFamily: 'inherit', fontSize: '14px', fontWeight: '500'}}>Unterhaltsreinigung</a>
+                    <a href="https://cleanwin.vercel.app/leistungen/solarpanel-reinigen" style={{display: 'flex', alignItems: 'center', padding: '8px 12px', borderRadius: '8px', textDecoration: 'none', color: '#374151', transition: 'background-color 0.2s ease', fontFamily: 'inherit', fontSize: '14px', fontWeight: '500'}}>Solarpanel reinigen</a>
+                    <a href="https://cleanwin.vercel.app/leistungen/fassadenreinigung" style={{display: 'flex', alignItems: 'center', padding: '8px 12px', borderRadius: '8px', textDecoration: 'none', color: '#374151', transition: 'background-color 0.2s ease', fontFamily: 'inherit', fontSize: '14px', fontWeight: '500'}}>Fassadenreinigung</a>
+                    <a href="https://cleanwin.vercel.app/leistungen/umzugsreinigung" style={{display: 'flex', alignItems: 'center', padding: '8px 12px', borderRadius: '8px', textDecoration: 'none', color: '#374151', transition: 'background-color 0.2s ease', fontFamily: 'inherit', fontSize: '14px', fontWeight: '500'}}>Umzugsreinigung</a>
+                    <a href="https://cleanwin.vercel.app/leistungen/baureinigung" style={{display: 'flex', alignItems: 'center', padding: '8px 12px', borderRadius: '8px', textDecoration: 'none', color: '#374151', transition: 'background-color 0.2s ease', fontFamily: 'inherit', fontSize: '14px', fontWeight: '500'}}>Baureinigung</a>
+                  </div>
+                </div>
               </div>
               <a href="https://cleanwin.vercel.app/ueber-uns" className="nav-link">
                 Über uns
@@ -593,17 +604,40 @@ export default function RootLayout({
             </div>
 
             {/* CTA Button */}
-            <div className="cta-button dropdown-button" data-dropdown="cta">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <div className="cta-button dropdown-button" data-dropdown="cta" style={{position: 'relative'}}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <span>Kontaktiere uns</span>
-              <svg className="chevron" viewBox="0 0 12 12" fill="none">
+              <svg className="chevron" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
+              {/* CTA Dropdown */}
+              <div className="cta-dropdown" style={{display: 'none'}}>
+                <div style={{display: 'flex', flexDirection: 'column', gap: '12px'}}>
+                  <a href="tel:+41762951831" style={{display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 16px', borderRadius: '12px', textDecoration: 'none', color: '#374151', transition: 'background-color 0.2s ease', border: '1px solid #e5e7eb', fontFamily: 'inherit'}}>
+                    <div style={{width: '40px', height: '40px', background: '#0DA6A6', borderRadius: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', flexShrink: '0'}}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </div>
+                    <div>
+                      <div style={{fontWeight: '600', fontSize: '14px', marginBottom: '2px', fontFamily: 'inherit'}}>Jetzt anrufen</div>
+                      <div style={{fontSize: '13px', color: '#6b7280', fontFamily: 'inherit'}}>+41 76 295 18 31</div>
+                    </div>
+                  </a>
+                  <a href="/kontakt" style={{display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 16px', borderRadius: '12px', textDecoration: 'none', color: '#374151', transition: 'background-color 0.2s ease', border: '1px solid #e5e7eb', fontFamily: 'inherit'}}>
+                    <div style={{width: '40px', height: '40px', background: '#0DA6A6', borderRadius: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', flexShrink: '0'}}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </div>
+                    <div>
+                      <div style={{fontWeight: '600', fontSize: '14px', marginBottom: '2px', fontFamily: 'inherit'}}>Kontakt Formular</div>
+                      <div style={{fontSize: '13px', color: '#6b7280', fontFamily: 'inherit'}}>Unverbindlich anfragen</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Mobile Hamburger */}
