@@ -434,13 +434,21 @@ export default function RootLayout({
             width: 100%;
           }
 
+          .about-image-gallery > div {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            height: 120px;
+          }
+
           @media (max-width: 768px) {
             .about-image-gallery {
               gap: 12px !important;
               margin-top: 16px;
             }
             .about-image-gallery > div {
-              height: 140px !important;
+              height: 160px !important;
+              border-radius: 12px !important;
             }
           }
 
