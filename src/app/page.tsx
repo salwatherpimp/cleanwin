@@ -487,8 +487,7 @@ className="usp-card usp-duplicate"
             className="grid-mobile-2"
             style={{
               display: "grid",
-              gridTemplateColumns: window.innerWidth <= 768 ? "1fr" : "1fr 1fr",
-              gap: window.innerWidth <= 768 ? "32px" : "48px",
+              gap: "48px",
               alignItems: "center",
             }}
           >
