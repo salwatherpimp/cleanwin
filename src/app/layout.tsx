@@ -152,8 +152,8 @@ export default function RootLayout({
 
           .nav-logo img {
             width: auto;
-            height: 30px;
-            max-width: 110px;
+            height: 28px;
+            max-width: 120px;
           }
 
           .desktop-menu {
