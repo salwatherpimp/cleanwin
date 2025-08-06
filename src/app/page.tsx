@@ -540,12 +540,7 @@ className="usp-card usp-duplicate"
             {/* Image Gallery */}
             <div className="about-image-gallery">
               <div
-                style={{
-                  borderRadius: "16px",
 
-                  overflow: "hidden",
-                  position: "relative",
-                }}
               >
                 <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FFirmenwagen_vor_Geba%25CC%2588ude_zz0m0s.avif&w=750&q=75"
@@ -557,12 +552,7 @@ className="usp-card usp-duplicate"
                 />
               </div>
               <div
-                style={{
-                  borderRadius: "16px",
 
-                  overflow: "hidden",
-                  position: "relative",
-                }}
               >
                 <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FGlasreinigung_aussen_Flaach_ec1fre.avif&w=750&q=75"
@@ -574,12 +564,7 @@ className="usp-card usp-duplicate"
                 />
               </div>
               <div
-                style={{
-                  borderRadius: "16px",
 
-                  overflow: "hidden",
-                  position: "relative",
-                }}
               >
                 <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752005906%2Fhomepage-herosection_fsxqwc.avif&w=750&q=75"
@@ -591,12 +576,7 @@ className="usp-card usp-duplicate"
                 />
               </div>
               <div
-                style={{
-                  borderRadius: "16px",
 
-                  overflow: "hidden",
-                  position: "relative",
-                }}
               >
                 <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FFassadenreinigung_Sichtbeton_vm1lsq.avif&w=750&q=75"
