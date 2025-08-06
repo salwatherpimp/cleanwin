@@ -538,15 +538,7 @@ className="usp-card usp-duplicate"
             </div>
 
             {/* Image Gallery */}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "16px",
-                width: "100%",
-              }}
-              className="grid grid-cols-2 gap-3 md:gap-4"
-            >
+            <div className="about-image-gallery">
               <div
                 style={{
                   borderRadius: "16px",
