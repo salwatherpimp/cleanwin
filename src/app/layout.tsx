@@ -354,7 +354,7 @@ export default function RootLayout({
 
           /* Layout and grid fixes */
           .grid-mobile-1 { grid-template-columns: 1fr; gap: 16px; }
-          .grid-mobile-2 { grid-template-columns: 1fr; gap: 32px; }
+          .grid-mobile-2 { grid-template-columns: 1fr; gap: 24px; }
           .grid-mobile-3 { 
             display: flex;
             overflow-x: auto;
