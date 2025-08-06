@@ -8,7 +8,10 @@ export const metadata: Metadata = {
     template: "%s | CleanWin"
   },
   description: "Professional cleaning services in Winterthur with over 10 years of experience",
-  robots: "index, follow"
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
 export const viewport = {
