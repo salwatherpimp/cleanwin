@@ -450,20 +450,58 @@ export default function RootLayout({
         {/* Inline navigation JavaScript to ensure it works */}
         <script dangerouslySetInnerHTML={{
           __html: `
-            (function() {
-              'use strict';
+            // Simple bulletproof dropdown script
+            window.addEventListener('load', function() {
+              setTimeout(function() {
+                console.log('Setting up dropdowns...');
 
-              let isServicesOpen = false;
-              let isCtaOpen = false;
+                // Fix chevron content
+                const chevrons = document.querySelectorAll('.chevron');
+                chevrons.forEach(function(chevron) {
+                  chevron.innerHTML = '<path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>';
+                  chevron.setAttribute('viewBox', '0 0 12 12');
+                  chevron.setAttribute('fill', 'none');
+                });
 
-              const services = [
-                { name: "Fensterreinigung", href: "https://cleanwin.vercel.app/leistungen/fensterreinigung" },
-                { name: "Unterhaltsreinigung", href: "https://cleanwin.vercel.app/leistungen/unterhaltsreinigung" },
-                { name: "Solarpanel reinigen", href: "https://cleanwin.vercel.app/leistungen/solarpanel-reinigen" },
-                { name: "Fassadenreinigung", href: "https://cleanwin.vercel.app/leistungen/fassadenreinigung" },
-                { name: "Umzugsreinigung", href: "https://cleanwin.vercel.app/leistungen/umzugsreinigung" },
-                { name: "Baureinigung", href: "https://cleanwin.vercel.app/leistungen/baureinigung" }
-              ];
+                // Services dropdown handler
+                const servicesBtn = document.querySelector('[data-dropdown="services"]');
+                if (servicesBtn) {
+                  servicesBtn.onclick = function(e) {
+                    e.preventDefault();
+                    if (window.innerWidth > 1023) {
+                      const dropdown = document.querySelector('.services-dropdown');
+                      const ctaDropdown = document.querySelector('.cta-dropdown');
+                      if (dropdown) {
+                        const isOpen = dropdown.style.display === 'block';
+                        dropdown.style.display = isOpen ? 'none' : 'block';
+                        const chevron = servicesBtn.querySelector('.chevron');
+                        if (chevron) chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                      }
+                      if (ctaDropdown) ctaDropdown.style.display = 'none';
+                    }
+                  };
+                }
+
+                // CTA dropdown handler
+                const ctaBtn = document.querySelector('[data-dropdown="cta"]');
+                if (ctaBtn) {
+                  ctaBtn.onclick = function(e) {
+                    e.preventDefault();
+                    const dropdown = document.querySelector('.cta-dropdown');
+                    const servicesDropdown = document.querySelector('.services-dropdown');
+                    if (dropdown) {
+                      const isOpen = dropdown.style.display === 'block';
+                      dropdown.style.display = isOpen ? 'none' : 'block';
+                      const chevron = ctaBtn.querySelector('.chevron');
+                      if (chevron) chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    }
+                    if (servicesDropdown) servicesDropdown.style.display = 'none';
+                  };
+                }
+
+                console.log('Dropdowns ready!');
+              }, 300);
+            });
 
               function createServicesDropdown() {
                 const servicesBtn = document.querySelector('[data-dropdown="services"]');
