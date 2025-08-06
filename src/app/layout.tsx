@@ -347,8 +347,9 @@ export default function RootLayout({
               min-height: 60px !important;
             }
             .nav-logo img {
-              height: 42px !important;
+              height: 36px !important;
               width: auto !important;
+              max-width: 140px !important;
             }
           }
 
