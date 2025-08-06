@@ -198,7 +198,6 @@ export default function RootLayout({
             min-height: 36px;
             font-family: inherit;
             transition: background-color 0.2s ease;
-            cursor: pointer;
           }
 
           .cta-button:hover {
@@ -238,6 +237,29 @@ export default function RootLayout({
             margin-bottom: 0;
           }
 
+          /* Mobile menu container */
+          .mobile-menu-container {
+            position: fixed;
+            top: 80px;
+            left: 16px;
+            right: 16px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            z-index: 99999;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            margin: 0 auto;
+            max-width: 400px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            display: none;
+            padding: 20px;
+          }
+
           /* Dropdown containers */
           .services-dropdown,
           .cta-dropdown {
@@ -250,7 +272,11 @@ export default function RootLayout({
             padding: 16px;
             z-index: 1000;
             margin-top: 8px;
-            display: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            pointer-events: none;
           }
 
           .services-dropdown {
@@ -261,6 +287,14 @@ export default function RootLayout({
           .cta-dropdown {
             right: 0;
             min-width: 280px;
+          }
+
+          .services-dropdown.show,
+          .cta-dropdown.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
           }
 
           /* Dropdown buttons with chevrons */
@@ -279,23 +313,8 @@ export default function RootLayout({
             height: 12px;
           }
 
-          /* Mobile menu container */
-          .mobile-menu-container {
-            position: fixed;
-            top: 80px;
-            left: 16px;
-            right: 16px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            z-index: 99999;
-            max-height: calc(100vh - 120px);
-            overflow-y: auto;
-            margin: 0 auto;
-            max-width: 400px;
-            display: none;
-            padding: 20px;
+          .dropdown-button.open .chevron {
+            transform: rotate(180deg);
           }
 
           /* Mobile responsive navigation */
@@ -316,6 +335,7 @@ export default function RootLayout({
             .services-dropdown {
               display: none !important;
             }
+          }
             .nav-pill {
               padding: 8px 16px !important;
               height: 56px !important;
@@ -427,27 +447,27 @@ export default function RootLayout({
           }
         `}</style>
 
-        {/* Bulletproof navigation JavaScript */}
+        {/* Inline navigation JavaScript to ensure it works */}
         <script dangerouslySetInnerHTML={{
           __html: `
+            // Simple bulletproof dropdown script
             window.addEventListener('load', function() {
               setTimeout(function() {
-                console.log('Setting up navigation...');
-                
-                // Fix chevron SVG content
+                console.log('Setting up dropdowns...');
+
+                // Fix chevron content
                 const chevrons = document.querySelectorAll('.chevron');
                 chevrons.forEach(function(chevron) {
                   chevron.innerHTML = '<path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>';
                   chevron.setAttribute('viewBox', '0 0 12 12');
                   chevron.setAttribute('fill', 'none');
                 });
-                
-                // Services dropdown handler (desktop only)
+
+                // Services dropdown handler
                 const servicesBtn = document.querySelector('[data-dropdown="services"]');
                 if (servicesBtn) {
                   servicesBtn.onclick = function(e) {
                     e.preventDefault();
-                    console.log('Services clicked! Width:', window.innerWidth);
                     if (window.innerWidth > 1023) {
                       const dropdown = document.querySelector('.services-dropdown');
                       const ctaDropdown = document.querySelector('.cta-dropdown');
@@ -456,23 +476,17 @@ export default function RootLayout({
                         dropdown.style.display = isOpen ? 'none' : 'block';
                         const chevron = servicesBtn.querySelector('.chevron');
                         if (chevron) chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
-                        console.log('Services dropdown:', isOpen ? 'closed' : 'opened');
                       }
-                      if (ctaDropdown) {
-                        ctaDropdown.style.display = 'none';
-                        const ctaChevron = document.querySelector('[data-dropdown="cta"] .chevron');
-                        if (ctaChevron) ctaChevron.style.transform = 'rotate(0deg)';
-                      }
+                      if (ctaDropdown) ctaDropdown.style.display = 'none';
                     }
                   };
                 }
-                
-                // CTA dropdown handler (both desktop and mobile)
+
+                // CTA dropdown handler
                 const ctaBtn = document.querySelector('[data-dropdown="cta"]');
                 if (ctaBtn) {
                   ctaBtn.onclick = function(e) {
                     e.preventDefault();
-                    console.log('CTA clicked!');
                     const dropdown = document.querySelector('.cta-dropdown');
                     const servicesDropdown = document.querySelector('.services-dropdown');
                     if (dropdown) {
@@ -480,37 +494,108 @@ export default function RootLayout({
                       dropdown.style.display = isOpen ? 'none' : 'block';
                       const chevron = ctaBtn.querySelector('.chevron');
                       if (chevron) chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
-                      console.log('CTA dropdown:', isOpen ? 'closed' : 'opened');
                     }
-                    if (servicesDropdown && window.innerWidth > 1023) {
-                      servicesDropdown.style.display = 'none';
-                      const servicesChevron = document.querySelector('[data-dropdown="services"] .chevron');
-                      if (servicesChevron) servicesChevron.style.transform = 'rotate(0deg)';
-                    }
+                    if (servicesDropdown) servicesDropdown.style.display = 'none';
                   };
                 }
-                
-                // Mobile hamburger menu
+
+                console.log('Dropdowns ready!');
+              }, 300);
+            });
+
+              function createServicesDropdown() {
+                const servicesBtn = document.querySelector('[data-dropdown="services"]');
+                if (!servicesBtn) return;
+
+                let dropdown = servicesBtn.querySelector('.services-dropdown');
+                if (!dropdown) {
+                  dropdown = document.createElement('div');
+                  dropdown.className = 'services-dropdown';
+                  dropdown.style.cssText = 'position: absolute; top: 100%; left: 0; background: white; border-radius: 16px; box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15); border: 1px solid rgba(0, 0, 0, 0.08); padding: 16px; min-width: 200px; z-index: 1000; margin-top: 8px; display: none;';
+
+                  dropdown.innerHTML = services.map(service =>
+                    '<a href="' + service.href + '" style="display: flex; align-items: center; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: #374151; transition: background-color 0.2s ease; font-family: inherit; font-size: 14px; font-weight: 500;" onmouseover="this.style.background=\\'#f3f4f6\\'; this.style.color=\\'#0DA6A6\\';" onmouseout="this.style.background=\\'transparent\\'; this.style.color=\\'#374151\\';">' + service.name + '</a>'
+                  ).join('');
+
+                  servicesBtn.style.position = 'relative';
+                  servicesBtn.appendChild(dropdown);
+                }
+                return dropdown;
+              }
+
+              function createCtaDropdown() {
+                const ctaBtn = document.querySelector('[data-dropdown="cta"]');
+                if (!ctaBtn) return;
+
+                let dropdown = ctaBtn.querySelector('.cta-dropdown');
+                if (!dropdown) {
+                  dropdown = document.createElement('div');
+                  dropdown.className = 'cta-dropdown';
+                  dropdown.style.cssText = 'position: absolute; top: 100%; right: 0; background: white; border-radius: 16px; box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15); border: 1px solid rgba(0, 0, 0, 0.08); padding: 16px; min-width: 280px; z-index: 1000; margin-top: 8px; display: none;';
+
+                  dropdown.innerHTML = '<div style="display: flex; flex-direction: column; gap: 12px;"><a href="tel:+41762951831" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; text-decoration: none; color: #374151; transition: background-color 0.2s ease; border: 1px solid #e5e7eb; font-family: inherit;" onmouseover="this.style.background=\\'#f9fafb\\';" onmouseout="this.style.background=\\'transparent\\';"><div style="width: 40px; height: 40px; background: #0DA6A6; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div style="font-weight: 600; font-size: 14px; margin-bottom: 2px; font-family: inherit;">Jetzt anrufen</div><div style="font-size: 13px; color: #6b7280; font-family: inherit;">+41 76 295 18 31</div></div></a><a href="/kontakt" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; text-decoration: none; color: #374151; transition: background-color 0.2s ease; border: 1px solid #e5e7eb; font-family: inherit;" onmouseover="this.style.background=\\'#f9fafb\\';" onmouseout="this.style.background=\\'transparent\\';"><div style="width: 40px; height: 40px; background: #0DA6A6; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div style="font-weight: 600; font-size: 14px; margin-bottom: 2px; font-family: inherit;">Kontakt Formular</div><div style="font-size: 13px; color: #6b7280; font-family: inherit;">Unverbindlich anfragen</div></div></a></div>';
+
+                  ctaBtn.style.position = 'relative';
+                  ctaBtn.appendChild(dropdown);
+                }
+                return dropdown;
+              }
+
+              function toggleServices() {
+                // Only work on desktop
+                if (window.innerWidth <= 1023) return;
+                isServicesOpen = !isServicesOpen;
+                isCtaOpen = false;
+
+                const servicesDropdown = createServicesDropdown();
+                const ctaDropdown = document.querySelector('.cta-dropdown');
+
+                if (servicesDropdown) {
+                  servicesDropdown.style.display = isServicesOpen ? 'block' : 'none';
+                }
+                if (ctaDropdown) {
+                  ctaDropdown.style.display = 'none';
+                }
+
+                updateChevrons();
+              }
+
+              // Mobile menu management
+              let isMobileMenuOpen = false;
+
+              function createMobileMenu() {
+                let mobileMenu = document.querySelector('.mobile-menu-container');
+                if (!mobileMenu) {
+                  mobileMenu = document.createElement('div');
+                  mobileMenu.className = 'mobile-menu-container';
+                  mobileMenu.style.cssText = 'position: fixed; top: 80px; left: 16px; right: 16px; margin: 0 auto; width: auto; max-width: 400px; background: white; border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(0, 0, 0, 0.1); z-index: 9999; padding: 20px; transition: all 0.3s ease; display: none;';
+
+                  mobileMenu.innerHTML = '<div style="margin-bottom: 12px;"><h3 style="font-weight: 700; font-size: 18px; color: #1f2937; margin-bottom: 12px; margin-top: 0; font-family: inherit;">Leistungen</h3>' + services.map(service => '<a href="' + service.href + '" onclick="closeMobileMenu()" style="display: flex; align-items: center; padding: 12px 16px; text-decoration: none; color: #6b7280; font-weight: 400; font-size: 16px; transition: background-color 0.2s ease, color 0.2s ease; min-height: 44px; font-family: inherit;" onmouseover="this.style.background=\\'#f3f4f6\\'; this.style.color=\\'#0DA6A6\\';" onmouseout="this.style.background=\\'transparent\\'; this.style.color=\\'#6b7280\\';">' + service.name + '</a>').join('') + '</div><div style="height: 1px; background: #d1d5db; margin: 12px 0;"></div><div><a href="https://cleanwin.vercel.app/ueber-uns" onclick="closeMobileMenu()" style="display: flex; align-items: center; padding: 12px 0; text-decoration: none; color: #1f2937; font-weight: 700; font-size: 18px; margin-bottom: 8px; transition: color 0.2s ease; min-height: 44px; font-family: inherit;" onmouseover="this.style.color=\\'#0DA6A6\\';" onmouseout="this.style.color=\\'#1f2937\\';">Über uns</a><a href="https://cleanwin.vercel.app/referenzen" onclick="closeMobileMenu()" style="display: flex; align-items: center; padding: 12px 0; text-decoration: none; color: #1f2937; font-weight: 700; font-size: 18px; transition: color 0.2s ease; min-height: 44px; font-family: inherit;" onmouseover="this.style.color=\\'#0DA6A6\\';" onmouseout="this.style.color=\\'#1f2937\\';">Referenzen</a></div>';
+
+                  document.body.appendChild(mobileMenu);
+                }
+                return mobileMenu;
+              }
+
+              function toggleMobileMenu() {
+                if (window.innerWidth > 1023) return;
+                isMobileMenuOpen = !isMobileMenuOpen;
+
+                const mobileMenu = createMobileMenu();
                 const hamburger = document.querySelector('.hamburger');
+
+                if (mobileMenu) {
+                  mobileMenu.style.display = isMobileMenuOpen ? 'block' : 'none';
+                  mobileMenu.style.opacity = isMobileMenuOpen ? '1' : '0';
+                  mobileMenu.style.visibility = isMobileMenuOpen ? 'visible' : 'hidden';
+                  mobileMenu.style.transform = isMobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)';
+                }
+
+                // Animate hamburger
                 if (hamburger) {
-                  hamburger.onclick = function(e) {
-                    e.preventDefault();
-                    console.log('Hamburger clicked!');
-                    let mobileMenu = document.querySelector('.mobile-menu-container');
-                    if (!mobileMenu) {
-                      mobileMenu = document.createElement('div');
-                      mobileMenu.className = 'mobile-menu-container';
-                      mobileMenu.style.cssText = 'position: fixed; top: 80px; left: 16px; right: 16px; margin: 0 auto; width: auto; max-width: 400px; background: white; border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); border: 1px solid rgba(0, 0, 0, 0.1); z-index: 9999; padding: 20px; display: none;';
-                      mobileMenu.innerHTML = '<div style="margin-bottom: 12px;"><h3 style="font-weight: 700; font-size: 18px; color: #1f2937; margin-bottom: 12px; margin-top: 0;">Leistungen</h3><a href="https://cleanwin.vercel.app/leistungen/fensterreinigung" style="display: flex; padding: 12px 16px; text-decoration: none; color: #6b7280; font-size: 16px;">Fensterreinigung</a><a href="https://cleanwin.vercel.app/leistungen/unterhaltsreinigung" style="display: flex; padding: 12px 16px; text-decoration: none; color: #6b7280; font-size: 16px;">Unterhaltsreinigung</a><a href="https://cleanwin.vercel.app/leistungen/solarpanel-reinigen" style="display: flex; padding: 12px 16px; text-decoration: none; color: #6b7280; font-size: 16px;">Solarpanel reinigen</a><a href="https://cleanwin.vercel.app/leistungen/fassadenreinigung" style="display: flex; padding: 12px 16px; text-decoration: none; color: #6b7280; font-size: 16px;">Fassadenreinigung</a><a href="https://cleanwin.vercel.app/leistungen/umzugsreinigung" style="display: flex; padding: 12px 16px; text-decoration: none; color: #6b7280; font-size: 16px;">Umzugsreinigung</a><a href="https://cleanwin.vercel.app/leistungen/baureinigung" style="display: flex; padding: 12px 16px; text-decoration: none; color: #6b7280; font-size: 16px;">Baureinigung</a></div><div style="height: 1px; background: #d1d5db; margin: 12px 0;"></div><div><a href="https://cleanwin.vercel.app/ueber-uns" style="display: flex; padding: 12px 0; text-decoration: none; color: #1f2937; font-weight: 700; font-size: 18px; margin-bottom: 8px;">Über uns</a><a href="https://cleanwin.vercel.app/referenzen" style="display: flex; padding: 12px 0; text-decoration: none; color: #1f2937; font-weight: 700; font-size: 18px;">Referenzen</a></div>';
-                      document.body.appendChild(mobileMenu);
-                    }
-                    const isOpen = mobileMenu.style.display === 'block';
-                    mobileMenu.style.display = isOpen ? 'none' : 'block';
-                    console.log('Mobile menu:', isOpen ? 'closed' : 'opened');
-                    
-                    // Animate hamburger lines
-                    const lines = hamburger.querySelectorAll('.hamburger-line');
-                    if (!isOpen) {
+                  const lines = hamburger.querySelectorAll('.hamburger-line');
+                  if (lines.length >= 3) {
+                    if (isMobileMenuOpen) {
                       lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
                       lines[1].style.opacity = '0';
                       lines[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
@@ -519,37 +604,155 @@ export default function RootLayout({
                       lines[1].style.opacity = '1';
                       lines[2].style.transform = 'none';
                     }
-                  };
-                }
-                
-                // Close dropdowns when clicking outside
-                document.onclick = function(e) {
-                  if (!e.target.closest('[data-dropdown]') && !e.target.closest('.services-dropdown') && !e.target.closest('.cta-dropdown') && !e.target.closest('.hamburger') && !e.target.closest('.mobile-menu-container')) {
-                    const servicesDropdown = document.querySelector('.services-dropdown');
-                    const ctaDropdown = document.querySelector('.cta-dropdown');
-                    const mobileMenu = document.querySelector('.mobile-menu-container');
-                    if (servicesDropdown) servicesDropdown.style.display = 'none';
-                    if (ctaDropdown) ctaDropdown.style.display = 'none';
-                    if (mobileMenu) mobileMenu.style.display = 'none';
-                    
-                    // Reset chevrons
-                    const chevrons = document.querySelectorAll('.chevron');
-                    chevrons.forEach(function(c) { c.style.transform = 'rotate(0deg)'; });
-                    
-                    // Reset hamburger
-                    const lines = document.querySelectorAll('.hamburger-line');
-                    lines.forEach(function(line, i) {
-                      if (i === 0) line.style.transform = 'none';
-                      if (i === 1) line.style.opacity = '1';
-                      if (i === 2) line.style.transform = 'none';
-                    });
                   }
-                };
-                
-                console.log('Navigation setup complete!');
-              }, 500);
-            });
-            
+                }
+              }
+
+              window.closeMobileMenu = function() {
+                isMobileMenuOpen = false;
+                const mobileMenu = document.querySelector('.mobile-menu-container');
+                const hamburger = document.querySelector('.hamburger');
+
+                if (mobileMenu) {
+                  mobileMenu.style.display = 'none';
+                  mobileMenu.style.opacity = '0';
+                  mobileMenu.style.visibility = 'hidden';
+                  mobileMenu.style.transform = 'translateY(-10px)';
+                }
+
+                if (hamburger) {
+                  const lines = hamburger.querySelectorAll('.hamburger-line');
+                  if (lines.length >= 3) {
+                    lines[0].style.transform = 'none';
+                    lines[1].style.opacity = '1';
+                    lines[2].style.transform = 'none';
+                  }
+                }
+              };
+
+              function toggleCta() {
+                isCtaOpen = !isCtaOpen;
+                isServicesOpen = false;
+
+                const ctaDropdown = createCtaDropdown();
+                const servicesDropdown = document.querySelector('.services-dropdown');
+
+                if (ctaDropdown) {
+                  ctaDropdown.style.display = isCtaOpen ? 'block' : 'none';
+                }
+                if (servicesDropdown && window.innerWidth > 1023) {
+                  servicesDropdown.style.display = 'none';
+                }
+
+                updateChevrons();
+              }
+
+              function updateChevrons() {
+                const servicesBtn = document.querySelector('[data-dropdown="services"]');
+                const ctaBtn = document.querySelector('[data-dropdown="cta"]');
+
+                if (servicesBtn) {
+                  const chevron = servicesBtn.querySelector('.chevron');
+                  if (chevron) {
+                    chevron.style.transform = isServicesOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+                  }
+                }
+
+                if (ctaBtn) {
+                  const chevron = ctaBtn.querySelector('.chevron');
+                  if (chevron) {
+                    chevron.style.transform = isCtaOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+                  }
+                }
+              }
+
+              function closeAll() {
+                isServicesOpen = false;
+                isCtaOpen = false;
+                const servicesDropdown = document.querySelector('.services-dropdown');
+                const ctaDropdown = document.querySelector('.cta-dropdown');
+                if (servicesDropdown) servicesDropdown.style.display = 'none';
+                if (ctaDropdown) ctaDropdown.style.display = 'none';
+                updateChevrons();
+              }
+
+              function init() {
+                // Fix chevron SVG content first
+                const chevrons = document.querySelectorAll('.chevron');
+                chevrons.forEach(function(chevron) {
+                  if (!chevron.innerHTML) {
+                    chevron.innerHTML = '<path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>';
+                    chevron.setAttribute('viewBox', '0 0 12 12');
+                    chevron.setAttribute('fill', 'none');
+                  }
+                });
+
+                const servicesBtn = document.querySelector('[data-dropdown="services"]');
+                const ctaBtn = document.querySelector('[data-dropdown="cta"]');
+
+                console.log('Services button found:', !!servicesBtn);
+                console.log('CTA button found:', !!ctaBtn);
+
+                if (servicesBtn) {
+                  // Remove any existing listeners
+                  const newServicesBtn = servicesBtn.cloneNode(true);
+                  servicesBtn.parentNode.replaceChild(newServicesBtn, servicesBtn);
+
+                  newServicesBtn.addEventListener('click', function(e) {
+                    console.log('Services button clicked! Width:', window.innerWidth);
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // Only toggle dropdown on desktop
+                    if (window.innerWidth > 1023) {
+                      toggleServices();
+                    }
+                  });
+                }
+
+                if (ctaBtn) {
+                  // Remove any existing listeners
+                  const newCtaBtn = ctaBtn.cloneNode(true);
+                  ctaBtn.parentNode.replaceChild(newCtaBtn, ctaBtn);
+
+                  newCtaBtn.addEventListener('click', function(e) {
+                    console.log('CTA button clicked!');
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleCta();
+                  });
+                }
+
+                // Add hamburger menu functionality
+                const hamburger = document.querySelector('.hamburger');
+                if (hamburger) {
+                  hamburger.addEventListener('click', function(e) {
+                    console.log('Hamburger clicked!');
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleMobileMenu();
+                  });
+                }
+
+                document.addEventListener('click', function(e) {
+                  if (!e.target.closest('[data-dropdown]') && !e.target.closest('.services-dropdown') && !e.target.closest('.cta-dropdown') && !e.target.closest('.hamburger') && !e.target.closest('.mobile-menu-container')) {
+                    closeAll();
+                    if (isMobileMenuOpen) {
+                      window.closeMobileMenu();
+                    }
+                  }
+                });
+
+                console.log('Navigation dropdowns initialized with chevron fixes');
+              }
+
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+              } else {
+                init();
+              }
+            })();
+
             // Defer fonts
             requestIdleCallback(function() {
               var link = document.createElement('link');
