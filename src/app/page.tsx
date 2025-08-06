@@ -2,7 +2,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import PureHeroSection from "../components/PureHeroSection";
 import ErrorBoundary from "../components/ErrorBoundary";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "CleanWin - Professional Cleaning Services",
