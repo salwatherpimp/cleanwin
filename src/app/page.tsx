@@ -542,7 +542,7 @@ className="usp-card usp-duplicate"
               <div
                 style={{
                   borderRadius: "16px",
-                  height: "120px",
+
                   overflow: "hidden",
                   position: "relative",
                 }}
@@ -559,7 +559,7 @@ className="usp-card usp-duplicate"
               <div
                 style={{
                   borderRadius: "16px",
-                  height: "120px",
+
                   overflow: "hidden",
                   position: "relative",
                 }}
@@ -576,7 +576,7 @@ className="usp-card usp-duplicate"
               <div
                 style={{
                   borderRadius: "16px",
-                  height: "120px",
+
                   overflow: "hidden",
                   position: "relative",
                 }}
@@ -593,7 +593,7 @@ className="usp-card usp-duplicate"
               <div
                 style={{
                   borderRadius: "16px",
-                  height: "120px",
+
                   overflow: "hidden",
                   position: "relative",
                 }}
