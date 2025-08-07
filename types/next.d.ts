@@ -10,5 +10,18 @@ declare module 'next/dynamic' {
 }
 
 declare module 'next/dist/lib/metadata/types/metadata-interface.js' {
-  export = any;
+  export const ResolvingMetadata: any;
+  export const Metadata: any;
+  export const ResolvedMetadata: any;
+  export * from 'next';
+}
+
+declare module 'next' {
+  export interface Metadata {
+    title?: string | { default: string; template?: string };
+    description?: string;
+    robots?: string | { index?: boolean; follow?: boolean };
+    [key: string]: any;
+  }
+  export const ResolvingMetadata: any;
 }
