@@ -1219,6 +1219,11 @@ className="service-card"
           }
           @keyframes usp-mobile-scroll {
             0% { transform: translateX(0); }
+            16.66% { transform: translateX(-296px); }
+            33.33% { transform: translateX(calc(-296px * 2)); }
+            50% { transform: translateX(calc(-296px * 3)); }
+            66.66% { transform: translateX(calc(-296px * 4)); }
+            83.33% { transform: translateX(calc(-296px * 5)); }
             100% { transform: translateX(calc(-296px * 3)); }
           }
           .hero-cta-button:hover {
