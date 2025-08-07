@@ -1194,7 +1194,7 @@ className="service-card"
           }
           @media (max-width: 767px) {
             .grid-mobile-3 {
-              animation: usp-mobile-scroll 20s linear infinite !important;
+              animation: usp-mobile-scroll 18s linear infinite !important;
               width: calc(280px * 6 + 16px * 5) !important;
             }
             .grid-mobile-3 .usp-card {
@@ -1209,6 +1209,7 @@ className="service-card"
           }
           @keyframes usp-mobile-scroll {
             0% { transform: translateX(0); }
+            50% { transform: translateX(calc(-280px * 1.5 - 16px * 1)); }
             100% { transform: translateX(calc(-280px * 3 - 16px * 2)); }
           }
           .hero-cta-button:hover {
