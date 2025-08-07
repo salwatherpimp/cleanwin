@@ -386,7 +386,7 @@ export default function RootLayout({
             .services-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
             .grid-mobile-3 {
               display: flex !important;
-              overflow: visible !important;
+              overflow: hidden !important;
               grid-template-columns: none !important;
             }
             .grid-mobile-3 > * {
