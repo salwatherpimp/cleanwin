@@ -1206,6 +1206,18 @@ className="service-card"
             contain: layout style;
           }
 
+          /* Additional overflow safety */
+          .grid-mobile-3, .services-grid, .hero-section {
+            position: relative;
+            overflow: hidden;
+          }
+
+          /* Prevent negative margin overflow */
+          [style*="margin-left: calc(-"], [style*="translateX"] {
+            max-width: 100vw;
+            overflow: hidden;
+          }
+
           /* Mobile USP Scrolling */
           @media (max-width: 767px) {
             .usp-container {
