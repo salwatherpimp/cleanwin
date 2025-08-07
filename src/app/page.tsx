@@ -1200,6 +1200,8 @@ className="service-card"
               width: 100vw !important;
               margin-left: calc(-50vw + 50%) !important;
               padding: 0 !important;
+              contain: layout style !important;
+              max-width: 100vw !important;
             }
             .grid-mobile-3 {
               display: flex !important;
