@@ -362,14 +362,11 @@ export default function RootLayout({
           /* Layout and grid fixes */
           .grid-mobile-1 { grid-template-columns: 1fr; gap: 16px; }
           .grid-mobile-2 { grid-template-columns: 1fr; gap: 24px; }
-          .grid-mobile-3 { 
+          .grid-mobile-3 {
             display: flex;
-            overflow-x: auto;
-            overflow-y: hidden;
+            overflow: hidden;
             gap: 16px;
             width: 100%;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
             padding: 0 16px;
             justify-content: flex-start;
           }
@@ -387,13 +384,12 @@ export default function RootLayout({
 
           @media (max-width: 767px) {
             .services-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
-            .grid-mobile-3 { 
+            .grid-mobile-3 {
               display: flex !important;
-              overflow-x: auto !important;
+              overflow: hidden !important;
               grid-template-columns: none !important;
             }
             .grid-mobile-3 > * {
-              scroll-snap-align: start !important;
               flex-shrink: 0 !important;
               min-width: 280px !important;
             }
