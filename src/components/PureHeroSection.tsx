@@ -212,7 +212,8 @@ export default function PureHeroSection() {
                   <span style={{
                     fontSize: '11px',
                     lineHeight: '13.2px',
-                    opacity: 0.8
+                    opacity: 0.8,
+                    marginTop: 0
                   }}>
                     4.7 aus +110 Bewertungen
                   </span>
