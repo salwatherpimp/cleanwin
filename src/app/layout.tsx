@@ -1,23 +1,23 @@
 import "../styles/globals.css";
 import "../styles/components.css";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: {
-    default: "CleanWin - Professional Cleaning Services",
-    template: "%s | CleanWin"
-  },
-  description: "Professional cleaning services in Winterthur with over 10 years of experience",
-  robots: {
-    index: true,
-    follow: true
-  }
-};
+// export const metadata: Metadata = {
+//   title: {
+//     default: "CleanWin - Professional Cleaning Services",
+//     template: "%s | CleanWin"
+//   },
+//   description: "Professional cleaning services in Winterthur with over 10 years of experience",
+//   robots: {
+//     index: true,
+//     follow: true
+//   }
+// };
 
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
+// export const viewport = {
+//   width: "device-width",
+//   initialScale: 1,
+// };
 
 export default function RootLayout({
   children,
