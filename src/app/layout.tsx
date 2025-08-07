@@ -384,7 +384,7 @@ export default function RootLayout({
 
           @media (max-width: 767px) {
             .services-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
-            .grid-mobile-3 {
+            .grid-mobile-3:not(.usp-container .grid-mobile-3) {
               display: flex !important;
               overflow: hidden !important;
               grid-template-columns: none !important;
