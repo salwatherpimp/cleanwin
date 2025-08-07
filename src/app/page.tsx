@@ -1193,6 +1193,19 @@ className="service-card"
           .service-card:hover img {
             transform: scale(1.05);
           }
+
+          /* Global overflow prevention for all sections */
+          section, .section, .container {
+            overflow-x: hidden;
+            max-width: 100vw;
+            box-sizing: border-box;
+          }
+
+          /* Prevent animation overflow */
+          [style*="animation"], [class*="animate"] {
+            contain: layout style;
+          }
+
           /* Mobile USP Scrolling */
           @media (max-width: 767px) {
             .usp-container {
