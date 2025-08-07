@@ -1203,7 +1203,7 @@ className="service-card"
             }
             .grid-mobile-3 {
               display: flex !important;
-              animation: uspScroll 29s linear infinite !important;
+              animation: uspScrollSlow 35s linear infinite !important;
               gap: 16px !important;
               padding: 0 16px !important;
               width: calc(296px * 6) !important;
@@ -1225,7 +1225,7 @@ className="service-card"
               display: none !important;
             }
           }
-          @keyframes uspScroll {
+          @keyframes uspScrollSlow {
             0% { transform: translateX(0); }
             16.66% { transform: translateX(-296px); }
             33.33% { transform: translateX(-592px); }
