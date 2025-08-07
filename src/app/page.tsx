@@ -1197,19 +1197,23 @@ className="service-card"
             .usp-container {
               overflow: hidden !important;
               width: 100% !important;
-              padding: 0 16px !important;
+              padding: 0 !important;
+              margin: 0 !important;
             }
             .grid-mobile-3 {
               display: flex !important;
-              animation: usp-scroll 24s linear infinite !important;
+              animation: usp-mobile-infinite 18s linear infinite !important;
               gap: 16px !important;
-              padding: 0 !important;
-              width: calc(296px * 6) !important;
+              padding: 0 16px !important;
+              width: max-content !important;
             }
             .grid-mobile-3 .usp-card {
               width: 280px !important;
               min-width: 280px !important;
               flex-shrink: 0 !important;
+            }
+            .usp-duplicate {
+              display: flex !important;
             }
           }
           @media (min-width: 768px) {
@@ -1217,16 +1221,9 @@ className="service-card"
               display: none !important;
             }
           }
-          @keyframes usp-scroll {
+          @keyframes usp-mobile-infinite {
             0% { transform: translateX(0); }
-            12.5% { transform: translateX(-296px); }
-            25% { transform: translateX(-592px); }
-            37.5% { transform: translateX(-888px); }
-            50% { transform: translateX(-1184px); }
-            62.5% { transform: translateX(-1480px); }
-            75% { transform: translateX(-1776px); }
-            87.5% { transform: translateX(-888px); }
-            100% { transform: translateX(0); }
+            100% { transform: translateX(calc(-296px * 3)); }
           }
           .hero-cta-button:hover {
             background: #f3f4f6 !important;
