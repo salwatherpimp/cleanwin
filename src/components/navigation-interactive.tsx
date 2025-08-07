@@ -97,9 +97,9 @@ export default function NavigationInteractive() {
     hamburger.addEventListener('click', handleHamburgerClick);
 
     // Add mobile menu container if it doesn't exist
-    let mobileMenuContainer = document.querySelector('.mobile-menu-container');
+    let mobileMenuContainer = document.querySelector('.mobile-menu-container') as HTMLElement | null;
     if (!mobileMenuContainer && isMobile) {
-      mobileMenuContainer = document.createElement('div');
+      mobileMenuContainer = document.createElement('div') as HTMLElement;
       mobileMenuContainer.className = 'mobile-menu-container';
       mobileMenuContainer.innerHTML = `
         <div style="margin-bottom: 12px;">
