@@ -129,9 +129,9 @@ export default function NavigationInteractive() {
       console.log('CTA button enhanced with dropdown functionality');
 
       // Add dropdown container if it doesn't exist
-      let ctaDropdown = document.querySelector('.cta-dropdown');
+      let ctaDropdown = document.querySelector('.cta-dropdown') as HTMLElement | null;
       if (!ctaDropdown) {
-        ctaDropdown = document.createElement('div');
+        ctaDropdown = document.createElement('div') as HTMLElement;
         ctaDropdown.className = 'cta-dropdown';
         ctaDropdown.style.cssText = `
           position: absolute;
