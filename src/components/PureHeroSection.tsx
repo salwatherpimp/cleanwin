@@ -186,6 +186,7 @@ export default function PureHeroSection() {
                       alignItems: 'center'
                     }}>
                       <svg style={{
+                        display: 'inline-block',
                         width: '16px',
                         height: '16px',
                         color: '#e5e7eb',
