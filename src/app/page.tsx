@@ -57,6 +57,7 @@ export default function CleanWinPage() {
         }}
       >
         <div
+          className="usp-container"
           style={{
             maxWidth: "1152px",
             margin: "0 auto",
