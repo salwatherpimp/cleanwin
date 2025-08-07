@@ -1203,7 +1203,7 @@ className="service-card"
             }
             .grid-mobile-3 {
               display: flex !important;
-              animation: uspScrollSlow 35s linear infinite !important;
+              animation: uspScrollSlow 42s linear infinite !important;
               gap: 16px !important;
               padding: 0 16px !important;
               width: calc(296px * 6) !important;
@@ -1227,12 +1227,13 @@ className="service-card"
           }
           @keyframes uspScrollSlow {
             0% { transform: translateX(0); }
-            16.66% { transform: translateX(-296px); }
-            33.33% { transform: translateX(-592px); }
-            50% { transform: translateX(-888px); }
-            66.66% { transform: translateX(-1184px); }
-            83.33% { transform: translateX(-1480px); }
-            100% { transform: translateX(-888px); }
+            18% { transform: translateX(-296px); }
+            36% { transform: translateX(-592px); }
+            54% { transform: translateX(-888px); }
+            72% { transform: translateX(-1184px); }
+            90% { transform: translateX(-1480px); }
+            92% { transform: translateX(-888px); }
+            100% { transform: translateX(0); }
           }
           .hero-cta-button:hover {
             background: #f3f4f6 !important;
