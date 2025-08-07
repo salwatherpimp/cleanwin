@@ -1196,14 +1196,14 @@ className="service-card"
           @media (max-width: 767px) {
             .usp-container {
               overflow: hidden !important;
-              width: 100vw !important;
-              margin-left: calc(-50vw + 50%) !important;
+              width: 100% !important;
               padding: 0 !important;
             }
             .grid-mobile-3 {
               display: flex !important;
-              animation: usp-mobile-scroll 15s linear infinite !important;
-              width: calc(280px * 6 + 16px * 5) !important;
+              animation: usp-mobile-scroll 18s linear infinite !important;
+              width: auto !important;
+              gap: 16px !important;
               padding: 0 16px !important;
             }
             .grid-mobile-3 .usp-card {
@@ -1217,8 +1217,10 @@ className="service-card"
             }
           }
           @keyframes usp-mobile-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-280px * 3 - 16px * 2)); }
+            0% { transform: translateX(0px); }
+            33.33% { transform: translateX(calc(-296px * 1)); }
+            66.66% { transform: translateX(calc(-296px * 2)); }
+            100% { transform: translateX(calc(-296px * 3)); }
           }
           .hero-cta-button:hover {
             background: #f3f4f6 !important;
