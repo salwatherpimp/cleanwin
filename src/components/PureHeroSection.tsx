@@ -182,8 +182,10 @@ export default function PureHeroSection() {
                     </svg>
                     <div style={{
                       position: 'relative',
-                      display: 'flex',
-                      alignItems: 'center'
+                      display: 'inline-block',
+                      width: '16px',
+                      height: '16px',
+                      verticalAlign: 'middle'
                     }}>
                       <svg style={{
                         display: 'inline-block',
