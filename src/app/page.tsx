@@ -1203,7 +1203,7 @@ className="service-card"
             }
             .grid-mobile-3 {
               display: flex !important;
-              animation: uspScroll 20s linear infinite !important;
+              animation: uspScroll 24s linear infinite !important;
               gap: 16px !important;
               padding: 0 16px !important;
               width: calc(296px * 6) !important;
