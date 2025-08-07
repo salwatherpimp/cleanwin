@@ -249,9 +249,9 @@ if (typeof window !== 'undefined' && !window.__navigationEnhanced) {
     import('react').then(React => {
       import('react-dom/client').then(ReactDOM => {
         // Check if container already exists to prevent duplicates
-        let container = document.querySelector('#navigation-enhancement-container');
+        let container = document.querySelector('#navigation-enhancement-container') as HTMLElement | null;
         if (!container) {
-          container = document.createElement('div');
+          container = document.createElement('div') as HTMLElement;
           container.id = 'navigation-enhancement-container';
           container.style.display = 'none';
           document.body.appendChild(container);
