@@ -25,6 +25,7 @@ export default function PureHeroSection() {
           alt=""
           loading="eager"
           decoding="async"
+          fetchPriority="high"
           style={{
             position: 'absolute',
             top: 0,
