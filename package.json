@@ -15,7 +15,6 @@
     "sitemap": "next build && curl http://localhost:3000/sitemap.xml"
   },
   "dependencies": {
-    "@builder.io/react": "^8.2.5",
     "next": "15.3.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -23,7 +22,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^20.19.9",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "eslint": "^9",

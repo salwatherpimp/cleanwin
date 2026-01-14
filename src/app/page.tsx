@@ -1,19 +1,50 @@
-"use client";
-
 import Image from "next/image";
-import ResponsiveNavigation from "../components/ResponsiveNavigation";
+import dynamic from "next/dynamic";
 import PureHeroSection from "../components/PureHeroSection";
-import CustomerReviews from "../components/CustomerReviews";
-import InteractiveValueCards from "../components/InteractiveValueCards";
+import ErrorBoundary from "../components/ErrorBoundary";
+// import type { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "CleanWin - Professional Cleaning Services",
+//   description: "Professional cleaning services in Winterthur with over 10 years of experience",
+// };
+
+// Dynamic imports for below-the-fold components to reduce initial bundle
+const CustomerReviews = dynamic(() => import("../components/CustomerReviews"), {
+  ssr: true,
+  loading: () => <div style={{ height: '280px', background: '#f9fafb' }} />
+});
+const InteractiveValueCards = dynamic(() => import("../components/InteractiveValueCards"), {
+  ssr: true,
+  loading: () => <div style={{ height: '400px', background: '#ffffff' }} />
+});
+const ClientLogos = dynamic(() => import("../components/ClientLogos"), {
+  ssr: true,
+  loading: () => <div style={{ height: '120px', background: '#f9fafb' }} />
+});
+const FinalCTA = dynamic(() => import("../components/FinalCTA"), {
+  ssr: true,
+  loading: () => <div style={{ height: '200px', background: '#1f2937' }} />
+});
+const Footer = dynamic(() => import("../components/Footer"), {
+  ssr: true,
+  loading: () => <div style={{ height: '300px', background: '#374151' }} />
+});
 
 export default function CleanWinPage() {
   return (
-    <div className="main-page-container">
-      {/* Responsive Navigation */}
-      <ResponsiveNavigation />
+    <ErrorBoundary>
+      {/* PERFORMANCE CRITICAL: Navigation is pure HTML/CSS in layout.tsx */}
 
       {/* Hero Section - Pure HTML, No styled-jsx, Responsive Images */}
       <PureHeroSection />
+
+      <div className="main-page-container">
+
+      {/* Optimization components temporarily disabled for stability */}
+      {/* <HeroProgressiveEnhancement /> */}
+      {/* <CLSOptimizer /> */}
+      {/* <INPOptimizer /> */}
 
       {/* Benefits Section */}
       <section
@@ -26,6 +57,7 @@ export default function CleanWinPage() {
         }}
       >
         <div
+          className="usp-container"
           style={{
             maxWidth: "1152px",
             margin: "0 auto",
@@ -91,7 +123,7 @@ className="usp-card"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   Reinigung ab CHF 199.-
@@ -156,7 +188,7 @@ className="usp-card"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   Kostenlose Fachberatung
@@ -221,7 +253,7 @@ className="usp-card"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   100% keine Schwarzarbeit
@@ -288,7 +320,7 @@ className="usp-card usp-duplicate"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   Reinigung ab CHF 199.-
@@ -353,7 +385,7 @@ className="usp-card usp-duplicate"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   Kostenlose Fachberatung
@@ -418,7 +450,7 @@ className="usp-card usp-duplicate"
                     fontSize: "14px",
                     fontWeight: "600",
                     color: "#111827",
-                    marginBottom: "4px",
+                    marginBottom: "2px",
                   }}
                 >
                   100% keine Schwarzarbeit
@@ -456,7 +488,6 @@ className="usp-card usp-duplicate"
             className="grid-mobile-2"
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
               gap: "48px",
               alignItems: "center",
             }}
@@ -508,22 +539,9 @@ className="usp-card usp-duplicate"
             </div>
 
             {/* Image Gallery */}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "16px",
-                width: "100%",
-              }}
-              className="grid grid-cols-2 gap-3 md:gap-4"
-            >
+            <div className="about-image-gallery">
               <div
-                style={{
-                  borderRadius: "16px",
-                  height: "120px",
-                  overflow: "hidden",
-                  position: "relative",
-                }}
+
               >
                 <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FFirmenwagen_vor_Geba%25CC%2588ude_zz0m0s.avif&w=750&q=75"
@@ -535,12 +553,7 @@ className="usp-card usp-duplicate"
                 />
               </div>
               <div
-                style={{
-                  borderRadius: "16px",
-                  height: "120px",
-                  overflow: "hidden",
-                  position: "relative",
-                }}
+
               >
                 <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FGlasreinigung_aussen_Flaach_ec1fre.avif&w=750&q=75"
@@ -552,12 +565,7 @@ className="usp-card usp-duplicate"
                 />
               </div>
               <div
-                style={{
-                  borderRadius: "16px",
-                  height: "120px",
-                  overflow: "hidden",
-                  position: "relative",
-                }}
+
               >
                 <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752005906%2Fhomepage-herosection_fsxqwc.avif&w=750&q=75"
@@ -569,12 +577,7 @@ className="usp-card usp-duplicate"
                 />
               </div>
               <div
-                style={{
-                  borderRadius: "16px",
-                  height: "120px",
-                  overflow: "hidden",
-                  position: "relative",
-                }}
+
               >
                 <Image
                   src="https://cleanwin.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdwlk9of7h%2Fimage%2Fupload%2Fw_400%2Ch_300%2Cc_fill%2Cf_auto%2Cq_auto%2Fv1752095182%2FFassadenreinigung_Sichtbeton_vm1lsq.avif&w=750&q=75"
@@ -591,335 +594,7 @@ className="usp-card usp-duplicate"
       </section>
 
       {/* Client Logos Section */}
-      <section
-        style={{
-          backgroundColor: "#f9fafb",
-          borderTop: "1px solid #e5e7eb",
-          borderBottom: "1px solid #e5e7eb",
-          padding: "20px 0",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1152px",
-            margin: "0 auto",
-            padding: "0 16px",
-            textAlign: "center",
-          }}
-        >
-          <p
-            style={{
-              color: "#6b7280",
-              marginBottom: "32px",
-              marginTop: "16px",
-              textAlign: "center",
-            }}
-          >
-            +500 Firmen &amp; Haushalte reinigen mit Cleanwin
-          </p>
-          <div
-            className="grid-mobile-logos"
-            style={{
-              display: "flex",
-              overflow: "hidden",
-              gap: "32px",
-              width: "100%",
-              alignItems: "center",
-            }}
-          >
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/1_omqaqp.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/2_jgcfjz.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/4_mne8oq.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/5_xmwppy.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/3_jqqq29.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/7_wetsnc.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752310305/10_j4jopj.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752310305/8_y8yfiu.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752310305/9_a5yzm6.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-
-            {/* Duplicate all logos for seamless looping */}
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/1_omqaqp.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/2_jgcfjz.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/4_mne8oq.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/5_xmwppy.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/3_jqqq29.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752097683/7_wetsnc.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752310305/10_j4jopj.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752310305/8_y8yfiu.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-            <div
-className="logo-container-mobile"
-              style={{
-                width: "120px",
-                height: "60px",
-                backgroundImage:
-                  'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_240,h_120,c_fit,f_auto,q_auto/v1752310305/9_a5yzm6.png")',
-                backgroundPosition: "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-                border: "1px solid #e5e7eb",
-                borderRadius: "8px",
-                opacity: "0.7",
-                transition: "opacity 0.3s",
-              }}
-            />
-          </div>
-        </div>
-      </section>
+      <ClientLogos />
 
       {/* Services Section */}
       <section
@@ -1503,505 +1178,114 @@ className="service-card"
       <CustomerReviews />
 
       {/* Call-to-Action Section */}
-      <section
-        style={{
-          padding: "96px 0",
-          position: "relative",
-        }}
-      >
-        {/* Background Image */}
-        <div
-          style={{
-            position: "absolute",
-            top: "0px",
-            left: "0px",
-            right: "0px",
-            bottom: "0px",
-            backgroundImage:
-              'url("https://res.cloudinary.com/dwlk9of7h/image/upload/w_1200,h_600,c_fill,f_auto,q_auto/v1752099054/dobiinter_close-up_of_a_rooftop_solar_panel_being_cleaned_wit_97f39d77-a81d-432b-ad05-4fc38a9dafcc_1_uqh2ui.avif")',
-            backgroundPosition: "50% 50%",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        />
-
-        {/* Dark Overlay */}
-        <div
-          style={{
-            position: "absolute",
-            top: "0px",
-            left: "0px",
-            right: "0px",
-            bottom: "0px",
-            backgroundColor: "rgba(0, 0, 0, 0.4)",
-          }}
-        />
-
-        {/* Content */}
-        <div
-          style={{
-            maxWidth: "1152px",
-            margin: "0 auto",
-            padding: "0 16px",
-            position: "relative",
-            zIndex: 10,
-          }}
-        >
-          <div
-            style={{
-              maxWidth: "768px",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "28px",
-                fontWeight: "700",
-                marginBottom: "32px",
-                marginTop: "23.24px",
-                color: "white",
-                textShadow: "rgba(0, 0, 0, 0.5) 2px 2px 4px",
-              }}
-            >
-              Cleanwin - persönlich, zuverlässig, hochwertig
-            </h2>
-            <a
-              href="/kontakt"
-              className="final-cta-button"
-              style={{
-                display: "inline-block",
-                backgroundColor: "#0DA6A6",
-                color: "white",
-                padding: "16px 32px",
-                borderRadius: "9999px",
-                fontSize: "14px",
-                fontWeight: "600",
-                textDecoration: "none",
-                cursor: "pointer",
-                boxShadow: "0 2px 8px rgba(13, 166, 166, 0.3)",
-                transition: "all 0.2s ease",
-              }}
-            >
-              Jetzt unverbindlich kontaktieren
-            </a>
-          </div>
-        </div>
-      </section>
+      <FinalCTA />
 
       {/* Footer */}
-      <footer
-        style={{
-          backgroundColor: "#343b3e",
-          color: "white",
-          padding: "48px 0 32px",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 16px",
-          }}
-        >
-          {/* Main Footer Content */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "32px",
-              marginBottom: "32px",
-            }}
-            className="footer-main-grid"
-          >
+      <Footer />
 
-            {/* Column 1: Company Info */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              <h3 style={{ fontSize: "18px", fontWeight: "600", color: "white", margin: "0" }}>
-                CleanWin GmbH
-              </h3>
-
-              <div style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>
-                <div>Rychenbergstrasse 223</div>
-                <div>8404 Winterthur</div>
-                <div>Schweiz</div>
-              </div>
-
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                <a
-                  href="tel:+41762288071"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    color: "#EAEAEA",
-                    textDecoration: "none",
-                    fontSize: "14px",
-                    transition: "color 0.2s ease",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  <svg
-                    style={{ width: "16px", height: "16px" }}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
-                  </svg>
-                  +41 76 228 80 71
-                </a>
-                <a
-                  href="mailto:info@cleanwin.ch"
-                  style={{
-                    color: "#EAEAEA",
-                    textDecoration: "none",
-                    fontSize: "14px",
-                    transition: "color 0.2s ease",
-                  }}
-                >
-                  info@cleanwin.ch
-                </a>
-              </div>
-
-              {/* Social Icons - Always side by side */}
-              <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
-                <a
-                  href="https://www.instagram.com/cleanwin.ch/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#EAEAEA", transition: "color 0.2s ease" }}
-                  aria-label="Instagram"
-                >
-                  <svg style={{ width: "24px", height: "24px" }} viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                </a>
-                <a
-                  href="https://www.facebook.com/reinigungwinterthur/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#EAEAEA", transition: "color 0.2s ease" }}
-                  aria-label="Facebook"
-                >
-                  <svg style={{ width: "24px", height: "24px" }} viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            {/* Column 2: Services with Collapsible Section */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px", textAlign: "left" }}>
-              {/* Collapsible Services Section */}
-              <details>
-                <summary
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    cursor: "pointer",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    color: "white",
-                    listStyle: "none",
-                    margin: "0",
-                  }}
-                >
-                  Leistungen<svg
-                    style={{
-                      width: "16px",
-                      height: "16px",
-                      marginLeft: "0px",
-                      transition: "transform 0.2s ease",
-                    }}
-                    className="chevron-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M6 9l6 6 6-6"/>
-                  </svg>
-                </summary>
-                <ul style={{ margin: "12px 0 0 24px", padding: "0", listStyle: "none" }}>
-                  <li style={{ marginBottom: "8px" }}>
-                    <a
-                      href="https://cleanwin.vercel.app/leistungen/fensterreinigung"
-                      style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
-                    >
-                      Fensterreinigung
-                    </a>
-                  </li>
-                  <li style={{ marginBottom: "8px" }}>
-                    <a
-                      href="https://cleanwin.vercel.app/leistungen/unterhaltsreinigung"
-                      style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
-                    >
-                      Unterhaltsreinigung
-                    </a>
-                  </li>
-                  <li style={{ marginBottom: "8px" }}>
-                    <a
-                      href="https://cleanwin.vercel.app/leistungen/fassadenreinigung"
-                      style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
-                    >
-                      Fassadenreinigung
-                    </a>
-                  </li>
-                  <li style={{ marginBottom: "8px" }}>
-                    <a
-                      href="https://cleanwin.vercel.app/leistungen/umzugsreinigung"
-                      style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
-                    >
-                      Umzugsreinigung
-                    </a>
-                  </li>
-                  <li style={{ marginBottom: "8px" }}>
-                    <a
-                      href="https://cleanwin.vercel.app/leistungen/baureinigung"
-                      style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
-                    >
-                      Baureinigung
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://cleanwin.vercel.app/leistungen/solarpanel-reinigen"
-                      style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
-                    >
-                      Solarpanel reinigen
-                    </a>
-                  </li>
-                </ul>
-              </details>
-
-              {/* Separate Links Below */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px", textAlign: "left" }}>
-                <a
-                  href="https://cleanwin.vercel.app/ueber-uns"
-                  style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
-                >
-                  Über uns
-                </a>
-                <a
-                  href="https://cleanwin.vercel.app/referenzen"
-                  style={{ color: "#EAEAEA", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
-                >
-                  Referenzen
-                </a>
-              </div>
-            </div>
-
-            {/* Column 3: Service Areas */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px", textAlign: "left" }}>
-              <h4 style={{ fontSize: "18px", fontWeight: "600", color: "white", margin: "0" }}>
-                Unsere Servicegebiete
-              </h4>
-              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Fensterreinigung Region Winterthur</span>
-                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Unterhaltsreinigung Region Winterthur</span>
-                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Fassadenreinigung Region Winterthur</span>
-                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Umzugsreinigung Region Winterthur</span>
-                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Baureinigung Region Winterthur</span>
-                <span style={{ color: "#EAEAEA", fontSize: "14px", lineHeight: "1.4" }}>Solarpanel Reinigen Region Winterthur</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Section */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              paddingTop: "24px",
-              borderTop: "1px solid #6b7280",
-              flexWrap: "wrap",
-              gap: "16px",
-            }}
-            className="footer-bottom-responsive"
-          >
-            <div style={{ color: "#EAEAEA", fontSize: "14px" }}>
-              © 2025 CleanWin. Alle Rechte vorbehalten.
-              <br />
-              Gemacht mit ♥️ in Winterthur
-            </div>
-            <a
-              href="https://cleanwin.vercel.app/datenschutz"
-              style={{
-                color: "#EAEAEA",
-                textDecoration: "none",
-                fontSize: "14px",
-                transition: "color 0.2s ease"
-              }}
-            >
-              Datenschutzerklärung
-            </a>
-          </div>
-        </div>
-      </footer>
-
-      {/* Non-critical styles loaded after initial render */}
-      <style jsx>{`
-        /* Services hover effects */
-        .service-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
-        }
-
-        .service-card:hover img {
-          transform: scale(1.05);
-        }
-
-        /* Non-critical mobile specific styles */
-        @media (max-width: 767px) {
-          .grid-mobile-3 .usp-card {
-            min-width: 280px !important;
-            flex-shrink: 0 !important;
-            animation: usp-mobile-scroll 32s linear infinite !important;
+      {/* Non-critical styles deferred for LCP optimization */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+          }
+          .service-card:hover img {
+            transform: scale(1.05);
           }
 
-          .grid-mobile-logos {
-            display: flex !important;
-            overflow: hidden !important;
-            gap: 32px !important;
-            width: 100% !important;
+          /* Global overflow prevention for all sections */
+          section, .section, .container {
+            overflow-x: hidden;
+            max-width: 100vw;
+            box-sizing: border-box;
           }
 
-          .grid-mobile-logos > div {
-            flex-shrink: 0 !important;
-            animation: scroll-logos 50s linear infinite !important;
+          /* Prevent animation overflow */
+          [style*="animation"], [class*="animate"] {
+            contain: layout style;
           }
 
-          .logo-container-mobile {
-            width: 80px !important;
-            height: 40px !important;
-          }
-        }
-
-        /* Hide duplicate USP cards on desktop */
-        @media (min-width: 768px) {
-          .usp-duplicate {
-            display: none !important;
-          }
-        }
-
-        /* USP Mobile Auto-Scroll Animation - Seamless Loop */
-        @keyframes usp-mobile-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-912px)); }
-        }
-
-        /* Logo Scroll Animation */
-        @keyframes scroll-logos {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-1368px); }
-        }
-
-        /* Apply logo animation to all viewports */
-        .grid-mobile-logos > div {
-          flex-shrink: 0 !important;
-          animation: scroll-logos 50s linear infinite !important;
-        }
-
-        /* Chevron rotation for details */
-        details[open] .chevron-icon {
-          transform: rotate(180deg);
-        }
-
-        /* Footer hover effects */
-        footer a:hover {
-          color: #ffffff !important;
-        }
-
-        /* Tablet Layout */
-        @media (min-width: 768px) and (max-width: 1023px) {
-          .footer-responsive-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
+          /* Additional overflow safety */
+          .grid-mobile-3, .services-grid, .hero-section {
+            position: relative;
+            overflow: hidden;
           }
 
-          .footer-empty-column {
-            display: none;
-          }
-        }
-
-        /* Mobile Layout */
-        @media (max-width: 767px) {
-          .footer-responsive-grid {
-            grid-template-columns: 1fr !important;
+          /* Prevent negative margin overflow */
+          [style*="margin-left: calc(-"], [style*="translateX"] {
+            max-width: 100vw;
+            overflow: hidden;
           }
 
-          .footer-main-grid {
-            grid-template-columns: 1fr !important;
-            gap: 24px !important;
+          /* Mobile USP Scrolling */
+          @media (max-width: 767px) {
+            .usp-container {
+              overflow: hidden !important;
+              width: 100vw !important;
+              margin-left: calc(-50vw + 50%) !important;
+              padding: 0 !important;
+              contain: layout style !important;
+              max-width: 100vw !important;
+            }
+            .grid-mobile-3 {
+              display: flex !important;
+              animation: uspScrollSlow 42s linear infinite !important;
+              gap: 16px !important;
+              padding: 0 16px !important;
+              width: calc(296px * 6) !important;
+              grid-template-columns: none !important;
+            }
+            .grid-mobile-3 .usp-card {
+              width: 280px !important;
+              min-width: 280px !important;
+              max-width: 280px !important;
+              flex-shrink: 0 !important;
+              display: flex !important;
+            }
+            .usp-duplicate {
+              display: flex !important;
+            }
           }
-
-          .footer-empty-column {
-            display: none;
+          @media (min-width: 768px) {
+            .usp-duplicate {
+              display: none !important;
+            }
           }
-
-          .footer-bottom-responsive {
-            flex-direction: column !important;
-            align-items: center !important;
-            text-align: center !important;
-            gap: 8px !important;
+          @keyframes uspScrollSlow {
+            0% { transform: translateX(0); }
+            18% { transform: translateX(-296px); }
+            36% { transform: translateX(-592px); }
+            54% { transform: translateX(-888px); }
+            72% { transform: translateX(-1184px); }
+            90% { transform: translateX(-1480px); }
+            92% { transform: translateX(-888px); }
+            100% { transform: translateX(0); }
           }
-
-          .footer-social {
-            gap: 16px !important;
-            flex-direction: row !important;
-            display: flex !important;
+          .hero-cta-button:hover {
+            background: #f3f4f6 !important;
+            color: #0DA6A6 !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
           }
-
-          /* Prevent mobile text overflow */
-          .footer-main-grid > div {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            max-width: 100%;
+          .about-cta-button:hover {
+            background: #0b8d8d !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
           }
-
-          /* Ensure service areas text doesn't overflow */
-          .footer-main-grid h4 {
-            font-size: 16px !important;
-            line-height: 1.3 !important;
+          .final-cta-button:hover {
+            background: #0b8d8d !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
           }
-
-          .footer-main-grid span {
-            font-size: 13px !important;
-            line-height: 1.4 !important;
+          @media (min-width: 1024px) {
+            .nav-wrapper {
+              padding: 0 32px;
+            }
           }
-        }
-
-        /* CTA Button Hover Effects */
-        .hero-cta-button:hover {
-          background: #f3f4f6 !important;
-          color: #0DA6A6 !important;
-          transform: translateY(-1px) !important;
-          box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
-        }
-
-        .about-cta-button:hover {
-          background: #0b8d8d !important;
-          transform: translateY(-1px) !important;
-          box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
-        }
-
-        .final-cta-button:hover {
-          background: #0b8d8d !important;
-          transform: translateY(-1px) !important;
-          box-shadow: 0 4px 16px rgba(13, 166, 166, 0.4) !important;
-        }
-
-        /* Desktop Hero Section Spacing Optimization */
-        @media (min-width: 1024px) {
-          .nav-wrapper {
-            padding: 0 32px;
-          }
-        }
-      `}</style>
-    </div>
+        `
+      }} />
+      </div>
+    </ErrorBoundary>
   );
 }

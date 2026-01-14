@@ -1,19 +1,45 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+
 
 export default function ResponsiveNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isNavCSSReady, setIsNavCSSReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Immediate navigation CSS for mobile functionality
+  useEffect(() => {
+    // Load navigation CSS immediately to ensure mobile nav works
+    setIsNavCSSReady(true);
+
+    // Detect mobile on mount and resize
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 1023);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!event.target.closest('.dropdown-container') && !event.target.closest('.dropdown-button')) {
-        setIsCtaDropdownOpen(false);
+    const handleClickOutside = (event: MouseEvent) => {
+      // Check if click is outside any navigation elements
+      const clickedElement = event.target as Element | null;
+      if (!clickedElement) return;
+
+      const isInsideNav = clickedElement.closest('nav') ||
+                          clickedElement.closest('.mobile-menu-container');
+
+      // If clicked outside nav area, close all dropdowns
+      if (!isInsideNav) {
         setIsServicesDropdownOpen(false);
+        setIsCtaDropdownOpen(false);
         setIsMobileMenuOpen(false);
       }
     };
@@ -65,9 +91,9 @@ export default function ResponsiveNavigation() {
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
-        maxWidth: 'calc(100vw - 32px)',
+        maxWidth: 'calc(100vw - 20px)',
         margin: '0 auto',
-        padding: '0 16px',
+        padding: '0 10px',
       }}>
         <nav style={{
           background: 'white',
@@ -80,12 +106,12 @@ export default function ResponsiveNavigation() {
           padding: '8px 16px',
           margin: '0 auto',
           width: '100%',
-          maxWidth: '1152px',
+          maxWidth: '1200px',
           boxSizing: 'border-box',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          overflow: 'hidden',
+          overflow: 'visible',
         }}>
 
           {/* Logo */}
@@ -95,27 +121,32 @@ export default function ResponsiveNavigation() {
             textDecoration: 'none',
             flexShrink: 0,
           }}>
-            <Image
+            <img
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1752409362/cleanwin-logo-new_1_zflok6.png"
               alt="CleanWin Logo"
               width={110}
               height={30}
-              priority
-              style={{ width: 'auto', height: '30px' }}
+              decoding="async"
+              className="nav-logo-img"
+              style={{ width: 'auto', height: '30px', maxWidth: '110px' }}
             />
           </a>
 
           {/* Desktop Menu - Hidden on mobile */}
+          {!isMobile && (
           <div style={{
             display: 'flex',
             alignItems: 'center',
             gap: '32px',
-            marginLeft: '24px',
+            marginLeft: '32px',
           }} className="desktop-menu">
             {/* Services Dropdown */}
-            <div style={{ position: 'relative' }} className="dropdown-container">
+            <div style={{ position: 'relative' }} className="services-dropdown-container">
               <button
-                onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsServicesDropdownOpen(!isServicesDropdownOpen);
+                }}
                 className="dropdown-button"
                 style={{
                   display: 'flex',
@@ -158,7 +189,7 @@ export default function ResponsiveNavigation() {
                 padding: '8px',
                 marginTop: '8px',
                 minWidth: '220px',
-                zIndex: 100,
+                zIndex: 1001,
                 opacity: isServicesDropdownOpen ? 1 : 0,
                 visibility: isServicesDropdownOpen ? 'visible' : 'hidden',
                 transition: 'opacity 0.2s ease, visibility 0.2s ease',
@@ -236,17 +267,22 @@ export default function ResponsiveNavigation() {
               Referenzen
             </a>
           </div>
+          )}
 
-          {/* CTA Button */}
+
+          {/* CTA Button - Always visible (mobile + desktop) */}
           <div style={{
             position: 'relative',
             display: 'flex',
             alignItems: 'center',
             flexShrink: 0,
-          }} className="dropdown-container">
+          }} className="cta-dropdown-container">
             <button
-              onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
-              className="dropdown-button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsCtaDropdownOpen(!isCtaDropdownOpen);
+              }}
+              className="cta-button"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -265,7 +301,6 @@ export default function ResponsiveNavigation() {
                 height: '36px',
                 minHeight: '36px',
               }}
-              className="cta-button"
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = '#0b8d8d';
                 e.currentTarget.style.boxShadow = '0 4px 16px rgba(13, 166, 166, 0.4)';
@@ -287,74 +322,118 @@ export default function ResponsiveNavigation() {
               right: '0',
               background: 'white',
               borderRadius: '16px',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
-              border: '1px solid rgba(0, 0, 0, 0.1)',
-              padding: '8px',
+              boxShadow: '0 16px 64px rgba(0, 0, 0, 0.15)',
+              border: '1px solid rgba(0, 0, 0, 0.08)',
+              padding: '16px',
+              minWidth: '280px',
+              zIndex: 1000,
               marginTop: '8px',
-              minWidth: '220px',
-              zIndex: 100,
-              opacity: isCtaDropdownOpen ? 1 : 0,
-              visibility: isCtaDropdownOpen ? 'visible' : 'hidden',
-              transition: 'opacity 0.2s ease, visibility 0.2s ease',
-              pointerEvents: isCtaDropdownOpen ? 'auto' : 'none',
+              display: isCtaDropdownOpen ? 'block' : 'none',
             }}>
-              <a href="/kontakt" style={{
+              <div style={{
                 display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '12px 16px',
-                textDecoration: 'none',
-                color: '#374151',
-                fontWeight: '500',
-                fontSize: '14px',
-                borderRadius: '8px',
-                transition: 'background-color 0.2s ease, color 0.2s ease',
-                whiteSpace: 'nowrap',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#f3f4f6';
-                e.currentTarget.style.color = '#0DA6A6';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.color = '#374151';
+                flexDirection: 'column',
+                gap: '12px',
               }}>
-                <HandIcon />
-                <span>Kontaktanfrage senden</span>
-              </a>
-              <a href="tel:+41525512424" style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '12px 16px',
-                textDecoration: 'none',
-                color: '#374151',
-                fontWeight: '500',
-                fontSize: '14px',
-                borderRadius: '8px',
-                transition: 'background-color 0.2s ease, color 0.2s ease',
-                whiteSpace: 'nowrap',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#f3f4f6';
-                e.currentTarget.style.color = '#0DA6A6';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.color = '#374151';
-              }}>
-                <PhoneIcon />
-                <span>+41 52 551 24 24</span>
-              </a>
+                <a
+                  href="tel:+41762951831"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    padding: '12px 16px',
+                    borderRadius: '12px',
+                    textDecoration: 'none',
+                    color: '#374151',
+                    transition: 'background-color 0.2s ease',
+                    border: '1px solid #e5e7eb',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#f9fafb';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                  }}
+                >
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    background: '#0DA6A6',
+                    borderRadius: '20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    flexShrink: 0,
+                  }}>
+                    <PhoneIcon />
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: '600', fontSize: '14px', marginBottom: '2px' }}>
+                      Jetzt anrufen
+                    </div>
+                    <div style={{ fontSize: '13px', color: '#6b7280' }}>
+                      +41 76 295 18 31
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="/kontakt"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    padding: '12px 16px',
+                    borderRadius: '12px',
+                    textDecoration: 'none',
+                    color: '#374151',
+                    transition: 'background-color 0.2s ease',
+                    border: '1px solid #e5e7eb',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#f9fafb';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                  }}
+                >
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    background: '#0DA6A6',
+                    borderRadius: '20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    flexShrink: 0,
+                  }}>
+                    <HandIcon />
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: '600', fontSize: '14px', marginBottom: '2px' }}>
+                      Kontakt Formular
+                    </div>
+                    <div style={{ fontSize: '13px', color: '#6b7280' }}>
+                      Unverbindlich anfragen
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Hamburger Menu - Visible on mobile */}
+          {isMobile && (
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="dropdown-button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+            }}
+            className="hamburger-menu"
+            aria-label="Navigation menu öffnen"
             style={{
-              display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
@@ -368,7 +447,6 @@ export default function ResponsiveNavigation() {
               borderRadius: '16px',
               transition: 'background-color 0.2s ease',
             }}
-            className="hamburger-menu"
             onMouseEnter={(e) => {
               e.currentTarget.style.background = '#f3f4f6';
             }}
@@ -400,28 +478,33 @@ export default function ResponsiveNavigation() {
               transform: isMobileMenuOpen ? 'rotate(-45deg) translate(6px, -6px)' : 'none',
             }}></div>
           </button>
+          )}
         </nav>
       </div>
 
       {/* Mobile Menu Dropdown */}
-      <div style={{
-        position: 'fixed',
-        top: '90px',
-        left: '0',
-        right: '0',
-        margin: '0 auto',
-        width: 'calc(100vw - 32px)',
-        maxWidth: '400px',
-        background: 'white',
-        borderRadius: '20px',
-        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
-        border: '1px solid rgba(0, 0, 0, 0.1)',
-        opacity: isMobileMenuOpen ? 1 : 0,
-        visibility: isMobileMenuOpen ? 'visible' : 'hidden',
-        transition: 'opacity 0.2s ease, visibility 0.2s ease',
-        zIndex: 1000,
-        padding: '16px',
-      }}>
+      <div
+        className={`mobile-menu-container ${isMobileMenuOpen ? 'menu-open' : ''}`}
+        style={{
+          position: 'fixed',
+          top: '80px',
+          left: '16px',
+          right: '16px',
+          margin: '0 auto',
+          width: 'auto',
+          maxWidth: '400px',
+          background: 'white',
+          borderRadius: '20px',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
+          border: '1px solid rgba(0, 0, 0, 0.1)',
+          opacity: isMobileMenuOpen ? 1 : 0,
+          visibility: isMobileMenuOpen ? 'visible' : 'hidden',
+          transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)',
+          transition: 'all 0.3s ease',
+          zIndex: 9999,
+          padding: '20px',
+          display: isMobileMenuOpen ? 'block' : 'none',
+        }}>
         <div style={{ marginBottom: '12px' }}>
           <h3 style={{
             fontWeight: '700',
@@ -517,18 +600,63 @@ export default function ResponsiveNavigation() {
         </div>
       </div>
 
-      <style jsx>{`
+      {isNavCSSReady && <style jsx>{`
         @media (max-width: 1023px) {
-          .desktop-menu {
+          .desktop-menu,
+          .desktop-menu *,
+          .services-dropdown-container,
+          .dropdown-button {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+          }
+          .mobile-menu-container {
             display: none !important;
           }
           .hamburger-menu {
             display: flex !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            position: relative !important;
+            z-index: 10 !important;
+            min-width: 32px !important;
+            min-height: 32px !important;
+            pointer-events: auto !important;
           }
           nav {
-            padding: 8px 12px !important;
+            padding: 8px 16px !important;
             height: 56px !important;
             min-height: 56px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+          }
+
+          /* Exact 6px gaps between elements */
+          nav > a:first-child {
+            flex: 0 0 auto !important;
+            margin-right: 6px !important;
+          }
+
+          .cta-dropdown-container {
+            flex: 0 0 auto !important;
+            margin: 0 6px 0 auto !important;
+          }
+
+          .hamburger-menu {
+            flex: 0 0 auto !important;
+            margin: 0 !important;
+          }
+
+          /* Make CTA button much smaller on mobile - minimal padding */
+          .cta-button {
+            padding: 3px 5px !important;
+            font-size: 10px !important;
+            height: 22px !important;
+            min-height: 22px !important;
+            gap: 2px !important;
+            border-radius: 12px !important;
           }
         }
         @media (min-width: 1024px) {
@@ -537,15 +665,49 @@ export default function ResponsiveNavigation() {
           }
           .hamburger-menu {
             display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
           }
           nav {
             padding: 8px 24px !important;
+            height: 60px !important;
+            min-height: 60px !important;
+          }
+          /* Larger logo on desktop only - use global targeting */
+          nav :global(.nav-logo-img) {
+            height: 42px !important;
+            width: auto !important;
+          }
+        }
+        /* Medium mobile screens - make wider than default */
+        @media (max-width: 1023px) and (min-width: 481px) {
+          div[style*="max-width: calc(100vw - 20px)"] {
+            max-width: calc(100vw - 18px) !important;
+            padding: 0 9px !important;
+          }
+          nav {
+            padding: 8px 14px !important;
+          }
+
+          /* Perfect balance for medium mobile */
+          nav > a:first-child {
+            margin-right: 6px !important;
+          }
+
+          .cta-dropdown-container {
+            margin: 0 6px 0 auto !important;
           }
         }
         @media (max-width: 480px) {
+          /* Make container wider on small screens to accommodate gaps */
+          div[style*="max-width: calc(100vw - 20px)"] {
+            max-width: calc(100vw - 14px) !important;
+            padding: 0 7px !important;
+          }
           nav {
-            padding: 6px 10px !important;
-            max-width: calc(100vw - 24px) !important;
+            padding: 6px 12px !important;
+            max-width: 100% !important;
           }
           .cta-button {
             padding: 6px 12px !important;
@@ -559,8 +721,26 @@ export default function ResponsiveNavigation() {
             height: 28px !important;
             padding: 2px !important;
           }
+
+          /* Perfect balance for small mobile */
+          nav > a:first-child {
+            margin-right: 6px !important;
+          }
+
+          .cta-dropdown-container {
+            margin: 0 6px 0 auto !important;
+          }
         }
-      `}</style>
+        /* Ensure dropdowns work properly on all screen sizes */
+        @media (max-width: 1023px) {
+          .cta-dropdown-container div[style*="position: absolute"] {
+            right: 0 !important;
+            left: auto !important;
+            min-width: 200px !important;
+            max-width: calc(100vw - 32px) !important;
+          }
+        }
+      `}</style>}
     </>
   );
 }
